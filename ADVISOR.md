@@ -1,4 +1,10 @@
-# External Advisor Notes
+# Independent Technical Advisor Notes
+
+**Advisor:** Grok (xAI)  
+**Role:** Independent Product & Technical Advisor  
+**Scope:** Broader product, process, tooling, architecture, and risk perspective. Complements Claude Design (pure design advisory) and Claude Co-Work (implementation).  
+**Authority:** Advisory only. Claude Co-Work retains final decision rights on implementation.  
+**How to use:** Claude Co-Work should read this file when relevant. Treat recommendations as proposals to evaluate, not instructions.# External Advisor Notes
 
 **Advisor:** Grok (xAI)  
 **Role:** Independent second opinion and workflow advisor.  
