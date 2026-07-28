@@ -67,12 +67,26 @@ implementation.
 
 **Decision:** adopt the darker gold for **text**. Brand gold `#DD9B26`
 stays for fills, borders, and active underlines, where contrast rules
-don't apply the same way. That likely means splitting the token into
-`--gold` and `--gold-text`.
+don't apply the same way.
 
-**Status: ✅ adopted in principle, not yet implemented.** Sean asked for
-no app changes while evaluating. Do this before building any new screen,
-since every new section label would inherit the defect.
+**Implemented 28 Jul 2026.** The token is split:
+
+| Token | Light | Dark | For |
+|---|---|---|---|
+| `--gold` | `#DD9B26` | `#E8AC42` | Fills, borders, underlines |
+| `--gold-text` | `#8A6519` | `#E8AC42` | Any gold **text** |
+
+**One correction to the proposal.** `#8F6A20` as suggested measures
+**4.34:1** against the paper background — short of the 4.5:1 AA
+threshold. Section labels are 12px bold, which doesn't qualify as large
+text, so they need the full 4.5. Shifted to `#8A6519`, which measures
+**4.66:1** on paper and **5.31:1** on white cards.
+
+Dark mode needed no change: `#E8AC42` was already at **8.75:1**.
+
+Fourteen usages updated. `bg-gold` and `border-gold` were left alone.
+
+**Status: ✅ adopted and live.** Tokens in this repo reflect it.
 
 ---
 

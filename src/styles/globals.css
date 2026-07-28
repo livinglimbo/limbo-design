@@ -46,8 +46,18 @@
   --accent-surface:    #3C6255;
   --accent-surface-fg: #FFFFFF;
 
-  /* Brand — gold accent (active underlines, highlights) */
+  /* Brand — gold accent.
+     Two tokens, because one colour can't do both jobs:
+       --gold       fills, borders, active underlines. Contrast rules
+                    don't apply the same way to non-text.
+       --gold-text  labels and any gold TEXT.
+
+     #DD9B26 measures 2.10:1 against this page background. WCAG AA
+     needs 4.5:1 for normal text, and section labels are 12px bold —
+     not large text. #8A6519 measures 4.66:1 on paper and 5.31:1 on
+     white. Same hue family, readable. */
   --gold:            #DD9B26;
+  --gold-text:       #8A6519;
 
   /* Status */
   --danger:          #C0392B;
@@ -92,6 +102,7 @@
   --accent-surface-fg: #F0EDE5;
 
   --gold:            #E8AC42;
+  --gold-text:       #E8AC42;  /* 8.75:1 on the dark bg — already fine */
 
   --danger:          #E8695A;
   --danger-bg:       #2A1614;
@@ -134,6 +145,7 @@
     --accent-surface-fg: #F0EDE5;
 
     --gold:            #E8AC42;
+    --gold-text:       #E8AC42;  /* 8.75:1 on the dark bg — already fine */
 
     --danger:          #E8695A;
     --danger-bg:       #2A1614;
@@ -177,6 +189,7 @@
   --color-accent-surface-fg:  var(--accent-surface-fg);
 
   --color-gold:            var(--gold);
+  --color-gold-text:       var(--gold-text);
 
   --color-danger:          var(--danger);
   --color-danger-bg:       var(--danger-bg);

@@ -56,7 +56,8 @@ in dark mode it isn't white.
 | `--accent-fg` | `#FFFFFF` | Text on accent |
 | `--accent-surface` | `#3C6255` | The solid green app header |
 | `--accent-surface-fg` | `#FFFFFF` | |
-| `--gold` | `#DD9B26` | Section labels, active underlines |
+| `--gold` | `#DD9B26` | Fills, borders, active underlines — **not text** |
+| `--gold-text` | `#8A6519` | Gold **text**, incl. section labels. 4.66:1 on paper |
 | `--danger` | `#C0392B` | |
 | `--danger-bg` | `#FDF0EE` | |
 | `--warning` | `#7A4800` | |
@@ -84,6 +85,7 @@ in dark mode it isn't white.
 | `--accent-surface` | `#24463A` | Header stays recognisably green, seated in the dark |
 | `--accent-surface-fg` | `#F0EDE5` | |
 | `--gold` | `#E8AC42` | |
+| `--gold-text` | `#E8AC42` | 8.75:1 on the dark bg — no separate value needed |
 | `--danger` | `#E8695A` | |
 | `--danger-bg` | `#2A1614` | |
 | `--warning` | `#E0B050` | |
@@ -147,7 +149,7 @@ elements, `mb-10` between sections.
 |---|---|---|---|
 | Display / logo | `2.2–3rem` | normal | Eyesome, `leading-none` |
 | Page title | `1.25rem` | 600 | Radley |
-| Section label | `0.75rem` | 700 | Uppercase, `tracking-[0.09em]`, **gold** |
+| Section label | `0.75rem` | 700 | Uppercase, `tracking-[0.09em]`, `text-gold-text` |
 | Body | `1rem` | 400 | |
 | Row title | `0.875rem` | 600 | |
 | Metadata | `0.75rem` | 400 | `--text-muted` |
@@ -233,7 +235,7 @@ rounded-chip bg-accent/12 px-2 py-1 text-xs font-semibold text-accent
 
 **Section heading**
 ```
-text-xs font-bold uppercase tracking-[0.09em] text-gold
+text-xs font-bold uppercase tracking-[0.09em] text-gold-text
 ```
 
 ---
@@ -295,6 +297,8 @@ Things that would be wrong for this product:
 - Heavy shadows or glassmorphism. Borders do the separation work.
 - Grids of large cards for long lists. Rows, for density.
 - Hover-only affordances.
+- Brand gold `#DD9B26` as text. It measures 2.10:1 on paper and
+  fails WCAG. Use `--gold-text` for anything readable.
 - Dense controls under 44px.
 - Client portals, e-signatures, payment collection — HoneyBook already
   handles all of that. Out of scope.

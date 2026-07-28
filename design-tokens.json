@@ -3,7 +3,6 @@
   "name": "Limbo Mixology",
   "version": "1.0.0",
   "primaryPlatform": "iPad, then iPhone, then desktop",
-
   "typography": {
     "display": {
       "family": "Eyesome",
@@ -21,18 +20,35 @@
     },
     "$note": "There is no sans-serif in this product. Both faces are serif, deliberately.",
     "scale": {
-      "display": { "size": "2.2rem–3rem", "weight": "normal", "leading": "none" },
-      "pageTitle": { "size": "1.25rem", "weight": 600 },
+      "display": {
+        "size": "2.2rem–3rem",
+        "weight": "normal",
+        "leading": "none"
+      },
+      "pageTitle": {
+        "size": "1.25rem",
+        "weight": 600
+      },
       "sectionLabel": {
         "size": "0.75rem",
         "weight": 700,
         "transform": "uppercase",
         "tracking": "0.09em",
-        "color": "--gold"
+        "color": "--gold-text"
       },
-      "body": { "size": "1rem", "weight": 400 },
-      "rowTitle": { "size": "0.875rem", "weight": 600 },
-      "metadata": { "size": "0.75rem", "weight": 400, "color": "--text-muted" },
+      "body": {
+        "size": "1rem",
+        "weight": 400
+      },
+      "rowTitle": {
+        "size": "0.875rem",
+        "weight": 600
+      },
+      "metadata": {
+        "size": "0.75rem",
+        "weight": 400,
+        "color": "--text-muted"
+      },
       "fieldLabel": {
         "size": "0.75rem",
         "weight": 700,
@@ -42,7 +58,6 @@
       }
     }
   },
-
   "color": {
     "light": {
       "bg": "#F2F0EB",
@@ -66,7 +81,8 @@
       "warning": "#7A4800",
       "warning-bg": "#FFF8EC",
       "warning-border": "#F0D090",
-      "success": "#4CAF50"
+      "success": "#4CAF50",
+      "gold-text": "#8A6519"
     },
     "dark": {
       "bg": "#141A17",
@@ -90,16 +106,17 @@
       "warning": "#E0B050",
       "warning-bg": "#2A1E00",
       "warning-border": "#5A4400",
-      "success": "#5FBF64"
+      "success": "#5FBF64",
+      "gold-text": "#E8AC42"
     },
     "$notes": [
       "Named by role, never appearance — 'surface', not 'white', because in dark mode it isn't white.",
       "The green lifts in dark mode: #3C6255 is unreadable against a dark background, so accent becomes #6BA588.",
       "The header keeps a deep green (#24463A) in dark mode so it still reads as the brand rather than a generic dark bar.",
-      "Never pure white, never pure black, never neutral grey."
+      "Never pure white, never pure black, never neutral grey.",
+      "Gold is two tokens. --gold is for fills, borders, and underlines. --gold-text is for text: #DD9B26 measures 2.10:1 on the paper background and fails WCAG AA, while #8A6519 measures 4.66:1. Dark mode needs no separate value at 8.75:1."
     ]
   },
-
   "radius": {
     "$note": "Semantic, by component role — so 'make cards less rounded' is one edit and cannot reshape badges by accident.",
     "chip": "0.375rem",
@@ -113,7 +130,6 @@
       "modal": "dialogs, bottom sheets"
     }
   },
-
   "elevation": {
     "$note": "Theme-dependent, because light-mode shadows are invisible on a dark background. Restrained — borders do most of the separation work.",
     "light": {
@@ -129,12 +145,10 @@
       "modal": "0 12px 44px rgba(0,0,0,0.6)"
     }
   },
-
   "spacing": {
     "base": "0.25rem",
     "$note": "Tailwind 4 default scale. Every padding and gap is a multiple, so the whole layout tightens from one value."
   },
-
   "layout": {
     "breakpoint": "1024px",
     "$note": "The only breakpoint that matters. An iPad crosses it when rotated — portrait ~820px, landscape ~1180px.",
@@ -151,7 +165,6 @@
       "lists": "max-w-5xl"
     }
   },
-
   "touch": {
     "$note": "Non-negotiable. Used standing up with hands full.",
     "minTarget": "44px",
@@ -170,7 +183,6 @@
       "Apple Pencil hover works on newer iPads but can never be the only route to an action."
     ]
   },
-
   "antiPatterns": [
     "Sans-serif type",
     "Pure white backgrounds",
