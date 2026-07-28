@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.DS_Store
+*.log
+
+# Never commit environment files. This repo is public and has no need
+# for credentials of any kind.
+.env*
+
+# Eyesome is a purchased typeface — its files must not be published.
+fonts/*.otf
+fonts/*.ttf
+fonts/*.woff
+fonts/*.woff2

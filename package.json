@@ -1,0 +1,15 @@
+{
+  "name": "limbo-design",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Design system extract for the Limbo Mixology invoice builder — tokens, conventions, and presentational components. Reference only; not a runnable app.",
+  "keywords": ["design-system", "tailwind", "design-tokens"],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/react": "^19",
+    "react": "19.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
