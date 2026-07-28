@@ -70,89 +70,34 @@ merge conflict on 28 Jul.
 
 ---
 
-## How a design becomes running software
+## The pipeline
 
-This is the part that wasn't written down. Steps marked **[Sean]** need
-you; the rest happen on their own.
+**`WORKFLOW.md` has the full step-by-step**, including which steps need
+Sean. Not repeated here — one description in one place.
 
-### 1 · Design session
-**[Sean]** Open Claude Design pointed at this repo. Say what you want
-worked on.
+The short version, for orientation:
 
-Design proposes labelled variants. Each should name the tokens it used,
-say whether it's additive or a token migration, describe what happens at
-the other breakpoint, and cover the unglamorous states.
+**Design proposes → Sean decides → Sean exports a Project archive into
+`limbo-app/design-imports/` → Co-Work reads the real markup and rebuilds it
+against the live data layer → Sean tests on a device → Co-Work updates this
+repo → the next session inherits it.**
 
-### 2 · Choose
-**[Sean]** Pick one, or ask for another round. Nothing is committed yet.
+Grok's loop runs alongside: pressure test lands in `ADVISOR.md`, Co-Work
+evaluates, **and the outcome is recorded in `DECISIONS.md` under Process
+Decisions** — so a rejection keeps its reasoning instead of evaporating in
+conversation and returning next month.
 
-### 3 · Export
-**[Sean]** Export → Project HTML → **Project archive** (instant, free —
-not "Standalone HTML", which costs usage for the same markup).
+Two things worth knowing about the shape of this:
 
-Drop the `.zip` into `limbo-app/design-imports/`.
+**Mockups are reference, not source.** Implementation is written from
+scratch against Supabase, the offline write queue, auth, and routing. That
+isn't a workaround — it's why a proposal doesn't need to worry about any
+of it.
 
-### 4 · Hand off
-**[Sean]** Tell Co-Work in chat: *"New design in design-imports."*
-
-That sentence is the whole handoff. Co-Work can't see the folder change
-on its own.
-
-### 5 · Evaluate
-Co-Work unzips and reads the real markup — actual spacing, breakpoints,
-structure. Then checks: does it use real tokens or invent values? Is it
-additive or a migration? Does it contradict anything already settled in
-`DECISIONS.md`? Does it quietly introduce a feature nobody agreed to?
-
-**Anything needing your decision gets raised before building**, not after.
-
-### 6 · Build
-Co-Work implements it in `limbo-app` as real components wired to the data
-layer — Supabase reads and writes, the offline queue, sync status, routing.
-The mockup is reference; the implementation is written from scratch against
-real infrastructure.
-
-Typecheck and lint must pass before it's handed back.
-
-### 7 · Verify
-**[Sean]** Co-Work says what to look at and on which device. **You are the
-only one who can judge whether something feels right in the hand** — tap
-targets, scroll behaviour, whether a pane is wide enough for a long product
-name. Nothing here can test that.
-
-### 8 · Record
-Co-Work updates this repo: copies `globals.css` across, updates
-`DESIGN.md`, and moves the entry in `DECISIONS.md` to its final status
-with any correction noted.
-
-### 9 · Push
-**[Sean]** One command:
-
-```
-cd ~/CLAUDE/Projects/limbo-design && git add -A && git commit -m "message" && git pull --rebase && git push
-```
-
-Commit, rebase onto anything that arrived, push. Co-Work will tell you
-when this is needed.
-
-The next design session then inherits the decision.
-
----
-
-## How advice becomes a decision
-
-Grok's loop, which runs alongside the design one.
-
-1. Something meaningful lands
-2. Grok pressure-tests it and writes to `ADVISOR.md`
-3. **[Sean]** Push, or Grok commits directly
-4. Co-Work reads it and evaluates
-5. **Co-Work records the outcome in `DECISIONS.md` under Process Decisions** —
-   adopted, declined, deferred, each with reasoning
-6. Grok reads that next round and doesn't re-propose settled things
-
-Step 5 was missing until now. Without it, a recommendation gets rejected in
-chat, the reasoning evaporates, and it comes back next month.
+**Nothing here can judge how something feels in the hand.** Tap targets,
+scroll behaviour, whether a pane is wide enough for a long product name.
+There's a real iPad at the other end, and that's the only place those
+questions get answered.
 
 ---
 

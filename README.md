@@ -14,7 +14,8 @@ logic, customer data, credentials, or database access.
 
 | File | What it is | Owner |
 |---|---|---|
-| **`INSTRUCTIONS.md`** | **Start here.** Who does what, and exactly how a design becomes running software. | Co-Work + Sean |
+| **`WORKFLOW.md`** | The map — who does what, where everything lives, what needs Sean. Written for humans. | Co-Work |
+| **`INSTRUCTIONS.md`** | **Design and Grok start here.** What to do and not do when proposing. | Co-Work + Sean |
 | **`DESIGN.md`** | The written system — brand, tokens, layout, touch constraints, voice, anti-patterns. | Co-Work |
 | **`DECISIONS.md`** | Every proposal and its status, with reasoning. Design and process. | Co-Work |
 | **`ADVISOR.md`** | Pressure tests and recommendations. | Grok |
