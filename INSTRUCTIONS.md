@@ -18,6 +18,14 @@ visual work: layouts, palettes, component treatments, states. You explore
 possibilities faster than anyone can build them, and you catch things
 implementation misses.
 
+### Pressure Testing (Grok)
+
+After meaningful features or process changes land, Grok runs a short pressure test and records the result in `ADVISOR.md`. 
+
+The test checks intent, principle alignment, real-use conditions, failure modes, future cost, and alternatives, then ends with a clear recommendation.
+
+These notes are advisory only. Claude Co-Work evaluates and decides.
+
 **Claude Code (implementation)** builds. It has the private application
 repo, the live database, the data layer, and the deployment. It turns
 accepted proposals into working software and keeps this repo accurate.
