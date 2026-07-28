@@ -1,226 +1,277 @@
-# How we work together
+# How we work
 
-For design sessions working on the Limbo Mixology invoice builder.
+The Limbo Mixology invoice builder is built by four participants with
+different jobs. This file explains who does what, who writes which files,
+and exactly how a design becomes running software.
 
-Read this before proposing anything. It describes who does what, and the
-handful of things that would create real problems if offered in good faith.
-
----
-
-## The three of us
-
-**Sean** owns the product and makes every decision. He runs a mobile
-bartending and cocktail catering business — he is not a developer, and
-shouldn't be asked to do developer things.
-
-**You (design)** propose. You read this repo for context and produce
-visual work: layouts, palettes, component treatments, states. You explore
-possibilities faster than anyone can build them, and you catch things
-implementation misses.
-
-### Pressure Testing (Grok)
-
-After meaningful features or process changes land, Grok runs a short pressure test and records the result in `ADVISOR.md`. 
-
-The test checks intent, principle alignment, real-use conditions, failure modes, future cost, and alternatives, then ends with a clear recommendation.
-
-These notes are advisory only. Claude Co-Work evaluates and decides.
-
-**Claude Code (implementation)** builds. It has the private application
-repo, the live database, the data layer, and the deployment. It turns
-accepted proposals into working software and keeps this repo accurate.
-
-The loop: **you propose → Sean decides → Claude Code implements and
-updates this repo → your next session inherits the decision.**
+**Read this first.** Then `DESIGN.md` for the system, `DECISIONS.md` for
+what's already settled.
 
 ---
 
-## What this repo is
+## The four of us
 
-`limbo-design` describes **what is actually built**. Never what's proposed.
+### Sean — owner
+Runs a mobile bartending and cocktail catering business. Owns the product
+and makes every decision. **Not a developer** — shouldn't be asked to do
+developer things, and any instruction given to him should be a command he
+can paste or a button he can find.
 
-That rule is load-bearing. It means you're always designing against
-reality rather than a wishlist, and it's why the tokens here can be
-trusted absolutely.
+He is also the only one who can move things between the other three. They
+never talk to each other directly.
 
-| File | |
-|---|---|
-| `DESIGN.md` | The system as built. Read first. |
-| `DECISIONS.md` | Every past proposal and its status. **Read second.** |
-| `src/styles/globals.css` | Source of truth, copied verbatim from the app |
-| `design-tokens.json` | Same tokens, machine-readable |
-| `src/showcase/StyleGuide.tsx` | Every component pattern in one file |
+### Claude Design — visual proposals
+Reads this repo. Produces layouts, palettes, component treatments, and
+states. Explores faster than anything can be built, and catches things
+implementation misses — it found a WCAG failure in the brand gold that had
+already shipped.
 
-`DECISIONS.md` is the important one. It records what's been adopted, what's
-open, and what's been declined **with reasons**. A declined idea isn't a
-bad idea — it was usually right but wrong for now. Re-proposing it without
-new information costs a round.
+**Read-only on this repo.** Proposes; doesn't decide, doesn't build.
 
----
+### Grok — independent advisor
+Product, process, tooling, architecture, and risk. Runs a pressure test
+after meaningful changes land and records it in `ADVISOR.md`.
 
-## Connecting to GitHub — yes, please do
+Advisory only. **Owns `ADVISOR.md`** and writes there directly.
 
-**Ask Sean to connect this repo if it isn't connected.** Reading it is the
-entire point. Working from an uploaded `DESIGN.md` alone means your token
-names won't match the real `globals.css`, and you won't see the actual
-components, the icon set, or `DECISIONS.md`.
+### Claude Co-Work — implementation
+Has the private application repo, the live Supabase database, the data
+layer, and the deployment. Turns accepted proposals into working software.
 
-Access is scoped to this repository only, and read-only. The application
-repo is private and stays that way.
+Holds final decision rights on implementation, and is responsible for
+keeping this repo accurate. Every proposal from Design or Grok gets
+evaluated on its merits and can be declined with reasons.
 
-So: **connecting = yes. Writing = no.** Those are different things, and an
-earlier version of this file conflated them.
-
----
-
-## Please don't offer these
-
-Not because they're wrong in general — because they'd genuinely muddy this
-setup, and Sean would have no easy way to know that.
-
-**Don't offer to push, commit, or edit files here.** Read access is what
-you want and what you should have. Write access is what we're avoiding —
-if proposals could land in this repo directly, it would fill with ideas
-presented as built fact, and the next session would design against things
-that don't exist. Claude Code updates it after Sean accepts something.
-
-**Don't offer to deploy to Netlify or Vercel.** The real app already
-deploys to Netlify from a private repo. Publishing a mockup there creates
-a second site that looks like the product but isn't, sitting beside the
-one that is. Confusing at best.
-
-**Don't produce code intended to ship.** Your exports are reference, and
-excellent reference. But they can't know about the Supabase data layer,
-the offline write queue with retry, the auth proxy, or the route
-structure. Reconciling two apps is more work than building from a clear
-picture. Claude Code rebuilds from your markup — that's the intended path,
-not a workaround.
-
-**Don't introduce features that aren't on the roadmap.** A previous round
-included a "Scan label" button. Barcode scanning had already been assessed
-and parked — it needs a product database subscription and camera
-permissions. A mockup is the wrong place for a feature commitment to get
-made, because it arrives looking already decided.
-
-**Don't suggest Figma, design handoff tools, or component libraries.**
-The system is Tailwind 4 with CSS custom properties and there's no design
-tool in the chain.
+> **One name, please.** Earlier files said "Claude Code", "Claude
+> Co-Work", and "Claude" for the same participant. It's **Claude
+> Co-Work**. Claude Design is the other one.
 
 ---
 
-## Please do these
+## Who writes what
 
-**Read `DECISIONS.md` before proposing.** It'll save you a round.
+The rule that keeps this repo trustworthy: **`limbo-design` describes what
+is actually built, never what's proposed.** Ideas under consideration live
+in `DECISIONS.md` with a status until they ship.
 
-**Put several variants in one generation.** Three palettes in one output
-rather than three separate runs. Sean is paying for this and comparison is
-easier side by side anyway.
+| File | Owner | Contains |
+|---|---|---|
+| `DESIGN.md` | Co-Work | The system as built. Real values, real class strings. |
+| `DECISIONS.md` | Co-Work | Every proposal and its status, with reasoning. Design *and* process. |
+| `design-tokens.json` | Co-Work | Machine-readable mirror of the CSS |
+| `src/styles/globals.css` | Co-Work | **Copied verbatim from the app.** Never hand-edited here. |
+| `src/` components | Co-Work | Real presentational components, incl. the icon set |
+| `ADVISOR.md` | **Grok** | Pressure tests and recommendations |
+| `INSTRUCTIONS.md` | Co-Work + Sean | This file |
 
-**Label everything.** `1A`, `1B`, `1D` — the previous round did this and it
-made the decisions log straightforward to write. Keep it up.
+**Before editing a file you share, read it fresh.** Co-Work does this now
+as standing practice — assuming a cached copy is current is what caused a
+merge conflict on 28 Jul.
 
-**State contrast ratios.** The last round found that the brand gold
-measures 2.1:1 against the paper background and fails WCAG for text —
-a real defect that had been shipped and missed. That single catch justified
-the whole round. Keep checking.
+---
 
-**Say what a change would cost.** "This is additive" versus "this replaces
-a token used on every screen" is the difference between a quick yes and a
-migration. Flag it.
+## How a design becomes running software
+
+This is the part that wasn't written down. Steps marked **[Sean]** need
+you; the rest happen on their own.
+
+### 1 · Design session
+**[Sean]** Open Claude Design pointed at this repo. Say what you want
+worked on.
+
+Design proposes labelled variants. Each should name the tokens it used,
+say whether it's additive or a token migration, describe what happens at
+the other breakpoint, and cover the unglamorous states.
+
+### 2 · Choose
+**[Sean]** Pick one, or ask for another round. Nothing is committed yet.
+
+### 3 · Export
+**[Sean]** Export → Project HTML → **Project archive** (instant, free —
+not "Standalone HTML", which costs usage for the same markup).
+
+Drop the `.zip` into `limbo-app/design-imports/`.
+
+### 4 · Hand off
+**[Sean]** Tell Co-Work in chat: *"New design in design-imports."*
+
+That sentence is the whole handoff. Co-Work can't see the folder change
+on its own.
+
+### 5 · Evaluate
+Co-Work unzips and reads the real markup — actual spacing, breakpoints,
+structure. Then checks: does it use real tokens or invent values? Is it
+additive or a migration? Does it contradict anything already settled in
+`DECISIONS.md`? Does it quietly introduce a feature nobody agreed to?
+
+**Anything needing your decision gets raised before building**, not after.
+
+### 6 · Build
+Co-Work implements it in `limbo-app` as real components wired to the data
+layer — Supabase reads and writes, the offline queue, sync status, routing.
+The mockup is reference; the implementation is written from scratch against
+real infrastructure.
+
+Typecheck and lint must pass before it's handed back.
+
+### 7 · Verify
+**[Sean]** Co-Work says what to look at and on which device. **You are the
+only one who can judge whether something feels right in the hand** — tap
+targets, scroll behaviour, whether a pane is wide enough for a long product
+name. Nothing here can test that.
+
+### 8 · Record
+Co-Work updates this repo: copies `globals.css` across, updates
+`DESIGN.md`, and moves the entry in `DECISIONS.md` to its final status
+with any correction noted.
+
+### 9 · Push
+**[Sean]** One command:
+
+```
+cd ~/CLAUDE/Projects/limbo-design && git add -A && git commit -m "message" && git pull --rebase && git push
+```
+
+Commit, rebase onto anything that arrived, push. Co-Work will tell you
+when this is needed.
+
+The next design session then inherits the decision.
+
+---
+
+## How advice becomes a decision
+
+Grok's loop, which runs alongside the design one.
+
+1. Something meaningful lands
+2. Grok pressure-tests it and writes to `ADVISOR.md`
+3. **[Sean]** Push, or Grok commits directly
+4. Co-Work reads it and evaluates
+5. **Co-Work records the outcome in `DECISIONS.md` under Process Decisions** —
+   adopted, declined, deferred, each with reasoning
+6. Grok reads that next round and doesn't re-propose settled things
+
+Step 5 was missing until now. Without it, a recommendation gets rejected in
+chat, the reasoning evaporates, and it comes back next month.
+
+---
+
+## For Claude Design specifically
+
+### Please do
+
+**Read `DECISIONS.md` first.** It'll save you a round.
+
+**Several variants in one generation.** Three palettes in one output, not
+three runs. Sean pays per generation and comparison is easier side by side.
+
+**Label everything** — `2A`, `2B`. The decisions log is written from these.
+
+**State contrast ratios.** Round 1 caught the brand gold at 2.1:1 against
+the paper background, failing WCAG for text — a defect that had shipped and
+been missed. That single catch justified the round. *(Note: the fix shipped
+at `#8A6519`, not the proposed `#8F6A20`, which measured 4.34:1 — just
+under the 4.5 threshold. Worth checking your own numbers against a
+calculator.)*
+
+**Say whether it's additive or a migration.** Quick yes versus a project.
 
 **Explain the reasoning.** *"Rotating is the gesture that means 'let me
-read this'"* was more valuable than the layout it described, because it
-generalises. Principles outlive mockups.
+read this'"* outlived the layout it described. Principles generalise;
+mockups don't.
 
-**Say when you can't judge something.** You can't feel a tap target, or
-know whether a 396px pane holds "Liqueurs & Fortified Wines" without
-wrapping, or watch a 314-row table scroll under a thumb. Naming that is
-useful — there's a gesture playground and a real iPad on the other end.
+**Say what you can't judge.** You can't feel a tap target or watch 314 rows
+scroll under a thumb. Naming that is useful — there's a real iPad at the
+other end, and a gesture playground built for exactly this.
 
----
+### Please don't
 
-## Talking to each other
+**Don't produce code intended to ship.** Exports are reference, and good
+reference. But they can't know about the Supabase layer, the offline write
+queue, the auth proxy, or the routing. Reconciling two apps costs more than
+building from a clear picture.
 
-You and Claude Code never speak directly. Sean carries things between you,
-and he shouldn't have to translate. These two formats keep that cheap.
+**Don't offer to deploy to Netlify or Vercel.** The real app already
+deploys to Netlify from a private repo. A published mockup becomes a second
+site that looks like the product and isn't.
 
-### What a proposal needs, to be buildable
+**Don't introduce features that aren't on the roadmap.** A round-1 mockup
+included a "Scan label" button. Barcode scanning had already been assessed
+and parked — it needs a product database subscription and camera
+permissions. A mockup is the wrong place for a feature commitment, because
+it arrives looking decided.
 
-Include these and implementation is mechanical. Leave them out and it
-becomes guesswork.
+**Don't suggest Figma, handoff tools, or component libraries.** The system
+is Tailwind 4 with CSS custom properties. There's no design tool in the
+chain, and **the icons already exist** — a stroke-based 24px inline SVG set
+in `src/components/icons.tsx`.
 
-- **A label per variant** — `2A`, `2B`. The decisions log is written from these.
-- **Which existing tokens you used**, by name. `--surface`, `--accent`,
-  `rounded-card`. If you invented a value, say so explicitly — a new token
-  is a real decision, not a detail.
-- **Additive, or a migration?** "New component" versus "changes a token used
-  on every screen" is the difference between a quick yes and a project.
-- **What happens at the other breakpoint.** Designs are usually drawn at
-  iPad landscape. Say what collapses, moves, or disappears below 1024px.
-- **The unglamorous states.** Empty, loading, error, offline, and the long
-  one — a product called "Liqueurs & Fortified Wines" in a 396px pane.
-  These are where implementations diverge from mockups.
-- **What you couldn't judge.** Anything needing a real device in a real hand.
+### On GitHub access
 
-### What you can expect from this repo
+**Connect this repo.** Reading it is the whole point — working from an
+uploaded `DESIGN.md` alone means token names won't match the real
+`globals.css`, and you won't see the components, the icons, or
+`DECISIONS.md`.
 
-Kept accurate by Claude Code after every accepted change:
+Access is scoped to this repository only. The application repo is private
+and stays that way.
 
-- `DESIGN.md` — the system as built, with real class strings
-- `DECISIONS.md` — every past proposal and its status, with reasoning
-- `globals.css` — copied verbatim from the app, never edited by hand here
-- `src/components/` — real presentational components, including the icon
-  set. **Icons already exist** — a stroke-based 24px inline SVG set in
-  `src/components/icons.tsx`. Use those rather than inventing new ones or
-  suggesting an icon library.
-
-If something in this repo looks wrong or out of date, say so. It's a bug,
-and Claude Code will fix it.
+**Connecting = yes. Writing = no.** Different things, and an earlier
+version of this file conflated them. Not a trust question — Design knows
+what it *proposed*, not what got *built*, and those diverge. The gold fix
+is the example: the proposal was `#8F6A20`, what shipped was `#8A6519`.
+Had the proposal written itself into the tokens, this repo would now be
+wrong and nobody would have noticed.
 
 ---
 
-## Exporting
+## For Grok specifically
 
-**Export → Project HTML → Project archive.** Instant and free.
+**Ground recommendations in the actual repo state.** The round-1 CI
+proposal suggested `npm ci` and `tsc --noEmit` for this repo. Both would
+have failed on the first run: there's no `package-lock.json` here, and the
+`.tsx` files import React types that were never installed. `package.json`
+exists as documentation of the stack, not as a build.
 
-Not "Standalone HTML" — it runs inference to merge everything into one
-file, counts against usage limits, and contains the same markup.
+**Check which repo a recommendation belongs to.** That CI proposal was
+right in principle and aimed at the wrong target — `limbo-design` is
+reference material that never builds or deploys, so a type error there
+costs nothing. `limbo-app` is where one ships a broken screen to an iPad.
 
-Sean drops the archive into the app's `design-imports/` folder and Claude
-Code reads the real markup: actual spacing, breakpoints, structure.
-Screenshots are fine for a quick opinion but not enough to build from.
-
----
-
-## The product, briefly
-
-An invoice builder and event planning tool for a mobile bartending and
-cocktail catering business.
-
-**Used on an iPad, standing up, often one-handed, sometimes behind a bar
-mid-event, sometimes with no signal.** That single fact drives most of
-`DESIGN.md` — the 44px floor, the absence of hover-dependent controls, the
-bottom sheets, the visible sync states.
-
-Real numbers worth designing against: **314 products**, of which **128
-have no cost data** because their unit isn't machine-readable. Eight
-cocktails. Nine categories. Invoices run to dozens of line items across
-categories.
-
-**Built so far:** Product Library, authentication, navigation shell,
-design system, offline-tolerant data layer.
-
-**Not built:** Invoice Builder, Invoice History, Cocktail Library, Prep
-Recipes, Reports. The Builder is the biggest and most valuable thing to
-design.
+**Read the Process Decisions section of `DECISIONS.md`** before
+recommending. It records what's already been evaluated and why.
 
 ---
 
-## Worth designing, nobody has yet
+## What Co-Work needs to work well
 
-- **Multi-invoice tabs** — agreed in principle, no visual design
-- **Invoice templates** — saved bundles applied in one tap; agreed, undesigned
-- **Sync and offline states** — the machinery exists, but "3 waiting",
-  "1 not saved", and working with no signal have no visual treatment
-- **The 128 uncosted products** — currently behind a filter chip in the
-  Library. A better idea would be welcome
+Being explicit, since these are the things that silently slow it down:
+
+- **Tell it when this repo changes.** It reads files fresh, but doesn't
+  know to look. One sentence is enough.
+- **The archive, not just screenshots.** Screenshots are fine for "what do
+  you think"; the markup is what's buildable.
+- **Device verdicts.** It can't test on an iPad. If something feels wrong
+  in the hand, that information exists nowhere else.
+- **Decisions on open items when they start blocking.** The palette
+  direction and Builder layout are both open and will block the Builder.
+
+---
+
+## The product
+
+See `DESIGN.md` for the full system — brand, tokens, layout, touch rules,
+voice, anti-patterns. Deliberately not repeated here; one description in
+one place.
+
+The single fact that drives most of it: **this is used on an iPad,
+standing up, often one-handed, sometimes behind a bar mid-event, sometimes
+with no signal.**
+
+**Built:** Product Library · authentication · navigation shell · design
+system · offline-tolerant data layer
+
+**Not built:** Invoice Builder · Invoice History · Cocktail Library · Prep
+Recipes · Reports
+
+The Builder is the biggest and most valuable thing left to design.

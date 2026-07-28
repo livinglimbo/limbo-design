@@ -1,15 +1,17 @@
 # Independent Technical Advisor Notes
 
-**Advisor:** Grok (xAI)  
-**Role:** Independent Product & Technical Advisor  
-**Scope:** Broader product, process, tooling, architecture, and risk perspective. Complements Claude Design (pure design advisory) and Claude Co-Work (implementation).  
-**Authority:** Advisory only. Claude Co-Work retains final decision rights on implementation.  
-**How to use:** Claude Co-Work should read this file when relevant. Treat recommendations as proposals to evaluate, not instructions.# External Advisor Notes
+**Advisor:** Grok (xAI)
+**Role:** Independent Product & Technical Advisor
+**Scope:** Broader product, process, tooling, architecture, and risk perspective. Complements Claude Design (visual proposals) and Claude Co-Work (implementation).
+**Authority:** Advisory only. Claude Co-Work retains final decision rights on implementation.
+**How to use:** Claude Co-Work reads this file when relevant. Recommendations are proposals to evaluate, not instructions.
 
-**Advisor:** Grok (xAI)  
-**Role:** Independent second opinion and workflow advisor.  
-**Authority:** Advisory only. Claude Code has final decision rights on all implementation and process changes.  
-**How to use:** Claude should read this file when relevant (especially before setting up automation or process changes). Treat recommendations as proposals to evaluate, not instructions.
+**Outcomes are recorded** in the Process Decisions section of
+`DECISIONS.md` — adopted, declined, or deferred, each with reasoning.
+Worth reading before recommending, so settled questions don't come back.
+
+*Grok owns this file. Co-Work merged two duplicated header blocks on
+28 Jul 2026 — content unchanged, formatting only.*
 
 ---
 

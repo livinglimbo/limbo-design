@@ -12,18 +12,23 @@ logic, customer data, credentials, or database access.
 
 ## Start here
 
-| File | What it is |
-|---|---|
-| **`INSTRUCTIONS.md`** | **Start here.** How design and implementation work together, and what not to offer. |
-| **`DESIGN.md`** | The written system — brand, tokens, layout rules, touch constraints, voice, anti-patterns. |
-| **`DECISIONS.md`** | What has already been proposed, adopted, or declined — and why. Prevents re-proposing settled questions. |
-| **`src/styles/globals.css`** | The single source of truth. Every colour, radius, and shadow in the product is defined here and nowhere else. Copied verbatim from the app. |
-| **`design-tokens.json`** | The same tokens, machine-readable. |
-| **`src/showcase/StyleGuide.tsx`** | Every component pattern in one file. The fastest way to see the system whole. |
+| File | What it is | Owner |
+|---|---|---|
+| **`INSTRUCTIONS.md`** | **Start here.** Who does what, and exactly how a design becomes running software. | Co-Work + Sean |
+| **`DESIGN.md`** | The written system — brand, tokens, layout, touch constraints, voice, anti-patterns. | Co-Work |
+| **`DECISIONS.md`** | Every proposal and its status, with reasoning. Design and process. | Co-Work |
+| **`ADVISOR.md`** | Pressure tests and recommendations. | Grok |
+| **`src/styles/globals.css`** | Source of truth. Every colour, radius, and shadow. Copied verbatim from the app. | Co-Work |
+| **`design-tokens.json`** | The same tokens, machine-readable. | Co-Work |
+| **`src/showcase/StyleGuide.tsx`** | Every component pattern in one file. | Co-Work |
 
-This repo describes **what is actually built**, never what's proposed —
-so designs are made against reality rather than a wishlist. Anything
-under consideration lives in `DECISIONS.md` with its status.
+Four participants: **Sean** owns the product and decides. **Claude Design**
+proposes visually. **Grok** advises on product and process. **Claude
+Co-Work** implements and keeps this repo accurate.
+
+This repo describes **what is actually built**, never what's proposed — so
+designs are made against reality rather than a wishlist. Anything under
+consideration lives in `DECISIONS.md` with its status.
 
 ---
 

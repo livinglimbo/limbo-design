@@ -1,7 +1,10 @@
-# Design Decisions Log
+# Decisions Log
 
-Shared memory between design and implementation. Every proposal that comes
-out of a design session gets logged here with what happened to it and why.
+Shared memory across all four participants. Every proposal — from Claude
+Design or from Grok — gets logged here with what happened to it and why.
+
+Two sections: **design decisions** (visual, from Claude Design) and
+**process decisions** (workflow, tooling, architecture, mostly from Grok).
 
 **Read this before proposing.** It's the record of what has already been
 considered — including things that were rejected, and the reasons. Nothing
@@ -173,6 +176,88 @@ Things that are settled and shouldn't be re-proposed:
 - **No client portal, e-signature, deposits, or payment collection.**
   HoneyBook already does all of it. Out of scope permanently.
 - **Long lists are rows, not card grids.** 314 products; density wins.
+
+---
+
+# Process Decisions
+
+Workflow, tooling, and architecture. Mostly evaluating Grok's
+recommendations from `ADVISOR.md`.
+
+---
+
+## ❌ Minimal CI on `limbo-design` — declined
+*Proposed by Grok, 28 Jul 2026 · decided by Co-Work, same day*
+
+**Proposed:** a GitHub Actions workflow running `npm ci` and
+`npx tsc --noEmit` on pull requests to `main` in this repo.
+
+**The instinct is right — every repo that builds should have a green/red
+check. But this specific workflow would have failed on its first run,
+twice over:**
+
+1. **`npm ci` needs a `package-lock.json`.** There isn't one here.
+   `package.json` was written by hand as documentation of the stack; no
+   install has ever been run. `npm ci` exits immediately with "can only
+   install packages when your package.json and package-lock.json are in
+   sync."
+2. **`tsc --noEmit` would fail even if install succeeded.** The `.tsx`
+   files import React types that aren't installed. Type-checking a repo
+   whose components are never compiled checks something that was never
+   true.
+
+**And it's aimed at the wrong repo.** `limbo-design` is documentation and
+reference components — nothing here builds, deploys, or runs, so a type
+error costs nothing. `limbo-app` is where a type error ships a broken
+screen to an iPad.
+
+**Decision: no CI here. Add exactly this workflow to `limbo-app`** when
+that repo is pushed to GitHub — which is imminent, since it's needed for
+Netlify deployment. There `npm ci` and `tsc --noEmit` both work, because
+the lockfile and dependencies are real.
+
+**Status: ❌ declined for this repo · 🔨 accepted for `limbo-app`.**
+
+---
+
+## ✅ Grok as independent advisor — adopted
+*Established by Sean, 28 Jul 2026*
+
+Grok reviews product, process, tooling, architecture, and risk, and runs a
+structured pressure test after meaningful changes land. Notes go in
+`ADVISOR.md`, which Grok owns and writes directly.
+
+Advisory only; Co-Work evaluates and decides. That framing is right — a
+second opinion that can be disagreed with is worth more than one that has
+to be obeyed.
+
+**One addition made to close the loop:** outcomes get recorded here. Before
+this, a recommendation was rejected in chat and the reasoning evaporated,
+so the same idea would return next month. Now Grok can read what was
+decided and why.
+
+---
+
+## ❌ Branch protection on `limbo-design` — tried, removed
+*28 Jul 2026*
+
+Briefly enabled a ruleset requiring pull requests on `main`, to stop
+integrations writing directly.
+
+Removed the same day. It blocked Sean's own pushes, and the threat it
+guarded against turned out not to exist — four unexplained `patch-*`
+branches were Sean and Grok working through the GitHub web interface, not
+an integration acting alone.
+
+**What actually keeps this repo honest isn't a permission setting.** It's
+that proposals live in this file with a status, and only implemented things
+reach `DESIGN.md` and the tokens. That discipline survived round 1 intact:
+Design proposed `#8F6A20`, Co-Work measured it at 4.34:1, shipped
+`#8A6519` instead, and this repo says what's true.
+
+---
+
+# Design Decisions *(continued)*
 
 ## Icons — already exist, don't invent
 
