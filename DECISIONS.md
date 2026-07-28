@@ -160,6 +160,20 @@ Things that are settled and shouldn't be re-proposed:
   HoneyBook already does all of it. Out of scope permanently.
 - **Long lists are rows, not card grids.** 314 products; density wins.
 
+## Icons — already exist, don't invent
+
+`src/components/icons.tsx` holds the real set: `BuilderIcon`,
+`HistoryIcon`, `LibraryIcon`, `ReportsIcon`, `SettingsIcon`. Stroke-based,
+24px viewBox, `stroke-width: 1.75`, inheriting `currentColor`. No icon
+library — inline SVG, deliberately, so there's no dependency to maintain.
+
+A round-1 note said icons were left undrawn because "those should come
+from a real icon set." Reasonable, but the set already exists and is in
+this repo. Use it, and propose additions in the same style when something
+new is needed.
+
+---
+
 ## Known-open questions worth designing against
 
 - Multi-invoice tabs — agreed in principle, no visual design chosen

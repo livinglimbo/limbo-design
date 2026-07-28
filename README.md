@@ -14,8 +14,9 @@ logic, customer data, credentials, or database access.
 
 | File | What it is |
 |---|---|
-| **`DESIGN.md`** | The written system — brand, tokens, layout rules, touch constraints, voice, anti-patterns. Read this first. |
-| **`DECISIONS.md`** | **Read this second.** What has already been proposed, adopted, or declined — and why. Prevents re-proposing settled questions. |
+| **`INSTRUCTIONS.md`** | **Start here.** How design and implementation work together, and what not to offer. |
+| **`DESIGN.md`** | The written system — brand, tokens, layout rules, touch constraints, voice, anti-patterns. |
+| **`DECISIONS.md`** | What has already been proposed, adopted, or declined — and why. Prevents re-proposing settled questions. |
 | **`src/styles/globals.css`** | The single source of truth. Every colour, radius, and shadow in the product is defined here and nowhere else. Copied verbatim from the app. |
 | **`design-tokens.json`** | The same tokens, machine-readable. |
 | **`src/showcase/StyleGuide.tsx`** | Every component pattern in one file. The fastest way to see the system whole. |
