@@ -13,6 +13,24 @@
 
 ---
 
+## Pressure-Test Protocol
+
+Grok runs a short pressure test after meaningful features, components, or process changes land (or are reflected in this repo). The goal is to surface risks, principle conflicts, and future costs early — while the change is still easy to adjust.
+
+**Output is advisory only.** Claude Co-Work evaluates and decides.
+
+### Structure of every pressure test
+
+1. **Intent check** — What was this supposed to achieve?
+2. **Principles alignment** — Does it still honor the non-negotiables (iPad-first / one-handed / mid-event / offline · serif-only · warm paper/charcoal · density · domain language · prep-expansion power · premium non-SaaS feel)?
+3. **Real-use stress** — How does it behave under actual conditions of use?
+4. **Failure modes & edge cases** — What breaks or degrades at the edges?
+5. **Future cost** — What does this make harder six months from now?
+6. **Alternatives (brief)** — Is there a meaningfully better shape that still feels like Limbo?
+7. **Verdict + recommendation** — Clear stance and concrete next action.
+
+Pressure tests are kept short and grounded in the actual files. They end with a recommendation, not a vague “needs more thought.”
+
 ## Current Recommendation — GitHub Actions (28 Jul 2026)
 
 ### Context
