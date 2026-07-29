@@ -1,5 +1,9 @@
 # Limbo Mixology — Design System
 
+> **Reflects `limbo-app` @ `9f4edaf` — 29 Jul 2026.**
+> If the app has moved past that commit, this file may be behind. Ask
+> before treating anything here as current.
+
 Hand-off document for design tooling. Everything here is live in the app,
 not aspirational. Values are copied from `src/app/globals.css`, which is
 the single source of truth.
@@ -309,11 +313,20 @@ Things that would be wrong for this product:
 
 **Built:** Product Library (searchable, sortable, filterable, editable,
 314 real products) · login · settings · living style guide at `/style` ·
-gesture playground at `/style/touch`
+gesture playground at `/style/touch` · data inspectors at `/debug`
 
-**Planned:** Invoice Builder (two-pane on iPad and desktop, with
-Canva-style tabs for several open invoices) · Invoice History ·
-Cocktail Library · Prep Recipes · Reports
+**Built but undesigned — logic exists, no interface yet:**
+
+- **Multi-invoice tabs.** Up to 8 open, per-tab unsaved state, drag to
+  reorder, survives quitting. Needs a visual home in the Builder layout.
+- **Invoice stages and archiving.** Five stages, two gated, two read-only.
+  Needs a stage control, a locked state, and an Archived view in History.
+
+Both are described in full in `DECISIONS.md` — the behaviour is fixed, so
+a proposal that contradicts it can't be built.
+
+**Planned:** Invoice Builder · Invoice History · Cocktail Library ·
+Prep Recipes · Reports
 
 The living style guide at `/style` renders every token and component in
 whichever theme is active — the fastest way to see the system whole.

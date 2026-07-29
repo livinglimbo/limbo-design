@@ -1,5 +1,7 @@
 # How the team works
 
+> **Reflects `limbo-app` @ `9f4edaf` — 29 Jul 2026.**
+
 Written for Sean. Plain language, no jargon. Who does what, where
 everything lives, and exactly what needs you.
 
@@ -68,6 +70,44 @@ the design system repo accurate.
 
 **Can't:** test on your iPad · push to GitHub · click things in web
 interfaces · see your folders change.
+
+---
+
+## Keeping this repo honest
+
+*Established 29 Jul 2026, after multi-invoice tabs shipped while this repo
+still called them "parked" — a design round was nearly spent iterating
+against a brief three features out of date.*
+
+**The rule: any app change that constrains design lands here in the same
+pass as the change itself.** Not batched, not deferred to the next design
+round. Design and Grok read GitHub, so it isn't relayed until it's pushed.
+
+**What counts as constraining design**
+
+- New behaviour with an interface implication
+- Something moving from *parked* to *built*
+- A corrected assumption — anything here that turned out to be false
+- A fixed constraint: caps, ordering, locked states, limits
+- A new screen or route
+
+**What doesn't:** internal refactors, type-only changes, bug fixes with no
+visible surface.
+
+**Two mechanisms back it up**
+
+1. **Commit stamps.** `DESIGN.md` and `DECISIONS.md` open with the
+   `limbo-app` commit they describe. If the app has moved past it, treat
+   this repo as possibly behind and ask.
+2. **Token drift check.** `npm run build` in the app compares
+   `globals.css` against `design-tokens.json` and warns on any
+   disagreement. Warns rather than fails — a colour experiment shouldn't
+   block a deploy. Silent when this repo isn't checked out alongside.
+
+The check only covers the 46 colour tokens, because those are the only
+part a machine can verify. **Prose is what actually rots** — "what's
+built," "what's parked," how a feature behaves. That stays current only
+because of the rule above.
 
 ---
 

@@ -1,5 +1,7 @@
 # Decisions Log
 
+> **Reflects `limbo-app` @ `9f4edaf` — 29 Jul 2026.**
+
 Shared memory across all four participants. Every proposal — from Claude
 Design or from Grok — gets logged here with what happened to it and why.
 
@@ -131,9 +133,14 @@ so one mechanism serves both orientations instead of two designs.*
 "Details" stops being a place you navigate to. Stage track along the
 bottom with totals beside it.
 
-**Status: 🕓 open.** Blocks nothing today — the Builder isn't being built
-yet — but choosing a direction would give the parked multi-invoice tabs
-decision a concrete shape.
+**Status: 🕓 open — and further iterations requested by Sean, 29 Jul.**
+
+⚠️ **Read before iterating.** All three were drawn against an incomplete
+picture. Since then: **multi-invoice tabs are built** and need a home in
+whichever structure wins; **there are five stages, not three**, two of them
+gated and two read-only; and **Archived sits off the track** rather than at
+the end of it. 1F's bottom stage track in particular was drawn without any
+of that. See the three sections near the end of this file.
 
 ---
 
@@ -273,9 +280,80 @@ new is needed.
 
 ---
 
+## ✅ Multi-invoice tabs — now BUILT, not hypothetical
+
+*Shipped 29 Jul 2026. This supersedes the "agreed in principle" note that
+was here before.*
+
+The state layer is done (`src/lib/data/invoiceTabs.ts`). There is no
+interface yet — that's the design work. But the behaviour is fixed, and a
+proposal that contradicts it won't build:
+
+- **Up to 8 open at once.** At the cap the oldest *clean* tab closes. If
+  everything is unsaved it goes over the cap rather than discard work.
+- **Each tab holds a draft**, which may differ from what's saved. So a tab
+  has a **dirty state** that needs a visual — an unsaved invoice is the
+  normal working state, not an error.
+- **Closing a dirty tab is refused** unless confirmed. Needs a confirm
+  affordance.
+- **Closing focuses the neighbour**, not the first tab.
+- **Drag to reorder** is supported.
+- Tabs survive quitting the app.
+
+**What design still owns:** where tabs live in each layout, how they behave
+on a phone where 8 tabs can't fit, what dirty looks like, and the confirm
+treatment. Note this interacts with the layout choice — 1D/1E/1F were all
+drawn before tabs were real.
+
+---
+
+## ✅ Invoice stages — five, and two of them lock
+
+*Corrected 29 Jul 2026. Earlier work in this repo assumed three.*
+
+**Draft → Ready to Send → Ready to Order → Complete** is the track.
+**Archived** is a **side exit reachable from any stage** — an invoice can be
+cancelled or paused before it's ever finished. A straight left-to-right
+progression bar is therefore the wrong shape on its own; archived needs to
+sit off the track.
+
+Two stages are **gated** — they interrupt with something before proceeding:
+
+- **Ready to Send** — pre-flight warning about an outdated estimate or
+  cocktails edited since the invoice was built
+- **Complete** — confirmation, then it records an analytics snapshot and
+  locks the invoice
+
+Two stages are **locked / read-only**: Complete and Archived. Locking is
+**reversible** — moving back to any track stage unlocks it. So the lock
+needs to read as "protected," not "finished forever." It has to be visible
+and it has to be undoable in a tap or two.
+
+**Archive behaviour:** manual from any stage; automatic once an invoice has
+been Complete for N days (default 60, adjustable, or off). Restoring offers
+the stage it came from as the default, and can go to any stage.
+
+**Design needed:** the stage control itself, the locked state, the gate
+interruptions, an Archived view in History, and the auto-archive setting.
+
+---
+
+## ⚠️ Invoice sections sort in load order, not alphabetically
+
+Ported verbatim from the old app's `CAT_ORDER`:
+
+**Consumables · Mixers / Non-Alcohol · Wine & Beer · Spirits · Liqueurs &
+Fortified Wines · Produce · Rental Supply · Miscellaneous**
+
+That's roughly the order things get loaded into a vehicle — it's operational,
+not arbitrary, and sorting A–Z would reorder every invoice Sean has built.
+A ninth category, **Prep Ingredients**, is created on demand when a prep
+recipe expands onto an invoice and sorts last.
+
+---
+
 ## Known-open questions worth designing against
 
-- Multi-invoice tabs — agreed in principle, no visual design chosen
 - Invoice templates — agreed in principle, no visual design chosen
 - Offline and sync states — the reliable-write layer exists, but there's
   no designed treatment for "3 waiting" or "1 not saved"
