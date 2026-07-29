@@ -16,15 +16,15 @@ similar names.
 
 | Name | Where | What it is | Status |
 |---|---|---|---|
-| **The old app** | `~/Documents/GitHub/limbo-invoice-builder` → Netlify | The single HTML file. **This is what you use for real work today.** | 🟢 Live, untouched, still working |
-| Old app's working copy | `~/CLAUDE/Projects/Limbo Invoice Builder/` | Where the old file was edited before deploying | 🟡 Kept for reference |
-| **The new app** | `~/CLAUDE/Projects/limbo-app/` | The rebuild. Next.js. Runs on your Mac only. | 🔵 In progress, **not on GitHub yet** |
+| **The old app** | `~/Documents/GitHub/limbo-invoice-builder` → Netlify | The single HTML file. **This is what you invoice with today.** | 🟢 Live, untouched |
+| Old app's working copy | `~/CLAUDE/Projects/Limbo Invoice Builder/` | Where the old file was edited before deploying | 🟡 Reference only |
+| **The new app** | `~/CLAUDE/Projects/limbo-app/` → GitHub *(private)* → Netlify | The rebuild. Next.js. | 🔵 **Deployed** — Product Library working on real data |
 | **The design system** | `~/CLAUDE/Projects/limbo-design/` → GitHub *(public)* | Colours, fonts, rules, decisions. What Claude Design reads. | 🟢 Live |
 
-**The short version:** the app you actually invoice with is the old one,
-and nothing we've done has touched it. The new app runs only on your Mac
-right now. Putting it on GitHub is the next step, because Netlify deploys
-from GitHub — that's the only reason it needs to go there.
+**The short version:** two apps now exist and both work. The old one is
+what you use for real jobs and hasn't been touched. The new one is
+deployed and reachable from any device, but only has the Product Library
+so far — no Invoice Builder yet.
 
 Nothing you've done has broken anything. There are just a lot of moving
 parts, and this table is the map.
@@ -165,8 +165,9 @@ check something on a device, that's the gap it's trying to close — and
 
 Two questions cover most confusion:
 
-**"Which app am I looking at?"** — the old one is at your Netlify URL and
-works. The new one only runs when `npm run dev` is going on your Mac.
+**"Which app am I looking at?"** — both are on Netlify now, at different
+addresses. The old one is the complete app you invoice with. The new one
+has the Product Library and placeholders for everything else.
 
 **"Has anything broken?"** — the old app hasn't been touched since the
 rebuild started. It can't break from anything we do here.
