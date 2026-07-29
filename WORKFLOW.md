@@ -18,7 +18,7 @@ similar names.
 |---|---|---|---|
 | **The old app** | `~/Documents/GitHub/limbo-invoice-builder` → Netlify | The single HTML file. **This is what you invoice with today.** | 🟢 Live, untouched |
 | Old app's working copy | `~/CLAUDE/Projects/Limbo Invoice Builder/` | Where the old file was edited before deploying | 🟡 Reference only |
-| **The new app** | `~/CLAUDE/Projects/limbo-app/` → GitHub *(private)* → Netlify | The rebuild. Next.js. | 🔵 **Deployed** — Product Library working on real data |
+| **The new app** | `~/CLAUDE/Projects/limbo-app/` → GitHub *(private)* → **limbo-app.netlify.app** | The rebuild. Next.js. | 🔵 **Deployed** — Product Library working on real data |
 | **The design system** | `~/CLAUDE/Projects/limbo-design/` → GitHub *(public)* | Colours, fonts, rules, decisions. What Claude Design reads. | 🟢 Live |
 
 **The short version:** two apps now exist and both work. The old one is
