@@ -173,16 +173,84 @@ made. Leave it out until it's chosen on purpose.
 
 ## Standing constraints for future rounds
 
-Things that are settled and shouldn't be re-proposed:
+*Reviewed item by item with Sean, 29 Jul 2026. Every entry now says
+whether it's a hard constraint or guidance, and changes are logged at the
+bottom of this section with the reason — not just the new value.*
 
-- **Everything is serif.** Eyesome for display, Radley for body. No sans.
-- **Never pure white or pure black.** Paper `#F2F0EB`, dark `#141A17`.
-- **44px minimum targets**, 48px for form controls, 16px minimum input
-  font size.
-- **No hover-only interactions.** Ever.
-- **No client portal, e-signature, deposits, or payment collection.**
-  HoneyBook already does all of it. Out of scope permanently.
+A **constraint** must be testable. "Never pure white" is testable; "feels
+warm" is not. Anything untestable belongs under guidance.
+
+### Hard constraints — don't re-propose without new information
+
+- **Never pure white or pure black as a background.** Page and surface
+  colours are warm: paper `#F2F0EB` in light, `#141A17` in dark.
+  `#FFFFFF` stays legal as a *foreground* on a coloured surface —
+  `--accent-fg` is white text on green, and that is correct. The rule
+  governs what you sit on, not what you write.
+- **No `#FFFFFF` as the value of any `--surface*` token.** The mechanical
+  form of the rule above, added because prose alone didn't catch a
+  violation that shipped.
+- **Text meets 4.5:1 contrast** against whatever it sits on (WCAG AA,
+  normal text). Measure before proposing a colour for type.
+- **Never brand gold `#DD9B26` as text.** It measures 2.10:1 on paper.
+  `--gold-text` exists for readable gold; `--gold` is fills, borders and
+  underlines only.
+- **Safe area insets** on anything at a screen edge. iPhone has a notch
+  and a home indicator, and `viewportFit: "cover"` is what makes
+  `env(safe-area-inset-*)` report real values.
+- **Pinch-zoom stays enabled** — `maximumScale: 5`, never 1. Never
+  `userScalable: false`.
+- **Pointer Events, not touch or mouse events.** *Sean's requirement, in
+  his words: keep the ability to use a finger, a mouse pointer, **and**
+  Apple Pencil Pro — including its hover features.* Pointer Events is the
+  one API that delivers all three. It reports `pointerType` as `"touch"`,
+  `"mouse"` or `"pen"`, and Pencil hover arrives as pointer events before
+  the tip touches glass. Mouse events cover only the cursor; touch events
+  cover only fingers and can't tell a Pencil apart. Either choice would
+  quietly foreclose the Pencil work — which is why this is hard rather
+  than guidance. It's what *preserves* the options, not what limits them.
+- **This repo describes what is actually built, never what's proposed.**
+  Proposals live above with a status until they land.
+
+### Guidance — strong defaults, open to a good argument
+
+- **Serif type.** Eyesome for display, Radley for body. Held as taste,
+  not law — the typeface choice is open to revisit.
+- **Touch targets: 44px minimum, 48px form controls, 16px input font.**
+  Still the target, and 16px on inputs is the one with a hard mechanism
+  behind it — anything smaller makes iOS Safari zoom on focus. The other
+  two are being validated on real devices before they harden.
+- **Dark mode avoids pure black and neutral grey** — warm charcoal with a
+  green undertone. Relaxed so Design can explore.
 - **Long lists are rows, not card grids.** 314 products; density wins.
+- **No hover-only interactions.** Hover effects are fine; hover as the
+  *only* route to something is not, because a finger has no hover. Held
+  as guidance so patterns can be judged case by case.
+- **No client portal, e-signature, deposits, or payment collection.**
+  HoneyBook already does all of it. A scope boundary rather than a design
+  rule, and revisitable — integrating with HoneyBook is a separate
+  question from rebuilding it.
+- **Apple Pencil hover.** Sean wants Pencil Pro hover features. Claude
+  Design owns the interaction design and hands it to Co-Work to build.
+  The old rule — hover can never be the *only* route — still applies, as
+  a case of the hover guidance above.
+
+### Change log
+
+| Date | Change | Reason |
+|---|---|---|
+| 29 Jul 2026 | "Never pure white or pure black" → scoped to backgrounds | The rule couldn't distinguish `--surface: #FFFFFF` (a background, wrong) from `--accent-fg: #FFFFFF` (white text on green, correct). Both were in the code; only one was a violation. Reworded so the next round doesn't re-argue a settled point. |
+| 29 Jul 2026 | Added: no `#FFFFFF` in `--surface*` tokens | `--surface` shipped as `#FFFFFF` from the start and the prose rule never caught it. A mechanical form does. |
+| 29 Jul 2026 | Added: 4.5:1 contrast floor for text | The gold contrast failure was found and fixed ad hoc. Nothing prevented a repeat. |
+| 29 Jul 2026 | Serif → guidance | Sean may revisit the typefaces; it was never a testable rule so much as a taste held firmly. |
+| 29 Jul 2026 | 44px / 48px targets → guidance | Sean has real-device testing still to do on iPad and iPhone. Ten instances in shipped code are already under 44px. Rather than encode a number he hasn't validated, it stays the target until devices confirm it. 16px input font keeps its hard rationale. |
+| 29 Jul 2026 | Dark-mode pure black/grey → guidance | Deliberate loosening to give Design room to try its recommendations. |
+| 29 Jul 2026 | Hover-only → guidance | Sean's call, with the mechanism understood: touchscreens never fire hover, so hover-only content is absent rather than degraded. |
+| 29 Jul 2026 | Portals/payments → guidance, "permanently" removed | It's a scope boundary, not a design constraint, and a business decision Sean can reverse. |
+| 29 Jul 2026 | ❌ Rejected: "no heavy shadows or glassmorphism" | Sean wants visual richness — shadows and texture — and doesn't want Design constrained here. `DESIGN.md` updated to match in the same pass; the two files agree. |
+| 29 Jul 2026 | Pencil hover → guidance, ownership assigned | Design leads the Pencil Pro interaction work, then hands off. |
+| 29 Jul 2026 | Hover-only, portals, rows-vs-grids confirmed as guidance | Sean approved each after asking what they meant in practice. |
+| 29 Jul 2026 | Pointer Events kept hard, reworded | Sean clarified he wants finger, mouse, and Pencil Pro hover all retained. That goal *requires* this API rather than being restricted by it, so the entry now records the requirement instead of the technique. |
 
 ---
 

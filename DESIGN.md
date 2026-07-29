@@ -246,19 +246,42 @@ text-xs font-bold uppercase tracking-[0.09em] text-gold-text
 
 ## Touch Rules
 
-Non-negotiable, because this is used standing up with hands full.
+This is used standing up with hands full. Some of these are mechanical
+and some are still being validated on real hardware — the difference is
+marked, because treating them all as absolute is what let ten sub-44px
+controls ship unnoticed.
+
+**Hard**
+
+- **16px minimum font size on inputs.** Anything smaller makes iOS Safari
+  zoom the page on focus. Not a preference — a browser behaviour.
+- **Safe area insets** on anything at a screen edge — `pb-safe`,
+  `pt-safe`. iPhone has a notch and a home indicator, and
+  `viewportFit: "cover"` is what makes `env(safe-area-inset-*)` report
+  real values.
+- **Pinch-zoom stays enabled.** `maximumScale: 5`, never 1. Never
+  `userScalable: false`.
+- **Pointer Events**, not touch or mouse events. One code path covers
+  finger, cursor and Apple Pencil, and `pointerType` tells them apart.
+  This is what keeps Pencil Pro hover available.
+
+**Targets — still the goal, under validation**
 
 - **44px minimum** on every interactive target. 56px for the bottom bar.
 - **48px** on form inputs and primary buttons.
-- **16px minimum font size on inputs** — anything smaller makes iOS Safari
-  zoom on focus.
-- **No hover-only interactions, ever.** A finger has no hover. Hover is
-  decoration on top of something already reachable.
-- **Safe area insets** on anything at the screen edge — `pb-safe`,
-  `pt-safe`. iPhone has a notch and a home indicator.
-- **Pinch-zoom stays enabled.** `maximumScale: 5`, never 1.
-- **Pointer Events**, not touch or mouse events — one code path covers
-  finger, Apple Pencil, and cursor.
+
+*Sean is testing on real iPad and iPhone before these harden. Ten controls
+in shipped code are currently between 32px and 40px — mostly filter chips
+and sidebar links. Run `npm run check:targets` in `limbo-app` for the
+current list. Don't treat 44px as settled, and don't treat it as optional
+either.*
+
+**Guidance**
+
+- **No hover-only interactions.** A finger has no hover, so hover-only
+  content is absent rather than degraded. Hover as enhancement on
+  something already reachable is fine — and Apple Pencil Pro hover is
+  wanted, which is a case of exactly that.
 
 ### Gesture decisions already made
 
@@ -274,8 +297,11 @@ Non-negotiable, because this is used standing up with hands full.
 
 - **No haptics.** Safari can't produce them. Every gesture must confirm
   itself visually.
-- **Apple Pencil hover** works on newer iPads and can preview things —
-  but can never be the only route to an action.
+- **Apple Pencil hover** works on newer iPads and can preview things.
+  **Sean wants Pencil Pro hover features built.** Claude Design owns the
+  interaction design and hands it to Co-Work to implement. The one
+  condition is the hover guidance above: whatever hover reveals must also
+  be reachable by finger and by cursor.
 
 ---
 
@@ -292,20 +318,47 @@ batching, pour cost, silent ingredients, rentals, consumables.
 
 ## Anti-Patterns
 
-Things that would be wrong for this product:
+*Reviewed with Sean 29 Jul 2026. `DECISIONS.md` holds the full record with
+dates and reasons; this section mirrors the outcome.*
 
-- Sans-serif type. Both faces are serif, deliberately.
-- Pure white backgrounds. The page is warm paper, `#F2F0EB`.
-- Pure black or neutral grey in dark mode. It's warm charcoal with a
-  green undertone.
-- Heavy shadows or glassmorphism. Borders do the separation work.
-- Grids of large cards for long lists. Rows, for density.
-- Hover-only affordances.
-- Brand gold `#DD9B26` as text. It measures 2.10:1 on paper and
-  fails WCAG. Use `--gold-text` for anything readable.
-- Dense controls under 44px.
-- Client portals, e-signatures, payment collection — HoneyBook already
-  handles all of that. Out of scope.
+### Hard — testable, don't propose past these
+
+- **Pure white or pure black as a background.** Page and surfaces are
+  warm: paper `#F2F0EB` in light, `#141A17` in dark. `#FFFFFF` is still
+  correct as a *foreground* on a coloured surface — `--accent-fg` is
+  white text on green. The rule governs what you sit on, not what you
+  write. No `--surface*` token may be `#FFFFFF`.
+- **Text below 4.5:1 contrast** against its background (WCAG AA).
+  Measure before proposing a colour for type.
+- **Brand gold `#DD9B26` as text.** It measures 2.10:1 on paper. Use
+  `--gold-text`; `--gold` is fills, borders and underlines only.
+- **Anything at a screen edge without safe-area insets.**
+- **Disabling pinch-zoom.** `maximumScale: 5`, never 1.
+- **Touch or mouse events in place of Pointer Events.** Pointer Events is
+  what keeps finger, mouse *and* Apple Pencil Pro hover all working from
+  one code path.
+
+### Strong defaults — argue with them if you have a reason
+
+- Sans-serif type. Both faces are serif — a firmly held taste, not a law.
+- Pure black or neutral grey in dark mode. Warm charcoal with a green
+  undertone is the intent, **loosened deliberately so Design can explore.**
+- Grids of large cards for long lists. 314 products; rows win on density.
+- Hover-only affordances — hover effects are welcome, hover as the *only*
+  route to something is not, because a finger has no hover.
+- Controls under 44px. Still the target; **being validated on real
+  devices before it hardens.**
+- Client portals, e-signatures, payment collection. HoneyBook handles
+  these today. A scope boundary rather than a design rule, and Sean's to
+  revisit.
+
+### ✅ No longer an anti-pattern
+
+**Shadows, texture and visual richness.** "Heavy shadows or
+glassmorphism" was listed here and was **removed 29 Jul 2026 at Sean's
+direction** — he wants richness and doesn't want Design constrained on
+it. Borders are still doing most of the separation work today, so this is
+open territory rather than a solved question.
 
 ---
 
