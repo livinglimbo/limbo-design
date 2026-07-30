@@ -370,13 +370,28 @@ gesture playground at `/style/touch` · data inspectors at `/debug`
 
 **Built but undesigned — logic exists, no interface yet:**
 
-- **Multi-invoice tabs.** Up to 8 open, per-tab unsaved state, drag to
-  reorder, survives quitting. Needs a visual home in the Builder layout.
-- **Invoice stages and archiving.** Five stages, two gated, two read-only.
-  Needs a stage control, a locked state, and an Archived view in History.
+- **Multi-invoice tabs.** Up to 8 open, **least-recently-used** eviction,
+  drag to reorder, survives quitting. **No dirty state** — see autosave.
+- **Autosave.** Drafts write themselves 700ms after the last edit. No Save
+  button, no dirty dot, no close-confirm. Flushed on close, on app switch
+  and before unload, so the delay can't cost a change.
+- **Undo / redo.** Per-invoice stacks, depth 50, survives close and
+  reopen, cleared when an invoice locks at Complete. Batch edits collapse
+  to one step. Stage changes are not undoable.
+- **The save-state slot.** Four states derived from the sync layer:
+  `Saved · just now` · `Saving…` · `Saved · N waiting to sync` ·
+  `Couldn't save — retrying`. Never says "not saved" when the local write
+  succeeded.
+- **Invoice stages and archiving.** Five stages, two gated, two reversibly
+  locked. Needs a stage control, a locked state, and an Archived view.
 
-Both are described in full in `DECISIONS.md` — the behaviour is fixed, so
+All are described in full in `DECISIONS.md` — the behaviour is fixed, so
 a proposal that contradicts it can't be built.
+
+**Testable now:** `/debug/autosave` exercises autosave, the save-state
+slot, the 8-tab cap and the undo stack. Not a design — instrumentation,
+built so the behaviour could be verified before the real Builder screens
+land.
 
 **Planned:** Invoice Builder · Invoice History · Cocktail Library ·
 Prep Recipes · Reports

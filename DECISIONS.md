@@ -171,6 +171,85 @@ made. Leave it out until it's chosen on purpose.
 
 ---
 
+## ✅ Palette 3A — adopted in full, 29 Jul 2026
+
+All 24 light and 24 dark values are live in `globals.css` and mirrored in
+`design-tokens.json`. Contrast independently measured before shipping, and
+the handoff's figures held: `--gold-text: #7A5518` measures **5.28–6.41:1**
+across all four light surfaces, above the ≥5.2 claimed. `#7C7568` clears
+3:1 everywhere. Every text token and all of dark mode passes comfortably.
+
+**`--surface` is `#FCFAF4`**, resolving the pure-white constraint
+violation that had shipped since the design system was written.
+
+### ⚠️ One open problem — active tab state, for Design
+
+The handoff (§3.1) distinguishes the active tab by fill (`--surface` vs
+`#E1DACA`) plus a 2px `--gold` top edge. Measured:
+
+- fill difference: **1.33:1** — effectively invisible
+- `--gold` `#B4863F` on those fills: **2.6–3.1:1**
+
+WCAG 1.4.11 wants **3:1** for a visual indicator that identifies a
+control's state. Together these are marginal, and in daylight on a patio
+they're likely to fail in practice rather than just on paper.
+
+The two fills are doing almost no work, so the gold edge is carrying the
+signal alone. **Design should pick the fix** — a darker inactive fill, a
+thicker edge, or a different active treatment. Not improvised here.
+
+**Status: 🕓 open, with Design.**
+
+### Five dark tokens were derived, not specified
+
+The handoff's dark table omitted `--accent-hover`, `--border-subtle`,
+`--text-faint`, `--accent-surface-fg` and `--glyph`. Co-Work measured
+values in the same family rather than leaving the old green-undertone
+palette to clash. **Design hasn't seen these** — worth a look:
+
+| Token | Value | Measured |
+|---|---|---|
+| `--accent-hover` | `#93B8A5` | 7.19:1 worst case |
+| `--border-subtle` | `#2C271F` | separator, exempt |
+| `--text-faint` | `#7D7466` | 3.40:1, placeholders/disabled only |
+| `--accent-surface-fg` | `#F3EEE2` | 10.53:1 on `--accent-surface` |
+| `--glyph` | `#8A8274` | 4.12:1, clears 3:1 |
+
+### Note on the brass gold
+
+An earlier round flagged `#B4863F` as "explicitly less legible in
+daylight." Measured, contrast actually **rises** against the page
+background (2.10 → 2.87:1) because the brass is darker than the old gold.
+That earlier note was about vividness, not legibility. Still worth Sean's
+eye outdoors — it's on his device-testing list.
+
+---
+
+## 🕓 KITS — open, Sean wants this soon
+
+*Raised by Claude Design in the Builder handoff, 29 Jul 2026. Owner:
+Claude Design for the interaction design, Co-Work to build.*
+
+"Templates" was carrying two different jobs, which is why it kept feeling
+unresolved:
+
+- **Template** — replaces a whole invoice, at the **start**.
+- **Kit** — a group of items dropped in **mid-build**. "My standard rental
+  package", "the well".
+
+One is a document, the other a subset of one. A single control for both is
+awkward at each. Kits likely belong in the **Products tab** as a filter or
+group, where you're already adding things.
+
+The tell: `Bar-only rental package` appears in the template list today
+*because that's what it currently is* — a kit wearing a template's
+clothes.
+
+**Status: 🕓 open.** Templates (§4 of the handoff) is approved and can be
+built without this; Kits is additive afterwards.
+
+---
+
 ## Standing constraints for future rounds
 
 *Reviewed item by item with Sean, 29 Jul 2026. Every entry now says
