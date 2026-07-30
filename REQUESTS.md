@@ -56,7 +56,50 @@ fill, thicker edge, or a different treatment entirely.
 
 ---
 
-## 🔴 3 · Everything in the Builder skeleton I invented
+## 🔴 3 · I built from the prose and never opened the drawings
+
+**Co-Work's error, corrected 29 Jul.** I built the whole Builder from
+`HANDOFF.md` without opening `Invoice Builder - iPad.dc.html` or any of the
+ten screenshots — despite the README saying to read the drawings second.
+Sean's reaction on seeing it: *"Nothing like Design showed me. I'm
+severely disappointed."* He was right.
+
+Rebuilt against frames 5a, 5c and 6a. What the drawings carry that the
+prose doesn't, and I had wrong:
+
+| | Prose gave me | Drawings show |
+|---|---|---|
+| Invoice columns | "column header" | **Item · Price · Qty · Subtotal** — four, with a per-line subtotal |
+| Category headings | name + count | name, **hairline rule**, and the **category subtotal** right-aligned |
+| Quantity control | "44×44 steppers, 54px readout" | bare `−` `+` glyphs around a **boxed** field, not bordered buttons |
+| Footer | "sticky totals" | line count · drinks estimated · **pre-tax figure with the rate** |
+| Tabs | "name + a 44px ✕" | name only — I had added a running total |
+| Invoice header | "right-aligned in the header" | **one line**: name, meta inline, controls right. I built three stacked rows with a stage chip and a warning banner. |
+| Rail segments | "three segments" | a **segmented control** — one sunken track, active raised |
+| Rail rows | "44px + rows" | name + **one dot-separated metadata line**: category · unit · price · *in invoice* |
+| Rail `+` | §5: "the row's + becomes a live stepper in place" | **stays a `+`.** "in invoice" in the metadata is the feedback. §5's stepper-in-place is the *portrait drawer*; I applied it in landscape. |
+| Sheet position | "centred, max-width 660px" | runs **flush to the right edge**. I had it floating with a gap both sides. |
+| Chips | full `CAT_ORDER` names | **short labels** — Spirits · Mixers · Rentals — plus a **No cost data** chip |
+
+**Two contradictions I need you to settle:**
+
+1. **5a shows a brass dirty dot on tabs; 6a says it's gone.** I built no
+   dot, since 6a is the later turn and the README lists it as the tab
+   strip to build. Confirm that's right.
+2. **5c draws a Save button in the drawer's top bar**, and §5 says "totals
+   and Save live in the drawer's top bar" — but §3 removes Save entirely
+   under autosave, and §3.5 says the phone's must come out. I built no
+   Save button. Same question for the iPad.
+
+**One thing in the drawings that can't be built as-is:** the chip row
+includes **Garnish**, which is not a real category. The nine real ones are
+`CATEGORY_ORDER` plus Prep Ingredients. 5a also shows "Dehydrated
+grapefruit wheel — Garnish". I used real categories with the old app's
+short labels. If Garnish should exist, it's a data migration, not a chip.
+
+---
+
+## 🔴 4 · Everything in the Builder skeleton I invented
 
 Audited after the authority change. The skeleton follows the handoff on
 everything §2 and §3 specify. These are the places I went past it — listed
@@ -83,19 +126,21 @@ placeholder I'd rather you replaced than inherited:
 | Rail toggle control | A text button above the invoice sheet reading "Hide products" / "Show products". Not drawn anywhere. |
 | Drawer chevron glyph | `▴` / `▾` characters. §5 asks for a 44px chevron; it doesn't say what it looks like. |
 | No invoice open | Centred "No invoice open" with a New invoice button |
-| Empty invoice | "Nothing on this invoice yet. Add products from the left." |
-| Locked invoice | A warning-coloured banner in the sheet header explaining the lock is reversible |
-| Invoice header | A stage chip beside the client name, using `STAGE_LABELS`. No stage *control* — just the label, since §7 defers the control. |
+| Empty invoice | "Nothing on this invoice yet. Add products from the source panel." |
+| Locked invoice | The stage name appended to the header's meta line. The warning banner I'd built is **gone** — 6a's point is one status line, and a banner made two. |
 | Details / Cocktails | Stub copy describing what will go there |
-| Silent rows | 60% opacity plus a "silent" chip. Not specified anywhere. |
-| Column header | Item · Unit · Qty · Amount, with the widths I chose |
+| Silent rows | 60% opacity plus a small "silent" marker. Not specified anywhere. |
+| Tax rate | **8.25%**, taken from 5c's footer (`$440.80 + 8.25% tax`). Hardcoded as a default. It almost certainly belongs in event details or settings — where? |
+| Drinks estimated | 5c's footer shows "383 drinks estimated". **Not shown** — that number comes from the estimator, which isn't built. The line will look short until it is. |
+| Column widths | Price 64px, Qty 124px, Subtotal 84px. Chosen to fit, not measured off the drawing. |
 
-The 1024px fallback is the one that matters. It exists only so the page
-isn't broken in portrait, and it looks like a placeholder because it is.
+Two of these matter more than the rest. **The tax rate is a real number on
+a real invoice** and I've hardcoded it. And the **drinks estimate** is a
+visible gap in the footer until the estimator exists.
 
 ---
 
-## 🟡 4 · Undo depth on restart — a real storage limit
+## 🟡 5 · Undo depth on restart — a real storage limit
 
 Handoff §3.3 asks for depth 50 surviving close and reopen. Depth 50 holds
 in memory. **Persisting all of it does not fit:** a 40-line invoice
@@ -113,7 +158,7 @@ about how undo is presented after a restart.
 
 ---
 
-## 🟡 4 · Sean's read on palette 3A
+## 🟡 6 · Sean's read on palette 3A
 
 Sean's words on seeing it: *"The color changes are so minor from my
 perspective."* All 48 values are live and measured, and the pure-white
@@ -122,7 +167,7 @@ for him. Worth knowing before the next visual round.
 
 ---
 
-## 🟢 5 · Not designed yet — Co-Work will not improvise these
+## 🟢 7 · Not designed yet — Co-Work will not improvise these
 
 From your own §7, restated so it's tracked in one place:
 
@@ -137,7 +182,7 @@ From your own §7, restated so it's tracked in one place:
 
 ---
 
-## 🟢 6 · Line-menu glyphs, when the menu is built
+## 🟢 8 · Line-menu glyphs, when the menu is built
 
 §5.2 needs four that don't exist in `icons.tsx`: keypad, note lines,
 folder, bin — with the folder deliberately unlike the bin, since two
