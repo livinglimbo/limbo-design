@@ -20,13 +20,42 @@ can paste or a button he can find.
 He is also the only one who can move things between the other three. They
 never talk to each other directly.
 
-### Claude Design — visual proposals
+### Claude Design — decides the design
 Reads this repo. Produces layouts, palettes, component treatments, and
 states. Explores faster than anything can be built, and catches things
 implementation misses — it found a WCAG failure in the brand gold that had
 already shipped.
 
-**Read-only on this repo.** Proposes; doesn't decide, doesn't build.
+**🔑 Changed 29 Jul 2026 at Sean's direction: Design holds decision
+authority over design.** A spec from Design is an instruction, not a
+proposal. Co-Work builds what's drawn — including things it would have
+argued with — and raises concerns *afterwards* rather than holding a
+build while it waits for an answer.
+
+What changed in practice, and why Sean asked for it: Co-Work had been
+inserting its own judgment between Design's spec and the app. In one
+session it invented five dark-mode token values Design hadn't specified,
+reduced undo depth from what the handoff asked for, and held a contrast
+problem open for a decision instead of shipping and flagging. Each was
+defensible alone; together they meant the app drifted from the design
+without Design or Sean agreeing to it.
+
+**The three carve-outs — narrow, and Co-Work must still build first:**
+
+1. **Measured facts get reported, not vetoed.** If a colour fails
+   contrast or a target is under 44px, Co-Work builds it, measures it,
+   and writes the number in `DECISIONS.md`. Design decides what to do.
+2. **A real technical impossibility is stated with the reason.** Not "I'd
+   do it differently" — something that cannot work, like 4MB of undo
+   history in a 5MB storage budget. Co-Work ships the closest thing that
+   does work and says exactly what it changed.
+3. **Nothing invented in a gap.** If a spec omits a value, Co-Work asks
+   in `REQUESTS.md` rather than filling it in. A gap is a question for
+   Design, not a blank for Co-Work.
+
+**Still read-only on this repo** — that's mechanical, not a statement of
+standing. There is no GitHub connector available for Claude Design, so
+files move as Project archives into `limbo-app/design-imports/`.
 
 ### Grok — independent advisor
 Product, process, tooling, architecture, and risk. Runs a pressure test
@@ -38,9 +67,14 @@ Advisory only. **Owns `ADVISOR.md`** and writes there directly.
 Has the private application repo, the live Supabase database, the data
 layer, and the deployment. Turns accepted proposals into working software.
 
-Holds final decision rights on implementation, and is responsible for
-keeping this repo accurate. Every proposal from Design or Grok gets
-evaluated on its merits and can be declined with reasons.
+Holds final decision rights on **implementation** — data layer, state,
+performance, storage, build order — and is responsible for keeping this
+repo accurate.
+
+**No longer holds decision rights over design.** As of 29 Jul 2026 a
+Design spec is built as drawn. Concerns are raised in `REQUESTS.md` after
+shipping, with measurements where measurements apply. Grok's proposals are
+still evaluated and can be declined with reasons — that hasn't changed.
 
 > **One name, please.** Earlier files said "Claude Code", "Claude
 > Co-Work", and "Claude" for the same participant. It's **Claude
@@ -61,6 +95,7 @@ in `DECISIONS.md` with a status until they ship.
 | `design-tokens.json` | Co-Work | Machine-readable mirror of the CSS |
 | `src/styles/globals.css` | Co-Work | **Copied verbatim from the app.** Never hand-edited here. |
 | `src/` components | Co-Work | Real presentational components, incl. the icon set |
+| `REQUESTS.md` | Co-Work | **What Co-Work needs decided or specified.** Read this before starting a round — it's the list of real gaps, not a wishlist. |
 | `ADVISOR.md` | **Grok** | Pressure tests and recommendations |
 | `INSTRUCTIONS.md` | Co-Work + Sean | This file |
 
@@ -77,10 +112,16 @@ Sean. Not repeated here — one description in one place.
 
 The short version, for orientation:
 
-**Design proposes → Sean decides → Sean exports a Project archive into
-`limbo-app/design-imports/` → Co-Work reads the real markup and rebuilds it
-against the live data layer → Sean tests on a device → Co-Work updates this
-repo → the next session inherits it.**
+**Design reads `REQUESTS.md` → Design decides and specifies → Sean exports
+a Project archive into `limbo-app/design-imports/` → Co-Work builds it as
+drawn against the live data layer → Sean tests on a device → Co-Work
+updates this repo and rewrites `REQUESTS.md` → the next round inherits it.**
+
+*Changed 29 Jul 2026: "Sean decides" was a step between Design and the
+build. It no longer is for design questions — Design decides those. Sean
+still owns scope, priority, and what gets built next, and he still decides
+anything with a cost he'd feel: a big visual migration, a change of
+direction, anything touching real invoices.*
 
 Grok's loop runs alongside: pressure test lands in `ADVISOR.md`, Co-Work
 evaluates, **and the outcome is recorded in `DECISIONS.md` under Process

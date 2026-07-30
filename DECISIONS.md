@@ -171,6 +171,43 @@ made. Leave it out until it's chosen on purpose.
 
 ---
 
+## 🔑 Design holds decision authority over design — 29 Jul 2026
+
+*Sean's direction. Recorded here because it changes how every future round
+is handled.*
+
+**A Design spec is an instruction, not a proposal.** Co-Work builds what's
+drawn — including things it would have argued with — and raises concerns
+afterwards in `REQUESTS.md` rather than holding a build open.
+
+**Why Sean asked for it.** Co-Work had been inserting judgment between the
+spec and the app. In one session it invented five dark-mode token values
+Design hadn't specified, cut persisted undo depth below what the handoff
+asked for, and held a contrast problem open for a decision instead of
+shipping and flagging. Each was defensible in isolation; together the app
+drifted from the design without Design or Sean agreeing to it.
+
+**Three carve-outs, and Co-Work still builds first in all three:**
+
+1. Measured facts get reported, not vetoed — a contrast number lands in
+   `REQUESTS.md`, it doesn't block a build.
+2. A genuine technical impossibility is stated with its reason, and the
+   closest workable thing ships with the difference named.
+3. **Nothing invented in a gap.** An omission is a question for Design, not
+   a blank for Co-Work to fill.
+
+**Co-Work keeps decision rights over implementation** — data layer, state,
+storage, performance, build order.
+
+**Mechanism unchanged:** no GitHub connector exists for Claude Design, so
+files still move as Project archives into `limbo-app/design-imports/`.
+What's new is `REQUESTS.md`, so a round starts from real gaps instead of a
+guess about what implementation needs.
+
+**Status: ✅ in force.**
+
+---
+
 ## ✅ Palette 3A — adopted in full, 29 Jul 2026
 
 All 24 light and 24 dark values are live in `globals.css` and mirrored in

@@ -45,6 +45,12 @@ speak to each other directly.
 **Only you can:** judge how something feels on a real device · decide what
 gets built · push to GitHub · click things in web interfaces.
 
+> **🔑 Changed 29 Jul 2026.** Claude Design now **decides** design, rather
+> than proposing it. Co-Work builds what's drawn and raises concerns
+> afterwards in `REQUESTS.md`. Read `DECISIONS.md` for the full record —
+> the role descriptions below still say "proposals" in places and are being
+> corrected as each is touched.
+
 ### 🎨 Claude Design — Visual proposals
 Reads the design system repo. Produces layouts, palettes, component
 treatments, states.
