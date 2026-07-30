@@ -56,7 +56,44 @@ fill, thicker edge, or a different treatment entirely.
 
 ---
 
-## 🟡 3 · Undo depth on restart — a real storage limit
+## 🔴 3 · Everything in the Builder skeleton I invented
+
+Audited after the authority change. The skeleton follows the handoff on
+everything §2 and §3 specify. These are the places I went past it — listed
+so none of them can be mistaken for a decision Design made.
+
+**Two were corrections, already applied:**
+
+- **Bolder text on the active tab.** I added it as a third signal to
+  compensate for the 1.33:1 contrast problem in item 2. That was overriding
+  a treatment you specified. **Removed** — the tab now shows exactly what
+  §3.1 draws, and the contrast number stands as a report.
+- **Inactive tab fill.** §3.1 names the literal `#E1DACA`. I had
+  substituted `--surface-sunken` (`#EAE4D6`) because no token exists for
+  it. **Now the literal value**, as drawn. It's a raw hex inside a
+  component, which the token system exists to prevent — **please name it**,
+  or fold it into an existing token.
+
+**Still invented, because §7 says these aren't designed yet.** Each is a
+placeholder I'd rather you replaced than inherited:
+
+| Where | What I made up |
+|---|---|
+| Below 1024px | Rail sits **above** the invoice at `38vh`. Pure invention — a stand-in until the 360→60 collapse exists. Not the drawer. |
+| No invoice open | Centred "No invoice open" with a New invoice button |
+| Empty invoice | "Nothing on this invoice yet. Add products from the left." |
+| Locked invoice | A warning-coloured banner in the sheet header explaining the lock is reversible |
+| Invoice header | A stage chip beside the client name, using `STAGE_LABELS`. No stage *control* — just the label, since §7 defers the control. |
+| Details / Cocktails | Stub copy describing what will go there |
+| Silent rows | 60% opacity plus a "silent" chip. Not specified anywhere. |
+| Column header | Item · Unit · Qty · Amount, with the widths I chose |
+
+The 1024px fallback is the one that matters. It exists only so the page
+isn't broken in portrait, and it looks like a placeholder because it is.
+
+---
+
+## 🟡 4 · Undo depth on restart — a real storage limit
 
 Handoff §3.3 asks for depth 50 surviving close and reopen. Depth 50 holds
 in memory. **Persisting all of it does not fit:** a 40-line invoice
