@@ -79,7 +79,9 @@ placeholder I'd rather you replaced than inherited:
 
 | Where | What I made up |
 |---|---|
-| Below 1024px | Rail sits **above** the invoice at `38vh`. Pure invention — a stand-in until the 360→60 collapse exists. Not the drawer. |
+| Collapsed rail contents | §2 gives the 60px width but not what's *in* it. I put a search button that expands, the three segments as 44px targets with two-letter labels, and a line count. **Two-letter labels are a stopgap** — the real answer is icons, and only five exist in `icons.tsx`. |
+| Rail toggle control | A text button above the invoice sheet reading "Hide products" / "Show products". Not drawn anywhere. |
+| Drawer chevron glyph | `▴` / `▾` characters. §5 asks for a 44px chevron; it doesn't say what it looks like. |
 | No invoice open | Centred "No invoice open" with a New invoice button |
 | Empty invoice | "Nothing on this invoice yet. Add products from the left." |
 | Locked invoice | A warning-coloured banner in the sheet header explaining the lock is reversible |
@@ -155,10 +157,16 @@ against the real 314-product library, invoice as a centred document, 52px
 rows, 44×44 steppers with a 54px readout, `CAT_ORDER` grouping, sticky
 totals, autosave, undo.
 
-**Not built:** the rail's 360→60 collapse *(everything portrait waits on
-it — the collapsed state is meant to BE the portrait layout)*, the
-portrait drawer, phone screens, long-press line menu, templates sheet,
-Details and Cocktails segments.
+**Rail collapse + iPad portrait drawer are now built**, as one mechanism:
+a single "how much source is showing" level that reads as a rail width at
+1024px and above and a drawer height below it. Rotating keeps the level.
+Both §5 rules hold — no scrim anywhere, and the total sits in the drawer's
+top bar at all three heights. The 44px chevron duplicates the drag.
+
+**Not built:** phone screens (§5.1 — the one-row 77px peek with the
+`1fr 160px 1fr` grid, 440px half, four add rows), long-press line menu
+(§5.2), templates sheet (§4), Details and Cocktails segments, stage
+control.
 
 `/debug/autosave` — exercises autosave, the four save states, the 8-tab
 least-recently-used cap and the undo stack.
