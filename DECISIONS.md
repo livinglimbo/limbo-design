@@ -2,11 +2,11 @@
 
 > **Reflects `limbo-app` @ `9f4edaf` — 29 Jul 2026.**
 
-Shared memory across all four participants. Every proposal — from Claude
-Design or from Grok — gets logged here with what happened to it and why.
+Shared memory for the project. Every decision gets logged here with what
+happened to it and why.
 
 Two sections: **design decisions** (visual, from Claude Design) and
-**process decisions** (workflow, tooling, architecture, mostly from Grok).
+**process decisions** (workflow, tooling, architecture).
 
 **Read this before proposing.** It's the record of what has already been
 considered — including things that were rejected, and the reasons. Nothing
@@ -372,8 +372,11 @@ warm" is not. Anything untestable belongs under guidance.
 
 # Process Decisions
 
-Workflow, tooling, and architecture. Mostly evaluating Grok's
-recommendations from `ADVISOR.md`.
+Workflow, tooling, and architecture.
+
+*Entries below referencing Grok are kept as history — Grok was an
+independent advisor until 30 Jul 2026, when the role was dropped as
+unused. See `README.md`.*
 
 ---
 
@@ -411,7 +414,7 @@ the lockfile and dependencies are real.
 
 ---
 
-## ✅ Grok as independent advisor — adopted
+## ⏹ Grok as independent advisor — adopted 28 Jul, ENDED 30 Jul
 *Established by Sean, 28 Jul 2026*
 
 Grok reviews product, process, tooling, architecture, and risk, and runs a

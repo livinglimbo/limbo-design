@@ -2,11 +2,54 @@
 
 > **Reflects `limbo-app` after the 30 Jul handoff was built.**
 
-**Owner: Claude Co-Work.** Design and Grok read this; only Co-Work writes it.
+**Owner: Claude Co-Work.** Design reads this; only Co-Work writes it.
 
-Design holds decision authority over design (`INSTRUCTIONS.md`). These are
+Design holds decision authority over design (`README.md`). These are
 questions where a spec has a gap, not proposals for approval.
 **Nothing here blocks a build.**
+
+---
+
+## 📋 Build ledger — what is actually in the app
+
+*Verified against the source on 30 Jul 2026, not from memory. This is the
+row to trust; Design can't see the app repo, and a stale answer here has
+already nearly cost a round.*
+
+| Frame / § | What | State |
+|---|---|---|
+| 5A | iPad landscape — tabs, rail, sheet | ✅ built |
+| 5C / 5D | iPad portrait drawer, three heights | ✅ built |
+| 6A | Tab strip on autosave, save-state slot | ✅ built |
+| 6B | 8-tab cap + naming toast | ✅ built |
+| §1.1 | Full 13-token dark ramp | ✅ built |
+| §1.2 | `--glyph` deleted | ✅ built |
+| §2.1 / 10A | Collapsed rail — chevron, search, 3 icons, gold left bar | ✅ built |
+| §3.2 | Active tab 3px `--accent` edge | ✅ built |
+| §5.3 / 10C | Empty and locked invoice | ✅ built |
+| — | Calendar · coupe · crate icons | ✅ built |
+| **§5.1 / 9A / 8B** | **Phone drawer sizes** | **⚠️ WRONG — see below** |
+| §5.2 / 9B | Long-press line-item menu | ❌ not built |
+| §4 / 5B | Templates + "Start from" sheet | ❌ not built |
+| 6C | Phone "Open invoices" sheet | ❌ not built |
+| 7C | Long-press undo stack | ❌ not built *(exists only in `/debug/autosave`)* |
+| — | Details and Cocktails rail segments | ❌ stubbed |
+| §7 / 11A–D | **Stage control** | ❌ **not designed** |
+
+### ⚠️ The phone is currently wrong, not absent
+
+The portrait drawer renders below 1024px, which includes phones — so a
+phone gets the **iPad's** drawer, at iPad sizes:
+
+| | Built | §5.1 says |
+|---|---|---|
+| Peek | 150px | **77px**, one row |
+| Half | 470px | **440px**, four add rows |
+
+At 390×844 a 150px peek eats a fifth of the screen and the one-row
+`1fr 160px 1fr` grid doesn't exist. **This is Co-Work's to fix, not a
+design gap** — 9A and 8B already specify it. Flagged so nobody reads
+"portrait drawer built" as "phone done".
 
 ---
 
@@ -106,12 +149,97 @@ ledger.
 
 ---
 
-## 🟢 5 · Still not designed
+## 🔴 5 · The stage control — everything the built logic already fixes
 
-- **Stage control.** The biggest gap by far. 10C specifies the *chip*;
-  §7 still owns the control that changes stage. The logic — five stages,
-  two gates, reversible locking, Archived as a side exit — has been built
-  and unused for two rounds.
+Design's own plan for this is **11A–11D**, and it's the right shape. This
+section is only the behaviour that already exists in code, so no frame
+contradicts it.
+
+**All of this is built and working. None of it has an interface.**
+
+### The five stages, exactly
+
+`STAGE_LABELS` in `src/lib/types.ts`:
+
+| Key | Label |
+|---|---|
+| `draft` | Draft |
+| `send` | Ready to Send |
+| `ready` | Ready to Order |
+| `complete` | Complete |
+| `archived` | Archived |
+
+**The track is four, not five.** `STAGE_TRACK` is
+`draft → send → ready → complete`. **Archived is deliberately not in it** —
+an invoice can be cancelled or paused before it's ever finished, so
+Archived is a side exit from *any* stage. A straight left-to-right
+progression on its own is the wrong shape; Archived has to sit off it.
+
+### For 11B · Gate 1, Ready to Send
+
+The old app's pre-flight checked two things: an **outdated estimate**, and
+**cocktails edited since the invoice was built**. Both detected via
+`libHash`, which is already stored on every invoice.
+
+Two more the app can now detect, if you want them checked:
+
+- **Uncosted lines.** 128 of 314 products have no cost data — this is the
+  single most likely thing to be wrong on a real invoice.
+- **Tax rate.** Now per-event and currently a hardcoded 8.25% (item 3).
+
+**It warns, it doesn't block, in the old app.** Your call whether that
+holds.
+
+### For 11C · Gate 2, Complete
+
+Complete already does three things beyond changing a label:
+
+1. Records an analytics snapshot with tags
+2. Locks the invoice
+3. **Clears the undo history** — the snapshot is a commitment, and undoing
+   across it would make the recorded numbers false
+
+**The reversibility promise is real and already implemented.** Moving back
+to any track stage unlocks and starts a fresh undo stack. It does not
+resurrect the old one. The 10C banner's wording — *"reopen to make
+changes, and the invoice returns to Draft"* — is accurate.
+
+**Stage changes are not undoable** (§3.3), and the code enforces it:
+`applyStageToDraft` bypasses the undo stack entirely.
+
+### For 11D · Archived in History
+
+⚠️ **Scope warning: `/history` is still a placeholder page.** There is no
+History screen to add an Archived view *to*. 11D is either the first
+History design, or it waits.
+
+What archiving already does:
+
+- **Manual, from any stage.**
+- **Automatic** once an invoice has been Complete for **N days — default
+  60, adjustable, or off entirely.** ⚠️ **That setting has no home.**
+  Settings? History? It's undesigned and needs one.
+- Auto-archive **only ever touches Complete invoices.** A draft untouched
+  for months is dormant, not finished.
+- Restoring **remembers where it came from** (`archivedFrom`) and offers
+  that as the default rather than always dumping to Draft — but any stage
+  can be chosen.
+- The sweep **skips invoices that are currently open** in a tab.
+
+### Reconciling with 10C
+
+The **chip** is specified: filled `--accent`, white type, padlock, right
+side of the sheet header. Built. 11A's control must sit beside it without
+duplicating it — 10C is explicit that the chip is a badge, not the
+control.
+
+---
+
+## 🟢 6 · Still not designed
+
+- **History itself.** `/history` is a placeholder. 11D needs it.
+- **A home for the auto-archive setting** (default 60 days, adjustable,
+  or off).
 - **Loading and error states** for the Builder.
 - **Silent-row treatment.** Currently 60% opacity and a small marker,
   invented in build.
@@ -121,7 +249,7 @@ ledger.
 
 ---
 
-## 🟢 6 · Icons — four still needed
+## 🟢 7 · Icons — four still needed
 
 Added this round: `UndoIcon`, `RedoIcon` (u-turns, not arcs),
 `CalendarIcon`, `CoupeIcon`, `CrateIcon`. The crate is an isometric box
