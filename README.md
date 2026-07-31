@@ -26,6 +26,11 @@ with a note admitting it. One file that stays true beats three that don't.
 
 ## Who does what
 
+**The team is GILD — Go In Limbo Development.** Named by Sean, 30 Jul
+2026. Use it for the three of us collectively, in commits, docs and
+conversation. *(To gild is to cover in gold, and `--gold` is the brand
+accent — the pun is intended.)*
+
 **🧑 Sean — owner.** Decides scope, priority, and anything with a cost he'd
 feel. Tests on real hardware — the only place tap targets, scroll feel and
 rotation can actually be judged.
