@@ -1,6 +1,6 @@
 # Open requests — Co-Work → Claude Design
 
-> **Reflects `limbo-app` after the 30 Jul handoff was built.**
+> **Reflects `limbo-app` after round 3 (31 Jul) was built.**
 
 **Owner: Claude Co-Work.** Design reads this; only Co-Work writes it.
 
@@ -10,330 +10,132 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
-## 🎯 Everything that needs an answer — scan this first
-
-Nine items. Six are one-line confirmations; two are real design decisions;
-one is a full session.
+## 🎯 Needs an answer — scan this first
 
 | # | Needs | Size |
 |---|---|---|
-| **A** | **The stage control — 11A–11D.** Item 5. | **a full session** |
-| **B** | **The phone breakpoint.** §5.1's phone drawer has different numbers from §5's iPad drawer, but `design-tokens.json` says 1024px is *"the only breakpoint that matters."* Both can't be true. Co-Work shipped 768px. This is a **design-system change** and shouldn't be Co-Work's call. | **a decision** |
-| **C** | **Dark `--accent-fg` fails AA** — 4.24:1, and it's every filled button in dark mode. Item 1. | **a decision** |
-| D | Tab bar 62px in §5.1 vs **56px in your own tokens**, twice. Co-Work built 56px. | confirm |
-| E | Twelve tokens the 13-token ramp doesn't cover. Item 2. | confirm or specify |
+| **A** | **Gate 1 — Ready to Send pre-flight (11B).** The forward button moves the stage with no check. | **a design** |
+| **B** | **Gate 2 — Complete confirm (11C).** The menu says *"confirms first"* and nothing confirms yet. | **a design** |
+| **C** | **The phone breakpoint.** §5.1's phone drawer needs different numbers from §5's iPad drawer, but the tokens say 1024px is *"the only breakpoint that matters."* Co-Work shipped 768px. **A design-system change, not Co-Work's call.** | **a decision** |
+| **D** | `--border-strong` as a control boundary measures **1.77:1**. Built as drawn — see below. | a decision |
+| E | Tab bar: §5.1 says 62px, your tokens say 56px twice. Built 56px. | confirm |
 | F | `--border-subtle` vs `--border-light` — same thing, two names. | pick one |
-| G | 10A draws a stepper where §0 rules there shouldn't be one. Item 4. | confirm |
-| H | Where the per-event tax rate is edited. Item 3. | confirm 5B covers it |
-| I | Four line-menu glyphs — keypad, note, folder, bin. Item 7. | draw |
+| G | Where the per-event tax rate is edited. Unblocks with 5B. | confirm |
+| H | 11D — Archived list. **Blocked**: `/history` is a placeholder. | Sean to scope |
+| I | A home for the auto-archive setting (60 days default). | a design |
+| J | Four line-menu glyphs — keypad, note, folder, bin (§5.2). | draw |
 
-**B and D came out of building the phone drawer on 30 Jul**, after the
-last bundle was exported. They're written up under the build ledger
-below.
+**C and E were raised on 30 Jul, after your last export.** Still open.
 
 ---
 
-## 📋 Build ledger — what is actually in the app
-
-*Verified against the source on 30 Jul 2026, not from memory. This is the
-row to trust; Design can't see the app repo, and a stale answer here has
-already nearly cost a round.*
+## 📋 Build ledger — verified against source, 31 Jul
 
 | Frame / § | What | State |
 |---|---|---|
-| 5A | iPad landscape — tabs, rail, sheet | ✅ built |
-| 5C / 5D | iPad portrait drawer, three heights | ✅ built |
-| 6A | Tab strip on autosave, save-state slot | ✅ built |
-| 6B | 8-tab cap + naming toast | ✅ built |
-| §1.1 | Full 13-token dark ramp | ✅ built |
-| §1.2 | `--glyph` deleted | ✅ built |
-| §2.1 / 10A | Collapsed rail — chevron, search, 3 icons, gold left bar | ✅ built |
+| 5A · 5C · 5D | iPad landscape + portrait drawer | ✅ built |
+| 6A · 6B | Tab strip, save-state slot, 8-tab cap | ✅ built |
+| §1.1 · §1.3 · §1.4 | Full token ramp incl. round-3 corrections | ✅ built |
+| §2.1 / 10A | Collapsed rail | ✅ built |
 | §3.2 | Active tab 3px `--accent` edge | ✅ built |
+| §5.1 / 9A | Phone drawer — 77px one-row peek | ✅ built |
 | §5.3 / 10C | Empty and locked invoice | ✅ built |
-| — | Calendar · coupe · crate icons | ✅ built |
-| §5.1 / 9A | Phone drawer — 77px one-row peek, 440px half | ✅ built |
+| **§8 / 11A · 11A·2 · 11A·3 · 11A·4** | **Stage control** | ✅ **built** |
 | §5.2 / 9B | Long-press line-item menu | ❌ not built |
 | §4 / 5B | Templates + "Start from" sheet | ❌ not built |
 | 6C | Phone "Open invoices" sheet | ❌ not built |
-| 7C | Long-press undo stack | ❌ not built *(exists only in `/debug/autosave`)* |
+| 7C | Long-press undo stack | ❌ not built *(only in `/debug/autosave`)* |
 | — | Details and Cocktails rail segments | ❌ stubbed |
-| §7 / 11A–D | **Stage control** | ❌ **not designed** |
-
-### ✅ Phone drawer fixed — and it exposed a second bug
-
-The drawer had been rendering below 1024px using the **iPad's** numbers,
-so a phone got a 150px peek on an 844px screen. Now built to §5.1: a
-77px one-row peek on a `1fr 160px 1fr` grid, 440px half, "Add item" as
-a button rather than a field at peek, undo icon-only at 44×44, no
-chevron — the whole bar taps.
-
-**The second bug was worse and affected iPad portrait too.** The drawer
-was pinned to `bottom: 0` at `z-30` while the app's bottom nav sits at
-`bottom: 0`, `z-40`. So the nav covered the bottom 56px of the drawer at
-*every* size below 1024px. The drawer now bottoms out above it —
-`calc(56px + env(safe-area-inset-bottom))`.
-
-### 🟢 Tab bar height — your own tokens already answer this
-
-§5.1 gives the tab bar as **62px**. `design-tokens.json` says **56px**,
-in two places:
-
-- `touch.bottomNavHeight: "56px"`
-- `layout.below.navigation: "bottom tab bar, 4 sections, 56px tall"`
-
-The app is 56px + safe-area inset, matching the tokens. **Built to 56px.**
-This looks like a stray number in §5.1 rather than a decision — one word
-to confirm, unless the nav really should grow.
-
-### 🔴 The phone breakpoint adds a SECOND breakpoint to the system
-
-This one is bigger than it looks. `design-tokens.json` says:
-
-> `layout.breakpoint: "1024px"` — *"The only breakpoint that matters. An
-> iPad crosses it when rotated — portrait ~820px, landscape ~1180px."*
-
-But §5.1 specifies a phone drawer with **different numbers** from §5's
-iPad drawer — 77px vs 150px peek, 440px vs 470px half. Those can only
-both exist if something distinguishes a phone from an iPad in portrait,
-and 1024px doesn't: both are below it.
-
-**Co-Work used 768px** (Tailwind's `md`) as the split — an iPhone 14 Pro
-Max is 430px, an iPad mini in portrait is 744px, so it lands between the
-largest phone and the smallest tablet.
-
-**That is a design-system change, not an implementation detail**, and
-Co-Work shouldn't be the one making it. Three ways out:
-
-1. **Adopt 768px as a real second breakpoint** and say so in the tokens,
-   so "the only breakpoint that matters" stops being true.
-2. **Pick a different number** — 700px, 640px — and name it.
-3. **Drop the distinction**: one drawer spec for everything under
-   1024px, and §5.1's numbers replace §5's. Simplest, and it would
-   restore the one-breakpoint claim — but a 77px peek on an iPad in
-   portrait may be too small to be useful.
-
-Whichever it is, it should land in `design-tokens.json`, because right
-now the tokens say one breakpoint and the app has two.
+| 11B · 11C | **The two gates** | ❌ **not designed** |
 
 ---
 
-## ✅ Everything from the 29 Jul list is answered and built
+## ✅ Round 3 built, and every number verified
 
-Round 2 closed all nine. Recorded so nothing gets re-asked:
+**The stage control (11A).** Two objects, not three — the chip says what
+the document *is*, the footer button says what you *do next*, so neither
+repeats the other. The chip is always present: Draft outlined with no
+padlock, every other stage filled `--accent`, every locked stage with the
+lock. Undo moved from the header into the footer and disappears entirely
+at Complete and Archived, because the stack is cleared at both.
 
-| Was | Now |
+The map (11A·3) encodes all four rules: backward always available and says
+*"unlocks"*, forward one step only with anything beyond dimmed,
+*"confirms first"* stated on the gated row rather than sprung, and no row
+destructive-red. Archived sits below the rule, off the track.
+
+**11A·4's markup dropped in almost verbatim** — the React handoff worked.
+Two corrections, both your own stated rule that `globals.css` owns names:
+`text-text-secondary` and `bg-surface-sunken` rather than the ramp's
+`text-body` / `surface-sunk`. **The round-2 renames are reverted.**
+
+**§1.3 verified.** `#14120E` on `#7FA894` measures **7.06:1** against your
+claimed 7.1. Light `#FFFFFF` on `#2E4A40` is 9.68:1. Keeping `--accent`
+and `--accent-surface` separate was the right diagnosis — that separation
+already existed and round 2 collapsed it.
+
+**§1.4 verified.** All eight pass AA on the surfaces they sit on: light
+success 4.77, warning 7.22, danger 6.90; dark success 7.76, warning 8.93,
+danger 4.59.
+
+---
+
+## 🔴 D · `--border-strong` doesn't identify a control on its own
+
+The footer's undo and ⋮ buttons are `border-line-strong` with `bg-surface`
+on a `bg-surface-alt` footer, per 11A·4. Measured:
+
+| | |
 |---|---|
-| Five invented dark tokens | Replaced by the 13-token ramp, §1.1 |
-| `--glyph` — should it exist? | **Deleted.** Call sites now use `currentColor` or `--text-muted` |
-| `#E1DACA` unnamed | **`--surface-recessed`**, and the raw hex is gone from `TabStrip` |
-| Active tab under 3:1 | **Fixed** — 3px `--accent` top edge. Verified 9.27:1 on `--surface`, 6.95:1 on `--surface-recessed` |
-| 5A dirty dot vs 6A | No dot |
-| 5C Save button | No Save, iPad and phone |
-| "Garnish" | Not a category; chips use the real eight |
-| Tax rate | Per-event *(see item 3 — not fully built)* |
-| Collapsed 60px rail | Built to 10A: chevron, search, three icons, 3px gold left bar |
+| `--border-strong` on `--surface-alt`, light | **1.77:1** |
+| ...dark | **1.40:1** |
+| `--surface` vs `--surface-alt` fill difference, light | ~1.02:1 |
 
-Also built: **empty and locked states (10C)**, the **calendar / coupe /
-crate** icons, and the invoice sheet reworked to 10C's fixed columns —
-qty 40px centred, line total 80px right, identical in Draft and Sent.
+WCAG 1.4.11 wants **3:1** for the visual boundary that identifies a
+control. Neither the border nor the fill provides it, so these two buttons
+are effectively outlined in something invisible at arm's length — the same
+class of problem as the tab edge in §3.2, which you fixed by moving to
+`--accent`.
 
----
-
-## 🔴 1 · Dark `--accent-fg` fails AA, and it's not in the ramp
-
-The ramp moved dark `--accent` from `#7FA894` to `#4A7A6A`. Neither
-candidate for text sitting on it clears 4.5:1:
-
-| On `--accent` `#4A7A6A` | Measured |
-|---|---|
-| `#F3EEE2` (light type) | **4.24:1** |
-| `#14120E` (dark type) | **3.82:1** |
-
-Shipped `#F3EEE2` as the closer of the two, flagged in `globals.css`.
-This is every filled button and the app header in dark mode, so it's the
-most-seen text in the theme.
-
-**Either a lighter dark `--accent`, or a specified `--accent-fg`.**
+**Built exactly as drawn.** No workaround added; the last time Co-Work
+patched a contrast number with a type treatment that was the wrong call
+and got reverted. Your fix to choose.
 
 ---
 
-## 🟡 2 · Twelve tokens the 13-token ramp doesn't cover
+## 🔴 A · B — the two gates, and what the app can already check
 
-Left at their previous values rather than re-derived — not inventing
-twice. Several now sit beside ramp colours that moved:
+The forward button currently moves the stage **with no gate at all**. The
+menu still says *"confirms first"* on the gated row, because that's true
+of the design — building a silent Complete that claimed otherwise would be
+worse than an honest gap.
 
-`--bg` · `--surface-alt` · `--border-subtle` · `--accent-hover` ·
-`--accent-fg` · `--accent-surface` · `--accent-surface-fg` ·
-`--danger-bg` · `--warning` · `--warning-bg` · `--warning-border` ·
-`--success`
+**11B, Ready to Send.** The old app checked two things, both via `libHash`
+which every invoice already stores: an **outdated estimate**, and
+**cocktails edited since the invoice was built**. Two more are detectable
+now — **uncosted lines** (128 of 314 products have no cost data, the most
+likely thing wrong on a real invoice) and the **tax rate**. The old app
+warned rather than blocked.
 
-Two specifics:
-
-- **`--border-subtle` vs `--border-light`.** 10A calls the collapsed
-  rail's 36px hairline `--border-light`. The app has `--border-subtle`
-  doing that job. Same thing under two names — pick one.
-- **`--surface-alt`** is `#F8F5EC`, which 10A names as the active
-  collapsed-segment fill. So it's specified in prose but absent from the
-  ramp table.
-
----
-
-## 🟡 3 · Tax per-event is decided but only half-built
-
-§0 rules the rate is per-event, set at creation in the "Start from" sheet
-and editable in the invoice header, defaulted from the org's home
-jurisdiction.
-
-**Built:** the sheet's footer renders whatever rate it's given and shows
-`$440.80 + 8.25% tax`.
-
-**Not built:** the field itself, anywhere. 8.25% is a hardcoded default,
-because the "Start from" sheet (§4/5B) doesn't exist yet and the header
-has no place to edit it. It'll be wrong the first time a job crosses a
-county line.
-
-**No new design needed** — 5B covers creation. Flagging that the number
-on screen is currently a constant.
+**11C, Complete.** Already implemented behind the missing confirm:
+records an analytics snapshot, locks, and **clears the undo stack**.
+Reversibility is real — moving back to a track stage unlocks and starts a
+fresh stack, never resurrecting the old one.
 
 ---
 
-## 🟡 4 · 10A draws a stepper where §0 says it shouldn't
+## 🟢 Still not designed
 
-§0's ledger rules that in **landscape** the rail's `+` stays a `+`, with
-"in invoice" in the metadata as the confirmation — stepper-in-place being
-portrait and phone only.
-
-But **frame 10A draws the expanded landscape rail with `− 18 +` on the
-Coupe glass row**, the one item already on the invoice. The other rows
-show `+`.
-
-Built §0's ruling, since §0 says "if this disagrees with anything below,
-this wins". Worth confirming the drawing is the stale one and not the
-ledger.
-
----
-
-## 🔴 5 · The stage control — everything the built logic already fixes
-
-Design's own plan for this is **11A–11D**, and it's the right shape. This
-section is only the behaviour that already exists in code, so no frame
-contradicts it.
-
-**All of this is built and working. None of it has an interface.**
-
-### The five stages, exactly
-
-`STAGE_LABELS` in `src/lib/types.ts`:
-
-| Key | Label |
-|---|---|
-| `draft` | Draft |
-| `send` | Ready to Send |
-| `ready` | Ready to Order |
-| `complete` | Complete |
-| `archived` | Archived |
-
-**The track is four, not five.** `STAGE_TRACK` is
-`draft → send → ready → complete`. **Archived is deliberately not in it** —
-an invoice can be cancelled or paused before it's ever finished, so
-Archived is a side exit from *any* stage. A straight left-to-right
-progression on its own is the wrong shape; Archived has to sit off it.
-
-### For 11B · Gate 1, Ready to Send
-
-The old app's pre-flight checked two things: an **outdated estimate**, and
-**cocktails edited since the invoice was built**. Both detected via
-`libHash`, which is already stored on every invoice.
-
-Two more the app can now detect, if you want them checked:
-
-- **Uncosted lines.** 128 of 314 products have no cost data — this is the
-  single most likely thing to be wrong on a real invoice.
-- **Tax rate.** Now per-event and currently a hardcoded 8.25% (item 3).
-
-**It warns, it doesn't block, in the old app.** Your call whether that
-holds.
-
-### For 11C · Gate 2, Complete
-
-Complete already does three things beyond changing a label:
-
-1. Records an analytics snapshot with tags
-2. Locks the invoice
-3. **Clears the undo history** — the snapshot is a commitment, and undoing
-   across it would make the recorded numbers false
-
-**The reversibility promise is real and already implemented.** Moving back
-to any track stage unlocks and starts a fresh undo stack. It does not
-resurrect the old one. The 10C banner's wording — *"reopen to make
-changes, and the invoice returns to Draft"* — is accurate.
-
-**Stage changes are not undoable** (§3.3), and the code enforces it:
-`applyStageToDraft` bypasses the undo stack entirely.
-
-### For 11D · Archived in History
-
-⚠️ **Scope warning: `/history` is still a placeholder page.** There is no
-History screen to add an Archived view *to*. 11D is either the first
-History design, or it waits.
-
-What archiving already does:
-
-- **Manual, from any stage.**
-- **Automatic** once an invoice has been Complete for **N days — default
-  60, adjustable, or off entirely.** ⚠️ **That setting has no home.**
-  Settings? History? It's undesigned and needs one.
-- Auto-archive **only ever touches Complete invoices.** A draft untouched
-  for months is dormant, not finished.
-- Restoring **remembers where it came from** (`archivedFrom`) and offers
-  that as the default rather than always dumping to Draft — but any stage
-  can be chosen.
-- The sweep **skips invoices that are currently open** in a tab.
-
-### Reconciling with 10C
-
-The **chip** is specified: filled `--accent`, white type, padlock, right
-side of the sheet header. Built. 11A's control must sit beside it without
-duplicating it — 10C is explicit that the chip is a badge, not the
-control.
-
----
-
-## 🟢 6 · Still not designed
-
-- **History itself.** `/history` is a placeholder. 11D needs it.
-- **A home for the auto-archive setting** (default 60 days, adjustable,
-  or off).
+- **History itself.** `/history` is a placeholder; 11D needs it.
+- **A home for the auto-archive setting** — 60 days after Complete,
+  adjustable, or off.
 - **Loading and error states** for the Builder.
 - **Silent-row treatment.** Currently 60% opacity and a small marker,
   invented in build.
-- **Portrait fallback** — now moot: the drawer is built and the fallback
-  is gone.
 - **Kits** — parked, logged in `DECISIONS.md`, Sean wants it soon.
 
----
+## 🟢 Icons
 
-## 🟢 7 · Icons — four still needed
-
-Added this round: `UndoIcon`, `RedoIcon` (u-turns, not arcs),
-`CalendarIcon`, `CoupeIcon`, `CrateIcon`. The crate is an isometric box
-with a top seam, kept distinct from the folder to come.
-
-Still needed, for §5.2's line menu: **keypad · note lines · folder · bin.**
-The folder must not read as the bin.
-
----
-
-## What's built and testable now
-
-**`/builder`** — iPad landscape and portrait. Tab strip with the 3px
-accent active edge, source rail at 360/60 against the real 314-product
-library, invoice sheet with fixed columns, empty and locked states,
-autosave, undo, and the collapse doubling as the portrait drawer.
-
-**`/debug/autosave`** — autosave, the four save states, the 8-tab
-least-recently-used cap, the undo stack.
-
-**Not built:** phone screens (§5.1), long-press line menu (§5.2),
-templates / "Start from" (§4, 5B), Details and Cocktails segments, stage
-control.
+Added: `UndoIcon`, `RedoIcon` (u-turns), `CalendarIcon`, `CoupeIcon`,
+`CrateIcon`, `CheckIcon`, `ArchiveIcon` (lidded box, distinct from the
+crate). Still needed for §5.2: **keypad · note lines · folder · bin.**
