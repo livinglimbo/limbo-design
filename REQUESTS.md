@@ -50,18 +50,47 @@ was pinned to `bottom: 0` at `z-30` while the app's bottom nav sits at
 *every* size below 1024px. The drawer now bottoms out above it —
 `calc(56px + env(safe-area-inset-bottom))`.
 
-**One number differs from the spec.** §5.1 gives the tab bar as 62px; the
-app's is **56px** plus the safe-area inset. Using the real one. If 62px
-was deliberate rather than an estimate, say so and the nav changes
-instead.
+### 🟢 Tab bar height — your own tokens already answer this
 
-### ⚠️ Co-Work picked the phone breakpoint
+§5.1 gives the tab bar as **62px**. `design-tokens.json` says **56px**,
+in two places:
 
-§5.1 says "phone" without giving one. Using **768px** (Tailwind's `md`):
-an iPhone 14 Pro Max is 430px and an iPad mini in portrait is 744px, so
-the split falls between the largest phone and the smallest tablet.
-Below 768px gets §5.1, 768–1023px gets §5's iPad drawer. Say if that
-boundary should sit elsewhere.
+- `touch.bottomNavHeight: "56px"`
+- `layout.below.navigation: "bottom tab bar, 4 sections, 56px tall"`
+
+The app is 56px + safe-area inset, matching the tokens. **Built to 56px.**
+This looks like a stray number in §5.1 rather than a decision — one word
+to confirm, unless the nav really should grow.
+
+### 🔴 The phone breakpoint adds a SECOND breakpoint to the system
+
+This one is bigger than it looks. `design-tokens.json` says:
+
+> `layout.breakpoint: "1024px"` — *"The only breakpoint that matters. An
+> iPad crosses it when rotated — portrait ~820px, landscape ~1180px."*
+
+But §5.1 specifies a phone drawer with **different numbers** from §5's
+iPad drawer — 77px vs 150px peek, 440px vs 470px half. Those can only
+both exist if something distinguishes a phone from an iPad in portrait,
+and 1024px doesn't: both are below it.
+
+**Co-Work used 768px** (Tailwind's `md`) as the split — an iPhone 14 Pro
+Max is 430px, an iPad mini in portrait is 744px, so it lands between the
+largest phone and the smallest tablet.
+
+**That is a design-system change, not an implementation detail**, and
+Co-Work shouldn't be the one making it. Three ways out:
+
+1. **Adopt 768px as a real second breakpoint** and say so in the tokens,
+   so "the only breakpoint that matters" stops being true.
+2. **Pick a different number** — 700px, 640px — and name it.
+3. **Drop the distinction**: one drawer spec for everything under
+   1024px, and §5.1's numbers replace §5's. Simplest, and it would
+   restore the one-breakpoint claim — but a 77px peek on an iPad in
+   portrait may be too small to be useful.
+
+Whichever it is, it should land in `design-tokens.json`, because right
+now the tokens say one breakpoint and the app has two.
 
 ---
 
