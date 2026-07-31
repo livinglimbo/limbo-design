@@ -10,6 +10,29 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## 🎯 Everything that needs an answer — scan this first
+
+Nine items. Six are one-line confirmations; two are real design decisions;
+one is a full session.
+
+| # | Needs | Size |
+|---|---|---|
+| **A** | **The stage control — 11A–11D.** Item 5. | **a full session** |
+| **B** | **The phone breakpoint.** §5.1's phone drawer has different numbers from §5's iPad drawer, but `design-tokens.json` says 1024px is *"the only breakpoint that matters."* Both can't be true. Co-Work shipped 768px. This is a **design-system change** and shouldn't be Co-Work's call. | **a decision** |
+| **C** | **Dark `--accent-fg` fails AA** — 4.24:1, and it's every filled button in dark mode. Item 1. | **a decision** |
+| D | Tab bar 62px in §5.1 vs **56px in your own tokens**, twice. Co-Work built 56px. | confirm |
+| E | Twelve tokens the 13-token ramp doesn't cover. Item 2. | confirm or specify |
+| F | `--border-subtle` vs `--border-light` — same thing, two names. | pick one |
+| G | 10A draws a stepper where §0 rules there shouldn't be one. Item 4. | confirm |
+| H | Where the per-event tax rate is edited. Item 3. | confirm 5B covers it |
+| I | Four line-menu glyphs — keypad, note, folder, bin. Item 7. | draw |
+
+**B and D came out of building the phone drawer on 30 Jul**, after the
+last bundle was exported. They're written up under the build ledger
+below.
+
+---
+
 ## 📋 Build ledger — what is actually in the app
 
 *Verified against the source on 30 Jul 2026, not from memory. This is the
