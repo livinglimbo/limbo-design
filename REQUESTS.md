@@ -28,7 +28,7 @@ already nearly cost a round.*
 | §3.2 | Active tab 3px `--accent` edge | ✅ built |
 | §5.3 / 10C | Empty and locked invoice | ✅ built |
 | — | Calendar · coupe · crate icons | ✅ built |
-| **§5.1 / 9A / 8B** | **Phone drawer sizes** | **⚠️ WRONG — see below** |
+| §5.1 / 9A | Phone drawer — 77px one-row peek, 440px half | ✅ built |
 | §5.2 / 9B | Long-press line-item menu | ❌ not built |
 | §4 / 5B | Templates + "Start from" sheet | ❌ not built |
 | 6C | Phone "Open invoices" sheet | ❌ not built |
@@ -36,20 +36,32 @@ already nearly cost a round.*
 | — | Details and Cocktails rail segments | ❌ stubbed |
 | §7 / 11A–D | **Stage control** | ❌ **not designed** |
 
-### ⚠️ The phone is currently wrong, not absent
+### ✅ Phone drawer fixed — and it exposed a second bug
 
-The portrait drawer renders below 1024px, which includes phones — so a
-phone gets the **iPad's** drawer, at iPad sizes:
+The drawer had been rendering below 1024px using the **iPad's** numbers,
+so a phone got a 150px peek on an 844px screen. Now built to §5.1: a
+77px one-row peek on a `1fr 160px 1fr` grid, 440px half, "Add item" as
+a button rather than a field at peek, undo icon-only at 44×44, no
+chevron — the whole bar taps.
 
-| | Built | §5.1 says |
-|---|---|---|
-| Peek | 150px | **77px**, one row |
-| Half | 470px | **440px**, four add rows |
+**The second bug was worse and affected iPad portrait too.** The drawer
+was pinned to `bottom: 0` at `z-30` while the app's bottom nav sits at
+`bottom: 0`, `z-40`. So the nav covered the bottom 56px of the drawer at
+*every* size below 1024px. The drawer now bottoms out above it —
+`calc(56px + env(safe-area-inset-bottom))`.
 
-At 390×844 a 150px peek eats a fifth of the screen and the one-row
-`1fr 160px 1fr` grid doesn't exist. **This is Co-Work's to fix, not a
-design gap** — 9A and 8B already specify it. Flagged so nobody reads
-"portrait drawer built" as "phone done".
+**One number differs from the spec.** §5.1 gives the tab bar as 62px; the
+app's is **56px** plus the safe-area inset. Using the real one. If 62px
+was deliberate rather than an estimate, say so and the nav changes
+instead.
+
+### ⚠️ Co-Work picked the phone breakpoint
+
+§5.1 says "phone" without giving one. Using **768px** (Tailwind's `md`):
+an iPhone 14 Pro Max is 430px and an iPad mini in portrait is 744px, so
+the split falls between the largest phone and the smallest tablet.
+Below 768px gets §5.1, 768–1023px gets §5's iPad drawer. Say if that
+boundary should sit elsewhere.
 
 ---
 
