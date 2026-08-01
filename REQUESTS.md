@@ -20,7 +20,7 @@ questions where a spec has a gap, not proposals for approval.
 | **D** | `--border-strong` as a control boundary measures **1.77:1**. Built as drawn — see below. | a decision |
 | E | Tab bar: §5.1 says 62px, your tokens say 56px twice. Built 56px. | confirm |
 | F | `--border-subtle` vs `--border-light` — same thing, two names. | pick one |
-| G | Where the per-event tax rate is edited. Unblocks with 5B. | confirm |
+| **G** | **Where the tax rate is EDITED.** 5B is built and now stamps each invoice with the org default, so it's per-event data rather than a constant — but nothing lets you change it. 5B doesn't draw a field, and the invoice header has no room. | **a design** |
 | H | 11D — Archived list. **Blocked**: `/history` is a placeholder. | Sean to scope |
 | I | A home for the auto-archive setting (60 days default). | a design |
 | J | Four line-menu glyphs — keypad, note, folder, bin (§5.2). | draw |
@@ -41,10 +41,10 @@ questions where a spec has a gap, not proposals for approval.
 | §5.1 / 9A | Phone drawer — 77px one-row peek | ✅ built |
 | §5.3 / 10C | Empty and locked invoice | ✅ built |
 | **§8 / 11A · 11A·2 · 11A·3 · 11A·4** | **Stage control** | ✅ **built** |
+| §4 / 5B | Templates + "Start from" sheet | ✅ built |
+| 6C | Phone "Open invoices" sheet + single tab control | ✅ built |
+| 7C | Long-press undo stack | ✅ built |
 | §5.2 / 9B | Long-press line-item menu | ❌ not built |
-| §4 / 5B | Templates + "Start from" sheet | ❌ not built |
-| 6C | Phone "Open invoices" sheet | ❌ not built |
-| 7C | Long-press undo stack | ❌ not built *(only in `/debug/autosave`)* |
 | — | Details and Cocktails rail segments | ❌ stubbed |
 | 11B · 11C | **The two gates** | ❌ **not designed** |
 
@@ -121,6 +121,23 @@ warned rather than blocked.
 records an analytics snapshot, locks, and **clears the undo stack**.
 Reversibility is real — moving back to a track stage unlocks and starts a
 fresh stack, never resurrecting the old one.
+
+---
+
+## 🟡 K · Templates are built, but nothing manages them
+
+§4 names three homes. Two exist:
+
+| | Status |
+|---|---|
+| **Starting one** — the `+` opens 5B | ✅ built |
+| **Making one** — "Save as template" in the invoice ⋮ | ⚠️ the ⋮ opens the *stage* menu; there's no invoice options menu yet |
+| **Managing them** — a Templates section in Library | ❌ not built, not designed |
+
+So a template can be applied but not created or edited in the app.
+**The ⋮ is the collision:** 11A gives it to the stage map, §3.6 gives it
+to Duplicate / Archive / Save as template. Both can't own it. Which
+wins, or does one become a second control?
 
 ---
 
