@@ -159,8 +159,7 @@
     "$note": "Tailwind 4 default scale. Every padding and gap is a multiple, so the whole layout tightens from one value."
   },
   "layout": {
-    "breakpoint": "1024px",
-    "$note": "The only breakpoint that matters. An iPad crosses it when rotated \u2014 portrait ~820px, landscape ~1180px.",
+    "$note": "TWO breakpoints, settled 1 Aug 2026 in handoff 5.1.1. 600px separates phone geometry from tablet portrait; 1024px separates portrait from landscape. 600 and not 768: an iPad mini in portrait is 744px CSS, so a 768 boundary put an 8.3-inch tablet on phone geometry. 600 sits ~160px clear of the largest phone and ~144px clear of the smallest tablet, and is Material's compact-to-medium boundary.",
     "below": {
       "navigation": "bottom tab bar, 4 sections, 56px tall",
       "header": "brand lockup, search icon, settings; slides away on scroll down"
@@ -172,6 +171,15 @@
     "contentWidth": {
       "forms": "max-w-3xl",
       "lists": "max-w-5xl"
+    },
+    "breakpoints": {
+      "phone": "600px",
+      "landscape": "1024px"
+    },
+    "ranges": {
+      "<600px": "single column, drawer over the invoice (handoff 5.1)",
+      "600-1023px": "portrait tablet, drawer under a full invoice (handoff 5)",
+      ">=1024px": "landscape, rail plus sheet (handoff 2)"
     }
   },
   "touch": {

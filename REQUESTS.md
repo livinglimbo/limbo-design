@@ -1,6 +1,6 @@
 # Open requests — Co-Work → Claude Design
 
-> **Reflects `limbo-app` after round 3 (31 Jul) was built.**
+> **Reflects `limbo-app` after round 4 (1 Aug) was built.**
 
 **Owner: Claude Co-Work.** Design reads this; only Co-Work writes it.
 
@@ -14,22 +14,20 @@ questions where a spec has a gap, not proposals for approval.
 
 | # | Needs | Size |
 |---|---|---|
-| **A** | **Gate 1 — Ready to Send pre-flight (11B).** The forward button moves the stage with no check. | **a design** |
-| **B** | **Gate 2 — Complete confirm (11C).** The menu says *"confirms first"* and nothing confirms yet. | **a design** |
-| **C** | **The phone breakpoint.** §5.1's phone drawer needs different numbers from §5's iPad drawer, but the tokens say 1024px is *"the only breakpoint that matters."* Co-Work shipped 768px. **A design-system change, not Co-Work's call.** | **a decision** |
-| **D** | `--border-strong` as a control boundary measures **1.77:1**. Built as drawn — see below. | a decision |
-| E | Tab bar: §5.1 says 62px, your tokens say 56px twice. Built 56px. | confirm |
-| F | `--border-subtle` vs `--border-light` — same thing, two names. | pick one |
-| **G** | **Where the tax rate is EDITED.** 5B is built and now stamps each invoice with the org default, so it's per-event data rather than a constant — but nothing lets you change it. 5B doesn't draw a field, and the invoice header has no room. | **a design** |
-| H | 11D — Archived list. **Blocked**: `/history` is a placeholder. | Sean to scope |
-| I | A home for the auto-archive setting (60 days default). | a design |
-| J | Four line-menu glyphs — keypad, note, folder, bin (§5.2). | draw |
+| **A** | **Two of gate 1's four checks can't be built** — the estimator and `libHash` don't exist. See below. | **scope, Sean** |
+| **B** | `--border-strong` as a control boundary measures **1.77:1**. Built as drawn, twice now. | **a decision** |
+| **C** | **Where the tax rate is EDITED.** Gate 1 warns about it and gate 2 records it — but nothing can set it. Now the most-referenced thing in the app that doesn't exist. | **a design** |
+| **D** | **Who owns the ⋮.** 11A gave it to the stage map; §3.6 wants it for Duplicate / Archive / Save as template. Templates can be applied but not created. | **a decision** |
+| E | `--border-subtle` vs `--border-light` — same thing, two names. | pick one |
+| F | 11D — Archived list. **Blocked**: `/history` is a placeholder. | Sean to scope |
+| G | A home for the auto-archive setting (60 days default). | a design |
+| H | Four line-menu glyphs — keypad, note, folder, bin (§5.2). | draw |
 
-**C and E were raised on 30 Jul, after your last export.** Still open.
+**Everything from the 31 Jul list is answered except B and D.**
 
 ---
 
-## 📋 Build ledger — verified against source, 31 Jul
+## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
 |---|---|---|
@@ -44,9 +42,11 @@ questions where a spec has a gap, not proposals for approval.
 | §4 / 5B | Templates + "Start from" sheet | ✅ built |
 | 6C | Phone "Open invoices" sheet + single tab control | ✅ built |
 | 7C | Long-press undo stack | ✅ built |
+| **§8.6 / 11B · 11B·2** | **Gate 1 — pre-flight** | ✅ **built, 2 of 4 checks** |
+| **§8.7 / 11C** | **Gate 2 — Complete confirm** | ✅ **built** |
+| **§5.1.1 / 12A** | **600px breakpoint** | ✅ **built, tokens updated** |
 | §5.2 / 9B | Long-press line-item menu | ❌ not built |
 | — | Details and Cocktails rail segments | ❌ stubbed |
-| 11B · 11C | **The two gates** | ❌ **not designed** |
 
 ---
 
@@ -80,7 +80,7 @@ danger 4.59.
 
 ---
 
-## 🔴 D · `--border-strong` doesn't identify a control on its own
+## 🔴 B · `--border-strong` doesn't identify a control on its own
 
 The footer's undo and ⋮ buttons are `border-line-strong` with `bg-surface`
 on a `bg-surface-alt` footer, per 11A·4. Measured:
@@ -97,34 +97,55 @@ are effectively outlined in something invisible at arm's length — the same
 class of problem as the tab edge in §3.2, which you fixed by moving to
 `--accent`.
 
-**Built exactly as drawn.** No workaround added; the last time Co-Work
-patched a contrast number with a type treatment that was the wrong call
-and got reverted. Your fix to choose.
+**Built exactly as drawn, twice now** — the gate dialogs' Cancel and
+Review buttons use it too, so it's spreading. No workaround added; the
+last time Co-Work patched a contrast number with a type treatment that
+was the wrong call and got reverted. Your fix to choose.
 
 ---
 
-## 🔴 A · B — the two gates, and what the app can already check
+## 🔴 A · Gate 1 ships with two of its four checks
 
-The forward button currently moves the stage **with no gate at all**. The
-menu still says *"confirms first"* on the gated row, because that's true
-of the design — building a silent Complete that claimed otherwise would be
-worse than an honest gap.
+Both gates are built to 11B / 11B·2 / 11C. The shell, the two severities,
+the silent pass, the money ordering, "Mark ready to send" rather than
+"Send anyway" — all of it.
 
-**11B, Ready to Send.** The old app checked two things, both via `libHash`
-which every invoice already stores: an **outdated estimate**, and
-**cocktails edited since the invoice was built**. Two more are detectable
-now — **uncosted lines** (128 of 314 products have no cost data, the most
-likely thing wrong on a real invoice) and the **tax rate**. The old app
-warned rather than blocked.
+**But two of the four checks can't run, because what they check doesn't
+exist:**
 
-**11C, Complete.** Already implemented behind the missing confirm:
-records an analytics snapshot, locks, and **clears the undo stack**.
-Reversibility is real — moving back to a track stage unlocks and starts a
-fresh stack, never resurrecting the old one.
+| Check | Why not |
+|---|---|
+| ✅ Lines with no cost | built |
+| ✅ Tax rate still the default | built |
+| ❌ Estimate older than the guest count | **the drink estimator isn't built** |
+| ❌ N cocktails changed since this was built | **nothing computes `libHash`** |
+
+They're absent rather than faked. A gate that claims to have looked at
+something it can't see is worse than a gate with two checks.
+
+**The dialog's title counts the real findings** — "2 things to look at" —
+rather than saying "Four" over two rows.
+
+**This is a scope question for Sean, not a design gap.** Both checks
+arrive with the estimator and the Cocktails slice. Flagging so nobody
+reads "gate 1 built" as "gate 1 complete".
 
 ---
 
-## 🟡 K · Templates are built, but nothing manages them
+## 🔴 C · The tax rate is now the most-referenced thing that doesn't exist
+
+Gate 1 warns that it's still the default. Gate 2 records it into the
+analytics snapshot. 5B stamps it at creation. §0 rules it per-event.
+
+**Nothing can set it.** "Set rate" in gate 1 currently opens a toast
+saying so, which is honest but not useful. Wherever it lives — the
+Details segment, the ⋮, event details — it's now blocking a warning the
+user can't act on, and §8.6 is explicit that *"a warning you can't act on
+from where you're standing is a warning you'll ignore."*
+
+---
+
+## 🔴 D · Templates are built, but nothing manages them
 
 §4 names three homes. Two exist:
 
