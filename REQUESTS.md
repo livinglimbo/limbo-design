@@ -18,10 +18,11 @@ questions where a spec has a gap, not proposals for approval.
 | **B** | `--border-strong` as a control boundary measures **1.77:1**. Built as drawn, twice now. | **a decision** |
 | **C** | **Where the tax rate is EDITED.** Gate 1 warns about it and gate 2 records it — but nothing can set it. Now the most-referenced thing in the app that doesn't exist. | **a design** |
 | **D** | **Who owns the ⋮.** 11A gave it to the stage map; §3.6 wants it for Duplicate / Archive / Save as template. Templates can be applied but not created. | **a decision** |
-| E | `--border-subtle` vs `--border-light` — same thing, two names. | pick one |
-| F | 11D — Archived list. **Blocked**: `/history` is a placeholder. | Sean to scope |
-| G | A home for the auto-archive setting (60 days default). | a design |
-| H | Four line-menu glyphs — keypad, note, folder, bin (§5.2). | draw |
+| **E** | **§5.1's fourth add row doesn't fit.** At 440px half, the chrome above the list uses 241px, leaving 199px — **3.6 rows, not 4**. Shorter rows or less chrome; not shaving blind. | **a decision** |
+| F | `--border-subtle` vs `--border-light` — same thing, two names. | pick one |
+| G | 11D — Archived list. **Blocked**: `/history` is a placeholder. | Sean to scope |
+| H | A home for the auto-archive setting (60 days default). | a design |
+| I | Four line-menu glyphs — keypad, note, folder, bin (§5.2). | draw |
 
 **Everything from the 31 Jul list is answered except B and D.**
 
@@ -159,6 +160,32 @@ So a template can be applied but not created or edited in the app.
 **The ⋮ is the collision:** 11A gives it to the stage map, §3.6 gives it
 to Duplicate / Archive / Save as template. Both can't own it. Which
 wins, or does one become a second control?
+
+---
+
+## 🟡 E · The fourth add row doesn't fit at 440px
+
+First device test, 1 Aug. §5.1 specifies **four add rows** at half
+height. Measured on a 390×844 iPhone:
+
+| | |
+|---|---|
+| Drawer top bar (56 + 12/8 padding) | 76px |
+| Search row | 64px |
+| Segments | 45px |
+| Chips, one row | 56px |
+| **Left for the list** | **199px — 3.6 rows at 56px** |
+
+Two ways to the fourth row: **shorter product rows** (52px gives 3.8,
+48px gives 4.1) or **less chrome above the list**. Co-Work isn't shaving
+either blind — the row height is drawn in 10A and the top bar's padding
+is specified in §5.1's geometry note.
+
+**Also fixed in the same pass, and worth recording as a caution:** the
+chips were *wrapping* rather than scrolling, which stacked three rows
+and left **71px** — the product list was effectively invisible. §5.1
+already said they scroll and are cut mid-chip; Co-Work built it wrong
+anyway. The spec was right and unread at the moment it mattered.
 
 ---
 
