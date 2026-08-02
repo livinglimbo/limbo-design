@@ -334,6 +334,93 @@ entirely, say so and this comes straight out.
 
 ---
 
+## 🔴 1 · The recipe editor — the next round, and the list isn't in it
+
+**Cocktails now reads.** The list shipped 2 Aug from borrowed patterns
+(61px rows, §10.1 scale, RowChip, §10.4 highlight) — same approach as
+History, same offer: replace it whenever, it costs markup.
+
+**The EDITOR is what we need from you.** It's the genuinely hard
+surface in this slice and I'm not improvising it.
+
+### The ingredient row — four things in one row
+
+| | |
+|---|---|
+| **Name** | with autocomplete against the 314-product library |
+| **Quantity + unit** | oz by default; the data has `unitType: "volume"` on every record |
+| **The library link** | present, missing, or **broken** — see below |
+| **"Not ordered"** | §9.3's toggle, which §10.3 moved into the press-and-hold panel |
+
+**⚠️ The link state has to be visible on the row, and this is not a
+preference.** The old app drops links silently two different ways: it
+stores `Number(libraryItemId)`, so any product with a `lib-…` string id
+becomes `NaN` and never links at all; and deleting a product leaves its
+references behind. In both cases the ingredient stops counting toward
+the shopping list and **nothing anywhere says so.**
+
+Sean's Manhattan has two ingredients pointing at products 59 and 43,
+which no longer exist. He didn't know until an audit found it.
+
+The list currently marks these "Link broken" (danger) and "Not linked"
+(warning). **Please design the real treatment** — it needs to read at
+arm's length without making a normal recipe look alarming, and most
+rows are fine.
+
+### Also in the editor
+
+- **Base and batch instructions** — `baseInstructions`,
+  `batchInstructions`, `batchSameAsBase`. Two bodies of text where one
+  is often "same as the other".
+- **⚠️ Leave room for a PHOTO.** Sean asked for recipe photos on 2 Aug
+  so bartenders can see what a drink should look like. **Not being built
+  yet** — it needs file storage the app doesn't have. But a recipe with
+  an image and one without are different layouts, and bolting an image
+  onto the bottom of a form designed without one is the failure here.
+
+---
+
+## 🟡 1.1 · Four more from Sean's wishlist, 2 Aug
+
+Sequenced in `WISHLIST.md`; these are the parts that are yours.
+
+**A · The client-facing invoice PDF.** *"This is a document to read —
+not an app."* No steppers, no +/−. Professional invoicing conventions,
+which **I'll research and hand you before you start** rather than
+leaving you to infer them. Needs the invoice number below.
+
+> ⚠️ **He asked for size options including phone-readable.** A paper
+> invoice and a phone-readable one are different documents, not one
+> scaled — a two-column layout at 390px is unreadable. Worth you ruling
+> on whether that's a second layout or a narrower one.
+
+**B · Invoice numbers.** No such field exists today; it's being added
+now because a sequence can't be started retroactively. Sean wants it
+**"somewhat discrete"** — your call where it sits on screen, and how it
+appears on the PDF, where it stops being decoration and becomes the
+thing a client quotes back at him.
+
+**C · Procurement mode.** A per-line status column, toggleable at any
+stage except Complete. **The data already exists** — `procStatus` is on
+every line item. Two things for you: the control itself, and *"something
+in the spirit of crossing it off a to-do list — like a strike-through
+but more tasteful"* for a packed item.
+
+> ⚠️ **His status list and the app's don't match, and I've asked him
+> rather than assumed.** The app has *Not started · Ordered · Shipping ·
+> Delivered · Complete*; he wrote *No Status · On Hand · Shipping ·
+> Delivered · Complete/Packed*. "On Hand" (already have it) and
+> "Ordered" (bought, in transit) are different states, and
+> Shipping/Delivered only follow from Ordered. My read is On Hand takes
+> an item *out* of the sequence rather than starting it. Design once
+> he's confirmed.
+
+**D · Collapsible categories on the invoice.** Small, but it shares a
+row with C, so worth drawing together. A 32-line invoice is where both
+earn their keep.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
