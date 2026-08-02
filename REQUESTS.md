@@ -14,18 +14,16 @@ questions where a spec has a gap, not proposals for approval.
 
 | # | Needs | Size |
 |---|---|---|
-| **🔴 0** | **LEGIBILITY — 72% of the app is 14px or smaller.** Sean's first device test: *"Throughout the entire app we have real issues with legibility."* This is a type-scale change, not a component fix. **Should be the whole next round.** | **a design round** |
-| **A** | **Two of gate 1's four checks can't be built** — the estimator and `libHash` don't exist. See below. | **scope, Sean** |
-| **B** | `--border-strong` as a control boundary measures **1.77:1**. Built as drawn, twice now. | **a decision** |
-| **C** | **Where the tax rate is EDITED.** Gate 1 warns about it and gate 2 records it — but nothing can set it. Now the most-referenced thing in the app that doesn't exist. | **a design** |
-| **D** | **Who owns the ⋮.** 11A gave it to the stage map; §3.6 wants it for Duplicate / Archive / Save as template. Templates can be applied but not created. | **a decision** |
-| **E** | **§5.1's fourth add row doesn't fit.** At 440px half, the chrome above the list uses 241px, leaving 199px — **3.6 rows, not 4**. Shorter rows or less chrome; not shaving blind. | **a decision** |
+| **C** | **Where the tax rate is EDITED.** Gate 1 warns about it, gate 2 records it, templates unblock it — but nothing can still set it. **The most-referenced thing in the app that doesn't exist**, and now the oldest open item. | **a design** |
+| **D** | **Who owns the ⋮.** 11A gave it to the stage map; §3.6 wants it for Duplicate / Archive / Save as template. ⚠️ **This now blocks real code:** `templateFromInvoice()` and `saveTemplate()` are written, tested and called by nothing, because there's no entry point to put them behind. | **a decision** |
+| **G** | **11D — the Archived list. NO LONGER BLOCKED.** `/history` is real as of 2 Aug — see §0.6. What's there is assembled from shipped patterns and is meant to be replaced. | **a design** |
+| **H** | A home for the auto-archive setting (60 days default). | a design |
+| **A** | Two of gate 1's four checks can't be built — the estimator and `libHash` don't exist. Estimator parked by Sean 1 Aug. | scope, Sean |
 | F | `--border-subtle` vs `--border-light` — same thing, two names. | pick one |
-| G | 11D — Archived list. **Blocked**: `/history` is a placeholder. | Sean to scope |
-| H | A home for the auto-archive setting (60 days default). | a design |
-| I | Four line-menu glyphs — keypad, note, folder, bin (§5.2). | draw |
 
-**Everything from the 31 Jul list is answered except B and D.**
+**Answered and built since: 🔴 0 (§10.1), B (§10.2, 2px accent), E (§10.2,
+chips dropped below 600px), I (all five glyphs drawn), 0.1–0.4.**
+**Open: C, D, G, H — and D is holding up code that already exists.**
 
 ---
 
@@ -285,6 +283,54 @@ was deliberate.
 `recipe` row type exists in the component and is unreachable, because
 the Cocktails tab doesn't exist. It drops in without reopening the
 panel.
+
+---
+
+## 🟠 0.6 · History exists now — and it is UNDESIGNED, on purpose
+
+**Built 2 Aug because the app was losing invoices.** Verified before
+building: `openInvoice()` was written and **called by nothing**. The
+"Open invoices" sheet lists only what's already open, and "duplicate a
+past invoice" makes a *copy*. So once a tab was closed the original was
+unreachable — every finished job was in the database with no route back
+to it. G was blocked on this page existing; it isn't any more.
+
+### ⚠️ Nothing on that screen was invented, and please replace it
+
+Every decision is lifted from something already shipped:
+
+| | Borrowed from |
+|---|---|
+| 61px rows, padding, leadings | the product row, §10.2 |
+| all type sizes | §10.1 — no new values |
+| stage chip | `RowChip`, the same component as "4 in invoice" |
+| pointer highlight | §10.4 option ii, via `useRowHover` |
+| filter chips | the rail's category scroller, §5.1 |
+| the two-line row summary | `StartFromSheet`'s duplicate list |
+
+**This is a functional patch, not a proposal.** When you draw History,
+replacing it should cost markup and nothing else.
+
+### One behaviour that IS a decision, and you should overrule it if wrong
+
+**"All" excludes archived; archived has its own filter.** Reasoning from
+§7 — archiving is a side exit for work that's "indefinitely paused or
+outright cancelled", so an archived invoice should stay *findable*
+without being *in the way*. If 11D wants archived somewhere else
+entirely, say so and this comes straight out.
+
+### What's now unblocked and still yours
+
+- **G / 11D — the archived list.** No longer blocked.
+- **H — a home for the auto-archive setting.** History is the obvious
+  candidate now that it's real, but that's your call, not mine.
+- **13B error 2.** Withdrawn from the Builder in §10.7 because a tab
+  carries its own draft. **Its real home now exists** — tapping a
+  History row whose record didn't load. I've built the honest minimum
+  (stay put, say so, don't navigate) rather than design it.
+- **Drilldown without opening a tab.** The old placeholder promised it.
+  Reopening is not the same as looking, and someone checking what was
+  on a job in March shouldn't have to spend one of eight tab slots.
 
 ---
 
