@@ -117,6 +117,18 @@ product has no URL, no history, and no cocktails — and 41% have no cost
 either. **The panel with everything filled in is the rare one.** A
 design that only works full will look broken on most of the library.
 
+**⚠️ 13C lands a fifth item in this panel.** §9.3 moves the "not
+ordered" toggle into the long-press menu as *"Don't order this"* /
+*"Order this"* — drawn on 30 Jul, before this panel was ruled. **They
+are the same surface.** When Cocktails is built, that toggle is one
+more action under the info section, not a separate menu on recipe
+rows. Please draw it that way rather than as its own thing.
+
+That also means **recipe rows and product rows want the same panel**,
+which is what Sean asked for anyway ("the same treatment in the
+libraries and the rail"). Worth designing once for all three row types
+rather than three times.
+
 **Scope note, so it isn't re-proposed:** the old app split a quantity
 across the cocktails consuming it ("18 limes → Margarita, 12 → Paloma"),
 with an editable "General Use" row. Sean dropped it on 1 Aug. It was
@@ -143,6 +155,61 @@ ruled that out deliberately.
 
 ---
 
+## 🟠 0.3 · Round 5 built — two of three errors, and why the third didn't
+
+**13A shipped in full.** Skeleton at the real dimensions, uneven bar
+widths, one pulse on the group at 1 → .55 → 1 over 1.6s, inert segments
+and search, "Loading catalogue…" as the only status text, 200ms floor.
+`prefers-reduced-motion` drops the animation and keeps the shape —
+added rather than asked for, and worth saying so.
+
+**13B error 1 (catalogue) and error 3 (sync stuck) shipped.**
+
+**⚠️ 13B error 2 ("Couldn't open Marisol & Dev") was not built, and the
+reason is structural rather than a shortcut.**
+
+An open tab **carries its own invoice draft** — `OpenInvoice` holds a
+`structuredClone` of the record, not an id to resolve later. So the
+state the frame draws, *a tab that exists whose invoice failed to
+arrive*, cannot occur. `openInvoice()` either finds the record and
+opens a tab, or finds nothing and opens no tab.
+
+The failure the frame is reaching for is real, but it happens
+**somewhere else**: opening a saved invoice from History when the
+collection didn't load. Today that returns silently and nothing appears
+— which is a genuine gap. But its home is the History screen, and
+`/history` is still a placeholder (11D is blocked on the same thing).
+
+**Not asking for a redraw yet.** Flagging it so 13B isn't recorded as
+fully built, and so error 2 gets designed against History when History
+gets designed, rather than against a Builder state that can't happen.
+
+### One thing measured while building that the frames assume otherwise
+
+**A failed load with a warm cache is not an error.** `loadCollection()`
+falls back to the cached list on purpose — it's the offline read path.
+Replacing a usable 314-product catalogue with "Couldn't load the
+catalogue" would be a regression wearing error handling's clothes.
+
+So the built rule is: **error panel only when the load failed *and*
+there is nothing cached.** The other case is exposed as `stale` and is
+**deliberately not rendered anywhere** — there's no design for it and
+nothing was invented.
+
+> **Question for you:** does a stale catalogue deserve any treatment at
+> all? Sean works events with no signal, so "these prices are from
+> Tuesday" may be worth saying quietly, or may be noise. Genuinely
+> open — currently silent.
+
+### Also shipped: a way to see these on a device
+
+`/debug/states` renders 13A, error 1 and error 3 from the **real
+components**, with the banner's minutes and pending count adjustable.
+Loading is over in milliseconds and errors need a dead connection, so
+neither state could otherwise be checked on the iPad.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
@@ -162,6 +229,10 @@ ruled that out deliberately.
 | **§8.7 / 11C** | **Gate 2 — Complete confirm** | ✅ **built** |
 | **§5.1.1 / 12A** | **600px breakpoint** | ✅ **built, tokens updated** |
 | §5.2 / 9B | Long-press line-item menu | ❌ not built — **superseded by §0.1, redraw as one panel** |
+| §9.1 / 13A | Loading skeletons | ✅ **built 2 Aug** |
+| §9.2 / 13B | Catalogue error, sync-stuck banner | ✅ **built 2 Aug** |
+| §9.2 / 13B | Invoice error (error 2) | ⛔ **can't occur — see §0.3** |
+| §9.3 / 13C | "Not ordered" rows | ⛔ blocked — Cocktails tab doesn't exist |
 | — | Details and Cocktails rail segments | ❌ stubbed |
 
 ---
