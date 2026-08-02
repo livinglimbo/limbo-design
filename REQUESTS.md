@@ -14,6 +14,7 @@ questions where a spec has a gap, not proposals for approval.
 
 | # | Needs | Size |
 |---|---|---|
+| **🔴 0** | **LEGIBILITY — 72% of the app is 14px or smaller.** Sean's first device test: *"Throughout the entire app we have real issues with legibility."* This is a type-scale change, not a component fix. **Should be the whole next round.** | **a design round** |
 | **A** | **Two of gate 1's four checks can't be built** — the estimator and `libHash` don't exist. See below. | **scope, Sean** |
 | **B** | `--border-strong` as a control boundary measures **1.77:1**. Built as drawn, twice now. | **a decision** |
 | **C** | **Where the tax rate is EDITED.** Gate 1 warns about it and gate 2 records it — but nothing can set it. Now the most-referenced thing in the app that doesn't exist. | **a design** |
@@ -25,6 +26,120 @@ questions where a spec has a gap, not proposals for approval.
 | I | Four line-menu glyphs — keypad, note, folder, bin (§5.2). | draw |
 
 **Everything from the 31 Jul list is answered except B and D.**
+
+---
+
+## 🔴 0 · Legibility — the type scale is too small for the stated context
+
+**Sean's first real device test, 1 Aug.** His words: *"Throughout the
+entire app, we have real issues with legibility. Most of the buttons,
+headers, titles, banners, footers seem to be much too small. We need to
+take a comprehensive look across the app… so as to keep the UX/UI
+cohesive but still functional."*
+
+**Measured across the Builder's 89 type declarations:**
+
+| Size | Count | Where |
+|---|---|---|
+| **10px** | 6 | "SUPPLY INVOICE", category headings, "EDITING" — and all of them uppercase with 0.09–0.12em tracking, which makes small type *harder*, not easier |
+| **12px** | 29 | every metadata line, every save-state, every chip |
+| **14px** | 29 | most body copy and button labels |
+| 15–22px | 25 | item names, totals |
+
+**72% of the interface is 14px or smaller.**
+
+The line item Sean called out specifically: name at **15px**, and
+`$32.99 · 750 ml bottle` at **12px**. He also wants the invoice footer's
+total larger, with the other figures spread into the space that frees up.
+
+### The argument, since it's a system change rather than a preference
+
+**This system took touch seriously and never applied the same reasoning
+to reading distance.** 44px minimum targets, 48px form controls, 16px
+input font — stated as non-negotiable, repeated in three places, with the
+justification given each time: *"used standing up with hands full."*
+
+The type scale doesn't carry that reasoning anywhere. `metadata:
+0.75rem`, `rowTitle: 0.875rem`, `sectionLabel: 0.75rem` are ordinary
+desktop values, and `DESIGN.md` states the context as *"used standing up,
+often one-handed, sometimes behind a bar mid-event."* That's arm's
+length, frequently dim, sometimes moving — the same argument that
+produced 44px, applied to a different sense.
+
+**Please move the scale rather than the components.** Co-Work isn't
+bumping sizes one at a time: it's whack-a-mole, and it would break the
+cohesion Sean explicitly asked to keep. Every value is a token, so a
+scale change costs nothing structurally — no data, no state, no
+migration.
+
+**Two specific asks inside this:**
+
+1. **The invoice footer.** Total larger; line count, subtotal and tax
+   rate redistributed into the freed space.
+2. **The 10px eyebrow labels.** Six of them, all uppercase with wide
+   tracking. Tracking at that size is working against you.
+
+---
+
+## 🔴 0.1 · Row highlight, and the line-item detail panel
+
+Also from the device test. Three parts, and they have different owners.
+**Part 3 supersedes frame 9B** — draw them as one thing.
+
+**1 · Hover highlight on invoice rows, library rows and rail rows.**
+Sean asked for **three options to choose from**. Legal under the
+constraints — hover-*only* is banned; hover as enhancement on something
+already reachable is guidance, kept deliberately on 29 Jul.
+
+**2 · Apple Pencil Pro hover should behave like a pointer.** ⚠️ **This
+was assigned to Design on 29 Jul and hasn't come back.** `README.md`:
+*"Sean wants Pencil Pro hover features. Claude Design owns the
+interaction design and hands it to Co-Work to build."* Raising it again
+rather than treating it as new.
+
+**3 · The 9B collision is resolved — one surface.** Sean ruled on
+1 Aug: **press-and-hold opens a single panel** with the item's
+information at the top and 9B's actions underneath. Tap stays as it is
+(edit the field you tapped). Please fold 9B into this rather than
+drawing it separately.
+
+### The information section — exact payload
+
+| Field | Availability | Please draw |
+|---|---|---|
+| **Source URL** | field exists, **6% of products** (~19 of 314) | An **icon, not the address** — Sean asked for this explicitly. Absent → row not shown. Opens in a separate tab; a link that navigates away mid-invoice loses his place. |
+| **Cost per ounce** | computed, **blank on 128 of 314** | The empty case is 41% of the library, so it's the common case, not the edge case. |
+| **Price history** | **shipped 1 Aug**, empty on every record today | Recording started before there was anywhere to show it, because history only accumulates forward. **Will be empty for weeks.** Draw the empty state as the default, not an afterthought. |
+| **Used by** | buildable, not built | A plain list of cocktails containing this product. No quantities — see below. |
+
+**⚠️ Please draw the sparse case as the primary frame.** A brand-new
+product has no URL, no history, and no cocktails — and 41% have no cost
+either. **The panel with everything filled in is the rare one.** A
+design that only works full will look broken on most of the library.
+
+**Scope note, so it isn't re-proposed:** the old app split a quantity
+across the cocktails consuming it ("18 limes → Margarita, 12 → Paloma"),
+with an editable "General Use" row. Sean dropped it on 1 Aug. It was
+produced by the estimator, which is parked. **Don't design it back in.**
+
+---
+
+## 🔴 0.2 · "In invoice" is already there and nobody can see it
+
+Sean asked for an indicator showing which products are already on the
+active invoice — *"a persistent highlight, a chip, an icon. I am open to
+ideas."*
+
+**It exists.** The landscape product row reads
+`Spirits · 750 ml · $32.99 · in invoice`, per §0's ruling that the `+`
+stays a `+` and the metadata carries the confirmation.
+
+**He didn't see it**, which is the actual finding — it's 12px, muted, and
+last in a dot-separated line. The mechanism is right and the volume is
+wrong, which makes this the same problem as §0 rather than a new one.
+
+Whatever replaces it shouldn't reintroduce a stepper in landscape — §0
+ruled that out deliberately.
 
 ---
 
@@ -46,7 +161,7 @@ questions where a spec has a gap, not proposals for approval.
 | **§8.6 / 11B · 11B·2** | **Gate 1 — pre-flight** | ✅ **built, 2 of 4 checks** |
 | **§8.7 / 11C** | **Gate 2 — Complete confirm** | ✅ **built** |
 | **§5.1.1 / 12A** | **600px breakpoint** | ✅ **built, tokens updated** |
-| §5.2 / 9B | Long-press line-item menu | ❌ not built |
+| §5.2 / 9B | Long-press line-item menu | ❌ not built — **superseded by §0.1, redraw as one panel** |
 | — | Details and Cocktails rail segments | ❌ stubbed |
 
 ---
