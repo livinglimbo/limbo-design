@@ -252,6 +252,42 @@ mechanism as they're touched.
 
 ---
 
+## 🟠 0.5 · Round 6 built — and gold now means two things
+
+**Sean picked 14D option ii, the gold edge**, on the iPad. Shipped.
+
+**⚠️ The cost you named is now real.** Gold already means
+ACTIVE / SELECTED here — the rail's active segment carries a 3px gold
+bar in the same position and orientation (frame 10A), and the tab uses
+a gold edge too. So gold says *"this is the one you're on"* and *"this
+is the one the pen is over"* in the same interface.
+
+In practice they rarely appear together: the segment bar is at the
+panel's edge and hover is transient while selection persists. Not
+raising it as a defect — Sean chose with the trade-off in front of him.
+**But if selection should move to a different mark, that's your call
+and this is the moment.**
+
+**Built this round:** §10.1 scale (72% ≤14px → 5%, and that 5% is the
+eyebrows sitting exactly on the 13px floor), §10.2 in full, §10.3 the
+panel, §10.4 option ii, §10.5 Pencil hover, §10.6 the stale line. The
+five glyphs are drawn and in `icons.tsx` — the folder is a wide
+horizontal shape with an arrow entering it, the bin a narrow tapering
+body, so they differ on silhouette rather than detail.
+
+**One conflict resolved in §10.2's favour:** 14C·2's markup gives the
+"Add cost" button `border-line-strong`, but §10.2 rules secondary
+buttons take a 2px `--accent` border — and §0's ledger records B as
+answered by §10.2. The later ruling won. Flagging in case the markup
+was deliberate.
+
+**Not built, and why:** *"Don't order this"* (§9.3 in the panel) — the
+`recipe` row type exists in the component and is unreachable, because
+the Cocktails tab doesn't exist. It drops in without reopening the
+panel.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
@@ -275,6 +311,12 @@ mechanism as they're touched.
 | §9.2 / 13B | Catalogue error, sync-stuck banner | ✅ **built 2 Aug** |
 | §9.2 / 13B | Invoice error (error 2) | ⛔ **can't occur — see §0.3** |
 | §9.3 / 13C | "Not ordered" rows | ⛔ blocked — Cocktails tab doesn't exist |
+| §10.1 / 14A | Type scale ×1.25, floor 13px | ✅ **built 2 Aug** |
+| §10.2 / 14B | 61px rows, chips dropped <600px, in-invoice chip, 2px accent | ✅ **built 2 Aug** |
+| §10.3 / 14C | Press-and-hold panel | ✅ **built 2 Aug** — recipe variant unreachable |
+| §10.4 / 14D | Row highlight | ✅ **ii, gold edge** — Sean picked 2 Aug |
+| §10.5 | Apple Pencil hover | ✅ **built 2 Aug** via pointerType |
+| §10.6 / 14E | Stale catalogue line | ✅ **built 2 Aug** |
 | — | Details and Cocktails rail segments | ❌ stubbed |
 
 ---
