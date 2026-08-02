@@ -21,42 +21,66 @@
     "$note": "There is no sans-serif in this product. Both faces are serif, deliberately.",
     "scale": {
       "display": {
-        "size": "2.2rem\u20133rem",
+        "size": "2.2rem–3rem",
         "weight": "normal",
         "leading": "none"
       },
       "pageTitle": {
-        "size": "1.25rem",
-        "weight": 600
+        "size": "24px",
+        "weight": 600,
+        "$was": "1.25rem / 20px"
       },
       "sectionLabel": {
-        "size": "0.75rem",
+        "size": "13px",
         "weight": 700,
         "transform": "uppercase",
-        "tracking": "0.09em",
-        "color": "--gold-text"
+        "tracking": "0.05em",
+        "color": "--gold-text",
+        "$was": "0.75rem at 0.09em",
+        "$note": "bigger AND tighter — wide tracking at 10-12px pulls letters apart until the word loses its silhouette and has to be read letter by letter"
       },
       "body": {
-        "size": "1rem",
-        "weight": 400
+        "size": "18px",
+        "weight": 400,
+        "leading": 1.45,
+        "$was": "1rem / 16px"
       },
       "rowTitle": {
-        "size": "0.875rem",
-        "weight": 600
+        "size": "17px",
+        "weight": 600,
+        "leading": 1.25,
+        "$was": "0.875rem / 14px",
+        "$note": "leading explicit — at `normal` the 61px row lands at 66.5px and the phone drawer's fourth add row stops fitting"
       },
       "metadata": {
-        "size": "0.75rem",
+        "size": "15px",
         "weight": 400,
-        "color": "--text-muted"
+        "leading": 1.3,
+        "color": "--text-muted",
+        "$was": "0.75rem / 12px"
       },
       "fieldLabel": {
-        "size": "0.75rem",
+        "size": "13px",
         "weight": 700,
         "transform": "uppercase",
-        "tracking": "wider",
-        "color": "--text-muted"
+        "tracking": "0.05em",
+        "color": "--text-muted",
+        "$was": "0.75rem at wider"
+      },
+      "buttonLabel": {
+        "size": "17px",
+        "weight": 600,
+        "$was": "14px"
+      },
+      "invoiceTotal": {
+        "size": "32px",
+        "weight": 600,
+        "$was": "22px",
+        "$note": "every width, no responsive exception — measured 92.8px to 145.9px in Radley 600"
       }
-    }
+    },
+    "$scaleRule": "x1.25 on everything that carries content, floor 13px. A desk monitor sits at ~450-500mm; an iPad held standing sits at ~550-650mm, so type must scale with viewing distance to hold the same angular size. Dim venues cost more: a dilated pupil has worse acuity and Radley is a fine-stroked serif. It is the same argument that produced the 44px touch target, applied to reading instead of touch. Frame 14A, applied 2 Aug 2026.",
+    "$floor": "13px. Nothing smaller anywhere, in any state, including disabled and placeholder text."
   },
   "color": {
     "light": {
@@ -127,7 +151,7 @@
     ]
   },
   "radius": {
-    "$note": "Semantic, by component role \u2014 so 'make cards less rounded' is one edit and cannot reshape badges by accident.",
+    "$note": "Semantic, by component role — so 'make cards less rounded' is one edit and cannot reshape badges by accident.",
     "chip": "0.375rem",
     "control": "0.5rem",
     "card": "0.75rem",
@@ -140,7 +164,7 @@
     }
   },
   "elevation": {
-    "$note": "Theme-dependent, because light-mode shadows are invisible on a dark background. Restrained \u2014 borders do most of the separation work.",
+    "$note": "Theme-dependent, because light-mode shadows are invisible on a dark background. Restrained — borders do most of the separation work.",
     "light": {
       "card": "0 1px 5px rgba(0,0,0,0.06)",
       "panel": "0 2px 8px rgba(0,0,0,0.08)",
@@ -192,8 +216,8 @@
     "rules": [
       "No hover-only interactions, ever. A finger has no hover.",
       "Safe area insets on anything at a screen edge.",
-      "Pinch-zoom stays enabled \u2014 maximumScale 5, never 1.",
-      "Pointer Events, not touch or mouse events \u2014 one path covers finger, Apple Pencil, and cursor."
+      "Pinch-zoom stays enabled — maximumScale 5, never 1.",
+      "Pointer Events, not touch or mouse events — one path covers finger, Apple Pencil, and cursor."
     ],
     "platformLimits": [
       "No haptics available in Safari. Gestures must confirm themselves visually.",
@@ -205,7 +229,7 @@
     "Pure white backgrounds",
     "Pure black or neutral grey in dark mode",
     "Heavy shadows or glassmorphism",
-    "Grids of large cards for long lists \u2014 use rows, for density",
+    "Grids of large cards for long lists — use rows, for density",
     "Hover-only affordances",
     "Interactive targets under 44px"
   ]
