@@ -210,6 +210,48 @@ neither state could otherwise be checked on the iPad.
 
 ---
 
+## 🔴 0.4 · `hover:` does nothing on an iPad — including in 14C's markup
+
+**Found on the device, 2 Aug.** Sean opened `/style/highlight` and
+**none of the three treatments responded to Apple Pencil hover.**
+
+**Cause.** Tailwind compiles the `hover:` variant as
+
+```
+&:hover { @media (hover: hover) { … } }
+```
+
+and **iPadOS reports `(hover: none)`.** The primary input is touch, and
+Pencil hover is not advertised by any media feature — so the rule is
+emitted and never matches. Nothing to do with the Pencil itself.
+
+**Fixed by doing what §10.5 already said.** *"The Pencil is a pointer;
+`pointerType` already tells them apart."* The highlight now comes from
+`pointerenter` / `pointerleave` filtered on `pointerType`: `pen` and
+`mouse` highlight, `touch` never does. My error — the rule was in the
+handoff and I built CSS hover anyway.
+
+**Excluding touch turns out to matter for a second reason.** On iOS a
+tap applies `:hover` and *leaves it applied* until you tap elsewhere, so
+a finger would strand a highlight on the last row touched, reading as
+selection. Filtering on pointer type removes that whole class of bug
+rather than working around it.
+
+### ⚠️ This affects 14C·2, which you haven't seen fail yet
+
+**The panel markup uses `hover:bg-surface-alt` on all four action
+rows.** As written those will be inert on the target device. Nothing to
+redraw — the *intent* is right and the fix is mechanical — but please
+**stop specifying `hover:` in markup for this product** and say
+"pointer hover" instead, so it isn't built literally each time.
+
+**There are 30 more `hover:` classes elsewhere in the app.** All
+decorative row tints that degrade to nothing, so nothing is broken — but
+none of them work on the iPad either, and they should move to the same
+mechanism as they're touched.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
