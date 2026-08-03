@@ -385,9 +385,9 @@ rows are fine.
 Sequenced in `WISHLIST.md`; these are the parts that are yours.
 
 **A · The client-facing invoice PDF.** *"This is a document to read —
-not an app."* No steppers, no +/−. Professional invoicing conventions,
-which **I'll research and hand you before you start** rather than
-leaving you to infer them. Needs the invoice number below.
+not an app."* No steppers, no +/−. **Research done 2 Aug — §1.2 below
+has the requirements**, so you're designing against conventions rather
+than my guesses.
 
 > ⚠️ **He asked for size options including phone-readable.** A paper
 > invoice and a phone-readable one are different documents, not one
@@ -428,6 +428,111 @@ but more tasteful"* for a packed item.
 **D · Collapsible categories on the invoice.** Small, but it shares a
 row with C, so worth drawing together. A 32-line invoice is where both
 earn their keep.
+
+---
+
+## 🔴 1.2 · What a client-facing invoice has to carry
+
+**Researched 2 Aug against general small-business invoicing guidance
+and catering/event-specific practice.** Sources at the end. The
+headline for you: **the layout is the smaller half of this problem.**
+
+### ⚠️ CORRECTED 2 Aug — I briefed part of this wrongly
+
+**Sean's supply invoice is NOT a catering invoice**, and I applied
+general catering guidance to it before knowing his workflow.
+
+**How he actually bills.** His *service charge* — his fee and his
+bartenders' pay — runs through HoneyBook, his CRM: 50% deposit at
+booking, the remaining 50% one to two weeks before the event. **The
+supply invoice sits between those two payments as a separate document**,
+and it's the reason the app exists. HoneyBook can't produce it
+practically.
+
+**So strike three things from what I sent:**
+
+| I said it needs | Actually |
+|---|---|
+| Deposit received and **balance due** | ❌ **No.** Deposits belong to the service charge in HoneyBook. This document has one figure: the supply cost. |
+| A **labour** category with hours and rates | ❌ **No.** Bartender pay is the service charge, not a supply. |
+| Service charge / gratuity **lines** | ❌ **No.** Same reason. |
+
+**What survives is the identity and paper-trail half** — which is what
+Sean has now asked for, and it's below.
+
+### The app is still missing fields the document needs
+
+A data gap, not a design one. Checked against `types.ts`:
+
+| Convention says | The app has |
+|---|---|
+| Business name, address, phone, email, logo | **nothing** — no business identity anywhere in the app |
+| Client name **and** their billing address / email | `client` — a **name only** |
+| Invoice number | ✅ added 2 Aug |
+| Invoice date **and** due date | `savedAt`, and the *event* date. Neither is an invoice date |
+| Payment terms ("Net 30", "due on receipt") | nothing |
+| Accepted payment methods | nothing |
+**Sean's list, 2 Aug — build the document around exactly this:**
+business name · address · phone · email · logo · client name · event
+address · client email · invoice number · invoice date · due date.
+
+**Being added now**, so you're designing against fields that exist.
+
+### What the document should carry, when it can
+
+1. **Identity block** — his business, then the client, then the event.
+   Venue and event date are *not* a substitute for a billing address.
+2. **Three dates that are all different:** invoice date, due date,
+   event date. Only the third exists today.
+3. **Itemised by category**, which the app already does well —
+   `CATEGORY_ORDER` is the real structure and it's already right.
+4. **Subtotal → tax → total.** No deposit line, no balance due, no
+   labour — see the correction above. **One figure is the answer:**
+   what these supplies cost.
+5. **Enough detail to be approved without a phone call.** That's the
+   stated bar for a good catering invoice, and it's a useful test for
+   any layout decision. It's also the point of the document: Sean is
+   showing a client what their money bought.
+
+### ⚠️ One thing that may break the single tax rate
+
+✅ **RESOLVED 2 Aug, and it was a bug I introduced.**
+
+**The old app never applied tax at all** — its `grandTotal` is
+`price × qty` and nothing else; the string "tax" appears nowhere in
+8,900 lines except inside base64 font data. The 8.25% was invented
+during the rebuild and never questioned, so **every one of Sean's 32
+saved invoices was displaying 8.25% above what he actually billed.**
+
+Limbo is based in Delaware, which has no sales tax. **The default is
+now 0**, which is simultaneously correct for new invoices and correct
+for all 32 existing ones — so no migration, no back-fill.
+
+**What this means for the document:**
+
+- **The tax line is omitted entirely at 0%**, on screen and on the
+  PDF. *"+ 0% tax"* is a line that says nothing happened, and it would
+  be there on almost every invoice.
+- **But it can't be designed away.** He works events across state
+  lines, the rate is per-invoice in the data, and there's now an org
+  default in Settings. **Design the totals block so a tax row can
+  appear without the layout shifting** — and, if you're feeling
+  thorough, so a second one could.
+
+**Item C is still yours** — the org default now lives in Settings, but
+the *per-invoice* override still has nowhere to be set.
+
+### Sources
+
+- [Xero — what to include on an invoice](https://www.xero.com/us/guides/what-to-include-on-invoice/)
+- [Stripe — invoice requirements](https://stripe.com/resources/more/invoice-requirements)
+- [Novo — invoicing for caterers](https://www.novo.co/invoicing/caterers)
+- [Novo — invoicing for bars and nightlife](https://www.novo.co/invoicing/bars)
+- [Invoice Quickly — annotated catering invoice](https://invoicequickly.com/blog/catering-invoice-example)
+- [Texas Comptroller — mixed beverage sales tax](https://comptroller.texas.gov/taxes/mixed-beverage/sales.php)
+
+⚠️ **US invoicing has no federal standard** — requirements vary by
+state and industry. These are conventions and good practice, not law.
 
 ---
 
