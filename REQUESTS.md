@@ -597,6 +597,52 @@ Both were true when you wrote them and aren't now:
 
 ---
 
+## 🔴 3 · Round 8 — five screens you've never drawn
+
+**A cleanup round, not a feature round.** Sean asked for these to look
+better, and they should: every one was built from borrowed patterns to
+close a functional hole, and every one was recorded as *"meant to be
+replaced, and replacing it should cost markup."*
+
+| Screen | What it is | Note |
+|---|---|---|
+| **Invoice History** | every invoice, stage filters, tap to reopen | ⚠️ **11D lives here.** Archived is currently one more filter chip. |
+| **Cocktail list** | rows with a broken-link count, expandable, trash | the *editor* is yours already (15B) |
+| **Prep recipes** | list **and** editor | borrowed 15B; differs by a **required yield** and **no batch split** |
+| **Settings** | business identity · tax default · drink splits | the screen §11.3 called homeless twice |
+| **The trash pattern** | a disclosure panel in both libraries | the least considered thing I've built |
+
+### One element I'd particularly like your eye on
+
+**"Not tuned yet."** The drink-split presets are Sean's data — he asked
+to own them. Only *cocktail-forward* is grounded in a real job, so the
+other three are copies carrying that flag, and they keep it until he
+corrects them against a matching event.
+
+I refused to seed plausible-looking numbers for the other three: a
+made-up figure that looks authoritative is worse than an obviously
+blank one, and this app's whole job is telling him what to buy. **The
+flag is doing real work and deserves a real treatment**, not a generic
+warning chip.
+
+### The estimator is next, and it changed shape
+
+Sean redefined it on 2 Aug and it is **much smaller** than the old
+app's. It no longer builds an invoice — it's a tool he points at rows:
+select booze already on the invoice, press a button, get a recommended
+amount. Runnable at any stage but Complete. Every input adjustable and
+every input ignorable.
+
+Nested shares: total drinks → cocktails · spirits · wine · beer · NA →
+the products within each. Crowd style loads the preset; bar type
+constrains and redistributes.
+
+**Its screens come as their own round**, once the maths exists and
+Sean has used it once — there's no point drawing it before he knows
+whether the numbers are right.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
