@@ -394,11 +394,20 @@ leaving you to infer them. Needs the invoice number below.
 > scaled — a two-column layout at 390px is unreadable. Worth you ruling
 > on whether that's a second layout or a narrower one.
 
-**B · Invoice numbers.** No such field exists today; it's being added
-now because a sequence can't be started retroactively. Sean wants it
-**"somewhat discrete"** — your call where it sits on screen, and how it
-appears on the PDF, where it stops being decoration and becomes the
-thing a client quotes back at him.
+**B · Invoice numbers.** ✅ **Now assigned, and displayed nowhere** —
+that split is deliberate, so the sequence starts before the invoices it
+numbers exist. Where it appears is entirely yours.
+
+> **Answered 2 Aug:** the 32 existing invoices are **not** numbered.
+> They went out under whatever reference Sean used before, and
+> renumbering them would show a client a number that wasn't on the
+> paperwork they hold. **The first numbered invoice is №1.**
+>
+> Stored as a plain counter, not a formatted string — "INV-2026-0042"
+> would lock in a format before anyone designed one. **You decide the
+> format**, and it can be anything derivable from an integer and a
+> date. He asked for "somewhat discrete", which I read as: findable
+> when a client needs it, not shouting on every screen.
 
 **C · Procurement mode.** A per-line status column, toggleable at any
 stage except Complete. **The data already exists** — `procStatus` is on
@@ -406,14 +415,15 @@ every line item. Two things for you: the control itself, and *"something
 in the spirit of crossing it off a to-do list — like a strike-through
 but more tasteful"* for a packed item.
 
-> ⚠️ **His status list and the app's don't match, and I've asked him
-> rather than assumed.** The app has *Not started · Ordered · Shipping ·
-> Delivered · Complete*; he wrote *No Status · On Hand · Shipping ·
-> Delivered · Complete/Packed*. "On Hand" (already have it) and
-> "Ordered" (bought, in transit) are different states, and
-> Shipping/Delivered only follow from Ordered. My read is On Hand takes
-> an item *out* of the sequence rather than starting it. Design once
-> he's confirmed.
+> ✅ **ANSWERED 2 Aug — design against this exact set:**
+> **No status · On hand · Shipping · Delivered · Complete / Packed.**
+> "Ordered" is **out**. Sean's reasoning: once he's bought something,
+> what he cares about next is whether it's *moving*, not that a
+> purchase happened. My guess that he wanted both was wrong.
+>
+> Already in `types.ts`. "ordered" stays *readable* for line items that
+> already carry it, but is never offered — so the control has **five**
+> options, not six.
 
 **D · Collapsible categories on the invoice.** Small, but it shares a
 row with C, so worth drawing together. A 32-line invoice is where both
