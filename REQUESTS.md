@@ -643,6 +643,57 @@ whether the numbers are right.
 
 ---
 
+## 🟠 4 · Round 8 built — you overruled two BEHAVIOURS, not just looks
+
+Both corrections were right and both were mine:
+
+**1 · "Archived is a switch, not a fifth chip."** My version put it in
+the chip row, which threw away the stage an invoice stopped at —
+Pemberton was cancelled *at Ready to send* and my filter discarded
+that. Now a switch beside the chips, archived rows carry **both**
+chips, recessed fill rather than dimmed text, and the stage filters
+still work on an archived row via `archivedFrom`.
+
+**2 · "Required, but never a blocked save."** I disabled the prep
+editor's save button without a yield, copying the old app. Your line —
+*someone typing a recipe from a book at 1am shouldn't be stopped for a
+number they'll measure tomorrow* — is obviously correct. Yield is now
+in the header beside the name, with live cost per ounce opposite it,
+and the message states the consequence: *"until then it counts as $0."*
+
+**Also built:** peek-on-tap with category totals and "Open in a tab" as
+its own 48px target with the tab count beside it; the trash as a
+counted row at the foot of both libraries, invisible at zero; the
+library-wide broken-link count beside the search; auto-archive in
+Settings under the tax default.
+
+### 🔴 "Provenance, not severity" — your best note of the project
+
+I built an amber "not tuned yet" chip. You wrote:
+
+> *"A warning chip says something is wrong here. Nothing is wrong with
+> 25·5·55·12·3 — it's a reasonable guess that no event has confirmed.
+> Amber would ask Sean to fix something that isn't broken, and the only
+> way to clear it is to work an event, which he can't do from
+> Settings."*
+
+Built as specified: every preset carries the same line and only the
+words differ, untuned splits sit in `--text-secondary`, and it's a
+**sprout** rather than a triangle. The thing I'd missed is that the
+tuned row isn't *the one without a warning* — it's **the one with a
+better source** — which is why this keeps working when all four are
+tuned instead of quietly disappearing.
+
+### Two notes back
+
+- **Gold meaning three things** — agreed with your ruling. Hover keeps
+  the edge; expansion is the chevron and no highlight.
+- ⚠️ **16D says the tax sheet in 15C should read 0%, and you've fixed
+  it in the frame.** The built sheet already says 0% and states
+  "Delaware has no sales tax", per your Settings note.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
@@ -676,6 +727,10 @@ whether the numbers are right.
 | §11.2 / 15B | Recipe editor, base/batch | ✅ **built 2 Aug** — photo slot absent by design |
 | §11.3 / 15C | ⋮ invoice options, stage chip, tax sheet | ✅ **built 2 Aug** |
 | §11.4 / 15C | Invoice number `№ 14` | ✅ **built 2 Aug** — tab, header, History |
+| §16A | History — archived switch, both chips, peek | ✅ **built 3 Aug** |
+| §16B | Cocktail list — trash to the foot, library-wide count | ✅ **built 3 Aug** |
+| §16C | Prep — yield in the header, never blocks a save | ✅ **built 3 Aug** |
+| §16D | Settings — provenance line, sprout, auto-archive | ✅ **built 3 Aug** |
 | — | Cocktail trash + restore | ✅ **built 2 Aug** |
 | — | Details and Cocktails rail segments | ❌ stubbed |
 
