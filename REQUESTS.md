@@ -536,6 +536,59 @@ state and industry. These are conventions and good practice, not law.
 
 ---
 
+## 🟠 2 · Round 7 built — and you were right about "Not linked"
+
+**§11.1's argument won.** I'd shipped an amber "Not linked" chip on
+every unlinked ingredient and counted it as a problem. Your case —
+bitters, garnish, mint and water are *supposed* to be unlinked, so
+amber on all of them is a wolf cried four times a drink — is correct,
+and the built version now does it your way:
+
+| State | Built as |
+|---|---|
+| Linked | nothing in the gutter |
+| Not linked | `Link…` in `--accent`, 44px, opens the autocomplete |
+| Broken | danger chip + *"Pointed at product 59, which no longer exists"* |
+
+**Only broken is counted**, on the editor header and the list row.
+Verified against Sean's real Manhattan: 4 ingredients, 1 linked,
+1 broken, 2 legitimately unlinked → **the chip reads "1 broken link"**
+and the bitters and cherry are counted nowhere.
+
+**Also built:** the 96px fixed gutter, 56/78px quantity and unit
+tracks, autocomplete against the 314 products with the "use without
+linking" escape, the editor to 15B including `batchSameAsBase`
+defaulting on with one Method field, the split pre-filled from base,
+and the merge-back confirm that only asks when the text has diverged.
+
+**Trash and restore** shipped with it — the old app has a cocktail
+trash, so a final delete button would have been a trade down.
+
+### Not built yet, and both are yours to know about
+
+- **The photo slot is absent**, as §11.2 says it should be. The header
+  is built at the height its three lines of text give it, so the slot
+  drops in without moving anything.
+- **§11.3 — the ⋮ and the stage chip — is NOT built.** It's Builder
+  work and Sean asked for Cocktails first. It's next, and it unblocks
+  `templateFromInvoice()` / `saveTemplate()`.
+
+### Two corrections to §11.3's notes
+
+Both were true when you wrote them and aren't now:
+
+1. **Settings exists.** Built 2 Aug — business identity for the invoice
+   PDF, plus the default tax rate. So item H's auto-archive setting has
+   a home too, and "two homeless settings is a screen" is resolved.
+2. **The default tax rate is 0%, not 8.25%.** The old app never applied
+   tax at all — `grandTotal` is `price × qty` and nothing else. 8.25%
+   was invented in the rebuild. Limbo is in Delaware, no sales tax.
+   **Your tax sheet should read "New invoices start at your default,
+   0%"** and the per-invoice sheet still matters, because he works
+   across state lines.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
@@ -565,6 +618,11 @@ state and industry. These are conventions and good practice, not law.
 | §10.4 / 14D | Row highlight | ✅ **ii, gold edge** — Sean picked 2 Aug |
 | §10.5 | Apple Pencil hover | ✅ **built 2 Aug** via pointerType |
 | §10.6 / 14E | Stale catalogue line | ✅ **built 2 Aug** |
+| §11.1 / 15A | Ingredient row + link states | ✅ **built 2 Aug** |
+| §11.2 / 15B | Recipe editor, base/batch | ✅ **built 2 Aug** — photo slot absent by design |
+| §11.3 / 15C | ⋮ invoice options, stage chip, tax sheet | ⏸ next |
+| §11.4 / 15C | Invoice number `№ 14` | 🟡 assigned, not displayed |
+| — | Cocktail trash + restore | ✅ **built 2 Aug** |
 | — | Details and Cocktails rail segments | ❌ stubbed |
 
 ---
