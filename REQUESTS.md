@@ -14,10 +14,10 @@ questions where a spec has a gap, not proposals for approval.
 
 | # | Needs | Size |
 |---|---|---|
-| **C** | **Where the tax rate is EDITED.** Gate 1 warns about it, gate 2 records it, templates unblock it — but nothing can still set it. **The most-referenced thing in the app that doesn't exist**, and now the oldest open item. | **a design** |
-| **D** | **Who owns the ⋮.** 11A gave it to the stage map; §3.6 wants it for Duplicate / Archive / Save as template. ⚠️ **This now blocks real code:** `templateFromInvoice()` and `saveTemplate()` are written, tested and called by nothing, because there's no entry point to put them behind. | **a decision** |
-| **G** | **11D — the Archived list. NO LONGER BLOCKED.** `/history` is real as of 2 Aug — see §0.6. What's there is assembled from shipped patterns and is meant to be replaced. | **a design** |
-| **H** | A home for the auto-archive setting (60 days default). | a design |
+| **G** | **11D — the Archived list.** `/history` is real as of 2 Aug (§0.6); what's there is borrowed patterns and meant to be replaced. | **a design** |
+| **H** | **Auto-archive's home.** ⚠️ §11.3 called this homeless — **Settings now exists** (built 2 Aug), so it has one. Just needs drawing. | a design |
+| ~~C~~ | ~~Where the tax rate is edited~~ — ✅ **answered §11.3, built 2 Aug.** Sheet off the ⋮, and gate 1's "Set rate" opens the same one. | done |
+| ~~D~~ | ~~Who owns the ⋮~~ — ✅ **ruled §11.3, built 2 Aug.** Map to the chip, options to the ⋮. Template creation unblocked. | done |
 | **A** | Two of gate 1's four checks can't be built — the estimator and `libHash` don't exist. Estimator parked by Sean 1 Aug. | scope, Sean |
 | F | `--border-subtle` vs `--border-light` — same thing, two names. | pick one |
 
@@ -569,9 +569,17 @@ trash, so a final delete button would have been a trade down.
 - **The photo slot is absent**, as §11.2 says it should be. The header
   is built at the height its three lines of text give it, so the slot
   drops in without moving anything.
-- **§11.3 — the ⋮ and the stage chip — is NOT built.** It's Builder
-  work and Sean asked for Cocktails first. It's next, and it unblocks
-  `templateFromInvoice()` / `saveTemplate()`.
+- ✅ **§11.3 and §11.4 shipped the same day.** The stage map moved onto
+  the chip (now 44px, since it's a control), the ⋮ holds the four
+  document actions, the tax sheet opens from both the ⋮ **and gate 1's
+  "Set rate"** — which had been showing a toast saying the feature
+  didn't exist. `№ 14` appears on the tab, the header and the History
+  row.
+- ✅ **Templates can be created.** `templateFromInvoice()` and
+  `saveTemplate()` have a caller for the first time. The name comes
+  from the invoice, so it's one tap — a naming dialog at the moment
+  someone has just decided "do this again next time" is a step nobody
+  needs.
 
 ### Two corrections to §11.3's notes
 
@@ -620,8 +628,8 @@ Both were true when you wrote them and aren't now:
 | §10.6 / 14E | Stale catalogue line | ✅ **built 2 Aug** |
 | §11.1 / 15A | Ingredient row + link states | ✅ **built 2 Aug** |
 | §11.2 / 15B | Recipe editor, base/batch | ✅ **built 2 Aug** — photo slot absent by design |
-| §11.3 / 15C | ⋮ invoice options, stage chip, tax sheet | ⏸ next |
-| §11.4 / 15C | Invoice number `№ 14` | 🟡 assigned, not displayed |
+| §11.3 / 15C | ⋮ invoice options, stage chip, tax sheet | ✅ **built 2 Aug** |
+| §11.4 / 15C | Invoice number `№ 14` | ✅ **built 2 Aug** — tab, header, History |
 | — | Cocktail trash + restore | ✅ **built 2 Aug** |
 | — | Details and Cocktails rail segments | ❌ stubbed |
 
