@@ -825,6 +825,41 @@ and-hold opens §10.3's panel. A third needs the same care you gave the
 
 ---
 
+## 🟠 8 · Round 10 built — and two fields your sheet assumed didn't exist
+
+**§18D is built as specified.** The bar is the source of truth, chips
+carry the off-screen picks, row gestures are suspended with the chevron
+*hidden* rather than inert, and export lives in all three places with
+the differences you drew.
+
+**You were right about the ⋮.** Export has moved onto the sheet header
+beside the stage chip. Filing the primary action of the whole app under
+"more" was the wrong call and it was mine.
+
+### ⚠️ `method` and `glassware` were not fields on a recipe
+
+Checked before adding, including the old app: **"glass" appears in that
+source only as product-name matching inside the estimator** ("highball",
+"rocks glass") and as placeholder text in an instructions box. A recipe
+had no way to say it was stirred, or served in a coupe.
+
+§15B's header reads *"Stirred · Coupe · 4 ingredients"* and §18C's
+Service block groups glassware with ice and garnish — both assume data
+that didn't exist. **Sean has approved adding them**, and they're in:
+freeform with suggestions, not fixed lists, because bartending has
+swizzled, rolled and thrown and a union type would reject a real recipe.
+
+**His 8 existing recipes have them blank**, so your header needs to read
+correctly with one, two or neither present. `cocktailSummary()` already
+degrades — "4 ingredients" alone is a valid line.
+
+### Ice and garnish need no new fields
+
+They're ingredients already, so the Service block groups what's there
+rather than asking for more. Only glassware was genuinely missing.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
@@ -860,6 +895,10 @@ and-hold opens §10.3's panel. A third needs the same care you gave the
 | §11.4 / 15C | Invoice number `№ 14` | ✅ **built 2 Aug** — tab, header, History |
 | §13 / 17A | Letter document, print scale | ✅ **built 3 Aug** |
 | §13.2 / 17B | Narrow page, running head | 🟡 **built** — page counter impossible, see §5 |
+| §18D | Select mode, the selection bar, three export entry points | ✅ **built 3 Aug** |
+| §18C | Export fields — Sean's four rulings | ✅ settled |
+| — | `method` and `glassware` on a recipe | ✅ **added 3 Aug** — neither existed |
+| §18B / 18E | The recipe sheet and size chooser | ⏸ next |
 | §16A | History — archived switch, both chips, peek | ✅ **built 3 Aug** |
 | §16B | Cocktail list — trash to the foot, library-wide count | ✅ **built 3 Aug** |
 | §16C | Prep — yield in the header, never blocks a save | ✅ **built 3 Aug** |
