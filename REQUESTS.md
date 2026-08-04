@@ -860,6 +860,42 @@ rather than asking for more. Only glassware was genuinely missing.
 
 ---
 
+## 🟠 9 · Round 10 finished — your sheet caught a bug in my maths
+
+**§18B gave me a number to check mine against, and mine was wrong.**
+
+> Rye 2 oz per drink, 500 ml batch
+> my base (3.0625 oz, dashes included) → **327 ml**
+> your base (3.00 oz, spirits only) → **333 ml** ← your sheet
+
+Your note says why: *"volumes are the spirit and vermouth; bitters
+dashed on top."* That's how batching is actually done — the bitters
+don't displace the whiskey. **Corrected, and rye/vermouth now match
+your figures exactly at all three volumes.**
+
+I also had **yields flooring to whole drinks**; your sheet shows
+5.6 · 8.5 · 11.3. Yours is right — rounding 5.6 to 5 quietly throws
+away half a serve on every batch. Now fractional.
+
+### ⚠️ One row I could not read confidently, and won't guess
+
+On 18B the **Angostura row and the Yields row show the same three
+figures** — 5.6 · 8.5 · 11.3. Yields I can derive and they're correct.
+Bitters at 2 dashes a drink should scale to roughly 11 · 17 · 22
+dashes, or 10 · 16 · 21 ml at the dash volume I'm using.
+
+Either I'm misreading a low-resolution frame, or the bitters row means
+something I haven't understood. **Which is it, and what unit should
+that row be in?** It's currently rendering in millilitres like the
+others, which may be wrong for something you dash.
+
+**Everything else in 18B and 18E is built** — phone-first, all volumes
+on one page, unit in the column header, two to a page on paper with the
+dashed separator, the size chooser remembering per export type while
+still always asking.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
