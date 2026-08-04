@@ -738,6 +738,60 @@ shipping a document that's missing a piece you specified.
 
 ---
 
+## 🔴 6 · Recipe exports — asked for on 2 Aug, never briefed. My miss.
+
+Sean asked for these the same day as the invoice PDF. I recorded them,
+split the work "invoice first, recipes later", and never came back —
+round 9 mentions recipes once and asks for nothing. Recording that
+here so it's the last time.
+
+**Two page sizes, same as the invoice.** Regular for print or a large
+screen; small for a phone.
+
+**Multi-select** — *"if I have three cocktails/recipes, I want them all
+shipped together in one document."*
+
+**Multiple volumes of one recipe in one document** — base, 500 ml,
+750 ml, 1000 ml, custom. The old app did this and it's the part that
+makes the export worth having: several volumes, for several recipes,
+in a single sheet.
+
+**⚠️ A different reader from the invoice.** These are for Sean and his
+contracted bartenders, working in a prep kitchen. Not a client
+document — so the invoice's restraint may be exactly wrong here.
+
+**He's asked to be ASKED which fields go on a cocktail export.** Please
+propose a list rather than deciding; I'll put it to him.
+
+---
+
+## 🔴 7 · Where export lives — one button in the whole app
+
+There is exactly one export entry point today: a row in the invoice
+`⋮`. Sean's request, and it's fair:
+
+- **On the cocktail / prep card**, where you're already looking at it.
+- **On each library's landing page**, to choose several first.
+- **And is the invoice's own `⋮` right?** A generic overflow row is a
+  strange home for the thing the document exists *for*.
+
+### Select mode is the hard part
+
+*"I'd need the option to scroll through the items AS WELL as search by
+name or filters, so I don't have to scroll the entire library."*
+
+**Selection must survive filtering.** Pick two, search for a third,
+pick it — the first two stay selected while off-screen. Which raises
+the questions this needs designing for: how he sees what's selected
+when it's filtered away, how he clears something invisible, where the
+count lives, and how the mode starts and ends.
+
+⚠️ **The library row already has two meanings** — tap expands, press-
+and-hold opens §10.3's panel. A third needs the same care you gave the
+9B collision in round 7.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
