@@ -752,9 +752,25 @@ screen; small for a phone.
 shipped together in one document."*
 
 **Multiple volumes of one recipe in one document** — base, 500 ml,
-750 ml, 1000 ml, custom. The old app did this and it's the part that
-makes the export worth having: several volumes, for several recipes,
-in a single sheet.
+750 ml, 1000 ml, custom. ✅ **The maths is built** (`batchScaling`,
+3 Aug), so the numbers on your frames are real:
+
+- ratios hold exactly — a 2:1 Manhattan is still 2:1 at 750 ml
+- **garnishes scale by DRINK COUNT, not volume**, and round up: a
+  cherry has no fluid volume but a batch still needs one each, and
+  half a cherry isn't a thing
+- each batch reports **how many drinks it pours** — worth a place on
+  the sheet; it's what a bartender actually needs to know
+
+> ⚠️ **One rule that came out of reading the output, and it may want
+> showing.** The first version scaled 2 dashes of Angostura to
+> **"16.56 dash"** for a 750 ml batch — correct, and useless. Nobody
+> counts sixteen and a half dashes into a bottle.
+>
+> So small units become ounces in a batch while the base recipe keeps
+> them: **the base recipe is how you build one; the batch is how you
+> measure many.** The original is retained (`originally: "17 dashes"`)
+> in case you want to show both.
 
 **⚠️ A different reader from the invoice.** These are for Sean and his
 contracted bartenders, working in a prep kitchen. Not a client
@@ -774,6 +790,23 @@ There is exactly one export entry point today: a row in the invoice
 - **On each library's landing page**, to choose several first.
 - **And is the invoice's own `⋮` right?** A generic overflow row is a
   strange home for the thing the document exists *for*.
+
+### ✅ The behaviour is built — you're designing on top of it
+
+`useSelection` (3 Aug) answers the three questions in state, so you're
+free to design the surface without inventing the rules:
+
+| | |
+|---|---|
+| **Selection survives filtering** | picks persist off-screen |
+| **`hiddenCount`** | how many selected items the filter is hiding — the number that makes a search box safe to use here |
+| **Select all = VISIBLE, and ADDS** | search "gin", select all, search "rum", select all → you get both. Replacing would make a search box destructive, which nobody expects |
+| **Order is preserved** | three recipes on one sheet come out in the order they were picked |
+| **Exit clears** | a selection that outlives the mode is invisible state |
+
+**`hiddenCount` is the one I'd design around.** Without it someone
+picks three, searches, sees one ticked, and reasonably believes they
+have one.
 
 ### Select mode is the hard part
 
