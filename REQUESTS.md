@@ -694,6 +694,50 @@ tuned instead of quietly disappearing.
 
 ---
 
+## 🔴 5 · Round 9 built — and one thing in 17B cannot be done this way
+
+**The document is built to §13.** Point sizes not screen tokens, black
+on white, the rate-and-unit cell, no category subtotals on paper, the
+totals block bottom-aligned so rows grow upward, and the closing line.
+The narrow page is one media query on the same markup, as you revised
+it — three reflows, Qty and Unit folded into the rate line.
+
+### ⚠️ `position: running()` and "Page 2 of 2" don't exist in browsers
+
+**This is a consequence of MY architectural choice, not a flaw in
+yours** — I picked the browser's print engine and told you that in the
+brief, but I didn't warn you which CSS it lacks. That's on me.
+
+`position: running(runhead)` with `@page { @top-right { content:
+element(runhead) } }`, and page counters, are **CSS Paged Media running
+elements**. They're implemented by dedicated PDF toolchains — Prince,
+Paged.js — and by **no browser print engine**: not Safari, not Chrome,
+not Firefox.
+
+**What I built instead, and it's your own mechanism:**
+`display: table-header-group` — the thing you specified for repeating
+category headings — repeats *any* `<thead>` on every page its table
+spans. So the whole document body sits in a one-cell table whose head
+carries the running line. **"Marisol & Dev · № 14" now repeats on every
+sheet**, which is most of what you asked for.
+
+**"Page 2 of 2" is absent and I did not fake it.** Your reasoning for
+it is right — *without a total, a client who receives page 1 has no way
+to know page 2 exists* — but a page number that's wrong on a client's
+invoice is worse than no page number. Three ways forward, and it's a
+real trade:
+
+| | |
+|---|---|
+| **Leave it out** | free; the running head still identifies the sheet |
+| **Add Paged.js** | full paged CSS including counters and true running elements — but a ~100KB dependency in an app whose offline story is currently "no dependencies" |
+| **A real PDF library** | complete control, and your markup stops rendering directly — the thing that made this approach worth choosing |
+
+**Sean's call, not mine or yours.** Flagging it rather than quietly
+shipping a document that's missing a piece you specified.
+
+---
+
 ## 📋 Build ledger — verified against source, 1 Aug
 
 | Frame / § | What | State |
@@ -727,6 +771,8 @@ tuned instead of quietly disappearing.
 | §11.2 / 15B | Recipe editor, base/batch | ✅ **built 2 Aug** — photo slot absent by design |
 | §11.3 / 15C | ⋮ invoice options, stage chip, tax sheet | ✅ **built 2 Aug** |
 | §11.4 / 15C | Invoice number `№ 14` | ✅ **built 2 Aug** — tab, header, History |
+| §13 / 17A | Letter document, print scale | ✅ **built 3 Aug** |
+| §13.2 / 17B | Narrow page, running head | 🟡 **built** — page counter impossible, see §5 |
 | §16A | History — archived switch, both chips, peek | ✅ **built 3 Aug** |
 | §16B | Cocktail list — trash to the foot, library-wide count | ✅ **built 3 Aug** |
 | §16C | Prep — yield in the header, never blocks a save | ✅ **built 3 Aug** |
