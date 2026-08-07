@@ -1135,17 +1135,36 @@ fits at the volumes I've tested, but if you want the batch block
 somewhere else — under the batch columns rather than under the
 single ones, say — that's a real option and I haven't taken it.
 
-### 3. Cards open locked
+### 3. Cards open locked — and I got this wrong once, publicly
 
 Library rows used to expand to ingredients only; technique, glass,
 instructions and notes were all behind **Edit**. So reading a recipe
-meant opening the thing that can change it. The expanded row is now
-the full card, read-only, with Edit at the bottom. Labels are small
-caps above plain values — no disabled inputs, since a greyed box says
-"you could edit this but can't", which isn't the message.
+meant opening the thing that can change it.
 
-Empty fields print `—` rather than vanishing, so "no glassware
-recorded" is distinguishable from "this card has no glassware line".
+**My first fix made it worse.** I read "card" as a region and built a
+bigger inline drawer — tapping a row unfolded the whole recipe between
+its neighbours. Sean: *"One shows the recipe opening in-line with the
+entire list. I hate that."*
+
+⚠️ **A card comes forward.** It is the same sheet the editor uses, in
+a locked state, over the library — not a region that pushes the list
+apart. Pressing **Edit recipe** unlocks it in place: same sheet, same
+sections, same order, text becomes fields and nothing moves. Cocktails
+and prep both.
+
+Locked is **not disabled**. No greyed inputs, no unit rollers, no
+remove ×, no "Add ingredient" — Sean said "no boxes or rollers" twice
+and a greyed box still reads as a box. The locked ingredient row is a
+separate, simpler component from the editor's.
+
+Empty fields print `—` under their label rather than vanishing, so "no
+glassware recorded" is distinguishable from "this card has no
+glassware line".
+
+**Open for you:** the locked card is borrowed, not drawn — it reuses
+15B's header proportions and section labels. If the reading state
+wants different type or spacing from the editing state, that's yours
+to call.
 
 ### 4. Library headers
 
