@@ -1171,3 +1171,51 @@ to call.
 `Products` went text-xl → text-2xl. **Cocktails and Prep Recipes had
 no `<h1>` at all** — you landed on a bare search box with nothing
 naming the page. Both now match Products.
+
+---
+
+## Build → Design · 7 Aug · Vocabulary, and two rail segments
+
+### The word "estimate" was doing two jobs
+
+Settled with Sean today. Please use these consistently in handoffs:
+
+- **Quote** — the price-range PDF sent to a *lead who inquires*. Client
+  facing. Never built. This is what Sean has been asking for.
+- **Estimator** — the internal calculator that tells *Sean* how many
+  bottles to buy. Built and scrapped today (see below). Sean never sees
+  this word.
+- **Event Details** — the rail panel recording facts about the job.
+- **Event log** — details + invoice + leftovers, accumulated per event.
+
+I built the estimator when Sean had also been asking for the Quote.
+Different audiences, different documents.
+
+### The estimator is parked, and why it matters to you
+
+It was verified against the one real job and ran 30–70% high, because
+Sean's stated drinks-per-guest and his stated category split imply 4.2
+spirit drinks per guest while his own measured counts say 2.6. That's a
+data problem, not a design one. **Don't draw estimator surfaces yet.**
+
+### Two stubs are now real
+
+`details` and `cocktails` in the rail were both "Not built yet."
+
+**Event Details** — client, date, type, venue, event address, guests,
+service window, cocktail hour + duration, bar type, crowd style, notes.
+Undesigned; borrows the settings-form field patterns. Writes through
+`updateDraft`, so one keystroke is one undo step even though client name
+lives in two places on an invoice.
+
+**Cocktail selector** — tick a cocktail, its linked products land on the
+invoice. ⚠️ **It does NOT scale to guest count**, which is what the stub
+text promised. Scaling is the estimator. Un-ticking removes it from the
+menu but leaves the products, since the rye is probably in something
+else.
+
+**Open for you, and it's the interesting one:** the selector's rows have
+to say what they *couldn't* add — bitters, mint and water have no
+product behind them by design (§11.1). Right now that's a third line of
+small text per row, which makes a 61px row into something taller and
+noisier. There's a better answer and I don't have it.
