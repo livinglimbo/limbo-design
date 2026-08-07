@@ -1219,3 +1219,173 @@ to say what they *couldn't* add — bitters, mint and water have no
 product behind them by design (§11.1). Right now that's a third line of
 small text per row, which makes a 61px row into something taller and
 noisier. There's a better answer and I don't have it.
+
+---
+
+# Round 11 request · Three rail surfaces, one of them never drawn
+
+**From Build, 7 Aug 2026.** Two of these I shipped badly and Sean rejected
+on sight. The third has never existed anywhere.
+
+> Sean: *"The details panel and the cocktail selector look horrible."*
+
+He's right. What follows is what I built, why it fails, and what I don't
+know how to solve.
+
+---
+
+## Constraints that apply to all three
+
+- **Rail is 360px wide** when expanded, and collapses. On phone the same
+  components render inside `SourceDrawer` instead — so whatever you draw
+  has to survive both.
+- **iPad first.** ≥44px targets. ⚠️ `hover:` is inert — iPadOS reports
+  `(hover: none)`, so Tailwind wraps every hover class in a media query
+  that never matches. Pointer state comes from `pointerType`.
+- Existing vocabulary: 61px rows, the §10.1 type scale, `RowChip`, gold
+  underline on active segments, the gold-edge pointer highlight.
+- The invoice is visible beside the rail the whole time. The rail is a
+  **side** surface, not the main event.
+
+---
+
+## 1 · Event Details — I put a form in a column
+
+### What I built
+
+Eleven fields stacked vertically in the 360px rail: client, event date,
+guests, event type, venue, event address, bar opens, bar closes, cocktail
+hour, cocktail hour length, bar type, crowd style, notes. Each with an
+uppercase 13px label above a 48px input. Roughly **900px of scrolling** in
+a column that's already narrow, beside an invoice that's the actual work.
+
+### Why it fails
+
+- It's a settings page wearing a rail's clothes. Nothing groups, nothing
+  leads, everything is equally loud.
+- Two date/time pairs (bar opens/closes, cocktail hour yes + length) are
+  side-by-side flex rows that leave the column ragged.
+- Uppercase labels on eleven consecutive fields is a wall of small caps.
+
+### The question I actually have
+
+**Does this belong in the rail at all?** These are facts you set once when
+the job is booked and then rarely touch — unlike Products, which you use
+continuously while building. It might want to be a full-screen sheet like
+the recipe editor, with the rail segment being a *summary* that opens it.
+
+I don't know. That's a decision about how Sean works, and you've been
+right about that twice this month (the archived switch, the yield block).
+
+### Field notes
+
+- Client, date, venue and guests exist **twice** on an invoice — top level
+  and inside `form`. Not a choice; the old app's doing. I write both.
+- **Bar type** and **crowd style** currently calculate nothing. They're
+  recorded for a future estimator (see below). Sean should be able to tell
+  they're being banked rather than used — I did this with a paragraph of
+  small text, which is the laziest possible answer.
+- Event address ≠ billing address. It's where the job happens, and it
+  prints on the supply invoice.
+
+---
+
+## 2 · Cocktail selector — three lines in a 61px row
+
+### What it does
+
+Tick a cocktail → its linked products land on the invoice. Un-tick →
+removed from the menu, **products stay** (the rye is probably in something
+else). It does **not** scale to guest count; that's the estimator, which
+is parked.
+
+### Why it fails
+
+Each row carries: name, summary line (`Stirred · Coupe · 3 ingredients`),
+and — this is the problem — **a third line naming what it couldn't add.**
+
+> Buy separately: Aromatic Bitters, Mint, Water
+
+That line exists for a real reason. Per §11.1, bitters, mint, garnish and
+water are *supposed* to be unlinked. So ticking a cocktail adds four of
+its six ingredients, and saying nothing means Sean finds the gap at the
+shop. But three lines of text in a 61px row is either a taller row or a
+truncated sentence, and I chose truncation, which is the worst of both.
+
+**This is the interesting problem in this round.** A row has to say what
+it will do AND what it can't, without becoming a paragraph.
+
+---
+
+## 3 · Leftovers — never designed, and the hardest of the three
+
+### Why it exists
+
+The estimator was built on 7 Aug and scrapped the same day. It ran 30–70%
+high because two of Sean's own numbers contradict each other — his stated
+drinks-per-guest implies 4.2 spirit drinks per person, his measured counts
+say 2.6. No amount of code fixes that.
+
+The fix is real data. **Every event that passes without this recorded is a
+row that can never be recovered.**
+
+### ⚠️ The moment this happens in
+
+Not at a desk. **Breakdown, roughly 1am**, Sean is packing up, iPad in one
+hand, bar in front of him. He is tired and wants to leave.
+
+⚠️ **Nothing comes back to him.** He doesn't stock liquor — the client
+buys it and keeps what's left. So the number is *what's sitting on the bar
+when he packs*, observed once, never again.
+
+### What Sean committed to
+
+His words, choosing between options: **"Count when I can, tap when I
+can't."**
+
+So there are two modes and he picks per event:
+
+- **Count** — walk the invoice, put a number on anything with product
+  left. "3 unopened cab, half a Tito's." Only lines with leftovers need
+  touching; most rows stay untouched.
+- **Tag** — one pass, no numbers: *too much · about right · ran short*,
+  per category. Five taps.
+
+Events where he counted should weigh more when the estimator is
+eventually rebuilt.
+
+### What I can't figure out
+
+1. **"Half a Tito's."** Partial bottles are the norm and a number field is
+   wrong — he's eyeballing a bottle, not measuring. Fractions? A four-stop
+   control (full / half / splash / empty)? Something else?
+2. **Making "most rows are untouched" the easy path.** A 40-line invoice
+   where 6 lines have leftovers should not be 40 interactions.
+3. **Where it lives.** An invoice that's been through an event is
+   `archived` or `complete`. Does this attach to History? Become a stage?
+   A prompt that appears the day after the event date?
+4. **How he chooses count-vs-tag** without it feeling like a quiz before
+   he's allowed to start.
+
+---
+
+## What I'm asking for
+
+Drawings for all three, in whatever order you think is right. If Event
+Details wants to leave the rail, say so — I'll rebuild the segment as
+whatever you draw instead.
+
+⚠️ **Don't draw estimator surfaces.** It's parked until the log has real
+events in it. Vocabulary, now settled with Sean and in
+`limbo-app/GLOSSARY.md`:
+
+| term | what | who sees it |
+|---|---|---|
+| **Quote** | price-range PDF for a lead who inquires | the client |
+| **Estimator** | calculator saying "buy 10 bottles" | Sean — parked |
+| **Event Details** | facts about the job | Sean |
+| **Event log** | details + invoice + leftovers | Sean, later |
+
+I built the estimator while Sean had been asking for the **Quote** for
+weeks. Different audiences, different documents. Please keep them apart in
+handoffs.
