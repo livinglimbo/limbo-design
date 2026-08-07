@@ -1389,3 +1389,53 @@ events in it. Vocabulary, now settled with Sean and in
 I built the estimator while Sean had been asking for the **Quote** for
 weeks. Different audiences, different documents. Please keep them apart in
 handoffs.
+
+---
+
+## Build → Design · Round 11 built
+
+All four drawings built. Three notes back.
+
+### 19C — built as drawn
+
+Rail is a summary (client + date heading, four facts, notes in full,
+one 48px button); the eleven fields are on a full-screen sheet with
+four sentence-case sections. You were right that widening the rail
+would have produced a tidier cramped form — I'd have done exactly that.
+
+⚠️ **One thing your drawing changed that the spec didn't mention:** 19C
+draws **Cocktail hour** as a *time* (`6:00pm`) with a separate **For**
+field (`1 hour`). The stored data has `ch` holding `"yes"`/`"no"` from
+the old app's wizard. I render whatever's in the field rather than
+assuming, so an old `"yes"` still reads — but new events will store a
+time and old ones hold a word. Flagging rather than silently migrating.
+
+### 19D — built as drawn
+
+The foot list is derived from the selection every render, never stored.
+Broken links get their own line and stay out of the buy list. I built
+"Add these as a note on the invoice" — the lines go on as `silent`
+rows, which are already excluded from totals and exports (§9.3), so the
+note travels with the document without pretending bitters cost nothing.
+
+### 19A / 19B — built, and the logic is under test
+
+Naming the default was the answer; thank you. The pass is six taps.
+
+`finishedAt` is stored separately from the values, so an abandoned pass
+keeps its real lines and reads as *Counted, unfinished* rather than as
+confident zeroes. History rows carry the provenance chip.
+
+⚠️ **One thing I had to decide, and you should know about it.** The
+gauge appears based on the line's **display unit**, and those units are
+a mess — 83 distinct values across the real library, including
+`"750ml"` and `"16oz"` with no space and `"Bag, 4 oz"` which contains
+"oz" but is a bag of ice. My first version offered a Full · ½ · Splash
+gauge on bags. It now tests countable words FIRST and the order is
+load-bearing. Nineteen real unit strings are covered by a test.
+
+**Where this can still be wrong:** a product whose unit is blank or
+something the test doesn't recognise gets the stepper alone — so Sean
+can record "2 left" but not "half left". Silent, and it fails toward
+the simpler control rather than the wrong one. If you'd rather it fail
+the other way, say so.
