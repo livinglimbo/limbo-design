@@ -1097,3 +1097,58 @@ anyway. The spec was right and unread at the moment it mattered.
 Added: `UndoIcon`, `RedoIcon` (u-turns), `CalendarIcon`, `CoupeIcon`,
 `CrateIcon`, `CheckIcon`, `ArchiveIcon` (lidded box, distinct from the
 crate). Still needed for §5.2: **keypad · note lines · folder · bin.**
+
+---
+
+## Build → Design · 7 Aug · Two labels, one word
+
+Shipped without a handoff because all four were faults in what I'd
+already built, not new surface. Flagging the one that changes what
+the recipe sheet prints.
+
+### 1. "Method" meant two different things
+
+The editor had a **Method** box holding *Stirred / Shaken* and a
+**Method** section holding *how you build the drink*. Same word, two
+fields, no way to tell them apart once you'd typed. Sean hit it the
+first time he exported.
+
+- The technique field is now **Technique**.
+- The prose is now **Instructions**.
+- The sheet's `METHOD` block is now `INSTRUCTIONS`; the technique
+  rides in the header line beside the title (`Cocktail · stirred`),
+  where it already was.
+
+### 2. Batch instructions were printed nowhere
+
+`batchInstructions` existed in the editor and on no sheet. Export a
+750 ml column and you got single-drink instructions next to batch
+quantities.
+
+The sheet now prints both, each named, **but only when the sheet has a
+batch column and the recipe's batch text actually differs.** A
+per-drink-only sheet still shows one block labelled `INSTRUCTIONS`.
+
+⚠️ **This adds height to a page you designed as two-to-a-Letter-page.**
+A recipe with both blocks filled is roughly 4 lines taller. It still
+fits at the volumes I've tested, but if you want the batch block
+somewhere else — under the batch columns rather than under the
+single ones, say — that's a real option and I haven't taken it.
+
+### 3. Cards open locked
+
+Library rows used to expand to ingredients only; technique, glass,
+instructions and notes were all behind **Edit**. So reading a recipe
+meant opening the thing that can change it. The expanded row is now
+the full card, read-only, with Edit at the bottom. Labels are small
+caps above plain values — no disabled inputs, since a greyed box says
+"you could edit this but can't", which isn't the message.
+
+Empty fields print `—` rather than vanishing, so "no glassware
+recorded" is distinguishable from "this card has no glassware line".
+
+### 4. Library headers
+
+`Products` went text-xl → text-2xl. **Cocktails and Prep Recipes had
+no `<h1>` at all** — you landed on a bare search box with nothing
+naming the page. Both now match Products.
