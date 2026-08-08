@@ -1562,3 +1562,42 @@ to Sean. **This is the next real feature in this area** and it needs a
 ruling: does expanding put the sources on the invoice at the quantity
 the batch needs, and if so, what happens when two cocktails share a
 syrup?
+
+---
+
+## Build → Design · 8 Aug · One unit registry
+
+Sean asked for grams in the product editor, then asked whether units
+shouldn't be app-wide. They should have been: **there were ten separate
+unit lists**, and the one named "official" was read by none of the four
+pickers. 314 products hold 83 distinct spellings between them.
+
+`src/lib/units.ts` is now the only definition. Each unit carries a
+dimension and a conversion factor.
+
+⚠️ **It fixed a costing bug, not just duplication.** A 4 lb bag of sugar
+produced no cost at all — the only converter was volume-based, so
+weights fell off the end and prep recipes reported "by weight" as
+though it were impossible. Weight ÷ weight needs no density: $6.80 ÷
+1814 g, so a 500 g syrup costs $1.87. That works now.
+
+### One new shared component, undesigned
+
+`UnitSelect` — a grouped `<select>` (Volume · Bar · Weight · Count)
+replacing four hand-typed lists. It's a plain select at the existing
+control sizes.
+
+**Open for you, and I'd rather you decided it:** the registry has 28
+units. A `<select>` of 28 is fine on a desktop and tedious on an iPad,
+and the cocktail row's picker sits in a 61px row where it's now 96px
+wide. There may be a better shape — the four or five Sean actually uses
+promoted, everything else behind "more" — but any such shortlist is a
+guess about his habits, so I've built the honest long one and left the
+judgement to you.
+
+⚠️ **One unavoidable ambiguity, worth knowing before you draw
+anything:** `oz` resolves to FLUID ounce, per bar convention and the
+old app. Weight ounces are a separate `oz wt`. So a product whose
+packaging genuinely means weight ounces — a 4 oz bag of cherries —
+costs as 4 fluid ounces. The string itself is ambiguous; no picker can
+resolve it retroactively.
