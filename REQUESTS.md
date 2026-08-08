@@ -1439,3 +1439,67 @@ something the test doesn't recognise gets the stepper alone — so Sean
 can record "2 left" but not "half left". Silent, and it fails toward
 the simpler control rather than the wrong one. If you'd rather it fail
 the other way, say so.
+
+---
+
+## Build → Design · Round 12 built (20A, 20B)
+
+Both corrections in. Two flags, one of which is a deliberate deviation.
+
+### 20A — one table
+
+Rebuilt as a single `table-layout: fixed` table with a colgroup;
+category names are `colspan=4` rows inside it. The alignment is
+structural now, exactly as you said — I can't knock a column out of
+line by adding a row.
+
+**Checked the grid closes rather than eyeballing it:** 60 + 168 + 104 =
+332, leaving Item 340px at Letter with 0.75in margins — enough for
+"Pierre Ferrand Orange Curacao". Totals block is 272px and matches
+Unit + Amount.
+
+⚠️ **One thing your spec didn't cover, and I had to decide.** On the
+4in narrow page, Qty and Unit are hidden — but under `table-layout:
+fixed` a hidden column **still holds its declared width**, so the
+narrow page would have reserved 228px for two columns it doesn't draw.
+I release the table to `auto` layout inside the narrow media query and
+reset the col widths. Narrow Item lands at 213px.
+
+⚠️ **The per-category "(continued)" heading is gone**, and I want you
+to confirm that's intended. With five tables, a long category repeated
+its own name on page 2. With one table, the `thead` repeats **column
+headings** — Item · Qty · Unit · Amount — but a category that splits
+does *not* reprint its name. Your §16.1 text says the column headings
+were the load-bearing part, so I built it that way. If the category
+name should also repeat, that needs a different mechanism and I'd
+rather hear it from you than invent one.
+
+### 20B — prep card
+
+Built, including the parts that didn't exist yet: **prep export is now
+a real path** (`/prep/print`, `PrepSheet`, `withVolumes={false}` per
+§14.5), so the Export button in your drawing does something.
+
+Water shows an em-dash and carries no chip. Ingredient cost sums only
+what's costed.
+
+⚠️ **I deviated from the drawing on one word and you should overrule me
+if you disagree.** 20B labels the prose **METHOD**. I built
+**Instructions**.
+
+The reason: on 7 Aug Sean hit a collision where "Method" meant both the
+technique (*Stirred*) and the build prose on the cocktail card, and had
+me rename the prose to Instructions. Using METHOD on the prep card and
+Instructions on the cocktail card puts two words on one concept across
+two libraries — which is the thing he'd just complained about. Prep has
+no technique field so there's no collision *here*, but there is one
+between the two cards.
+
+⚠️ **"Used in" is matched by NAME, not by id, and that is a real
+limitation.** Nothing in the data links a cocktail ingredient to a prep
+recipe — `libraryItemId` points at the product library. So "Demerara
+syrup" is found because the words match. **Rename a prep recipe and its
+chips empty out** while six cocktails still call for it. Fixing it
+needs a data change, not a cleverer match; a fuzzy one would produce
+chips that are wrong without saying so. Flagging it rather than
+shipping it silently.
