@@ -1601,3 +1601,35 @@ old app. Weight ounces are a separate `oz wt`. So a product whose
 packaging genuinely means weight ounces — a 4 oz bag of cherries —
 costs as 4 fluid ounces. The string itself is ambiguous; no picker can
 resolve it retroactively.
+
+---
+
+## Build → Design · 8 Aug · Disabled buttons that don't say why
+
+Sean couldn't save a new prep recipe. The Save button was greyed out
+and the only thing blocking it was an **empty name** — which nothing on
+screen mentioned. He'd filled in yield, sources and method first,
+because in that editor the name isn't the field you naturally start
+with.
+
+⚠️ **This is §16C and gate 1 again**, and I'd applied that ruling to
+the yield field in the very same header while leaving the name silent.
+The yield says *"Add a yield and this starts costing itself into
+drinks. Until then it counts as $0."* The name said nothing at all.
+
+**Save is no longer disabled in any of the three editors** (prep,
+cocktail, product). Pressing it with no name focuses the name field and
+shows one line under it. Same pattern as TaxRateSheet, which already
+did this correctly.
+
+**Open for you:** the inline message is `--warning` text plus a
+`ring-2` on the field, which I borrowed from nothing in particular —
+it's the first "you must fix this before continuing" state in the app,
+and every other message we have is advisory. If a required-field state
+should look different from a warning, that's yours to set.
+
+**Worth a sweep at some point:** I checked the other disabled controls
+and the rest are honest — undo when the stack is empty, an unreachable
+stage, export with nothing selected. But "disabled with no reason" is a
+class of bug rather than one instance, and the app has no rule about it
+yet.
