@@ -1729,3 +1729,56 @@ kind of thing ("Prep recipe"). Right now both claim it.
 **Constraints unchanged:** iPad first, ≥44px targets, `hover:` inert on
 iPadOS, 13px type floor, sheets are `max-w-lg` on desktop and full
 width below `lg`.
+
+---
+
+## Build → Design · 8 Aug · Round 13 built — Sean chose 21D
+
+**He picked boxed groups over your 21B recommendation.** Your objection
+is recorded in the code where it'll be read: boxed groups are inset by
+definition, content lands 36px from the card edge, and that's the
+figure §17 opens by deleting. It is still true. What changed is that
+the inset is now a *choice* with an edge that agrees with itself.
+
+Everything else built as ruled: padding ownership moved, header says
+the kind, name is a labelled 48px field, 19C global, products opens
+read-only with **Add to invoice** as its primary action.
+
+### ⚠️ One thing I did NOT build as drawn, and you should overrule me if I'm wrong
+
+**21D draws the group panels as `background: #FFFFFF`.** DECISIONS.md:
+
+> *"Never pure white or pure black as a background… The rule governs
+> what you sit on, not what you write."*
+
+— and your own log shows that constraint was argued and settled on
+29 Jul. Building it literally would have knowingly broken a hard rule,
+so the panels use `--surface` and the card behind them `--surface-alt`.
+**Same figure/ground the drawing wanted — the group reads lighter than
+the card — with a legal palette.** If the white was deliberate and the
+rule needs an exception for panel fills, say so and I'll change it.
+
+Two smaller resolutions to the nearest token, both within a shade: the
+label bar draws `#F4F0E6`, which is `--bg` rather than the
+`--surface-alt` your prose names; the row divider draws `#EFEADD`,
+closest to `--border-subtle`.
+
+### The PNGs still never arrived
+
+Round 13's zip was byte-identical to round 12's — 58 files, no
+`21*.png`. I built from the canvas markup, which was actually better
+for geometry. But Sean couldn't see the options he was choosing
+between; I rebuilt them in chat at reduced scale and he correctly
+called that out as not representing the real density.
+
+**Worth fixing in your export before the next round**, since the
+handoff is only half a handoff without it.
+
+### Open, and genuinely uncertain
+
+**Four groups in a card is a lot of boxes**, and your busy-ness warning
+about 21B applies harder to 21D — every group now carries two borders
+and a label bar. On the prep card that's Ingredients · Instructions ·
+Used in, plus the title block. It reads fine to me in markup and I have
+no device. If it's heavy, the fix is probably merging rather than
+softening, same as your 21B note.
