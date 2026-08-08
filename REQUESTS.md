@@ -1503,3 +1503,62 @@ chips empty out** while six cocktails still call for it. Fixing it
 needs a data change, not a cleverer match; a fuzzy one would produce
 chips that are wrong without saying so. Flagging it rather than
 shipping it silently.
+
+---
+
+## Build → Design · 8 Aug · Prep recipes are linkable now
+
+Sean asked for the "Used in" list to be rock solid. It couldn't be —
+the problem was structural rather than a weak matcher.
+
+**A cocktail ingredient had one link field, pointing only at the
+product library.** Prep recipes live in their own collection with their
+own ids and nothing could reference them, so "Used in" compared typed
+names — missing "Lime juice, fresh squeezed" against "Fresh lime
+juice", breaking on every rename, and failing silently.
+
+Ingredients now carry `prepRecipeId` as a second, mutually-exclusive
+target. Links survive renaming.
+
+### What this changes on screens you've drawn
+
+**The ingredient picker (15A)** now lists two labelled groups — *"Prep
+recipes — you make these"* then *"Products — you buy these"*. Prep
+sorts first: when "Simple syrup" matches both, the thing he makes is
+nearly always what he means, and putting it second makes the wrong
+answer the easy tap. Undesigned; borrows the existing suggestion rows.
+
+**The prep card's "Used in" (20B)** now shows **two things, and they
+must not merge.** Chips are confirmed links. Below them, a quiet line:
+*"3 recipes name this but aren't linked to it — Gimlet, Daiquiri,
+Paloma."*
+
+⚠️ **The second list exists because Sean chose to link as he goes
+rather than run a migration.** Every ingredient in the library
+currently has no link, so an id-only list would show "used in nothing"
+on a syrup six recipes obviously use — a worse lie than the one being
+fixed. It's a prompt, not a fact, and it empties as he works.
+
+**Open for you:** that unconfirmed line is mine, not drawn, and it's
+the weakest part. It's a sentence where the rest of the card is chips.
+It also has no affordance — it names the recipes but you can't tap
+through to fix them.
+
+**The selector (19D)** gains a third foot section: **"To make"**, with
+the sprout glyph, holding prep recipes. They're deliberately out of
+"Buy separately" — sending Sean to a shop for syrup he makes from sugar
+he owns is exactly the confusion the buy list exists to prevent.
+
+### ⚠️ The gap this opens, and I'd rather flag it than quietly leave it
+
+**Ticking a cocktail whose lime juice is a prep recipe adds nothing to
+the invoice for it.** What *should* go on is the syrup's own sources —
+limes, sugar. That's the prep expansion the old app did, and it's the
+origin of the odd "Prep Ingredients" category in the real data.
+
+Right now the foot says *"Their ingredients aren't on the invoice yet —
+check each recipe for what to buy"*, which is honest but is work left
+to Sean. **This is the next real feature in this area** and it needs a
+ruling: does expanding put the sources on the invoice at the quantity
+the batch needs, and if so, what happens when two cocktails share a
+syrup?
