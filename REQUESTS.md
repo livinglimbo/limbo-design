@@ -1633,3 +1633,99 @@ and the rest are honest — undo when the stack is empty, an unreachable
 stage, export with nothing selected. But "disabled with no reason" is a
 class of bug rather than one instance, and the app has no rule about it
 yet.
+
+---
+
+# Round 13 request · The three library cards, as one system
+
+**From Build, 8 Aug 2026.** Sean's ask, verbatim:
+
+> *"We need to clean up the cards that I select and open for viewing AND
+> for editing. Look at all the libraries, and present layouts that are
+> cohesive (each still needs their corresponding info/fields) but I'd
+> like it to 'feel' and 'look' somewhat more cohesive in terms of table
+> layout and rows and columns and spacing and such. Headers and dividers
+> need to be more pronounced so as to show the different aspects of the
+> info/fields in each open card. Give options."*
+
+## The bug that prompted it, because it's the best evidence
+
+Sean reported he couldn't edit a prep recipe's name. He was **tapping
+the sheet's title bar** — which says *"New prep recipe"* — instead of
+the editable name field directly below it.
+
+⚠️ **Two things called "the name", and the one you can't type in is the
+more prominent.** `Sheet` renders `title` in a bordered header at
+16px semibold; the card then renders the name AGAIN as a 24px input
+with no border, no label and only a placeholder. That is a layout
+fault, not user error, and it's the clearest single symptom of the
+problem he's describing.
+
+## What's actually inconsistent — measured, not impressions
+
+**1 · Two libraries open read-only; one doesn't.**
+Cocktails and prep open a locked card with Edit at the foot (§16.2).
+**Products opens straight into the editor.** Three libraries, two
+behaviours, and the odd one out is the one Sean opens most.
+
+**2 · Two different heading systems.**
+
+| | cocktails / prep | products |
+|---|---|---|
+| size | `13px` | `12px` (`text-xs`) |
+| colour | `--gold-text` | `--text-muted` |
+| tracking | `0.05em` | `wider` |
+| rule | full-bleed `border-b` | none |
+| grouping | flat sections | one boxed `rounded-card` panel |
+
+**3 · Field labels contradict your own 19C ruling.** You ruled for Event
+Details that field labels are **sentence case in `--text-secondary`**
+and that CAPS belong to section headings — *"eleven consecutive
+uppercase labels is a texture, not a hierarchy."* That ruling never got
+applied back to the libraries: `RecipeEditor`'s Technique and Glass are
+still 13px bold uppercase, sitting directly under section headings in
+the same 13px bold uppercase.
+
+**4 · The dividers don't reach the edges, and this is probably most of
+why it looks untidy.** `Sheet` pads its children `px-5`. The cards then
+add `px-4` and hang `border-b` off that inner box — so every section
+rule floats **20px short of the sheet on both sides**, and section text
+sits 36px in. Nothing looks full-bleed; everything looks slightly
+adrift.
+
+**5 · Row geometry differs.** Cocktail/prep cards are 61px list rows.
+The product editor is stacked `Field`s with 48px inputs in a 2- and
+3-column grid.
+
+## What each card must still carry
+
+- **Product** — name · category · price · package (qty, unit,
+  packaging) · "displays as" preview · live cost · product link ·
+  advanced (rental company, type, cost-per-oz override, not-costed)
+- **Cocktail** — name · technique · glass · ingredient rows (name,
+  link state, qty, unit) · instructions, single and batch when they
+  differ · notes
+- **Prep** — name · yield + cost-per-unit subtitle · source rows with
+  a per-row cost column · ingredient cost total · instructions ·
+  "used in" chips
+
+## What we'd like back
+
+**Options, as Sean asked — not one answer.** The interesting axis is
+probably how hard the sections are separated: full-bleed tinted header
+bands, hairline rules with more air, or boxed groups like the product
+editor's package panel promoted to a general pattern. Seeing two or
+three of those against the same content would settle it.
+
+⚠️ **Please rule on the read-only state for products too.** If every
+library should open locked, products needs a card designed; if products
+is genuinely different because you edit it more than you read it, we'd
+rather hear that than guess.
+
+⚠️ **And the duplicated title.** Either the sheet header owns the name
+and the field goes away, or the field owns it and the header says the
+kind of thing ("Prep recipe"). Right now both claim it.
+
+**Constraints unchanged:** iPad first, ≥44px targets, `hover:` inert on
+iPadOS, 13px type floor, sheets are `max-w-lg` on desktop and full
+width below `lg`.
