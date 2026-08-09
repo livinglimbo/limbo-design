@@ -1977,3 +1977,63 @@ shopping list? a price list?) is a real thing he wants is still open,
 but it isn't a ruling either of us should make for him. No design work
 needed until he decides. Products' Export stays a no-op in the
 meantime, and **this doesn't hold up Round 15.**
+
+---
+
+# Round 15 request · Full offline mode — the shell, not the writes
+
+**From Build, 9 Aug 2026.**
+
+## Why now
+
+Flagged in `WISHLIST.md` on 31 Jul as 🔴, with its own trigger: *"after
+the Builder ships, before you rely on it at a live event."* The
+Builder, all three libraries, and both export paths have now shipped
+(round 14, today). The condition Sean set for raising this has been
+met, so raising it now rather than waiting to be asked.
+
+## What already exists — read these first, don't re-derive them
+
+| | |
+|---|---|
+| `src/lib/data/sync.ts` | The write queue. Every write applies locally at once, is queued, retried with backoff, and replayed against fresh server data on reconnect. Its own comment, lines 29–32, names the scope split verbatim: *"NOT IN SCOPE (parked as full offline mode): service worker shell caching, IndexedDB, surviving days offline. localStorage is enough for the current goal."* |
+| `src/lib/data/saveState.ts` | The four-state save slot — resting / writing / queued / failed — already live in the invoice header (`InvoiceHeader.tsx`, `Builder.tsx`). Rule stated inline: *"never say 'not saved' when the local write succeeded."* **This is already designed and built. Don't re-draw it.** |
+| `src/components/SyncIndicator.tsx` | A second, differently-shaped sync readout — dot + label + Retry/Dismiss. **Only mounted on `/debug/sync`.** Never shipped to real UI. |
+| `src/lib/useStoredValue.ts` | `useOnline()` — live online/offline via browser events. Works today. |
+
+⚠️ **Two patterns already exist for what may be the same fact** — the
+header's inline save-state text, and `SyncIndicator`'s dot-and-chip.
+Whether full offline mode reuses one, both, or needs a third for a
+different context is a real question, not a given.
+
+## What's actually missing
+
+**The app cannot open with zero signal.** Everything above assumes the
+shell already loaded — JS, CSS, the page itself — over a live
+connection. There is no service worker and no cache manifest anywhere
+in `src` or the Next config. Checked.
+
+The write queue already handles "online, then the network drops
+mid-session." It does not handle "opened the app at a venue with no
+bars at all" — which is the case Sean actually flagged.
+
+## The two things that need you
+
+### 1 · What does "offline" look like on first load, before anything's cached?
+
+Before a service worker has ever cached the shell (first visit, or
+after it's cleared), there's nothing to fall back to. Is a plain
+"you're offline, try again" acceptable for that one-time case, or does
+it need real treatment?
+
+### 2 · Reconcile the two sync indicators, or justify keeping both
+
+If `SyncIndicator` is meant to ship, it needs a home that doesn't
+duplicate the header's save-state slot. If it isn't, it should say so
+rather than sit live in the code as an unshipped second answer to the
+same question.
+
+## Not asking for
+
+The write-queue mechanics, retry/backoff, or the save-state copy —
+all built, all correct, out of scope for this round.
