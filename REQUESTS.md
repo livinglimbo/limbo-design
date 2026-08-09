@@ -1966,12 +1966,14 @@ count-gated, and asserts `aria-label="Select"` survives.
 or it decays into a comment nobody reads.** Same script also checks
 undo iterates the whole batch and that the strip never says "deleted".
 
-### One gap your drawing assumes and the app doesn't have
+### One gap your drawing assumes and the app doesn't have — parked
 
 **Products has no export path.** 22B's bar has Export in it, and the
 cocktail and prep libraries both route to a print page — products never
 had one. Its Export currently closes the mode rather than pretending.
 
-Worth a ruling: is a product export a real thing Sean wants (a
-shopping list? a price list?), or should the products bar simply not
-carry Export at all? Right now it's a control that does nothing useful.
+**Parked by Sean, 9 Aug — not sure yet.** Whether a product export (a
+shopping list? a price list?) is a real thing he wants is still open,
+but it isn't a ruling either of us should make for him. No design work
+needed until he decides. Products' Export stays a no-op in the
+meantime, and **this doesn't hold up Round 15.**
