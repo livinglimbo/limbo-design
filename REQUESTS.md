@@ -2037,3 +2037,117 @@ same question.
 
 The write-queue mechanics, retry/backoff, or the save-state copy —
 all built, all correct, out of scope for this round.
+
+---
+
+# Build → Design · 9 Aug · Round 15 built — procurement (23A, 23B)
+
+**Sean chose procurement and left kits for a later round.** 23A and 23B
+are built, verified and shipping. 23C is not, for a reason in §4 below
+that's worth your attention before you draw any more of it.
+
+**First, the bundle crossed in the post.** I sent a Round 15 request for
+**full offline mode** this morning; this handoff answers 23A–23C. Your
+own ledger note predicted exactly this — *"re-export on every design
+turn, or this recurs."* The offline request is still open above; nothing
+about it has changed.
+
+## What got built as drawn
+
+The tick as the only one-tap control, toggling and never cycling. The
+strike scoped to the description with quantity and amount at full
+contrast. No row tint. The five chip treatments including nothing for
+`""`. Legacy `ordered` still rendering. Counts on the mode bar and on
+each category heading, derived. The radio list above the item actions
+with *No status* choosable. The mode remembered per invoice and
+defaulting to on at Complete. The padlock on the bar.
+
+⚠️ **Your ruling that procurement works at Complete is the whole reason
+this round is worth shipping**, and I want to say so plainly, because
+the brief you overruled would have produced a feature that switched
+itself off at the moment it was needed. It also survived contact with
+the code: the lock is enforced in `updateDraft()`, which refuses every
+edit on a locked invoice, so procurement needed its own write path
+rather than a flag. That path takes a **status string**, not a mutator,
+and recomputes nothing — it is incapable of moving a number. A build
+check reads the source and fails if that ever stops being true.
+
+## 1 · I removed four rows at Complete, where your prose named two
+
+Your text says `Edit quantity` and `Delete line` are removed. **23B's
+frame leaves only *Open in library*.** I built the frame.
+
+`Add a note` and `Move to category` both write through `updateDraft()`,
+which a locked invoice rejects — so leaving them would have left two
+buttons that do nothing at all, which is worse than the greying you
+ruled against. **The frame and the prose disagreed and the frame was
+right;** flagging it rather than assuming.
+
+*(Our panel has no "Open in library" row — the product URL is an icon in
+the panel header, which is how §10.3 was built. So at Complete the panel
+is the procurement block plus the one lock line.)*
+
+## 2 · §19 never said where the mode is turned on — I picked, you rule
+
+Every frame shows the bar already up. **There is no entry point drawn.**
+
+I put it in the ⋮ as `Procurement mode · On / Off`, because §11.3 made
+that menu "the things you do TO a document" and a per-invoice view mode
+is one. It stays available at every stage, including Complete.
+
+**This is my decision, not yours, and it's the weakest part of the
+round.** A mode Sean uses on event day sitting three taps deep in an
+overflow menu may well be wrong — a control in the invoice header, or
+something that appears at Complete, could both be better. Yours to
+overrule.
+
+## 3 · One question the drawings leave open, parked rather than guessed
+
+**Nothing surfaces packing progress outside the Builder.** History rows
+show stage and total; a Complete invoice that's 14 of 41 packed looks
+identical to one that's fully packed and loaded. On event morning the
+question *"which of these three jobs is ready to go?"* has no answer
+without opening each one.
+
+Not built, not designed, and I'd rather it were drawn than invented.
+
+## 4 · ⚠️ Kits (23C) has a dependency that doesn't exist
+
+*"Made from a selection, not typed from scratch. Select mode exists now
+(§18); the same gesture on the invoice gives Save as kit."*
+
+**Select mode exists in the three LIBRARIES. It does not exist on the
+invoice.** `useSelection` has exactly four callers — `CocktailLibrary`,
+`PrepLibrary`, `ProductLibrary` and `SelectionBar`. The Builder is not
+one of them; invoice rows have a press-and-hold panel and a stepper, and
+no selection model at all.
+
+So "the same gesture" is a gesture the invoice has never had. That
+doesn't make 23C wrong — it makes it **two features**, and the first one
+is undrawn:
+
+- **Select mode on the invoice**, which needs its own ruling. The libraries'
+  bar assumes rows you can only select; invoice rows carry a live stepper
+  and a long-press panel, so a third meaning on the row is exactly the
+  collision you resolved for 9B and again for select mode. It is also the
+  one surface where §18's "the bar is the source of truth" may not hold,
+  because an invoice is grouped into categories and a selection could
+  span them.
+- **Then kits**, which as drawn I'd build without further questions — the
+  *Will be added* / *Already on the invoice* split, `qty unchanged`, and
+  the button counting only the additions are all unambiguous.
+
+⚠️ **The overlap line has a subtlety worth confirming while you're
+there.** It says *"3 already on this invoice"* — matched how? Only 9% of
+our line items carry `libraryItemId`; the rest are matched by
+description, which is what `addToInvoice()` already does. So a
+hand-typed "Cocktail napkins" and a kit's "Cocktail napkin" will read as
+two different things and the sheet will offer to add a duplicate. Same
+class of problem as the leftovers matching, and I don't think it has a
+clean answer in the interface — but the sheet is where it becomes
+visible.
+
+## Not asking for
+
+The kits sheet itself, the Products-tab chip, or the sort order — all
+settled and all fine. Only the invoice-side selection needs you.
