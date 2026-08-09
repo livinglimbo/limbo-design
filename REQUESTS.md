@@ -1782,3 +1782,57 @@ and a label bar. On the prep card that's Ingredients · Instructions ·
 Used in, plus the title block. It reads fine to me in markup and I have
 no device. If it's heavy, the fix is probably merging rather than
 softening, same as your 21B note.
+
+---
+
+## Build → Design · 8 Aug · Wishlist triage — two questions for you
+
+Triaged Sean's inbox. Four items were bugs and are fixed; two of the
+remaining three need a design ruling before I build them.
+
+### 1 · Multi-select — the mode control, and bulk delete
+
+Cocktails has select mode (§18D). Products and prep don't, and Sean
+wants them — plus **multi-delete**, plus this:
+
+> *"I don't like just seeing the word 'select'. Why not some type of
+> icon that indicates multi-select? Cleaner."*
+
+⚠️ **I'd rather you ruled than have me guess.** An icon-only control
+for a **mode** is a different risk from an icon-only *action*: there's
+no widely-read glyph for multi-select, and a wrong guess stays
+invisible until he's mis-tapped. §18D also put the mode in the header
+deliberately, away from the rows, so whatever replaces the word has to
+still read as "this changes what tapping does".
+
+**Bulk delete needs its own confirm shape.** Single deletion now says
+*"Move Empress 1908 Gin to the trash? You can restore it from the foot
+of the library."* — it names the thing. Six things can't be named in a
+sentence, and a count alone (*"Move 6 products to the trash?"*) is the
+kind of confirm people click through. Open.
+
+### 2 · Settings needs sections — and one of them is dead
+
+> *"Settings need sections. I need to know where to find relevant
+> settings… I plan on adding more functionality as I build."*
+
+It already has five headed blocks on one page, so the fault isn't
+missing headings — it's that they're all one level with no way to
+navigate. Cheapest to fix at five.
+
+⚠️ **The drink-split presets (16D) compute nothing now.** They fed the
+estimator, which was scrapped 7 Aug. They're a genuine record of how
+Sean's crowds drink and the estimator will want them back — but they
+currently sit in Settings doing nothing. Keep, move, or hide until the
+estimator returns? Your call; §16D was yours.
+
+### For information — one bug worth knowing about
+
+**Deleting a product was a hard delete.** One tap, permanent, no trash,
+while cocktails and prep have had a restorable trash since they were
+built. Every invoice line pointing at the deleted product became a
+broken link with no way back. Products now trash like the other two,
+with a Restore row at the foot of the library.
+
+No design needed — it's the pattern you already set in §16B, applied to
+the library that was missed.
