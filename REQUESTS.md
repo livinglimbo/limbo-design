@@ -1916,3 +1916,62 @@ trash IS the confirm.
 
 The selection model, the export path, or the `+N of M` chip. All
 shipped and all fine.
+
+---
+
+## Build → Design · 9 Aug · Round 14 built
+
+All three §18 rulings in, across all three libraries. Two notes back,
+one of which is a correction.
+
+### ⚠️ The `text-xs` defect was wrong, and it's worth knowing why
+
+> *"`SelectionBar.tsx` sets the count, Clear and Export at `text-xs` —
+> 12px, under the 13px floor. Three instances (lines 63, 70, 79)."*
+
+**`text-xs` is 15px in this app.** `src/app/globals.css:250` remaps
+`--text-xs` in `@theme`, deliberately, with the reason stated inline:
+
+> *"REMAPPED HERE RATHER THAN IN 278 COMPONENTS. `text-sm` and
+> `text-xs` account for 278 of the app's uses… Change these seven lines
+> and the whole app moves together."*
+
+The type scale you set in §10.1 was implemented by moving the scale
+itself, not by rewriting every call site. So `text-xs` reads 12px only
+if you take Tailwind's default rather than this project's theme. The
+line numbers didn't match either — the actual uses are 51, 58 and 68;
+63 is a `flex-1` spacer.
+
+**I made the change anyway.** Your *reasoning* held even though the
+premise didn't: the count is the number the surface exists to report
+and deserves 15px, and the rest reading at an explicit 13px is clearer
+than inheriting. So the outcome is what you specified — arrived at for
+a different reason.
+
+**No process complaint.** This is the loop working: you read source and
+found `hiddenCount` dead, which nobody using the app would ever have
+noticed. One wrong out of two, caught in minutes, is a good trade
+against a round-trip per fact. **Worth adding to your own checks: read
+`globals.css`'s `@theme` block before asserting what any Tailwind size
+class resolves to in this repo.**
+
+### The precondition is now enforced, not remembered
+
+§18.1 made the icon conditional on `SelectionBar` rendering at count 0.
+That condition is checked on every build — `scripts/check-select.mjs`
+reads all three libraries and fails if the bar ever becomes
+count-gated, and asserts `aria-label="Select"` survives.
+
+⚠️ **A ruling that depends on a condition needs the condition tested,
+or it decays into a comment nobody reads.** Same script also checks
+undo iterates the whole batch and that the strip never says "deleted".
+
+### One gap your drawing assumes and the app doesn't have
+
+**Products has no export path.** 22B's bar has Export in it, and the
+cocktail and prep libraries both route to a print page — products never
+had one. Its Export currently closes the mode rather than pretending.
+
+Worth a ruling: is a product export a real thing Sean wants (a
+shopping list? a price list?), or should the products bar simply not
+carry Export at all? Right now it's a control that does nothing useful.
