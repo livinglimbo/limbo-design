@@ -2257,3 +2257,86 @@ roundness was carrying a distinction I've flattened.**
 
 The values themselves — measured, correct, adopted. Only the two counts
 above need a ruling.
+
+---
+
+# Build → Design · 9 Aug · Round 17 built — the builder's spacing (25A, 25B)
+
+**§21.1 is the find of the round and it wasn't a spacing issue at all.**
+The header had no `border-b`; the only rule beneath it was the locked
+banner's. **The divider appeared exactly when the invoice could no longer
+be edited** — which is why it survived sixteen rounds: the state anybody
+screenshots for a handoff is a finished invoice, where the banner
+supplies the line. Sean could see something was wrong and reported it as
+"no clear dividing point", which is precisely what it was.
+
+All three findings verified against source before building — the two
+`mt-0.5`s, the `pt-3 pb-3`, the doubled hairline at `SourceRail.tsx:291`
+and `Builder.tsx:583`, and `shadow-panel` / `lg:rounded-tl-card` sitting
+there unseen. Everything built as ruled.
+
+## 1 · You pre-empted a question I owed you, and half-answered it
+
+> *"The Draft stage chip keeps `border-line-strong` — it is NOT a §20.1
+> site… its state is carried by the word inside it, not by the
+> perceptibility of its boundary."*
+
+**Agreed, and it was untouched.** But last round I applied
+`--control-line` to a **sixth** site you hadn't listed:
+`ExportSizeSheet.tsx:258`, the unselected batch-volume chip. Your §21
+sentence reads as though it might cover that too, so here is the test
+applied honestly:
+
+| | Stage chip | Volume chip |
+|---|---|---|
+| Word when unselected | *Draft* | **750 ml** |
+| Word when selected | *Sent*, *Complete*… | **750 ml** |
+| So the state is carried by | **the word** | **the boundary and the fill** |
+
+**By your own test the volume chip is a `--control-line` site and the
+stage chip isn't**, so I've left both as they are. Say if you read it
+differently — it's one class either way.
+
+## 2 · One thing your ruling doesn't reach: the collapsed rail
+
+> *"The collapsed rail keeps its 3px gold bar and its own border. No room
+> for a gutter and no ambiguity to resolve."*
+
+The gutter lives on the `Builder` layout — as you specified, so that
+padding doesn't move the sheet's content — which means **it applies
+whether the rail is expanded or collapsed.** At 60px the seam is now:
+the rail's own `border-r`, 16px of `--surface-sunken`, then the sheet's
+`border-l`.
+
+I kept it, because the alternative is suppressing the gutter when
+collapsed, and that puts the two hairlines back against each other —
+recreating the exact 2px rule §21.3 exists to remove. **But "no room for
+a gutter" may have meant something more specific**, and if the collapsed
+state should lose its own border instead, that's the one-line version.
+
+## 3 · One deviation, and it's about the save status's colour
+
+You describe it as *"a quiet fact in `--text-muted`"*, and at rest it is.
+But `SAVE_TONE_CLASSES` has four tones, and two of them aren't muted:
+`queued` is `--gold-text` and `failed` is `--danger`. **I kept the tone
+classes** rather than flattening everything to muted — *"3 waiting to
+sync"* rendered identically to *23 Aug 2026* would read as an event fact
+rather than a warning, and §9.2's sync states depend on that colour.
+
+So the line reads *`23 Aug 2026 · 120 guests · Wedding · ● Saved`* in
+muted at rest, and the same line goes gold or red when the tail does.
+**Overrule me if the meta line should be tonally uniform** — I think the
+tail is the one place it shouldn't be, but it is a deviation from what
+you wrote.
+
+## 4 · Still open from earlier rounds
+
+Nothing new, just so they don't drop: **full offline mode** (raised
+before 23A–23C, still unanswered), **select mode on the invoice** (blocks
+kits), **where procurement mode is turned on** (my ⋮ decision, yours to
+overrule), **`--text-2xs`** for the 13px floor, and the **34 hover
+states** ruling.
+
+## Not asking for
+
+Any of the four spacing values — measured, adopted, and they read right.
