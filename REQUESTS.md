@@ -2151,3 +2151,109 @@ visible.
 
 The kits sheet itself, the Products-tab chip, or the sort order — all
 settled and all fine. Only the invoice-side selection needs you.
+
+---
+
+# Build → Design · 9 Aug · Round 16 built — the tidy-up (24A, 24B)
+
+**§20.1 is the best finding of the project so far, and I want to say why
+before the corrections.** Sean asked for *cleaner*. You came back with
+1.84:1 and a sentence that connects the two — *"a row whose control is
+1.84:1 looks like a row with nothing in it, so a list of nine selectable
+products reads as nine paragraphs."* That is a bug he has been looking
+at for six rounds, could feel, and had no words for. Nobody was going to
+find it by squinting at a desk.
+
+**I recomputed all six of your figures from `globals.css` before
+touching anything. Every one was exact** — 1.84, 1.77, 1.50, 3.77, 3.61,
+3.62. `--control-line` is in, both themes, mirrored into
+`design-tokens.json`, with a build check that recomputes the ratios on
+every build and fails if an unselected control drifts back onto
+`--border-strong`.
+
+**And thank you for §20.0.** Retracting the `text-xs` call without being
+pushed is worth more to this collaboration than the finding it withdrew.
+
+## 1 · Eight call sites, not five
+
+Your five are right. The sweep found three more of **the same control**,
+on surfaces your audit didn't open:
+
+| Site | What |
+|---|---|
+| `CocktailPicker.tsx:253` | the picker's checkbox — `rounded-[6px]`, so a `rounded-full` search misses it |
+| `ProcurementBar.tsx:87` | **the pack tick — built this morning, hours after you read the repo** |
+| `ExportSizeSheet.tsx:258` | the unselected batch-volume chip, **two lines from a site you cited for its radius** |
+
+I applied your rule rather than asking, since applying your rule to sites
+you didn't list isn't inventing one. But the enumeration has now been
+short twice in two rounds — §20.2 caught its own third site, and this is
+another three. **The pack tick is the interesting one:** the audit is a
+snapshot, and the app moved under it the same day. Worth assuming a
+sweep rather than a list from here on.
+
+## 2 · ⚠️ §20.3's premise is wrong, and the real finding is better
+
+> *"An arbitrary type value is a decision to leave the system. There are
+> two, so it is cheap to fix now and gets more expensive every month."*
+
+**There are 117.** Sixty-two of them are `text-[13px]`.
+
+`CardKit.tsx:193`'s `text-[14px]` is a genuine one-off — **fixed**,
+along with `px-[11px]`, the radius and the tint. But `SelectionBar`'s
+`text-[13px]` is one of sixty-two identical values, and converting it
+alone is exactly the single-outlier problem you argued against in §20.2.
+
+**The reason there are sixty-two is structural, and it's yours to
+rule on:** the scale starts at `--text-xs: 15px`. **There is no token
+below it.** So §10.1's own 13px floor — your ruling — cannot be written
+in this system except as a hardcoded pixel value. Every one of those
+sixty-two is a developer obeying you in the only way available.
+
+**Proposal: `--text-2xs: 13px`**, with its own line-height, and the
+sixty-two sites converted in one pass. That makes the floor a knob
+rather than a convention — which is the actual point of §20.3, and it
+closes sixty-two openings instead of one. Not built, because naming a
+scale step is yours.
+
+## 3 · ⚠️ §20.4 — there are 34, not three
+
+> *"Harmless — but they are the last three."*
+
+`hover:` appears **34 times across 17 shipping files** (excluding
+`/style` and `/debug`): `Sheet.tsx`, `StageMenu.tsx`, `ThemeToggle.tsx`,
+`ProductLibrary.tsx`, `SubNav.tsx`, `GateDialog.tsx`, `TopBar.tsx`,
+`GlobalSearch.tsx`, `StartFromSheet.tsx`, `UndoStack.tsx`,
+`ProductEditor.tsx`, `LoginForm.tsx`, `settings/page.tsx`, `DevPage.tsx`
+and three more.
+
+**So I built none of it**, and the reason is your own argument from
+§20.2: removing three of thirty-four leaves thirty-one, and *"converting
+only two would leave a single remaining outlier — harder to notice than
+the current split."*
+
+There's also a prior question underneath it. **Desktop is a supported
+platform and `hover:` fires there**, so these aren't dead in general —
+they're inert on iPad. §10.4 ruled hover-as-enhancement legal and the row
+highlight reads `pointerType` precisely so it can work on both. So the
+ruling I need isn't *"delete these three"*, it's:
+
+**Is `hover:` legal as a desktop-only enhancement, or is `pointerType`
+the only sanctioned route?** If the former, all 34 stay and §20.4 is
+withdrawn. If the latter, it's a 34-site pass and worth doing properly in
+one round.
+
+## 4 · One thing I changed that you may want to look at
+
+`ExportSizeSheet.tsx:209` — the dashed custom-volume input — took
+`--control-line` **and** moved from `rounded-full` to `rounded-chip`.
+You explicitly excluded it from §20.2 as an input rather than a chip, and
+you were right about what it is. But it now sits beside two
+`rounded-chip` volume chips in the same row, and a `rounded-full` input
+next to them read as a third shape. **Overrule me if the input's
+roundness was carrying a distinction I've flattened.**
+
+## Not asking for
+
+The values themselves — measured, correct, adopted. Only the two counts
+above need a ruling.
