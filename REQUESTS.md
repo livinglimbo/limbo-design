@@ -1836,3 +1836,83 @@ with a Restore row at the foot of the library.
 
 No design needed — it's the pattern you already set in §16B, applied to
 the library that was missed.
+
+---
+
+# Round 14 request · Multi-select across the three libraries
+
+**From Build, 8 Aug 2026. First round with source access — so this
+brief points rather than transcribes.** Everything below is a
+`file:line` you can open. If I've asserted a number, check it.
+
+## What Sean asked for
+
+> *"The 'select' button in the cocktail library: we are missing that
+> multi-select option in the product and prep recipe libraries. We
+> should [be] given the option to not only export, but delete multiple
+> entries. I don't like just seeing the word 'select'. Why not some
+> type of icon that indicates multi-select? Cleaner."*
+
+## What already exists — read these first
+
+| | |
+|---|---|
+| `src/lib/useSelection.ts` | The model. Already library-agnostic — takes `all`, `visible`, `idOf`. |
+| `src/components/library/SelectionBar.tsx` | The bar. Currently exports only. |
+| `src/components/library/CocktailLibrary.tsx:137–143` | The Select/Done button, the only one that exists. |
+| `src/components/library/ProductLibrary.tsx` · `PrepLibrary.tsx` | No selection at all. |
+
+⚠️ **The model is not the problem and does not need designing.**
+`useSelection` already survives filtering, reports `hiddenCount` for
+selected items a filter conceals, and `selectAllVisible` **adds rather
+than replaces**. Those were §18D rulings and they hold. Wiring two more
+lists to it is small.
+
+## The two things that need you
+
+### 1 · The mode control — an icon instead of "Select"
+
+⚠️ **An icon for a MODE is a different risk from an icon for an
+ACTION.** An action's icon is wrong for one tap; a mode's icon is wrong
+until you notice the rows have started behaving differently. There's no
+widely-read glyph for multi-select, and §18D deliberately put the
+control in the header, away from the rows, so whatever replaces the
+word still has to read as *"this changes what tapping does."*
+
+Sean's reason was *"cleaner"*, which is worth taking seriously — the
+header currently carries a 48px bordered button saying **Select** next
+to another saying **New recipe**, and they compete.
+
+### 2 · Bulk delete — the confirm shape
+
+Single deletion now names the thing:
+
+> *"Move **Empress 1908 Gin** to the trash? You can restore it from the
+> foot of the library."*
+
+⚠️ **Six things can't be named in a sentence, and a bare count —
+*"Move 6 products to the trash?"* — is the confirm people learn to
+click through.** That's §16C's own objection to confirms that don't
+carry information.
+
+Everything goes to a restorable trash now, including products
+(`src/lib/data/library.ts`, new 8 Aug — deleting a product used to be
+permanent). So the stakes are lower than they look, and the honest
+question is whether a bulk confirm should exist at all or whether the
+trash IS the confirm.
+
+## ⚠️ What changed under you since round 13 — check before drawing
+
+- **The libraries now open a read-only card** (§17.3), products
+  included. `src/components/library/CardKit.tsx` is the shared kit at
+  21D geometry.
+- **`Sheet` no longer contributes horizontal padding** (§17). Content
+  owns 20px.
+- **Products has a trash and a Restore row** at the foot of the list,
+  which is new furniture in the same place a selection bar would sit.
+  Worth checking they don't collide.
+
+## Not asking for
+
+The selection model, the export path, or the `+N of M` chip. All
+shipped and all fine.
