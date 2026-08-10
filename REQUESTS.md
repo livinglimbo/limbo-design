@@ -2340,3 +2340,95 @@ states** ruling.
 ## Not asking for
 
 Any of the four spacing values — measured, adopted, and they read right.
+
+---
+
+# Build → Design · 9 Aug · Three of Sean's, and a bug he found by looking
+
+Not a round — direct requests, built and shipping. Flagged here because
+two of them change screens you own.
+
+## 1 · The product editor grew a row, and it needs your eye
+
+Sean opened a 12-pack of 7up and got **"A each package can't be priced
+per ounce without a density"** — on a pack of cans.
+
+⚠️ **The cause was ours, not his.** `getCost()` predates the unit
+registry and asked `unit === "ea" || unit === "each"` — two literal
+strings, against a registry with **nine** count units. His record stored
+`ct`, an alias of `each`, so **the picker showed "each" and the maths
+didn't recognise it.** Everything countable that wasn't spelled those two
+ways fell into the volume path and reported a density error.
+
+That's fixed. But his second point needed a data change:
+
+> *"A 12 pack of 12oz sodas. How do I indicate that there are 12 cans,
+> and then that each individual can is 12oz? I buy it by the pack, not
+> the can."*
+
+The record could hold **one** level — "12 cans" OR "144 oz", never both.
+So there are now two optional fields, and a second row in the Package
+Contents block that **only appears when the unit is countable**:
+
+    Qty 12 · Unit can · Packaging Pack
+      └ Each can contains:  Size 12 · Unit oz
+
+**What I'd like you to look at:** that row is my layout, not yours. It's
+a bordered sub-row inside the existing block with the label *"Each can
+contains"* — the noun changes with the unit. It may want to be something
+else entirely; the block is now three rows deep and I can't tell whether
+it reads as one idea or two.
+
+⚠️ **A pack has TWO true costs and the card shows both** — `$0.080/oz ·
+$0.96 each`. That's the answer to Sean's *"this app should be able to
+measure cost in multiple units"*, and it means the Cost fact's label had
+to stop saying "Per ounce". It says **Cost** when both are present.
+Worth a look: two numbers in one fact may want a different shape.
+
+## 2 · A brand field, and the sparse rule you set
+
+> *"A new field to indicate the Brand and/or Company that the item is
+> sourced from — Dole bananas, coupes from Party Rental LTD. Account for
+> the sparse case, where the card only displays the information if the
+> field has information."*
+
+**One field, not two.** Brand and supplier differ in general but not in
+the question he's asking — *where does this come from* — and two boxes
+would mean deciding per product which one Dole goes in.
+
+⚠️ **`rentalCompany` already held this fact** for Rental Supply items.
+I did **not** merge them: it carries real data, and folding two fields
+into one is a migration that can lose one. The card shows whichever is
+present under a single **Source** group, so on screen they're one idea.
+**If you'd rather they were one field in the data, say so and I'll do it
+as a proper migration** — it shouldn't happen as a side effect.
+
+Sparse as asked: neither present → no group at all.
+
+## 3 · Wine & Beer became Wine + Beer & Seltzers
+
+His call. The two sit adjacent in `CATEGORY_ORDER`, in the old one's
+slot, so **no invoice he has already sent reorders**. Existing records
+migrate to Wine and he re-files the beers by hand — nothing guesses,
+because `type` is empty on most records.
+
+⚠️ **The leftovers pass now has six slices, not five** (§15.2 / 19B).
+That screen is yours and the verdict rows are drawn for five. Six still
+fits, but you may want to look.
+
+## 4 · Your §20.4 hover ruling has been answered by Sean
+
+He reported the symptom without knowing the cause:
+
+> *"If my mouse or pen is over a row I can click, it should be
+> highlighting just like the cocktail library."*
+
+⚠️ **The rows he means all HAVE a hover state — `hover:bg-surface-alt`.**
+It's inert on iPadOS, exactly as §0.4 says. So the answer to your "delete
+these three dead hover states" is **neither delete nor keep**: on a
+clickable ROW the mechanism was wrong, and those are converted to a
+pointerType-driven `HoverRow`. What remains on buttons and chips is a
+desktop nicety and stays.
+
+**Still open from before:** offline mode, invoice select mode (blocks
+kits), where procurement mode is turned on, and `--text-2xs`.
