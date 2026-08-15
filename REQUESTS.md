@@ -2647,3 +2647,61 @@ his Saved/Done row was visible in the same screenshot.
 **Worth a line in §22.1**, since "rides the keyboard" is a ruling that quietly
 assumes there is one. The hardware-keyboard case is the one Sean actually works
 in.
+
+---
+
+## Round 18 report · the library footers, and one ruling I need you to confirm
+
+Sean, on the three libraries: *"the action buttons at the bottom are off. The
+trash button is missing a border. The spacing is weird. The order of the buttons
+is inconsistent."*
+
+**The third complaint caused the other two.** Five sheets hand-wrote five
+footers, so they drifted:
+
+| | |
+|---|---|
+| Cocktail card | Edit · Export ······ Close |
+| Prep card | Export · Close ······ Edit |
+| Cocktail editor | Save · Cancel ······ Move to trash |
+| Product editor | Save ··············· Move to trash |
+
+⚠️ **`PrepEditor`'s own comment claimed it matched the cocktail card "exactly"
+so the two libraries behave the same way.** It was the mirror image of it. The
+intent was written down and the code disagreed — which is what happens when the
+intent lives in a comment instead of a component. There is now one
+`SheetFooter`, and a check asserts every `footer={` opens directly with it.
+
+### The order I settled on, and why it is not invented
+
+**Destructive · safe actions · primary last on the right.** `PrepEditor` already
+stated "Edit bottom-right filled" as the intended rule; Event Details ends
+`Saved · [Done]`; `InvoiceCard` ends `[Open in a tab]`. The primary was on the
+right everywhere except the two sheets that had drifted, so this is the existing
+convention enforced rather than a new one chosen.
+
+### ⚠️ Your §16 trash ruling versus Sean's "evenly filled"
+
+Sean asked for the footer evenly stretched. Your rule says the destructive
+control is *"icon-only, 2px `--danger` border, on the LEFT — separated from
+Export by the full width of the bar. Adjacency is the mis-tap risk."*
+
+Four equal buttons puts the trash shoulder-to-shoulder with Export. **I put the
+conflict to Sean and he chose the reconciliation:** the safe actions stretch and
+fill; the trash stays a fixed 48px icon button pinned left with a gap. Even
+spacing everywhere it is safe to have it, no equal-width delete beside Export.
+
+**The border he called "missing" was `border-danger/30` at 1px** — your spec is
+2px at full strength. It was not absent, it was 30% of one pixel of it. Now owned
+by the shared component so it cannot be softened per-sheet again.
+
+### Two smaller things
+
+- **The ✕ in edit mode sat beside the title, not at the top right.** `Sheet` has
+  two title branches; the `heading` one claims the row with `flex-1` and the
+  plain-`title` one did not, so the button came to rest against the word
+  "Cocktail". Both branches lay out now.
+- **The price field shows `$` and rests at two decimals** — `9.9` → `$9.90`. The
+  `$` is drawn beside the number rather than put in the value, and the snap
+  happens on blur, never mid-keystroke. It is also *committed*, not just
+  displayed, so a price cannot read `$12.35` while costing uses `12.345`.
