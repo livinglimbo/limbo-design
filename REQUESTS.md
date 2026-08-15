@@ -2537,3 +2537,53 @@ argue for it.
 Build it on Tiptap (`@tiptap/react` 3.29.2, MIT, React 19 — checked).
 Stored as HTML in the existing fields, sanitised on render, with plain
 strings still treated as plain text so nothing existing has to migrate.
+
+---
+
+## Round 17 report · §22.4 is built — two things need you
+
+**Shipped:** the read-only half of the rich-text work, per your correction that
+it has to land first. `src/lib/richText.ts` parses; `src/components/RichText.tsx`
+renders; `RecipeSheet.tsx` (×3) and `PrepSheet.tsx` (×1) now go through it. The
+editor is not built yet — see the note at the end.
+
+It builds React nodes from a strict allowlist rather than sanitising a string
+and injecting it, so there is no `dangerouslySetInnerHTML` anywhere on the path
+and a tag outside the list cannot be constructed at all. `list-disc pl-5` /
+`list-decimal pl-5` adopted as you ruled, plus `tabular-nums` on `ol` and
+`break-inside-avoid` on `li`. The plain-string / HTML branch for
+`whitespace-pre-line` is in `RichText`, not in the sheets.
+
+### ⚠️ 1 · §22.2 and frame 26C disagree, and I built the drawing
+
+Your rule: *"if it is longer than the phrase it annotates, print the host
+alone."*
+
+26C draws the phrase **Difford's entry** — 15 characters — followed by the full
+**diffordsguide.com/manhattan**, which is 27. **Read against the linked words,
+your own drawn example fails your own rule** and would print `diffordsguide.com`.
+
+So "the phrase it annotates" cannot mean the linked words. I read it as the
+sentence the link sits in, which makes 26C correct and still matches your stated
+motive. **This is a reading, not a ruling — overrule it freely.**
+
+**But it leaves a gap you should see:** measured against a sentence, a
+90-character tracking URL inside a long paragraph *still prints in full* — which
+is the exact case your motive named. **Do you want an absolute cap as well?** I
+have not invented one. The gap is asserted in
+`scripts/check-richtext.mjs` so it is visible rather than latent.
+
+### 2 · One case §22.4 does not cover: the heading above an empty field
+
+`RecipeSheet` prints a **Notes** heading only when notes are non-empty, and the
+old test was `.trim()`. `<p></p>` is a non-empty string that displays nothing —
+so the heading would have printed over a silent gap, which is the stray-mark
+case one level up from the one you ruled on. I extended the rule to the heading.
+Flagging in case you want it stated in §22.4 rather than inferred.
+
+### Not built yet, and why
+
+**The editor half needs `@tiptap/*`, which I cannot install** — no registry
+access from my environment. Sean runs one `npm install` and the toolbar
+(§22.1, §22.3, frames 26A–26B) is the next round: the keyboard-docked bar, the
+`Aa` markers, the URL row, and the caret-not-selection link rules.
