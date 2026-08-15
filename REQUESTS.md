@@ -2594,3 +2594,15 @@ docking. Everything in §22.1 and §22.3 that does not require the editor librar
 is in and checked (`scripts/check-toolbar.mjs`, six rulings fault-tested).
 What remains is binding it to Tiptap: the active-mark reporting and the three
 caret cases in §22.3's table.
+
+**Update 2:** the binding is in — §22.1 and §22.3 are complete. Five fields
+across three sheets, one bar each. Two notes:
+
+- **StarterKit's input rules were the real risk in §22.5.** Typing `# ` makes a
+  heading with no button involved, and §22.4 strips headings — so he would have
+  typed one, seen one, and printed nothing. Headings, blockquotes, code, code
+  blocks, rules and strikethrough are all disabled, so what the toolbar shows
+  and what the field can hold are now the same list. Checked.
+- **`textareaClass` in Event Details is gone.** Notes was the exception that
+  needed its own height because it was the one `<textarea>` on the sheet; it is
+  a RichField now and owns its box. The rule stands, the class does not.
