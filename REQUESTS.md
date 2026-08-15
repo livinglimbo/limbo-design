@@ -2606,3 +2606,44 @@ across three sheets, one bar each. Two notes:
 - **`textareaClass` in Event Details is gone.** Notes was the exception that
   needed its own height because it was the one `<textarea>` on the sheet; it is
   a RichField now and owns its box. The rule stands, the class does not.
+
+---
+
+## Round 17 report · two faults on the device, both mine
+
+Shipped and then found by Sean on the iPad within a minute. Recording them
+because the second one is a gap in §22.1 that you may want to state.
+
+### 1 · The renderer reached the printed sheets and nothing else
+
+§22.4 is written about the print path, and I built exactly that. But the same
+five fields are also READ on four screens — the cocktail card, the prep card,
+the builder's Details rail, and the recipe card's batch block. The moment the
+editor shipped, Sean's notes read `<p>Bring Extra Litter</p><p>Hello.</p>` on
+his own invoice.
+
+⚠️ **`CardProse` was the second half of it.** It sets `whitespace-pre-wrap` —
+correct for a plain string, and precisely what §22.4 says must not apply to
+HTML. Added `CardRich` beside it: same type, different whitespace rule. A check
+now asserts that no file reading one of the five field names interpolates it as
+a bare string.
+
+### 2 · ⚠️ §22.1's docking assumes a SOFTWARE keyboard
+
+> **With a hardware keyboard attached, iPadOS draws its own shortcut bar across
+> the bottom of the viewport — and `visualViewport` does not report it.**
+
+Sean reported "no bullets on iPad". The bar was rendering correctly; Apple's bar
+was sitting on top of it. His screenshot shows a stray `B` on the left and the
+tail of `Done` on the right, poking out either side of Apple's pill — which also
+carries B, I and U, so it reads convincingly as *my* bar with the list buttons
+missing.
+
+The fix takes the higher of two floors: above the keyboard, or above the sheet's
+own lower edge. Measured, not a constant — the height of Apple's bar is Apple's
+to change. On the iPad the sheet is centred with room beneath it, which is why
+his Saved/Done row was visible in the same screenshot.
+
+**Worth a line in §22.1**, since "rides the keyboard" is a ruling that quietly
+assumes there is one. The hardware-keyboard case is the one Sean actually works
+in.
