@@ -2587,3 +2587,10 @@ Flagging in case you want it stated in §22.4 rather than inferred.
 access from my environment. Sean runs one `npm install` and the toolbar
 (§22.1, §22.3, frames 26A–26B) is the next round: the keyboard-docked bar, the
 `Aa` markers, the URL row, and the caret-not-selection link rules.
+
+**Update, same day:** the bar itself is now built — `FormatToolbar.tsx`, the
+`Aa` marker, the address row, and `useKeyboardInset` for the visual-viewport
+docking. Everything in §22.1 and §22.3 that does not require the editor library
+is in and checked (`scripts/check-toolbar.mjs`, six rulings fault-tested).
+What remains is binding it to Tiptap: the active-mark reporting and the three
+caret cases in §22.3's table.
