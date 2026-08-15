@@ -2432,3 +2432,108 @@ desktop nicety and stays.
 
 **Still open from before:** offline mode, invoice select mode (blocks
 kits), where procurement mode is turned on, and `--text-2xs`.
+
+---
+
+# Round 16 request · A rich-text toolbar, in five places
+
+⚠️ **This one is a request BEFORE building, not a relay after.** Sean
+asked for rich text and I have not written a line of it — the toolbar
+appears in five fields across three surfaces and I would rather you drew
+it than corrected it.
+
+## What Sean asked for
+
+Six controls, no more: **numbered list · bulleted list · bold · italic ·
+underline · link**.
+
+He named them himself after I offered a smaller set, so treat the list
+as settled. What isn't settled is how six controls sit on a touch
+surface without turning every long field into a word processor.
+
+## Where it appears — read this before drawing
+
+| Surface | Fields |
+|---|---|
+| `EventDetailsSheet` | Notes |
+| `RecipeEditor` | Instructions · single · **Instructions · batch** · Notes |
+| `PrepEditor` | Instructions |
+
+⚠️ **THE RECIPE EDITOR CAN SHOW THREE OF THEM AT ONCE.** When a cocktail
+has a separate batch method, that sheet holds *Instructions · single*,
+*Instructions · batch* and *Notes* in one scroll. **Three always-visible
+toolbars in a 512px-wide sheet is the thing most likely to make this
+feel like a mistake**, and it's the first question below.
+
+## Measurements, so you're not guessing
+
+- The sheet is **512px** wide at `lg` (`max-w-lg`), less `px-5` → **472px**
+  of usable width.
+- Six controls at the **44px** touch minimum = **264px**. It fits. It
+  fits *comfortably*. Space is not the constraint — attention is.
+- Type scale reminder: **`text-xs` is 15px in this app**, floor is 13px.
+- ⚠️ `hover:` is inert on iPadOS. Any hover affordance must come from
+  `pointerType` — see `HoverRow`.
+- Unselected control boundaries use **`--control-line`** (§20.1), not
+  `--border-strong`.
+
+## The four things that need you
+
+### 1 · Always visible, or on focus?
+
+Three fields in one sheet is the case that decides it. An always-present
+toolbar per field is three rows of chrome before Sean has typed
+anything; a toolbar that appears on focus is quieter but hides the
+affordance, and *"there's formatting here"* is not discoverable if
+nothing says so.
+
+**A floating bubble over the selection is the usual third answer and I
+suspect it's wrong here** — it depends on a text selection, and
+selecting text precisely with a finger at 1am is the part of iPadOS
+everyone hates. Your call, but please say why.
+
+### 2 · ⚠️ Underline and links are the same mark
+
+This is the real conflict and I'd rather hand it to you than solve it
+badly:
+
+- **Underline** is one of Sean's six.
+- **A link** is conventionally underlined.
+- **On the printed sheet a link does nothing** — paper has no click.
+
+So on the recipe export, an underlined phrase and a link are
+indistinguishable, and one of them is a promise the medium can't keep.
+Options as I see them: links get a different treatment on paper (colour?
+the URL in brackets after?), or underline gets a different one on
+screen, or links simply don't print as links. **Not my ruling to make.**
+
+### 3 · Entering a URL on a touch device
+
+The link control is the only one that needs a second step — a text field
+for the address. In a sheet that is already a sheet. Popover, inline
+row, or a small nested sheet? Whatever it is, it needs a way to **remove**
+a link too, and that control has to be reachable without precise
+selection.
+
+### 4 · What it looks like when it is NOT being edited
+
+⚠️ **Easy to forget and it's half the work.** These fields are read in
+eight places, including two PRINTED documents (`RecipeSheet.tsx`,
+`PrepSheet.tsx`). A numbered list needs to look right on a recipe card,
+on the locked prep card, and on paper — where the print stylesheet
+currently has **no list styling at all**, so bullets would come out
+unmarked.
+
+Please draw the read-only state as well as the editor.
+
+## Not asking for
+
+Headings, colour, tables, images, alignment, or a "clear formatting"
+button. Sean named six things; the answer to a seventh is no unless you
+argue for it.
+
+## What I'll do with it
+
+Build it on Tiptap (`@tiptap/react` 3.29.2, MIT, React 19 — checked).
+Stored as HTML in the existing fields, sanitised on render, with plain
+strings still treated as plain text so nothing existing has to migrate.
