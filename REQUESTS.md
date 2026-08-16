@@ -2848,3 +2848,33 @@ blank. Solved once already in `migrations.ts` for the category rename.
 
 The drink-split presets fed the estimator, scrapped 7 Aug. They compute nothing.
 Raised 9 Aug, still unanswered: keep as a record of how his crowds drink, or cut.
+
+---
+
+## Round 19 report · composition figures — one block, and one refusal
+
+**Shipped:** `abv`, `brix`, `acid` as optional numbers on both products and
+prep recipes, a shared **Composition** block in both editors, and a
+**Composition · before dilution** group on the cocktail card showing strength,
+grams of pure alcohol, and acid.
+
+**Nothing to draw yet unless you want to** — the block follows the existing
+card grammar. Two things you may want to rule on:
+
+⚠️ **1 · Brix is refused, and the card says why.** Brix is grams of sugar per
+100 **grams** of solution, so combining ingredient figures needs a density per
+ingredient — the work parked since 8 Aug, and the same wall prep costing hits.
+The card carries a line naming density as the unlock. **Is a stated refusal the
+right treatment on a card, or should the row simply not appear?** I chose
+stated, because a silent absence reads as "this drink has no sugar", but that is
+a judgement about tone and it is yours.
+
+⚠️ **2 · The ABV is pre-dilution and the label says so.** Stirring or shaking
+adds water and drops the finished strength substantially. The group is titled
+*"Composition · before dilution"*, which is honest but long. **Sean owes the
+dilution model**; until it exists the qualifier has to be visible, because a
+strength figure a quarter too high is worse than none.
+
+Also: the composition block appears **only when there is something to show**.
+Until Sean's library pass reaches the bottles, every recipe has no ABV recorded,
+and three empty rows on every card for weeks would be worse than nothing.
