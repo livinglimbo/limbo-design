@@ -2790,3 +2790,61 @@ editor, which was inline and adjacent to its trigger. That is a genuine trade �
 adjacency was an advantage there — but two confirm styles in one editor is the
 drift Sean keeps catching, and it destroys typed work. Say if you want it back
 inline.
+
+---
+
+## Round 19 request · Settings sectioning — ⚠️ now blocking a second item
+
+**This is a re-raise, not a new ask.** The sectioning question went to you on
+**8 Aug** and hasn't come back. Six days, and it is now the longest-outstanding
+request in the file. Sean raised it again himself on 15 Aug, unprompted, which
+is the second time.
+
+Its own rule was *"before the next thing lands in Settings, not after."* Since
+8 Aug, four things have landed or queued: auto-archive, the org default tax
+rate, the business identity block, and Method/Glassware below. **Nothing new is
+going into Settings until this lands** — that rule is now actively holding work.
+
+### What Sean added this time, which sharpens it
+
+> Named sections — **Invoice Workspace** (Builder *and* Library), **Products
+> Library**, **Cocktail Library**, **Prep Recipe Library**, **Reporting**,
+> **General** — *"and so on"*. Possibly sub-sections. Modelled on iPhone
+> Settings.
+
+⚠️ **And the harder half, which is not a layout question at all:**
+
+> *"Settings need a clear cohesive design… If I add a new setting with a roller
+> to select numbers, when practical, it should be the same roller as other
+> settings use. Headers and sub-headings have a look/theme."*
+
+**That is a component inventory, not an arrangement.** What kinds of setting
+exist (toggle, number, choice-from-list, free text, destructive action), what
+each looks like, and how a heading and a sub-heading differ. The sectioning is
+the easy part; this is the part that decides whether Settings still looks like
+one thing in six months.
+
+### A concrete case to draw against, instead of a principle
+
+**Method and Glassware as editable lists.** Sean wants a setting where he can
+add, edit and delete the **Technique** and **Glassware** options, so the recipe
+editor picks from a list rather than free text.
+
+I have held it deliberately — it is a settings section, and shipping it into
+today's undifferentiated page is the thing the sectioning exists to prevent.
+**But it is also the answer to why the sectioning question has been slow:** an
+abstract "how should Settings be organised" is hard to draw. *"A list you add
+to, edit and delete from, that another screen reads"* is not.
+
+**If it helps, treat Method/Glassware as the worked example and let the general
+rule fall out of it.**
+
+⚠️ One implementation note so it isn't drawn around: Technique and Glassware are
+free text today, so existing recipes hold whatever was typed. The list needs a
+read-side fallback — a recipe saying "Coup" must still display rather than going
+blank. Solved once already in `migrations.ts` for the category rename.
+
+### Also flagged: one of the five existing blocks is dead
+
+The drink-split presets fed the estimator, scrapped 7 Aug. They compute nothing.
+Raised 9 Aug, still unanswered: keep as a record of how his crowds drink, or cut.
