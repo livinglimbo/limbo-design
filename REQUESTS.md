@@ -2705,3 +2705,88 @@ by the shared component so it cannot be softened per-sheet again.
   `$` is drawn beside the number rather than put in the value, and the snap
   happens on blur, never mid-keystroke. It is also *committed*, not just
   displayed, so a price cannot read `$12.35` while costing uses `12.345`.
+
+**Correction, same day — I put a Cancel button where Save used to be.**
+
+Sean: *"When I edit the price for uncosted items, it doesn't take."* It took, and
+then Cancel discarded it.
+
+The product editor's footer had been **one wide Save filling the row from the
+left edge**. Making the three editors match, I produced `[🗑] [Cancel] [Save]` —
+three even cells — so the region his thumb had learned as Save was now Cancel,
+while he worked down a filtered list of 42 uncosted products repeating the same
+motion. ⚠️ **And Cancel had never existed on that sheet.** I added it for
+symmetry; nobody asked for it.
+
+**Cancel is now gone from all three editors**, and not only because of the
+mis-tap: an equal-width discard button directly beside an equal-width Save makes
+losing the work exactly as easy as keeping it, and even spacing makes that worse
+rather than better. The ✕ at the top right has always discarded on all three
+sheets, so Cancel duplicated existing chrome that happened to sit somewhere
+dangerous. Save is now the whole remaining row.
+
+**Worth a line in §16 or §17:** *even spacing applies to actions that are safe to
+confuse with each other.* That is the rule I violated, and it is not stated
+anywhere — the trash was protected by your adjacency rule and Cancel was not,
+though it destroys the same work with less ceremony.
+
+### The second half of the same report
+
+⚠️ **A price on its own is not a cost.** `getCost()` needs a price AND a package
+size, so pricing a sizeless product saves correctly and the product *stays in the
+"no cost" filter* — indistinguishable from the save failing.
+
+The editor already flagged "No package quantity", but the paragraph underneath
+explained **density**, which is a different problem. The one case where the next
+step mattered most was answered with a paragraph about something else. It now
+names the missing fields and says the price saved either way.
+
+---
+
+## Round 18b · one control height, and the confirm is a dialog
+
+### ⚠️ The Unit box was thinner, and it was wearing the right class
+
+Sean: *"For the love of god, please make sure the boxes for fields are the same
+height. Units boxes in two places is thinner and it looks bad. Cohesive — that's
+how we build this app."*
+
+Qty, Unit and Packaging all carried the same `inputClass` — `min-h-[48px]` — and
+the Unit box still came out shorter. **Safari draws a native `<select>` sized to
+its own text and ignores `min-height` entirely.**
+
+That is the same bug you already ruled on for `input[type=date]` and `[type=time]`
+in §19C, and the fix already existed — in a *different file*. `EventDetailsSheet`
+carried `h-12 appearance-none`; `ProductEditor` carried `min-h-[48px]` and had
+never met the bug. **`inputClass` was declared three times** (ProductEditor,
+EventDetailsSheet, BusinessForm) — the same drift that produced five footers.
+
+One owner now (`FormField.tsx`), `h-12 appearance-none`, and every `<select>`
+goes through a `SelectField` that draws the disclosure chevron back, since
+`appearance-none` takes it with it.
+
+**A rule worth stating in §20:** *a height is a promise; a min-height is a
+request a native control may decline.* Every native widget in this app has now
+broken min-height at least once.
+
+### The confirm is a dialog
+
+*"When I hit trash, I want a pop-up. Currently, the prompt appears at the top of
+the card… And use border around 'Move to trash'. It needs to look like a button
+— because it is a button."*
+
+He is right twice. The banner unfurled at the TOP of the sheet while the button
+he pressed was at the BOTTOM — a scroll away on a long product form — and it
+pushed every field down as it appeared, which is the layout-shift fault §22.1
+rejected for the toolbar. And the destructive answer was bare red text, which
+reads as a label.
+
+`ConfirmDialog` now: comes forward, `role="alertdialog"`, destructive answer as
+an outlined `--danger` button (never filled, per your selection-bar rule), safe
+answer as the primary on the right and autofocused so Return cannot delete.
+
+⚠️ **I also converted the "discard batch instructions" confirm** in the recipe
+editor, which was inline and adjacent to its trigger. That is a genuine trade —
+adjacency was an advantage there — but two confirm styles in one editor is the
+drift Sean keeps catching, and it destroys typed work. Say if you want it back
+inline.
