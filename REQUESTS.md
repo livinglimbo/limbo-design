@@ -2793,61 +2793,112 @@ inline.
 
 ---
 
-## Round 19 request · Settings sectioning — ⚠️ now blocking a second item
+## Round 19 request · Settings — ⚠️ re-raised, now blocking, and re-briefed from source
 
-**This is a re-raise, not a new ask.** The sectioning question went to you on
-**8 Aug** and hasn't come back. Six days, and it is now the longest-outstanding
-request in the file. Sean raised it again himself on 15 Aug, unprompted, which
-is the second time.
+**This went to you on 8 Aug and hasn't come back.** Six days, the longest
+outstanding item in the file. Sean raised it again himself on 15 Aug, unprompted
+— the second time. Its own rule was *"before the next thing lands in Settings"*,
+and four things have landed or queued since. **Nothing new goes into Settings
+until this lands**, so it is now holding work rather than waiting on it.
 
-Its own rule was *"before the next thing lands in Settings, not after."* Since
-8 Aug, four things have landed or queued: auto-archive, the org default tax
-rate, the business identity block, and Method/Glassware below. **Nothing new is
-going into Settings until this lands** — that rule is now actively holding work.
+The first brief was a paragraph. This one is read off the code, because the
+finding below changes what you are being asked to draw.
 
-### What Sean added this time, which sharpens it
+---
 
-> Named sections — **Invoice Workspace** (Builder *and* Library), **Products
-> Library**, **Cocktail Library**, **Prep Recipe Library**, **Reporting**,
-> **General** — *"and so on"*. Possibly sub-sections. Modelled on iPhone
-> Settings.
+### ⚠️ THE FINDING: he is asking you to organise settings that do not exist
 
-⚠️ **And the harder half, which is not a layout question at all:**
+Sean's proposed sections:
 
-> *"Settings need a clear cohesive design… If I add a new setting with a roller
-> to select numbers, when practical, it should be the same roller as other
-> settings use. Headers and sub-headings have a look/theme."*
+> **Invoice Workspace** (Builder *and* Library) · **Products Library** ·
+> **Cocktail Library** · **Prep Recipe Library** · **Reporting** ·
+> **General** — *"and so on"*, possibly with sub-sections.
 
-**That is a component inventory, not an arrangement.** What kinds of setting
-exist (toggle, number, choice-from-list, free text, destructive action), what
-each looks like, and how a heading and a sub-heading differ. The sectioning is
-the easy part; this is the part that decides whether Settings still looks like
-one thing in six months.
+Here is everything actually in `settings/page.tsx` today — 99 lines, five
+sections, one scroll:
 
-### A concrete case to draw against, instead of a principle
+| Section | Holds |
+|---|---|
+| **Your business** | name, address, phone, email, logo, default tax rate, auto-archive |
+| **How your drinks split** | per-crowd-style percentage grid |
+| **Appearance** | light / dark / system |
+| **Account** | signed-in email, Sign Out |
+| **Developer** | one link to `/debug` — owner-only, hidden otherwise |
 
-**Method and Glassware as editable lists.** Sean wants a setting where he can
-add, edit and delete the **Technique** and **Glassware** options, so the recipe
-editor picks from a list rather than free text.
+⚠️ **Not one of the five maps onto a name he proposed.** His list is organised by
+**the app's domains**; the existing content is organised by **the operator and
+the account**. And the domain sections he named — Products, Cocktails, Prep,
+Reporting — contain **nothing at all today**. There is not one setting for any
+of them.
 
-I have held it deliberately — it is a settings section, and shipping it into
-today's undifferentiated page is the thing the sectioning exists to prevent.
-**But it is also the answer to why the sectioning question has been slow:** an
-abstract "how should Settings be organised" is hard to draw. *"A list you add
-to, edit and delete from, that another screen reads"* is not.
+**So this is not a re-shelving job. It is a container for content that mostly
+does not exist, which has to also hold five blocks that don't fit the scheme.**
+That is the harder problem and it is worth knowing before you start: the
+arrangement has to be right when four of its six rooms are empty, and still
+right in six months when they aren't.
 
-**If it helps, treat Method/Glassware as the worked example and let the general
-rule fall out of it.**
+**The first real occupant is already queued** — Method and Glassware as editable
+lists, which belongs under Cocktail Library. It is being held for this ruling.
 
-⚠️ One implementation note so it isn't drawn around: Technique and Glassware are
-free text today, so existing recipes hold whatever was typed. The list needs a
-read-side fallback — a recipe saying "Coup" must still display rather than going
-blank. Solved once already in `migrations.ts` for the category rename.
+---
 
-### Also flagged: one of the five existing blocks is dead
+### The second half, and Sean thinks it is the important one
 
-The drink-split presets fed the estimator, scrapped 7 Aug. They compute nothing.
-Raised 9 Aug, still unanswered: keep as a record of how his crowds drink, or cut.
+> *"Settings need a clear cohesive design and look… along with any icons,
+> shapes, colors, buttons, glyphs, whatever. If I add a new setting with a
+> roller to select numbers, when practical, it should be the same roller as
+> other settings use. Headers and sub-headings have a look/theme."*
+
+**That is a component inventory, not a layout.** Here is what already exists, so
+the inventory starts from the real set rather than an imagined one:
+
+| Kind | Where it is now |
+|---|---|
+| Short text | business name, phone, email |
+| Long text | address (`<textarea>`) |
+| File | logo, with a Remove |
+| **Number with a unit** | tax rate (`%`), auto-archive (`days`) — two different treatments today |
+| **On / off** | auto-archive's enable button |
+| **Segmented choice** | Appearance — three buttons, `aria-pressed`, `role="group"` |
+| **Constrained number set** | drink splits — percentages that must total 100, with a live total |
+| Destructive / account action | Sign Out |
+| Navigation row | Developer tools → `/debug`, with a chevron |
+
+⚠️ **Nine shapes, five sections, one page.** Sean's "same roller" example is
+already violated: tax rate and auto-archive are both *a number with a unit* and
+they are built differently. **That is the drift the request exists to stop, and
+it is the same failure as the five hand-written footers.**
+
+**The list you'd want to add:** a choice-from-a-managed-list (Method/Glassware),
+and a multi-line list the user can add to, edit and delete from.
+
+---
+
+### Questions
+
+**1 · Does Settings drill in, or scroll?** iPhone Settings is a list of rows that
+pushes to a sub-page. ⚠️ **But this app already has a persistent nav sidebar on
+iPad and desktop**, so a drill-down list inside Settings is a second navigation
+inside a page that already has one. A two-pane Settings (sections left, detail
+right) would mirror the Builder's rail, but that is three levels of navigation
+on one screen. **Your call, and it is the structural one.**
+
+**2 · Sub-sections — real, or headings?** He said *"we might even have sections
+with sub-sections."* Whether that is a nested route or a heading inside a pane
+changes the whole shape.
+
+**3 · What does an EMPTY section look like?** Four of his six will be empty on
+day one. A section that says nothing is worse than an absent one, but absent
+ones make the scheme invisible.
+
+**4 · Where do Account and Appearance go?** They are not a domain. "General" is
+the obvious home, but Sign Out is the one genuinely account-shaped thing here
+and it may want to sit apart.
+
+**5 · One of the five is dead, and this is the third time I have raised it.**
+The drink-split presets fed the estimator, scrapped 7 Aug. **They compute
+nothing.** Keep as a record of how his crowds drink, or cut? An answer either
+way unblocks it; silence keeps a dead block in the middle of the new design.
 
 ---
 
@@ -2878,3 +2929,210 @@ strength figure a quarter too high is worse than none.
 Also: the composition block appears **only when there is something to show**.
 Until Sean's library pass reaches the bottles, every recipe has no ABV recorded,
 and three empty rows on every card for weeks would be worse than nothing.
+
+---
+
+# Round 20 request · THE COCKTAIL CALCULATOR
+
+**Naming, and please adopt it:** Sean has named this the **Cocktail
+calculator**. Not "the estimator" — that name belongs to the scrapped thing
+below, and not to the **Quote** (the client-facing document) or the **lead
+estimate** (the min/max range for an inquiry call). Four different things have
+been called "estimate" in this project; this is the fourth and it now has its
+own word.
+
+**What he wants, in his words:** *"select my cocktails from the library, add
+them to the invoice, and have their respective ingredients populate the invoice
+with the proper totals based on the parameters of my calculation settings."*
+
+Select cocktails in the rail → one button → **their ingredients land on the
+invoice as quantities**. Not a wizard that builds an invoice. A tool he points
+at a selection.
+
+---
+
+## ⚠️ 0 · IT IS OPT-IN. ALWAYS. THIS IS THE RULING, NOT A PREFERENCE.
+
+Sean, correcting an ambiguity in my first draft of this brief:
+
+> *"What I'm looking for is an option to use the calculator, not automatic. So
+> when I start an invoice, I need the ability to decide when and if I want to
+> have the calculator adjust my quantities."*
+
+**Manual is the default state of an invoice, and it stays that way unless he
+asks otherwise.** Typing quantities by hand is not a fallback for when the
+calculator is unavailable — it is the normal way this app is used, and the
+calculator is a tool he may go a whole job without touching.
+
+⚠️ **This is a correction to my §4 below, and the distinction is easy to lose:**
+a *default calculation setting* is not the same as the *calculator being armed*.
+Sean asked for the first — a set of parameters seeded onto each new invoice so
+he does not retype them. **He did not ask for the second, and explicitly does
+not want it.** An invoice can carry settings its owner never invokes, the same
+way it carries a tax rate whether or not anything is taxed.
+
+**"When AND IF."** The second word is the load-bearing one. Please draw a
+surface that is comfortable being ignored forever — no nag, no empty state
+inviting him to run it, no badge counting things it could fix. The old
+estimator's fatal flaw was structural rather than numerical: **it assumed it was
+the point of the screen.** It was not, and this is not.
+
+### ⚠️ And that implies TWO entry points, not one
+
+*"Decide when and if I want the calculator to **adjust my quantities**"* — not
+only "populate". So:
+
+| | |
+|---|---|
+| **A · From a selection** | select cocktails in the rail → calculate → their ingredients arrive, quantified |
+| **B · On what is already there** | the invoice already has lines, typed by hand or added earlier → invoke the calculator → it **adjusts existing quantities** |
+
+**B is the one Sean already ruled**, on 2 Aug, before this round existed:
+*"Select one or more booze items already on the invoice, press a button, get a
+recommended amount."* Multi-select, every input adjustable, **every input also
+ignorable.**
+
+⚠️ **B is the harder draw, and it is the one that decides whether this is
+trusted.** It changes numbers that are already on screen — possibly numbers he
+typed himself, deliberately. What it may overwrite, what it must leave alone,
+and how a changed line is distinguished from an untouched one are the questions
+that matter most. **A line he set by hand and a line the calculator set are not
+the same kind of number**, and if the interface can't tell them apart, he will
+stop using one of the two.
+
+---
+
+## ⚠️ 1 · READ THIS BEFORE DRAWING ANYTHING. The last one was scrapped, and not for a design reason.
+
+`src/lib/estimate.ts` was written on **7 Aug**, verified against the Meg Pinto
+wedding, and **deleted the same afternoon**. The maths was sound: it produced
+840 total drinks, matching Sean's own figure exactly, and independently
+reproduced a wine over-order he already knew about.
+
+**It was scrapped because two of Sean's own numbers contradict each other:**
+
+| | implies |
+|---|---|
+| 840 drinks × 60% cocktails-and-spirits | **4.2** spirit drinks per guest |
+| His measured Jack & Coke + Orange Crush counts | **2.6** spirit drinks per guest |
+
+**A 60% disagreement.** The estimator ran **30–70% above what he actually
+bought** on every spirit and beer line. The note in `PROGRESS.md` ends:
+
+> *"Do not resurrect `estimate.ts` from git history and 'just adjust the rates.'
+> The rates were never the problem."*
+
+⚠️ **And "drinks per guest per hour" is precisely the constant Sean has now
+asked to put in Settings.** That is not a reason to refuse — it is the reason
+the DESIGN matters more than the maths here. **Whatever you draw has to survive
+its own numbers being wrong by half**, because they demonstrably are today.
+
+Three consequences I would put to you as constraints rather than suggestions:
+
+- **It must never write unasked.** Sean already ruled this: *"it recommends; you
+  accept."* The old model's fatal flaw was generating the invoice.
+- **The output has to be inspectable per line**, not one blob of quantities. If
+  it says 9 bottles of rye, he must be able to see *why* without re-deriving it.
+- **Running it twice must be safe and obvious.** Replace? Add? Skip what's
+  already there? This is the question that will bite hardest in use, and the
+  kits sheet (23C) already solved a version of it — *Will be added* / *Already
+  on the invoice*, `qty unchanged` on collisions.
+
+---
+
+## ⚠️ 2 · I OWE YOU A CORRECTION: the "dead" Settings block is this feature's first input
+
+**I have asked you three times whether to cut the drink-split presets**, on the
+grounds that they fed the scrapped estimator and compute nothing. **Please
+disregard that. Cutting them would have destroyed the only measured figure in
+this app.**
+
+`src/lib/data/drinkSplits.ts` is intact, and it is more capable than the example
+Sean gave. He wrote *"33% wine, 33% beer, 33% cocktails."* What exists is:
+
+- **Five slices**, not three: `cocktails · spirits · wine · beer · na`
+- **Four crowd styles** — cocktail-forward, mixed, beer-heavy, wine-heavy
+- ⚠️ **One of them is real and the other three say so.** `LIMBO_MEASURED` is
+  **45 / 15 / 7 / 31 / 2**, from the Meg Pinto wedding and Sean's stated rule.
+  The other three are flagged untuned copies, deliberately, *"so the app never
+  quietly asserts a figure nobody measured."*
+- **Bar type narrows the pie and redistributes** rather than dropping a slice —
+  beer & wine only doesn't make the cocktail drinkers go thirsty.
+- Your own §16D ruling is already in it: provenance, not severity — every preset
+  carries a line, only the words differ.
+
+**So the calculator's category-ratio input is built, tuned, and waiting.** The
+Settings sectioning round should treat this block as live and load-bearing.
+
+---
+
+## 3 · What already exists that this can stand on
+
+| Piece | State |
+|---|---|
+| Cocktail → ingredients → product link | ✅ `cocktailLinks.ts`, matched by id |
+| Product cost, per oz / per gram / per each | ✅ `costing.ts`, unit registry |
+| **Package sizes** — 12-packs, nested contents | ✅ built 9 Aug |
+| Guest count, duration, bar type, crowd style | ✅ all on Event Details |
+| Multi-select in the rail | ✅ shipped round 14 |
+| Category split by crowd and bar type | ✅ `splitFor()` |
+| Composition — ABV, acid per cocktail | ✅ shipped 15 Aug |
+
+⚠️ **One dependency is NOT built and it blocks the interesting half: prep
+expansion.** If a cocktail calls for *Lime Juice, Fresh Squeezed* — a prep
+recipe, not a product — does the invoice receive **limes** or a line saying
+*lime juice*? Sean buys limes. Nothing in the app currently walks a prep recipe
+back to its source products on an invoice. **This has to be answered before the
+calculator can quantify a single citrus drink**, and it is a modelling question
+as much as a drawing one.
+
+---
+
+## 4 · Settings — Sean asked me to propose additions
+
+He named: duration, guest count, waste/surplus buffer, drinks per guest per
+hour. Proposed additions, each with a reason from this app rather than from
+general practice:
+
+| Field | Why |
+|---|---|
+| **First hour vs later hours** | consumption is front-loaded; one flat rate over a 5-hour bar is the single biggest source of the 4.2-vs-2.6 gap |
+| ⚠️ **Round up to whole packages** | the app knows a 12-pack is 12 cans. *"9.3 cans"* is not an order; **12** is. This is where the packaging work pays off |
+| **Minimum per product** | nobody turns up with a third of a bottle of rye |
+| **Cocktails vs neat spirits, within the spirits slice** | `splitFor()` already separates them; the calculator needs a rule for what a *cocktail* selection claims |
+| **Buffer, and whether it is per line or on the total** | a 10% buffer applied per line and rounded up twice is not a 10% buffer |
+
+⚠️ **And the one I would push back on:** a per-invoice default set in Settings,
+which Sean asked for, means an invoice's numbers can change under him when he
+edits the default later. **The setting should seed a copy onto the invoice at
+creation**, the same way the org tax rate already does — *"per-event from here
+on; an invoice that crosses a county line gets its own."* Same rule, same
+reason.
+
+⚠️ **To be unambiguous, per §0: seeding the SETTINGS is not arming the
+CALCULATOR.** The parameters ride along with every new invoice so they are
+there when wanted; nothing runs, nothing is suggested, and no quantity moves
+until Sean asks it to. An invoice that never invokes the calculator should be
+indistinguishable from one made before the feature existed.
+
+---
+
+## 5 · The questions
+
+1. **Where does the calculator live?** A sheet over the rail, a mode of the
+   rail, or a step between selecting and adding? Sean's flow is *select → button
+   → confirm → lands*, which implies a confirm surface between the two.
+2. **What does the confirm show?** Per cocktail, per product, or per invoice
+   line? The kits sheet is the nearest precedent.
+3. **How are the numbers made adjustable at the point of use?** Sean ruled every
+   input adjustable *and ignorable*. Ignorable is the harder state to draw.
+4. **What does it look like when it cannot answer?** Uncosted products,
+   unlinked ingredients, a prep recipe it can't expand. **41% of the library has
+   no cost data.** This state is the common one today, not the edge case.
+5. **Second run.** See §1 — and now also §0's mode B, which makes it sharper:
+   the second run is not an edge case, it *is* mode B. Adjusting quantities that
+   are already there is the same act as running it twice.
+6. ⚠️ **How is a calculated line distinguished from a hand-typed one?** §0's
+   mode B makes this unavoidable. It may want to be visible on the row itself,
+   and it may need to survive him editing the number afterwards — at which point
+   it becomes hand-typed again.
