@@ -3209,3 +3209,94 @@ it can be read.
 ⚠️ **This does not block 27C.** The four states you drew are right regardless of
 the count, and *"no package size"* is already the one you correctly identified
 as fixable in thirty seconds.
+
+---
+
+# Round 21 request · ⚠️ §23.4's ENTRY POINT DOES NOT EXIST, and the thing in its place already does half the job
+
+**Sean, after the engine shipped with nothing attached to it:**
+
+> *"Where the hell is the estimator? Not a button? A place? WTF. Anything?
+> Where and when and how do I access it and make it work?"*
+
+**He is right and the fault is mine** — I built `calculator.ts`, proved the
+arithmetic, and shipped it with no way to reach it. But going to wire it up
+against §23.4 as written would have produced something worse, because **§23.4
+describes a surface that is not there.**
+
+## The claim, and what the source says
+
+§23.4:
+
+> *"Entry A is a button in the rail's selection bar, which shipped in §18.
+> Selecting cocktails already raises that bar; this adds one control to it and
+> no new furniture anywhere."*
+
+Read from source:
+
+| | |
+|---|---|
+| `useSelection` / `SelectionBar` | exist in **`components/library/`** only — ProductLibrary, CocktailLibrary, PrepLibrary |
+| The builder's rail (`components/builder/`) | **has neither.** Zero references |
+
+**§18's select mode shipped in the three LIBRARIES. The builder's rail never got
+it.** So "adds one control to it" is adding a control to a bar that does not
+exist on that screen — which is not one control, it is select mode in the rail,
+undrawn.
+
+## ⚠️ And the deeper problem: ticking a cocktail in the rail is not SELECTING it
+
+This is the part that would have made the feature wrong rather than just absent.
+
+**The rail has no selection. It has a MENU** — `invoice.menuCocktailIds`, which
+is persistent state on the invoice, not a transient multi-select. And ticking a
+cocktail there **already adds its linked products to the invoice**, immediately:
+
+```
+onSetMenu([...menu, c.id], `${name} on the menu`);
+if (linked.length > 0) {
+  onAddProducts(linked, `${name} — ${linked.length} products`);
+}
+```
+
+Un-ticking removes them again — behaviour Sean asked for directly on 11 Aug.
+
+**So the flow in §0 — *"select cocktails → button → their ingredients land"* —
+describes something the rail already does, minus the quantities.** By the time
+any Calculate button could be pressed, the products are on the invoice at
+quantity 1.
+
+⚠️ **Which means Entry A and Entry B are the same act.** There is no "add the
+ingredients" step to design, because adding already happened. What is missing is
+only ever *"give these lines their real numbers"* — **which is Mode B, on rows
+that are already there.**
+
+## What I am asking you to rule
+
+1. ⚠️ **Does Mode A survive at all?** My reading: it collapses into Mode B and
+   the calculator has exactly ONE job — quantifying what the menu already put on
+   the invoice. Simpler than the brief, and it removes the "replace or add"
+   question entirely. **But it is your call, because it changes 27A's framing
+   from *"Add 4 lines"* to *"Adjust 4 lines"*, and 27A is drawn.**
+
+2. **If Mode A does survive, where does its button live?** Not the selection bar
+   — it isn't there. Candidates, none drawn: a footer action in the Cocktails
+   segment of the rail; a row in the invoice's ⋮; a control on the menu itself.
+
+3. ⚠️ **How is the calculator reached when NO cocktail is on the menu?** Sean's
+   §0 ruling is *"when AND if"* — he must be able to invoke it on an invoice he
+   built by hand. A button that only appears after ticking a cocktail fails
+   that.
+
+4. **Mode B still has no invocation.** §23.6 named the invoice ⋮ and that menu
+   exists. It needs a row, and the wording matters — *"Calculate quantities"*
+   reads as an action; *"Cocktail calculator"* reads as a place.
+
+## What is already built and waiting
+
+`src/lib/calculator.ts` — complete and checked. Given a menu, event and
+parameters it returns per-line quantities, the working sentence for each row,
+the four states of §23.7, and prep recipes expanded to limes per §23.8.
+`scripts/check-calculator.mjs` proves the arithmetic by hand and is wired into
+the build. **Nothing renders it. That is the entire remaining gap on my side**,
+and I am not filling it against a spec whose entry point I have just disproved.
