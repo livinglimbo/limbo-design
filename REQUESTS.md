@@ -3136,3 +3136,76 @@ indistinguishable from one made before the feature existed.
    mode B makes this unavoidable. It may want to be visible on the row itself,
    and it may need to survive him editing the number afterwards — at which point
    it becomes hand-typed again.
+
+---
+
+## Round 20 reply · your two questions, answered from source
+
+### ⚠️ Q2 — "rate or total?" It is a RATE, and the fields already exist. Per invoice.
+
+You made Pace the editable knob and derived the total from it, and asked whether
+the app stores it the other way round. **It stores neither today — but the
+shape the old app used is still typed in `EventForm`, and it agrees with you.**
+
+`src/lib/types.ts`, on the event form every invoice carries:
+
+```
+drinkRateCH     — drink rate during cocktail hour
+drinkRateRec    — drink rate during the reception
+nonDrinkerPct   — share of the room that doesn't drink
+cocktailAlloc   — cocktail allocation
+bufferPct       — the buffer
+```
+
+**Rates, not totals. Five of them. Already per-invoice.** ⚠️ **And nothing in
+the rebuild reads a single one** — they are typed because the records carry
+them, and the estimator that consumed them was deleted on 7 Aug.
+
+Three consequences for 27A:
+
+1. **Your instinct was right and the field label is correct.** Pace is a rate;
+   the 697-drink total is derived. No change needed.
+2. ⚠️ **But the old model has TWO rates, not one rate plus a multiplier.**
+   `drinkRateCH` and `drinkRateRec` are separate figures for cocktail hour and
+   reception. 27A draws *Pace 1.2* + *Opening rush ×1.4 first hour*. **These are
+   different models**, and the difference is real: two rates let the cocktail
+   hour be slower as well as faster, and the multiplier does not.
+   **Your version is the better interface** — one number to judge and one to
+   nudge, rather than two numbers that must be reasoned about together. I would
+   keep it. But it means the two stored fields collapse into `pace` +
+   `openingRush`, which is a migration, and I want that decided rather than
+   discovered.
+3. **§27C's "store which figure this invoice used" is already solved by the
+   shape.** These live on the invoice, not in Settings, so seeding a copy at
+   creation writes into a slot that has existed all along.
+
+⚠️ **And one parameter neither Sean nor I listed: `nonDrinkerPct`.** The old app
+asked what share of the room doesn't drink. **That is a bigger lever than the
+cushion** — 15% non-drinkers is a 15% cut off every alcoholic line, and it is
+the kind of thing Sean knows about a wedding in advance. Worth a row in *How the
+room drinks*. Sean's call, raised because the field is sitting there.
+
+### Q1 — "re-measure the 41%." You are right that it is the wrong number, and I can only half-answer it.
+
+**Structurally you are correct.** They read different fields:
+
+- **Cost** needs `price` **and** `itemQty` **and** `itemUnit`.
+- **Quantity** — what the calculator needs — requires only `itemQty` +
+  `itemUnit`. A product with a package size and no price quantifies fine; it
+  just cannot be costed.
+
+⚠️ **So "no package size" is a strict subset of "no cost data", and the
+calculator's blocking set is smaller than 41% by however many products are
+priced-but-sizeless plus sizeless-but-unpriced.** `getCost()` already
+distinguishes the two — it returns `"No price set"` and `"No package quantity"`
+as separate reasons — so the split is computable, not estimable.
+
+**What I cannot do is give you the count.** I have no read access to Sean's
+Supabase; the 41% came from an audit run inside the app. I am not going to
+convert a number I cannot verify into one I invent. **Treat 41% as a ceiling
+that is known to be too high**, and I will replace it with the real figure once
+it can be read.
+
+⚠️ **This does not block 27C.** The four states you drew are right regardless of
+the count, and *"no package size"* is already the one you correctly identified
+as fixable in thirty seconds.
