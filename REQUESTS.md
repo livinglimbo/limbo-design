@@ -3300,3 +3300,130 @@ the four states of §23.7, and prep recipes expanded to limes per §23.8.
 `scripts/check-calculator.mjs` proves the arithmetic by hand and is wired into
 the build. **Nothing renders it. That is the entire remaining gap on my side**,
 and I am not filling it against a spec whose entry point I have just disproved.
+
+---
+
+# Round 22 request · ⚠️ THE CONTROL SIZING PASS — measured, and worse than it looks
+
+**Sean, and he has raised this three times now:**
+
+> *"For the love of GOD. You need to make sure EVERY field box is the same
+> height, and make the spacing make sense. That's design's job. Just fucking
+> research it or something. If you have to, this can be a pass on its own… the
+> prep recipe edit section has two boxes in the Sources section that are not
+> even. Fix this shit. And look across the app."*
+>
+> *"This should be standardized. So that when we build more, these things don't
+> keep happening. DO NOT ADD NEW BUTTONS, BOXES, ICONS, ETC. WITHOUT FIRST
+> MAKING SURE THAT THEY ARE EVENLY SPACED AND BEAUTIFUL."*
+
+**He is right, my last two fixes were patches, and I have measured it properly
+rather than apologising again.**
+
+## The measurement
+
+Every height declaration in `src/`:
+
+| | Count | |
+|---|---|---|
+| `min-h-[…px]` | **210 uses across 12 DISTINCT VALUES** | 44, 48, 61, 52, 36, 56, 40, 32, 76, 64, 96, 34, 112 |
+| `h-11` / `h-12` / `h-8` / `h-16` | 31 | fixed heights |
+| **No height at all** | uncounted | sized by `py-2` and content |
+
+⚠️ **Three different sizing strategies coexist, and 210 of the ~240 declarations
+use the one that native controls are entitled to ignore.** `min-height` is a
+request; `height` is not. Every bug Sean has found here — the date fields, the
+Unit select, and now Sources — is that distinction.
+
+## ⚠️ The row he pointed at, and my part in it
+
+`PrepEditor.tsx`, `SourceRow`, the two boxes side by side:
+
+```
+qty     <input  className="w-14 … px-2 py-2 …" />        ← NO height. ~40px.
+unit    <UnitSelect className="w-24 … px-2 py-2 …" />    ← goes through
+                                                            SelectField → h-12. 48px.
+```
+
+**They are uneven because one has a height and the other does not — and I made
+it worse.** Before Round 18b both were padding-sized and therefore accidentally
+equal. Giving `SelectField` a real `h-12` fixed the *Unit* box and broke the
+*pair*. **A local fix in a system with no rule is how this keeps happening**,
+which is exactly Sean's point.
+
+## What I am asking for — and I think he is right that it is a pass of its own
+
+**Not a list of corrections. A scale, with a rule for choosing between its
+values, so the next control is right before it is drawn.**
+
+1. ⚠️ **How many control heights should exist?** My reading is **three** —
+   a primary/field height, a compact one for dense rows, and a tap-target
+   minimum — but that is a guess and the number is yours. Twelve is the disease.
+2. **When is `height` mandatory and when is `min-height` legitimate?** My
+   proposed rule: **anything a browser draws natively (`select`, `date`, `time`,
+   `file`) must be `height`**, everything else may grow. Confirm or replace.
+3. ⚠️ **The spacing scale between them.** He said *"make the spacing make
+   sense"* — gaps and row padding are as inconsistent as the heights and I have
+   not measured them because I would only be guessing at what to count.
+4. **Where does the rule live so it cannot drift?** I can enforce a token list
+   in `check-tokens.mjs` the way the colour ramp is enforced — an arbitrary
+   `min-h-[37px]` would then fail the build. **Tell me the list and I will make
+   it unfailable.**
+
+---
+
+# Round 22, part 2 · The library cards — four smaller things
+
+**These are ordinary and I would build them without a round, except Sean asked
+for them to come to you and two are genuinely design questions.**
+
+### a · The footer's Edit is in different places, and should be an icon
+
+Standardised in Round 18a via `SheetFooter`, **but the read CARDS were not part
+of that pass** — only the editors were. Sean wants **a pen icon rather than the
+word "Edit"**, in one position everywhere. ⚠️ There is no pen in `icons.tsx`
+today; it needs drawing, and it is the first icon-only control in a card footer,
+so it needs a size ruling too.
+
+### b · "Composition" crowds the card → move it into "Other fields", renamed "Advanced fields"
+
+The ABV/Brix/acid block shipped 15 Aug at the top level of the product and prep
+editors. Sean: *"It's not something I want crowding space."* Straightforward —
+but the rename touches an existing disclosure whose label you chose, so it is
+yours to approve.
+
+### c · ⚠️ The edit header should be the item's NAME, live as he types
+
+Today it reads "Product" / "Cocktail" / "Prep Recipe" — **which is §17.1, your
+ruling**: *"the header names the KIND, the field owns the name."* That was
+argued from a real incident: Sean tapped the sheet's title bar trying to rename
+a recipe, because the bar read "New prep recipe" while the actual field below
+was a borderless placeholder.
+
+**He is now asking for the opposite**, and he is the one who hit the original
+problem. **Your call, and I am not building it until you rule** — because the
+reason §17.1 exists has not gone away, and if the answer is "the name, live"
+then the *field* has to stop looking like a heading.
+
+---
+
+# Round 22, part 3 · Two costing faults, reported not fixed
+
+**⚠️ Both are mine to fix and neither needs you — recorded so the picture is
+complete.**
+
+1. **Silent ingredients cannot be set any more.** `PrepEditor` still *renders*
+   `ing.silent` as a "Not ordered" chip, but **nothing writes it** — the only
+   `silent: true` left in the app is in `Builder.tsx`. So a recipe with ice or
+   water in it reads *"partial cost"* forever with no way to resolve it, which
+   is Sean's screenshot exactly. He wants the toggle back in **both** prep and
+   cocktail editors.
+
+2. ⚠️ **`$0.00` reads as "no price", and the data cannot tell it from
+   "unpriced".** `packageBaseCost()` refuses on `price <= 0`. Sean: *"if I have
+   $0.00 in the cost of a prep ingredient, it should still take that into
+   account and produce a number."* He is right that zero is an answer — **but
+   `price` is a plain number, so a comped item and an unfilled field are the
+   same value.** `costNA` exists as the deliberate "cannot be costed" flag, so
+   the honest fix is: **zero is a price; `costNA` is the way to say "don't cost
+   this".** I will build that unless you object to the meaning change.
