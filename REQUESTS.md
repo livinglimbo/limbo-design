@@ -10,6 +10,83 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## §26 · Packaging the card — BUILT 25 Aug, with three corrections
+
+**All of §26 is built and green under 25 check scripts.** Three things
+Co-Work owes you, because in each case the handoff and the source
+disagreed and the source won.
+
+### ⚠️ 1 · `CloseIcon` was NOT in `icons.tsx`
+
+§26.7 says *"Nothing to draw. `CloseIcon` is in `icons.tsx` already —
+`GlobalSearch.tsx:99` uses it."*
+
+`GlobalSearch.tsx:38` **defined** it — privately, unexported. `icons.tsx`
+had no close glyph at all, and `Sheet.tsx:161` hand-rolled a **second,
+identical** `<svg>`.
+
+**So there were TWO copies of one glyph, in two files, neither in the
+set** — the same drift as the two footers and the two label systems.
+Your conclusion holds exactly; the work was a *move and dedupe* rather
+than "use the existing one". `CloseIcon` now lives in `icons.tsx` and
+both callers import it.
+
+### ⚠️ 2 · The prose and the drawing disagreed about the box
+
+§26.2 says the group *"drops its radius and its side borders"* and
+**"It is a BAND now, not a box, and Sean should be told that rather than
+reassured."** 30A's caption says **"The box survives — Sean's choice
+stands"** and *"It still has its border… it still reads as a box."*
+
+Both arrive at 21px by different geometry. **Built to §26.2's table** —
+full-bleed, `border-y` only, no radius, 20px internal — because the
+rendered specimen in 30A shows exactly that, and because a full-bleed
+box genuinely cannot keep side borders without doubling on the card's
+own edge.
+
+**Sean was shown the trade as the either/or you both asked for, and
+chose the alignment**, in those words. Not decided for him twice.
+
+### ⚠️ 3 · It was five hand-rolled label sites, not three
+
+§26.1 lists `RecipeEditor`'s `SectionLabel`, `ProductEditor:283` and
+`CompositionFields:87`. **`PrepEditor` had two more of its own** —
+`Sources` and a second `Instructions`, both inline `<h3>`s at `px-4`
+with `tracking-[0.05em]`.
+
+So *"PrepEditor composes CardGroup"* was **half true**: it composed it
+for three sections and hand-rolled two. ⚠️ **A partial migration reads
+as a finished one from the import list**, which is worth knowing for
+the next one. All five now compose `CardGroup`.
+
+### Also built
+
+- **Seven parts from ten.** `CardProse`+`CardRich`→`CardText`
+  (detects its own input), `CardFacts`→`CardGroup`, `editorHeading.tsx`
+  deleted in favour of `CardHeading` at 26px.
+- **No part carries a horizontal value.** Enforced by
+  `check-packaging.mjs`, which is the suite's only check that tests an
+  *absence* — including that nobody escapes with `-mx-5`, which is what
+  Co-Work reached for first.
+- **The four footers**, primary-stretches. `filled` is a **separate
+  flag** from `primary`: read-only's Edit stretches but stays outlined,
+  per your table and 30A. Edit changes what you're looking at; Save
+  changes what's stored, and only commitments are filled.
+- **Two bugs Sean found**: the product read card had no bin at all, and
+  its footer rendered inside the scrolling body while the other three
+  were pinned.
+
+### ⏭ Out of scope, and worth a future round
+
+**40 hand-rolled uppercase-gold labels remain outside the card layer** —
+`CalculatorSheet`, `RowPanel`, `StageMenu`, `EventDetailsSheet`,
+`CocktailPicker`, `StartFromSheet`, `LeftoversSheet`, `GateDialog`,
+`UndoStack`, plus Settings and the debug pages. §26 fixed the card
+layer only. **The builder has the same disease and has not been
+diagnosed.**
+
+---
+
 ## 🎯 Needs an answer — scan this first
 
 | # | Needs | Size |
