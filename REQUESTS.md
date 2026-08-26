@@ -10,6 +10,81 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## §27 · The box, the Add, the row — BUILT 26 Aug
+
+Sean ruled on both escalations: **aligned everywhere** (not boxed, not
+mixed), and **"Not ordered" moves to the panel**. Everything in §27 is
+built and green under 28 checks. Three things back:
+
+### ⚠️ 1 · BLOCKING — the library has no press-and-hold panel
+
+§27.5 says the *Not ordered* toggle *"goes back to the press-and-hold
+panel — wire the panel."*
+
+**There is no panel to wire.** `RowPanel` is rendered by exactly two
+callers, `SourceRail` and `InvoiceSheet` — both **builder** surfaces —
+and there is no long-press handler anywhere in
+`src/components/library/`. §10.3 was drawn for INVOICE rows.
+
+`RowPanel` is also not adaptable as-is: its props are
+`onAddToInvoice`, `onSelectLines`, `qty`, `removeValue`, `procurement`,
+`procStatus`. It has no concept of an ingredient or of `silent`.
+
+**Built as specified anyway** — the toggle is off the row, the chip
+still displays, the handle has its 44px. **The consequence is a real
+regression and it is recorded rather than hidden:** `silent` is
+settable in the prep editor (its control predates this) and **not
+settable in the cocktail library**, which Sean asked for on 24 Aug.
+`check-row.mjs` asserts the gap so it stays visible in a run.
+
+> **What's needed: a press-and-hold panel for library ingredient rows.**
+> Not `RowPanel` with props bolted on. Sean has been told.
+
+### ⚠️ 2 · §27.3's token loses to §20.1
+
+§27.3 specifies the Add slot as *"dashed 1px `--border-strong`"*.
+
+**`--border-strong` is 1.84:1 in light and 1.50:1 in dark**, and §20.1
+created `--control-line` (3.77:1) precisely because *"WCAG 1.4.11 asks
+3:1 of a control boundary."* That round also shipped a build check
+banning `border-line-strong` on a dashed control edge — **§27.3 would
+have re-introduced exactly the pattern §20.1 removed**, and the check
+caught it.
+
+**Built with `--control-line`.** §20.1's own wording supports this:
+`--border-strong` is right for a *container* edge — a dialog, a menu,
+the "Not ordered" chip. An Add button is not a container. **Shape from
+§27.3, token from §20.1.** Tell me if that is wrong.
+
+### 3 · "Don't build a second one" needed the first one moved
+
+`ReorderDemo`'s mechanism lived inside the touch lab. Lifting it into
+`useReorder` and leaving the original would have produced the two
+copies the instruction forbids — **so the lab is now a caller**, and
+what it demonstrates is the shipping code. Asserted both ways.
+
+### Also built
+
+- **Add is a `CardGroup` prop** — `onAdd` / `addLabel` / `addHeight`,
+  last child inside the group's own inset, dashed, taking the height of
+  the row it creates. Both hand-rolled versions deleted.
+- **The row:** 96px gutter gone, `Link…` gone, the duplicate
+  `Link broken` chip gone — **the red sentence survives**, so §11.1's
+  three states are intact.
+- **Your words-versus-glyphs sharpening is adopted** — *"a word is owed
+  where the tap itself commits"*, and the bin is the rule working
+  rather than an exception. Written into `SheetFooter`.
+
+### ⚠️ And a correction I owe you on my own numbers, again
+
+Your §27.1 was right: I reported 292px of fixed tracks and four gaps.
+**It was 336px and five** — I omitted the *Not ordered* button I had
+added two days earlier, in the same file I was measuring. **Second
+round running that my measurement was the thing that needed
+correcting.** I now read the markup rather than the last table I wrote.
+
+---
+
 ## §26 · Packaging the card — BUILT 25 Aug, with three corrections
 
 **All of §26 is built and green under 25 check scripts.** Three things
