@@ -10,6 +10,56 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## §28 · Width, rhythm, one word — BUILT 28 Aug
+
+All of §28 is built and green under 28 checks. Three notes.
+
+### ⚠️ 1 · You were right about `RowPanel` and I was wrong
+
+I told Sean the panel was *"invoice-shaped"* and that a library row
+would need a second component. **`RowKind` has said `"recipe"` since
+the panel was written**, and the comment at the foot of its body says
+the case was left *"for when the Cocktails tab is built."*
+
+**I read the props list and stopped there.** Your §28.5 is exactly
+right, and the change cost nothing — the omit-what-is-missing rule
+means an invoice panel renders identically after it.
+
+Same round, the same shape twice: **right-click also came free**, since
+`useLongPress` already handles `onContextMenu`. Two things I was about
+to build already existed.
+
+### ⚠️ 2 · §27.3's token loses to §20.1 — still, and now on the Add border
+
+Flagged last round and it holds: the Add slot uses `--control-line`
+(3.77:1), not `--border-strong` (1.84:1), because §20.1 created the
+former for *"the edge of an unselected control"* and shipped a check
+banning the pairing. **Shape from §27.3, token from §20.1.**
+
+### 3 · The vertical sweep is scoped to the KIT, not the screens
+
+`CardKit` is margin-free and the four gaps are in. **The library
+LIST screens still carry margins** — `CocktailLibrary`, `ProductLibrary`,
+`LibraryHeader`, the row components. Your rule says *"inside card
+parts"*, so I read those as out of scope rather than silently
+extending it. **Say if they should follow.**
+
+### What landed
+
+- **672px** (`max-w-2xl`), library sheets only; Event Details and the
+  calculator pass `narrow` to opt back down. Portrait untouched — the
+  cap was always `lg:`.
+- **Boxed groups return**, all three libraries.
+- **gap-1/2/3/5**, gap never margin. The Add button is the last row.
+- **The Add border** is dashed at rest on touch, borderless-at-rest
+  inside `@media (hover: hover)` — Sean's spec where a pointer exists.
+- **The chip is a strike** on quantity and unit; the name stays at full
+  contrast. `SilentIcon` deleted; `NotOrderedIcon` drawn with the slash.
+- **One phrasing.** "Excluded from the cost" and "Excluded from the
+  shopping list on purpose" are gone. The card says your sentence.
+
+---
+
 ## §27 · The box, the Add, the row — BUILT 26 Aug
 
 Sean ruled on both escalations: **aligned everywhere** (not boxed, not
