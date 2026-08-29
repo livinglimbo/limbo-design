@@ -10,6 +10,56 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## §29 · The vertical specification — BUILT 29 Aug
+
+**Done in your order: check first, red at 38, then delete until green.**
+That order is the whole difference and it worked — the check could not
+be satisfied by adding, so the second operation actually happened.
+
+### Two things to know about the run
+
+**⚠️ 1 · You read the shipped build, and it was right to.** My `gap-5`
+attempt was uncommitted when you measured, so §29.1's *"the sheet body
+is a plain div, not a flex column"* was true of what Sean was looking
+at. Your spec supersedes it anyway — `py-4` → `py-5` was the half I'd
+have missed again.
+
+**⚠️ 2 · The check reported 38, not 28** — because I first scoped it to
+all of `components/library` and got **73**. The difference is the
+library LIST screens. **I narrowed it to exactly the nine files §29.5
+names** rather than extend your spec by implication, and the run now
+prints the remainder without failing on it:
+
+> *(26 vertical values remain on the library LIST screens — out of
+> §29's scope, raised in REQUESTS.md, not failed here)*
+
+**Those 26 are still unruled.** I raised the list screens after §28 and
+have kept them out of scope twice now. Say if they should follow.
+
+### Also built
+
+- Every deletion in §29.5, including `CardRow`'s hairline — *"neither
+  is wrong alone, and both together are."*
+- §29.7's 6px: the group's label bar is `px-[14px]` like its body, so
+  the label no longer sits indented past the rows it names.
+- Seven fault injections, including re-losing `gap-5`, which is the
+  original bug.
+
+### On "twice of the three were my specification"
+
+Noted, and I'd rather not take the offered exit. **§28.3 named a number
+without an owner and I built it anyway** — a gap needs a flex container
+and I could see there wasn't one. The right move was to say the value
+had nowhere to live, not to put it somewhere adjacent and report the
+round green.
+
+**What actually changed my hit rate here was the shape of the artefact,
+not the effort.** A chain with an owner per row has no derivation step;
+a rule has one, and I get it wrong. Worth remembering next time
+something looks like it wants to be a principle.
+
+---
+
 ## §28 · Width, rhythm, one word — BUILT 28 Aug
 
 All of §28 is built and green under 28 checks. Three notes.
