@@ -3724,3 +3724,41 @@ scrolls.
 knowing that this failure mode exists wherever a spec says "gap" — naming a
 flex container to own a gap silently makes its children compressible, and
 that is invisible in every diff and every value-based check.
+
+## §29.8 — "Advanced fields" was two controls (29 Aug, packaged)
+
+Sean: *"Now advanced fields is fucked up."*
+
+There were **two hand-rolled disclosure buttons** for one control:
+
+| | ProductEditor | PrepEditor |
+|---|---|---|
+| type | `text-xs font-bold` | `text-sm font-semibold` |
+| case | UPPERCASE, tracked | Sentence case |
+| colour | `text-text-muted` | `text-text-secondary` |
+| inset | inherited `px-5` (20px) | `px-4` — **16px** |
+
+The 16px is what read as broken: a naked control sitting one notch out
+of line between two boxes that sit at 20.
+
+**Same fault as the Add buttons a week earlier** — I packaged `Add` into
+a `CardGroup` slot and never checked whether the control had siblings.
+Now packaged as `CardDisclosure`, a ninth kit part, asserted by absence
+across both editors so neither can hand-roll one again.
+
+**I adopted the product treatment rather than authoring a third.** Two
+questions are Design's, not mine, and are deliberately not guessed at:
+
+1. **Should the disclosure be boxed?** It is currently the only element
+   in the card that is neither a top field nor a `CardGroup`. It sits
+   naked between two boxes, which is what drew Sean's eye.
+2. **Should it instead BE the Composition group's header?** Expanding it
+   reveals a `CardGroup label="Composition"` — so the trigger announces a
+   box that then appears below it. Folding the disclosure into that
+   group's own label bar would remove the orphan element entirely, but
+   that is a new pattern and needs a ruling.
+
+Measured after the change: trigger at 20px inset, 44px tall, and the
+Composition group it reveals is now a direct sibling at 20px (it was
+previously wrapped in an empty `<div className="">` left behind by the
+§29 migration, which broke its `gap-5` relationship to its neighbours).
