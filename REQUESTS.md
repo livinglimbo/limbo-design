@@ -3679,3 +3679,48 @@ complete.**
    same value.** `costNA` exists as the deliberate "cannot be costed" flag, so
    the honest fix is: **zero is a price; `costNA` is the way to say "don't cost
    this".** I will build that unless you object to the meaning change.
+
+---
+
+## §29.7 — the spacing bug was a SHRINK, not a value (29 Aug, fixed)
+
+Sean, four rounds running: *"Padding is still fucked."* He was right every
+time and I was looking in the wrong place every time.
+
+**Measured in Chrome on the Easy Street card, before the fix:**
+
+| group | rendered | content needs |
+|---|---|---|
+| SERVICE | 75px | 148px |
+| INGREDIENTS | 140px | 280px |
+| INSTRUCTIONS | 48px | 93px |
+| NOTES | 48px | 93px |
+
+Every group was drawn at **half its height**, and because `CardGroup` is
+`overflow-hidden` the lower half was clipped rather than spilling. "Glass"
+and the fourth ingredient were in the DOM, laid out, and invisible — which
+is why the boxes read as having dead space at the bottom.
+
+**Cause, and it was mine.** §29.1 correctly made the sheet body a
+`flex flex-col` so `gap-5` finally had an owner — the missing owner Design
+diagnosed. But a flex item defaults to `flex-shrink: 1`, so in the same
+stroke every group became compressible, and an overflowing container
+shrinks its children instead of scrolling. The fix that completed the spec
+is what broke the render.
+
+**Why three rounds of checks passed over it.** The padding was correct the
+whole time: 12/12 inside, 20 between, exactly as specified. `check-spacing`
+reads the values *going in*; it cannot see the box being compressed after
+they are applied. An absence check was the right idea and still could not
+catch this class — no spacing value can express a shrink.
+
+**Fix:** `.sheet-column > * { flex-shrink: 0 }`, owned by the container
+that declared the column, covering every child rather than just groups.
+Asserted in `check-spacing.mjs` (both halves fault-injected) and verified
+in the browser — all four groups now render at full height and the body
+scrolls.
+
+**For Design:** §29's numbers were never wrong and need no revision. Worth
+knowing that this failure mode exists wherever a spec says "gap" — naming a
+flex container to own a gap silently makes its children compressible, and
+that is invisible in every diff and every value-based check.
