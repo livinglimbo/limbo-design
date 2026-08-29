@@ -3762,3 +3762,60 @@ Measured after the change: trigger at 20px inset, 44px tall, and the
 Composition group it reveals is now a direct sibling at 20px (it was
 previously wrapped in an empty `<div className="">` left behind by the
 §29 migration, which broke its `gap-5` relationship to its neighbours).
+
+## §30.2 — "Each each holds": the bad string survived the fix
+
+**Built as drawn, verified in Chrome, and the nonsense is still on screen.**
+
+34B's second label bar is specified as `Each {outer.label} holds`, with the
+caution to keep the `countable` guard because *"it is the guard, not the
+string, that stopped this being nonsense for a 750 ml bottle."*
+
+⚠️ **The guard does not cover this case, because `each` IS a count unit.**
+It passes `countable` and renders:
+
+> **EACH EACH HOLDS**
+
+Measured on Sean's live library, 29 Aug — the same product he screenshotted:
+
+| unit | products | reads as |
+|---|---|---|
+| ml | 129 | *(no second group — not countable)* |
+| **each** | **30** | **"Each each holds"** |
+| /pk | 23 | "Each /pk holds" |
+| ct | 23 | "Each ct holds" |
+
+**30 of 301 products, and Sean's original screenshot was one of them.** 34B
+draws this product's bar as *"EACH CAN HOLDS"* — the drawing assumes
+`outer.label` is `can`, but the record's `itemUnit` is `each`, packaging
+`Pack`. **The drawing and the data disagree**, which is why the ruling reads
+correctly on paper and wrong on screen.
+
+**So the diagnosis was right and the remedy inherited the defect.** Promoting
+the sentence to a label bar removed the *hairline-and-prose* problem exactly
+as ruled; it did not remove the interpolation, it relocated it — from 14px
+muted body text into a 13px uppercase gold header, which is more prominent
+than where it started.
+
+**I have NOT invented a replacement string.** Candidates, none chosen:
+
+- Use `packaging` when `outer.label` is `each` — Sean's data has *Box*,
+  *Rack*, *Block*, *Pack*, which read correctly: *"Each box holds"*. It is
+  populated on all 30.
+- Drop the possessive framing when the unit is `each`: **"Each one holds"**.
+- Suppress the second group when `outer.label === "each"` and the size is
+  unset — 4 of the 30 have no `itemSize` at all.
+
+**Ruling needed on the string only.** The two-group structure, the question
+labels, the ranked summaries and the `countable` guard are all built,
+verified on screen, and asserted in `check-disclosure.mjs`.
+
+### Everything else in §30 measured correctly
+
+- Disclosure box is `CardGroup`'s, character for character — asserted against
+  CardGroup rather than a literal, so they cannot drift.
+- Closed bar `rgba(0,0,0,0)`; open bar takes `--surface-alt` and its rule.
+- Cocktail bar: last band, inset 20, 46px, **no chevron and no button** —
+  inert as ruled, reading *"Strength is calculated from the ingredients."*
+- Terminal position holds in all three: `Name → Ingredients → Instructions →
+  Notes → Advanced fields`. Asserted by absence.
