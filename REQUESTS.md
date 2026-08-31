@@ -3819,3 +3819,38 @@ verified on screen, and asserted in `check-disclosure.mjs`.
   inert as ruled, reading *"Strength is calculated from the ingredients."*
 - Terminal position holds in all three: `Name → Ingredients → Instructions →
   Notes → Advanced fields`. Asserted by absence.
+
+## §32.1 — InvoiceSheet is 15px on purpose, so it is not the part
+
+§32.1's table listed `InvoiceSheet` as *"a bare label that must truncate in
+a flex row"* and gave it the `truncate` boolean. **Built, and it shrank the
+heading from 15px to 13.**
+
+`SectionLabel` is `text-2xs` (13). That heading is `text-xs` (15), raised
+deliberately — `check-invoice-edits` records why, in a comment predating
+this round: *"Slightly larger, as asked — and the subtotal came up to match,
+since it was the quietest thing in its own row."*
+
+**So the invoice's category heading is not a section label.** It is a
+category name at a size Sean asked for, whose subtotal was then raised to
+match it. Making it the part would silently overrule that, and take the
+subtotal's rank with it.
+
+⚠️ **The check caught it** — an assertion naming the size stopped a refactor
+from reversing a decision. Reverted; it keeps its own `<h3>`.
+
+**Ruling needed:** does the part gain a size, does that heading stay
+bespoke, or was the 15px raise superseded by the scale work in §31.1?
+
+### And two sites still to do from §32.1
+
+`CalculatorSheet` and `EventDetailsSheet` — *"their class lists ARE
+CardGroup's header, typed out"*. Both hold a local wrapper component used at
+5 and 6 call sites respectively, and converting them means wrapping the
+content that follows each into the group. **That is a restructure of two
+sheets rather than a label migration**, so it has not been done in the same
+pass as the labels — deliberately, after §31.2's over-reach.
+
+Everything else in §32.1 is built: the structural predicate refused all 35
+containers, the five keep their box with the part inside, and
+`CocktailPicker`'s icons are siblings.
