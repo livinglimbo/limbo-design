@@ -3854,3 +3854,60 @@ pass as the labels — deliberately, after §31.2's over-reach.
 Everything else in §32.1 is built: the structural predicate refused all 35
 containers, the five keep their box with the part inside, and
 `CocktailPicker`'s icons are siblings.
+
+# Round 23 request · Trash — two faults Sean found while using it, neither fixed here
+
+**Flagged, not fixed.** Sean, on both: *"I don't want you to take this on
+myself, but flag this for Design to address."* An invoice trash shipped this
+session (§33.1, below) built to match the three that already existed —
+faithfully, which is exactly how it inherited both faults rather than
+introducing new ones. **Four sites now share the same two problems**, so this
+is a pattern to rule on, not a one-off.
+
+### a · The trash sits at the bottom of the WHOLE list
+
+> *"It makes no sense to have to scroll to the bottom of the entire product
+> list (or any list anywhere for that matter). I don't want you to take this
+> on yourself, but flag this for Design to address as it is a critical design
+> fix."*
+
+`TrashRow` — one component, four call sites — renders as the last row after
+every visible item:
+
+| Site | File | What's above the trash row |
+|---|---|---|
+| Products | `ProductLibrary.tsx` | up to 314 products |
+| Cocktails | `CocktailLibrary.tsx` | the full cocktail list |
+| Prep | `PrepLibrary.tsx` | the full prep list |
+| Invoices | `HistoryList.tsx` | every invoice in History |
+
+Its own header comment (`TrashRow.tsx`) explains why it was put there —
+*"a panel above the list puts deleted recipes between Sean and every recipe
+he has, every day, in exchange for a thing he'll open twice a year"* — which
+is a real cost, correctly avoided. **But the remedy became "scroll past
+everything," and on a 314-row product list that's not a light footer, it's a
+distance.** The finding-not-fixing line: something can be both *rare to open*
+and *reachable in under a screen's worth of scrolling*, and the current
+placement only solved for the first.
+
+### b · Opening the trash shows names, not the read-only card
+
+> *"I noticed that once I open the trash, I cannot view any of the card
+> details of trashed items. They are just a list of item names. I need the
+> ability to view the proper read only card."*
+
+Every trash list — all four sites, identical shape — renders `trash.map()`
+into a `<li>` holding one truncated name and a Restore button. None of them
+open `ProductCard`, `RecipeCard`, or `InvoiceCard` on tap. Deciding whether
+to restore something means recognising it from its name alone — for a
+product library with 83 distinct unit strings and duplicate-looking names
+(`"7 up"` vs `"7up"`, seen in Sean's own library), that's often not enough
+to go on.
+
+### Not proposing a fix
+
+Both are the same shape everywhere, which cuts two ways for you: whatever you
+rule fixes four sites at once through `TrashRow` and its four `trash.map()`
+blocks, but it also means whatever ships next in this family (this invoice
+trash is the newest) inherits the current shape until you rule. Flagging
+before a fifth site copies it again.
