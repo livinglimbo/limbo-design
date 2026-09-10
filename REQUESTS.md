@@ -3810,6 +3810,21 @@ than where it started.
 labels, the ranked summaries and the `countable` guard are all built,
 verified on screen, and asserted in `check-disclosure.mjs`.
 
+> ### ✅ ANSWERED AND SHIPPED — do not re-rule this
+>
+> **Candidate 2 was chosen: the group is labelled `Each one holds`.** It
+> shipped in §31 (`a7e17db`, whose commit subject names it) and is live in
+> `ProductEditor.tsx`. No interpolation survives anywhere — the label is a
+> fixed string, which is what made the bug impossible rather than merely
+> unlikely.
+>
+> ⚠️ **This paragraph asked for a ruling for weeks after it had one.**
+> Found 10 Sep while checking what was genuinely open before sending Design
+> a round. Marked rather than deleted: the ask was real when written, and
+> the stale-request failure is the thing worth remembering — it is the same
+> shape as `RESEARCH.md`'s yield finding, which read as an open gap for six
+> weeks after it was built.
+
 ### Everything else in §30 measured correctly
 
 - Disclosure box is `CardGroup`'s, character for character — asserted against
