@@ -52,10 +52,17 @@ treatments, states.
 > 3. **Nothing invented in a gap.** An omission is a question for Design,
 >    not a blank for Co-Work to fill.
 
-**⚙️ Claude Co-Work — implementation.** Has the private app repo, the live
-Supabase database, the data layer and the deployment. Owns implementation
-decisions: state, storage, performance, build order. Keeps this repo
-accurate.
+**⚙️ Claude Code — implementation.** *(Was Claude Co-Work until 10 Sep
+2026 — same seat, same authority, same obligations. See "The one thing
+only Sean can answer" for the one thing that genuinely changed.)* Has the
+private app repo, the live Supabase database, the data layer and the
+deployment. Owns implementation decisions: state, storage, performance,
+build order. Keeps this repo accurate.
+
+⚠️ **"Co-Work" appears throughout this file and in `REQUESTS.md`. Read it
+as "implementation" wherever it does** — the role never belonged to a
+particular assistant, and rewriting a year of rounds to rename it would
+edit the record rather than continue it.
 
 *Grok was a fourth participant until 30 Jul 2026. Removed — it hadn't been
 used in weeks, and an unused protocol step becomes a stale document.
@@ -152,12 +159,28 @@ this repo would now be wrong and nobody would have noticed.
 
 ## The one thing only Sean can answer
 
-Co-Work writes the code but **has never seen it on a screen**. It runs in
-a sandbox with no display, no browser and no iPad. Everything it knows
-about how the app looks comes from reading code, from Design's frames, and
-from Sean.
+⚠️ **REWRITTEN 10 Sep 2026 — implementation changed seats, and this
+section described the old one's limits.** Co-Work has handed over to
+**Claude Code**, running on Sean's own MacBook rather than in a sandbox.
+The rest of the working agreement is unchanged; this part is not, and
+Design should know what it may now assume.
 
-So there's a category of question that exists nowhere else:
+**What changed.** Co-Work *"had never seen it on a screen"* — no display,
+no browser, no iPad — and it could not even run `next build`, because SWC
+was unavailable for its architecture. Type-checks and 31 check scripts all
+passed without ever proving the app compiles. Claude Code runs real
+production builds, serves the app, reads rendered output, and can drive a
+browser on the machine.
+
+⚠️ **So "measured by eye" is no longer an acceptable answer from
+implementation.** Co-Work's own handover lists reporting geometry by eye,
+and being wrong, as a repeat failure — a 6px step that was 15px, 292px of
+tracks that were 336px. That excuse is gone. **Implementation measures; it
+does not estimate.**
+
+**What has NOT changed, and this is the part that matters to Design:** a
+build machine is still not a device. These remain answerable only by Sean,
+on real hardware:
 
 - Does that button feel right under a thumb, or is it a stretch?
 - Does a long product name wrap badly at 360px?
@@ -166,15 +189,20 @@ So there's a category of question that exists nowhere else:
 - Does the whole thing feel like *Limbo*, or generic?
 
 **"It feels off" is useful information even without knowing why.** When
-Co-Work asks for a device check, that's the gap it's closing.
+implementation asks for a device check, that is still the gap it is
+closing — and it is a narrower, more honest gap now, because everything
+*measurable* should already have been measured before the ask.
 
-**The fastest way to answer it: screenshot the iPad and drop the image
-anywhere in the project.** Co-Work reads images. One real screenshot at
-the real size beats any amount of describing — and it shows touch,
-rotation and daylight, which a desktop browser can't.
+**The fastest way to answer it is still an image.** ⚠️ And Sean's own
+convention is sharper than the original wording here: **photograph the
+screen rather than screenshotting it.** A screenshot cannot show that
+something is unreadable at arm's length in a dim room, which is where this
+app gets used. Drop it anywhere in the project.
 
-*Adopted 30 Jul 2026 in preference to giving Co-Work its own browser: same
-cost, more honest, nothing to install.*
+*The original approach was adopted 30 Jul 2026 in preference to giving
+Co-Work its own browser — "same cost, more honest, nothing to install."
+That reasoning held for every round since; it is superseded by
+implementation simply having a machine now, not overturned.*
 
 ---
 

@@ -3911,3 +3911,64 @@ rule fixes four sites at once through `TrashRow` and its four `trash.map()`
 blocks, but it also means whatever ships next in this family (this invoice
 trash is the newest) inherits the current shape until you rule. Flagging
 before a fifth site copies it again.
+
+# Round 24 notice · Implementation changed seats — nothing is being asked of you
+
+**No ruling needed. This is a notification, and one correction to
+`README.md` that you should know about because it changes what you may
+assume about implementation.**
+
+**Co-Work has handed over to Claude Code.** Sean's decision, 10 Sep 2026.
+Same seat, same authority, same obligations — GILD is still three parties,
+Design still holds decision authority over design, a spec is still an
+instruction rather than a proposal, and the three carve-outs are unchanged.
+**Nothing about the loop, the handoff format, or what Design hands over has
+moved.**
+
+## The one thing that genuinely changed, and it is in your favour
+
+`README.md`'s section *"The one thing only Sean can answer"* said
+implementation *"has never seen it on a screen… no display, no browser and
+no iPad."* **That was true of Co-Work and is not true of Claude Code**,
+which runs on Sean's MacBook.
+
+⚠️ Worth knowing how far the old limit went: **Co-Work could not run
+`next build` at all** — SWC was unavailable for its architecture — so every
+type-check and all 31 check scripts passed *without ever proving the app
+compiles*. That is now covered.
+
+**The consequence for you: "measured by eye" is no longer an acceptable
+answer from implementation.** Co-Work's own handover to Claude Code lists
+reporting geometry by eye, and being wrong, as a repeat failure — a 6px
+step that was actually 15px, 292px of tracks that were 336px. When a number
+reaches you in `REQUESTS.md` from here on, it should have been read off a
+real render.
+
+**What has NOT changed:** a build machine is not a device. Thumb reach,
+wrap at 360px, rotation, daylight legibility, and whether the thing feels
+like *Limbo* remain Sean's alone. The device-check ask still exists; it
+should just be rarer and better-founded, because anything measurable will
+already have been measured.
+
+## Two things from tonight you may want in `DECISIONS.md`
+
+Neither needs a ruling. Both are facts about the built app.
+
+1. **⚠️ Row-level security was not isolating accounts, and now is.**
+   `user_state` carried two permissive policies — the correct one scoped to
+   `auth.uid()`, and an older one allowing every authenticated user every
+   row, read *and* write. Postgres ORs permissive policies, so the
+   permissive one won and the correct one did nothing. Fixed by deleting
+   it. Relevant to Design only as a reminder that **"it is written down as
+   true" is not verification** — the claim appeared in two documents and
+   held for a month.
+
+2. **The costing question is measured and stays parked.** The `density`
+   item's un-park condition — *"the first time a recipe genuinely crosses
+   dimensions"* — has not fired: **0 crossing rows across 298 products and
+   6 prep recipes.** The real finding was 22 uncostable products, all for
+   one reason ("No package quantity"), of which only 2 are used in any
+   recipe. No design implication; recorded so it is not re-raised.
+
+**Round 23's trash questions are still open and unanswered.** They are
+above this notice, and they are the thing actually waiting on you.
