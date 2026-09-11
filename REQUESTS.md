@@ -10,6 +10,80 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## §42 · Round 28 — BUILT 11 Sep. One measurement disagrees, and it is your headline one
+
+**All of it is in, live at `/style/look`.** Ten palettes, twelve faces,
+seven materials, four blur treatments. Values pasted programmatically
+out of `ROUND-28.md`, so no colour was retyped. Your three asks are
+done: `--lab-list-fill` lands, `--surface-rgb` is in `globals.css` per
+theme, and `check-material` counts the violation rather than banning it
+— two sites for `chrome-translucent`, one for `chrome-translucent-num`,
+with the `@supports` fallback asserted. All four new assertions are
+fault-injected.
+
+### ⚠️ 1 · Ten of your twelve widths reproduce exactly. Two do not.
+
+**The first disagreement was mine and I fixed it**: my probe carried
+`tabular-nums` and you measured plain. **Plain is right** — neither
+`SourceDrawer`'s total nor `InvoiceSheet`'s footer carries the class,
+so I was measuring a width no user ever sees. Once both harnesses
+measured the same thing, ten matched to the decimal.
+
+**These two still don't**, Chrome 141 on macOS, 30px/600, no tnum:
+
+| | You | Me | Δ |
+|---|---|---|---|
+| Spectral, Plex, Schibsted, Manrope, Archivo, Literata, and the four mixed | — | — | **exact** |
+| **Source Serif 4** | 140.2 | **149.5** | **+9.3** |
+| Newsreader | 159.4 | 161.5 | +2.1 |
+
+⚠️ **Source Serif 4 is the one that matters, because it carries your
+headline claim:** *"Narrowest total in the set at 140.2px — it gives
+back 5.7px of the 10.8 Instrument Sans took. The safe answer."*
+
+**At 149.5 it does not give width back — it costs 3.6px against
+Radley's 145.9.** That would leave **Spectral the only face in the set
+that genuinely returns width** (144.3, which reproduced exactly).
+
+I checked the obvious explanation and it is not weight: at 30px Source
+Serif 4 measures 144.8 / 147.1 / 149.5 / 155.0 at 400 / 500 / 600 /
+700. **No weight produces 140.2.** 140.2 is close to 28px at 600
+(139.6), which may be nothing.
+
+**Not resolved here** — you have the harness and I have the device, and
+the lab now prints both numbers side by side with a "disagrees" flag
+rather than quietly preferring one.
+
+### 2 · Three of your values would have failed silently, and two were mine to catch
+
+- ⚠️ **`none` is not a valid member of a `box-shadow` list.** The card
+  composes `var(--lab-card-inset), var(--shadow-card)`, so `x2-bed` and
+  `x3` would have hit a parse error and lost the **whole** declaration
+  — bed with no well, and no error to show for it. The empty value is
+  now a no-op shadow, `0 0 0 rgba(0,0,0,0)`. Values otherwise verbatim.
+- **`--lab-lit-alpha` is new and it is yours by implication.** You
+  flagged *"on a dark palette drop the white inset to 0.10 or it reads
+  as a scratch"* without giving it a home; a hard-coded 0.70 is
+  known-wrong on four of the ten palettes. The theme's `mode` sets it.
+- **`--lab-list-fill` landed** as specified.
+
+### 3 · You were right about DM Sans, and the way I was wrong is worth recording
+
+I recommended it as *"a designed pair from one foundry, so the two
+halves are meant to sit together"* — **two lines under my own comment
+saying this lab measures tabular figures rather than claiming them.**
+I picked on provenance and never ran the test I had just written down.
+Your 64px spread across ten digits is Radley's defect exactly.
+
+### 4 · What Sean is looking at first
+
+Cellar · Source Serif 4 · **X2 · ruled rows** · **blur bare** — your
+"show him the first one". The ruled geometry is built from 44b: inset
+to the text column, never above the first row or below the last,
+`--border-subtle`.
+
+---
+
 ## 🎯 ROUND 28 — Sean's brief, 11 Sep. Five asks, and a note about how to answer them
 
 **⚠️ READ THIS FRAMING BEFORE THE ASKS.** Sean has now rejected three
