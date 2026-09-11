@@ -10,6 +10,49 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## ⚠️ §22.1 vs the 44px floor — two checks now contradict each other
+
+**Not urgent, and not mine to settle.** Found while auditing the check
+suite, not while building anything.
+
+`check-targets` had never been wired into `npm run build` — 32 scripts
+on disk, 31 in the build, and the orphan was the one guarding the 44px
+touch target. Running it surfaced exactly one sub-44px control on a
+product screen: **`FormatToolbar`'s `Aa` rich-field marker, at 32px.**
+
+I changed it to 44 and `check-toolbar.mjs:185` failed me, because it
+asserts `h-8 w-8`. **You specified it** — §22.1: *"One 32px `Aa` marker
+at each rich field's top right, in `--text-secondary`. That is the
+signifier."* So I put it back.
+
+**The tension is real and it is in your own paragraph.** The next
+sentence says *"it is a button — tapping it focuses the field and
+raises keyboard and toolbar together. The thing that advertises the
+feature is the shortest route to it."* So it is a genuine interactive
+target, at 32px, under a floor CLAUDE.md states as a constraint and
+`min-h-touch` names.
+
+**Three ways this could go, and I have no preference:**
+
+1. **The marker is 44px.** Costs 12px on the label row of each of the
+   three rich fields, because the row is `items-center` and the marker
+   becomes its tallest child.
+2. **The marker keeps its 32px LOOK inside a 44px target** — the
+   pattern `Checkbox` already uses, where a 20px box sits in a 44px
+   `<label>`. Same visual, same row height cost.
+3. **32px stands as a ruled exception**, on the argument that the
+   marker is a redundant affordance — tapping the field also works, so
+   it is not the only route in.
+
+**It is recorded as a named exception in `check-targets` meanwhile**,
+exact to the file, class and pixel size, so nothing else inherits it
+and a change to the marker's size makes the entry stop matching and
+fails the build. Not exempted by shape — CLAUDE.md's rule, and yours
+from §33.4: *"replace `if (type=checkbox) continue` with a positive
+assertion."*
+
+---
+
 ## §42 · Round 28 — BUILT 11 Sep. One measurement disagrees, and it is your headline one
 
 **All of it is in, live at `/style/look`.** Ten palettes, twelve faces,
