@@ -5,20 +5,22 @@
   "primaryPlatform": "iPad, then iPhone, then desktop",
   "typography": {
     "display": {
-      "family": "Eyesome",
-      "fallback": "Georgia, serif",
-      "source": "purchased, self-hosted, not included in this repo",
-      "usage": "titles, logo, section headings",
-      "cssVar": "--font-eyesome"
-    },
-    "body": {
-      "family": "Radley",
+      "family": "Instrument Serif",
       "fallback": "Georgia, serif",
       "source": "Google Fonts, self-hosted at build time",
-      "usage": "all body copy, labels, UI text",
-      "cssVar": "--font-radley"
+      "usage": "titles, logo, section headings",
+      "cssVar": "--font-instrument-serif"
     },
-    "$note": "There is no sans-serif in this product. Both faces are serif, deliberately.",
+    "body": {
+      "family": "Instrument Sans",
+      "fallback": "system-ui, -apple-system, sans-serif",
+      "source": "Google Fonts, self-hosted at build time. Variable 400-700, true tabular figures.",
+      "usage": "all body copy, labels, UI text",
+      "cssVar": "--font-instrument-sans"
+    },
+    "$note": "T3 as built, §39. The previous note here read 'There is no sans-serif in this product. Both faces are serif, deliberately.' Sean withdrew that rule on 11 Sep — 'I'm no longer concerned with the sans-serif rule' — and then picked T3, whose body face is a sans. Kept and marked rather than deleted, because the rule was real and the reason it went is worth knowing.",
+    "$retired": "Eyesome (display, purchased, self-hosted) and Radley (body). Retiring Eyesome changed two shipped call sites — Wordmark.tsx and the login screen's 48px 'Limbo Mixology', which is the first thing a client sees. The .otf files are kept but no longer loaded.",
+    "$owed": "Two numbers were set by device test against Radley and need re-testing on the iPad under Instrument Sans: the 61px list row (measures 61px in Chrome on the Mac, unverified on device) and the 13px floor, which may safely drop now that the body face is a sans.",
     "scale": {
       "display": {
         "size": "2.2rem–3rem",
@@ -166,18 +168,28 @@
     }
   },
   "elevation": {
-    "$note": "Theme-dependent, because light-mode shadows are invisible on a dark background. Restrained — borders do most of the separation work.",
+    "$note": "X2 as built, §39. Theme-dependent — light-mode shadows are invisible on a dark background. The border still does the separation work; the shadow sits ON the hairline and never replaces it.",
+    "$rule": "Light shadows are rgba(52,38,20,*), the palette's own brown, NEVER rgba(0,0,0,*). §36.4 objected that a soft shadow on warm cream turns to mud; §39.1 found the objection was about a NEUTRAL shadow and reversed it. Dark keeps black — there is no cream at #1A1712, and a shadow lighter than its ground is a glow.",
     "light": {
-      "card": "0 1px 5px rgba(0,0,0,0.06)",
-      "panel": "0 2px 8px rgba(0,0,0,0.08)",
-      "popover": "0 4px 16px rgba(0,0,0,0.12)",
-      "modal": "0 8px 40px rgba(0,0,0,0.22)"
+      "card": "0 1px 2px rgba(52,38,20,0.055), 0 6px 18px -4px rgba(52,38,20,0.10)",
+      "control": "0 1px 2px rgba(52,38,20,0.10)",
+      "bar": "0 -6px 16px -6px rgba(52,38,20,0.10)",
+      "panel": "0 2px 8px rgba(52,38,20,0.08)",
+      "popover": "0 4px 16px rgba(52,38,20,0.12)",
+      "modal": "0 8px 40px rgba(52,38,20,0.22)"
     },
     "dark": {
       "card": "0 1px 3px rgba(0,0,0,0.4)",
+      "control": "0 1px 2px rgba(0,0,0,0.5)",
+      "bar": "0 -6px 16px -6px rgba(0,0,0,0.5)",
       "panel": "0 2px 10px rgba(0,0,0,0.45)",
       "popover": "0 4px 18px rgba(0,0,0,0.5)",
       "modal": "0 12px 44px rgba(0,0,0,0.6)"
+    },
+    "$roles": {
+      "card": "two parts — a contact shadow that sits the card on the ground, a wide one that lifts it off",
+      "control": "buttons and the active segment. Pressable, not stacked: contact and no lift. NOT the card value made smaller.",
+      "bar": "the one shadow that points UP. A fixed bar at the bottom of a list separates itself from content above it."
     }
   },
   "spacing": {

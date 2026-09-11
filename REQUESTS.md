@@ -10,6 +10,83 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## §39 · Cellar + T3 + X2 — BUILT 11 Sep, with one rule I could not apply
+
+**Built as decided.** Zero token migration (Cellar is the shipped
+palette), both faces replaced, every light-theme shadow re-tinted to
+`rgba(52,38,20,*)`, the hairline kept under the shadow, and the mode
+bar's clearance corrected. `check-material.mjs` asserts five of the
+rules; all five are fault-injected.
+
+### ⚠️ 1 · Translucency landed in ONE place, not two — the drawer header is blocked
+
+§39.2 allows it on *"the drawer header and the mode bar ONLY"* and
+forbids it *"behind a NUMBER."* **In this app those two clauses
+contradict each other, because our drawer header IS the totals bar.**
+
+`SourceDrawer.tsx` puts the invoice total in the header row at
+`text-2xl font-semibold` **at every width** — the file says so
+explicitly, and an earlier §10.2 draft claiming a phone exception was
+withdrawn once the width was measured. So the header always carries a
+figure that has to be read exactly.
+
+I applied the opaque half of the rule and left the header alone. The
+`$477.17` in §39.2's own reasoning is *this drawer's total* — the
+comment at `SourceDrawer.tsx:198` is where that number comes from —
+so I read the ruling as aimed at exactly this surface.
+
+**Is that right, or did you mean the header gets the blur and only
+the totals STRIP below it stays opaque?** The check permits a second
+call site already, so reversing this is a one-line change.
+
+### ⚠️ 2 · "Bottom padding equal to the bar's height" — the height is not one number
+
+Measured rather than taken from the drawing, and the measurement
+changed the build:
+
+| | height |
+|---|---|
+| `SelectionBar`, nothing picked | 69px |
+| **`SelectionBar`, anything picked** | **125px** — the delete control and chip scroller are a second row |
+| `UndoStrip` | 76px |
+| `InvoiceSelectBar` | 76px |
+
+**The existing `h-[96px]` was already 29px short** in the normal
+case, and had been since the chip row was added. I took the tall case
+as a single constant — over-clearing is invisible, under-clearing
+hides a row you cannot scroll to — **but a bar with two heights and a
+spacer with one is a hand-kept relation, which is the pattern this
+project has been burned by three times.** Worth a ruling: constant,
+or measure the bar at runtime?
+
+**And the cocktail library never had the line at all** — its last
+cocktail sat under the bar in select mode. Your note on the other two
+said *"it isn't visible until you try."* That is now a check.
+
+### 3 · Two numbers are still owed on the iPad, and I cannot settle them
+
+- **The 61px row measures exactly 61px under Instrument Sans** — but
+  in Chrome on the Mac. §10.2's arithmetic survives on this platform.
+- **The 13px floor is untested.** Not lowered. It was set on a real
+  screen and has to be re-set on one.
+
+### 4 · §38.2's Cellar row and §35.5 disagree about the active segment
+
+The form table gives Cellar a **3px accent underline**; §35.5 shipped
+a **raised segment on a recessed track**, and §39's shadow table gives
+a value for *"button / active segment"*, which only makes sense for a
+raised one. **I kept the raised segment and gave it `--elev-control`**
+— the table looked like it was drawn from the pre-§35 screen. Say if
+the underline was meant to come back.
+
+### 5 · The sans-serif rule is retired in `design-tokens.json`
+
+The mirror asserted *"There is no sans-serif in this product. Both
+faces are serif, deliberately."* Sean withdrew that on 11 Sep. Kept
+and marked rather than deleted.
+
+---
+
 ## §29 · The vertical specification — BUILT 29 Aug
 
 **Done in your order: check first, red at 38, then delete until green.**
