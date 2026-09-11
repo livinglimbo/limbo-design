@@ -10,6 +10,37 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## §29 scope — the two parts that replaced TrashRow are not in it
+
+**Housekeeping, found auditing the check suite. No build is blocked.**
+
+`check-spacing`'s scope list named `TrashRow.tsx` for two weeks after
+§34.4 deleted the part. The list is used as a filter, so a name
+matching nothing simply matches nothing — it claimed 14 files, scanned
+13, and still printed its tick. Entry removed; the check now fails if
+any scoped or allowed filename stops existing.
+
+⚠️ **But the parts that took over the job were never added**, and that
+is a scope question rather than a bug:
+
+| | Values §29 would reject |
+|---|---|
+| `TrashFilter.tsx` (§34) | `py-2` |
+| `FilterSheet.tsx` (§35) | `py-4`, `pb-safe`, `gap-4` |
+
+**I have not added them, and two of the four look arguable rather than
+wrong.** `pb-safe` is a device inset rather than space a part chose to
+own, and a SHEET may not be a "part" in §29's sense — though
+`Sheet.tsx` is in the list, which cuts the other way. `gap-4` is
+simply off the `1 · 2 · 3 · 5` scale.
+
+Adding files until a number goes green is the habit §29.5 was written
+against, so: **do these two belong in §29's spec, and if so which of
+the four values stand?** They are already visible in the strays count
+this check prints, so nothing is hidden meanwhile.
+
+---
+
 ## ⚠️ §22.1 vs the 44px floor — two checks now contradict each other
 
 **Not urgent, and not mine to settle.** Found while auditing the check
