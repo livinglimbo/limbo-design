@@ -3857,6 +3857,31 @@ from reversing a decision. Reverted; it keeps its own `<h3>`.
 **Ruling needed:** does the part gain a size, does that heading stay
 bespoke, or was the 15px raise superseded by the scale work in §31.1?
 
+> ### ✅ ANSWERED AND SHIPPED — do not re-rule this
+>
+> **`HANDOFF.md` §B2 answers all three parts**, and the answer was already
+> built by the time this paragraph was written:
+>
+> > *"`InvoiceSheet`'s heading is NOT a section label. Restore 15px and
+> > take it off the part. A section label names a group of fields inside a
+> > card. That heading names the invoice, in a flex row, with a subtotal
+> > aligned to it. **It is a title.** The tell is the thing that broke: a
+> > title has a companion figure sized to match; a label never does."*
+>
+> - **`SectionLabel` gains no size prop** — *"a part that can be two sizes
+>   is two parts."* Verified: it takes `truncate` and nothing else.
+> - **The heading stays bespoke.** Verified: `InvoiceSheet` keeps its own
+>   `<h3>` at `text-xs` (15px).
+> - **§31.1 did not supersede the raise** — *"it was about naming the sizes
+>   in use, not re-deciding them. 15px is `--text-xs`, already on the
+>   scale."*
+>
+> ⚠️ **Second stale ruling-request found on 10 Sep**, after §30.2's string.
+> Both had been answered and built while this file still asked for them. A
+> round was nearly spent re-asking. **Before raising anything here, check
+> the bundle and the code first** — `HANDOFF.md` is searchable and the
+> answer was sitting in it.
+
 ### And two sites still to do from §32.1
 
 `CalculatorSheet` and `EventDetailsSheet` — *"their class lists ARE
@@ -3987,3 +4012,48 @@ Neither needs a ruling. Both are facts about the built app.
 
 **Round 23's trash questions are still open and unanswered.** They are
 above this notice, and they are the thing actually waiting on you.
+
+---
+
+## Round 24 addendum · The 10 Sep bundle predated the round — and two asks here were already answered
+
+**Not a complaint, and nothing is being asked. Recorded because both
+halves are process failures worth not repeating.**
+
+### The bundle contained the question, not the answer
+
+A `Limbo Invoice Builder Design.zip` arrived 10 Sep 20:06 and was
+extracted to `ROUND-24/`. **Checked against the previous extraction rather
+than assumed new:** of 97 screenshots, exactly **one** differed
+(`37a-checkbox.png`), and the prose delta was 8 lines in `HANDOFF.md` plus
+5 in `github.md` — all of it Design correcting its own earlier claim that
+`CalculatorSheet` carried `aria-label` twice when it carried it once.
+
+**That is a correction to a prior round, not an answer to this one.** On
+the trash, the bundle contains only §12.2 — the *original* §16B reasoning
+for putting `TrashRow` at the foot, which is the position Round 23
+challenges. It restates the case; it does not answer the objection.
+
+⚠️ **This is the failure `README.md` already names** — *"a bundle exported
+before the turn that answered something contains the question and not the
+answer."* **Nothing was built from it.** The export has to happen *after*
+Design responds.
+
+### ⚠️ And two asks in this file had already been answered
+
+Both found while checking what was genuinely open, before spending a
+round:
+
+| Ask | Where the answer was | Status |
+|---|---|---|
+| §30.2 — the "Each each holds" string | Chosen and shipped in §31 as **"Each one holds"** | Built |
+| §32.1 — does `SectionLabel` gain a size? | **`HANDOFF.md` §B2**, and already implemented | Built |
+
+**A round was nearly spent re-asking both.** Marked in place above.
+
+**The rule taken from it, on the implementation side:** before raising
+anything in this file, search the current bundle and check the code.
+`HANDOFF.md` is 259KB and searchable, and in both cases the answer was
+sitting in it.
+
+**So Round 23 is the only thing open.**
