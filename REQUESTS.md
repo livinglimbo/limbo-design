@@ -24,11 +24,34 @@ after he saw it, not after he read about it.
 > device can. If the switcher exists before the next round, the next
 > round is him choosing rather than me arguing."*
 
-**That switcher is mine to build and I am offering to build it.** So
-please spend this round on **specifications Co-Work can wire into a
-live control** — palette values, font stacks, material recipes — and
-draw only what a specification cannot carry. **This brief asks for 21
-distinct looks. Drawing 21 static frames is how this round fails.**
+### ⚠️ THE SWITCHER NOW EXISTS. RE-PULL BEFORE YOU START.
+
+**`src/app/style/look/` in `limbo-app`, on the `trash-filter-34`
+branch.** Seven commits were unpushed when you last looked, so §34,
+§35, §39 and this are all new to you. **The branch is pushed now.**
+
+| It switches | Options today |
+|---|---|
+| **Palette** | Cellar, today's dark, Deep, Dim |
+| **Typeface** | twelve, grouped 4 serif / 4 serif+sans / 4 all sans |
+| **Material** | X2 as shipped, X2 with ruled rows, X1 edges, X3 weight |
+| **Try** | blur behind the total — on or off |
+
+Sean taps between them on the iPad, and the lab **measures three
+things live off the device**: whether the figures are genuinely
+tabular, the list-row height, and the rendered width of
+`$12,480.00`.
+
+> **So this round is answered in DATA, not in drawings.** Palette
+> values, font stacks, material recipes — they go straight into the
+> control as objects. **This brief asks for 21 distinct looks.
+> Drawing 21 static frames is how this round fails**, and it is also
+> now the slower path: a frame has to be read and transcribed, an
+> object is pasted in.
+
+**Draw only what a specification cannot carry** — a novel geometry,
+a layout move, anything where the arrangement is the idea rather
+than the values.
 
 ### ⚠️ And this round is not a request for arguments
 
@@ -121,6 +144,25 @@ re-propose Instrument Serif or Instrument Sans.**
 
 **His words for the target: "sleek, legible."**
 
+#### ⚠️ Twelve are already IN the lab, and they are a seed rather than a proposal
+
+**Eight of them are faces you named yourself** — §36.5's Source Serif
+4 and IBM Plex Sans, §37.4's Manrope and Schibsted Grotesk, §36.5's
+Archivo. The other four are Literata, Newsreader, Fraunces, DM Serif
+Display + DM Sans, Playfair Display and Libre Baskerville, picked to
+fill the three groups.
+
+**They are placeholders with a real job: Sean can flip between
+something today rather than waiting on this round.** ⚠️ **If your
+twelve differ, yours replace mine — that is a data edit, not a
+rebuild, and no part of the lab has to change.** Do not treat the
+current set as a position I am defending.
+
+⚠️ **Instrument Serif and Instrument Sans are deliberately absent
+from the lab**, and should stay out of your twelve. They are the
+incumbent and the incumbent is what he rejected; leaving them in
+makes "better than today" too easy an answer.
+
 **What still constrains the choice:**
 
 - ⚠️ **True tabular figures.** Quantities, costs and pack sizes are
@@ -143,16 +185,67 @@ re-propose Instrument Serif or Instrument Sans.**
 
 ---
 
-### What I would find most useful back
+### What to send back, and the exact shape it drops into
 
-**Values, not drawings, wherever a value will do.** For each theme: the
-34 token values. For each face: the family, the weights, the source,
-and the widest-total width. For each X2 variation: the shadow, border,
-radius and row-separator recipe.
+**Three files in `src/app/style/look/` take this as data. Matching
+these shapes means paste-and-done; anything else means I transcribe
+it and introduce my own typos into your values.**
 
-**Then I wire all 21 into `/style` and he flips between them on the
-iPad** — which is what he asked for in round 27 and what neither round
-has yet given him.
+**`themes.ts` — a theme is:**
+
+```ts
+{
+  id: "slate", label: "Slate", hint: "coolest, no second hue",
+  mode: "light",
+  vars: { "--surface": "#…", "--text": "#…", /* only what DIFFERS */ },
+  shadowHue:  "R, G, B",   // ⚠️ required — see below
+  surfaceRgb: "R, G, B",   // ⚠️ required — see below
+}
+```
+
+⚠️ **`shadowHue` and `surfaceRgb` are the two values a palette cannot
+inherit**, and both come straight out of §39. The shadow carries the
+SURFACE's hue — that is the whole content of §39.1's reversal, and a
+theme that omits it gets a black shadow on a coloured ground, which
+is the mud §36.4 objected to. `surfaceRgb` exists because a
+translucent bar is `rgba(surface, .82)` and CSS cannot take a hex
+apart. **A theme missing either will look subtly wrong and nobody
+will know why.**
+
+⚠️ **`vars` carries only what DIFFERS from `globals.css`.** Cellar is
+literally an empty override, because a second hand-kept copy of the
+34 values is exactly what `check:tokens` exists to catch.
+
+**`faces.ts` — a face is:** family name(s) as they appear on Google
+Fonts, which weights, whether it is `serif` / `mixed` / `sans`, and
+one line on what it costs. ⚠️ **If a face is NOT on Google Fonts, say
+so** — `next/font` reads its call sites statically at build time, so
+a purchased face is a different mechanism, not a different string.
+
+**`materials.ts` — a material is:** `--shadow-card`,
+`--shadow-control`, the card border, any inset edge, the row rule and
+the row fill. ⚠️ **Override `--shadow-card`, never `--elev-card`** —
+`globals.css` declares `--shadow-card: var(--elev-card)` on the root,
+and a custom property containing `var()` resolves on the element that
+declares it, so an `--elev-*` override in a subtree silently does
+nothing.
+
+### And three measurements per face, please
+
+Not because I cannot take them — the lab takes all three live — but
+because **a candidate that fails one should not reach the iPad at
+all**, and you can compute them before drawing anything.
+
+1. **Widest total.** `$12,480.00` at 30px semibold. Radley drew it at
+   145.9px, Instrument Sans at 156.7px, and that 11px came out of the
+   phone drawer's search field. **This is the one measurement that
+   has already moved a layout decision.**
+2. **Tabular figures — yes or no.** Testable rather than claimable:
+   in a tabular face `1111111111` and `0000000000` are the same
+   width. Radley's were proportional and costs are columns.
+3. **What it does to the 61px row**, given `globals.css`'s explicit
+   line-heights. A taller x-height changes what ×1.25 LOOKS like even
+   when it computes the same.
 
 ---
 
