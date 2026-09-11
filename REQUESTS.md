@@ -10,6 +10,152 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## 🎯 ROUND 28 — Sean's brief, 11 Sep. Five asks, and a note about how to answer them
+
+**⚠️ READ THIS FRAMING BEFORE THE ASKS.** Sean has now rejected three
+rounds of theme work (§36's five lights, §37's four dark-firsts, and
+now Cellar) and one **shipped** typeface. Each time the rejection came
+after he saw it, not after he read about it.
+
+> **§36.7 already diagnosed this, and it is still the right answer:**
+> *"a live switcher on `/style` would help more than anything else in
+> this round. Sean asked to flip between options on real screens;
+> swatches in a document cannot answer a legibility question, and a
+> device can. If the switcher exists before the next round, the next
+> round is him choosing rather than me arguing."*
+
+**That switcher is mine to build and I am offering to build it.** So
+please spend this round on **specifications Co-Work can wire into a
+live control** — palette values, font stacks, material recipes — and
+draw only what a specification cannot carry. **This brief asks for 21
+distinct looks. Drawing 21 static frames is how this round fails.**
+
+### ⚠️ And this round is not a request for arguments
+
+Sean, verbatim: *"Tell Design to figure out how to implement this. I'm
+aware that it supposedly breaks a rule – I don't care. I just want to
+try out these things."*
+
+He is not asking whether these are good ideas. **§38.1 is the pattern
+to avoid — "dark-first was mine, not his," extracted from references
+and then built into every option.** Where a rule is in the way, say so
+in one line and build the thing anyway.
+
+---
+
+### 1 · Translucency — build the violation
+
+*"I want to see what the result would be if we 'violate' that rule and
+implement the translucency anyway."*
+
+**So the drawer header gets the blur, with the total sitting on it.**
+That is §39.2's forbidden case — *"a blurred backdrop under a figure is
+noise under the one thing that must be unambiguous"* — and he has read
+that reasoning and wants to see it rendered anyway.
+
+For your context, the collision I raised in §39 was real and is why
+this is his first ask: **`SourceDrawer`'s header IS the totals bar.** It
+carries the invoice total at `text-2xl font-semibold` at every width —
+the file says so, and an earlier §10.2 draft claiming a phone exception
+was withdrawn once the width was measured. So "the drawer header is
+allowed" and "never behind a number" cannot both be applied here. He
+wants the first one applied.
+
+### 2 · Four variations on X2 — and one of them is ruled
+
+Four takes on the material, not four palettes on one material (§38.1).
+
+⚠️ **One of the four must be the material WITH HAIRLINES SEPARATING THE
+ITEM ROWS** — a ruled list rather than a bare one. He asked for that
+specifically. The other three are yours.
+
+### 3 · Five NEW themes, better than Cellar
+
+*"If this means that we need to use different themes then that is fine.
+In fact, give me 5 more themes that would work better than Cellar – new
+ones."*
+
+⚠️ **Worth knowing why Cellar won, because it bears on what "better"
+means here: it was the incumbent.** §39's own table gives its
+consequence as *"the palette the app already ships — zero token
+migration."* He picked the option that cost nothing and then lived with
+it for a day. **That is not the same as liking it**, and this ask is
+him saying so.
+
+**Material and palette may be coupled** — if a variation in §2 needs its
+own ground to work, bring it.
+
+### 4 · Dark mode — revisit, and here is where it actually stands
+
+Sean: *"I'm not sure if Design even addressed dark mode."*
+
+**You did, and I have told him so.** 40B drew **Deep** and **Dim** with
+every ratio computed, found a genuine fault in today's dark
+(`--control-line` at 3.62 passing 1.4.11's 3:1 only by rounding), and
+recommended Dim on the venue argument. 41A drew four dark-first themes,
+all withdrawn by §38.
+
+**What did not happen is a choice.** §39 settled theme, face and
+material and named no dark, so today's reverted dark is still what
+ships. He wants **more iterations** — treat Deep and Dim as the
+starting point rather than as spent work, and say plainly which of the
+new ones supersedes them.
+
+### 5 · Twelve typefaces — and Instrument is out on a device test
+
+*"The only one I cared for was the 'instrument' package, and after
+checking it out on iPad, I'm not loving it."*
+
+⚠️ **That is a verdict on a SHIPPED face, reached on the actual
+platform.** It is the strongest signal this project produces, and it
+retires T3 the way the device test retired 14px type. **Please do not
+re-propose Instrument Serif or Instrument Sans.**
+
+**Twelve options, in three groups of four:**
+
+| | |
+|---|---|
+| **4 · all serif** | display and body both serif — the shape the app had with Eyesome + Radley |
+| **4 · combination** | serif display, sans everything else — T3's shape, different faces |
+| **4 · all sans** | one family or two, weight doing the work — T4's shape |
+
+**His words for the target: "sleek, legible."**
+
+**What still constrains the choice:**
+
+- ⚠️ **True tabular figures.** Quantities, costs and pack sizes are
+  columns. Radley's were proportional and that was a real cost.
+- ⚠️ **The 13px floor and the 61px row are both unverified under any
+  new face.** §36.5's warning stands: `globals.css` sets line-heights
+  explicitly because §10.2's row arithmetic depends on them, and a face
+  with a different cap height changes what ×1.25 looks like. **Under
+  Instrument Sans the row measured exactly 61px in Chrome — that number
+  is not free, it happened to hold.**
+- **Eyesome's retirement is not a constraint.** The `.otf` files are
+  still on disk, unloaded. If a purchased face is the right answer for
+  one of the twelve, say so — the licence argument closed under T3 and
+  can reopen.
+- ⚠️ **Instrument Sans is WIDER than Radley** at the same size:
+  `$12,480.00` went 145.9px → 156.7px at 30px semibold, which cost the
+  phone drawer's search field about 11px. **Publish a width for the
+  widest total with each candidate** — it is the one measurement that
+  has already moved a layout decision.
+
+---
+
+### What I would find most useful back
+
+**Values, not drawings, wherever a value will do.** For each theme: the
+34 token values. For each face: the family, the weights, the source,
+and the widest-total width. For each X2 variation: the shadow, border,
+radius and row-separator recipe.
+
+**Then I wire all 21 into `/style` and he flips between them on the
+iPad** — which is what he asked for in round 27 and what neither round
+has yet given him.
+
+---
+
 ## §39 · Cellar + T3 + X2 — BUILT 11 Sep, with one rule I could not apply
 
 **Built as decided.** Zero token migration (Cellar is the shipped
