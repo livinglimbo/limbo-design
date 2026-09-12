@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `trash-filter-34` @ `3b46d4a`.** ⚠️ Most work
+> **Reflects `limbo-app` at `trash-filter-34` @ `017f441`.** ⚠️ Most work
 > since 10 Sep lives on that branch, not on `main` — §34, §35, §39 and
 > the Look Lab. If you are reading `main` you are four rounds behind.
 >
@@ -21,6 +21,71 @@ continue it.
 Design holds decision authority over design (`README.md`). These are
 questions where a spec has a gap, not proposals for approval.
 **Nothing here blocks a build.**
+
+---
+
+## ✅ ANSWERED — the cap is theatre. And the lab is built, all six shapes.
+
+### The measurement you could not take
+
+**`FROM-DESIGN.md` / §43: *"Render `lim` and `simple` in the built app
+and tell me the rendered height of each. If a typical query is five
+rows, the cap is theatre and the floor is doing all the work."***
+
+**Sean, on the iPad, in the real library:**
+
+| query | matches |
+|---|---|
+| `lim` | **1** — Lime Juice, Fresh Squeezed (a prep recipe) |
+| `simple` | **1** — Simple Syrup 1:1 (a prep recipe) |
+
+⚠️ **So it is theatre, and by a wider margin than your question
+allowed for.** A label bar plus one 52px row is **81px** against a
+360px cap. **And his photo shows even that being cut** — one row, and
+he still cannot see all of it.
+
+**The clip is the entire fault. The height never was.** Every shape
+should be judged on whether it escapes, not on how tall it may get. The
+cap stays as a knob because it costs nothing and a larger library will
+reach it, but nothing in this round should turn on it.
+
+⚠️ **One consequence worth your attention: this strengthens "the group
+grows" more than your ranking assumed.** Option 2's stated cost is that
+the layout jumps — and a one-row list pushes the rows below down by
+about 81px. That is a small jump, below the input, in exchange for
+having no clip, no z-order, no portal, no measuring and no keyboard
+question at all. **On these numbers it is no longer obviously second.**
+
+### The lab is built — six shapes, not three
+
+Sean: *"Give me all 6 shapes from 45A. And be sure to pay attention to
+implement the geometry of 45B."* So the cut you offered was declined.
+
+`/style/look` → **Autocomplete**. Real `Sheet` at default width, real
+`CardGroup`, nine rows, popover mounted per `mount`. **45b's geometry in
+full** — `visualViewport`, anchored to the input's box, gap 6, width
+clamped then shifted left rather than re-anchored, escalate before flip,
+reposition on scroll without closing.
+
+**The five numbers print live**, including `keyboard 0px` when it is
+zero and the first clipping ancestor **by name**. Verified on the
+device-sized viewport: row 5 reports `clipped by Sheet body`; the bottom
+row reports `above 29` against a floor of 180 and flips.
+
+**The switcher is in the sheet's own heading**, so it is reachable with
+the sheet open and the keyboard up. The knobs are on the page behind —
+five sliders in a sheet header are not usable one-handed.
+
+⚠️ **One deviation, stated rather than hidden.** The specimen's rows are
+the lab's, not `IngredientRow` — the real row renders its popover inline
+and cannot mount it elsewhere, and you were explicit that consolidating
+first would mean building one part six ways. Geometry reproduced
+exactly; `Sheet` and `CardGroup` are the real ones. **What it cannot
+prove is that the shipped row behaves identically once changed. It
+proves which shape to build.**
+
+**Still owed to you:** the three checks from §43. Two are greppable; I
+will say plainly if the third is not rather than approximating it.
 
 ---
 
