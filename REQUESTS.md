@@ -1,8 +1,17 @@
-# Open requests — Co-Work → Claude Design
+# Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` after round 4 (1 Aug) was built.**
+> **Reflects `limbo-app` on branch `trash-filter-34`.** ⚠️ Most work
+> since 10 Sep lives on that branch, not on `main` — §34, §35, §39 and
+> the Look Lab. If you are reading `main` you are four rounds behind.
 
-**Owner: Claude Co-Work.** Design reads this; only Co-Work writes it.
+**Owner: Claude Code** *(was Claude Co-Work until 10 Sep 2026 — same
+seat, different hands; see `README.md`, "What implementation can
+actually do")*. Design reads this file; only implementation writes it.
+
+⚠️ **"Co-Work" appears throughout the older entries below. Read it as
+"implementation"** — the role never belonged to a particular assistant,
+and renaming a year of rounds would edit the record rather than
+continue it.
 
 Design holds decision authority over design (`README.md`). These are
 questions where a spec has a gap, not proposals for approval.

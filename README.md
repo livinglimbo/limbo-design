@@ -1,6 +1,10 @@
 # Limbo Mixology — design system and working agreement
 
-> **Reflects `limbo-app` after the 30 Jul 2026 round.**
+> **Reflects `limbo-app` on branch `trash-filter-34`, 12 Sep 2026.**
+> ⚠️ The working agreement below was written 30 Jul; the sections on
+> what implementation can do and on visibility were rewritten 12 Sep,
+> because the assistant in that seat changed and the old text said
+> nothing had.
 
 Design reference for the **Limbo Invoice Builder** — a supply-invoice and
 event-planning tool for a mobile bartending and cocktail catering business.
@@ -53,11 +57,109 @@ treatments, states.
 >    not a blank for Co-Work to fill.
 
 **⚙️ Claude Code — implementation.** *(Was Claude Co-Work until 10 Sep
-2026 — same seat, same authority, same obligations. See "The one thing
-only Sean can answer" for the one thing that genuinely changed.)* Has the
-private app repo, the live Supabase database, the data layer and the
-deployment. Owns implementation decisions: state, storage, performance,
-build order. Keeps this repo accurate.
+2026.)* Has the private app repo, the live Supabase database, the data
+layer and the deployment. Owns implementation decisions: state, storage,
+performance, build order. Keeps this repo accurate.
+
+> ⚠️ **REINTRODUCTION — 12 Sep 2026, at Sean's instruction.** This line
+> used to read *"same seat, same authority, same obligations."* **The
+> first two are true and the third is truer than before. The
+> implication that nothing else changed is not**, and it has been
+> costing Design work: handoffs are still being calibrated for an
+> assistant that could not run the app.
+>
+> **I am Claude Code, running on Sean's MacBook — not in a sandbox.**
+> The seat and the authority are unchanged: Design still decides
+> design, I still build what is drawn, the three carve-outs still
+> stand. **What changed is what I can do with a ruling once I have
+> it**, and it changes what a handoff should contain.
+
+---
+
+## ⚙️ What implementation can actually do — and what it changes about a round
+
+**Read this before preparing a handoff.** Every item is something
+Co-Work could not do, and every one of them has already changed an
+outcome.
+
+**1 · I run the app and measure the rendered DOM.** Dev server, real
+production builds, a browser I can drive, viewport emulation, light and
+dark. ⚠️ **So numbers in a handoff get verified, not transcribed.**
+Round 28: twelve faces, twelve widths — **ten reproduced exactly, two
+did not**, and the two that did not include the one carrying a
+recommendation. That is not distrust, it is the loop working. **Publish
+your METHOD with a number** and the two harnesses can be compared;
+"measured at 30px/600, no tabular-nums" is what let me find that my own
+probe was the thing that was wrong on the other nine.
+
+**2 · I can build a live switcher, so OPTIONS SHOULD ARRIVE AS DATA.**
+`/style/look` in the app is a working control: Sean taps between
+palettes, faces, materials and blur treatments on the iPad, and it
+measures each one live on the device he is holding. **Adding a theme is
+a data edit** — an object with token values. ⚠️ **A frame has to be
+read and transcribed; an object is pasted in.** Round 28 asked for 21
+distinct looks and Design answered almost entirely in values; it was
+the fastest round this project has had. **Draw only what a value cannot
+carry** — an arrangement, a geometry, where a rule starts and stops.
+§36.7 asked for this switcher before three separate look decisions were
+reversed on a screen. It exists now.
+
+**3 · I write and run check scripts, and I fault-inject them.** 33 of
+them gate every build. ⚠️ **A ruling can be made MECHANICAL rather than
+remembered** — if you want a rule enforced, say so and it becomes a
+check that fails. §39.2's translucency rule is now a counted exception
+rather than a sentence someone has to recall. **And they are broken on
+purpose to prove they fail**: an 11 Sep audit found five checks quietly
+covering less than they claimed, including one that had never been
+wired into the build at all.
+
+**4 · I read both repos directly, at any commit.** Source, git history,
+the reasoning in old commits. ⚠️ **You do not need to describe the
+current state of the code to me** — ask me to read it, or cite a file
+and a line. §36.5's correction to its own `font-display` count came
+from reading source, and it was right where the earlier estimate was
+not.
+
+**5 · What has NOT changed, and it is the important half.** I cannot
+see the iPad. Chrome on a Mac is not the platform, and I say so in
+every measurement I hand over. I do not make design rulings. I do not
+touch the database directly. **"It feels off" from Sean still outranks
+anything I can measure** — round 28 exists because T3 shipped, looked
+right in every number, and he disliked it on the device in a day.
+
+---
+
+## 🔁 Who can see what, and when — the visibility rules
+
+**Sean, 12 Sep: *"I've been getting very confused as to how Design and
+yourself work together and who knows what, when, and how."*** Two
+failures on 11 Sep make the rules worth stating rather than assuming.
+
+**Design sees `limbo-app` only through GitHub, and only what is
+PUSHED.** ⚠️ On 11 Sep, seven commits sat unpushed on a branch —
+§34, §35, §39 and the Look Lab. Design was about to specify a round
+against a codebase four rounds stale, through no fault of its own.
+**So: I push before asking Design to read anything, and I name the
+branch.** Most work lives on a feature branch, not `main`.
+
+**A stale read is possible even when the file is current.** The Round
+28 brief was on `main`, verified live, and Design read a copy that did
+not contain it. ⚠️ **So a handoff or a brief should be cited by BRANCH
+and COMMIT, not by "current"** — and if what you read does not match
+what is cited, say so immediately rather than working from a summary.
+
+**Design writes nothing in `limbo-app`; I write nothing in Design's
+answers.** I own `REQUESTS.md` in this repo — Design reads it. Design's
+rulings reach me as a zip through Sean; **Design cannot put a file in
+front of me directly**, which is why a bundle must be re-exported after
+the turn that answers something.
+
+**What I owe you each round:** what was built, what was measured and on
+what, what I could not resolve, and anything of yours that did not
+reproduce. **What I will not do:** silently absorb a contradiction
+between two of your rulings. Two checks encoding two rulings that
+disagree is the system working; it gets raised, not resolved by
+whoever ran the build.
 
 ⚠️ **"Co-Work" appears throughout this file and in `REQUESTS.md`. Read it
 as "implementation" wherever it does** — the role never belonged to a
@@ -74,9 +176,16 @@ want one on the record.*
 ## The loop
 
 **Design reads `REQUESTS.md` → decides and specifies → Sean exports a
-Project archive into `limbo-app/design-imports/` → Co-Work builds it as
-drawn → Sean tests on a device → Co-Work updates this repo and rewrites
-`REQUESTS.md`.**
+Project archive into `limbo-app/design-imports/` → implementation builds
+it as drawn → Sean tests on a device → implementation updates this repo
+and rewrites `REQUESTS.md`.**
+
+⚠️ **One step is now optional and was not before.** *"The drawings are
+the spec"* remains true for anything a drawing is needed for. But
+**values can skip the drawing entirely** — palettes, font stacks,
+material recipes and token maps go straight into `/style/look` as
+objects, and Sean flips between them on the iPad the same evening. See
+"What implementation can actually do", item 2.
 
 Two things that went wrong, both now rules:
 
@@ -85,9 +194,17 @@ answered something contains the question and not the answer. That happened
 once and cost a full round.
 
 **The drawings are the spec, not the prose.** `HANDOFF.md` describes; only
-the frames show. Co-Work builds from the screenshots and the design file,
-and reads captions — captions resolve contradictions between turns.
+the frames show. Implementation builds from the screenshots and the design
+file, and reads captions — captions resolve contradictions between turns.
 Building from prose alone cost an entire rebuild on 29 Jul.
+
+⚠️ **AND EVERY NEW PNG GETS READ INDIVIDUALLY, WHICH IS WHY IT MATTERS
+WHAT YOU DRAW.** Skipping one is a documented failure on this side. The
+corollary is that a frame drawn to carry a VALUE costs a read for
+something an object would have delivered exactly — round 28 shipped two
+frames and a file of values, and both frames earned their place because
+they showed where a blur meets a figure and where a row rule starts and
+stops. Neither is expressible as a number.
 
 ---
 
@@ -168,7 +285,8 @@ Design should know what it may now assume.
 **What changed.** Co-Work *"had never seen it on a screen"* — no display,
 no browser, no iPad — and it could not even run `next build`, because SWC
 was unavailable for its architecture. Type-checks and 31 check scripts all
-passed without ever proving the app compiles. Claude Code runs real
+passed without ever proving the app compiles. *(There are 33 now, all
+gating the build.)* Claude Code runs real
 production builds, serves the app, reads rendered output, and can drive a
 browser on the machine.
 
