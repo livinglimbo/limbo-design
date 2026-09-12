@@ -19,6 +19,110 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## 🎯 ROUND 29 — two asks, both found on the iPad
+
+### 1 · ⚠️ The autocomplete cannot escape its own box, and it is the one Sean hits daily
+
+**Sean, 12 Sep:** *"The autocomplete list needs to be scrollable AND
+viewable. Currently I can only see a portion when adding ingredients in
+the cocktail library. And in the prep library it's the same problem +
+it doesn't even scroll. We need to be sure the autocomplete list is
+working properly anywhere it appears in the app."*
+
+**What he wants from you:** *"I want to know how we can get the
+autocomplete list to 'reach' further — which would make it run outside
+the boxed group. Design should give me several options that work well."*
+
+#### The diagnosis, measured from source — and my first one was wrong
+
+I blamed `Sheet`'s `overflow-y-auto` body. **That clips, but it is not
+the tight constraint.** Both popovers sit inside `CardGroup`:
+
+```
+<section className="mx-5 flex flex-col overflow-hidden rounded-[12px] …">
+```
+
+⚠️ **`overflow-hidden` on the group is what cuts the list**, at the
+INGREDIENTS card's own bottom border. His photo shows it stopping
+exactly there. **No height cap escapes that, and the flip-above I added
+mostly moves the clip to the top edge instead.**
+
+⚠️ **AND THE CLIP IS LOAD-BEARING.** It is what keeps `CardGroup`'s
+rounded corners from being overdrawn by its children. Deleting it is
+not an option — it would change every card in the app.
+
+#### Two more facts you should have
+
+- ⚠️ **There are TWO popovers, not one.** `IngredientRow.tsx` and
+  `PrepEditor.tsx` each have their own copy. That is why capping one
+  left the prep library still broken. **Whatever you rule, it wants to
+  end up as one part** — and that consolidation is arguably the real
+  ask behind his *"anywhere it appears in the app."*
+- **It is a two-source list** — prep recipes and products, each under
+  its own label — so it is taller than a plain typeahead and the
+  labels are load-bearing.
+
+#### Options I can see, so you can reject them rather than start cold
+
+Not a menu for you to pick from — a list so you know what is buildable
+here. **Several that work well is what he asked for.**
+
+1. **Portal to the document.** The popover renders outside the card and
+   is positioned against the input's rect. Escapes every ancestor.
+   Costs: it must follow scroll, and it leaves the card's stacking
+   context, so z-order becomes a real question against the sheet, the
+   drawer and the keyboard.
+2. **Fixed overlay anchored to the field.** Same escape, simpler
+   positioning, but it does not move with the list behind it.
+3. **A picker sheet.** Tapping the field opens the existing sheet
+   pattern with a search field and the full list. ⚠️ **The most honest
+   fit for a 314-product library on a touch device**, and the only one
+   with no clipping question at all — but it is a heavier interaction
+   for the common case of typing three letters and taking the first hit.
+4. **Let the group grow instead.** The popover pushes the rows below it
+   down rather than overlaying them. No clipping, no z-order, no
+   portal — the layout jumps.
+
+**What I need back:** which shape, and the geometry for it — where it
+sits relative to the field, how tall it may get, what happens at the
+bottom of the screen, and whether the keyboard changes the answer.
+
+### 2 · ⚠️ `CalculatorSheet` / `EventDetailsSheet` → `CardGroup` — the parked conversion just came due
+
+**You ruled this in §32.1 and sequenced it after the Checkbox in
+§33.5 B1. It has been unblocked and parked since 31 Aug.** Sean found
+the symptom on the iPad on 11 Sep and called the Calculator *"messed
+up."*
+
+**The mechanism, for the record:** §29.7 made `Sheet`'s body
+`flex flex-col gap-5` so card groups would sit apart. Both sheets pass
+**bare full-bleed rows** instead, each drawing its own `border-b`. The
+gap applied between rows drawn to sit flush — 20px of dead space under
+every line, and a stack of floating hairlines. **Nothing in either file
+changed; a rule changed underneath them and they broke silently.**
+
+⚠️ **I have NOT done the conversion.** I put one container around the
+Calculator's body so the sheet's gap has a single child. **That stops
+the bleeding and is not the ruling.** Two things are still wrong:
+
+- its rows carry `px-5` where `CardGroup`'s body uses `px-[14px]`, so
+  that box is **6px out of step with every other group in the app**
+- **`EventDetailsSheet` is untouched** and has the identical fault
+
+**The question that stops me finishing it:** `CardGroup`'s body is
+`px-[14px] py-3` with `gap-3`, and both sheets are **full-bleed row
+lists** — rows that want no body padding at all, because each row
+carries its own. That is the same collision I hit building
+`FilterSheet` and resolved by copying `CardGroup`'s SHAPE rather than
+calling it.
+
+**So: does `CardGroup` grow a variant for a flush row list, or is
+"CardGroup's shape, hand-built" the right answer where the body is a
+list?** If it is the latter, three files now do that independently and
+it wants a name.
+
+---
+
 ## §29 scope — the two parts that replaced TrashRow are not in it
 
 **Housekeeping, found auditing the check suite. No build is blocked.**
