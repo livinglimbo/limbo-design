@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `trash-filter-34` @ `017f441`.** ⚠️ Most work
+> **Reflects `limbo-app` at `trash-filter-34` @ `1e32312`.** ⚠️ Most work
 > since 10 Sep lives on that branch, not on `main` — §34, §35, §39 and
 > the Look Lab. If you are reading `main` you are four rounds behind.
 >
@@ -21,6 +21,106 @@ continue it.
 Design holds decision authority over design (`README.md`). These are
 questions where a spec has a gap, not proposals for approval.
 **Nothing here blocks a build.**
+
+---
+
+## 🎯 ROUND 30 — three from the wishlist, and one of them is a data shape
+
+**Triage pass, 12 Sep.** Three items relayed. ⚠️ **Two are deadline items
+by the wishlist's own rule — they change a data shape, so they are
+cheap now and a migration later.**
+
+### 1 · ⚠️ Packs — "12 cans, each 12 fl oz". The costing has no second quantity
+
+**Sean:** *"I need a way to add items like a pack of sodas. E.g. a 12
+pack of 12oz sodas… I buy it by the pack, not the can. So I need a way
+to quantify this for costing down the road. This principle needs to
+apply across different units too."*
+
+**The state of it, read from source:** `packaging` exists as a product
+field and the library prints "12 per pack" and "20/box" from it. ⚠️ **That
+string is descriptive, not arithmetic.** Nothing multiplies 12 × 12 fl oz
+to reach the 144 fl oz a pack contains, which is the number cost-per-oz
+needs.
+
+⚠️ **AND YOU ALREADY REFUSED THE OBVIOUS FIX**, which is why this comes
+to you rather than getting built: *"a `packaging` fallback for 'Each each
+holds' — it is the same bet placed twice… populated on all 30 of his
+records today, and not on the 302nd."* That reasoning stands. This wants
+a real second quantity on the product, not an inference from a text
+field.
+
+**What I need:** where the pack quantity lives in the product editor,
+what it is called, and what happens to the 298 products that do not have
+one. **Today every soda, can and box of straws is costed wrong.**
+
+### 2 · The stage control on the History card footer
+
+**Sean:** *"Need to add the invoice 'stage' button to the card in the
+invoice library (on the footer)."*
+
+§11A put the stage control in the Builder's footer deliberately — *"not
+in the header"*, one action cluster with undo. This asks for it on the
+card too, so a stage moves without opening the invoice.
+
+⚠️ **The card footer's shape is already a ruling and it has refused a
+third control this month.** `check-packaging` failed when Duplicate was
+given a glyph: *"only Export may be a glyph — the type forbids the other
+two."* The History card carries Open · Duplicate · Trash. **Stage would
+be a fourth, and it is a menu rather than a button.**
+
+**What I need:** a fourth slot, or a different arrangement.
+
+### 3 · ⚠️ The cocktail picker becomes a menu — and per-event substitution is a data shape
+
+**Sean:** *"The Cocktail picker shouldn't just be one long list… replace
+the full list with a list that only displays the cocktails that I have
+selected. Then those listed cocktails should all be clickable, opening
+the list of ingredients, and I should be able to 'substitute' or change
+the individual ingredients if I choose. (E.g. A Daiquiri uses Bacardi
+Rum, but I want to use Diplomatico Reserva Rum instead for an event.)"*
+
+**(a)** The picker shows the event's MENU rather than the catalogue.
+Search and autocomplete stay. A straight screen question.
+
+**(b)** ⚠️ **Substitution is an override that belongs to the INVOICE, not
+the recipe.** The Daiquiri still uses Bacardi next week. There is nowhere
+to store that today, and adding it later migrates every invoice built
+without it.
+
+#### His question, and the answer is the reason this needs a ruling
+
+> *"Will the math carry over live if we go this route? 750ml Ketel One to
+> a 1L Grey Goose changes price and quantity."*
+
+**Yes to the arithmetic, no to "live" — and the "no" is deliberate.**
+
+- `calculate()` takes the library as a **live argument** and resolves
+  every ingredient through `linkState(ing, library, prep)` at call time.
+  The 750ml→1L conversion is `units.ts`, already in service.
+- ⚠️ **But an invoice LINE is a snapshot.** `InvoiceLineItem` stores its
+  own `description`, `unit`, `price` and `qty` and keeps `libraryItemId`
+  only as a link back. Nothing recomputes a line when the library moves.
+- That is what the Calculator's *"Update N lines"* is: propose, then
+  apply. His screenshot reads *"11 stay as it is · 4 have no product to
+  change."*
+
+**So the question for you is not whether it can recompute. It is what a
+substitution DOES:**
+
+| | |
+|---|---|
+| **Propose** | the substitution feeds the calculator's proposal and the invoice changes when he applies it — consistent with every other price movement |
+| **Apply immediately** | the line rewrites on substitution, because he chose it explicitly and a menu change is not background price drift |
+
+**Both are defensible and they draw different screens.** ⚠️ An invoice is
+a document that gets sent, and a line that silently reprices after it was
+quoted is the failure mode the snapshot exists to prevent — but a
+substitution is not a silent change.
+
+**Related:** Kits, which you have parked and Sean *"wants soon"*. It is
+the same "a bundle that belongs to this event" idea from the other end,
+and if substitution gets a per-invoice home, Kits may want the same one.
 
 ---
 
