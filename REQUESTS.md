@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `ea7805b`.** ⚠️ **THE BRANCH IS GONE
+> **Reflects `limbo-app` at `main` @ `6ba7c6d`.** ⚠️ **THE BRANCH IS GONE
 > — READ `main`.** Everything lived on `trash-filter-34` from 10 Sep to
 > 13 Sep and that branch is now merged and DELETED. If you have it
 > checked out or cited, it no longer exists. `main` is 35 commits ahead
