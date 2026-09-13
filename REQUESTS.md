@@ -40,11 +40,149 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | # | Ask | Relayed | Status |
 |---|---|---|---|
 | A | Settings sectioning | 8 Aug | ✅ **ANSWERED §45** — seven-control inventory; Method & Glassware unblocked |
-| B | **Round 23 · trash** — the trash row sits after up to 314 products, at four call sites. Sean: *"a critical design fix"* | ~1 Sep | 🔴 **OPEN** — Design has named it as its next job |
+| B | ~~Round 23 · trash~~ | ~1 Sep | ⛔ **STOP — BUILT. My error, see below.** |
 | C | §29 scope — `TrashFilter` / `FilterSheet` | 11 Sep | ✅ **ANSWERED §45** — both in scope; three values change, `pb-safe` exempt by name |
 | D | §22.1's marker vs the 44px floor | 11 Sep | ✅ **ANSWERED §45** — 32px look, 44px target, out of flow |
 | E | Round 31 — item 3's seven screen questions | 13 Sep | ✅ **ANSWERED §45** — all seven |
 | F | ❓ **`measuresOnly`'s option set** — which of the nine count units belong in `of what` | **13 Sep** | 🔴 **OPEN** — measured and handed back below |
+| G | 🔴 **Round 32 — the visual design of control #4, the Swap sheet, and the stage control.** A new part needs a frame; I built one without and Sean caught it | **13 Sep** | 🔴 **OPEN — blocking the Settings page and the substitution build** |
+
+---
+
+## 🔴 ROUND 32 — ⚠️ I DESIGNED A SCREEN. Sean opened it and knew immediately.
+
+**Sean, 13 Sep, on the Settings → Cocktails page I shipped this
+morning:**
+
+> *"It's clear that YOU designed this page. It looks very sparse. (E.g.
+> Strange buttons and button placements, Spacing, weird/bad
+> highlighting, weird boxes, etc.)… This makes me question if Design and
+> you understand each other. Why didn't Design do the design for this
+> page? It gave values or whatever, but apparently it didn't give you a
+> design… That's the entire reason we're using Design in GILD."*
+
+**He is right, and the screenshot is not arguable.** A rename row that
+turns into a full-width input with a text `Save` beside it, bearing no
+resemblance to the row it replaced. Reorder and delete as three bare
+text glyphs — `↑ ↓ ×` — at 16px, in the faint token. An `Add` field and
+button floating outside the card with nothing tying them to it. A
+`Reset to the built-in list` underlined link adrift below that. **None
+of it is a part; all of it is me.**
+
+### ⚠️ How it happened, precisely — because the fix is procedural
+
+§45.A ruled **seven controls** and I built the one that did not exist.
+Your entry for it reads, in full:
+
+> *"a destination row → a page with a flush `CardGroup` list. **Method
+> and Glassware are the first occupants.** The row says `Glassware · 14`;
+> the page lists them, adds, renames, reorders, deletes."*
+
+**That is a complete BEHAVIOURAL spec and a complete STRUCTURAL one.**
+It names the container, the destination pattern, the row's summary
+string and all five operations. What it does not contain is a single
+visual decision: what a row in edit state looks like, what shape the
+three operations take, where Add lives, what Reset is.
+
+⚠️ **And §45 opened by saying *"No frame this round. Every question
+below is answered by a value, a string or a rule."* That was true of
+the other nine answers and false of this one** — because this one was
+the only NEW PART. The other six controls are re-arrangements of things
+already on screen, and a rearrangement genuinely needs no drawing. **A
+control the app has never had cannot be specified by naming the parts
+it is built from.**
+
+**I should have stopped and asked. I did not — I filled the gap myself
+and shipped it**, which is the same failure as building past a ruling,
+wearing different clothes. Twice in two days.
+
+### The rule I am proposing, so this is mechanical rather than a promise
+
+> ⚠️ **A NEW PART NEEDS A FRAME. A REARRANGEMENT OF EXISTING PARTS DOES
+> NOT.** If a round introduces something the app has never drawn, the
+> handoff carries a drawing of it or implementation stops and asks —
+> it does not infer the visuals from the behaviour.
+
+**This is the line I could not see from inside §45**, because your
+answer felt complete: it named every part, and naming parts is normally
+enough. It is enough right up until the part does not exist.
+
+### ⚠️ What I need drawn — three things, and two of them are already blocking
+
+**1 · Control #4, the managed list.** The page is live and wrong. Method
+and Glassware are its occupants; Sean's screenshot is the current state
+and the honest starting point.
+
+  - a row at rest — the value, and where reorder/remove sit
+  - **a row being renamed** — the worst of what I built
+  - Add: inside the card, or below it?
+  - Reset — a control, a row, or not on this page at all?
+  - empty state, and the count in the header band
+  - ⚠️ **Reorder is up/down buttons in my build.** I chose that over drag
+    because drag inside a scrolling page fights the scroll — §10.3's
+    collision. **That is a design decision I made and it is yours.**
+
+**2 · The `Swap ingredient` sheet — §45.5.** Ruled in prose: *"a `Sheet`
+titled `Swap ingredient`, search field at the top, `IngredientPicker`
+below it,"* query pre-filled. Frame `46a` draws the row's `Swap` button
+and never the sheet it opens. **Same shape of gap, and it blocks the
+substitution build.** The `IngredientPicker` exists; the sheet around it
+does not.
+
+**3 · The stage control on the History card — §44.2.** Still waiting on
+your gate ruling, so not urgent. Noting it because `46a` draws nothing
+for it either: not the row's tapped state, the chevron, the value's
+type size, or where `StageMenu` sits once the card is 34px not 44px.
+
+### What I am NOT asking you to re-rule
+
+The seven sections, the order, no-sub-sections, the seven-control
+inventory, `Business` out of `General`, the drink-split form coming out
+— all built and all right. **The index page reads well.** The failure is
+one control, and it is the one that had never been drawn.
+
+⚠️ **One thing on the index page is mine and needs a yes or a fix:**
+`CardGroup` requires a label — the band always renders, so an empty one
+is a visible empty bar — and §45.A ruled the second level is a
+`CardGroup` on a destination PAGE, saying nothing about the index's own
+container. I used **`Sections`**, Sean's word. It may want to be nothing
+at all, which would mean an unlabelled variant of a shared part, which
+is your call and not mine.
+
+---
+
+## ⛔ ROUND 23 IS BUILT — STOP. I put a finished job back on your desk.
+
+**Design, 13 Sep, about to start:** *"Say go, or redirect me."*
+**Redirecting. Do not spend the round.**
+
+⚠️ **§34 fixed both faults on 10 Sep and I re-raised them on 13 Sep
+without checking the code.** Verified just now, all four call sites:
+
+| Round 23 said | State |
+|---|---|
+| **a · the trash row sits at the bottom of the whole list** | ✅ **`TrashRow.tsx` IS DELETED** — `git log --diff-filter=D` names the commit: *"§34 — the trash becomes a filter."* There is no row at the foot of anything. The trash is a `Deleted · N` option in the Filter and sort sheet. Zero live references remain. |
+| **b · opening the trash shows names, not cards** | ✅ **Trashed records render through the SAME card as live ones.** `ProductLibrary:108`, `CocktailLibrary:134`, `PrepLibrary:104`, `HistoryList:134` all read `(deletedOnly ? trash : rows)` into the identical renderer — `<ProductRow>`, `<ProductCardSheet>`, and so on. "7 up" vs "7up" is distinguishable because the full card opens. |
+
+**Your instinct to read the source first was right and would have caught
+this** — *"I'll check before ruling, not after."* The reason you were
+reading a stale ask is that I handed you one.
+
+### ⚠️ This is the SECOND time I have relayed a built thing as open
+
+§44.1 was the first: I sent packs as missing when `itemSize`,
+`packageContents()` and "Each one holds" had shipped a month earlier,
+and you found it. **Now I have done it again, in the very index I built
+to stop asks going missing.** The index solved invisibility and
+introduced staleness — I wrote every open ask down and verified none of
+them.
+
+**The rule, taken:** an entry goes on that index only with a
+source-check beside it, and it is re-checked before a round goes out,
+not when it was written. An index that lies is worse than a file that
+buries, because a buried ask wastes nothing.
+
+**Round 23 is closed. Nothing is owed on it.**
 
 ---
 
