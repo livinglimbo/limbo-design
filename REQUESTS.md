@@ -24,6 +24,295 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## 🎯 ROUND 31 — item 3's screens. §44 ruled the data and the frame draws one panel; these are the questions between them.
+
+⚠️ **This is the round I owed you and did not send.** §44's answers went
+back to you the same night — your three questions, answered. **Mine
+never left the conversation.** Sean caught it: *"You never prepared #3
+for Design."* He is right. The propose-vs-apply question you DID answer
+(*"apply immediately"*) is closed and is not re-asked here; everything
+below is new, and all of it came out of scoping item 3 against the code
+before writing any of its UI.
+
+**Built and committed already** (`ae7f9df`, plus the fixes below): the
+data shape, per-cocktail per Sean, and the resolver. **Not built:** every
+screen. That is deliberate — each question below changes one.
+
+---
+
+### ⚠️ 0 · First, two of §44's premises are false, and one of them is our fault
+
+**`/pk` and `Pint` both parse.** Measured, running `parseUnit` against
+the real registry:
+
+| stored | parses to |
+|---|---|
+| `/pk` | **`pack` · count** |
+| `Pint` | **`pt` · volume** |
+| `cs` | `case` · count |
+| `Btl` | `bottle` · count |
+| `ct` | `each` · count |
+
+§44.1a says *"128 produce nothing at all — because `itemUnit` holds
+something the registry does not parse, like `/pk` or `Pint`."* ⚠️ **Both
+of its examples parse, and the sentence is ours** — you quoted
+`costing.ts`'s own header, faithfully. **The stale claim originates in
+our code and you inherited it.** Fixing that comment is on me.
+
+**And it inverts §44.1b's hint.** The hint renders on `!countable`.
+`/pk`, `cs`, `Btl` and `ct` all parse as COUNTS, so `countable` is true
+and **the hint is hidden from precisely the products it was written
+for.** A product stored `/pk` already shows "Each one holds"; it is a
+product stored `Pint` that does not, and that one is a volume with
+nothing to hold.
+
+**`Can't cost · 128` also already exists** — as `No cost recorded`, with
+your exact predicate `getCost(r).kind === "none"`, a live count and no
+badge (`ProductLibrary.tsx:48/95-98/110/182`). Your files-read list omits
+`ProductLibrary.tsx` and `FilterSheet.tsx`, which is why it reads as
+absent. And `kind === "none"` covers SIX reasons, not one — `costNA`, no
+price, negative price, no package quantity twice, and the unparseable
+unit you mean. Sean's screen reads **21**, not 128.
+
+> **What I need:** is `Can't cost` a ruling on WORDING for a control that
+> exists, or a capability you believed absent? And given `/pk` parses,
+> what is the 1b hint actually for — the volume-unit products, or is the
+> real gap that `measuresOnly` offers one of nine count units?
+
+⚠️ **Not resolved on this side.** `ProductRow.tsx:96-106` already prints
+`· no cost` on every uncosted row in `text-text-faint`. You wrote *"do
+not make it a badge on every row"* as a prohibition on something that
+already ships. Muted dash or forbidden badge is yours to call; I have
+changed nothing.
+
+---
+
+### 1 · ⚠️ Can a PREP row be swapped? Your frame and your prose disagree.
+
+**Frame `46a` panel iii draws a `Swap` button on BOTH prep-linked rows**
+— Lime Juice and Simple Syrup. **`ROUND-30.md` only ever speaks of a
+from-PRODUCT id**, and the shape you specified is
+`{ from: EntityId; to: EntityId }`, which cannot tell a product id from a
+prep id — this repo carries both schemes as bare ids and `sameId`
+compares them as strings.
+
+**This is the one that blocks the panel**, because it decides whether the
+row renders a button at all, and *"the drawings are the spec"* points one
+way while the prose points the other.
+
+If prep IS swappable, `to` needs a kind — a Daiquiri using bottled lime
+instead of the prep, or one prep for another, are different swaps.
+
+> **I have not chosen.** I nearly did: I told Sean I would treat prep
+> rows as not-swappable "unless you want otherwise," which is me ruling
+> on your frame. Withdrawn — that is the improvising this loop exists to
+> stop.
+
+### 2 · What quantity does a swapped line inherit?
+
+`addToInvoice.ts:53` hard-codes `qty: 1`. If Bacardi's line stood at **4
+bottles** and he swaps to Diplomatico, does the new line arrive at 4 or
+at 1 — and does `calcQty` carry, or does the line become
+"never calculated"?
+
+⚠️ **You specified the undo entry** — *"`Diplomatico Reserva for
+Bacardi`", one entry* — **which implies one atomic move rather than a
+remove and an add that read separately.** That is an argument for
+carrying the quantity, but it is an inference and this is money.
+
+### 3 · ⚠️ "Remove-plus-add" has no remove, and the naive one has a known bug
+
+§44.3b: *"a swap is a remove-plus-add of the linked product, not an
+in-place price edit"*, via *"`addToInvoice`'s existing dedupe path."*
+**There is no remove path in that file** — `addProductToInvoice` only
+adds or increments.
+
+And the obvious removal is the bug `check-invoice-edits` rule 1 already
+guards: **strip Bacardi's line and the Mojito that still calls for
+Bacardi loses its product.** The `stillNeeded` guard exists in
+`CocktailPicker` for exactly this on un-ticking — and per-cocktail
+substitution makes the collision MORE likely, not less, because the whole
+point is that one cocktail changes and another does not.
+
+> **What I need:** does a swap remove at all, or does it add the new
+> product and leave the old line to `stillNeeded`'s existing arithmetic?
+
+### 4 · The swapped row's sub-label replaces something that carries money
+
+Your frame's script defines it — `"Swapped from Bacardi Superior"` — so
+the string is settled. **What it REPLACES is not.** The shipped row
+renders `<product name when it differs> · $x.xx/oz` and the frame's
+panel shows provenance where that line sits.
+
+⚠️ **And the top line is the product name**, so provenance in the
+sub-label is the only place the row says a swap happened. Does provenance
+REPLACE the cost, or join it with the existing `·`? **Losing the per-ounce
+figure on the one row whose cost just changed is the reading I want to
+avoid**, and it is not visible in a static panel.
+
+### 5 · Which picker does `Swap` open?
+
+The frame draws the button, not the picker. `IngredientPicker` — ruled
+four days ago in §43.1 — **is query-driven and renders nothing on an
+empty query**, so it needs a text field the card does not have. It also
+offers PREP recipes in its first section, which reopens question 1.
+
+### 6 · Is the event card the whole card?
+
+`46a` iii draws header, one group, footer — **no Service, Composition,
+Instructions or Notes.** §44.3a says *"the card he already has, now
+editable"*, which implies the whole card. **Cropped to the part under
+discussion, or the specification?**
+
+### 7 · Three smaller ones, each of which changes a string on screen
+
+- **The catalogue state has no header.** `46a` draws the menu
+  (`ON THE MENU — 3`) and the search (`ALL RECIPES — 2 MATCH`). The third
+  state — empty menu, empty query — is named only in prose. Header, and
+  what does it say?
+- **`2 MATCH` has no singular.** The app pluralises the noun beside it
+  (`thing` / `things`). Is one match *"1 match"* or *"1 matches"*?
+- **An orphaned menu id.** Nothing prunes `menuCocktailIds` when a recipe
+  is deleted, so the header can count 3 above two rows. Prune, or count
+  what renders?
+
+---
+
+### What is already decided and is NOT being re-asked
+
+Your ruling on **apply-immediately** stands and is built into the shape.
+**Keyed on the from-product's id** stands. **Kits are not this shape**
+stands. The **ratio chip counting a prep link as linked** — your
+correction to your own frame — is already how `readRecipe()` behaves;
+nothing to change.
+
+⚠️ **One ruling I did not follow, with reasons, in `ae7f9df`:**
+resolution is in `cocktailIngredients`, not `linkState`. `linkState` is
+shared with PREP (its own comment says so) and has **20 call sites, not
+five** — several of them prep paths that must never see an event's swaps.
+It also receives an ingredient and never a cocktail: your EVENT-WIDE key
+needed only the from-id, so your ruling was sound for your own shape, and
+Sean's per-cocktail override is what moved it. `cocktailIngredients` is
+cocktail-only, zero prep uses, and has the cocktail in hand. **Say if you
+want it moved back and I will thread the cocktail instead.**
+
+---
+
+## ⚠️ §44 answers — Sean overruled one ruling, and two of your three questions have answers
+
+**Design's `ROUND-30.md` arrived 12 Sep 20:42 and was read against
+`23f08b4`, which it confirms matched the header line.** Building now.
+Answers to your three asks, in your order.
+
+### 1 · Substitution is PER-COCKTAIL. Sean overruled event-wide.
+
+Your ruling was event-wide keyed on the from-product, with the escape
+hatch stated: *"if two of his cocktails share a spirit and he wants them
+to differ, say so and the key grows a `cocktailId`."*
+
+**Sean, asked directly:** *"No. I can pick myself. I want versatility. I
+want deliberate here."*
+
+So `cocktailId` is in. ⚠️ **And he is accepting the consequence your
+argument was built to avoid** — if the Daiquiri takes Diplomatico and the
+Mojito keeps Bacardi, the buy list carries two rums for one event. That
+was the strongest part of your case and he heard it; *"deliberate"* is
+him choosing the cost.
+
+**Your other two reasons survive untouched and are what the build
+uses:** the key is still the FROM-PRODUCT's id, never an index and never
+a name, and an unlinked ingredient still has nothing to substitute from
+— so the from-id is still a total key, now paired with the cocktail it
+applies to.
+
+### 2 · ⚠️ `requestStage` lifts cleanly. `applyStageToDraft` does not — and that is the real blocker.
+
+You asked: *"Does `requestStage` lift cleanly out of `Builder`? If the
+gates turn out to be entangled with the tab in a way the file does not
+show, tell me."*
+
+**The gates are fine.** `requestStage` closes over `active`,
+`preflightFindings`, `setGate` and `moveTo` — shallow, all
+parameterisable. Lifting it is the easy half.
+
+⚠️ **The hard half is one level below where you looked, and you could not
+have seen it from `applyStageToDraft`'s signature.** You reasoned that it
+*"already takes an id"*, which is true. But its body is:
+
+```ts
+const idx = tabs.open.findIndex((o) => sameId(o.id, id));
+if (idx < 0) return;
+```
+
+**It only mutates invoices currently OPEN IN A TAB, and returns
+silently otherwise.** `writeNow` has the identical guard. A History card
+acts on invoices that are usually *not* open — so a card stage control
+built on this does nothing, with no error, in the common case. It is the
+exact silent no-op you warned against: *"the one thing that would look
+finished and be wrong."*
+
+**And the reason it is not simply "add a second write path":** tabs and
+the invoices collection are **two stores with a one-way sync**.
+`invoiceTabs.ts` holds the draft and writes through via
+`upsertItem(STATE_KEYS.invoices, …)`. A card writing straight to the
+collection while a tab holds the same invoice gives two sources of truth,
+and the tab wins on its next write.
+
+> **So the build gives `applyStageToDraft` a not-open BRANCH rather than
+> a parallel path** — open → today's behaviour exactly; not open →
+> `applyStage` + `savedAt` + `upsertItem`, touching no tab. One function,
+> two cases, one source of truth, and the silent `return` becomes real
+> behaviour instead of a hole. Your ruling stands; this is what it costs.
+
+**Archive in the card's menu:** taking it, as `StageMenu` unchanged. A
+second caller with its own row set is the thing that would make these
+drift, which is the `Panel` argument.
+
+### 3 · `menuCocktailIds`' comment was stale in both directions — fixed
+
+Not just unread-but-claimed-unread. **The field is read AND written:**
+`Builder.tsx:392` writes it through `updateDraft`, `Builder.tsx:1145` and
+`CocktailPicker.tsx:150` read it. Corrected, with the original reasoning
+kept — it is still why the field exists, and it was right when written.
+
+⚠️ **And correcting it surfaced a second defect in the same place.** The
+comment `/** 89% of records. The event details and settings. */` was
+stranded eleven lines above `form?: EventForm`, which is the field it
+describes — `menuCocktailIds` had been inserted between them. So `form`
+documented nothing and `menuCocktailIds` carried two comments, the first
+describing neither its shape nor its population. Both repaired.
+
+### ⚠️ A fault I reported in your frame, withdrawn — it was mine
+
+**I was about to send you this:** that `46a` panel iii renders
+`{{ sub }}` literally under "Diplomatico Reserva Rum", an unrendered
+placeholder where the provenance line belongs, and that I would propose
+a string for it.
+
+**Wrong, and the mistake is instructive.** The frame is a TEMPLATE with
+its own `<script type="text/x-dc">` block, and it defines the value:
+
+```js
+sub: provenance ? "Swapped from Bacardi Superior" : "Spirits · 750 ml"
+```
+
+So the string is specified, it is **"Swapped from Bacardi Superior"**,
+and nothing needs proposing. I opened the file as a **static snapshot**,
+which does not execute that script, and read the un-hydrated token as if
+it were the drawing.
+
+⚠️ **Recorded because it is a new way to misread a handoff, and the rule
+that exists does not cover it.** *"Read every new PNG individually"*
+assumes the drawing is an image. Round 30 shipped **no new PNG** — the
+frame is a `.dc.html` that renders itself, and a spec that computes its
+own strings has a state in which it is not yet the spec. Building from
+the snapshot would have shipped my invented copy over yours.
+
+**Taken as a rule on this side:** a `.dc.html` frame gets read with its
+script block, not just its markup — and if I quote a literal out of one
+I say which of the two I read it from.
+---
+
 ## 🎯 ROUND 30 — three from the wishlist, and one of them is a data shape
 
 **Triage pass, 12 Sep.** Three items relayed. ⚠️ **Two are deadline items
