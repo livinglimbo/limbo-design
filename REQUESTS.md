@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `trash-filter-34` @ `1e32312`.** ⚠️ Most work
+> **Reflects `limbo-app` at `trash-filter-34` @ `9c6a0a0`.** ⚠️ Most work
 > since 10 Sep lives on that branch, not on `main` — §34, §35, §39 and
 > the Look Lab. If you are reading `main` you are four rounds behind.
 >
@@ -122,6 +122,102 @@ substitution is not a silent change.
 the same "a bundle that belongs to this event" idea from the other end,
 and if substitution gets a per-invoice home, Kits may want the same one.
 
+
+## ✅ BUILT — §43. Round 29's two asks, your §42 selections, and a third bug in the same mechanism
+
+**All on `trash-filter-34`, 12 Sep.** ⚠️ **Round 30 above was written at
+`1e32312` and four commits have landed since.** The header sha is
+current; if you read Round 30 before today, its "read from source"
+claims still hold, but the three items below did not exist yet.
+
+### 1 · §43.1 — the autocomplete reach. Sean chose "the group grows"
+
+Your six shapes went on the iPad and he picked **A3, the group grows** —
+the list opens inside the row's own `CardGroup`, which extends, rather
+than escaping it. With two conditions of his own: *"make sure that it is
+scrollable"* and *"make sure we keep the highlighting rule for rows."*
+Both are in. One `IngredientPicker` now serves the recipe editor and the
+prep editor, where there were two divergent popovers.
+
+**Your three checks are done and fault-injected**, including the third
+one you flagged as changed underneath you: the list is asserted to be
+**in flow**, not measured against `visualViewport`, because with A3
+there is no overlay to measure.
+
+### 2 · §43.2 — the parked conversion, and `CardGroup` grew a `flush` prop
+
+`CalculatorSheet` and `EventDetailsSheet` are converted. `FilterSheet`
+went with them — it had a third hand-built copy of the group box and had
+got it wrong twice before. The prop exists because a filter list wants
+the box, the radius and the header band but not the `gap-3` body.
+
+⚠️ **And the round shipped half-built because my own check went green on
+a technicality.** `check-groups` rule 1 scans inside `<CardGroup>` spans,
+and the three files you named did not use `CardGroup` yet — so a rule
+written to police the conversion passed by finding nothing in exactly
+the files the conversion was for. Sean caught it: *"I thought we built
+round 29 already."* The rule now fails when it matches nothing.
+
+### 3 · Your §42 palette and face are live in the app, not just the lab
+
+Sean's picks off `/style/look`: **Linen**, **Spectral**, **X2 · ruled
+rows**, blur **Bare**. `globals.css` carries Linen as the light block
+with the shadows re-tinted to its hue; `layout.tsx` loads Spectral alone
+for both display and body. Cellar and T3 were rejected on the device,
+which is what the lab was for.
+
+### 4 · ⚠️ §43.3 — and this one is a fact about `CardGroup`, not a bug report
+
+Sean, on the Products filter: *"We really need to make sure we can see
+all of the filter options, which means we need to make it scrollable."*
+
+It already had `overflow-y-auto`. That was never the missing piece.
+Measured in the browser at 834×1112 before anything was touched:
+
+| | height | content needs | hidden |
+|---|---|---|---|
+| SORT | 182 | 227 | 45px |
+| CATEGORY | 475 | 593 | 118px |
+| SHOW | 133 | 166 | 33px |
+
+**`scrollHeight` 844, `clientHeight` 844 — nothing to scroll.** Every
+group had already been compressed to fit, and because `CardGroup` is
+`overflow-hidden`, each absorbed its share by clipping its own lower
+half. "Most used" was gone from SORT entirely; Sean reported the bottom
+of the list because that is where a cut row is obvious.
+
+⚠️ **THIS IS §29.7 FOR THE THIRD TIME.** 29 Aug it was the recipe sheet
+— SERVICE 75px where it needed 148. `sheet-column` was written that day
+and `Sheet.tsx` has carried it since. `FilterSheet` draws its own dialog
+instead of using `Sheet`, so it inherited the bug and none of the
+remedy — **and §43.2 is what made it fatal**, because putting the rows
+inside `CardGroup` turned a squash into a disappearance.
+
+**The general fact, which is the part worth your attention:**
+`CardGroup` is `overflow-hidden` — deliberately, the clip holds the
+12px radius. Anywhere a `CardGroup` is a flex child of a scroll
+container, it will absorb overflow by **clipping itself silently**
+rather than by letting the container scroll. There is no error and
+nothing looks broken; content simply stops existing.
+
+**Audited, because a third occurrence is a pattern rather than an
+accident:** nine files render `CardGroup`. Eight reach it through
+`Sheet`, which has `sheet-column`. `FilterSheet` was the only one with
+its own dialog, so this had exactly one instance. `check-scroll.mjs`
+now asserts that every scroll container is bounded and that every
+scrolling flex column carries `sheet-column`; four faults injected,
+four caught.
+
+⚠️ **The fix that matters is a pair, and I want it on the record because
+either half alone reads as sufficient.** `sheet-column` without
+`min-h-0` pushes the body past the dialog, which is `overflow-hidden` —
+the same clipping one level up. `min-h-0` without `sheet-column` lets
+the body shrink while its children go on shrinking with it.
+
+**Nothing is being asked here.** It is fixed, guarded, and measured on
+iPad portrait, 1440×800 and 390×844. It is in this file because it
+changes what `CardGroup` costs wherever you next place one.
+
 ---
 
 ## ✅ ANSWERED — the cap is theatre. And the lab is built, all six shapes.
@@ -228,7 +324,11 @@ verify they are actually served before you specify against them.**
 
 ---
 
-## 🎯 ROUND 29 — two asks, both found on the iPad
+## ✅ ROUND 29 — two asks, both found on the iPad. **BOTH BUILT 12 Sep**
+
+> ⚠️ **Answered and built — kept for the reasoning, not for action.**
+> Sean picked A3 off your six shapes and both halves shipped as §43.1
+> and §43.2. See the BUILT report above. Nothing here is open.
 
 ### 1 · ⚠️ The autocomplete cannot escape its own box, and it is the one Sean hits daily
 
@@ -360,6 +460,26 @@ Adding files until a number goes green is the habit §29.5 was written
 against, so: **do these two belong in §29's spec, and if so which of
 the four values stand?** They are already visible in the strays count
 this check prints, so nothing is hidden meanwhile.
+
+### ⚠️ Updated 12 Sep — one of my two arguments against has collapsed
+
+§43.2 put `CardGroup` into `FilterSheet`. **So the `gap-4` in that file
+is no longer a sheet's private spacing — it is the gap BETWEEN GROUPS**,
+which is the one value in §29 you named rather than derived: *"the same
+20 the card owns horizontally, so the space around a group is square."*
+`Sheet.tsx` uses `gap-5` for exactly that. `FilterSheet` now draws the
+same groups 16px apart, four short of your number, in a sheet Sean opens
+beside the others in one session.
+
+⚠️ **I have not changed it**, because "these look alike so make them the
+same" is the move you withdrew `Panel` over, and because it is four
+pixels in a file whose scope you have not ruled on. But my "a SHEET may
+not be a part" argument was about a container that owned its own layout,
+and after §43.2 it does not own this one.
+
+**So the narrower question, if the broad one is not worth a round:** is
+`FilterSheet`'s group gap the §29 twenty, or is 16 deliberate in a
+dialog that is trying to stay short?
 
 ---
 
