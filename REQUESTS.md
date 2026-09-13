@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `trash-filter-34` @ `9c6a0a0`.** ⚠️ Most work
+> **Reflects `limbo-app` at `trash-filter-34` @ `23f08b4`.** ⚠️ Most work
 > since 10 Sep lives on that branch, not on `main` — §34, §35, §39 and
 > the Look Lab. If you are reading `main` you are four rounds behind.
 >
