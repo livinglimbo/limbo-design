@@ -24,6 +24,95 @@ questions where a spec has a gap, not proposals for approval.
 
 ---
 
+## 🔴 STILL OPEN — the index, because the file lost one
+
+⚠️ **This index exists because a request went missing inside this file
+and nobody noticed for five weeks.** The Settings sectioning ask was
+relayed **8 Aug** and never answered. Rounds 28, 29, 30 and 31 were each
+written at the TOP of a file that is now 5,200 lines, and none of them
+carried it forward — so it sank, and its last trace is a passing aside
+on line 4,512 that is not even phrased as an ask.
+
+**It did not error. It quietly covered less** — the same defect as the
+check-suite audit, in prose instead of code. A round that is answered
+gets a ✅ and stays visible; a round that is IGNORED has nothing marking
+it, so silence and completion look identical from the top of the file.
+
+**Every open ask is listed here, oldest first, and nothing leaves this
+list until it is answered.** If an entry is here and you have already
+ruled on it, say so and I will mark it — that costs one line and is the
+cheap failure.
+
+| # | Ask | Relayed | Age | Blocks |
+|---|---|---|---|---|
+| A | **Settings sectioning** — below | **8 Aug** | **5 weeks** | Method & Glassware, and everything else that lands in Settings |
+| B | **Round 23 · trash** — Sean: *"a critical design fix"*. The trash row sits after up to 314 products, at four call sites | **~1 Sep** | **~2 weeks** | nothing, but Sean hits it daily |
+| C | §29 scope — do `TrashFilter` / `FilterSheet` belong in the spacing spec | 11 Sep | 2 days | nothing |
+| D | §22.1's 32px marker vs the 44px floor — two checks encode two rulings that disagree | 11 Sep | 2 days | nothing |
+| E | Round 31 — item 3's seven screen questions | 13 Sep | today | item 3's UI |
+
+⚠️ **TWO of those five were LOST, not waiting** — A and B. Round 23 sits
+at line 5,173 of 5,254, under a closing line that reads *"So Round 23 is
+the only thing open"*, which was true when it was written and has been
+false ever since. Sean asked for it to be flagged to Design explicitly:
+*"I don't want you to take this on myself, but flag this for Design to
+address as it is a critical design fix."* It was flagged once and then
+buried by four newer rounds.
+
+---
+
+## 🔴 ASK A · Settings sectioning — relayed 8 Aug, unanswered, and Sean has now raised it FIVE TIMES
+
+**This is the oldest thing in the file and the only one blocking other
+work.** It is restated in full here rather than referenced, because
+referencing it is what let it disappear.
+
+**Sean, first ask (8 Aug):** how should Settings be sectioned? It already
+has five headed blocks on one page — *"the complaint isn't that sections
+are missing, it's that they're all at the same level with no way to find
+one."*
+
+**Sean, second ask (15 Aug), which turns it from abstract into a spec:**
+organised like iPhone Settings — named sections (**Invoice Workspace ·
+Products · Cocktails · Prep · Reporting · General**), possibly with
+sub-sections, and *"a clear cohesive design"* where the same kind of
+control looks the same everywhere.
+
+> ⚠️ **And the half I would have missed, in his words:** *"if I add a new
+> setting with a roller to select numbers, it should be the same roller
+> as other settings use."* **That is a component-inventory request, not a
+> layout one** — and it is the harder half. It asks what the settings
+> control vocabulary IS, not merely how the page is divided.
+
+### ⚠️ The item set its own deadline and the deadline has now fired FIVE times
+
+Its condition was *"before the next thing lands in Settings, not after."*
+Since 8 Aug, four things have landed in Settings anyway — **auto-archive,
+the org default tax rate, the business identity block**, and Method &
+Glassware is queued behind it. The thing the rule existed to pre-empt has
+happened repeatedly, which means the page is now harder to section than
+it was when the ask was made, by exactly the amount that was predicted.
+
+### What I need
+
+1. **The sections**, and whether Sean's six are the right six.
+2. **Sub-sections: yes or no.** This decides whether it is a list or a
+   tree, which is the whole shape.
+3. ⚠️ **The control inventory** — what the settings vocabulary is. A
+   number roller, a toggle, a choice-from-a-managed-list (Method and
+   Glassware are the first real occupant), a free-text field. **This is
+   the part Sean asked for twice and the part that is not a drawing of a
+   page.**
+4. **One of the five blocks is dead.** The drink-split presets fed the
+   estimator, scrapped 7 Aug; it computes nothing today. Does it stay as
+   a record of how his crowds drink, or come out with the sectioning?
+
+⚠️ **Nothing new goes into Settings until this lands**, which is the rule
+the item set for itself and which has been broken four times — by me, not
+by Sean.
+
+---
+
 ## 🎯 ROUND 31 — item 3's screens. §44 ruled the data and the frame draws one panel; these are the questions between them.
 
 ⚠️ **This is the round I owed you and did not send.** §44's answers went
