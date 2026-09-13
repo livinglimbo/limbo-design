@@ -26,42 +26,99 @@ questions where a spec has a gap, not proposals for approval.
 
 ## 🔴 STILL OPEN — the index, because the file lost one
 
-⚠️ **This index exists because a request went missing inside this file
-and nobody noticed for five weeks.** The Settings sectioning ask was
-relayed **8 Aug** and never answered. Rounds 28, 29, 30 and 31 were each
-written at the TOP of a file that is now 5,200 lines, and none of them
-carried it forward — so it sank, and its last trace is a passing aside
-on line 4,512 that is not even phrased as an ask.
+⚠️ **This index exists because a request went missing inside this file and
+nobody noticed for five weeks.** Rounds were written at the TOP of a 5,200-line
+file and none carried the older asks forward, so they sank. **An answered round
+gets a ✅ and stays legible; an IGNORED round has nothing marking it, so from
+the top of the file silence and completion look identical.**
 
-**It did not error. It quietly covered less** — the same defect as the
-check-suite audit, in prose instead of code. A round that is answered
-gets a ✅ and stays visible; a round that is IGNORED has nothing marking
-it, so silence and completion look identical from the top of the file.
+**It worked.** Ask A had waited since 8 Aug through four rounds. It went on this
+index at 11:31 on 13 Sep and Design answered it at 11:49.
 
-**Every open ask is listed here, oldest first, and nothing leaves this
-list until it is answered.** If an entry is here and you have already
-ruled on it, say so and I will mark it — that costs one line and is the
-cheap failure.
+**Nothing leaves this list until it is answered.**
 
-| # | Ask | Relayed | Age | Blocks |
-|---|---|---|---|---|
-| A | **Settings sectioning** — below | **8 Aug** | **5 weeks** | Method & Glassware, and everything else that lands in Settings |
-| B | **Round 23 · trash** — Sean: *"a critical design fix"*. The trash row sits after up to 314 products, at four call sites | **~1 Sep** | **~2 weeks** | nothing, but Sean hits it daily |
-| C | §29 scope — do `TrashFilter` / `FilterSheet` belong in the spacing spec | 11 Sep | 2 days | nothing |
-| D | §22.1's 32px marker vs the 44px floor — two checks encode two rulings that disagree | 11 Sep | 2 days | nothing |
-| E | Round 31 — item 3's seven screen questions | 13 Sep | today | item 3's UI |
-
-⚠️ **TWO of those five were LOST, not waiting** — A and B. Round 23 sits
-at line 5,173 of 5,254, under a closing line that reads *"So Round 23 is
-the only thing open"*, which was true when it was written and has been
-false ever since. Sean asked for it to be flagged to Design explicitly:
-*"I don't want you to take this on myself, but flag this for Design to
-address as it is a critical design fix."* It was flagged once and then
-buried by four newer rounds.
+| # | Ask | Relayed | Status |
+|---|---|---|---|
+| A | Settings sectioning | 8 Aug | ✅ **ANSWERED §45** — seven-control inventory; Method & Glassware unblocked |
+| B | **Round 23 · trash** — the trash row sits after up to 314 products, at four call sites. Sean: *"a critical design fix"* | ~1 Sep | 🔴 **OPEN** — Design has named it as its next job |
+| C | §29 scope — `TrashFilter` / `FilterSheet` | 11 Sep | ✅ **ANSWERED §45** — both in scope; three values change, `pb-safe` exempt by name |
+| D | §22.1's marker vs the 44px floor | 11 Sep | ✅ **ANSWERED §45** — 32px look, 44px target, out of flow |
+| E | Round 31 — item 3's seven screen questions | 13 Sep | ✅ **ANSWERED §45** — all seven |
+| F | ❓ **`measuresOnly`'s option set** — which of the nine count units belong in `of what` | **13 Sep** | 🔴 **OPEN** — measured and handed back below |
 
 ---
 
-## 🔴 ASK A · Settings sectioning — relayed 8 Aug, unanswered, and Sean has now raised it FIVE TIMES
+## ✅ §45 · Round 31 ANSWERED — and the index worked the same hour
+
+**`ROUND-31.md` arrived 13 Sep 11:49, read against `77c66bc`.** A, C, D and E
+answered; **B (round 23's trash) named as Design's next job** rather than
+guessed at. The `🔴 STILL OPEN` index went in at 11:31 and Design was answering
+Ask A eighteen minutes later — **after five weeks of silence that was never
+silence, only invisibility.**
+
+### ⚠️ Answering Design's only live question, with the measurement
+
+> *"What does `measuresOnly` offer in the `of what` picker — all nine count
+> units, or fewer? I will not guess at a control's option set."*
+
+**One. Of nine.** `UnitSelect.tsx:46-50` applies
+`u.dimension !== "count" || u.id === "each"`, so every count unit except `each`
+is filtered out. `units.ts:173-190` defines nine — **each · bottle · can · keg ·
+bag · box · case · pack · dozen** — and the `of what` field offers `each` alone.
+
+⚠️ **So a product STORED as `can` or `/pk` displays correctly and cannot be
+re-chosen.** `UnitSelect`'s `offered` branch adds the stored value as its own
+option when it is not in the rendered list, which is why this has never looked
+broken: the 12-pack Sean already has renders fine, and a new one cannot be
+entered with the word he used.
+
+**Which makes your instinct right — the gap is the option set, not a hint.**
+And it reframes Sean's original wishlist ask. He wrote *"I need a way to add
+items like a pack of sodas… I buy it by the pack, not the can."* We both read
+that as arithmetic and both found the arithmetic present. **It reads equally
+well as an INPUT complaint, and that one is unfixed.**
+
+⚠️ **I am not proposing the fix.** Dropping `measuresOnly` is one word and I do
+not know what it is holding back — it is a deliberate filter with a name, and
+the `of what` field feeds `packageContents()`. **Over to you: which of the nine
+belong in `of what`, and does `each` stay the only count or become the first of
+several?**
+
+### Taken, and not re-litigated
+
+`Can't cost` withdrawn · `· no cost` stays · **the 1b hint withdrawn entirely**
+— it addressed a population that does not exist, and inverting it would tell
+someone holding a pint of cream to pick a container. **`SwapTarget` tagged on
+both sides**, and the argument that settles it is the one that does not depend
+on prep swapping at all: a bare id compared by `sameId` as a string, which may
+be either kind, is a wrong-resolution bug whose failure mode is a price.
+
+**Ruled and queued, not built** — per the rule Sean set today, the code follows
+the round rather than preceding it:
+
+| | |
+|---|---|
+| §45.1 | `SwapTarget` on both sides — free now, a migration next round |
+| §45.2 | swapped line inherits `qty` + `calcQty`, marked for recalculation |
+| §45.3 | a swap is a menu recomputation through `stillNeeded`, never a remove |
+| §45.4 | `Was <product> · <cost>` — measured; provenance takes the name slot |
+| §45.5 | `Swap` opens a `Sheet` with the query pre-filled to the current name |
+| §45.6 | the whole card, locked, plus `Swap` on ingredient rows |
+| §45.7 | `All recipes — 24` · `1 match`/`2 matches` · prune at the deletion site |
+| §45.A | seven-control Settings inventory; **Method & Glassware is control #4** |
+| §45.C | `FilterSheet` `gap-4`→`gap-5`, `py-4`→`py-5`; `pb-safe` exempt BY NAME |
+| §45.D | the 32px marker in a 44px target, positioned out of flow |
+
+---
+
+## ✅ ASK A · Settings sectioning — ANSWERED §45, 13 Sep. Kept for the history.
+
+> ⚠️ **Answered — kept because the five weeks are the point, not the ask.** It
+> was relayed 8 Aug, raised by Sean five times, and its own deadline fired four
+> times while it was invisible. Design's answer is in §45 above: seven sections,
+> no sub-sections, and a **seven-control inventory** — of which only one, the
+> managed list, does not exist yet. That one control is what was blocking
+> Method & Glassware the whole time. The original ask follows.
 
 **This is the oldest thing in the file and the only one blocking other
 work.** It is restated in full here rather than referenced, because
