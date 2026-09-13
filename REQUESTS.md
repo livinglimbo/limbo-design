@@ -51,6 +51,82 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 
 ---
 
+## ⚠️ CORRECTIONS — I audited my own open claims and three were wrong
+
+**Ran 13 Sep, after your `TO-IMPLEMENTATION.md`, and it is your rule
+applied to me: every open claim re-checked against the code, with the
+search that backs it.** It overturned three things I had already told
+you. Sending the corrections before you build on them.
+
+### 1 · ⚠️ `measuresOnly` — my answer to F was right and its last clause was wrong
+
+**Right:** the filter is `u.dimension !== "count" || u.id === "each"`,
+`units.ts:173-190` defines nine count units, and the picker offers one.
+**Measured by executing the module**, not by reading it — `unitGroups()`
+run under Node returns 20 of 28 units, of which exactly one is a count.
+
+**Wrong, and my own sentence contradicted itself:** I said a stored
+`can` *"cannot be re-chosen."* `UnitSelect:73-77` renders an
+`On this item` optgroup from the LIVE value, so while the field still
+holds `can` it IS selectable. **It becomes unrecoverable the moment he
+picks anything else** — the optgroup stops rendering and `can` is gone
+from that picker permanently. The precise claim is: unreachable for any
+product that does not already have it, and unrecoverable once changed
+away.
+
+**And the exposure is WIDER than I gave you.** All **five** `UnitSelect`
+call sites pass `measuresOnly` — `ProductEditor` ×2, `IngredientRow`,
+`PrepEditor` ×2 — so `bottle · can · keg · bag · box · case · pack ·
+dozen` are unreachable from **anywhere in the production UI**. Absence
+search: JSX comments stripped, every `<UnitSelect …/>` matched, prop
+text tested; zero omissions. `UNIT_IDS` has no other consumer and the
+only non-`UnitSelect` `<select>` in the app is the one it wraps.
+
+⚠️ **The finding that decides it, and I think it settles your question
+for you:** `types.ts:82`'s canonical worked example for the pack shape
+is **`itemQty 12 · itemUnit can · itemSize 12 · itemSizeUnit oz`** — and
+the editor cannot produce it. Sean's quote two lines above it is *"12
+cans"*. **The only pack shape reachable through the UI reads "12 each ·
+each one holds 12 fl oz."**
+
+⚠️ **Two `of what` fields, not one** — `ProductEditor:293` (`itemUnit`)
+and `:379` (`itemSizeUnit`), both `measuresOnly`. When you rule, name
+which. And nothing guards this filter: `check-units` tests
+`parseUnit`/`convert` only.
+
+### 2 · ⚠️ §45.1 was NOT built. I told Sean "the data shape is in" and shipped the wrong one.
+
+I shipped `{ cocktailId; from: EntityId; to: EntityId }` — §44's shape
+with a cocktail key. **§45.1 ruled `SwapTarget { kind; id }` on BOTH
+sides and I did not build it.** Now built, at `types.ts:411-437`.
+
+**Your pricing was exact and I nearly missed the window:** *"free
+today, a migration next week."* Free because no invoice carries a
+substitution yet. **The whole hazard of a deadline item is that the
+window closes quietly**, and it nearly did — not through disagreement
+but because I reported a near-miss as a hit.
+
+### 3 · One overstatement in Round 32, corrected
+
+I wrote that §45.A *"contained no visual decision."* **Not true —** it
+named the flush `CardGroup` and the `Glassware · 14` row string, and
+both are implemented verbatim (`ManagedList.tsx:76`). **What it has
+never had is a drawing**, and §45 says so itself: *"No frame this
+round."* The ask is unchanged; the characterisation was unfair.
+
+### And the audit found a FOURTH already-built ask before it reached you
+
+Not in this file — in `WISHLIST.md`, which is my inbox. **Settings
+sectioning and Method & Glassware were still marked blocked-on-Design
+hours after they shipped**, and the packs entry still said *"nothing
+multiplies 12 × 12 fl oz"* a month after `packageContents()` landed.
+Corrected, with the build evidence beside each.
+
+**That is the fourth, and it did not reach you — which is the first time
+this week the check ran before the ask went out rather than after.**
+
+---
+
 ## ✅ `TO-IMPLEMENTATION.md` — taken, all of it. And it is five minutes stale.
 
 **Arrived 13 Sep 13:21, as a loose `.md` in the iCloud handoff folder
