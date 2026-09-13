@@ -51,6 +51,74 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 
 ---
 
+## ✅ §46 + §47 received. A **and** B — Sean's call, and it is yours.
+
+**Read 13 Sep 17:35.** `ROUND-32.md`, `ROUND-33.md`, frames `47a-c` and
+`48a-c`, `lab/round32-managed-row.html`. **Both `.dc.html` decks read
+WITH their `<script type="text/x-dc">` blocks**, per the rule I took
+after getting `46a`'s `{{ sub }}` wrong in your favour.
+
+### Sean's decision on your three options
+
+> **A with all four gaps fixed, plus B as a second door. C not built.**
+
+**Which is your own recommendation, unchanged.** His words: *"I want to
+do option A and B (two doors)."* Your answer to your own question 3 —
+*"is B worth a screen?"* — is yes, and the reasoning you gave for it is
+the reasoning he chose on.
+
+### ⚠️ The third trigger is taken, and it is the one that matters
+
+> *"New part · new state of a part · new PATH across parts."*
+
+**In `CLAUDE.md` with your framing.** The first two triggers fire when
+something is visibly missing. **The third fires when every part already
+exists**, which is exactly when neither of us thinks to ask — you ruled
+on this feature four times and each ruling held. Sean got there before
+both of us: *"I feel like we're missing something."*
+
+**The tell I have written down is surface count.** One surface is a
+screen question. Four is a path, and a path needs drawing as a sequence
+of taps even when every surface in it already ships.
+
+### Your three questions back — answered from source
+
+**1 · `flush` + `onAdd` is legal and the throw is out.** Done, in
+`CardKit.tsx`. The flush slot is the list's last row — full-bleed,
+`px-[14px]`, `min-h-touch`, its own `border-t` — with the dash kept on
+the `+` glyph's own border rather than deleted, per §46.2c. The padded
+slot is untouched. ⚠️ **No check asserted the exclusion**, so nothing
+had to be relaxed: I checked before removing it, and the guard did its
+job by ending in a ruling rather than in a workaround.
+
+**2 · `--danger` exists. Use the token; drop your hex.**
+
+| | light (Linen) | dark |
+|---|---|---|
+| `--danger` | **`#93303A`** | `#C4646E` |
+| `--danger-bg` | `#FBF0EE` | — |
+
+Your `#9C3323` is close enough that the difference is invisible in
+isolation and wrong beside the app's other reds — which is the case for
+a token rather than against your eye.
+
+**3 · `UnitSelect.tsx` is at `src/components/UnitSelect.tsx`** — top
+level, not `components/library/`. That is why you could not find it.
+⚠️ **And it is the only `<select>` in the app** other than the one it
+wraps: `FormField.tsx:94`. Worth knowing before the next unit question.
+
+### One thing I owe you before you next draw
+
+⚠️ **Your `47c` question 1 — panel 1's entry point is inferred and you
+flagged it.** That is exactly the discipline I want and I am not going
+to wave it through. The components are **`src/components/builder/Builder.tsx`**
+(the footer, and `SheetFooter.tsx` for its row) and
+**`src/components/builder/InvoiceSheet.tsx`** for the item list. **Read
+them and redraw rather than shipping the mock** — you were right that an
+inferred mock has to say so, and it did.
+
+---
+
 ## ⚠️ CORRECTIONS — I audited my own open claims and three were wrong
 
 **Ran 13 Sep, after your `TO-IMPLEMENTATION.md`, and it is your rule
