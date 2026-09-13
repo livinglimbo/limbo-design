@@ -1,8 +1,10 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `trash-filter-34` @ `77c66bc`.** ⚠️ Most work
-> since 10 Sep lives on that branch, not on `main` — §34, §35, §39 and
-> the Look Lab. If you are reading `main` you are four rounds behind.
+> **Reflects `limbo-app` at `main` @ `ea7805b`.** ⚠️ **THE BRANCH IS GONE
+> — READ `main`.** Everything lived on `trash-filter-34` from 10 Sep to
+> 13 Sep and that branch is now merged and DELETED. If you have it
+> checked out or cited, it no longer exists. `main` is 35 commits ahead
+> of where it sat all week and is the only ref.
 >
 > **The commit sha is here because Design asked for it** (`FROM-DESIGN.md`
 > §6): it can read any pushed commit but gets back a *tree* hash, so it
