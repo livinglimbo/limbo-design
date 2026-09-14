@@ -49,11 +49,11 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | F | ❓ **`measuresOnly`'s option set** — which of the nine count units belong in `of what` | **13 Sep** | 🔴 **OPEN** — measured and handed back below |
 | G | Round 32 — the visual design of control #4, the Swap sheet, the stage control | 13 Sep | ✅ **ANSWERED §46** — control #4 and the index are BUILT and live |
 | H | Round 34 — where substitution resolves | 14 Sep | ✅ **ANSWERED §48 — C. BUILT and live.** |
-| I | 🔴 **Round 35 — option B's premise is false; the foot lists unlinked ingredients. Is B still worth it, and if so draw the tap** | **14 Sep** | 🔴 **OPEN — A is complete without it** |
+| I | 🔴 **Round 35 — ⭐ the swap's visual cue (3 options) and gap 1's affordance, both found by Sean on the device; plus option B's false premise** | **14 Sep** | 🔴 **OPEN — the first two are on his screen now; B can wait behind them** |
 
 ---
 
-## 🔴 ROUND 35 — option B's premise is false. The foot does not list what you think it lists.
+## 🔴 ROUND 35 — two faults Sean found on the iPad, and option B's premise is false
 
 **§47's A is BUILT and live.** Gaps 1, 3 and 4, the swap surface, the
 resolution boundary, the tagged `SwapTarget` — all shipped. A swap can
@@ -143,8 +143,104 @@ red. Caught before it was written.
 **b · `48c`'s row is 52px; the app's list rows are 61** (`min-h-row-list`).
 Deliberate, or the frame's own spacing?
 
+### ⚠️ 5 · ADDED 14 Sep — Sean used it on the iPad and found two things, one of them mine
+
+He tested a real swap: **Tanqueray → Gunpowder Gin**, on a four-cocktail
+invoice. Both faults are in `47a`/`48a` territory rather than in B, so
+they are the more urgent half of this round.
+
+#### a · ⚠️ The chevron is a disabled-state token doing an affordance's job — my error
+
+Gap 1's whole purpose is that *something on the row advertises the
+card*. I built that something as a text `›` at `--text-faint`.
+
+**`globals.css` rules against it in the token's own comment:**
+
+```
+--text-muted:  #5F594E;   /* content metadata uses THIS, not faint */
+--text-faint:  #928B80;   /* placeholders and disabled ONLY — */
+```
+
+**Measured: 3.29:1 on `--surface`**, against 6.77:1 for `--text-muted`.
+⚠️ **So the one control that exists to announce a hidden surface is
+painted in the colour the app reserves for things that are switched
+off.** Sean: *"barely visible and awkwardly placed."* He is right twice
+— it is also a bare `›` glyph inline after a truncating summary, so its
+position moves with the text length.
+
+> **What I need: draw the affordance.** Not the token — I can fix that
+> in a line — but whether it is a chevron at the row's trailing edge,
+> the whole sub-line reading as a link, or something else. ⚠️ **I am not
+> choosing, because "make it darker" is the fix for the symptom and the
+> placement is the complaint.**
+
+#### b · ⚠️ §45.4 WAS RULED AND I DID NOT BUILD IT. That is why the swap is unreadable.
+
+You ruled the swapped row's sub-label in §45.4: **`Was <product> ·
+<cost>`**, with the measurement that decided it — provenance takes the
+name slot, the cost survives truncation, `Was` beats `Swapped from` at
+phone width by 53px.
+
+**I built the `Swap`/`Undo` control and not the sub-label.** So the row
+still renders the §25-Aug "product name when it differs" logic, and on
+Sean's screen a swapped row reads:
+
+```
+Tanqueray
+Gunpowder Gin · $1.38/oz                      2 oz      Undo
+```
+
+⚠️ **Which is character-for-character what an UNSWAPPED row looks like
+when the recipe's typed name differs from the linked product** — a
+Cimmaron-Reposado-style row. **Nothing on it says a swap happened.**
+Sean: *"the way it displays the change is so hard to read, I'd be
+worried I'll miss it."* The `Undo` button is the only tell, and it is at
+the far right of a row he is reading left to right.
+
+**Building §45.4 verbatim is the floor, and I will do it either way.**
+But he asked for more than the floor, and given he has now seen the
+feature working, his instinct is worth taking seriously:
+
+> **Sean: *"We need a more creative and better visual cue to show the
+> swap. Strikethrough maybe? I want three options."***
+
+⚠️ **AND THERE IS A RULING ALREADY IN THE FILE THAT CONSTRAINS THE
+STRIKETHROUGH, which you should have before you draw it.**
+`RecipeCard`'s silent-ingredient row already strikes something, and its
+comment states the rule:
+
+```
+/* The purchase is the quantity, so the quantity is what is
+   struck. The name stays at full contrast — the ingredient is
+   still in the drink. */
+```
+
+**So a strikethrough on the product NAME would contradict a rule this
+component already applies** — and worse, it would mean two different
+strikethroughs on one card meaning two different things. **A swap is not
+an absence; the ingredient is still in the drink and is MORE present
+than before, because he chose it.**
+
+> **What I need: three options for the swap's visual cue**, drawn on the
+> same row so they can be held against each other — and against the
+> silent-row strike that already ships. ⚠️ **One of them should be
+> §45.4 as ruled**, so the comparison includes the thing you already
+> decided rather than three alternatives to it.
+
+**Worth stating for the drawing:** the row's top line is the RECIPE's
+ingredient name, which a swap does not change, and the sub-line is the
+product. So the two names in `Tanqueray / Gunpowder Gin` are not
+before-and-after — they are *what the recipe calls for* and *what is
+being poured*. **Any cue that reads as before→after has to say so
+explicitly, because the row's existing grammar already uses that
+vertical relationship for something else.**
+
+
 ### What I need back
 
+0. ⭐ **THE TWO ABOVE FIRST — they are on his screen now.** The swap's
+   visual cue (three options, one of them §45.4 as ruled) and gap 1's
+   affordance. **B can wait behind both.**
 1. ⚠️ **Is B still worth it, knowing the foot has to be built rather
    than made tappable?** Your case for B was that it solves gap 3
    *"without a maintained string"* — but gap 3 is already solved and
