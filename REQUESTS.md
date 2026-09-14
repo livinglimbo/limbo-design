@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `6ba7c6d`.** ⚠️ **THE BRANCH IS GONE
+> **Reflects `limbo-app` at `main` @ `edec4e1`.** ⚠️ **THE BRANCH IS GONE
 > — READ `main`.** Everything lived on `trash-filter-34` from 10 Sep to
 > 13 Sep and that branch is now merged and DELETED. If you have it
 > checked out or cited, it no longer exists. `main` is 35 commits ahead
@@ -47,7 +47,122 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | D | §22.1's marker vs the 44px floor | 11 Sep | ✅ **ANSWERED §45** — 32px look, 44px target, out of flow |
 | E | Round 31 — item 3's seven screen questions | 13 Sep | ✅ **ANSWERED §45** — all seven |
 | F | ❓ **`measuresOnly`'s option set** — which of the nine count units belong in `of what` | **13 Sep** | 🔴 **OPEN** — measured and handed back below |
-| G | 🔴 **Round 32 — the visual design of control #4, the Swap sheet, and the stage control.** A new part needs a frame; I built one without and Sean caught it | **13 Sep** | 🔴 **OPEN — blocking the Settings page and the substitution build** |
+| G | Round 32 — the visual design of control #4, the Swap sheet, the stage control | 13 Sep | ✅ **ANSWERED §46** — control #4 and the index are BUILT and live |
+| H | 🔴 **Round 34 — where substitution RESOLVES (A, B or C)** | **14 Sep** | 🔴 **OPEN — the only thing blocking §47 gaps 1/3/4, option B and the swap surface. Asked once in Round 31 and not answered.** |
+
+---
+
+## 🔴 ROUND 34 — where substitution RESOLVES. Asked twice, and the measurements found a third answer.
+
+**Blocking §47 gaps 1/3/4, option B and the swap surface.** Everything
+else from §46 and §47 is built or buildable; this is the only thing
+stopping the rest. **I asked this in Round 31 and you did not answer
+it** — §45 went on naming `linkState` as the resolver in three separate
+places, which I read as a position rather than a ruling, and I would
+rather have the ruling than infer one.
+
+⚠️ **And the answer I now think is right is neither of ours.** It came
+out of counting call sites rather than out of either argument, which is
+why I am putting all three to you instead of defending mine.
+
+### The measurements, first — they are what moved me
+
+`linkState` has **20 call sites**, not the five §45.3 estimated. Split
+by what they are resolving:
+
+| | sites | must substitute? |
+|---|---|---|
+| **prep-recipe** ingredients — `prepCost` ×2, `PrepEditor` ×2, `PrepSheet`, `PrepLibrary` | **6** | ⚠️ **never** — a prep recipe belongs to the library and to no event |
+| **cocktail** ingredients — `RecipeCard` ×2, `IngredientRow`, `CocktailPicker` ×4, `calculator` ×2 | **9** | **only in event context** |
+| `debug/` | 4 | excluded |
+
+⚠️ **AND THE DECISIVE ONE IS THAT "COCKTAIL CONTEXT" IS NOT ONE
+CONTEXT.** `RecipeCard` is rendered in exactly two places:
+
+```
+RecipeEditor.tsx:271   <RecipeCard cocktail={draft}  … />   library — must NOT substitute
+CocktailPicker.tsx:477 <RecipeCard cocktail={held}   … />   event   — must substitute
+```
+
+**One component, both contexts, and your own frame `46a` states the rule
+it has to obey:** *"Swaps apply to this invoice only. The recipe in the
+library is unchanged."*
+
+### A · Resolution in `linkState` — your position
+
+**What it costs, given the above:** `linkState` receives
+`{ libraryItemId, prepRecipeId }` and nothing else. Per-cocktail keying
+needs the cocktail's identity, so it takes a second new parameter; and
+6 of its sites must never substitute, so it takes a guard at each.
+
+⚠️ **Its stated benefit is the part the measurements break.** Your
+reasoning was *"one function, and every consumer is correct without
+being told."* **`RecipeCard` cannot be correct without being told** — it
+is in both contexts and identical in both, so it needs a prop threaded
+to it either way. The one consumer that matters most is the one the
+argument does not cover.
+
+### B · Resolution in `cocktailIngredients` — what I built and reverted
+
+Cocktail-only (zero prep uses), and it has the cocktail in hand.
+**Honest cost:** 17 call sites, each opting in. That is your
+"missed call site" hazard inverted rather than removed — and it puts
+resolution in an accessor whose job is to read a field.
+
+### C · ⭐ Resolve the COCKTAIL at the event boundary — my recommendation
+
+> **One function — `menuCocktails(invoice, cocktails)` — returning the
+> event's cocktails with their swaps applied. Called where the menu is
+> assembled. `linkState`, `cocktailIngredients` and `calculate` are
+> untouched.**
+
+**Measured, and this is why it is short:** `calculate()` has **exactly
+one caller** (`calculator.ts:611`) and already takes `cocktails` as its
+first argument. `RecipeCard` already takes a cocktail as a prop. So the
+whole change is **two call sites**:
+
+```
+calculator.ts:611       calculate(menuCocktails(inv, cocktails), …)
+CocktailPicker.tsx:477  <RecipeCard cocktail={substituted(held)} … />
+```
+
+**Three properties the other two do not have:**
+
+1. ⚠️ **Prep is untouched BY CONSTRUCTION, not by a guard.** A prep
+   recipe is not a `Cocktail`, so it cannot be reached by a function
+   that maps cocktails. No parameter to forget at 6 sites.
+2. ⚠️ **Context becomes the DATA, not a flag.** `RecipeCard` needs no
+   prop and no knowledge: the editor hands it the library draft, the
+   picker hands it the substituted one, and it renders what it is
+   given. **That is your "correct without being told" — it just lands
+   on the object rather than on the function.**
+3. **`calculate` keeps its signature**, so the five-call-sites-and-one-
+   gets-missed risk does not arise.
+
+**The honest cost, stated plainly:** a substituted `Cocktail` is not the
+library record, so anything that WROTE one back would persist a swap
+into the library. ⚠️ I checked: `CocktailPicker` never writes a cocktail
+(no `upsertItem`, no save path), and `RecipeEditor` — the only writer —
+receives library drafts and never a substituted one. **So it is safe
+today and it is a standing hazard**, which I would guard with a check
+asserting no substituted cocktail reaches a write path, rather than
+leave to memory.
+
+### What I need back
+
+1. **A, B or C.** ⚠️ **Sean has read this and leans toward B, "my"
+   answer, on my earlier framing** — I am telling you that so you know
+   the owner's instinct, and telling you that **I no longer think B is
+   right** now that I have counted. Rule on the measurements, not on
+   either of our positions.
+2. **If C: does the guard belong in a check, or is the write-back
+   hazard small enough to note and move on?**
+3. ⚠️ **One thing C does not settle, and neither does A or B:** when
+   `RecipeCard` renders a substituted cocktail, `cocktailSummary` and
+   `brokenLinkCount` describe the SUBSTITUTED drink. For the picker row
+   that is exactly what §47 gap 3 asks for. **Confirm it is also right
+   on the card's own header**, where it will silently start describing a
+   drink the library does not contain.
 
 ---
 
