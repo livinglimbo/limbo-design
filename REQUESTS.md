@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `edec4e1`.** ⚠️ **THE BRANCH IS GONE
+> **Reflects `limbo-app` at `main` @ `1d736b2`.** ⚠️ **THE BRANCH IS GONE
 > — READ `main`.** Everything lived on `trash-filter-34` from 10 Sep to
 > 13 Sep and that branch is now merged and DELETED. If you have it
 > checked out or cited, it no longer exists. `main` is 35 commits ahead
@@ -48,7 +48,111 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | E | Round 31 — item 3's seven screen questions | 13 Sep | ✅ **ANSWERED §45** — all seven |
 | F | ❓ **`measuresOnly`'s option set** — which of the nine count units belong in `of what` | **13 Sep** | 🔴 **OPEN** — measured and handed back below |
 | G | Round 32 — the visual design of control #4, the Swap sheet, the stage control | 13 Sep | ✅ **ANSWERED §46** — control #4 and the index are BUILT and live |
-| H | 🔴 **Round 34 — where substitution RESOLVES (A, B or C)** | **14 Sep** | 🔴 **OPEN — the only thing blocking §47 gaps 1/3/4, option B and the swap surface. Asked once in Round 31 and not answered.** |
+| H | Round 34 — where substitution resolves | 14 Sep | ✅ **ANSWERED §48 — C. BUILT and live.** |
+| I | 🔴 **Round 35 — option B's premise is false; the foot lists unlinked ingredients. Is B still worth it, and if so draw the tap** | **14 Sep** | 🔴 **OPEN — A is complete without it** |
+
+---
+
+## 🔴 ROUND 35 — option B's premise is false. The foot does not list what you think it lists.
+
+**§47's A is BUILT and live.** Gaps 1, 3 and 4, the swap surface, the
+resolution boundary, the tagged `SwapTarget` — all shipped. A swap can
+be made, it is visible from outside the card, and the stale-quantities
+notice is on the remedy.
+
+**B is not built, and this is why.**
+
+### ⚠️ 1 · The foot lists the ingredients with NO product behind them
+
+`48c` says: *"The picker's foot already lists every product the menu
+needs, deduplicated. Make those lines tappable."*
+
+**It lists the opposite.** Read from `CocktailPicker`:
+
+```
+foot.buy   = read.unlinked   ingredients whose linkState is `none`
+foot.make  = read.make       prep recipes
+foot.broken                  links pointing at deleted records
+```
+
+`readRecipe` pushes to `unlinked` only in the `else` branch — after
+`linked`, `prep`, `broken` have all been excluded. **So `foot.buy` is
+every ingredient that resolves to NOTHING**, and the copy under it says
+so in the app's own words: *"These have no product behind them, so they
+aren't on the invoice."*
+
+> ⚠️ **Which makes every line in it unswappable by your own §45.1
+> ruling:** *"an unlinked ingredient cannot be substituted anyway,
+> because there is nothing to substitute from. So the from-id is present
+> exactly when substitution is possible."* **B, applied to the list that
+> exists, is a Swap button on the only rows that can never have one.**
+
+**And it is not a list of rows.** It renders as one comma-joined
+sentence — `{foot.buy.join(", ")}` — a paragraph, not a row set. There
+is nothing there to make tappable.
+
+### 2 · So `48c`'s row is a NEW list, and that is the real ask
+
+The row you drew —
+
+```
+Bacardi Superior    Daiquiri, Mojito · 4 bottles    $75.96    Swap
+```
+
+— has a product, the cocktails using it, a **quantity** and a **cost**.
+None of those four is in the foot. Quantity and cost come from
+`calculate()`, which runs in the calculator and not in the picker.
+
+⚠️ **That is not "make those lines tappable." It is a new surface that
+happens to sit in the foot**, and it is close to what your own option C
+describes — you rejected C for giving up apply-immediately, and this
+inherits its data without inheriting that fault. **Worth knowing before
+you draw it, because it changes what B costs from a screen to a
+feature.**
+
+### 3 · The thing that is genuinely undrawn: the extra question
+
+You named it and left it: *"one extra question per swap… work out what
+that extra question looks like; if the spec does not draw it, say so."*
+
+**Saying so.** `48c` draws the row at rest — `Daiquiri, Mojito` — and
+then moves to option C. **It never draws the tap.** Sean overruled
+event-wide, so a swap from a deduplicated line has to ask *"in which
+cocktail?"*, and nothing specifies whether that is a sheet, rows
+expanding in place, or a multi-select.
+
+⚠️ **I am not inventing it.** That is a new state of a part, which is
+trigger two of the rule we agreed this week — and inventing one is
+exactly what Sean caught on the Settings page.
+
+### 4 · Two smaller ones, both real
+
+**a · A prep→prep swap cannot be witnessed.** Gap 4's staleness test
+works on what appears on an invoice: a product target is stale until a
+line references it, a prep target is stale while a line still
+references the old product. **Prep→prep changes no product**, so
+nothing on the invoice can tell Sean the quantities went stale. Built
+as "not claimed" rather than guessed.
+
+⚠️ And the naive version of that test would have shipped the button
+**permanently red**: treating any prep target as stale means a
+product→prep swap reads "out of date" forever, because prep never
+reaches the buy list and no line can ever match it. Tap, apply, still
+red. Caught before it was written.
+
+**b · `48c`'s row is 52px; the app's list rows are 61** (`min-h-row-list`).
+Deliberate, or the frame's own spacing?
+
+### What I need back
+
+1. ⚠️ **Is B still worth it, knowing the foot has to be built rather
+   than made tappable?** Your case for B was that it solves gap 3
+   *"without a maintained string"* — but gap 3 is already solved and
+   shipped, so B is now a convenience rather than a fix. **If the answer
+   is "not yet", that is a complete answer and A stands on its own.**
+2. **If yes: draw the tap** — the disambiguation question, and whether
+   the row carries quantity and cost from the calculator.
+3. **The prep→prep staleness gap** — a signal, or an accepted silence?
 
 ---
 
