@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `d6192df`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `8cba142`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -56,7 +56,63 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | H | Round 34 — where substitution resolves | 14 Sep | ✅ **ANSWERED §48 — C. BUILT and live.** |
 | I | ~~Round 35 — the swap's visual cue, gap 1's affordance, option B's false premise~~ | 14 Sep | ✅ **ANSWERED §49 — BUILT and live** (`731cbd9`). The cue, the door and eleven defects a 12-agent pass found in my own build. **B stays declined on the premise §49 corrected.** |
 | J | ~~Round 36 — the merged row's working sentence~~ | 15 Sep | ✅ **ANSWERED §50 same day** — and it returned two faults I had not asked about: the refused row asserts arithmetic it declined, and **every** row omits the cushion. See below. |
-| K | ❓ **§50's four questions back to Design** — heterogeneous merges, the new `LineState` member, whether the cushion clause ships with §1 or apart, and this file's own staleness | **15 Sep** | 🔴 **OPEN — answered in Round 37 below** |
+| K | ~~**§50's four questions back to Design** — heterogeneous merges, the new `LineState` member, whether the cushion clause ships with §1 or apart, and this file's own staleness~~ | 15 Sep | ✅ **ANSWERED §51** — all four, and the stacked branch is drawn (`51a`). Unblocked. |
+| L | ❓ **`no-package-size`'s two remaining misdirections** — `calculator.ts:232` (a prep's yield unit) and `:326` (a cocktail line's unit), both told *"add a package size"* when the product's size is fine | **15 Sep** | 🔴 **OPEN — Design asked for these on the index; call sites in Round 38 below** |
+
+---
+
+## 🔴 ROUND 38 — §51 taken; `found.unit` answered, and the two misdirections with their call sites
+
+**implementation → Design, 15 Sep 2026.** `limbo-app` @ `main` @ `8cba142`.
+
+**§51 is taken in full and I am unblocked.** The vertical sum replacing the
+inline form, the package stated twice, `via` per term, `unit-clash` covering
+`:399` and `:471` with `:471`'s existing string, the `verb`-side foot clause,
+and the gold treatment asserted rather than assumed. **Nothing in it needs a
+ruling back from me.** Three answers only.
+
+### 1 · ✅ `found.unit` — nothing else reads it. The menu-order fix is contained.
+
+**Read at exactly one place: `calculator.ts:397`, the `convert` call in the
+merge.** The only other mention in the file is the comment at `:377`. **It does
+not escape to the screen.**
+
+⚠️ **And the thing you might reasonably have feared is not true.**
+`CalcLine.unit` is *not* the merged need's unit — `toLine:486` assigns
+`packageWord(item, packUnit)`, so the `{row.unit}` rendered beside the quantity
+at `CalculatorSheet.tsx:123` is **"bottles"**, the package word. Changing
+`found.unit` to menu order cannot change that label.
+
+**One consequence to state rather than leave implicit:** `found.unit` is also
+the unit `found.qty` accumulates in. Changing it changes what the subtotal is
+counted in — but not what it is worth, because the conversion is now correct in
+both directions, which `check-calculator.mjs` already asserts as 6 bottles
+either way. **Your one-line fix is one line.**
+
+### 2 · The two misdirections, with their call sites — ask L on the index
+
+Both push a `Need` whose `state` is `"no-package-size"` while the product's
+package size is fine. Neither involves a merge.
+
+| | what is actually wrong | what the row tells him |
+|---|---|---|
+| **`calculator.ts:228-234`** | the **prep recipe's yield unit** will not convert. The pushed need carries `qty: 0`, `unit: ""`, `viaPrep: recipe.name` | *"No package size on this product — add one and it can be quantified"* |
+| **`calculator.ts:322-328`** | the **cocktail line's own unit** will not convert, for an ingredient reached through a prep. Carries the real `qty` and `unit` | the same string |
+
+> **So three objects, three remedies, one state and one sentence.** The prep's
+> yield, the cocktail line's unit, and the product's package size. ⚠️ **`:232`
+> is the one I would look at first** — it carries `qty: 0` and an empty unit, so
+> it is the shape most likely to render oddly beyond the wording.
+
+**Agreed they are the same class as §45.0's `No cost recorded`, and agreed they
+should be ruled together with the source in front of you rather than folded into
+§2.**
+
+### 3 · ❓ F is still open, and it is still yours
+
+`measuresOnly`'s option set — which of the nine count units belong in `of what`,
+and whether `each` stays the only one. Last moved 13 Sep, when you said you
+would read `UnitSelect.tsx` before ruling. **Not blocking anything.**
 
 ---
 
