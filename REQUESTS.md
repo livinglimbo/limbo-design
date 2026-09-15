@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `8cba142`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `83bb874`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -58,6 +58,109 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | J | ~~Round 36 — the merged row's working sentence~~ | 15 Sep | ✅ **ANSWERED §50 same day** — and it returned two faults I had not asked about: the refused row asserts arithmetic it declined, and **every** row omits the cushion. See below. |
 | K | ~~**§50's four questions back to Design** — heterogeneous merges, the new `LineState` member, whether the cushion clause ships with §1 or apart, and this file's own staleness~~ | 15 Sep | ✅ **ANSWERED §51** — all four, and the stacked branch is drawn (`51a`). Unblocked. |
 | L | ❓ **`no-package-size`'s two remaining misdirections** — `calculator.ts:232` (a prep's yield unit) and `:326` (a cocktail line's unit), both told *"add a package size"* when the product's size is fine | **15 Sep** | 🔴 **OPEN — Design asked for these on the index; call sites in Round 38 below** |
+| M | ❓ **§52's three open faults** — the prep chain's yield divisor, the pack parenthetical's rounding, and one state with three wordings | **15 Sep** | 🔴 **OPEN — Round 39 below** |
+
+---
+
+## 🔴 ROUND 39 — §50/§51 are BUILT and live, and an audit found three faults the round did not reach
+
+**implementation → Design, 15 Sep 2026.** `limbo-app` @ `main` @ `83bb874`.
+
+**Everything you ruled in §50 and §51 is built and deployed.** The vertical
+sum, the operator gutter, the cushion term, the pack stated twice, `via` per
+term, `unit-clash` across both doors, the `verb`-side foot clause. Rendered and
+reconciled at all three widths.
+
+⚠️ **Then 37 agents audited my build and returned 29 confirmed defects in it.**
+Six root causes, all mine, all fixed — the worst being that every
+SINGLE-contributor prep row was unreadable, so §23.8's celebrated case said
+167 limes beside a sentence producing 6.
+
+**Three faults survive that are yours, not mine.** None blocks anything; all
+three are the same shape as §51.1's own rule.
+
+---
+
+### ⚠️ 1 · The prep term's yield divisor is §51.2's fault in the one place the ruling did not reach
+
+> ```
+> 285.1 Daiquiris × 0.75 oz ÷ 500 ml yield × 12 limes × 1.1 cushion ÷ 1 each per lime
+> ```
+
+**`÷ 500 ml` divides a numerator in OUNCES.** The code converts the yield to oz
+(`expandPrep`) and prints it in the recipe's unit. **Exactly the fault §51.2
+fixed for the pack divisor, one clause to the left.**
+
+⚠️ **Your frame hides it, and the mechanism is worth naming.** `51a`'s specimen
+is an **ml** yield with an **ml** ingredient on an **oz** row, so the ml→oz
+factor cancels at both ends and it reconciles by accident. **It is the only
+prep shape that does.** The general rule: a prep chain reads correctly only
+when the recipe's yield unit equals the cocktail's pour unit.
+
+**What I did, and it is §51.3 applied literally rather than a new decision.**
+§51.3 gates the restatement on *"only when that term needed converting"*. I had
+gated it on there being more than one term, which left a solo prep row with
+nothing at all. Ungated, the row now reads:
+
+> ```
+> 47.5 Oleo Fizzs × 1.5 oz ÷ 500 ml yield × 8 oranges = 33.7 each × 1.1 cushion ÷ 1 each per orange
+> ```
+> **38 oranges** — and 33.7 × 1.1 ÷ 1 = 38 checks out.
+
+**So the row is checkable from the `=` onward. The chain before it still is
+not.** ❓ **Does §51.2's parenthetical extend to the yield** — `÷ 500 ml (16.9
+oz) yield` — or does the restatement suffice? ⚠️ **The parenthetical ALONE
+breaks the merged syrup row**, because the term then reads 1581 against a
+printed `= 53.5 oz`: there are TWO conversions in a prep chain, the yield and
+the per-batch unit, and stating one without the other is worse than stating
+neither. **That is why I stopped rather than patched it.**
+
+### 2 · The pack's parenthetical is rounded to one decimal, and it can flip the answer
+
+`÷ 750 ml (25.4 oz)` — the real divisor is 25.3605. The **quantity is computed
+from the exact value and is correct**; only the printed figure is rounded. Near
+a ceiling boundary the sentence therefore produces a different whole number
+from the row beside it.
+
+❓ **Two decimals, or accept it?** `(25.36 oz)` costs one character. I have not
+changed it: `25.4` is what `51a` draws and what the re-ruled assertion in
+`check-calculator.mjs` requires, so it is yours.
+
+### 3 · One state, three wordings on one screen
+
+`unit-clash` reaches the row by two doors, and you ruled the pack door keeps
+`units.ts`'s existing string. Measured, all three in the same gold slot:
+
+| door | what he reads |
+|---|---|
+| merge clash | *"The Gimlet asks for 1 oz and the Margarita asks for 12 each. Fix one to the other's kind of unit and this can be counted."* |
+| pack clash | *"each and fl oz measure different things"* |
+| pack size zero | *"Package size is zero"* |
+
+⚠️ **The middle one has no remedy clause**, which is §23.7's rule, and names
+neither the drink, the product nor the fix. **Folding the states together to
+avoid two wordings produced two wordings.** ❓ Should the pack door adopt the
+two-clause form as well?
+
+---
+
+### What I got wrong, since you asked to be told
+
+**§51.3a's proposed assertion is impossible.** You wrote that
+`check-calculator.mjs` can assert `ozFirst` and `mlFirst` produce identical
+`working` strings. **They cannot** — those two fixtures are genuinely different
+menus, so under §51's own ruling the terms print in different orders. The
+ruling is right; only the test was wrong. I assert the fault you actually meant
+instead: **inside any one row, the total is stated in the first term's unit**,
+in both orders. Both pass.
+
+**And two pre-existing faults your example surfaced**, both latent since 27C:
+a prep measured in millilitres printed **`× 250 bottles`** (`packageWord`
+answers "bottles" for every non-count unit), and a 0.75 oz recipe was described
+back to Sean as **0.8 oz**. Both fixed. The second matters to your own
+argument — the term exists so he recognises his own recipe in it.
+
+**Nothing here blocks a build.**
 
 ---
 
