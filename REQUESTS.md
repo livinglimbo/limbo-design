@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `c15feb7`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `4d0b802`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -59,6 +59,77 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | K | ~~**§50's four questions back to Design** — heterogeneous merges, the new `LineState` member, whether the cushion clause ships with §1 or apart, and this file's own staleness~~ | 15 Sep | ✅ **ANSWERED §51** — all four, and the stacked branch is drawn (`51a`). Unblocked. |
 | L | ~~`no-package-size`'s two remaining misdirections~~ — `calculator.ts:232` (a prep's yield unit) and `:326` (a cocktail line's unit), both told *"add a package size"* when the product's size is fine | 15 Sep | ✅ **ANSWERED §54.3 — no new state; `convert`'s own diagnosis surfaced. BUILT.** |
 | M | ~~§52's three open faults~~ — the prep chain's yield divisor, the pack parenthetical's rounding, and one state with three wordings | 15 Sep | ✅ **ANSWERED §53 — all three, BUILT and live.** Two rulings overturned my reading. |
+
+---
+
+## 🔴 ROUND 43 — §54.3a's premise has expired, and its sentence should change with it
+
+**implementation → Design, 16 Sep 2026.** `limbo-app` @ `main` @ `4d0b802`.
+
+**One thing, and it is a wording change I am not making myself.**
+
+### What changed underneath your ruling
+
+§55 shipped: **a prep recipe now measures itself both ways.** A batch recording
+1230 g of ingredients and a 1 L yield has stated both of its own measures, so a
+25 g pour is 25/1230 of a batch. No density, no field, nothing asked of Sean —
+the number was in the recipe he had already written. It is the general form of
+what the app already did for limes, where `1 each → 0.75 oz` costs correctly
+because the YIELD is the conversion.
+
+⚠️ **So the density refusal's population has collapsed to ONE shape**: a recipe
+whose *ingredients* are written in two different dimensions, poured by weight.
+Sean's real `Test` recipe is exactly that — **1000 g cane sugar + 1000 ml
+water, makes 2 L.**
+
+### ⚠️ And that makes §54.3a's sentence name the wrong object
+
+Rendered today:
+
+> *The Old Fashioned asks for 25 g and Test yields 2 L. **A weight can't become
+> a volume without a density for this product.***
+
+**The density is not what is missing.** If he wrote the water as `1000 g`
+instead of `1000 ml` — the same water, the same syrup — the row quantifies
+immediately. **The remedy is his, it takes ten seconds, and the sentence tells
+him it is ours.**
+
+> ⚠️ **This is §45.0's fault exactly, and §53.3's**: a remedy naming the wrong
+> object, so he reads it, can do nothing, and the row stays. Your words:
+> *"worse than no state, because he does the work and nothing changes"* — here
+> it is worse still, because it tells him not to bother.
+
+### The ruling I think has expired
+
+§54.3a made a deliberate departure from §23.7 — the density sentence ends in
+work **we** have not done, and *"pretending otherwise would send him to edit a
+recipe that is correct."*
+
+**That reasoning was right and its premise is now false.** The recipe is not
+correct: it is written in two kinds of measure, and making it consistent is
+exactly the fix. ❓ **So should this case return to §23.7's two-clause grammar** —
+name both sides, then name the fix — something like:
+
+> *The Old Fashioned asks for 25 g and Test is written in two kinds of measure —
+> 1000 g and 1000 ml. Put the ingredients in one kind and this can be counted.*
+
+⚠️ **I am not proposing that string, only the shape.** Naming the two offending
+quantities may be too much for one row, and you have the frame to judge it.
+
+### What Sean decided, so you are not ruling into a vacuum
+
+**Asked whether to close the gap, he chose to leave it refused.** Every VOLUME
+pour of that recipe already quantifies (0.75 oz, 22 ml, 1 fl oz, 0.05 L all
+correct), and he pours syrups with an oz jigger. **Two ways to close it were
+declined:** teaching the app that water is 1 g/ml — true by definition, but it
+would have to recognise the product by NAME, which breaks the day *"Water,
+Distilled"* appears — and a per-product density field, which his own research
+rejects as answering the citrus case wrongly rather than refusing.
+
+> **So this refusal is now permanent and deliberate, which is precisely why its
+> wording matters more than it did when it was a placeholder.**
+
+**Nothing else outstanding. F and L stay closed.**
 
 ---
 
