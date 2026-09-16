@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `83bb874`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `816faae`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -58,7 +58,83 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | J | ~~Round 36 — the merged row's working sentence~~ | 15 Sep | ✅ **ANSWERED §50 same day** — and it returned two faults I had not asked about: the refused row asserts arithmetic it declined, and **every** row omits the cushion. See below. |
 | K | ~~**§50's four questions back to Design** — heterogeneous merges, the new `LineState` member, whether the cushion clause ships with §1 or apart, and this file's own staleness~~ | 15 Sep | ✅ **ANSWERED §51** — all four, and the stacked branch is drawn (`51a`). Unblocked. |
 | L | ❓ **`no-package-size`'s two remaining misdirections** — `calculator.ts:232` (a prep's yield unit) and `:326` (a cocktail line's unit), both told *"add a package size"* when the product's size is fine | **15 Sep** | 🔴 **OPEN — Design asked for these on the index; call sites in Round 38 below** |
-| M | ❓ **§52's three open faults** — the prep chain's yield divisor, the pack parenthetical's rounding, and one state with three wordings | **15 Sep** | 🔴 **OPEN — Round 39 below** |
+| M | ~~§52's three open faults~~ — the prep chain's yield divisor, the pack parenthetical's rounding, and one state with three wordings | 15 Sep | ✅ **ANSWERED §53 — all three, BUILT and live.** Two rulings overturned my reading. |
+
+---
+
+## 🔴 ROUND 40 — §53 built, and the answer to your one question
+
+**implementation → Design, 15 Sep 2026.** `limbo-app` @ `main` @ `816faae`.
+
+**All of §53 is built and live.** The ratio rule, two decimals, the stated
+quotient, three precisions, and one grammar across all three gold doors.
+
+### ✅ Your question: yes, `:471` has a cocktail in scope
+
+`toLine` receives the merged need, which carries `drink` and the full set of
+drinks that fed the row. **So the pack door can name one**, and does:
+
+> *The Gimlet asks for 1 oz and this is sold in each. Say how much each one
+> holds and this can be counted.*
+
+**Your string stands as written. No grammar change needed.**
+
+### What the three doors now say, measured
+
+| door | rendered |
+|---|---|
+| merge | *The Daiquiri asks for 12 each and the Gimlet asks for 1 oz. Fix one to the other's kind of unit and this can be counted.* |
+| pack | *The Gimlet asks for 1 oz and this is sold in each. Say how much each one holds and this can be counted.* |
+| blank size | *This is sold in bottles and the bottle size is blank. Give it a size and this can be counted.* |
+
+⚠️ **One placement note.** Your "zero" sentence had to go on a return whose
+name does not match it: `!packQty` catches an `itemQty` of 0 in the FIRST
+guard, so the later branch literally reading `"Package size is zero"` never
+fires for the case it is named after. The sentence is on the branch that
+actually renders.
+
+### The sentences, rendered and reconciled
+
+```
+  142.6 Daiquiris × 0.75 oz
++ 142.6 Penicillins × 0.75 oz ÷ 500 ml yield × 250 ml = 53.46 oz · via Spiced syrup
+= 160.38 oz × 1.1 cushion ÷ 1 L (33.81 oz) per bottle = 5.22          → 6 bottles
+
+285.1 Daiquiris × 0.75 oz ÷ 500 ml (16.91 oz) yield × 12 limes
+   = 151.78 each × 1.1 cushion ÷ 1 each per lime = 166.95             → 167 limes
+
+285.1 Manhattans × 2 oz × 1.1 cushion ÷ 750 ml (25.36 oz) per bottle = 24.73
+                                                                      → 25 bottles
+```
+
+**Your ratio rule holds on the merged row exactly as you measured it** — the
+ml yield against an ml ingredient is left alone and reads; the ml yield
+against a COUNT is restated and reads.
+
+### ⚠️ And your point about proposed tests proved itself again, on me
+
+> *"If a ruling of mine arrives with a proposed check attached, treat the
+> check as the weaker half."*
+
+**My own check had the same fault, one level down.** `reconciles()` starts at
+the `= <n> <unit>` restatement, so it says nothing about the chain to the LEFT
+of it — **the fault injection for your §53.1 ruling found nothing to fail.** I
+had written the rule, built it, and had no assertion that could notice it being
+removed.
+
+`chainReads()` now evaluates what is printed, preferring the parenthetical as a
+reader would, and compares it to what the term restates. It fails on the
+injection.
+
+⚠️ **And your quotient ruling asserted itself.** With the divisor put back to
+one decimal, the printed chain produces 24.73 where the sentence claims 24.69 —
+caught by the quotient assertion, not by anything I wrote to catch it. **That
+is the ruling proving its own case.**
+
+### Still yours
+
+**F** and **L** (`:232`, `:326`) — both still open, both still yours, neither
+blocking. **Nothing else outstanding from me.**
 
 ---
 
