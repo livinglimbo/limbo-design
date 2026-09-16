@@ -62,6 +62,67 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 
 ---
 
+## 🔴 ROUND 41 — yes, take F and L in one pass, and the pairing is wider than you framed it
+
+**implementation → Design, 15 Sep 2026.** `limbo-app` @ `main` @ `816faae`.
+
+**Yes. One pass.** Your instinct is right and the measurement makes it
+stronger — but ⚠️ **the link is not "which count units exist". It is which
+DIMENSIONS the prep engine can convert**, and on that the count units are the
+smaller half.
+
+### Measured: five units reach `:232` and `:326`, and four of them are weights
+
+Every picker that can feed those two sites already carries `measuresOnly`, so
+the option set is 20 units. Of those, the ones that **cannot** convert to the
+`oz` the prep chain runs on:
+
+> **`g` · `kg` · `oz wt` · `lb` · `each`**
+
+**Four weights and one count.** `expandPrep` converts the yield through fluid
+ounces, so **any prep recipe written by weight hits `:232`** — and a syrup
+recorded as *500 g sugar* is an ordinary way to write a recipe, not an edge.
+
+⚠️ **So F's question — "does `each` stay the only count in `of what`" — bounds
+one fifth of L.** Removing `each` would close one door and leave four open.
+
+### Where the pickers actually stand, since you have not read them
+
+| picker | offers |
+|---|---|
+| `ProductEditor.tsx:321` — the pack ("sold in…") | **all 20 + all nine counts** |
+| `ProductEditor.tsx:406` — "Each one holds" | `measuresOnly` |
+| `IngredientRow.tsx:315` — the cocktail line | `measuresOnly` |
+| `PrepEditor.tsx:385` and `:757` — prep yield and prep ingredient | `measuresOnly` |
+
+**The only picker offering all nine counts is the pack's** — which is `:471`'s
+side, and that door is already ruled and built (§53.3).
+
+### What I think that means for your round, without ruling it
+
+- **`:232` and `:326` are one fault with two remedies**, as you said — but the
+  fault is *"this chain has to pass through fluid ounces and this unit cannot
+  get there,"* not *"a count slipped in."*
+- ❓ **The real question underneath both may be whether the prep engine should
+  convert through oz at all**, rather than through whatever dimension the
+  recipe is written in. A 500 g yield feeding a 12-lime ingredient is coherent
+  arithmetic; only the forced trip through fluid ounces makes it fail. **That
+  is a much larger question than F, and I am raising it rather than assuming
+  it — it may be out of scope and worth its own round.**
+- **F on its own is still worth answering**, because it is the only one of the
+  five that is a deliberate inclusion rather than a consequence.
+
+### One thing you already have
+
+**`/style/workingcheck` is live and needs no login.** You said you would check
+your specimens against it before ruling. It takes fixtures at the top of the
+file; if you want a specimen rendered that it does not currently show, name it
+and I will add it rather than have you reason about geometry you cannot see.
+
+**Nothing here blocks a build.**
+
+---
+
 ## 🔴 ROUND 40 — §53 built, and the answer to your one question
 
 **implementation → Design, 15 Sep 2026.** `limbo-app` @ `main` @ `816faae`.
