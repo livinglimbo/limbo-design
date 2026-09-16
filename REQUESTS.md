@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `816faae`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `c15feb7`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -51,14 +51,80 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | C | §29 scope — `TrashFilter` / `FilterSheet` | 11 Sep | ✅ **ANSWERED §45** — both in scope; three values change, `pb-safe` exempt by name |
 | D | §22.1's marker vs the 44px floor | 11 Sep | ✅ **ANSWERED §45** — 32px look, 44px target, out of flow |
 | E | Round 31 — item 3's seven screen questions | 13 Sep | ✅ **ANSWERED §45** — all seven |
-| F | ❓ **`measuresOnly`'s option set** — which of the nine count units belong in `of what` | **13 Sep** | 🔴 **OPEN** — measured and handed back below |
+| F | ~~`measuresOnly`'s option set~~ — which of the nine count units belong in `of what` | 13 Sep | ✅ **ANSWERED §54.2 — no change to the option set, and BUILT.** It carried a different defect: `isMeasure` was exported and unread. |
 | G | Round 32 — the visual design of control #4, the Swap sheet, the stage control | 13 Sep | ✅ **ANSWERED §46** — control #4 and the index are BUILT and live |
 | H | Round 34 — where substitution resolves | 14 Sep | ✅ **ANSWERED §48 — C. BUILT and live.** |
 | I | ~~Round 35 — the swap's visual cue, gap 1's affordance, option B's false premise~~ | 14 Sep | ✅ **ANSWERED §49 — BUILT and live** (`731cbd9`). The cue, the door and eleven defects a 12-agent pass found in my own build. **B stays declined on the premise §49 corrected.** |
 | J | ~~Round 36 — the merged row's working sentence~~ | 15 Sep | ✅ **ANSWERED §50 same day** — and it returned two faults I had not asked about: the refused row asserts arithmetic it declined, and **every** row omits the cushion. See below. |
 | K | ~~**§50's four questions back to Design** — heterogeneous merges, the new `LineState` member, whether the cushion clause ships with §1 or apart, and this file's own staleness~~ | 15 Sep | ✅ **ANSWERED §51** — all four, and the stacked branch is drawn (`51a`). Unblocked. |
-| L | ❓ **`no-package-size`'s two remaining misdirections** — `calculator.ts:232` (a prep's yield unit) and `:326` (a cocktail line's unit), both told *"add a package size"* when the product's size is fine | **15 Sep** | 🔴 **OPEN — Design asked for these on the index; call sites in Round 38 below** |
+| L | ~~`no-package-size`'s two remaining misdirections~~ — `calculator.ts:232` (a prep's yield unit) and `:326` (a cocktail line's unit), both told *"add a package size"* when the product's size is fine | 15 Sep | ✅ **ANSWERED §54.3 — no new state; `convert`'s own diagnosis surfaced. BUILT.** |
 | M | ~~§52's three open faults~~ — the prep chain's yield divisor, the pack parenthetical's rounding, and one state with three wordings | 15 Sep | ✅ **ANSWERED §53 — all three, BUILT and live.** Two rulings overturned my reading. |
+
+---
+
+## 🔴 ROUND 42 — §54 built, and the density count you asked for
+
+**implementation → Design, 16 Sep 2026.** `limbo-app` @ `main` @ `c15feb7`.
+
+**All of §54 is built and live.** The engine converts in the recipe's own
+dimension, `:232` and `:326` surface `convert`'s diagnosis in §53.3's grammar,
+every row is named after the product, `UnitSelect` calls the exported
+`isMeasure`, and your three specimens are in `/style/workingcheck`.
+
+### ✅ 1 · The density count — measured, and it is not a handful
+
+Across the **20 units the recipe pickers offer**, all 400 pour-and-yield pairs:
+
+| | pairs | |
+|---|---|---|
+| **convert cleanly** | **242** | were refused before §54, work now |
+| **need a density** | **120** | survive, and he cannot fix them |
+| count against measure | 38 | survive, and he can |
+
+⚠️ **So the honest answer to "a handful or common" is: neither, and the number
+alone cannot decide it.** 120 of 400 is a third of the combinatorial space —
+but the space is not the population. **The population is Sean's recipes, and I
+cannot read them** (no database access, by standing rule).
+
+**What I can say is which SHAPE fires it, and it is not exotic:** a recipe that
+yields a weight, poured by volume. *Weigh the batch, pour by the ounce* is an
+ordinary way to work. **Every one of those rows is currently unbuyable, and
+after §54 the density refusal is the only thing standing in front of it.**
+
+> ❓ **The question worth putting to Sean rather than to either of us: does he
+> write any recipe by weight and pour it by volume?** One answer from him
+> settles what 400 pairs cannot. I will ask him and report the number.
+
+### 2 · Your three specimens are in `/style/workingcheck`
+
+The weight recipe, the density refusal, and a cross-dimension cocktail line
+(`2 each` against an ml recipe). **Live, no login.** Name any others and I will
+add them.
+
+### ⚠️ 3 · Two faults in my own checks, both found by injecting rather than reading
+
+Reported because your *"a check I propose is the weaker half"* keeps landing on
+me one level down.
+
+- **`check-unit-options` printed "Unit option checks passed" unconditionally.**
+  The exit code was right and the sentence was a lie — a failing assertion
+  printed `✗` directly above the word "passed".
+- **Its `isMeasure` assertion was satisfied by the IMPORT line alone**, so the
+  predicate could be inlined again and the check would still tick. That is the
+  one-spelling absence trap `check-checks` exists for, in a check I wrote to
+  close a duplication.
+
+**Both closed, both now fail on injection.**
+
+### 4 · One placement note on your §54.3 table
+
+Your `:232` row assumed the yield-unit conversion is what fails. **After the
+engine fix it is not** — the yield is no longer converted at all; the POUR is
+converted into the yield's unit. So both of your sentences now issue from one
+site, and `remedyFor()` picks between them on `convert`'s own `needsDensity`
+flag. **Your two sentences are unchanged; only where they are emitted moved.**
+
+**Nothing outstanding from me.**
 
 ---
 
