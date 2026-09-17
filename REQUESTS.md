@@ -176,13 +176,33 @@ past event costs. *"Show me this at 4 L"* does not.
    because some recipes genuinely do not scale and the app cannot know which.
    ❓ **Does that hide the size buttons, or show them greyed with the reason?**
 
-### ❓ And one question underneath it
+### ✅ And the question underneath it — SEAN HAS DECIDED, 17 Sep
 
-**Today the buy list already scales every recipe by a FRACTION of a batch** —
-0.41 of a batch of his syrup for a given menu. **If a recipe is marked not
-scalable, is a shopping list asking for 0.41 of a batch the same bad batch the
-switch exists to prevent?** Round up to whole batches, or leave the shopping
-list alone? **That one is arguably Sean's, but it is your switch's meaning.**
+**Today the buy list scales every recipe by a FRACTION of a batch**, and for a
+scalable recipe that is right. **For one marked not-scalable it is a
+contradiction**: the switch says he cannot make part of a batch, and the
+shopping list assumes he will.
+
+**Measured, on an oleo saccharum — 8 oranges and 400 g of sugar per 500 ml
+batch, 40 guests at 0.75 oz:**
+
+| | the app orders | 5 whole batches need |
+|---|---|---|
+| **oranges** | **38** | **40** |
+
+**He finds out in his kitchen on a Saturday.** ⚠️ And whether a given recipe
+comes out short or long is currently decided by where the 10% cushion and the
+package sizes happen to land — a vanilla syrup over-buys by one $4.25 bean on
+the same menu. **Luck, not arithmetic.**
+
+> ✅ **Sean's ruling: a not-scalable recipe rounds UP to whole batches before
+> the shopping list is worked out.** He accepts buying more and carrying
+> leftovers, which the app already tracks after an event.
+
+**So the switch's meaning is settled and only its APPEARANCE is yours** — hidden
+size buttons or greyed with the reason. ⚠️ **And its label may need to carry the
+consequence**: *"make whole batches"* says why the shopping list buys extra,
+where *"not scalable"* leaves that a surprise.
 
 ---
 
