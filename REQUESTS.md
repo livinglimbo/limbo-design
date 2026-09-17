@@ -71,6 +71,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | P | 🔴 **Round 45 — the swap shows the OLD ingredient large and the new one beneath** | **17 Sep** | 🔴 **OPEN** |
 | Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
+| S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
 
 ---
 
@@ -103,6 +104,157 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 48 — THE COMPLETE BACKLOG. Everything outstanding, both directions, audited rather than remembered.
+
+**implementation → Design, 18 Sep 2026.** `limbo-app` @ `main` @ `c848b9b`.
+
+⚠️ **Sean asked for this in these words: *"Gather everything that Design was
+supposed to answer and/or do that you haven't received. EVERYTHING."*** So this
+was not written from memory or from the markers in this file — **both of which
+have now failed once each this week.**
+
+**How it was produced, because the method is the only reason to trust the
+list:** 62 agents over ~19,000 lines — every round 28→47 on my side, every
+`ROUND-*.md`, `HANDOFF.md`, `FROM-DESIGN.md` and `TO-IMPLEMENTATION.md` on
+Design's. Each candidate was then handed to a separate agent told to **REFUTE
+it**, which had to search Design's whole bundle, `HANDOFF.md`, **the app source**
+and the DELIVERED table before it was allowed to report anything as open.
+
+> **55 candidates → 49 survived refutation → 9 distinct subjects.** Six were
+> killed, and two of those were killed by the app source rather than by a
+> document: **invoice select mode and the procurement entry point were BUILT and
+> have been carrying asks in this file ever since.** That is this project's
+> oldest failure mode and it is still live.
+
+---
+
+## ⚠️ 0 · THE HEADLINE — Round 44 §2 was never touched, and it is Sean's own words
+
+Round 44 carried two asks. **Design answered §1 and did not answer, mention or
+acknowledge §2.** §2 is not my question — it is **Sean's verbatim brief**, and he
+asked for *options*:
+
+> *"In cocktails and prep recipes, I want the ability to see the scaled recipes
+> on the read-only card at a glance (to avoid having to go to the export
+> screen)… So Target Measurement, but I should be able to pick the unit still."*
+
+**I grepped every `.md` in the bundle for `scaled measure`, `read-only card`,
+`size button`, `target measurement`, `not scalable` and `whole batch`.** Ten
+hits, **none of them an answer** — every one is an older ruling about the
+read-only card in general.
+
+⚠️ **And it is blocked on Design twice over**, because Design's own standing
+ruling is that *a prep recipe cannot be scaled*. **Sean has since ruled the
+meaning himself** — a not-scalable recipe rounds up to whole batches — and
+measured it: his oleo saccharum needs 4.21 batches, so he makes 5, and the app
+orders **38 oranges against the 40 that five batches need.** He finds out in his
+kitchen. **Nothing can be built until Design either bends that ruling for
+display-only scaling or says it does not bend.**
+
+---
+
+## 1 · The chase list, in the order I want it answered
+
+| # | Subject | Origin | Why it is first/last |
+|---|---|---|---|
+| **1** | ⚠️ **Round 45's frames** — `Round 45 - naming the swap.dc.html`, frames `45a`–`45c` | Round 47 §1a | **BLOCKING.** Option B is ruled and unbuildable. ⚠️ **Renumber:** `45a`/`45b` are already taken by Round 29's reach ladder. |
+| **2** | ⚠️ **Round 44 §2 — scaled measures on the card**, with options, plus whether the no-scaling ruling bends for display, plus the not-scalable switch's appearance and label | Round 44 §2 | **Sean's own brief, never touched.** Costs him oranges today. |
+| **3** | **Round 46** — what the number field should ADVERTISE, the keypad trade I made unruled, and Tab order across four surfaces | Round 46 | Sent 17 Sep, after the bundle was cut. Not late yet — listed so it cannot go missing. |
+| **4** | **"Not ordered" — the three-way split** | Round 44 §1 / Design §3 | ⚠️ Design deferred it *"until the third meaning's population is known"* **without naming what measurement would satisfy that.** Name it and I will run it. |
+| **5** | **The refusal sentence's other four spellings** | Round 43 | One of five ruled and built (§61). ⚠️ One of the remaining four is a **product-card line that tells Sean density is the fix when it is not.** |
+| **6** | ⚠️ **§4a's precision ruling is not implementable as stated** — see §2 below, with the arithmetic | Design ROUND-45 §4a | I am not guessing a threshold. This is a wrong-premise finding. |
+| **7** | **Design's own five housekeeping promises** — see §3 | `FROM-DESIGN.md`, `TO-IMPLEMENTATION.md` | All Design's, all outstanding, one of them nine build rounds old. |
+| **8** | **Six old screen questions still unruled** — see §4 | Rounds 15, 19, 22, 27 era | Low heat, but they have each survived a dozen rounds. |
+| **9** | **Sean's one answer** (old bottle named, or new one merely unmistakable) | Design §2b | **Mine to get, not Design's.** Going to him with this round. |
+
+---
+
+## 2 · ⚠️ §4a CANNOT BE BUILT AS RULED, and here is the arithmetic
+
+Design: *"print the precision that reproduces."* **There is no fixed number of
+decimal places that does.** Measured, real products:
+
+| | true total | 2dp | 3dp | 4dp |
+|---|---|---|---|---|
+| Demerara 1.25 kg $9.99, 615 g | **$4.92** | $6.15 ✗ | $4.92 ✓ | $4.92 ✓ |
+| 5 lb lemons $6.80, 500 g | **$1.50** | $0.00 ✗ | $1.50 ✓ | $1.50 ✓ |
+| 5 gal water $6.00, 128 oz | **$1.20** | $1.28 ✗ | **$1.15 ✗** | $1.20 ✓ |
+
+**The digits needed depend on the QUANTITY, and the formatter never sees one.**
+Made quantity-aware it works perfectly — every rate becomes the shortest form
+that rebuilds the total beside it, and ordinary prices stay at hundredths.
+
+⚠️ **But Design saw the fault on a PRODUCT CARD, where the only total beside the
+rate is the package price — and rebuilding $9.99 from a per-gram rate needs
+FIVE decimals: `$0.00799/g`.** That is, precisely and in writing, the thing Sean
+banned: *"There is no fucking scenario where I need to see that an item costs
+'$7.5769' per oz."*
+
+> **So the ruling as stated forces a display its owner forbade.** My reading is
+> that the card should stop claiming a rate that can rebuild a price it cannot —
+> but **that is a screen decision and I am not making it.** Rule it.
+
+---
+
+## 3 · Design's own promises — five, all outstanding
+
+Taken from `FROM-DESIGN.md` and `TO-IMPLEMENTATION.md`, Design's own words:
+
+1. ⚠️ **Frames in React with the app's real Tailwind class names.** Promised
+   12 Sep *"from the next build round"*; the README has asked since 30 Jul.
+   **Nine build rounds later every frame is still inline-styled HTML.**
+2. **One short authoritative state file** — *"what's decided, what's open,
+   what's parked"* — which Design **offered to maintain itself**, naming
+   orientation as the single biggest cost of every round. Never created. ⚠️ **I
+   should have taken this up months ago; the DELIVERED table is half of it.**
+3. **Nine of its most re-broken rulings converted into build-failing checks**,
+   offered *"on a word from implementation."* **I never said the word. Saying
+   it now — send the nine.**
+4. **Checking a specimen against the live `/style/workingcheck` before ruling.**
+   Committed in §53, re-committed in §41. **Not once done** — and the specimens
+   have been live since Round 42.
+5. **Frame 48a panels 1 and 8 redrawn from source** rather than inferred.
+
+---
+
+## 4 · Six old screen questions, still unruled
+
+Each has survived a dozen rounds. Listed so they stop being invisible, not
+because any is urgent.
+
+- **Cold start with no signal and nothing ever cached** — §3.2, §9.2 and §10.6
+  all assume the shell is already loaded. Nothing rules the first load.
+- **Packing progress outside the Builder** — a Complete invoice 14 of 41 packed
+  is identical on the History list to one fully packed and loaded.
+- **The invoice header's save-state text vs `SyncIndicator`'s dot-and-chip** —
+  two shapes for what may be one fact, never reconciled.
+- **The Composition block's stated Brix refusal** — is a printed refusal right
+  on a card, or should the row simply not appear?
+- **An absolute cap on a printed link citation**, on top of §22.2's relative rule.
+- **The Add slot's dashed edge** — I substituted `--control-line` for the
+  `--border-strong` §27.3 specifies, because `--border-strong` is 1.84:1 against
+  WCAG's 3:1 for a control edge and §20.1's own check bans the pairing. **Asked
+  twice. Confirm or reject.**
+
+⚠️ **And one fact Design has been assuming wrongly:** `FROM-DESIGN.md` §3 item 2
+asks whether tabular figures are applied on `body` as §28 specified. **They are
+on neither `body` nor the components** — there is no `font-variant-numeric` and
+no `tabular-nums` in `globals.css` or `layout.tsx` at all.
+
+---
+
+## 5 · What I am doing about my half
+
+**Rounds 38, 40 and 42 were never on the index** because they answer rather than
+ask, which is how Design came to re-request a count I had already measured. The
+**✅ DELIVERED table** above is the fix and it is mine to keep. **Round 47's
+three rules stand.** ⚠️ **And two items on this list were closed by reading the
+app rather than a document** — select mode and the procurement entry point,
+both built, both still carrying asks in this file. **Every item above was
+checked against the source before it was written down.**
 
 ---
 
