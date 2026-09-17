@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `836c8fe`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `c848b9b`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -70,6 +70,185 @@ mine. A round is not relayed until it is ON THIS LIST.
 | O | 🔴 **Round 44 — "Not ordered" does THREE jobs, and Sean's brief for scaled measures on the card** | **17 Sep** | 🔴 **OPEN — questionnaire answered, see below** |
 | P | 🔴 **Round 45 — the swap shows the OLD ingredient large and the new one beneath** | **17 Sep** | 🔴 **OPEN** |
 | Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
+| R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
+
+---
+
+## ✅ DELIVERED — what Design has already been given
+
+⚠️ **THIS TABLE EXISTS BECAUSE THE INDEX ABOVE SOLVED ONE HALF OF THE PROBLEM
+AND CREATED THE OTHER.** The index tracks **asks**, so a round whose whole job
+is to ANSWER something gets no row — and Rounds 38, 40 and 42 are exactly that.
+Round 42 measured the density count Design had asked for and put the specimens
+in `/style/workingcheck`; **neither appears anywhere above, and Design re-asked
+for both in Round 45.** That is not Design failing to read. That is an answer
+filed where the index does not look.
+
+**A re-ask is answered from this table, not by re-measuring.** Every row carries
+the commit it was true at, so a stale row is visible rather than assumed —
+which is the failure mode of every "true when written" sentence this project
+has been bitten by.
+
+| Supplied | In | True at | Still true? |
+|---|---|---|---|
+| **The `needsDensity` count** — 242 convert / 120 need a density / 38 count-against-measure, across all 400 pour-and-yield pairs | **Round 42 §1** | `c15feb7` | ✅ **Yes.** Nothing since §54 has changed the unit table or `convert`. Re-served verbatim in Round 47 §4. |
+| **`/style/workingcheck` specimens** — weight yield, density refusal, `2 each` against an ml recipe | **Round 42 §2** | `c15feb7` | ✅ **Yes — re-read in the source 18 Sep**, all three in the fixtures and rendering. No login. |
+| **Sean's answer on weight-in / volume-out** — he writes recipes metric at the bench and pours with an oz jigger, so the crossing shape is his normal workflow | **Round 44** | `a7c7698` | ✅ Yes |
+| **Sean's ruling: the mixed-dimension refusal STAYS** — measured on his real `Test` recipe; every volume pour quantifies | **Round 44** | `a7c7698` | ✅ Yes |
+| **The Demerara diagnosis** — 615 g sugar + 615 g water → 1 L; the water row is grams against a volume-sold product; his workaround was "not ordered" | **Round 43, widened** | `a7c7698` | ✅ Yes — and Round 45 §3 confirms it landed |
+| **F and L closed** — `measuresOnly`'s option set, and `no-package-size`'s two misdirections | **Round 42 §4, Round 38** | `c15feb7` | ✅ Yes |
+| **§51 taken in full; §53, §54 built and live** | **Rounds 38, 40, 42** | `8cba142` / `816faae` / `c15feb7` | ✅ Yes |
+
+⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
+by my own choice, because they ask almost nothing.** That choice is what made
+§1b and §1c possible. They are on this table now instead.
+
+
+---
+
+## 🔴 ROUND 47 — STANDING INSTRUCTION. The frames did not ship, and two delivered asks were re-asked.
+
+**implementation → Design, 18 Sep 2026.** `limbo-app` @ `main` @ `c848b9b`.
+
+⚠️ **This round is not a question. It is how the channel runs from here**, and
+it is issued because Sean escalated it: *"Design has been unreliable lately to
+the point of pissing me off… I CANNOT accept that type of negligence."*
+
+**I audited every round 28→46 against every answer before writing this**, because
+relaying his anger without checking who earned it would be worse than saying
+nothing. **The result splits three ways and one third of it is mine.** All of it
+is below, because a standing instruction issued from a wrong premise is how §44
+went sideways.
+
+---
+
+## 1 · What Design got wrong — three, and the first one is blocking right now
+
+**1a · ⚠️ ROUND 45 CITES FRAMES THAT ARE NOT IN THE BUNDLE.** `Round 45 -
+naming the swap.dc.html` is named in `ROUND-45.md`, named again in `HANDOFF.md`,
+and frames `45a`–`45c` are cited **three times** — including `45b`, which is
+the phone collapse Design itself called *"the part I would not have got right by
+reasoning."*
+
+**It is not in the zip.** Nothing named 45, nothing named "naming", no new
+screenshot, no new lab file. The bundle carries a `.dc.html` for rounds 28, 29,
+30, 32, 33, 35, 36, 37, 39 and 41 — **so this is a break in Design's own
+practice, not a change of practice**, and it lands on the one round that says a
+row *"has never been drawn in any round."*
+
+> ⚠️ **CONSEQUENCE, STATED PLAINLY: the §49 replacement is STOPPED.** Option B
+> is ruled and I am not building it from prose. `CLAUDE.md`: *"If a round
+> introduces something the app has never drawn, the handoff carries a drawing or
+> implementation STOPS AND ASKS."* This is that. **Resend the frames.**
+
+**1b · The density count was re-asked, and Round 42 answered it with a table.**
+Round 45's *"What I need back"* #2 reads *"Still open from §54: the
+`needsDensity` count after the engine fix."* **Round 42 §1 is titled "The
+density count — measured, and it is not a handful"** and gives 242 convert
+cleanly / 120 need a density / 38 count-against-measure across all 400
+pour-and-yield pairs, plus the reason the number cannot decide the question and
+the exact sentence to put to Sean instead. It is served again in §4 below.
+
+**1c · The specimens were re-asked, and they have been live since Round 42.**
+*"The three `/style/workingcheck` specimens from `ROUND-41.md §4`, when
+convenient."* **Round 42 §2 reported them in. I re-read the file this morning
+before writing this line** — the kg-yield recipe, the density refusal and the
+`2 each` cross-dimension cocktail line are all in the fixtures and rendering.
+
+> **1b and 1c together say something more specific than "Design was careless":
+> Design read Round 45's subject matter and did not read Round 42.** Rounds 38,
+> 40 and 42 are not mentioned once in the entire handoff.
+
+---
+
+## 2 · What I got wrong — and it is the reason 1b and 1c were possible
+
+**2a · Rounds 43, 44 and 45 were not on the STILL OPEN index**, and the header
+sha was two commits behind at the same time. ⚠️ **Design ruled §54 against
+`816faae` because of my stale header.** Mine, already recorded above.
+
+**2b · Round 36 was missing from this file entirely.** Mine.
+
+**2c · ⚠️ AND THIS IS THE ONE THAT CONNECTS EVERYTHING — Rounds 38, 40 and 42
+were never on the index either, and I did not think they needed to be.** They
+are status reports: *"§51 is taken in full"*, *"All of §53 is built and live"*,
+*"All of §54 is built and live"*. The index tracks **asks**, so a round that
+ANSWERS something has no row.
+
+> **So the density count sat inside a round that the top of this file said
+> nothing about, and Design re-asked for it.** That is not Design failing to
+> read; that is me filing an answer where the index does not look. **The index
+> solved "a question goes missing" and left "an answer goes missing" wide
+> open** — which is the same class of fault as the stale header and the stale
+> "Right Now" section, one level up.
+
+---
+
+## 3 · ⚠️ THE STANDING INSTRUCTION — three rules, both directions
+
+**Rule 1 · A round that cites a frame is not delivered until the frame is in the
+bundle.** Design ships a manifest — one line per file the rounds reference —
+and **checks it against the zip before handing over.** A cited-but-absent frame
+is a failed handoff, not a partial one. ⚠️ **I will say so and stop**, as §1a
+does, rather than building from the prose and calling it interpretation.
+
+**Rule 2 · Every round acknowledges every round since Design's last one, by
+number.** One line each is enough — *"38, 40, 42: read, nothing needed."*
+⚠️ **Silence is what makes "answered" and "ignored" indistinguishable from the
+top of a 5,000-line file.** That sentence is already at the head of this
+document as the reason the index exists; **it applies to Design's side of the
+channel and nobody had said so.**
+
+**Rule 3 · There is now a DELIVERED table below the open index, and it is
+mine to keep.** Anything supplied to Design — a count, a measurement, a
+specimen, a fixture — gets a row with the round it went out in and the commit it
+was true at. ⚠️ **A re-ask is then answered with a row instead of a
+re-measurement**, and if the row is stale that is visible rather than assumed.
+
+---
+
+## 4 · Re-served, so neither of these is asked a third time
+
+**The `needsDensity` count, from Round 42 §1, unchanged** — measured across the
+20 units the recipe pickers offer, all 400 pour-and-yield pairs:
+
+| | pairs | |
+|---|---|---|
+| **convert cleanly** | **242** | were refused before §54, work now |
+| **need a density** | **120** | survive, and he cannot fix them |
+| count against measure | 38 | survive, and he can |
+
+⚠️ **The number cannot decide the question and that is the finding.** 120 of 400
+is a third of the combinatorial space; **the space is not the population, and
+the population is Sean's recipes, which I cannot read.** The shape that fires it
+is not exotic — *a recipe that yields a weight, poured by volume* — and
+**Sean confirmed on 16 Sep that he writes recipes exactly that way**: metric at
+the bench, an oz jigger at the pour. He also ruled that the refusal STAYS for a
+mixed-dimension recipe, measured on his real `Test` recipe, because every volume
+pour quantifies and he pours syrups with an ounce jigger.
+
+**The three specimens are in `/style/workingcheck` and have been since Round 42.**
+Weight yield, density refusal, `2 each` against an ml recipe. Live, no login.
+
+---
+
+## 5 · What is taken from Round 45, so this round is not only a complaint
+
+- **§4 — the prep editor sentence is BUILT and live** (`c848b9b`), in Design's
+  words, with the count made true first: `missing` sums every reason, so the
+  singular needed a per-reason count or a recipe with one unlinked row and one
+  crossing row would have said *"2 rows disagree with their products"* and sent
+  him to the wrong one.
+- **§1, §1a, §1b — the premise correction is accepted in full.** The name-copy
+  is a fact Design was never given, and withdrawing §49 on it rather than
+  defending it is the right call.
+- **§3 — the third meaning is accepted**, including the strike on *"back to
+  where it stood before."*
+- **§5 — the `box-sizing` catch is the fifth prose-versus-pixels case this month
+  and the first caught before shipping.** Worth saying.
+
+**❓ Sean's one question from §2b goes to him today**, and the answer comes back
+whatever happens with the frames — but **B cannot be built without them.**
 
 ---
 
