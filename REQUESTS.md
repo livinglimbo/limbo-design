@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `c98b0cc`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `a7c7698`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -44,6 +44,13 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 
 **Nothing leaves this list until it is answered.**
 
+⚠️ **AND THE INDEX ITSELF FAILED ON 17 SEP.** Rounds 43 and 44 were written,
+pushed and handed over while the index ran A–M, every row answered — so the
+file's top said nothing was open while two live asks sat below it. **The index
+built to stop asks going missing went stale in exactly the way it was built to
+prevent**, and the header sha was two commits behind at the same time. Both are
+mine. A round is not relayed until it is ON THIS LIST.
+
 | # | Ask | Relayed | Status |
 |---|---|---|---|
 | A | Settings sectioning | 8 Aug | ✅ **ANSWERED §45** — seven-control inventory; Method & Glassware unblocked |
@@ -59,6 +66,68 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | K | ~~**§50's four questions back to Design** — heterogeneous merges, the new `LineState` member, whether the cushion clause ships with §1 or apart, and this file's own staleness~~ | 15 Sep | ✅ **ANSWERED §51** — all four, and the stacked branch is drawn (`51a`). Unblocked. |
 | L | ~~`no-package-size`'s two remaining misdirections~~ — `calculator.ts:232` (a prep's yield unit) and `:326` (a cocktail line's unit), both told *"add a package size"* when the product's size is fine | 15 Sep | ✅ **ANSWERED §54.3 — no new state; `convert`'s own diagnosis surfaced. BUILT.** |
 | M | ~~§52's three open faults~~ — the prep chain's yield divisor, the pack parenthetical's rounding, and one state with three wordings | 15 Sep | ✅ **ANSWERED §53 — all three, BUILT and live.** Two rulings overturned my reading. |
+| N | 🔴 **Round 43 — the mixed-measure refusal blames a density when the remedy is Sean's** — and the same sentence has FIVE spellings in the app, two of which he reads regularly | **16 Sep** | 🔴 **OPEN** |
+| O | 🔴 **Round 44 — "Not ordered" does THREE jobs, and Sean's brief for scaled measures on the card** | **17 Sep** | 🔴 **OPEN — questionnaire answered, see below** |
+| P | 🔴 **Round 45 — the swap shows the OLD ingredient large and the new one beneath** | **17 Sep** | 🔴 **OPEN** |
+
+---
+
+## 🔴 ROUND 45 — the swap names the ingredient he is NOT pouring
+
+**implementation → Design, 17 Sep 2026.** `limbo-app` @ `main` @ `a7c7698`.
+
+**Sean, verbatim:** *"Take a look at what happens when I swap an ingredient for
+a menu. The original ingredient persists as the larger of the two texts, with
+the swapped ingredient below it. That is fucking stupid. If I swap it, it's the
+new ingredient, which means it should be the ingredient in focus now — whereas
+the original ingredient should be the footnote."*
+
+⚠️ **This is your §49 layout and I am not calling it a bug.** You ruled it, in
+writing, and defended it. **But three facts have arrived since, and one of them
+is a row nobody has seen.**
+
+---
+
+### 1 · The row you have not seen — lead with this one
+
+**Swap a product for a PREP RECIPE.** The row then reads the OLD bottle's name
+in the large text, `Prep recipe · cost` beneath it — **and the thing actually
+in the glass is named nowhere on the row at all.**
+
+Not smaller. Not secondary. **Absent.** A swap to a prep is one of the four
+directions `SwapTarget` supports and the UI offers it live.
+
+### 2 · A fact you were never told, and it explains the whole layout
+
+⚠️ **Linking a product COPIES THE PRODUCT'S NAME into the recipe's ingredient
+name.** So the "ingredient" and the "old product" are frequently the same
+string — which is precisely why the old bottle reads as the row's identity. The
+layout is doing what it was told; it was told something you did not know.
+
+### 3 · Two screens state the same swap in opposite orders
+
+The menu list one screen up reads new-for-old. The card reads old-over-new.
+**Same event, two grammars.**
+
+---
+
+### ⚠️ And the honest history, because it changes what the answer must do
+
+**This is Sean's second run at the same instinct.** You declined his
+strikethrough in August and diagnosed it better than he did: *he wants the row
+to show a BEFORE and an AFTER, and two stacked names cannot do that.*
+
+**The new complaint is that diagnosis coming true.** You also pre-approved one
+escalation — a coloured chip — and ⚠️ **a chip does not answer this.** It marks
+that a swap happened; his complaint is about which name is the row's identity.
+**If the round returns a chip he will be unhappy in the same words.**
+
+> ❓ **The question: on a swapped row, which name is the row's identity?** And
+> what carries the provenance — a sub-label, a chip, something else — given
+> that the two names are often the same string and sometimes one of them is
+> absent entirely.
+
+**Nothing here blocks a build.**
 
 ---
 
@@ -298,6 +367,40 @@ rejects as answering the citrus case wrongly rather than refusing.
 
 > **So this refusal is now permanent and deliberate, which is precisely why its
 > wording matters more than it did when it was a placeholder.**
+
+### ⚠️ ADDED 17 Sep — two more spellings, and a number that cannot reproduce itself
+
+**The same message has FIVE spellings in the app.** Two of them Sean reads
+regularly, and one is on a card he opened this morning:
+
+- **The prep editor** says *"No cost per ounce — some ingredients are measured
+  by weight, which can't be converted to ounces."* ⚠️ **Three things wrong.**
+  Weight is fine — a weighed row against a weight-priced product costs
+  perfectly. The fault is a MISMATCH between one row and its product. "Per
+  ounce" is stale since §57 for any recipe that yields a weight. And the remedy
+  is HIS, ten seconds, while the sentence says it is the app's limitation.
+- **Measured, on his real Demerara Syrup 1:1** — 615 g sugar, 615 g water,
+  makes 1 L. The sugar is priced by weight and costs fine. **The water row is
+  written in GRAMS against a water product sold by volume**, so it refuses and
+  drops the whole recipe to "partial cost". ⚠️ **His workaround was to mark the
+  water "not ordered"** — which removes it from the cost and makes the warning
+  go away, and is the same word Round 44 is about.
+
+### ⚠️ And one more, which is §53.2's ruling not yet applied here
+
+**A product card shows `$0.01/g` for a cost that is actually `$0.008/g`.**
+Measured on his Demerara sugar, $9.99 for 1.25 kg:
+
+| | |
+|---|---|
+| 615 g, as the app computes it | **$4.92** |
+| 615 g at the displayed $0.01/g | **$6.15** |
+
+**The arithmetic is right; the displayed rate is overstated by 25%**, because
+money rounds to the cent and a cent is coarse per gram. ⚠️ **This is the class
+you ruled on twice this week** — a figure that cannot reproduce the number
+beside it — and §53.2's answer was to print enough precision that it can.
+**Same paint, one more coat.**
 
 **Nothing else outstanding. F and L stay closed.**
 
