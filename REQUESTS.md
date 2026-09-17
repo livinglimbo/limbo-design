@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `a7c7698`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `d7a668f`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -69,6 +69,119 @@ mine. A round is not relayed until it is ON THIS LIST.
 | N | 🔴 **Round 43 — the mixed-measure refusal blames a density when the remedy is Sean's** — and the same sentence has FIVE spellings in the app, two of which he reads regularly | **16 Sep** | 🔴 **OPEN** |
 | O | 🔴 **Round 44 — "Not ordered" does THREE jobs, and Sean's brief for scaled measures on the card** | **17 Sep** | 🔴 **OPEN — questionnaire answered, see below** |
 | P | 🔴 **Round 45 — the swap shows the OLD ingredient large and the new one beneath** | **17 Sep** | 🔴 **OPEN** |
+| Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
+
+---
+
+## 🔴 ROUND 46 — what a number field should advertise, and where Tab goes
+
+**implementation → Design, 17 Sep 2026.** `limbo-app` @ `main` @ `d7a668f`.
+
+**Sean, verbatim, one bullet with three asks in it:**
+
+> *"The 'custom' option is clunky. When I enter a figure, it only registers if
+> I use numbers only – that isn't implied anywhere. So when someone types in a
+> custom figure, they usually would type in the number and then the unit (e.g.
+> 500 ml). But if they do that, then it doesn't take. **When I begin typing the
+> unit should appear and I should be able to hit enter to complete that
+> entry.**"*
+>
+> *"Now that I think about it, whenever I'm in a field that contains numbers, I
+> should be able to hit enter to 'complete' that fields box, no?"*
+>
+> *"One of my peeves is not being able to reliably use the tab key to navigate
+> around certain areas of the app where it would make data entry so much
+> quicker. (E.g. Details card for the invoice, item cards in the libraries,
+> etc.). The exceptions would be fields where I'm typing more information, and
+> as such, would need a way to hit enter to drop to another line (e.g. Notes
+> sections, Rich Text sections, etc.)."*
+>
+> *"Get Design on this."*
+
+⚠️ **He said "Get Design on this", so here is exactly what I did and did not
+take.** Two of the three were defects with no undrawn part in them and shipped
+as §60. The third is yours, and so is the half of the first one that asks for
+something to APPEAR.
+
+---
+
+### What shipped, so you are not ruling on a solved problem
+
+**The box could not read "500 ml", and then it ERASED it.** `Number("500 ml")`
+is NaN, the guard rejected it, and `setCustom("")` ran anyway — on every path,
+including that one. No chip, no message, no text. ⚠️ **The screen after a
+rejected entry was identical to the screen before he typed.**
+
+It now reads the number and an optional unit through the real unit registry —
+`500` and `500 ml` are both 500 ml, `2 L` is 2000, `16 fl oz` is 473.18 — and
+refuses a weight or a count **by name**, in the sheet's own existing warning
+line: *"A batch volume can't be a weight — try ml, L or fl oz instead of g."*
+The text stays in the box when it is refused.
+
+**Enter finishes a number field** everywhere in the app — it blurs, which runs
+the field's own tidy-up, so Enter does what tapping away always did. A
+`<textarea>` cannot reach the handler, so his own stated exception for Notes
+and Rich Text is held by the type rather than by anyone remembering it.
+
+---
+
+### 1 · ⚠️ THE FINDING YOU SHOULD SEE FIRST — the field asked for a unit and gave him a keyboard with no letters
+
+The box was `inputMode="numeric"`. **On an iPad that raises a digits-only
+keypad.** So the field he is describing — the one he wants to type `500 ml`
+into — was, on the device this app is built for, physically incapable of
+accepting the letters. He hit it with a hardware keyboard attached, which is
+why he could type it at all and why it looked like a parsing bug.
+
+I set it to `text` to unblock the fix. ⚠️ **That is a trade I made and it is
+yours to confirm or overturn:** a text keyboard costs him the fast keypad for
+the common case, which is three digits. The alternatives — a number field with
+a unit control beside it, or a keypad plus a small set of unit chips — are
+screens, not settings, and neither has ever been drawn.
+
+### 2 · "When I begin typing, the unit should appear"
+
+⚠️ **This is a part the app has never drawn**, which is the trigger that says
+implementation stops. He is describing something that completes as he types.
+
+**And note what it is really for.** His complaint was not only that it failed —
+it was *"that isn't implied anywhere."* The placeholder reads `Custom…`, which
+tells him nothing about what the box accepts. **So the ask is an affordance
+question, and the completion is one possible answer to it.** A placeholder
+reading `500 ml`, or a unit shown beside the box, might answer the same
+complaint for less.
+
+⚠️ **I did not change the placeholder**, deliberately — it is the same question
+and it should get one answer, not a stopgap from me plus a ruling from you.
+
+**Also for you:** I reused this sheet's existing warning line for the refusal —
+same `text-warning`, same position, directly under the chip row. It works, but
+it sits *between* the preset chips and the custom-chip row, which splits them.
+Confirm or replace.
+
+### 3 · Tab order — and this one is a PATH, not a screen
+
+He names two surfaces and says "etc.": the invoice Details card, and the item
+cards in the libraries. ⚠️ **A feature that spans surfaces cannot be validated
+one surface at a time** — your own §44 ruling — and this one has no drawing at
+all today.
+
+What a ruling needs to settle:
+
+1. **Which fields are in the order**, and in what sequence. A card's fields are
+   laid out in two columns in places, so reading order and tab order can
+   disagree.
+2. **What happens at the end of a card.** Does Tab wrap, fall to the footer
+   buttons, or leave the card?
+3. **Where the multi-line fields sit.** He wants Enter to make a new line in
+   Notes and Rich Text — so Tab has to be the only way out of them, and a Tab
+   inside a rich-text editor is a formatting key in most editors.
+4. **Whether the sheets are traps.** An open sheet that lets Tab reach the page
+   behind it is a bug he will find immediately.
+
+⚠️ **This is worth more than it looks.** He is fast on a keyboard and he is
+doing a 314-product library pass by hand right now. This is the one ask in the
+bullet that changes how long that takes.
 
 ---
 
