@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `4d0b802`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `c98b0cc`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -59,6 +59,156 @@ index at 11:31 on 13 Sep and Design answered it at 11:49.
 | K | ~~**§50's four questions back to Design** — heterogeneous merges, the new `LineState` member, whether the cushion clause ships with §1 or apart, and this file's own staleness~~ | 15 Sep | ✅ **ANSWERED §51** — all four, and the stacked branch is drawn (`51a`). Unblocked. |
 | L | ~~`no-package-size`'s two remaining misdirections~~ — `calculator.ts:232` (a prep's yield unit) and `:326` (a cocktail line's unit), both told *"add a package size"* when the product's size is fine | 15 Sep | ✅ **ANSWERED §54.3 — no new state; `convert`'s own diagnosis surfaced. BUILT.** |
 | M | ~~§52's three open faults~~ — the prep chain's yield divisor, the pack parenthetical's rounding, and one state with three wordings | 15 Sep | ✅ **ANSWERED §53 — all three, BUILT and live.** Two rulings overturned my reading. |
+
+---
+
+## 🔴 ROUND 44 — one word cost a third of a purchase, and Sean's brief for scaled measures on the card
+
+**implementation → Design, 17 Sep 2026.** `limbo-app` @ `main` @ `c98b0cc`.
+
+**Two asks. The first is urgent because it is already wrong on his screen, and
+it gates the third.**
+
+---
+
+## ⚠️ 1 · "Not ordered" is one word doing two jobs, and it under-bought by a third
+
+§55 taught a prep recipe to measure itself both ways — a batch recording 1230 g
+of ingredients and a 1 L yield states its own density, so a weight pour needs
+nothing asked of anyone. **The reasoning for counting "not ordered" rows toward
+that mass was that the phrase means "not on a shopping list", not "not in the
+bottle."**
+
+**That is right for his filtered water, which stays in the syrup. It is wrong
+for anything strained out — and the record cannot tell them apart.**
+
+Measured on his real Simple Syrup, poured by weight:
+
+| | orders |
+|---|---|
+| as recorded | **3 bags of sugar** |
+| + one 500 g row of ice, marked not ordered | **2 bags** |
+
+**A third less, and the printed working sentence looks entirely normal in both
+cases** — the only figure that moves is an intermediate one he has no reason to
+question. ⚠️ **Under-buying is the half that runs a bar dry, and it arrives
+silently on the screen he takes to a shop.**
+
+**Shipped as §56:** the derivation now refuses when any such row is present.
+A recipe with none keeps the feature; one with them is back to where it stood
+before, which was correct. **The assertion is phrased as a property rather than
+a case — *adding a row he does not buy can never reduce what he is told to
+buy*** — so it survives whatever the word comes to mean.
+
+> ❓ **Does "Not ordered" need to become two ideas?** Something like *"I have
+> this already"* (in the batch, off the list — water, house ice he makes) versus
+> *"this leaves before the end"* (strained, discarded — citrus husks, spent
+> botanicals).
+>
+> ⚠️ **You collapsed four phrasings into this one word deliberately, and I am
+> not reopening that lightly.** But the batch work gave it a second meaning
+> without anyone deciding to, and **every row Sean has already marked was marked
+> under the old one.** Whatever you rule, the existing rows need a reading.
+
+⚠️ **And this gates nesting.** One word with two meanings, multiplied down every
+level of a recipe chain, is the single riskiest thing in his whole brief.
+
+---
+
+## 2 · Scaled measures on the read-only card — ⚠️ SEAN'S OWN BRIEF, and he asked for options
+
+**His words, verbatim:**
+
+> *"In cocktails and prep recipes, I want the ability to see the scaled recipes
+> on the read-only card at a glance (to avoid having to go to the export
+> screen) — think like how the export sheet presents 500ml, 750ml, 1000ml,
+> custom. So Target Measurement, but I should be able to pick the unit still.*
+>
+> *For the cocktail card, the base recipe is the start, then we have the scaled
+> measures including custom. For the prep recipe card, the "Yield" is the start,
+> but then we would be adding the scaled measures. I need the app to scale the
+> base yield just like we would cocktail recipes.*
+>
+> *The "custom" measures need to be on the read-only card, which means I should
+> have to enter the edit mode, type in the custom batch or yield, save, and then
+> the measures should be saved on the read-only card.*
+>
+> *This is a job for Design. Ask it to give me several options for how this
+> would look. I'm leaning towards having a button that expands between the rows
+> and presents something similar to the 'table' on the export sheet."*
+
+**He has asked for several options. That is the ask.**
+
+### ⚠️ 2a · It needs a ruling of yours to bend first
+
+**You ruled that a prep recipe cannot be scaled**, and it is written into the
+code in four places: *"a prep recipe already IS the batch, so a 750 ml column
+would be scaling a batch to a batch."*
+
+**I think it should bend, and I think your own reasoning is why it can.** That
+argument is about the COCKTAIL method — a cocktail derives a batch by summing
+per-drink pours, so scaling a batch to a batch is circular. **A prep recipe
+states its own size outright**, which is better information, not worse. And the
+app already contains the counter-argument in writing: the note defining the
+yield field says *"to make 750 ml you multiply every source by 750 ÷ total
+yield."*
+
+**Scaling for DISPLAY is also not scaling the record.** ⚠️ Changing the stored
+yield would rewrite the recipe's cost-per-unit and quietly change what every
+past event costs. *"Show me this at 4 L"* does not.
+
+### Four constraints before you draw
+
+1. ⚠️ **The prep row is a 61px list row, not an open card.** An expanding table
+   inside a list row is a different problem from one inside an editor. Both
+   cards exist; say which one you are drawing.
+2. ⚠️ **A general "how much" box would offer 20 units and five of them cannot
+   produce an answer.** A target in `each` or `lb` is meaningless for a cocktail
+   batch. Sean explicitly wants to pick the unit, so the offered set is a
+   decision rather than a default.
+3. ⚠️ **A saved per-recipe target is the OPPOSITE call to one you made next
+   door.** The export sheet deliberately does not remember last week's choice —
+   *"an export that silently reuses last week's choice is the kind of thing you
+   only notice after sending it."* Sean is asking for exactly that memory on the
+   card. **Both may be right; they should at least be the same decision made
+   twice on purpose.**
+4. **A recipe can be marked "not scalable"** — Sean asked for the switch,
+   because some recipes genuinely do not scale and the app cannot know which.
+   ❓ **Does that hide the size buttons, or show them greyed with the reason?**
+
+### ❓ And one question underneath it
+
+**Today the buy list already scales every recipe by a FRACTION of a batch** —
+0.41 of a batch of his syrup for a given menu. **If a recipe is marked not
+scalable, is a shopping list asking for 0.41 of a batch the same bad batch the
+switch exists to prevent?** Round up to whole batches, or leave the shopping
+list alone? **That one is arguably Sean's, but it is your switch's meaning.**
+
+---
+
+## 3 · Flagged early, not asked yet — the chain's working sentence
+
+Nesting (a recipe inside a recipe) is coming and is the largest item in his
+brief. **One design problem in it is worth your knowing now, because it may
+change how you answer §2.**
+
+Today a prep row's working reads:
+
+```
+285.1 Daiquiris × 25 g ÷ 1 L yield × 615 g = 3564 g × 1.1 cushion ÷ 4 lb (1814.37 g) per bag = 2.16
+```
+
+**Two levels means two yields and two per-batch figures on one line, and there
+is nowhere to put them.** That line is the feature — it is what lets him
+disagree with a number — so it cannot be improvised. **Not asking yet. Naming
+it.**
+
+---
+
+## Still open from before
+
+**Round 43** — the mixed-measure refusal still says a density is needed when the
+actual remedy is his and takes ten seconds. Unanswered.
 
 ---
 
