@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `6934de2`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `89e25cb`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -72,6 +72,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
+| V | 🔴 **Round 51 — the four refusal spellings, pasted as asked.** Plus: two of your nine already exist, and check 9 is built | **18 Sep** | 🔴 **OPEN** |
 | U | 🔴 **Round 50 — B and C are BUILT (§63–§66).** ⚠️ Condition 3 cannot be met as written — the prep export is MULTI-recipe — and six departures from the frames, all forced | **18 Sep** | 🔴 **OPEN** |
 | T | ✅ **Round 49 — Sean chose A. BUILT and live (§62).** ⚠️ Carries a correction to §1b's premise and two surfaces the round never named | **18 Sep** | 🟡 **Not blocking — read before ruling the menu list** |
 
@@ -106,6 +107,70 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 51 — the four spellings, as asked. And two of the nine already existed.
+
+**implementation → Design, 18 Sep 2026.**
+
+**Round 48's "What I need back" #4:** *"The other four refusal spellings — paste
+them with file and line and I will rule all four in one pass, so check 4 has one
+wording to pin."* Here they are.
+
+### The four, with the one Sean actually reads marked
+
+| # | file:line | the string | who sees it |
+|---|---|---|---|
+| **1** | ⚠️ `units.ts:271` | *"{X} is a weight and {Y} is a volume — that needs a density for this product"* | **the source of the other two.** `convert()` returns it and everything downstream quotes it |
+| **2** | ⚠️ `calculator.ts:978` | *"A weight can't become a volume without a density for this product."* | **the buy list's working line — he reads this one regularly** |
+| **3** | ⚠️ `ProductEditor.tsx:448` | *"Costing works inside a dimension: volume per ounce, weight per gram, anything countable per item. Crossing weight to volume needs a density, which isn't built yet."* | **the product editor — and this is the one that is actively wrong** |
+| **4** | `composition.ts:144` | *"Brix needs a density per ingredient — not built yet"* | the cocktail card's composition block |
+
+**The fifth — `prepCost.ts`'s — is the one you ruled in Round 45 §4 and it
+shipped as §61.**
+
+### ⚠️ Why #3 is the one to rule first
+
+*"which isn't built yet"* tells him the app owes him a feature. **On a
+weight↔volume mismatch it does not:** §54 made weight costing work, and the
+remedy is a unit on a row he owns, ten seconds. **That sentence is what sent him
+to mark his Demerara water "not ordered"** — using a flag as a mute button for a
+fault he could have fixed — which is the whole of Round 44 §1.
+
+⚠️ **And #1 is the root.** Rule it and #2 follows, because `remedyFor()` picks
+between two strings on `convert`'s own `needsDensity`. **Rule #1 and #2 as one
+sentence and check 4 has one wording to pin**, which is what you asked for.
+
+❓ **One question back:** *"for this product"* appears in #1 and #2. Sometimes the
+product is fine and the ROW is wrong — the Demerara case. Should the sentence
+name the row rather than the product, or name both?
+
+---
+
+### ✅ Two of your nine already exist, and I did not rebuild them
+
+- **Check 7** — *"adding a row he does not buy can never reduce what he is told
+  to buy"* — **shipped as §56**, and it lives in `check-calculator.mjs:676`
+  phrased as that same property. ⚠️ **You called it the one you would write
+  first; it was written first, three weeks ago.**
+- **Check 8** — *"a control edge meets 3:1"* — is `check-contrast.mjs` §1.4.11,
+  and it is the check that overruled `--border-strong` in the first place.
+
+**Both are on the DELIVERED table now.** That table exists so a re-ask is
+answered with a row instead of a rebuild, and this is its second outing.
+
+### ✅ Check 9 is built — `check-tabular.mjs`
+
+Figures on the five surfaces that stack numbers, **and asserted ABSENT on
+`body`**. ⚠️ **Your §28 put it on `body` and it was never applied anywhere at
+all** — a ruling everyone believed was in force, enforcing nothing, for five
+rounds.
+
+**The remaining six are real work** — 1, 2, 4, 5 and 6 want a runtime harness
+over fixtures, which is `/style/workingcheck`'s job as you said. Not done, not
+forgotten, and check 1 depends on the four spellings above being one sentence
+first.
 
 ---
 
