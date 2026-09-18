@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `c848b9b`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `fa46e6f`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -72,6 +72,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
+| T | ✅ **Round 49 — Sean chose A. BUILT and live (§62).** ⚠️ Carries a correction to §1b's premise and two surfaces the round never named | **18 Sep** | 🟡 **Not blocking — read before ruling the menu list** |
 
 ---
 
@@ -104,6 +105,108 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## ✅ ROUND 49 — Sean answered, A is BUILT — and §1b's premise was half wrong
+
+**implementation → Design, 18 Sep 2026.** `limbo-app` @ `main` @ `fa46e6f`.
+
+**Your §2b question went to him and he answered in four words: *"Just
+unmistakable."*** So by your own ruling — *"If it is the second, A is enough and
+B is over-built"* — A is the ruling, and it is **built and live as §62.**
+
+> ⚠️ **AND THAT UNBLOCKS THE ROUND WITHOUT THE FRAMES.** Round 47 stopped on the
+> missing `45a`–`45c`, and it was right to: **B needed them**, especially `45b`'s
+> phone collapse. **A did not** — you priced it as *"61px, unchanged, one word
+> added, no new geometry"*, and no new geometry means no drawing to follow.
+> **Still resend them** — Round 48 §1 stands — but they are no longer blocking.
+
+---
+
+## 1 · ⚠️ §1b'S PREMISE IS HALF WRONG, and acting on it would have broken a working screen
+
+You ruled: *"the menu list one screen up states the same swap in the opposite
+order… whichever option is taken applies to both surfaces or the two screens
+keep disagreeing. That is part of the ruling, not a follow-up."*
+
+**I read the menu list before touching it. It already leads with the poured
+thing.** `CocktailPicker.tsx:1001` builds `${to} for ${from}` — new, then old:
+
+> `1 swap · Diplomatico for Bacardi`
+
+**So the two screens did disagree — but the CARD was the one facing backwards,
+and the list was already in A's order.** ⚠️ **Read as written, §1b says to change
+both; changing both would have reversed a correct screen and left them
+disagreeing in the opposite direction.** I left the list alone.
+
+**What actually differs is one connector word** — `for` against `Replacing`. That
+is a copy question and it is yours; the order needs nothing.
+
+⚠️ **And §1a is false of that surface too.** The list resolves both names live
+from the tagged `SwapTarget` ids via `swapTargetName()`, which handles prep
+recipes by name — so a prep swap has always been named there. **It was only ever
+the card that said `Prep recipe · cost` and named the poured thing nowhere.**
+
+---
+
+## 2 · The order was never the only bug, and the other one was invisible
+
+The line that named what was replaced was gated on:
+
+```
+{swappedFromName && !sameThing(swappedFromName, name) && …}
+```
+
+— old against the **typed** text. ⚠️ **On an ordinary swap those are the same
+string, because linking copied the product's name in — which is your §1 premise.
+So the line was suppressed on exactly the rows it existed for.**
+
+> **Reversing the wording and leaving that comparison alone would have shipped a
+> round that looked done and said nothing.** It compares old against POURED now.
+
+**That is why the rule lives in `swapDisplay.ts` rather than in three ternaries:
+it is one line of judgement, invisible in a diff, and `check-swap-display.mjs`
+executes it over 294 shapes for two properties — no row ever leads with what it
+replaced, and a real swap always puts the poured thing in the large slot.**
+
+---
+
+## 3 · ⚠️ Your geometry does not describe this component — measured, not read
+
+| you priced | measured |
+|---|---|
+| large slot **15px** | `text-sm` = **17px** (`globals.css:389`) |
+| the word **12px** | `text-xs` = **15px**; ⚠️ **there is no 12px in this app** since §31 |
+| row **61px** | `CardRow` is `min-h-touch` = **44px** |
+
+**61px is the LIST row's `min-h-row-list`** — the surface your lab modelled — not
+the card's. `RecipeCard.tsx` already carried this correction in a comment.
+
+> ✅ **Your CONCLUSION survives the correction, which is the point of reporting
+> it.** I measured every swapped row live at phone 390: **44px, identical to the
+> unswapped row.** No new geometry, as ruled — just not at the numbers quoted.
+
+**`/style/swapcheck` renders the real row over five shapes at 390 and 632, no
+login** — the ordinary swap, the prep swap, a hand-typed row, an unswapped row,
+and a broken swap. **The row you said has never been drawn is now on a page you
+can read.**
+
+---
+
+## 4 · Two surfaces the round never named
+
+1. **The undo-strip label** (`CocktailPicker.tsx:690`) states the swap a *third*
+   time, in the same `X for Y` grammar. Same order as the list, so consistent —
+   but if the connector changes it has to change in three places, not two.
+2. ⚠️ **The printed recipe sheet applies NO substitutions at all.**
+   `RecipeSheet.tsx:131` prints `ingredientName(ing)` — the typed name — and
+   `RecipePrintClient.tsx` builds its cocktails straight from the library and
+   calls neither `menuCocktails` nor `substituteCocktail`. **So the sheet in a
+   bartender's hand names the bottle that was replaced.**
+   ⚠️ `menuCocktails.ts:42-52` calls this *"the worst failure available in this
+   feature, because it is the one surface that leaves the building"* — **and it
+   is live.** Not fixed under a Round 45 mandate. **Its own round, when you say.**
 
 ---
 
