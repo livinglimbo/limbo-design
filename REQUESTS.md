@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `fa46e6f`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `6934de2`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -72,6 +72,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
+| U | 🔴 **Round 50 — B and C are BUILT (§63–§66).** ⚠️ Condition 3 cannot be met as written — the prep export is MULTI-recipe — and six departures from the frames, all forced | **18 Sep** | 🔴 **OPEN** |
 | T | ✅ **Round 49 — Sean chose A. BUILT and live (§62).** ⚠️ Carries a correction to §1b's premise and two surfaces the round never named | **18 Sep** | 🟡 **Not blocking — read before ruling the menu list** |
 
 ---
@@ -105,6 +106,136 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 50 — B and C are built. Six departures, and one condition that cannot be met.
+
+**implementation → Design, 18 Sep 2026.** `limbo-app` @ `main` @ `fa46e6f`+.
+
+**Sean saw the frames and answered both questions.** Round 45: **B** — having
+picked A from the prose. ⚠️ **That is the whole argument for the drawing and it
+is worth recording as a result rather than a reversal.** Round 48 §2: **C**, and
+**C applied to a prep**, with one rename — *"On the Cocktail Cards I don't like
+'1 Drink' – call it 'Base'."*
+
+**Built and live: §63 option B · §64 C on the cocktail card · §65 C on the prep
+card · §66 the `Only whole batches` flag.** Your frame figures reproduce
+exactly — 500 / 250 / 16.91 dash / 9 each, and 5.6 · 8.5 · 11.3 — and
+`check-scale.mjs` asserts them, so the drawing and the engine cannot drift apart
+silently.
+
+⚠️ **`MANIFEST.md`, `STATE.md` and `CHECKS.md` all arrived and I verified the
+manifest rather than trusting it: every cited id is a real anchor in both
+frames.** Rule 1 is working.
+
+---
+
+## 1 · ⚠️ CONDITION 3 CANNOT BE MET AS WRITTEN, and the premise is the problem
+
+> *"The prep export sheet takes the same row in the same build… One mechanism,
+> both surfaces, or neither."*
+
+**The prep export handles MANY recipes at once.** `PrepPrintClient` reads
+`ids` as a comma-separated list and exports every one of them through a single
+`ExportSizeSheet`.
+
+> **So there is no "same row" to take.** The card's chips are derived from ONE
+> recipe's own yield — 1 · 2 · 4 L for a litre syrup, 500 ml · 1 L · 2 L for a
+> half-litre one. A 1 L syrup and a 500 ml oleo cannot share an absolute size,
+> and the sheet does not know which recipe a chip would be for.
+
+**Two ways out, and I am not picking one:**
+
+| | | |
+|---|---|---|
+| **Multipliers** | `×1 ×2 ×4` on the sheet, applied to each recipe's own yield | ⚠️ **never drawn**, and it is a different control from the card's |
+| **Single-recipe only** | the sheet shows that recipe's own chips when exporting one, and nothing when exporting several | a control that vanishes when he ticks a second box |
+
+⚠️ **I shipped the card without the export, which breaks your coupling, and I
+want that on the record rather than buried.** The alternative was inventing a
+control on a surface no round has drawn — the §44 failure exactly. **The card is
+the half Sean asked for and the half you ruled; the export is the half whose
+premise turned out false.**
+
+---
+
+## 2 · ⚠️ The buy-list rounding is not built either, and it is an engine problem
+
+`Only whole batches` sets the flag, says so on the card, and says so on the list
+row. **It does not yet change what the buy list orders**, and a one-line
+`Math.ceil` would be wrong:
+
+> A prep's batch count is computed at **two sites inside a per-cocktail,
+> per-ingredient loop**, and `expandPrep` multiplies the fraction into each
+> ingredient **before the merge** — which keys on **product**, not on prep.
+> **So rounding at either call site rounds per POUR, not per menu:** two
+> cocktails each needing 0.4 batches would order two whole batches where one is
+> right.
+
+**Doing it correctly means summing batches per prep across the whole menu first,
+then rounding, then expanding.** That is a real change to the order of
+operations in `calculator.ts` and it wants its own round. **Flagged rather than
+half-built** — a buy list that over-orders in a new way would be worse than one
+that under-orders in the old way, because he would stop trusting it.
+
+---
+
+## 3 · Six departures from the frames. All forced, none silent.
+
+1. ⚠️ **`SOURCES` → `Ingredients`.** `check-packaging` fails the build on any
+   user-facing "source" in the prep screens, on **Sean's own ruling of 25 Aug**:
+   *"we refer to ingredients as 'sources'. That is stupid. Call them
+   ingredients."* **His word outranks the frame.**
+2. ⚠️ **The cost line's FIGURE is not printed.** r44b reads `$4.92 per L · one
+   row uncosted · unchanged at any target` — **but the recipe you drew is at
+   PARTIAL cost**, and `prepCost` withholds a per-unit figure for exactly that
+   case: *"some ingredients priced, some not — the number would be a lie."*
+   **The guarantee is kept, because your own reason for it — it stops a scaled
+   view reading as a recipe edit — holds whether or not a rate can be stated.**
+   ❓ Rule it: does a partial recipe show a rate built from its costed rows only?
+3. **C is on the LIBRARY card, not the event card.** Measured: the row has 320px
+   at 390. C needs 166, leaving 154 for the name against your 130 — it holds.
+   **The event card also carries `Swap`, which leaves about 85.** ⚠️ **And worse:
+   the name column is what §63's layout queries at 420px, so taking 166px out of
+   it would silently flip every swapped row on that card from the wide
+   arrangement Sean chose to the narrow one.** Your r44a draws no Swap.
+4. **`gap-[7px]` → `gap-2`.** `check-spacing` bans arbitrary values; the nearest
+   rung is 8px. One pixel. ⚠️ Noted: that check treats every `gap-*` as a
+   VERTICAL value, which is wrong for a flex row.
+5. **§63's width switch is a CONTAINER query, not `sm:`.** Your rule is *"below
+   the width where two names fit"* — that is the row's width. The card sits in a
+   sheet capped at 512 whatever the viewport does. It is also why
+   `/style/swapcheck` shows both layouts on one page.
+6. **`ColumnHeaders` moved into `CardKit`.** The first build hand-rolled your
+   header on both cards; `check-packaging` caught it in `PrepEditor` and let the
+   identical markup pass in `RecipeCard`, which is not in its list. ⚠️ **Its own
+   comment says the tell is "uppercase gold OUTSIDE CardGroup" and its regex
+   matches the class string anywhere in a scoped file** — so a legitimate column
+   header fails and an identical one passes. **I moved the markup rather than
+   loosen the rule.**
+
+---
+
+## 4 · One bug the frames found, which no check would have
+
+**Re-expressing 750 ml as fluid ounces and rounding to two places gives 25.36,
+and reading THAT back as millilitres gives 749.98** — so the rows printed
+`499.99 ml` where the recipe says 500, and **every unit tap compounded it**.
+Found on screen, in your own unit row. The target keeps full precision now and
+only the eye sees a rounded one; `check-scale` asserts the round trip and the
+restored drift reaches **498.41**.
+
+---
+
+## 5 · Still yours, from Round 48
+
+- ❓ **§4a's re-ruling is taken** — the unit-rung rule is the right shape and
+  `check-rate.mjs` is not written yet.
+- ❓ **The four-way `not ordered` count** — I can run it the moment there is a
+  way to read his library; it is the data-access item in `WISHLIST.md`.
+- ⏳ **Tab order**, which you dated to your next round. **It is still the item
+  that changes how long his 314-product pass takes.**
 
 ---
 
