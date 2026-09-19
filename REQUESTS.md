@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `89e25cb`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `79df244`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -72,6 +72,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
+| W | 🔴 **Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours | **19 Sep** | 🔴 **OPEN** |
 | V | 🔴 **Round 51 — the four refusal spellings, pasted as asked.** Plus: two of your nine already exist, and check 9 is built | **18 Sep** | 🔴 **OPEN** |
 | U | 🔴 **Round 50 — B and C are BUILT (§63–§66).** ⚠️ Condition 3 cannot be met as written — the prep export is MULTI-recipe — and six departures from the frames, all forced | **18 Sep** | 🔴 **OPEN** |
 | T | ✅ **Round 49 — Sean chose A. BUILT and live (§62).** ⚠️ Carries a correction to §1b's premise and two surfaces the round never named | **18 Sep** | 🟡 **Not blocking — read before ruling the menu list** |
@@ -107,6 +108,89 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 53 — the first device pass on option C, and he does not like how it looks
+
+**implementation → Design, 19 Sep 2026.** `limbo-app` @ `main` @ `8e4d2a1`+.
+
+⚠️ **Round 52 is read and taken — §1's three withdrawals, §2's export ruling,
+§3's ordering, §4's "no rate", §6's layering, §7 and §8.** None of it is built
+yet and none of it is questioned. **This round is about something that happened
+first: Sean ran §52–§67 on the live app, and option C is the part he stopped on.**
+
+### His words, unedited
+
+> *"When I first open the card, it appears as it does in 2.a. But it's not until
+> I click a button (e.g. 500ml) that the extra options show up for batching. I'm
+> not necessarily opposed to this, but frankly, it looks terrible… look how
+> uneven the spacing and alignment is… Overall, everything looks jumbled. **I
+> need Design to get creative here and do its job. Make it neat. Make it clean.
+> Make it informative.**"*
+
+> *"The math all seems good though."*
+
+**So the ruling is right and the arithmetic is right. The execution of it on a
+real card is not**, and three of the four causes were mine — fixed as §68 and
+listed below so you are ruling on what is there now, not on what he photographed.
+
+### ✅ Fixed before this round went out
+
+1. ⚠️ **The target column header WRAPPED.** `500 ML · 4.5` broke across two lines
+   in a 78px column and pushed every figure beneath it out of alignment. **That
+   is most of what "uneven spacing" was.** The header carries the size only now,
+   and cannot wrap.
+2. ⚠️ **`4.5` alone said nothing** — *"ideally it would tell you '4.5 Servings'"*.
+   It reads **`Makes 5.6 servings`** in words, under the chips.
+3. ⚠️ **The chips had no hover state**, and `hover:` would not have given them a
+   working one — **iPadOS reports `(hover: none)`**. They are `HoverRow` now.
+4. **`Only whole batches` moved into Advanced fields** — *"it looks silly where
+   it currently is."* He is right; it is set once and he was editing around it.
+
+### 🔴 What is still yours, and it is the whole of his complaint
+
+**At 390 the control is THREE STACKED ROWS before a single figure appears:** the
+size chips wrap to two rows (`500 ml · 750 ml · 1000 ml` / `4 L`), then the unit
+chips sit beneath them **at a smaller size** (`text-2xs` against `text-xs`), then
+the column headers. ⚠️ **Two chip rows of different sizes, stacked, is the
+"jumbled" he is naming** — and it is my composition, not your frame: `r44a`
+draws one chip row and says nothing about where a unit picker goes, because §2's
+unit ruling and §2's layout ruling were written in different sections.
+
+**Three things worth knowing before you draw it:**
+
+- **The card opens unscaled and the block only appears once a chip is tapped.**
+  He says he is *"not necessarily opposed"* — so that behaviour is live and
+  reversible, not settled.
+- **The unit row only appears once a size is chosen**, which is why he saw the
+  card change shape twice in two taps.
+- ⚠️ **`Base` and the target column are 84/64 and 78px**, and at 390 the row has
+  **320px** total. There is no room for a wider control; there may be room for a
+  shorter one.
+
+❓ **And one thing only you should answer:** does the unit picker belong in this
+block at all, or on the size chips themselves — `500 ml` becoming a chip that
+states its own unit, with the picker moved to where the custom target is typed?
+
+---
+
+### One decision I made that is yours to confirm
+
+**`Ingredient cost` did not change with the target** — *"it doesn't change no
+matter what size I choose."* ⚠️ **It is NOT the figure your condition 1
+protects**: that is the RATE, which genuinely does not move because nothing is
+written. **A total is the cost of the batch on screen, and the batch on screen
+changed.** It scales now and the label carries the size — `Ingredient cost · 4 L`
+— so the rate and the total cannot be mistaken for one another. **Overrule me if
+the total should stay at the recipe as written.**
+
+### One thing I could not diagnose
+
+He reports the **`Aa` formatting marker** on Instructions and Notes is *"off"* —
+`4.a`. §22.1 places it `absolute -top-1 right-0`, a 44px target around a 32px
+box. **I am not guessing at a visual from a description**; asked rather than
+invented, and I will send the measurement once he says what is wrong with it.
 
 ---
 
