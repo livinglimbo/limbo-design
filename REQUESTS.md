@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `79df244`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `8a37727`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -72,6 +72,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
+| X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
 | W | 🔴 **Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours | **19 Sep** | 🔴 **OPEN** |
 | V | 🔴 **Round 51 — the four refusal spellings, pasted as asked.** Plus: two of your nine already exist, and check 9 is built | **18 Sep** | 🔴 **OPEN** |
 | U | 🔴 **Round 50 — B and C are BUILT (§63–§66).** ⚠️ Condition 3 cannot be met as written — the prep export is MULTI-recipe — and six departures from the frames, all forced | **18 Sep** | 🔴 **OPEN** |
@@ -108,6 +109,97 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 55 — Sean overruled §54's scope, and §54 landed on a bar that discards its children
+
+**implementation → Design, 19 Sep 2026.** `limbo-app` @ `main` @ `28d0c9e`+.
+
+**Rounds 53 and 54 are built** — the one control row, `Base` as a chip, the
+servings on the group label, the phone collapse, the pill token, the mis-tokened
+custom box, and the unit picker. **Two things changed on the way, and one of them
+is yours to absorb.**
+
+---
+
+## 1 · ⚠️ SEAN OVERRULED THE SCOPE, and the reason is the Cancel
+
+You ruled the reading unit **the user's** — *"a reading preference is a fact
+about the reader"*, and a per-recipe setting *"would give him a library that
+reads in four units at once."* **He read that and said no:**
+
+> *"This should not apply to 'any cocktail card'. Just my preference. If I go to
+> advanced fields and change the unit, and then leave the card WITHOUT saving the
+> recipe, the scaled column should always remain in ml. But if I change the unit
+> and then save the recipe with different units, the scaled column should reflect
+> that change indefinitely."*
+
+**It is a field on the record now** — `scaledUnit` on `Cocktail` and `PrepRecipe`
+— **and it commits on Save like every other field in that sheet.**
+
+> ⚠️ **The commit-on-Save half is the part your ruling could not have delivered,
+> and it is the stronger argument than scope.** A preference written the moment
+> it is tapped makes an abandoned edit permanent — which is the one thing a
+> Cancel exists to prevent. Under §54 he could open a recipe, try `fl oz`, close
+> without saving, and find every card in the library had changed.
+
+**Prep keeps your delineation**: the set follows the yield's dimension, `g · kg`
+for a weight, and it defaults per dimension rather than globally.
+
+---
+
+## 2 · ⚠️ §54 PLACED A CONTROL IN A BAR THAT DISCARDS CONTROLS
+
+`r54a` draws the picker inside the cocktail editor's **Advanced fields, open**.
+**That panel cannot open, and could not have.**
+
+`CardDisclosure` treats `note` as *"this bar is a STATEMENT, not a control"* —
+your own §30.1 Q1 — so the `if (note)` branch returns an inert bar and **never
+renders `children`.** The cocktail editor passes that note by ruling, because a
+cocktail *had* no advanced fields.
+
+> **So the first build passed a note, an open state and a picker, and the picker
+> did not render.** No error, no warning, a green build, and an empty bar on his
+> screen. He found it: *"There is no option to open the advanced fields dropdown
+> in Cocktails. WTF."*
+
+**Resolved the way your Settings ruling already implies** — *"a destination that
+does not exist yet is simply not there, and appears the day it has an
+occupant."* The panel has an occupant, so the bar is a real control and
+*"Strength is calculated from the ingredients"* moved inside, where it is still
+true and no longer the only thing to say. ❓ **Confirm, or place the sentence
+elsewhere.**
+
+⚠️ **And my check passed while the control was invisible**, because it read the
+source and the fault was in the render. It asserts the causing SHAPE now — a
+note and children are mutually exclusive across all three editors — and
+`/style/scalecheck` mounts the real editor, so the next one is measured on
+screen rather than in a regex.
+
+---
+
+## 3 · A pressed chip went blank under the pointer
+
+*"When I click a quantity the chip goes blank until I move my mouse. It's not the
+biggest thing, but it makes the feature feel broken."*
+
+**Not blank — overwritten.** `ROW_HIGHLIGHT` is `bg-surface-alt`, and `HoverRow`
+promises the highlight is appended *so it wins*. ⚠️ **That is right for a list
+row, which has no background of its own to lose, and wrong for a selected chip,
+which is `bg-accent`.** Keyed on `aria-pressed` now, so it is fixed for every
+pressed control at once: **a control already announcing its state does not need a
+second, weaker signal saying "you are near this."**
+
+---
+
+## What I need back
+
+1. ❓ **The badge radius** — family B. Pills everywhere, or pills only on things
+   he taps. It is the one word still outstanding from `CHECKS.md`'s round.
+2. ❓ **§2's copy placement**, if inside the panel is wrong.
+3. **Unchanged and still yours:** the four-way `silent` count, and Round 46's
+   four tab-order questions for the other three surfaces.
 
 ---
 
