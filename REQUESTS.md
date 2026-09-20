@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `c3dfd4b`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `efdb7f2`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -72,6 +72,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
+| Z | 🔴 **Round 57 — hiding a line from the client's invoice is ALMOST BUILT; only the control is missing.** One question, and it is the risky one | **20 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
 | W | 🔴 **Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours | **19 Sep** | 🔴 **OPEN** |
@@ -110,6 +111,102 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 57 — hiding a line from the client's copy, and the only question that matters
+
+**implementation → Design, 20 Sep 2026.**
+
+**Sean, on why:**
+
+> *"There are simply some items that I don't want to appear on the invoice.
+> Filtered water is a good example because it's something that I virtually never
+> need to buy… I don't want invoices with line items that distract. So perhaps
+> what we could do is simply give me a feature that would allow me to hide
+> invoice items at my discretion."*
+
+---
+
+## 1 · ⚠️ It is already built. All of it except the switch.
+
+**Checked in the source, not assumed** — this channel has sent a finished thing
+back as an ask twice:
+
+| | |
+|---|---|
+| `silent?: boolean` on `InvoiceLineItem` | ✅ `types.ts:941`, *"Excluded from totals and exports"* |
+| The invoice total skips it | ✅ `InvoiceSheet.tsx:60` |
+| **The exported document drops it** | ✅ `invoiceDocument.ts:114` |
+| **An empty category heading is suppressed** | ✅ `invoiceDocument.ts:121` |
+| He can see which lines are hidden | ✅ a quiet `Silent` chip, and the row dims |
+| **A way to set it on an invoice line** | 🔴 **nothing** |
+
+**The row panel offers `Set quantity…`, `Add a note`, `Select lines…` and
+`Remove line`.** That is the whole list (`RowPanel.tsx:413-462`). ⚠️ **The recipe
+kind already has the exact precedent — `Don't order this`, an `Action` row with
+an icon and a label — and the invoice kind has no equivalent.**
+
+> **So the build is one `Action` in an existing list, and the outcome he wants —
+> filtered water off the client's copy, and its category heading gone with it if
+> it was the only line — already works the moment the flag is set.**
+
+---
+
+## 2 · ❓ THE ONE QUESTION, and it is the only risk in the feature
+
+**His own caveat, unprompted:**
+
+> *"I could see this being contradictory, depending on whether an item has an
+> actual price or not. But in my case for now, I would only be hiding items with
+> no cost."*
+
+⚠️ **Hiding a line that HAS a price silently removes money from an invoice that
+was already quoted.** The total drops and the client's copy gives no reason.
+
+❓ **Rule one of these:**
+
+| | |
+|---|---|
+| **Refuse** | the action is unavailable on a priced line, and says why |
+| **Warn** | offered, with the consequence stated before it applies |
+| **Allow** | his invoice, his call — and the sheet already dims the row and chips it |
+
+⚠️ **And this is the `silent` flag's third-job problem arriving on a
+client-facing document.** On a prep recipe, one word already meant *I have this
+already*, *this leaves before the end* and *don't cost this* — which is Round 44
+§1, still open. **Here the same word would also mean *the client does not see
+this*.** If it is heading for a split, this is the moment to know, because the
+control's label is what teaches him which meaning he is using.
+
+---
+
+## 3 · Collapsing categories on the client's copy
+
+> *"I need the ability/option [to collapse] item categories on the invoice. The
+> idea that I do not want my clients to have to view the entire list of line
+> items."*
+
+**The structure is already there** — `InvoiceSection` groups by category, and the
+document renders headings with `display: table-header-group` so one repeats
+across the pages it spans. **So this is a rendering decision on an existing
+shape**, not a data change. ❓ Yours.
+
+---
+
+## ⚠️ 4 · A THIRD ASK EXISTS AND IS DELIBERATELY NOT IN THIS ROUND
+
+Sean also specified **Custom Group Lines** — consolidating chosen lines into one
+renamed line on the client's copy. **He has held it back explicitly:**
+
+> *"I did not intend for you to send the Custom Group Lines request to Design
+> yet. It's going to be a VERY meticulous build, so I want that as its own
+> focus… We will do that later."*
+
+⚠️ **So it is named here only so you do not design toward it by accident, and so
+§3 above is not answered as though it were the first half of something larger.**
+**Do not rule it, and do not let it shape the category answer.** The full spec is
+in `WISHLIST.md` and it will come over as its own round when he says.
 
 ---
 
