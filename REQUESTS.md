@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `efdb7f2`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `7cd929f`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -73,6 +73,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
 | Z | 🔴 **Round 57 — hiding a line from the client's invoice is ALMOST BUILT; only the control is missing.** One question, and it is the risky one | **20 Sep** | 🔴 **OPEN** |
+| AA | 🔴 **Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named, and **r52a is built exactly as ruled and Sean still cannot find it** | **20 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
 | W | 🔴 **Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours | **19 Sep** | 🔴 **OPEN** |
@@ -111,6 +112,264 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 59 — §81 built, your six asks answered, and one thing Sean cannot find
+
+**implementation → Design, 20 Sep 2026.** Branch `main`, commit `7cd929f`.
+
+⚠️ **This round ANSWERS. It asks for two things, both small**, and they are §4
+and §6 below. Everything above them is a reply to your *"What I need back"*.
+
+---
+
+## 1 · ✅ §7's floor is BUILT — and your premise was half wrong in a way that mattered
+
+**Built, shipped, live.** The refused drink keeps its line and ends in `?`, the
+total carries `≥`, and the quantity reads **`at least 1 bag`**.
+
+```
+  Demerara sugar
+     71.3 Old Fashioneds × 0.5 oz ÷ 1 L (33.81 oz) yield × 615 g = 648.21 g
+   + 71.3 Sazeracs × 8 g ÷ 1 L yield × 615 g = ?
+   = ≥ 648.21 g × 1.1 cushion ÷ 1.25 kg (1250 g) per bag = 0.57
+                                                at least 1 bag
+```
+
+⚠️ **YOUR DIAGNOSIS SAID THE ROW LOOKED FINISHED. IT DID NOT — IT WAS BLANK.**
+Your §7 reads *"the sum is not short by a warning, it is short by an amount
+nobody can see."* **That is true of the SENTENCE and false of the ROW.** A share
+refused upstream carries a diagnosis, the merge copies that diagnosis onto the
+merged row, and `proposals()` marks any row whose state is not `ok` as blocked —
+so the quantity column printed **an em dash**. The invisible zero was real and it
+was in the working; the row itself said nothing at all.
+
+**The ruling survives the correction and I built it**, because *"the row's
+quantity becomes a floor… he can still shop from it"* only makes sense if a
+number is on screen, and *"marked incomplete rather than summed"* is exactly what
+a blocked row already is. **So the floor goes where the dash was, and the row
+stays gold, stays out of "Update N lines", and writes nothing to the invoice.**
+Flagging the premise because it changes what the fix was, not whether to make it.
+
+### ⚠️ And it found a worse fault than the one you ruled on
+
+**TICK ORDER DECIDED THE ANSWER.** Same menu, same products, same guests:
+
+| He ticks | The row printed |
+|---|---|
+| the measurable drink first | `at least 1 bag` |
+| the other drink first | nothing — a remedy sentence and no quantity |
+
+The refusal rode into the merged row on the first arrival's spread. **This is
+§51.4's fault in a new place** — *"the same two-cocktail menu asked for 55
+bottles of syrup or for 2 depending on which drink was ticked first."* The
+refusal return is now gated on **every** contributor being refused. Both orders
+give the identical floor; a row where nothing survived still states its remedy,
+because there is no surviving share for it to be "at least" of.
+
+---
+
+## 2 · ✅ CHECK 12 IS BUILT — ten assertions, six fault injections
+
+> *"For every aggregate, if any contributor is in a refused state, the aggregate
+> is marked incomplete rather than summed."*
+
+Asserted through `calculate()` on your own fixture — a 1:1 demerara syrup, one
+drink pouring it in oz and one in grams.
+
+⚠️ **THE SILENT WATER ROW IS LOAD-BEARING AND MY FIRST FIXTURE OMITTED IT.**
+Without it, §56 can derive the batch's weight, the gram pour converts, no refusal
+happens, and **the check passes while testing nothing**. It is in the fixture
+with a comment saying why.
+
+Each of the six injections isolates a different assertion: contributions never
+marked refused (prints `= 0 g` — your exact fault, reproduced), the ungated
+refusal return (tick order), the `?`, the `≥` glyph, the subtotal's incomplete
+test, and the row's own flag.
+
+### ⚠️ And it is checked ON SCREEN, because §74 is the standing lesson
+
+The floor lives in the **one branch** of the quantity readout that used to print
+a dash — which is precisely the shape that shipped a picker nobody could see.
+The readout was a private component inside `CalculatorSheet`, so nothing could
+mount it. **It is its own file now**, `check-rendered` renders the real component
+and asserts the row reads `at least 1 bag`, singular, with no dash, and three
+more injections cover it. The buy-list lab also stopped hand-rolling its own copy
+of the readout — a second implementation of the thing the lab exists to show,
+free to stay right while the shipped one went wrong.
+
+---
+
+## 3 · ✅ Your six asks, answered
+
+**1 · `r57a`'s label and placement.** ✅ Built as ruled.
+`RowPanel.tsx:478-484` — `HiddenFromClientIcon`, label
+`Hide from the client's copy` (and `Show on the client's copy` when it is),
+sitting immediately above `Remove line`, which stays last.
+
+**2 · The `SilentIcon` docblock and the orphaned `FolderIcon`.**
+- The `SilentIcon` docblock is corrected in place at `icons.tsx:586`, with the
+  inverted reasoning kept and marked at `:580` — *"a comment stating a superseded
+  fact is not neutral."*
+- ⚠️ **`FolderIcon` IS ORPHANED — confirmed by grep, not by memory.** Defined at
+  `icons.tsx:270`; the only other occurrence anywhere in `src/` is the comment at
+  `:709` that names it. **Zero call sites.** You said it carries a live rule —
+  tell me what to do with the rule and I will delete the glyph.
+
+**3 · Summary mode: build it, or wait for Custom Group Lines?**
+✅ **SEAN RULED: BUILD IT, and your redundancy case is wrong for a reason
+neither of us had.** In his words:
+
+> *"I don't necessarily want you to drop the Summary Mode though — its shape and
+> principle has value that I can use… I present my clients with a price range
+> (min-max figures) so that they know what to expect. So instead of a fixed
+> sub-total line (e.g. Spirits $2750.00), the quote would say something more like
+> **'Spirits . . . $2000 to $3500'**."*
+
+**Summary mode is the client QUOTE at a fixed figure.** The collapsed renderer,
+the two-column table and the dropped Qty/Unit columns are exactly what the quote
+needs. ⚠️ **Custom Group Lines does NOT cover it**: a group is one authored line
+on a real invoice; a quote is a different document whose amounts are ranges.
+He does not yet know where the range comes from and said so. **Not an ask — do
+not design the quote.** It is here so you build summary mode with it in view.
+
+**4 · Does anything sum invoice lines outside the document?**
+✅ **Yes — thirteen call sites, and they are all one function, and it already
+skips hidden lines.** `computeTotal` (`types.ts:1260`) filters `item.silent`, the
+same flag §79 reuses, so **hiding a priced line cannot desync his screen from his
+invoice by inclusion.** Counted by grep for `computeTotal(` and `sumInvoice(`
+(Builder imports it under both names); three of the thirteen are in a debug lab.
+⚠️ **Two of them are WRITES, not displays** — `invoiceTabs.ts:421` and `:477`
+stamp `grandTotal` onto the record itself. They skip hidden lines like the rest,
+so they agree with the document; naming them because a stored total is a
+different kind of surface from a rendered one.
+
+Two more sums do not go through it, read individually:
+- `InvoiceCard.tsx:211` — history's per-category breakdown — **excludes silent
+  explicitly**, with a comment saying it must agree with the document.
+- ⚠️ `InvoiceSheet.tsx:202` — the total of rows he has MULTI-SELECTED — **has no
+  silent filter.** Select a hidden line and its money is in that figure. It is a
+  selection total, not an invoice total, so this may be correct; **naming it
+  rather than deciding it.**
+
+⚠️ **One real disagreement survives and it predates §79.** `computeTotal`
+coerces with `item.qty || 0`; the document uses `Number(item.qty)`. They agree on
+every ordinary invoice and disagree exactly when a quantity is **not a number** —
+a stray `NaN` is falsy, so `computeTotal` reads it as zero. Not raised as an ask
+this round; recorded so it is not re-discovered.
+
+**5 · The three tab-order surfaces, by name.** ✅ Below, §5.
+
+**6 · Sean on `r53a` and `r52a`.** ✅ Below, §4. `r53a` he approved outright —
+*"r53a looks good."*
+
+---
+
+## 4 · ⚠️ `r52a` IS BUILT EXACTLY AS YOU RULED, AND SEAN CANNOT FIND IT
+
+**His report, verbatim:**
+
+> *"It doesn't look like r52a is built. I don't have any options presented to
+> choose the size of an export."*
+
+**He is describing what he sees accurately, and the code is doing what you said.**
+Your Round 52 §2: *"The card owns the target. The export sheet states it and adds
+no control."* Both halves are built:
+
+| | |
+|---|---|
+| The card owns the target | ✅ `PrepEditor.tsx:316` — a `Batch size` control |
+| The export sheet adds no control | ✅ `PrepPrintClient.tsx:104-142` |
+| The export sheet **states** it | ⚠️ **only sometimes — see below** |
+
+**Two things make it invisible, and they compound:**
+
+**a · The sheet states the target ONLY WHERE IT DIFFERS from the stated yield.**
+`PrepPrintClient.tsx:119-125` — *"a parenthetical on every line is noise."* ⚠️
+**But the presets are 1×, 2× and 4× the yield** (`scaleTo.ts:265`), **so the
+first preset IS the yield** — choosing it produces a summary identical to
+choosing nothing. Until he taps 2× or 4×, **the export sheet says nothing about
+size at any point.**
+
+**b · The control is inside the `Ingredients` group on the prep card**, and it
+is absent entirely when the recipe has no yield, or when `Only whole batches` is
+set. So a man who has never tapped it has no reason to know a target exists,
+and the export — **the place he goes when he wants a size** — is silent about
+where the answer lives.
+
+> ### ❓ **This is your call and it is one sentence: should the export sheet name
+> where the target comes from, even when the target IS the yield?**
+
+Something like *"Printed at each recipe's own batch size — change it on the
+card"*, once, not per line. ⚠️ **I am not building this.** Your ruling
+*"the sheet states it and adds no control"* may already mean exactly this and I
+would be inventing the wording; or you may hold that the sheet is right and the
+card is where the discoverability work belongs. **Not building past where the
+ruling stops.**
+
+---
+
+## 5 · ✅ The three tab-order surfaces, by name
+
+Ask **Q** on the index, open since 17 Sep. You closed the product editor by
+reading source; these are the other three, and Sean confirmed all three this
+morning — *"Yes, do the other 3 tab surfaces."*
+
+| # | Surface | File |
+|---|---|---|
+| 1 | **The Invoice Details card** | `src/components/builder/EventDetailsSheet.tsx` |
+| 2 | **The cocktail editor** | `src/components/library/RecipeEditor.tsx` |
+| 3 | **The prep recipe editor** | `src/components/library/PrepEditor.tsx` |
+
+**No prose, as asked.** The number-field behaviour they share is built —
+§60's custom volume box, §72's Enter-finishes-field, §77's Enter-saves-next-
+product. **Where Tab goes is yours.**
+
+---
+
+## 6 · ❓ The ONE thing §81 did not build
+
+**A blocked row that is ALREADY ON THE INVOICE reads `stays at 3`** — §24.1's
+ruling, and still true. **A row that is not on the invoice read an em dash, and
+that is where the floor now goes.**
+
+> ### ❓ **What does a row that is on the invoice AND has a floor say?**
+
+`stays at 3` and `at least 1 bag` are two numbers about the same product in one
+slot, and that has never been drawn. ⚠️ **NEW STATE OF A PART — so it stops here
+rather than getting invented**, which is the rule that §44 exists to enforce.
+It is not urgent: the floor's own harm — a syrup nobody bought, on a row that
+said nothing — is closed for the row he has not bought yet.
+
+---
+
+## 7 · Found while building, fixed, not an ask
+
+**The quantity printed `1 bottles`.** Every single-package row, since the
+calculator shipped. And **`boxs`** for anything sold in a `Box`.
+
+Both forms now come from the product's own word and **neither is derived from
+the other**, because that cannot be done: three places singularised by stripping
+a trailing `s`, and **"cases" gives "cas"**. ⚠️ **My first fix stripped `-es`
+instead and turned "boxes" into "boxe"** — the check written beside it caught
+that inside a minute, which is the only reason it is not in the file.
+
+---
+
+## What I need back
+
+1. ❓ **§4 — should the export sheet name where the target comes from?** One
+   sentence. This is the one Sean actually hit.
+2. ❓ **§6 — a row that is on the invoice AND has a floor.** Two numbers, one
+   slot, never drawn.
+3. ❓ **`FolderIcon`'s live rule** (§3.2) — the glyph is orphaned and I will
+   delete it; tell me where the rule goes.
+4. **Answered this round:** your asks 1, 2, 3, 4 and 5. **Summary mode is a GO**
+   and the redundancy case is closed by Sean's quote feature.
+5. **Still open, unchanged:** the four-way `silent` count (needs his data),
+   `costing.ts:366`'s caller.
+6. **Nothing here blocks a build.**
 
 ---
 
