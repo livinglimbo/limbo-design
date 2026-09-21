@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `7cd929f`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `1e9a259`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -79,6 +79,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | W | 🔴 **Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours | **19 Sep** | 🔴 **OPEN** |
 | V | 🔴 **Round 51 — the four refusal spellings, pasted as asked.** Plus: two of your nine already exist, and check 9 is built | **18 Sep** | 🔴 **OPEN** |
 | U | 🔴 **Round 50 — B and C are BUILT (§63–§66).** ⚠️ Condition 3 cannot be met as written — the prep export is MULTI-recipe — and six departures from the frames, all forced | **18 Sep** | 🔴 **OPEN** |
+| AB | 🔴 **Round 60 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours** — whether the library should allow the collision at all, and what leftovers does with it | **21 Sep** | 🔴 **OPEN** |
 | T | ✅ **Round 49 — Sean chose A. BUILT and live (§62).** ⚠️ Carries a correction to §1b's premise and two surfaces the round never named | **18 Sep** | 🟡 **Not blocking — read before ruling the menu list** |
 
 ---
@@ -112,6 +113,143 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 60 — two products may share a name, and that decided which line a control touched
+
+**implementation → Design, 21 Sep 2026.** Branch `main`, commit `1e9a259`.
+
+⚠️ **THIS ROUND IS MOSTLY A REPORT. Two questions, both at the end**, and
+neither blocks anything. §83 is built, shipped and measured.
+
+---
+
+## 1 · What was wrong, and it was not one control
+
+§80 (20 Sep) found that *"hide this line from the client's copy"* could hide a
+different line than the one Sean pressed, and named seven more write paths
+carrying the same fault without touching them. This is those seven.
+
+**The fact underneath all of them: nothing in the app stops two products having
+the same name.** `ProductEditor` refuses an *empty* name and nothing else; the
+data audit checks for duplicate **ids** and has never checked names. So an
+invoice can carry two lines called "Ice", and every control that found a line by
+looking its NAME up took the **first** one it met.
+
+| Doing this | Did this |
+|---|---|
+| **+ / −** on the second "Ice" | changed the **first** "Ice" |
+| **Remove line** in the press-and-hold panel | removed the **first** "Ice" |
+| **Ticking one** "Ice" in select mode | ticked **both** |
+| **Remove** on that selection | took **both** lines off |
+| The **rail's ±** beside a product | stepped a **different product's** row |
+| The rail's **"9 in invoice"** chip | could be counting the other one |
+| **Un-ticking a cocktail** | could take a same-named row off with it |
+
+⚠️ **The select-mode one is the worst, because the NUMBER lied.** The bar summed
+both rows while counting one — it offered *"1 line · −$37.00"* and the invoice
+lost $37 across two lines, one of which he never picked.
+
+---
+
+## 2 · The fix, and it is a distinction rather than a better search
+
+An invoice gets asked two different questions, and both were being answered with
+a name:
+
+- **"Which ROW"** — a stepper, Remove, Hide, a selection tick. He is pointing at
+  a line **on screen**, so the key is that line's **position**, with its name
+  checked against it as a guard. If the two disagree, something moved underneath
+  and **doing nothing** is the right answer.
+- **"Which PRODUCT"** — the rail's ±, the calculator, un-ticking a cocktail. He
+  is pointing at a **catalogue entry**, so the key is the **library id**, with
+  the name as the fallback for the 91% of lines that carry no id.
+
+**Measured, not reasoned.** Driven on screen through the real invoice sheet with
+"Ice" in two categories: tick the second → *"1 selected · −$27.00 · Remove 1"*;
+Remove → the Mixers line goes, the Spirits line stays, total $123 → $96. The
+steppers and the hide toggle each hit the row that was touched.
+
+---
+
+## 3 · ⚠️ One of your rulings was overruled, and it is kept and marked
+
+The 10 Aug rule said the selection must be keyed by **description** *because*
+*"removing three lines re-indexes everything after them, so a selection held as
+indices would delete the wrong rows the moment the first one goes."*
+
+**Right about successive deletion. Wrong that a name is therefore a key.** The
+re-indexing worry is answered rather than traded away: every position resolves
+against ONE snapshot and is filtered out in a single sweep, so no index moves
+while another is still being read. The old reasoning sits in the check file with
+a ⚠️ on it rather than being deleted.
+
+**Raised because the behaviour Sean sees changed**: ticking one of two
+same-named rows now ticks one. If you want the other answer, say so.
+
+---
+
+## 4 · 🔴 QUESTION ONE — should the library allow two products to share a name?
+
+**This is the root cause and it is a library rule, not an invoice rule, which is
+why it is yours.**
+
+Everything in §83 is a *defence*. It makes the app act on the right row when two
+products share a name. It does not decide whether that state should exist.
+
+Three shapes, and the difference is what Sean feels:
+
+- **A · Allow it silently.** Today. Two products may be called "Ice"; the app
+  now keeps them apart everywhere it writes. ⚠️ But **the two rows are still
+  identical on screen** — same name, same category band possible, nothing saying
+  which is which. He would read his own invoice and not know.
+- **B · Allow it, but SAY so.** The editor warns on save — *"you already have a
+  product called Ice"* — and he chooses. Nothing is refused.
+- **C · Refuse it.** A name is unique within the library. ⚠️ This is the only
+  one that touches data he already has, and I have not counted his duplicates
+  yet — I can, through the Costing Inspector, if you want the number first.
+
+**What I cannot rule on:** whether two same-named rows need a visible
+difference on the invoice, and if so what it is. That is a screen question and
+this is the round to ask it in.
+
+---
+
+## 5 · 🔴 QUESTION TWO — leftovers shares one line between same-named rows
+
+**Audited, NOT fixed, and this is the one place the collision survives.**
+
+Two invoice rows with the same name share **one** leftover line. Counting what
+is left of one writes the other's chip too, and expanding one expands both.
+
+**Why it was left:** that key is **stored**. Every leftovers record already on
+Sean's iPad and in Supabase is keyed by the name, so re-keying it is a data
+migration, not an edit — and this project's own rule is that the path which
+breaks is the upgrade path, never the defaults path. It also reaches no total,
+no export and no client: a leftovers count is Sean's private record of an event
+that already happened.
+
+**The question is what the screen should do**, and the answer probably depends
+on §4:
+
+- If names become unique (**C**), this dissolves and needs nothing.
+- If they do not, leftovers needs to either show two rows that count
+  separately — which means migrating every stored record — or say plainly that
+  it is counting them together.
+
+**I am not proposing either.** Ruling on §4 first may make this free.
+
+---
+
+## What I need back
+
+1. **§4 — A, B or C**, and if the two rows should differ on screen, what by.
+2. **§5 — only if §4 lands on A or B.**
+3. **§3 — a nod, or an overrule.** The selection behaviour changed and you
+   should know.
+
+Nothing here blocks. §83 is live.
 
 ---
 
