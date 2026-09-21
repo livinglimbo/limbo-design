@@ -74,13 +74,13 @@ mine. A round is not relayed until it is ON THIS LIST.
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
 | Z | 🔴 **Round 57 — hiding a line from the client's invoice is ALMOST BUILT; only the control is missing.** One question, and it is the risky one | **20 Sep** | 🔴 **OPEN** |
 | AA | 🔴 **Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named. ⚠️ **AND ROUND 48's CUSTOM PREP SIZE WAS NEVER BUILT — my miss, found because Sean went looking for it** | **21 Sep** | 🔴 **OPEN** |
+| AC | 🔴 **Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision** | **21 Sep** | 🔴 **OPEN** |
 | AB | 🔴 **Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word** | **21 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
 | W | 🔴 **Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours | **19 Sep** | 🔴 **OPEN** |
 | V | 🔴 **Round 51 — the four refusal spellings, pasted as asked.** Plus: two of your nine already exist, and check 9 is built | **18 Sep** | 🔴 **OPEN** |
 | U | 🔴 **Round 50 — B and C are BUILT (§63–§66).** ⚠️ Condition 3 cannot be met as written — the prep export is MULTI-recipe — and six departures from the frames, all forced | **18 Sep** | 🔴 **OPEN** |
-| AB | 🔴 **Round 60 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours** — whether the library should allow the collision at all, and what leftovers does with it | **21 Sep** | 🔴 **OPEN** |
 | T | ✅ **Round 49 — Sean chose A. BUILT and live (§62).** ⚠️ Carries a correction to §1b's premise and two surfaces the round never named | **18 Sep** | 🟡 **Not blocking — read before ruling the menu list** |
 
 ---
@@ -117,9 +117,13 @@ by my own choice, because they ask almost nothing.** That choice is what made
 
 ---
 
-## 🔴 ROUND 60 — two products may share a name, and that decided which line a control touched
+## 🔴 ROUND 61 — two products may share a name, and that decided which line a control touched
 
-**implementation → Design, 21 Sep 2026.** Branch `main`, commit `1e9a259`.
+**implementation → Design, 21 Sep 2026.** ⚠️ **RENUMBERED from 60 — Design caught
+two rounds carrying that number and two index rows lettered `AB`. This one was written
+from `1e9a259` before Round 59 was handed over; the custom batch size is the real Round
+60. The index is the part that has already failed twice, and a duplicate letter is how a
+row gets overwritten instead of answered.** Branch `main`, commit `1e9a259`.
 
 ⚠️ **THIS ROUND IS MOSTLY A REPORT. Two questions, both at the end**, and
 neither blocks anything. §83 is built, shipped and measured.
