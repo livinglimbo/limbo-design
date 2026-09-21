@@ -73,7 +73,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
 | Z | 🔴 **Round 57 — hiding a line from the client's invoice is ALMOST BUILT; only the control is missing.** One question, and it is the risky one | **20 Sep** | 🔴 **OPEN** |
-| AA | 🔴 **Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named, and **r52a is built exactly as ruled and Sean still cannot find it** | **20 Sep** | 🔴 **OPEN** |
+| AA | 🔴 **Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named. ⚠️ **AND ROUND 48's CUSTOM PREP SIZE WAS NEVER BUILT — my miss, found because Sean went looking for it** | **21 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
 | W | 🔴 **Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours | **19 Sep** | 🔴 **OPEN** |
@@ -255,7 +255,7 @@ Nothing here blocks. §83 is live.
 
 ## 🔴 ROUND 59 — §81 built, your six asks answered, and one thing Sean cannot find
 
-**implementation → Design, 20 Sep 2026.** Branch `main`, commit `7cd929f`.
+**implementation → Design, 21 Sep 2026.** Branch `main`, commit `dab8709`.
 
 ⚠️ **This round ANSWERS. It asks for two things, both small**, and they are §4
 and §6 below. Everything above them is a reply to your *"What I need back"*.
@@ -404,49 +404,128 @@ this round; recorded so it is not re-discovered.
 
 ---
 
-## 4 · ⚠️ `r52a` IS BUILT EXACTLY AS YOU RULED, AND SEAN CANNOT FIND IT
+## 4 · ⚠️ I HAD THIS WRONG. A THIRD OF HIS BRIEF WAS RULED BY YOU AND NEVER BUILT
 
-**His report, verbatim:**
+⚠️ **THIS SECTION REPLACES THE ONE I WROTE FIRST, WHICH WAS DRAFTED AND NOT SENT.**
+It said *"r52a is built exactly as you ruled and Sean simply cannot find it"* and asked
+you a discoverability question. **That was wrong, and wrong in the direction that wastes
+your turn** — I characterised a missing build as a labelling problem. Sean read the draft
+and said so:
 
-> *"It doesn't look like r52a is built. I don't have any options presented to
-> choose the size of an export."*
+> *"This shit makes no sense. Where are the sizes? I wanted the ability to pick prep
+> recipe sizes — not just units. Something is wrong here."*
 
-**He is describing what he sees accurately, and the code is doing what you said.**
-Your Round 52 §2: *"The card owns the target. The export sheet states it and adds
-no control."* Both halves are built:
-
-| | |
-|---|---|
-| The card owns the target | ✅ `PrepEditor.tsx:316` — a `Batch size` control |
-| The export sheet adds no control | ✅ `PrepPrintClient.tsx:104-142` |
-| The export sheet **states** it | ⚠️ **only sometimes — see below** |
-
-**Two things make it invisible, and they compound:**
-
-**a · The sheet states the target ONLY WHERE IT DIFFERS from the stated yield.**
-`PrepPrintClient.tsx:119-125` — *"a parenthetical on every line is noise."* ⚠️
-**But the presets are 1×, 2× and 4× the yield** (`scaleTo.ts:265`), **so the
-first preset IS the yield** — choosing it produces a summary identical to
-choosing nothing. Until he taps 2× or 4×, **the export sheet says nothing about
-size at any point.**
-
-**b · The control is inside the `Ingredients` group on the prep card**, and it
-is absent entirely when the recipe has no yield, or when `Only whole batches` is
-set. So a man who has never tapped it has no reason to know a target exists,
-and the export — **the place he goes when he wants a size** — is silent about
-where the answer lives.
-
-> ### ❓ **This is your call and it is one sentence: should the export sheet name
-> where the target comes from, even when the target IS the yield?**
-
-Something like *"Printed at each recipe's own batch size — change it on the
-card"*, once, not per line. ⚠️ **I am not building this.** Your ruling
-*"the sheet states it and adds no control"* may already mean exactly this and I
-would be inventing the wording; or you may hold that the sheet is right and the
-card is where the discoverability work belongs. **Not building past where the
-ruling stops.**
+**He is right on all three counts.** There are three separate faults and only the third
+is a design question.
 
 ---
+
+### 4a · ❌ YOUR ROUND 48 RULED A CUSTOM TYPED SIZE. IT WAS NEVER BUILT.
+
+His brief, 17 Sep — **`REQUESTS.md:1809` in this file as it stands now**, and the line
+moves every round, which is the reason the quote is here in full:
+
+> *"The 'custom' measures need to be on the read-only card, which means I should have to
+> enter the edit mode, type in the custom batch or yield, save, and then the measures
+> should be saved on the read-only card."*
+
+Your ruling, `ROUND-48.md:127-130` (`design-imports/_extracted/ROUND-52/`):
+
+> *"**Custom (his brief).** Typed and saved **in edit mode**, then a fourth chip on the
+> read-only card. It reuses `parseCustomVolume` and its refusal verbatim — 'A batch volume
+> can't be a weight — try ml, L or fl oz instead of g' — so nothing new is worded or
+> built."*
+
+**Three parts to that brief. Two shipped.** The preset chips shipped as §64/§65. The unit
+picker shipped as §74/§75. ⚠️ **The custom size was never built and never withdrawn — it
+was simply missed, and nothing in this file recorded that it was outstanding.** Read all
+134 lines of `ScaleControls.tsx`: a `Base` chip and `presets.map`. There is no input
+element. `grep -rn "Custom" src/components/library/` returns one hit and it is a comment.
+
+⚠️ **AND YOU HAVE BEEN REASONING FOR THREE ROUNDS AS THOUGH THAT BOX EXISTS.** Round 53 §2:
+*"none at the custom box either, because the custom box already takes the unit as typed."*
+**There is no custom box on either card.** The only one in the app is on the COCKTAIL
+export sheet (`ExportSizeSheet.tsx:204-260`), and prep switches that whole block off with
+`withVolumes={false}` — which is r52a working exactly as you ruled it.
+
+**This is mine, not yours. Flagging it because your next ruling would rest on it.**
+
+---
+
+### 4b · ✅ FIXED WITHOUT ASKING — the chips were dead on the app's own default unit
+
+Not a design question. A plain fault, and it is why he was tapping and nothing moved.
+
+`prepPresets` builds a prep's chips in the recipe's **own** yield unit — a 32 oz syrup
+offers `32 oz · 64 oz · 128 oz`. The card then validated his tap against `unitsForPrep`,
+which answers in four **canonical** spellings: `L · ml · fl oz · qt`. **`oz` is not one of
+them.** Stored, refused on read-back, pill never lights.
+
+⚠️ **MEASURED OVER THE 20 YIELD UNITS THE PICKER OFFERS HIM — 14 WERE DEAD:** cup, pt,
+gal, tsp, tbsp, barspoon, jigger, dash, drop, pinch, splash, oz wt, lb, each. **Plus `oz`,
+which is the unit every new prep recipe is created with** and which does not even appear
+in that 20, because the picker displays it as `fl oz`.
+
+⚠️ **WHICH IS ALSO WHY IT SURVIVED: a record storing `oz` DISPLAYS as `fl oz`, so a dead
+recipe and a live one look identical on screen.** There was nothing to see.
+
+`scalePrepTo` was right the whole time — it converts the target into the yield unit and
+refuses when it cannot. The gate now asks that same question one step earlier, and it
+**moved into `scaleTo.ts`** to sit beside the two functions it must agree with. A rule
+that has to match two functions does not belong in a third file. Checked over the real
+option list the dropdown renders, with three fault injections.
+
+---
+
+### 4c · ❓ THE ONE THAT IS YOURS: the sizes have no name on the screen
+
+**`Batch size` is passed to the control and never drawn.** `PrepEditor.tsx:320` passes
+`label="Batch size"`; `ScaleControls.tsx:99` uses it in exactly one place — `aria-label` on
+a `<div role="group">`. Rendered, the card reads:
+
+```
+  YIELD
+    Makes            32 oz
+    Cost             $4.10
+  INGREDIENTS
+    [ Base ] [ 32 oz ] [ 64 oz ] [ 128 oz ]
+    Demerara sugar   615 g
+```
+
+**The word "size" appears nowhere on that card.** And the pills sit under **INGREDIENTS**,
+while the block headed **YIELD** — where a man looking for a size looks — is text he
+cannot tap.
+
+⚠️ **I THINK YOU RULED THIS AND IT WAS BUILT NARROWLY.** Round 48: *"a card's target is on
+screen, **labelled while it shows**, one tap from base."* What got built reads that as the
+group label changing to `Ingredients · 64 oz` **once a target is chosen** — so the label
+appears only after he has already found the control. Before that, and for the man who has
+never found it, there is no label at all.
+
+> ### ❓ **Where does the name of this control go, and what is it called?**
+
+⚠️ **NOT INVENTED HERE.** A heading over the chips, or the chips moving under `Yield`, or
+the `Yield` block itself becoming the control — all three change a card you have drawn, and
+I am not picking one. ⚠️ **And one more thing for you to weigh: the first chip is an exact
+duplicate of the stated yield** — the card reads `Makes 32 oz` and then offers `32 oz` as a
+choice, one line apart.
+
+---
+
+### 4d · The two asks pull in opposite directions, and you should see both at once
+
+- **17 Sep, his brief:** he wanted this on the card *"to avoid having to go to the export
+  screen."*
+- **20 Sep, on the export screen:** *"I don't have any options presented to choose the size
+  of an export."*
+
+⚠️ **AND THE WORD "SIZE" MEANS TWO DIFFERENT THINGS ON THOSE TWO SCREENS.** The prep
+export sheet's only question is PAPER — `Letter (8.5 × 11in)` or `Phone (4 × 8in)` — and
+the button that reopens it reads **"Change size."** The same sheet opened from a COCKTAIL
+asks for batch volumes as well, with a typed box. **So "size" means paper for a prep and
+paper-plus-batch for a cocktail, and nothing on the prep sheet says which.**
+
+I am not proposing a fix for that. It is a naming decision across two screens you own.
 
 ## 5 · ✅ The three tab-order surfaces, by name
 
@@ -497,12 +576,15 @@ that inside a minute, which is the only reason it is not in the file.
 
 ## What I need back
 
-1. ❓ **§4 — should the export sheet name where the target comes from?** One
-   sentence. This is the one Sean actually hit.
+1. ❓ **§4c — where does the name of the size control go, and what is it called?** The
+   chips have no visible heading and sit under `Ingredients`. This is the one Sean hit.
+   ⚠️ **§4a is not a question — it is a build of yours I missed, and I will build it.**
 2. ❓ **§6 — a row that is on the invoice AND has a floor.** Two numbers, one
    slot, never drawn.
 3. ❓ **`FolderIcon`'s live rule** (§3.2) — the glyph is orphaned and I will
    delete it; tell me where the rule goes.
+4. ❓ **§4d — "size" means paper on the prep export and paper-plus-batch on the cocktail
+   one.** A naming decision across two screens.
 4. **Answered this round:** your asks 1, 2, 3, 4 and 5. **Summary mode is a GO**
    and the redundancy case is closed by Sean's quote feature.
 5. **Still open, unchanged:** the four-way `silent` count (needs his data),
