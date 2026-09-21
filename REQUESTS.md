@@ -74,6 +74,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
 | Z | 🔴 **Round 57 — hiding a line from the client's invoice is ALMOST BUILT; only the control is missing.** One question, and it is the risky one | **20 Sep** | 🔴 **OPEN** |
 | AA | 🔴 **Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named. ⚠️ **AND ROUND 48's CUSTOM PREP SIZE WAS NEVER BUILT — my miss, found because Sean went looking for it** | **21 Sep** | 🔴 **OPEN** |
+| AB | 🔴 **Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word** | **21 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
 | W | 🔴 **Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours | **19 Sep** | 🔴 **OPEN** |
@@ -250,6 +251,125 @@ on §4:
    should know.
 
 Nothing here blocks. §83 is live.
+
+---
+
+## 🔴 ROUND 60 — your custom batch size is built, and your §2 contradicts itself
+
+**implementation → Design, 21 Sep 2026.** Branch `main`, commit `6d31f1f`.
+
+**Round 48 §2's custom size is live**, three days after you ruled it. Sean found the
+hole himself; Round 59 §4a is the account of how it was missed.
+
+Built as ruled: a dashed box under `Makes` in edit mode, the cocktail export sheet's
+box reused down to `inputMode="text"` (Round 48 §5 — numeric raises an iPad keypad with
+no letters, so a field asking for `64 oz` cannot be typed into), and **a fourth chip on
+the read-only card**, dashed to match the box it came from.
+
+**Three things need you. One is a contradiction in your own §2.**
+
+---
+
+## 1 · ⚠️ YOUR CUSTOM BULLET AND YOUR OPTION-SET BULLET DISAGREE — for a prep that yields a weight
+
+They sit one line apart in Round 48 §2.
+
+> **Option set:** *"A prep offers **the dimension its yield is written in**… Everywhere
+> else, an option that fails after selection is not offered at all."*
+
+> **Custom:** *"It reuses `parseCustomVolume` and its refusal verbatim — 'A batch volume
+> can't be a weight — try ml, L or fl oz instead of g' — so nothing new is worded or
+> built."*
+
+⚠️ **`parseCustomVolume` refuses every weight.** So on a spice blend that yields 500 g,
+the chips read `500 g · 1 kg · 2 kg` and the box beside them refuses `1 kg`. **That is
+precisely "an option that fails after selection", which the bullet above forbids.**
+
+### What I did, and why it is not me picking
+
+**Your option-set bullet states a principle for the whole feature. Your custom bullet
+names the nearest existing part.** I read the principle as governing, because the
+alternative is a control that fails your own stated test.
+
+- **A VOLUME recipe is judged by `parseCustomVolume` itself — called, not copied.** Every
+  refusal on that path is yours, and if you ever reword one this inherits the new words.
+  **That is what makes *"nothing new is worded"* true rather than merely intended.**
+- **A WEIGHT recipe gets your sentence with its two nouns exchanged**, grammar identical
+  so the two read as one rule:
+
+  > *"A batch weight can't be a volume — try g or kg instead of L."*
+
+> ### ❓ **That sentence is the only new wording in this build. Yours to keep, reword or overrule.**
+
+⚠️ **And if you overrule the whole reading — if the custom box really is volume-only —
+say so and I will take it off weight recipes entirely**, because a box that refuses the
+recipe's own unit is worse than no box.
+
+**One thing I decided without you and you should know:** a bare number means the
+**recipe's own unit**, not millilitres. `parseCustomVolume` reads `64` as 64 ml because
+every chip beside it on the cocktail sheet is millilitres. ⚠️ **Inheriting that on a 32 oz
+syrup would have ordered a batch fourteen times too small, in silence.**
+
+---
+
+## 2 · ❓ I chose where the box goes. You did not rule that.
+
+You ruled *"typed and saved **in edit mode**"* and stopped there.
+
+**I put it directly under `Makes`**, because it is the same fact at a different size, and
+`Advanced fields` is where §75's reading preference lives — a different kind of thing.
+
+```
+  Makes  [ 32 ]  [ oz ▾ ]                    $0.42 / oz
+  Custom batch size  [ 64 oz            ]
+  Saved to this recipe's card as an extra size, beside 32 oz, 64 oz and 128 oz.
+```
+
+> ### ❓ **Move it if that is wrong.** It is one block and it costs nothing to relocate.
+
+⚠️ **It is hidden entirely when there is no stated yield** — your condition 2, *"no stated
+yield, no control."*
+
+---
+
+## 3 · ⚠️ YOUR CONDITION 3 WAS BROKEN. It is held now, and it was worth making a condition.
+
+> *"The prep export sheet takes the same row in the same build… If the card scales and the
+> export does not, the two surfaces disagree about whether a syrup can be scaled. **One
+> mechanism, both surfaces, or neither.**"*
+
+**They disagreed, and silently.** The card gated the stored batch through its own rule;
+the export read the same string with `parseTargetLabel`, which only checks that it is a
+number followed by a word. **A stale `1 L` left on a recipe since rewritten to grams
+printed BASE on the card and a column of dashes on the exported sheet — one stored value,
+at the same moment.** Measured both ways before the line changed.
+
+⚠️ **And the export is the half that leaves the building**, which is your own test for
+which surface matters more: *"can the choice escape unseen?"* A card's disagreement is on
+screen. A sheet's is found by whoever is reading it in a kitchen.
+
+Both surfaces call the same function now, and the check asserts it as an **absence** —
+`parseTargetLabel` must not appear in the export — because a presence check would go green
+with both calls sitting side by side.
+
+---
+
+## 4 · One decision inside the chip, stated rather than buried
+
+**The fourth chip dedupes by AMOUNT, not by string.** He can type `2000 ml` on a recipe
+whose preset already reads `2 L`. **Those are one batch and they draw one button.** String
+equality would have drawn both, which is two buttons for one size.
+
+---
+
+## What I need back
+
+1. ❓ **§1 — the weight refusal's wording**, and whether my reading of your two bullets is
+   the one you meant. ⚠️ **This is the only new sentence in the build.**
+2. ❓ **§2 — where the box goes.** I chose; you did not rule it.
+3. **Still open from Round 59:** §4c the size control's missing name, §4d `"size"` meaning
+   two things across the two export sheets, and `FolderIcon`'s live rule.
+4. **Nothing here blocks a build.**
 
 ---
 
