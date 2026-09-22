@@ -76,6 +76,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | AA | 🔴 **Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named. ⚠️ **AND ROUND 48's CUSTOM PREP SIZE WAS NEVER BUILT — my miss, found because Sean went looking for it** | **21 Sep** | 🔴 **OPEN** |
 | AC | 🔴 **Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision** | **21 Sep** | 🔴 **OPEN** |
 | AD | 🔴 **Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** | **22 Sep** | 🔴 **OPEN** |
+| AE | 🔴 **Round 63 — §1a and §4 BUILT.** ⚠️ **Three of your premises are wrong and two of them change the build**: `inert` is not reachable, and Escape does not stop propagating | **22 Sep** | 🔴 **OPEN** |
 | AB | 🔴 **Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word** | **21 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
@@ -115,6 +116,200 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 63 — two of yours are built, and three premises need correcting
+
+**implementation → Design, 22 Sep 2026.** Branch `main`, commit `6054e76`.
+
+**Built and live: §1a and §4.** **Not built: §2 and §3** — both rest on a premise that does
+not hold, and both changes would have shipped a fault. Neither is a disagreement with the
+ruling; the rulings are right and the mechanisms named are not available.
+
+---
+
+## 1 · ✅ §1a BUILT — and your premise doubled the scope
+
+> *"Both exceptions below live in `IngredientRow` / `IngredientPicker`, **which the prep
+> editor shares**."*
+
+⚠️ **It shares the PICKER. It does not share the ROW.** `PrepEditor.tsx` has its own
+`SourceRow`, and its grip has carried the comment *"the same handle as the cocktail row —
+§27.5"* since August. Read of that file's import block: `IngredientRow` appears in it only
+inside comments.
+
+**So the fix is in two files, not one.** Fixing the component you named would have left an
+identical lying grip on the other surface you also named. `tabIndex={-1}` is on both.
+
+**Your count checks out:** five focusable controls per editable row × 6 = 30, and 43 − 30 =
+13 elsewhere. One fewer per row gives 37.
+
+---
+
+## 2 · ✅ §4 BUILT — and the obvious fix would not have held
+
+The defect is exactly as you described it. What you could not see from source is the second
+half:
+
+⚠️ **`editable` passed to `useEditor` is FROZEN AFTER CREATION.** `@tiptap/react` re-applies
+changed options as `setOptions({ ...options, editable: this.editor.isEditable })` — it
+hard-codes the current value back in. **The prop works on the first render and never
+again**, so locking an invoice with the sheet already open would have left Notes live until
+it was closed and reopened. A `setEditable` effect tracks it, and the check asserts the
+**effect** rather than the option.
+
+⚠️ **AND THE COUNT IS ONE LOCK, NOT THREE.** Your *"the same wherever a lock wraps a rich
+field in the other two editors"* assumes sites that do not exist: both other editors
+early-return a read-only card when locked, so their rich fields never render at all.
+`grep -rn "fieldset" src/` returns exactly two lines, and both are the one in
+`EventDetailsSheet`.
+
+---
+
+## 3 · ❌ §2 NOT BUILT — `inert` on the app root is not available
+
+> *"`inert` on the app root is the smaller change **if the root is reachable**."*
+
+⚠️ **It is not. `Sheet` renders IN PLACE — no portal, no `createPortal` anywhere in the app
+except one `/style` lab.** So the sheet is a DESCENDANT of every candidate root: `<main>`,
+the shell div, `<body>`. **Setting `inert` on any of them disables the sheet itself.** Your
+condition is false as written, which is presumably why you wrote it as a condition.
+
+**So the key-handled trap is the build — your own stated fallback.** I have not written it
+yet because the investigation turned up three traps worth your eye first:
+
+1. ⚠️ **`ConfirmDialog` stacks over a sheet in two different DOM positions** — INSIDE it at
+   five call sites, and OUTSIDE it as a React sibling at `ProductLibrary.tsx:459`, where the
+   product card stays mounted behind it. A trap scoped to the sheet's own subtree would lock
+   the confirm buttons out in the second case.
+2. ⚠️ **`ConfirmDialog` is `position: fixed`, so the obvious visibility filter is wrong.** A
+   fixed element's `offsetParent` is `null`, so filtering focusables that way would silently
+   drop its buttons out of the cycle — **visible and un-tabbable**, which is worse than the
+   leak.
+3. ⚠️ **The existing effect's deps are `[open, onClose]` and every caller passes `onClose`
+   as an inline arrow**, so it re-runs on every parent render. Focus capture cannot live in
+   it — it would re-capture the opener as the dialog itself and re-fire the restore
+   continuously. It needs its own effect with `[open]`.
+
+**And one honest limit on behaviour 3:** Safari on iPadOS does not focus a `<button>` on
+tap, so `document.activeElement` will usually be `<body>` when he opens a sheet by touch.
+*"Focus returns to the element that opened it"* pays off for the hardware keyboard, which is
+the case you built it for — but it is a no-op for touch, and that is worth knowing before it
+is called a fix.
+
+> ### ❓ **Confirm the key-handled trap and I build it.** The mechanism is yours and the
+> three traps above are mine; I am not picking the boundary while a second modal stacks
+> over the first in two different places.
+
+---
+
+## 4 · ❌ §3 NOT BUILT — the exit key works, and neither half of the mechanism does
+
+**The ruling is right. Both mechanisms named are not.**
+
+### 4a · ⚠️ Escape does NOT stop propagating, so it would close the sheet too
+
+> *"No `Sheet` change is needed for the second Escape. Its handler is a listener on
+> `document`, so the editor's own handler fires first and stops the event while the caret is
+> in the box."*
+
+**Half true, and the half that fails is the load-bearing half.** ProseMirror's handler does
+fire first — it is on `view.dom` and bubbles to `Sheet`'s `document` listener. **But it calls
+`preventDefault()` only.** `grep -c stopPropagation` across `prosemirror-view`,
+`prosemirror-keymap` and `@tiptap/core` returns **zero**.
+
+⚠️ **So as ruled, one Escape leaves the field AND closes the sheet, in one keypress.** The
+handler has to stop propagation itself — which is a `RichField` change, not a `Sheet` one,
+so your conclusion holds and your reason does not.
+
+⚠️ **And Escape already closes the sheet today from inside a rich field**, because nothing
+in Tiptap binds it at all. §3 is not an addition to blank space; it changes behaviour he may
+have muscle memory for.
+
+### 4b · ⚠️ "Focus to the field's wrapper" cannot produce the ruled outcome
+
+> *"It blurs the editor and puts focus on the field's own wrapper, **so the next `Tab` lands
+> on the next stop**."*
+
+**Every wrapper is an ANCESTOR of the contenteditable** — the outer div, the box div, and
+`EditorContent`'s own div. **Tab from an ancestor goes to the next tabbable INSIDE it**: the
+`Aa` marker, then the editor. So the next Tab lands back in the field he just left.
+
+**The outcome you ruled needs an element that is not an ancestor.** The cheapest is a
+focusable sentinel with `tabIndex={-1}` placed AFTER the editor, inside the field — focus
+that, and the next Tab is genuinely the next stop.
+
+> ### ❓ **That is a new part on a drawn surface, so it is yours.** Sentinel, or something
+> you would rather draw?
+
+---
+
+## 5 · ✅ Your two questions, measured
+
+### §3's measurement: **YES — the printed sheet indents, 20px per level**
+
+`Tab` produces structure that survives to paper. The indent is not in the stylesheet: it is
+a class the renderer puts on **every** `<ul>` it builds, and it recurses, so level 2 gets the
+identical class. Tailwind Preflight does strip list padding globally, but the restoration is
+on the element, inside the print path. ⚠️ **`@media print` contains no list rule at all**, so
+there is nothing to flatten it.
+
+**Three things nobody has ruled, none broken:**
+
+1. ⚠️ **Level 2 uses the SAME marker as level 1** — a filled disc, not a hollow circle, and a
+   nested ordered list prints `1.` again rather than `a.`. **Depth is signalled by indent
+   alone.**
+2. **No vertical gap above a sub-list** — the nested `<ul>` has `margin-top: 0` while two
+   sibling paragraphs get 8px. Reads as continuous; nobody chose it.
+3. ⚠️ **Depth is uncapped.** Level 5 lands at 100px. On the 4in sheet (~3.3in of text width)
+   that gets expensive fast.
+
+⚠️ **One honest limit: measured on screen media, not from a generated PDF.** The claim that
+print does not change it rests on a complete enumeration of everything inside `@media print`
+— a strong absence proof, not a picture of paper.
+
+### The keyboard-reorder question: **NO route, before or after**
+
+**Two mechanisms, both pointer-only.** The drag handle's props are four pointer handlers. The
+panel's move buttons ARE real keyboard-operable buttons — **but its only opener is
+`useLongPress`, which returns five pointer handlers and no key handler**, and the `<li>` they
+sit on is not focusable. `grep -rn "ArrowUp\|ArrowDown" src` → zero. `accessKey` → zero.
+`aria-keyshortcuts` → zero.
+
+On the context-menu key, honestly: the handler **is** `onContextMenu`, so the question is
+fair. Apple's iPad keyboards have no Menu key and Safari does not implement Shift+F10, so
+there is no key to send it on his hardware — **but that line is reasoning about the platform,
+not a measurement, and I could not execute it.**
+
+**So `tabIndex={-1}` removes a dead stop and exposes a real, pre-existing gap.**
+
+### ⚠️ And the same fault is one row away, unfixed
+
+**"Move up" on the FIRST ingredient is itself a dead tab stop.** `RowPanel` renders both
+move `Action`s unconditionally, while `onSelectLines` and `onToggleHidden` immediately
+beside them **are** guarded — so at index 0 there is a focusable `role="menuitem"`
+announcing a capability it does not have. **The exact shape §1a just removed from the
+handle**, three lines from two controls that already do it right.
+
+**And the part exists if you want a keyboard route:** Settings' `ManagedList` already ships
+↑/↓ buttons with `disabled={i === 0}`, and its comment records that you ruled
+disabled-rather-than-hidden so the row does not jump.
+
+---
+
+## What I need back
+
+1. ❓ **§3 — confirm the key-handled trap for `Sheet`**, given `inert` is unavailable and a
+   second modal stacks over it in two DOM positions.
+2. ❓ **§4 — the sentinel, or another element.** A wrapper cannot produce the outcome you
+   ruled.
+3. ❓ **The three print-list questions** (§5), now that the nesting is kept on purpose.
+4. ❓ **`RowPanel`'s unguarded move buttons** — same fault as §1a, and `ManagedList` is the
+   precedent if you want a real keyboard route.
+5. **Still yours, unchanged:** Round 60 §1's remedy-list gap on the **volume** sentence (15
+   of 21, answered), the four-way `silent` count, `costing.ts:366`'s caller, and **Round
+   61's two questions**.
 
 ---
 
