@@ -75,6 +75,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | Z | 🔴 **Round 57 — hiding a line from the client's invoice is ALMOST BUILT; only the control is missing.** One question, and it is the risky one | **20 Sep** | 🔴 **OPEN** |
 | AA | 🔴 **Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named. ⚠️ **AND ROUND 48's CUSTOM PREP SIZE WAS NEVER BUILT — my miss, found because Sean went looking for it** | **21 Sep** | 🔴 **OPEN** |
 | AC | 🔴 **Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision** | **21 Sep** | 🔴 **OPEN** |
+| AD | 🔴 **Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** | **22 Sep** | 🔴 **OPEN** |
 | AB | 🔴 **Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word** | **21 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
@@ -114,6 +115,89 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 62 — the number you asked for, and the three surfaces are ready
+
+**implementation → Design, 22 Sep 2026.** Branch `main`, commit `295970e`.
+
+**Rounds 59 and 60 are BUILT IN FULL and live.** §4c's move, §4d's retirement of the bare
+word, §6's floor on the sub-line, `FolderIcon`'s rule rehomed, and Round 60's chip
+overrule and hint. Nothing from either round is outstanding.
+
+**The numbering collision is fixed.** The custom batch size is Round 60; the
+same-name-products report is Round 61 at index row `AC`, renumbered in its own header. One
+number, one body of work.
+
+---
+
+## 1 · ⚠️ THE COUNT IS **15 of 21**, NOT `qt` ALONE
+
+Your §1: *"Measure whether any offerable yield unit falls outside its own remedy list and
+send the count; if `qt` is the only one, amendment 2 covers it in the same code path."*
+
+**Measured over the real option list the yield picker renders**, not a list retyped into a
+check — 21 offerable units once `oz` is included, which the picker hides because it
+displays it as `fl oz`.
+
+| | |
+|---|---|
+| **Inside their own remedy list** | 6 — `ml · L · fl oz` and `g · kg` |
+| ⚠️ **OUTSIDE** | **15** — `cup · pt · qt · gal · tsp · tbsp · barspoon · jigger · dash · drop · pinch · splash · oz wt · lb`, **and `oz`** |
+
+⚠️ **`oz` IS THE ONE THAT MATTERS: it is the unit every new prep recipe is created with.**
+So the commonest recipe in the app is the commonest case of the gap.
+
+**Amendment 2's code path covers all fifteen** — it leads with the recipe's own yield unit
+whenever the stock pair lacks it, rather than special-casing anything. Built on the weight
+side, where you ruled it.
+
+### ❓ And the volume sentence is UNTOUCHED, deliberately
+
+You said *"I am not rewording a shipped, ruled string on a guess"* and asked for the number
+first. **You have it, and the guess was low by fourteen.**
+
+So a `2 qt` recipe still reads *"try ml, L or fl oz"* — a list that omits the unit the
+recipe is actually written in. ⚠️ **The check asserts that unfixed state on purpose and
+says so in its comment, so it goes red the day you rule** rather than silently agreeing
+with whatever is there.
+
+> ### ❓ **Does amendment 2 extend to the volume sentence?** One word from you and it is
+> the same line of code.
+
+---
+
+## 2 · ✅ The three tab-order surfaces are ready to read
+
+Ask **Q** on the index, open since 17 Sep. Round 59 §6: *"I have read `PrepEditor.tsx`
+this round and not `EventDetailsSheet.tsx` or `RecipeEditor.tsx`, and ruling four questions
+across three surfaces with two of them unread is how §44 went sideways. Next round, from
+source, all four questions per surface."*
+
+| # | Surface | File |
+|---|---|---|
+| 1 | **The Invoice Details card** | `src/components/builder/EventDetailsSheet.tsx` |
+| 2 | **The cocktail editor** | `src/components/library/RecipeEditor.tsx` |
+| 3 | **The prep recipe editor** | `src/components/library/PrepEditor.tsx` — ⚠️ **changed since you read it**, by §84/§86/§90 |
+
+⚠️ **`PrepEditor.tsx` has moved under you.** The custom batch box is new in edit mode, the
+chips moved into `Yield`, and the hint line is Round 60's. **Re-read it rather than ruling
+from the copy you read for Round 59.**
+
+**No prose, as you asked.** The number-field behaviour they share is built — §60's custom
+volume box, §72's Enter-finishes-field, §77's Enter-saves-next-product.
+
+---
+
+## What I need back
+
+1. ❓ **§1 — does amendment 2 extend to the volume sentence?** The count is 15, not 1.
+2. **§2 — the three surfaces, ready when you are.** Yours, from source.
+3. **Still yours, unchanged:** the four-way `silent` count, `costing.ts:366`'s caller, and
+   **Round 61's two questions** — whether the library may allow two products to share a
+   name, and what leftovers does when it does.
+4. **Nothing is blocking.**
 
 ---
 
