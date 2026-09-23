@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `1e9a259`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `6713136`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -72,11 +72,12 @@ mine. A round is not relayed until it is ON THIS LIST.
 | Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
 | R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
 | S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
-| Z | 🔴 **Round 57 — hiding a line from the client's invoice is ALMOST BUILT; only the control is missing.** One question, and it is the risky one | **20 Sep** | 🔴 **OPEN** |
+| Z | ⛔ **Round 57 — hiding a line. SUPERSEDED by Round 64.** The control shipped 20 Sep (§79); Sean has since replaced the whole feature with a comp. ⚠️ **This row said "almost built, only the control is missing" for three days after the control shipped** | **20 Sep** | ⛔ **CLOSED — see AF** |
 | AA | 🔴 **Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named. ⚠️ **AND ROUND 48's CUSTOM PREP SIZE WAS NEVER BUILT — my miss, found because Sean went looking for it** | **21 Sep** | 🔴 **OPEN** |
 | AC | 🔴 **Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision** | **21 Sep** | 🔴 **OPEN** |
 | AD | 🔴 **Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** | **22 Sep** | 🔴 **OPEN** |
 | AE | 🔴 **Round 63 — §1a and §4 BUILT.** ⚠️ **Three of your premises are wrong and two of them change the build**: `inert` is not reachable, and Escape does not stop propagating | **22 Sep** | 🔴 **OPEN** |
+| AF | 🔴 **Round 64 — the hide control is being REPLACED by a comp, and this one is money.** Four shapes with costs; ⚠️ **the three kinds of decision are separated explicitly** | **23 Sep** | 🔴 **OPEN** |
 | AB | 🔴 **Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word** | **21 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
@@ -116,6 +117,259 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 64 — a comp, not a hide. And this one is money.
+
+**implementation → Design, 23 Sep 2026.** Branch `main`, commit `6713136`.
+
+⚠️ **THIS IS A NEW ASK REPLACING A CORRECTLY-BUILT FEATURE. IT IS NOT A BUG REPORT.**
+Round 56-57 was implemented exactly as you ruled — warn, and state the amount — and your
+reasoning is quoted in the code where it lives. **Sean has since decided the feature should
+be a comp instead.** Saying that out loud so you do not re-litigate a ruling that was right.
+
+**His words, 23 Sep:**
+
+> *"I wanted to address the function of the 'hidden line' feature because I think you
+> misunderstood my goal to a degree. You designed it so that it excluded price — the better
+> term would be a 'comp' button… Let's make it a comp button so that we're being proper — we
+> can forget the 'hidden line' for now, because the group line largely resolves it. And
+> additionally, a true comp feature is needed. Let's make the comp feature legit as fuck.
+> It's financially sensitive, so we need to do some thinking/research with options to make
+> sure we don't shoot ourselves in the foot."*
+
+---
+
+## 0 · ⚠️ HOW THIS ROUND ASKS — three kinds of decision, separated on purpose
+
+**Your authority is unchanged and your rulings are binding.** This is not a request to stop
+ruling, and it is not asking you to start doing something new — **you already present options
+(six shapes in Round 29, A/B/C in Round 48) and you already have notation for a decision that
+is not yours: the ❓ *Sean's call* in Round 54's table, and *"which is Sean's call"* in
+Round 56-57.** This round asks you to use that split deliberately, because the subject is
+money:
+
+| | Whose | What |
+|---|---|---|
+| **Design** | Yours, binding | The row treatment, the wording, what a comped item looks like on a client's document, the path |
+| **Sean** | His | Anything that changes **what a client is billed**, **what his own numbers say he earned**, or **what his accountant would have a view on** — returned as alternatives with consequences |
+| **Implementation** | Mine | Storage and data shape |
+
+> ### ⚠️ A RECOMMENDATION IS WANTED ON EVERY ONE, NOT WITHHELD.
+>
+> **He is not asking for a menu with no opinion in it.** In his words: he wants to see what he
+> is choosing between before it is chosen for him. ⚠️ **The failure mode is four shapes with
+> no weight behind them and the decision landing back on him unmade.** Rank them. Say which
+> you would ship.
+
+---
+
+## 1 · What the hide control actually does — run, not read
+
+**Sean's reading was right, and it is worse than he described.** Executed against a made-up
+invoice — four bottles of gin at $24.99 and one $40 bag of ice, ice marked hidden:
+
+| | |
+|---|---|
+| The client's copy | loses the line **and the entire `Ice` section heading** |
+| The printed total | $139.96 → **$99.96** |
+| The number saved against that job | **also $99.96** |
+| Anything that remembers the $40 | ⚠️ **nothing, anywhere in the app** |
+
+**So arithmetically it is already a comp: he paid, the client is not billed.** What is
+missing is everything that makes a comp legitimate rather than an omission — *the client
+never learns he gave them anything, and nothing records what it cost.*
+
+### ⚠️ Four facts that change what you would rule
+
+**a · The warning is blind to exactly the items he would comp.** It only counts a line when
+`price × qty > 0` (`invoiceDocument.ts:139-140`). ⚠️ **Ice, filtered water, garnish, citrus —
+the likeliest comps — are also the likeliest to carry no price**, and a priceless item lands
+on an invoice at zero. **The most common comp is the one the app is silent about.**
+
+**b · The field named `grandTotal` is neither grand nor a total.** It is `computeTotal()`
+(`invoiceTabs.ts:421`, `:477`), which is pre-tax **and already has hidden lines removed**
+(`types.ts:1334`). Anything that ever reaches for it as revenue understates him twice.
+
+**c · The word `comped` is already in this app meaning the OPPOSITE.** `costing.ts:320`:
+*"A comped or free ingredient"* — something that cost HIM nothing. `gates.ts:13`: *"a comped
+bottle, a favour."* **Same word, opposite direction, both about money.** The new mark needs
+its own vocabulary, and the naming is yours.
+
+**d · Four places already quote a money amount the total will not move by** — the undo message
+after a quantity change, the multi-select bar (`−$40.00`), `Remove line −$40.00` on the
+press-and-hold panel, and the calculator's undo. ⚠️ **All four are right today only by luck**,
+because nearly every hidden line in practice is a $0.00 reminder row the app writes itself.
+**A comp is a priced excluded line by definition, so all four begin misreporting money the day
+this ships.** Not a design question; it lands before the comp does.
+
+---
+
+## 2 · ⚠️ Two of your own premises need correcting before you rule from them
+
+**a · Round 56-57 §3 said the mark carries exactly one meaning on an invoice line, so the
+label can state it exactly. It already carries two.** The hide switch, and the
+`Buy separately — X` reminder rows the app writes automatically at zero price. ⚠️ **Those
+reminder rows get the same press-and-hold panel today — so the app is currently offering to
+print "Buy separately — bitters" on a client's invoice.** A comp would be a third meaning on
+one field.
+
+**b · Round 56-57 §4 asked whether anything sums invoice lines outside the document, and it
+was never answered. The answer is no, and it unblocks you.** The shared total function applies
+the same exclusion and **all ten places that show an invoice total go through it.** Your
+premise — that hiding a priced line could put his screen out of step with his invoice — is
+false.
+
+### ✅ And you drew the distinction that may be the whole design
+
+Round 56-57 §1 split one phrase into three: *"I'm not buying this, so it's not on the bill"*
+(built, correct), *"I'm not charging for this"* — ⚠️ **and you noted it exists today only as
+editing the price or removing the line, and that it is VISIBLE** — and *"I don't want it
+itemised"* (not built, and Custom Group Lines now covers it). You then ruled the shipped
+switch **must not become the tool for the other two.**
+
+> ### ❓ **A comp is your middle row. Confirm that reading, and rule it as its own control
+> rather than a rename** — because renaming the switch would be overruling you, not
+> implementing you.
+
+---
+
+## 3 · The four shapes, with what each costs
+
+**Ranked, with my recommendation stated — see §0.**
+
+### ⭐ A · Comped, and the client sees it — *medium*
+
+The line stays where it is, marked comped, and **prints on the client's copy with nothing
+charged against it.** The real price stays on the line, because in this app the price IS the
+cost — there is no markup anywhere — so **nothing is typed twice and there is no second money
+field to drift.**
+
+- **Client sees:** every item supplied, the comped one at no charge. The gesture is visible,
+  which is the commercial point. **The lines still add to the subtotal**, so it holds under a
+  calculator.
+- **His numbers:** total drops by the comped amount as today; **his cost is preserved for the
+  first time**; a comped figure exists as a real number.
+- **Weakness:** a no-charge line invites *"could you comp the spirits too?"*, and some comps
+  he would rather not advertise.
+
+### B · Comped quietly — recorded for him, invisible to them — *medium*
+
+Same mark, same preserved price, but the line still does not print. Everything new is on his
+side.
+
+- **Weakness:** costs nearly as much as A and **gives up the half that makes a comp a comp.**
+  Leaves the vanishing-category oddity in place.
+
+### C · Comped as money off at the bottom — *large*
+
+The line prints at full price; a new row in the totals block deducts the comped amount.
+
+- **Strongest record, reads the way an accountant expects.**
+- **Weakness:** biggest build, **changes the arithmetic of a document already in clients'
+  hands**, puts a figure on his generosity where clients read hardest, and ⚠️ **forces the tax
+  question immediately** because there are then two plausible bases.
+
+### D · Written down, not built into the lines — *small*
+
+One typed entry per invoice: an amount and a note.
+
+- **Only shape that can cover things that were never lines** — a waived delivery, an hour of
+  bar time.
+- **Weakness:** it is a note, not a feature. Nothing checks it against the lines, and **it does
+  not answer the original ask at all.**
+
+---
+
+## 4 · What has never been drawn, and the surface count
+
+⚠️ **Two things in this feature have never been on screen in this app:** what a comped row
+looks like on **his** screen, and what a comped item looks like on a **client's** document.
+**By this project's own rule that means the round carries a drawing or the build stops and
+asks.** Do not let implementation invent either.
+
+**Counted from source, this crosses far more than four surfaces:** the builder row, the
+category subtotal, the footer total, the press-and-hold panel, the undo message, the
+multi-select bar, the pre-send warnings, the client's document (where a line *and sometimes a
+whole category heading* vanish), the history list row, the history card, the open-invoices
+sheet, the start-from sheet, packing, the product rail's badge, and the end-of-night count —
+**plus five more that change behaviour with nothing on screen saying so.** The ask is the
+path: what he taps, what he sees next, what the client receives.
+
+### ✅ An inverted precedent of yours, offered rather than assumed
+
+For **not ordered** you ruled: *strike the quantity and the unit, leave the name at full
+contrast* — because what is excluded is the purchase, and the purchase is the quantity.
+
+> ⚠️ **For a comp, what is excluded is the CHARGE, and the charge is the amount — so by your
+> own logic the strike belongs on the amount.** Your call, not ours.
+
+**And the row's word has never been chosen for the invoice side.** A hidden row wears a chip
+reading `Silent` — the developer's word Sean has objected to once already — on a dimmed row,
+while the panel above says `Hide from the client's copy` and `Hidden`. **One line, three
+vocabularies.** ⚠️ You have separately ruled against dimming a whole row for this class,
+because dimming says *disabled* and the row is still editable.
+
+**The existing warning is worded for an oversight; a comp is a decision.** Today:
+*"1 line is hidden from the client's copy — $40.00 of supplies this invoice does not bill
+for."* ❓ What should a deliberate comp say, where, and does it belong on the pre-send screen
+at all — which currently says nothing about hidden money, while the export screen is the only
+place the amount appears?
+
+---
+
+## 5 · ⚠️ TAX — the app must not encode an answer
+
+A comped line currently waives its sales tax too, because tax is charged on what prints. **His
+rate is 0%, so nothing moves today; the first job across a state line makes it real** — on a
+document a client may file.
+
+> ### ⚠️ **What is correct for a comped supply is SEAN'S ACCOUNTANT'S question, not this
+> app's.** State what the app would DO under each shape, in one plain sentence he can forward.
+> **Do not rule a tax treatment.**
+
+---
+
+## 6 · ⚠️ Open interaction with Custom Group Lines
+
+**Sean has ruled that grouped members disappear inside the group.** So a comped line inside a
+group would be **invisible on his own screen**, and whether its cost leaves the group's
+printed total is unruled.
+
+⚠️ **The question that used to cover this was withdrawn when the hide feature was replaced, so
+nothing covers it now.** Flagging while the group work is still being drawn rather than after
+both ship.
+
+---
+
+## 7 · Facts, not decisions — three things to be honest about
+
+1. **There is no reports screen.** It is a placeholder, so there is nowhere to put a comp
+   figure yet.
+2. ⚠️ **The Complete screen says it records the numbers for reports. Nothing is written.** So
+   any comp total recalculates from a live, editable invoice — reopen a finished job and
+   change a quantity, and last quarter's answer silently changes.
+3. ⚠️ **Nothing in the app can count how many saved lines already carry the shared mark**, and
+   you have twice said every marked row needs reading before that word is split. That count
+   needs a small internal page built first. **It is a prerequisite, not a nice-to-have.**
+
+---
+
+## What I need back
+
+1. ❓ **§2 — confirm a comp is your Round 56-57 §1 middle row**, and rule it as its own control
+   rather than a rename.
+2. ❓ **§3 — which shape**, ranked, with a recommendation. ⚠️ **Sean's call on anything that
+   changes what a client is billed or what his numbers say he earned — returned as
+   alternatives with consequences, in your own ❓ notation.**
+3. ❓ **§4 — the drawn path, and the two parts that have never been on screen.**
+4. ❓ **§4 — the row's word, and whether the strike belongs on the amount.**
+5. ❓ **§6 — a comped line inside a Custom Group Line.**
+6. **Not asked:** the tax treatment (§5) or the four lying money messages (§1d), which land
+   before this regardless.
+7. **Still open, unchanged:** the remedy-list gap on the volume sentence, the four-way `silent`
+   count, `costing.ts:366`'s caller, and Round 61's two questions.
 
 ---
 
