@@ -77,8 +77,9 @@ mine. A round is not relayed until it is ON THIS LIST.
 | AC | 🔴 **Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision** | **21 Sep** | 🔴 **OPEN** |
 | AD | 🔴 **Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** | **22 Sep** | 🔴 **OPEN** |
 | AE | 🔴 **Round 63 — §1a and §4 BUILT.** ⚠️ **Three of your premises are wrong and two of them change the build**: `inert` is not reachable, and Escape does not stop propagating | **22 Sep** | 🔴 **OPEN** |
-| AF | 🔴 **Round 64 — the hide control is being REPLACED by a comp, and this one is money.** Four shapes with costs; ⚠️ **the three kinds of decision are separated explicitly** | **23 Sep** | 🔴 **OPEN** |
-| AG | 🔴 **Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE.** The exclusion rule was hand-written four times; it is one rule now. Plus one question Sean's own answers opened | **24 Sep** | 🔴 **OPEN** |
+| AF | ~~**Round 64 — the hide control is being REPLACED by a comp, and this one is money**~~ | **23 Sep** | ✅ **ANSWERED — `r64a`–`r64e`.** Sean took ⭐ on all four money calls. Shape A. ⛔ **The comp GLYPH was named, not drawn — see AH** |
+| AG | ~~**Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE**~~ | **24 Sep** | ✅ **ANSWERED — `r65a`–`r65b`.** No un-comp at Complete; reopen, change, complete again. §1 and §2 taken |
+| AH | 🔴 **Round 66 — ⛔ THE TAG BLOCKS THE FEATURE'S ONLY ENTRANCE, not one panel row.** Seven rulings; ⚠️ **two countable corrections to §2 — 40 glyphs not 35, and the crossed eye cannot leave** — plus your twice-asked question ANSWERED | **24 Sep** | 🔴 **OPEN — blocking every surface of the comp** |
 | AB | 🔴 **Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word** | **21 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
@@ -117,6 +118,218 @@ has been bitten by.
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
+
+
+---
+
+## 🔴 ROUND 66 — the tag blocks the entrance, and nine things a sweep found
+
+**implementation → Design, 24 Sep 2026.** Branch `main`, commit `948817a`.
+
+**Round 65 needed no corrections and is being built.** §1's reasoning on why packing's
+exception does not transfer is accepted in full — a comp moves the figure the freeze exists
+to hold, and the correction route already exists. `r65a` and `r65b` are drawn to the pixel
+and there is nothing in either I cannot build.
+
+**What follows is one hard stop, one answer you asked for twice, seven questions, and two
+corrections to Round 64's own arithmetic.** A thirteen-agent sweep planned all six areas of
+the comp and then tried to refute each plan; the questions below are what survived the
+refutation, each measured rather than reasoned.
+
+---
+
+### 1 · ⛔ THE TAG IS A HARD STOP, AND IT IS NOT ONE PANEL ROW — IT IS THE ONLY ENTRANCE
+
+Round 64 §2 names the glyph as **"a price tag with the shared slash `m4 4 16 16` @ 2"**. The
+slash is verbatim and the weight is given. **The body is named, not drawn.**
+
+**Measured, not remembered:** `src/components/nav/icons.tsx` exports **40** glyphs. None is
+a tag. None is a price mark. `Action`'s `icon` prop is **required** (`RowPanel.tsx:187`), so
+there is no panel row without a glyph.
+
+⚠️ **And the panel row is the ONLY ruled way to write a comp.** So the tag does not block a
+row — it blocks the state every other surface is built for. All six areas can ship code;
+none of it can be reached in the app, or seen on the iPad, until the tag exists. The
+`/debug` specimens become the only available measurement in the meantime.
+
+**CLAUDE.md's rule fires exactly here, and it names the precedent:** §45.A specified a
+Settings control completely in behavioural terms, implementation invented the visuals, and
+Sean spotted it on sight. So no `CompIcon` gets written without a drawing.
+
+**Second-order note for the same reply:** both existing slashed glyphs have a **horizontal**
+body. A tag is a diagonal form, so `m4 4 16 16` may read differently across it than it does
+across the two that exist.
+
+⚠️ **Two corrections to §2's own arithmetic, both countable:**
+
+- **The set holds 40 glyphs, not 34 or 35.** Counted with `grep -c "^export function .*Icon"`.
+- **The crossed eye cannot leave.** §6 keeps `Show on the client's copy` alive permanently on
+  lines that are already hidden, and that `Action` requires a glyph. So the set goes to
+  **41**, it does not stay level. The bin-adjacency argument still holds; the trade it was
+  offered as does not exist.
+
+### 2 · ✅ ANSWERED — the old sense reaches no screen. ⚠️ And half your slash is unsafe.
+
+**Your twice-asked question: does `comped` in its older sense — "this cost Sean nothing" —
+reach any string a user can see? No.** True at `948817a`.
+
+**Method, so you can re-check it cheaply:** every tracked file under `src/` listed with
+`git ls-files`, all `/* */` and `//` comments blanked while preserving line numbers, then
+`/comp|\bfree\b|no cost|complimentary|costs? nothing/i` matched against what was left.
+Outside `src/app/style/` and `src/app/(app)/debug/` the survivors are: the identifier
+`comped` in `types.ts` (your new sense), `rentalCompany` and its `Rental company` field
+label, a local `comp = composition(...)`, and the aria-label `Days after completion before
+auto-archiving`. **Not one is the old sense.** The word reaches no label, toast, aria-label,
+title, alt text, export sheet, invoice document or print CSS — `globals.css` is the only
+stylesheet and carries no `content:` declaration outside a comment. So **`Comp` is free to
+mean exactly one thing.**
+
+⚠️ **§2 says "both comments" and there are six uses in five places.** Beyond
+`costing.ts:320` and `gates.ts:13`: `costing.ts:113`–`:114`, `money.ts:37`–`:38`, and a sixth
+in `scripts/check-money.mjs`. All six are planned with one wording rule, because your stated
+goal — one sense of the word — fails with four left behind. They are comments, so nothing on
+screen depends on it; overrule any and they revert.
+
+⚠️ **AND `no cost` IS ALREADY A LIVE SCREEN PHRASE MEANING THE OPPOSITE THING.** §2 offers
+`free to you` / `no cost`. But `no cost` is on screen in six places today, and in every one
+it means *a price nobody ever recorded*: `N lines have no cost` in the pre-send gate,
+`No cost recorded` in the product filter, `no cost` on the product row, `No cost data` in
+the rail and the sheet, and `Some linked products have no cost.` **The very paragraph you
+asked me to reword is the one that keeps a real $0.00 apart from a missing price** — so
+wording it `no cost` would make it argue against itself. I used **`free to you` throughout**.
+Your Round 65 §2 `No cost recorded · printed as Complimentary` is untouched and correct,
+because on that row the price genuinely is absent.
+
+### 3 · ❓ Which word does a line he hid BEFORE the switch retired wear?
+
+`r64e` rules that an invoice row now carries **one of two words, `Comp` or `Reminder`, never
+both**. A line Sean hid himself is neither. Today it wears `Silent`, which that sentence
+forbids. `Hidden` was never ruled. And no chip at all makes an exclusion invisible on the one
+row where invisibility is the whole point.
+
+### 4 · ❓ Hidden AND comped — which chip wins? And one premise needs care.
+
+The same two-word sentence forbids both, and nothing says which wins. Two independent agents
+reached opposite answers, which is why it is here rather than decided.
+
+⚠️ **§6 says "a hidden priced line that became a comp would start printing on old documents."
+That is true of a CONVERSION and only of a conversion.** `printsToClient` reads `silent`
+alone (`types.ts:1396`), so *marking* a hidden line as comped changes nothing on paper — it
+starts printing only if the hide mark is **removed**. Since §6 already rules that nothing
+converts automatically, the risk is prevented by the ruling that names it. Flagged because
+the sentence reads as a reason to act, and acting on it is what would cause the harm.
+
+### 5 · ❓ The `· Undo` in §4's message is a tap target this surface has never had
+
+**Measured:** the Builder's toast is a plain `role="status"` div holding a string, with no
+button in it (`Builder.tsx:1396`–`:1403`). So `Comped Ice, 20 lb bag — $40.00 · Undo` has
+nowhere to be tapped.
+
+**The good half:** the part exists elsewhere. `UndoStrip` on the library screens is a drawn,
+shipped control — so this is **placing a drawn part, not drawing a new one.** One
+measurement to weigh while placing it: `UndoStack` already renders the money delta in its own
+right-hand column, so that label would print **$40.00 twice on one row**.
+
+### 6 · ❓ A priced comp is STATED, and on a tidy invoice the statement has no surface
+
+§4 says pre-send **and** export get the line above the warnings panel. Export always renders,
+so that half is safe. **Pre-send does not exist at zero findings** — `Builder.tsx:353` sends
+straight through when `preflightFindings` is empty, and `gates.ts` defends that as a standing
+ruling. A priced comp produces a **statement**, not a finding.
+
+So on a fully-costed invoice with one comp, your line appears **nowhere**. Making a statement
+force the gate open would overturn a live ruling, so it is yours, not mine.
+
+### 7 · ❓ A no-price comp gets two warnings and the first one is now false
+
+The existing uncosted finding tests `!Number(i.price ?? 0)` (`gates.ts:71`), which **cannot
+tell a deliberate $0.00 from a blank field.** So a comped line with no price is counted, and
+the gate shows, together, on one line:
+
+- `1 line has no cost` / **`They will print as $0.00.`** (`gates.ts:82`–`:83`)
+- your §4 line, `1 comped line has no cost recorded — what you gave isn't counted.`
+
+**The first is false** — §3 makes that line print `Complimentary`. The same false claim is a
+live toast: `Uncosted lines print as $0.00 — check them in the invoice.` (`Builder.tsx:376`).
+
+**Does the uncosted finding exclude comped lines and leave yours to speak, or does its detail
+sentence change?** I have touched neither string. ⚠️ The commit immediately before this work
+is `§98 — five money messages that lied`, which is why this is not being waved through.
+
+**Related, older than the comp, reported not planned:** `costing.ts` treats $0.00 as a real
+price and a blank as unknown; `gates.ts:71` treats them identically. That is the nearest the
+old sense of the word gets to a screen today — a deliberately free line reported as
+`have no cost`.
+
+### 8 · ❓ The archived panel — `r65a` renders there too, and says the wrong thing
+
+**Measured:** `LOCKED_STAGES = ["complete", "archived"]` (`types.ts:894`) and the panel's lock
+is `isLocked(invoice)`. So **every surface `r65a` rules also renders on an ARCHIVED
+invoice** — beside a banner reading `Archived. Restore it to make changes` with a button
+labelled `Restore`.
+
+There the new sentence names the wrong stage, and points at a route that banner does not
+offer. Round 65 ruled the Complete case only. A `Comp` info row on an archived invoice has
+never been drawn.
+
+### 9 · ❓ A third route into Complete that the second-pass drawing does not know about
+
+Reopen is correctly ungated, because reopening moves nothing. But **restoring an archived
+invoice that was Complete runs the same complete branch** and would append a second frozen
+record **with no gate shown** — reached through the banner's `Restore`, while the stage menu
+reaches the same act through the gate. One act, two doors, one of them silent.
+
+### 10 · 🔧 What I am building, and why the ORDER matters more than the list
+
+⚠️ **THE CLIENT'S PAPER IS THE ONLY SURFACE STILL BILLING A COMPED LINE.** Measured by
+running both modules on your own worked example: `computeTotal` already returns **$99.96**,
+because §98 routed it through `isBilled` — while `buildInvoiceDocument` returns **$139.96**
+with a `$40.00` Amount cell. Every total on Sean's side already drops it: the category
+subtotal, the footer, the history card's per-section reduce, the stored total, the peek bar.
+
+Nothing can write a comp yet, so this is latent rather than live. **But it sets the order:**
+`r64b` lands FIRST, before anything that can write a comp, or the first comp makes his screen
+say $99.96 and the client's invoice say $139.96 **with nothing on either surface saying they
+disagree.**
+
+Then: one owner for the comped sum (four areas had each planned their own copy — the fault
+§98 exists to prevent); two already-vacuous check guards repaired **before** the behaviour
+they guard, because a guard repaired afterwards never guarded anything; the row; the frozen
+record and the gate; the panel; the retirement; and **the write LAST**, because it is the only
+thing that makes any of it reachable, so every disagreement between two screens is closed
+before the state can exist.
+
+**Not in this build, and said in writing:** History reading the frozen record (§3's second
+half), and the history card's `· $X comped`. Both land on one screen where a frozen total
+would sit above live category rows that do not add up to it — which that card's own comment
+forbids in terms. **Keeping the earlier record is what makes waiting free, as you said.**
+
+### 11 · The §7.3 count page is BUILT — your still-open row is stale
+
+It shipped 24 Sep at `/debug/hidden`, reads through the app's own auth rather than the
+database, and converts nothing. ⚠️ **Sean has not read it yet on purpose:** the sweep found
+four real defects in it — account scoping, the three storage keys, an unreadable-money
+bucket, and an error path that prints a false all-clear. Those are repaired before he reads
+numbers off it, because a count page that lies is worse than no count.
+
+---
+
+## What I need back
+
+1. ⛔ **The tag.** It blocks the feature's only entrance, not one row. Plus the two
+   arithmetic corrections: **40 glyphs, not 35**, and the crossed eye **cannot** leave.
+2. ❓ **Seven rulings:** the legacy hidden line's word (§3), hidden-and-comped (§4), where
+   the tappable `Undo` sits (§5), whether a statement may force the pre-send gate open (§6),
+   the double warning and the false `$0.00` sentence (§7), the archived panel (§8), and the
+   silent second door into Complete (§9).
+3. ✅ **Answered for you:** the old `comped` sense reaches no screen string, with the method
+   — and ⚠️ **`no cost` is unsafe as a replacement phrase**, so `free to you` is used
+   throughout.
+4. ❓ **Sean's, and it blocks nothing:** a corrected re-completion counting in the event's
+   quarter (your ⭐) or the quarter of the correction. He also has your four tax sentences
+   for his accountant.
+5. **Still open, unchanged:** the volume remedy list, the four-way `silent` count,
+   `costing.ts:366`'s caller, and Round 61's two questions.
 
 
 ---
