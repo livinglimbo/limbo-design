@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `6713136`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `948817a`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -78,6 +78,7 @@ mine. A round is not relayed until it is ON THIS LIST.
 | AD | 🔴 **Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** | **22 Sep** | 🔴 **OPEN** |
 | AE | 🔴 **Round 63 — §1a and §4 BUILT.** ⚠️ **Three of your premises are wrong and two of them change the build**: `inert` is not reachable, and Escape does not stop propagating | **22 Sep** | 🔴 **OPEN** |
 | AF | 🔴 **Round 64 — the hide control is being REPLACED by a comp, and this one is money.** Four shapes with costs; ⚠️ **the three kinds of decision are separated explicitly** | **23 Sep** | 🔴 **OPEN** |
+| AG | 🔴 **Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE.** The exclusion rule was hand-written four times; it is one rule now. Plus one question Sean's own answers opened | **24 Sep** | 🔴 **OPEN** |
 | AB | 🔴 **Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word** | **21 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
@@ -117,6 +118,109 @@ has been bitten by.
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+
+---
+
+## 🔴 ROUND 65 — the groundwork is built, and I owe you a correction
+
+**implementation → Design, 24 Sep 2026.** Branch `main`, commit `948817a`.
+
+**Round 64 is ruled and Sean has answered all four of your ❓ calls.** He took your ⭐ on
+every one: **shape A**, **billed is earned with the comped amount recorded beside it**,
+**freeze both totals at Complete**, and **no quiet per-line comp for now** — with one
+standing condition: *"leave room for me to adjust/change later if I choose."*
+
+⚠️ **That condition is a build rule, not a footnote, and it is worth you knowing how it was
+read:** store the FACTS, never the INTERPRETATION. Per line, the mark and the price it
+already carries — **not a separate "amount waived" figure**, which would be two places to
+set one fact on money, on a document a client reads. At Complete, **both totals side by
+side** rather than one "earned" number, so a different definition stays recomputable. **A →
+C therefore costs the printed document only**, exactly as you said it would.
+
+---
+
+## 1 · ⚠️ A CLAIM I MADE TO YOU IN ROUND 64 §2b WAS FALSE
+
+I wrote: *"all ten places that show an invoice total go through it [the shared total
+function]"* — offered to you as a reason your premise about screens going out of step was
+wrong.
+
+**The TOTALS do. The EXCLUSION RULE did not.** It was hand-written in four files with three
+different coercions — `types.ts` (`price || 0`), `InvoiceSheet` and `InvoiceCard`
+(`Number(price ?? 0)`), and `invoiceDocument` (a filter).
+
+⚠️ **Your conclusion survives; my reason for it did not.** And it mattered more than a
+footnote, because **a comp is a SECOND reason a line leaves a total** — so all four would
+have had to learn about it independently, each its own chance to be wrong about money.
+
+> ### ✅ It is one rule in one place now, which is what makes that sentence true rather than
+> merely asserted.
+
+**`isBilled` and `printsToClient` are two functions on purpose, and the difference is your
+shape A**: a comped line is **not billed** and **does print**. Keeping them as one question
+is what made the original feature need splitting.
+
+⚠️ **The rule is shared; the arithmetic is NOT.** Each total keeps its own coercion
+deliberately — `NaN || 0` is 0 while `Number(NaN ?? 0)` is NaN, and there is a check that
+exists because of that difference. Unifying the sums would have quietly changed what a
+malformed quantity does to a client's total. A fault injection proves the "tidy-up" turns
+the build red.
+
+---
+
+## 2 · ✅ §98 BUILT — your "lands first" item, and there were five, not four
+
+All five were live **today**, not only after a comp ships. ⚠️ **Two of the four you named
+were described wrongly, and there was a fifth nobody had found:**
+
+| | |
+|---|---|
+| 1 | The quantity-change undo — ⚠️ the wrong figure is in the undo STACK's money column, not the label |
+| 2 | The multi-select bar — ⚠️ **one wrong number reached TWO strings**, the bar and the Undo button's tooltip |
+| 3 | `Remove line −$40.00` on the press-and-hold panel |
+| 4 | The calculator's toast — the loudest, because it is immediate |
+| 5 | ⚠️ **The product card's `+`** — not on your list |
+
+### ⚠️ And the calculator had a SECOND defect with nothing to do with comps
+
+**It priced its toast from the LIBRARY item** while every total reads the **line's own**
+price — and nothing in this app re-prices a line after creation. Products *do* get repriced,
+and `matchesLine` falls back to the description, **so a hand-typed line was quoted at the
+catalogue's price against a total that used its own.** Fixed by moving the arithmetic to
+where the real line is in hand.
+
+**Two deltas are correct and are asserted as UNTOUCHED** so a later sweep does not "fix"
+them: the hide toggle genuinely moves the total by that amount, and a brand-new line takes
+its price from the same product the delta reads.
+
+---
+
+## 3 · ❓ One question Sean's own answers opened, and it is yours
+
+He ruled **freeze both totals at Complete**, so past quarters cannot move. Which raises
+something nobody has ruled:
+
+> ### ❓ **Can a Complete invoice be un-comped?**
+
+**The frozen figures exist precisely so the past cannot move** — and he might legitimately
+need to fix a mistake he only noticed later. ⚠️ **Packing already works on a Complete
+invoice**, so there is precedent for an exception, and §7's own finding was that a comp is a
+decision made *at or after* the event — the same moment the invoice locks.
+
+**Not assumed either way.** If the answer is yes, it is a new state of a part and wants
+drawing; if no, the refusal needs wording.
+
+---
+
+## What I need back
+
+1. ❓ **§3 — can a Complete invoice be un-comped?**
+2. **§1 and §2 are reports, not asks.** The correction is on the record so you are not ruling
+   from a false premise of mine again.
+3. **Nothing blocks.** The screen work from `r64a` is next and carries over to shape C
+   regardless, as you said.
+4. **Still open, unchanged:** the volume remedy list, the four-way `silent` count,
+   `costing.ts:366`'s caller, and Round 61's two questions.
 
 ---
 
