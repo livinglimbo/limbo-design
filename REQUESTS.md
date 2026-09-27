@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `948817a`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `APP_SHA_PENDING`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -51,6 +51,13 @@ built to stop asks going missing went stale in exactly the way it was built to
 prevent**, and the header sha was two commits behind at the same time. Both are
 mine. A round is not relayed until it is ON THIS LIST.
 
+⚠️ **AND BY 27 SEP IT HAD GONE STALE THE OTHER WAY.** Fourteen rows between N and AE read 🔴
+OPEN after you had answered them, and R still said BLOCKING. Only AC, AH and one question in
+AD were waiting on you. **A list that shows answered asks as open wastes your turn exactly as
+a lost ask wastes mine** — an index that lies is worse than a file that buries. **Every row
+below was re-checked against the code and your files on 27 Sep**, each closed row says what
+is left and whose it is, and the rows are back in date order.
+
 | # | Ask | Relayed | Status |
 |---|---|---|---|
 | A | Settings sectioning | 8 Aug | ✅ **ANSWERED §45** — seven-control inventory; Method & Glassware unblocked |
@@ -66,27 +73,28 @@ mine. A round is not relayed until it is ON THIS LIST.
 | K | ~~**§50's four questions back to Design** — heterogeneous merges, the new `LineState` member, whether the cushion clause ships with §1 or apart, and this file's own staleness~~ | 15 Sep | ✅ **ANSWERED §51** — all four, and the stacked branch is drawn (`51a`). Unblocked. |
 | L | ~~`no-package-size`'s two remaining misdirections~~ — `calculator.ts:232` (a prep's yield unit) and `:326` (a cocktail line's unit), both told *"add a package size"* when the product's size is fine | 15 Sep | ✅ **ANSWERED §54.3 — no new state; `convert`'s own diagnosis surfaced. BUILT.** |
 | M | ~~§52's three open faults~~ — the prep chain's yield divisor, the pack parenthetical's rounding, and one state with three wordings | 15 Sep | ✅ **ANSWERED §53 — all three, BUILT and live.** Two rulings overturned my reading. |
-| N | 🔴 **Round 43 — the mixed-measure refusal blames a density when the remedy is Sean's** — and the same sentence has FIVE spellings in the app, two of which he reads regularly | **16 Sep** | 🔴 **OPEN** |
-| O | 🔴 **Round 44 — "Not ordered" does THREE jobs, and Sean's brief for scaled measures on the card** | **17 Sep** | 🔴 **OPEN — questionnaire answered, see below** |
-| P | 🔴 **Round 45 — the swap shows the OLD ingredient large and the new one beneath** | **17 Sep** | 🔴 **OPEN** |
-| Q | 🔴 **Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours | **17 Sep** | 🔴 **OPEN** |
-| R | 🔴 **Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row | **18 Sep** | 🔴 **OPEN — BLOCKING §49's replacement** |
-| S | 🔴 **Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched** | **18 Sep** | 🔴 **OPEN — this is the chase list** |
+| N | ~~**Round 43 — the mixed-measure refusal blames a density when the remedy is Sean's** — and the same sentence has FIVE spellings in the app, two of which he reads regularly~~ | **16 Sep** | ✅ **ANSWERED — your Round 45 §4 and Round 52 §6. BUILT** — §61 `c848b9b` (the prep editor's sentence) and §69 `0757c8d` (the three your Round 52 §6 re-layered). The fifth site you named, `costing.ts:366`, is a comment and reaches no screen — Round 67 §B2. *Re-checked 27 Sep; this cell first said "your Rounds 48 and 52 §6… all five spellings re-layered", which overstated it* |
+| O | ~~**Round 44 — "Not ordered" does THREE jobs, and Sean's brief for scaled measures on the card**~~ | **17 Sep** | ✅ **ANSWERED — your Round 48 §2 and §4.** The brief is BUILT (§64–§90) except the cocktail's typed size — Round 67 §C6. ⚠️ **§1's split waits on the four-way count, and that count is MINE, not yours** — Round 67 §B6. §3, recipes inside recipes, parked by Sean 27 Sep |
+| P | ~~**Round 45 — the swap shows the OLD ingredient large and the new one beneath**~~ | **17 Sep** | ✅ **BUILT — Sean chose B; §63 `b2aa9c4`.** ⚠️ The menu list and the undo entry still read the other way round — Round 67 §C3 |
+| Q | ~~**Round 46 — a number field's affordance and the tab order across cards.** The custom box's DEFECT is fixed (§60); what it should ADVERTISE, and where Tab goes, are yours~~ | **17 Sep** | ✅ **ANSWERED — your Round 48 §5 (the field) and your Round 62 (Tab). BUILT** — §67 `89e25cb`, §69 `0757c8d`, §91–§96 |
+| R | ~~**Round 47 — Round 45's frames did not ship, and two answered asks were re-asked.** Standing instruction + the DELIVERED table that makes a re-ask answerable with a row~~ | **18 Sep** | ✅ **CLOSED — the frames were resent (your Round 48 §1) and B is built, so "BLOCKING" expired** |
+| S | ~~**Round 48 — THE COMPLETE BACKLOG.** Nine subjects audited out of rounds 28→47, both directions, adversarially verified. ⚠️ **Includes Round 44 §2 — Sean's own verbatim brief — which was never touched**~~ | **18 Sep** | ✅ **ANSWERED — your Round 48, item by item.** What is left is MINE: rate precision (ruled, never built — your `STATE.md` says live) and the four-way count. Round 67 §B5, §B6 |
+| T | ~~**Round 49 — Sean chose A. BUILT and live (§62).** ⚠️ Carries a correction to §1b's premise and two surfaces the round never named~~ | **18 Sep** | ✅ **CLOSED — your Round 52: *"49 read, nothing for me."*** Its loose end, the menu list's wording, is Round 67 §C3. *Was 🟡 "read before ruling the menu list"* |
+| U | ~~**Round 50 — B and C are BUILT (§63–§66).** ⚠️ Condition 3 cannot be met as written — the prep export is MULTI-recipe — and six departures from the frames, all forced~~ | **18 Sep** | ✅ **ANSWERED — your Round 52 §1–§5 and Round 59 §1** (*"Closed; do not re-raise it"*). BUILT — §70 `c43e06d`, §78 `c3dfd4b` |
+| V | ~~**Round 51 — the four refusal spellings, pasted as asked.** Plus: two of your nine already exist, and check 9 is built~~ | **18 Sep** | ✅ **ANSWERED — your Round 52 §6. BUILT** — §69 `0757c8d` |
+| W | ~~**Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours~~ | **19 Sep** | ✅ **ANSWERED — your Round 53. `r53a` approved by Sean (Round 59 §3), BUILT §73 `a9ebff8`.** Not yet seen on the iPad (device check 6.2). Your standing device pass: Sean said yes 27 Sep — Round 67 §D6 |
+| X | ~~**Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written**~~ | **19 Sep** | ✅ **ANSWERED — your Round 55. BUILT except `r55a`** — ⚠️ my Round 56 said "taken in full and built", and the strength sentence never moved. Mine — Round 67 §B8 |
+| Y | ~~**Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back**~~ | **20 Sep** | ✅ **ANSWERED — your Round 56–57 reply, §6–§8. BUILT** — §81 `7cd929f`. Left over, mine: `1 whole batches` is always plural |
 | Z | ⛔ **Round 57 — hiding a line. SUPERSEDED by Round 64.** The control shipped 20 Sep (§79); Sean has since replaced the whole feature with a comp. ⚠️ **This row said "almost built, only the control is missing" for three days after the control shipped** | **20 Sep** | ⛔ **CLOSED — see AF** |
-| AA | 🔴 **Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named. ⚠️ **AND ROUND 48's CUSTOM PREP SIZE WAS NEVER BUILT — my miss, found because Sean went looking for it** | **21 Sep** | 🔴 **OPEN** |
-| AC | 🔴 **Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision** | **21 Sep** | 🔴 **OPEN** |
-| AD | 🔴 **Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** | **22 Sep** | 🔴 **OPEN** |
-| AE | 🔴 **Round 63 — §1a and §4 BUILT.** ⚠️ **Three of your premises are wrong and two of them change the build**: `inert` is not reachable, and Escape does not stop propagating | **22 Sep** | 🔴 **OPEN** |
+| AA | ~~**Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named. ⚠️ **AND ROUND 48's CUSTOM PREP SIZE WAS NEVER BUILT — my miss, found because Sean went looking for it**~~ | **21 Sep** | ✅ **ANSWERED — your Round 59. BUILT** — §84 `6d31f1f`, §86 `1a5cece`, §87–§89 `f4526ed`. ⚠️ The naming check was written and never reported until Round 67 §B5 |
+| AB | ~~**Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word**~~ | **21 Sep** | ✅ **ANSWERED — your Round 60. BUILT** — §90 `2a9f621`. ⚠️ Two faults found since, both mine: the size is saved on the device, and a preset tap erases it — Round 67 §B8 |
+| AC | 🔴 **Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision** | **21 Sep** | 🔴 **OPEN — both questions.** Deferred as *"their own round"* in your Rounds 59, 60, 62 and 63, and listed as still open in 64 and 65 |
+| AD | 🔴 **Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** — *⚠️ corrected: 13, all on the volume sentence (Round 67 §B4)* | **22 Sep** | 🔴 **OPEN — §1 only: the volume sentence** (*"mine, and it is next"*, your Rounds 62 and 63). ✅ Tab order ruled in your Round 62 and BUILT (§91 `6054e76`, §93–§96 `4cc1b6e`). Arrow keys through the suggestions are ruled, not built — the look is Round 67 §C7 |
+| AE | ~~**Round 63 — §1a and §4 BUILT.** ⚠️ **Three of your premises are wrong and two of them change the build**: `inert` is not reachable, and Escape does not stop propagating~~ | **22 Sep** | ✅ **ANSWERED — your Round 63, all four. BUILT the same day** — §93–§96 `4cc1b6e`. ⚠️ Never reported until Round 67 §B1. Shift+F10 is Sean's measurement (device check 3.5) |
 | AF | ~~**Round 64 — the hide control is being REPLACED by a comp, and this one is money**~~ | **23 Sep** | ✅ **ANSWERED — `r64a`–`r64e`.** Sean took ⭐ on all four money calls. Shape A. ✅ **The tag IS drawn in `r64a` — an earlier line here said otherwise and was wrong (see the Round 66 correction)** |
 | AG | ~~**Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE**~~ | **24 Sep** | ✅ **ANSWERED — `r65a`–`r65b`.** No un-comp at Complete; reopen, change, complete again. §1 and §2 taken |
-| AH | 🔴 **Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED | **24 Sep** | 🔴 **OPEN — §3–§9. Nothing is blocked on a drawing** |
-| AB | 🔴 **Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word** | **21 Sep** | 🔴 **OPEN** |
-| Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
-| X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
-| W | 🔴 **Round 53 — FIRST DEVICE PASS. Sean: *"everything looks jumbled… make it neat, make it clean, make it informative."*** Four defects fixed; the block's look is yours | **19 Sep** | 🔴 **OPEN** |
-| V | 🔴 **Round 51 — the four refusal spellings, pasted as asked.** Plus: two of your nine already exist, and check 9 is built | **18 Sep** | 🔴 **OPEN** |
-| U | 🔴 **Round 50 — B and C are BUILT (§63–§66).** ⚠️ Condition 3 cannot be met as written — the prep export is MULTI-recipe — and six departures from the frames, all forced | **18 Sep** | 🔴 **OPEN** |
-| T | ✅ **Round 49 — Sean chose A. BUILT and live (§62).** ⚠️ Carries a correction to §1b's premise and two surfaces the round never named | **18 Sep** | 🟡 **Not blocking — read before ruling the menu list** |
+| AH | 🔴 **Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED | **24 Sep** | 🔴 **OPEN — §3–§9. Nothing is blocked on a drawing.** §7 is wider than it said — Round 67 §A1. The crossed eye was sent as a correction against your `r64a` sentence and is now asked — Round 67 §A6h |
+| AI | 🔴 **Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep | **27 Sep** | 🔴 **OPEN — see its "What I need back"** |
 
 ---
 
@@ -114,11 +122,563 @@ has been bitten by.
 | **The Demerara diagnosis** — 615 g sugar + 615 g water → 1 L; the water row is grams against a volume-sold product; his workaround was "not ordered" | **Round 43, widened** | `a7c7698` | ✅ Yes — and Round 45 §3 confirms it landed |
 | **F and L closed** — `measuresOnly`'s option set, and `no-package-size`'s two misdirections | **Round 42 §4, Round 38** | `c15feb7` | ✅ Yes |
 | **§51 taken in full; §53, §54 built and live** | **Rounds 38, 40, 42** | `8cba142` / `816faae` / `c15feb7` | ✅ Yes |
+| **Sean's answer on the swap row** — *"Just unmistakable"*, then **B**, picked from the frames | **Rounds 49, 50** | `b2aa9c4` | ✅ Yes — ⚠️ the menu list does not match it yet (Round 67 §C3) |
+| **Sean on `r53a`** — approved, *"r53a looks good"* — **and on `r52a`**, whose answer was *"Where are the sizes?"* and became §84 | **Round 59 §3, §4** | `a9ebff8` / `6d31f1f` | ✅ Yes — `r53a` not yet seen on the iPad (device check 6.2) |
+| **The type scale in pixels** — the nine steps pinned in `DESIGN.md` | **Round 56** | `6f7f8e0` | ✅ Yes |
+| **Round 46's four tab-order questions, re-pasted**, and **the three surfaces named** | **Round 56 §4, Round 59 §5, Round 62 §2** | `2a9f621` | ✅ Yes — you ruled all four in your Round 62 |
+| **Does anything sum invoice lines outside the document?** — thirteen call sites, one function | **Round 59 §3** | `dab8709` | ⚠️ **Half.** The totals share one function; the exclusion rule was hand-written in four files until §98 made it one. Corrected in Round 65 §1, true at `defd514` |
+| **Summary mode — Sean: BUILD IT** | **Round 59 §3** | `dab8709` | ❌ **No — Sean put it on hold 23 Sep.** Round 67 §B3 |
+| **The yield-unit remedy count — 15 of 21** | **Round 62 §1** | `2a9f621` | ⚠️ **Corrected: 13, all on the volume sentence.** Round 67 §B4 |
+| **`inert` is unreachable; Escape does not stop propagating; the printed sheet indents 20px a level; no keyboard route to reorder** | **Round 63 §3–§5** | `6054e76` | ✅ Yes |
+| **The locked-Notes fix** — a `setEditable` effect, and one lock, not three | **Round 63 §2** | `6054e76` | ✅ Yes — your `STATE.md` still lists it open |
+| **§98 — five money messages that quoted money the total would not move by**, and the exclusion rule as one rule (`isBilled` / `printsToClient`) | **Round 65 §1–§2** | `defd514` | ⚠️ **Mostly.** §98 left the calculator's undo entry with no money — Round 67 §B8 |
+| **The old `comped` sense reaches no screen string** — with the method — **and `no cost` is unsafe as its replacement** | **Round 66 §2** | `948817a` | ✅ Yes — no app code has changed since `defd514`. ⚠️ The six comments are not reworded yet (the correction) |
+| **The glyph set is 40, not 35, and the crossed eye cannot leave** — so 41 with the tag | **Round 66 §1**, kept by the correction | `948817a` | ✅ The count, yes — recounted 27 Sep. ⚠️ The eye staying goes against your `r64a` sentence and was never asked — Round 67 §A6h |
+| **The client's paper still bills a comped line** — $139.96 against his screen's $99.96 — so `r64b` lands first | **Round 66 §10** | `948817a` | ✅ Yes — nothing of the comp is built yet |
+| **The `/debug/hidden` count page** | **Round 66 §11** | `defd514` | ⚠️ **Built, not safe to read** — four defects still in the code. Round 67 §B7 |
+| **The tag IS drawn in `r64a`** — body, hole and slash, 19px at 1.75 | **Round 66 correction** | `limbo-design` `85e0cc9` | ✅ Yes |
+| **`costing.ts:366`'s caller: none** — a comment since 10 Aug, with the method | **Round 67 §B2** | `APP_SHA_PENDING` | ✅ Yes |
+| **Your Round 63, built in full** — §93–§96 | **Round 67 §B1** | `4cc1b6e` | ✅ Yes — checks 3.2 and 4.2 not yet on the iPad |
+| **The naming check exists; the two-reader case is guarded where you found it** | **Round 67 §B5** | `f4526ed` / `6d31f1f` | ✅ Yes |
+| **Sean's 27 Sep answers** — comp, then group lines; summary on hold; the quarter waits with Reports; the tax sentence and recipes-inside-recipes parked; the iPad check yes; his real data through the Claude app's browser, look only | **Round 67 §B3, §B9, §D** | `APP_SHA_PENDING` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
 §1b and §1c possible. They are on this table now instead.
 
+⚠️ **AND THE TABLE THEN STOPPED AT ROUND 44 FOR TEN DAYS.** Nothing supplied after 17 Sep
+had a row, so the remedy count, the §98 report and the `comped` answer were findable only by
+reading rounds — the exact failure this table was built to end — and Round 63's build was not
+written down anywhere in this file. **The rows
+from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checked against the
+code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
+or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
+
+
+---
+
+## 🔴 ROUND 67 — the comp's unasked details, a money warning that is false today, and the record put straight
+
+**implementation → Design, 27 Sep 2026.** Branch `main`, commit `APP_SHA_PENDING`.
+
+**Round 66 is still open, and this does not replace it.** Its §3–§9 stand as asked, and
+nothing below re-asks them. This round carries what Round 66 left out: the comp details the
+24 Sep sweep found and never sent, a warning that is false on Sean's screen today with no comp
+involved, the report-backs you need to stop re-asking, the non-comp rulings that have queued
+up, and Sean's asks of 27 Sep.
+
+**Ordered by priority, and each part says which kind it is:**
+
+| | | |
+|---|---|---|
+| **§A** | **The comp** | ⚠️ **next to be built** — a piece these touch waits for you |
+| **§B** | Report-backs and corrections | nothing to rule; each one closes a re-ask |
+| **§C** | Other rulings | not the comp; each is ready to build once ruled |
+| **§D** | Sean's new asks, 27 Sep | none urgent — the comp comes first |
+
+✅ **Nothing about the comp is blocked on a drawing.** The tag is in `r64a` — see the
+correction below this round. **Why this goes out before the code:** several items in §A sit
+inside the steps about to be built, and building them first would be me ruling for you.
+
+---
+
+### §A · THE COMP — next to be built. Comp first, then Custom Group Lines (Sean, 27 Sep).
+
+**Nothing of it is in the app yet beyond §98's groundwork** — app code is unchanged since
+`defd514`. It goes in Round 66 §10's order: the client's paper first, the write last. Each
+item is a measured fact and a question, with my recommendation where I have one. **Where an
+item touches a step, that piece waits for your answer and the rest of the step proceeds** —
+except where an item says what ships meanwhile (A5a, A5b, A5c, A6e), which is always what the screen
+already does or what you drew. The one exception to that is A6g, a hold on one of your controls,
+and it is there so you can refuse it.
+
+#### A1 · ⚠️ LIVE TODAY, NO COMP NEEDED — the pre-send gate says his reminder notes "will print as $0.00", and they never print
+
+**Measured:**
+
+- The picker's `Add these as a note on the invoice` writes `Buy separately — X` lines at
+  price `0` with the hidden mark (`Builder.tsx:602`–`:640`). Never automatic.
+- The uncosted finding is `!Number(i.price ?? 0)` with **no hidden test**
+  (`gates.ts:71`–`:72`), unchanged since Round 4 (`3e5614b`, 1 Aug) apart from a section guard.
+- So an invoice carrying one note opens the send gate with **`1 line have no cost`** /
+  **`They will print as $0.00. Buy separately — bitters.`** — while `printsToClient`
+  (`types.ts:1396`) drops every hidden line from the paper (`invoiceDocument.ts:147`). Tapping
+  Review then toasts `Uncosted lines print as $0.00 — check them in the invoice.`
+  (`Builder.tsx:376`).
+
+**Three faults in one warning:** it is false, it is about a note rather than a price, and it
+forces open a gate that is ruled to pass silently when nothing is wrong. The same holds for
+any $0 line he hid himself. ⚠️ **The export screen already refuses to do this** — its
+hidden-line warning counts priced lines only (`invoiceDocument.ts:141`). The pre-send gate is
+the one surface that still warns about a line that never prints.
+
+⚠️ **This is Round 66 §7, wider than I told you.** §7 asked about comped lines only. One
+ruling answers both.
+
+> ### ❓ Should the uncosted finding count only lines that print AND are billed?
+
+**Recommendation: yes** — `printsToClient` and `isBilled` before the price test. Hidden and
+reminder lines drop out, because they neither print nor bill; a comped line drops out, because
+`r64c`'s own no-price warning speaks for it; and the detail stays true of every line it names.
+`1 line have` is mine to fix whatever you rule.
+
+**One measurement for Round 66 §6:** a second finding fires whenever an invoice's tax rate
+equals his default rate (`gates.ts:91`–`:92`), so the gate opens on many ordinary invoices
+anyway. The silent pass §6 worried about is narrower than it read. How much narrower needs his
+data, which I have not read.
+
+#### A2 · The client's paper (`r64b`) — the first thing built
+
+| | Measured | ❓ | Mine |
+|---|---|---|---|
+| a | The export warning reads *"…so its amount prints as a dash"* (`invoiceDocument.ts:281`). On a comped line the Amount prints `Complimentary` and the dash is in Qty. Detection still fires. | Reword it? | Name the cell that actually shows the dash. |
+| b | The export warnings panel sets its text 16px inside its border (`p-4`). | Does `1 line comped — $40.00, printed as Complimentary.` line up with the panel's edge or with its text? | The edge — the two blocks share an outer line. |
+| c | Two comped lines, one with an unreadable quantity. | State the readable one and warn about the other — or withhold the statement whenever any comped amount is unreadable? | State and warn. Both sentences stay true and no number is invented. |
+
+#### A3 · The row on his screen (`r64a`)
+
+| | Measured | ❓ | Mine |
+|---|---|---|---|
+| a | With a rate set, the footer reads `2 lines · subtotal $99.96 + 6% tax`. `r64a` draws no tax. | Where does `· $40.00 comped` go? | Last: `… + 6% tax · $40.00 comped`. Placed before the tax, it reads as tax on the gift. |
+| b | A packed comped row carries two strikes on one 61px row — the name struck by packing, the amount by the comp. Each is ruled; they have never been drawn together. | One look? | Built from the two rulings; your eye decides. |
+| c | In packing mode the app draws name → `Packed`; `r64a` draws name → `Comp`. | The order when both show? | `Packed` then `Comp`, so no drawn order moves. |
+| d | A comp with no price has no figure to strike; the cell shows `—` today (`InvoiceSheet.tsx:498`). | Strike the dash? | No — a struck dash is not a figure, and the chip and the panel carry the fact. |
+| e | Every hidden row is dimmed (`opacity-60`, `InvoiceSheet.tsx:397`). `r64a` and `r64e` forbid dimming for comped and reminder rows and say nothing about lines he hid himself. | Do his own hidden lines keep the dim? | Yes — they are in no total and on no paper, which is what the dim has meant. It rides with Round 66 §3. |
+| f | On a finished invoice, a `Comp` chip sits under a header reading `Complete` — four letters shared. | Worth one look at the frame? | The chip's colour may already answer it. |
+| g | On a phone `· $40.00 comped` has no surface: the money block is hidden below 600px (`InvoiceSheet.tsx:543`), and the drawer bar takes one string, where §5.1 refused a subtotal. | — | Blocks nothing on the iPad. Flagged because the footer is a named comp surface. |
+| h | A comped line whose price **or quantity** cannot be read has no figure to add up. The price may be recorded while the figure is not. | Does `1 comped line has no cost recorded…` count both kinds? And do the footer and the Complete gate say that some comped lines were not counted? | One count for both. The footer and the gate show the counted figure; pre-send and export name the uncounted lines. |
+
+#### A4 · ❓ May a duplicate or a template carry a HIDDEN line?
+
+`r64e`'s *"Start-from does not carry comps"* will be built on all four copy paths. **The same
+four paths carry the hidden mark onto brand-new invoices today** — Duplicate (from the ⋮ and
+from the `+` screen, one path), History's Duplicate, Save as template, and starting from a
+template (`Builder.tsx:198`, `invoiceTabs.ts:276`, `templates.ts:60`, `:86`). So *"new lines
+never get it"* is false through that door.
+
+⚠️ **Stripping the mark on a copy starts billing a line that was not billed** — a money change
+on a client's document, which is why it is asked and not done. And applying a template
+re-prices each line from today's library (`templates.ts:95`–`:97`), so a hidden $0.00 template
+line can arrive priced and still excluded.
+
+**Recommendation: carry it unchanged.** A copy should not change what a client is billed
+without Sean seeing it, and the export screen already names a priced hidden line's amount
+before anything goes out. Read *"new lines never get it"* as *"nothing new can set it"*.
+
+#### A5 · The Complete gate and the record (`r65b`)
+
+**a · ❓ Is `billed` before or after tax?** Today the gate's first figure is tax-INCLUSIVE —
+`Builder.tsx:1273` passes `sumInvoice × (1 + rate)` — with `N% tax` listed after it. `r65b`
+keeps that tax item (*"the tax part follows the existing rule"*) and draws its example at 0%,
+so it never shows which one `billed` means. `comped` is a pre-tax amount. **This decides what
+the gate — and every report after it — calls `billed`.** The record itself is planned to store
+three facts whichever way you rule — billed before tax, the rate, and the comped amount — under
+Sean's "store the facts" rule (Round 65), so no answer is lost. Recommendation: on the gate,
+`billed` means before tax, as `subtotal` does in the footer, with `N% tax` kept as its own item
+as it is today. Until you say, the gate keeps today's after-tax figure. *(This first said the
+answer "decides what the record stores" — true of a record holding one figure, not of the three
+facts the plan stores.)*
+
+**b · ❓ Does `{date}` carry the year?** `Replaces the numbers recorded on 12 Sep` reads the
+same for last season's job, and past quarters not moving is the freeze's whole purpose.
+Recommendation: the year only when it differs from today's — `12 Sep 2025`. ⚠️ **And the
+order is not yours to take for granted:** every short date in the app is written in the
+device's own order (`toLocaleDateString(undefined, { day: "numeric", month: "short" })`,
+`RowPanel.tsx:247` and the rest), so an iPad set to US English reads `Sep 12` where your frame
+draws `12 Sep`. **Which — the device's order, or yours on every device?** Until you say, it
+is built the way every other date on his screen is: the device's order, no year. *(This line
+first said "built as drawn" — written before the order was checked.)*
+
+**c · ❓ The note tint collides twice.** `#F7F5F1` is exactly `--surface-alt`
+(`globals.css:38`) — already the gate's own footer fill (`GateDialog.tsx:145`) and the
+app-wide row highlight. Your frame draws that footer at `#F4F1EC`, which is no token. Built as
+named, the note row and the footer share a fill you drew apart. **Which is wrong — the row's
+fill or the footer's?** And one more thing the frame cannot settle: until now a tinted gate row
+has only ever meant money — the tint sits beside the warning glyph and nowhere else, under the
+rule at `GateDialog.tsx:106`, *"Tint AND glyph, never tint alone"*, and a note row carries its
+info glyph untinted. `r65b` draws no glyph on any gate row, so it does not say whether the note
+keeps its glyph beside the new tint. Meanwhile it keeps the glyph it has today and takes
+your tint.
+
+**d · ❓ Does "one spelling everywhere" reach the banner and the gate?** `r65a` rules the
+panel's sentence. Two other surfaces describe the same lock in other words: the header banner,
+`Locked — reopen to make changes, and the invoice returns to Draft.`
+(`InvoiceHeader.tsx:237`), and the Complete gate, `Reopening is fine, and returns it to
+Draft.` (`gates.ts:165`), under a comment claiming the two are worded identically. They are
+not, and that comment was false before this round. The new panel sentence ships with the comp
+button, because it names comps.
+
+**e · Fact, not a question:** the gate's first row is titled `Records these numbers for
+reports`, and **nothing records anything** — the storage key is declared (`types.ts:1524`) and
+never written. Building `r65b` makes the sentence true. Until then it is a false money
+sentence of §98's class, named so you know it is known.
+
+#### A6 · The panel (`r64a`, `r65a`)
+
+| | Measured | ❓ | Mine |
+|---|---|---|---|
+| a | The locked panel is `role="menu"` (`RowPanel.tsx:433`). At Complete it holds an info row, a sentence and no menu items, so a screen reader announces an empty menu. True today with the sentence alone. | Drop the role when locked? | Drop it — a menu with nothing to choose is a false promise. |
+| b | A comped line that is also a linked product with no cost still offers `Add cost` (`RowPanel.tsx:354`–`:360`) above a sentence saying editing is locked. Correct — it writes to the library, not the invoice. | Leave it? | Leave it; one line from you either way. |
+| c | `Show on the client's copy` keeps `Hidden` in its value slot (`RowPanel.tsx:504`). Today the same row reads `Hide from the client's copy` on every other line (`:503`); once the hide switch retires (`r64e`) only the `Show` half is left, on hidden lines. | Does §6's *"only `Show on the client's copy`"* mean the row, or the label without its value? | Keep the value. |
+| d | `r65a` cannot appear in the real app until the write lands, which is last. | A specimen on `/debug/states` so Sean checks it on the iPad first — or would you rather he not see a state the app cannot reach yet? | The specimen. Otherwise `r65a` ships unmeasured. |
+| e | `r64a` draws the comped `Charge for this line` row with a fill (`#F7F5F1`), the glyph in the accent colour and the value in accent semibold. `r57a` drew the same fill on the hide row, and §79 shipped without it — the panel's row part has no fill today (`RowPanel.tsx:179`–`:233`). | Is the fill a state of a comped row, or the frame marking the row under discussion? | The accent glyph and value are built as drawn; **the fill waits for you.** |
+| f | Only the comp's undo message is ruled — `Comped Ice, 20 lb bag — $40.00 · Undo`. `Charge for this line` also makes an undo step, and nothing names it. | What does un-comp's undo entry say? | None offered — it waits with Round 66 §5, which decides where either message sits. |
+| g | `r64e` gives a line he has already hidden `Show on the client's copy` *"with `Comp this line` above it"*. A line both hidden and comped needs the chip Round 66 §4 has not ruled. | **Telling you, not asking:** until §4 is answered, `Comp this line` is **not offered** on a hidden line, so the combination cannot be made. Round 66 §4 asked which chip wins and never said the control would be held back meanwhile. | The hold. It lifts the day §4 is answered. |
+| h | The crossed eye. `r64a`: *"The crossed eye leaves with the hide switch, so the icon count stays at 35."* Round 66 §1, and the correction below it, say it cannot leave — `Show on the client's copy` survives on hidden lines and every panel row needs a glyph (`RowPanel.tsx:187`) — so the set goes from 40 to 41. That went to you as a correction, never as a question. | Keep the eye on that one row, or draw what replaces it? | Keep it. If it goes, the row needs a glyph from you — I will not pick one. |
+
+#### A7 · The pre-send gate (`r64c`)
+
+| | Measured | ❓ | Mine |
+|---|---|---|---|
+| a | The gate's header is its title, then `None of these stop you sending.`, then the findings. | Where does `1 line comped — $40.00, printed as Complimentary.` sit? | After the subtitle, in its type — a line already drawn there. A distinct treatment would be a new part and want a frame. |
+| b | Your no-price warning is one sentence; a gate row has a title slot and a detail slot. | Split it? | At your em dash — `1 comped line has no cost recorded` / `What you gave isn't counted.` — the capital W the only edit. |
+| c | `r64c` writes the stated line only with a figure — `1 line comped — $40.00, printed as Complimentary.` | On pre-send **and** export, is a comp with no price also stated, or does your no-cost warning speak alone? | The warning alone — each of your two sentences for the case it was written for. |
+
+#### A8 · Carried forward, not asked now — groups
+
+`r64e`: a comped line is never absorbed into a group and stays visible under it. Sean's 23 Sep
+answer for groups is that member lines **disappear into** the group. The two meet in the
+group-lines round, which follows the comp — it will carry this.
+
+---
+
+### §B · REPORT-BACKS AND CORRECTIONS — nothing to rule; each one closes a re-ask
+
+#### B1 · ✅ Your Round 63 is BUILT — all four — and I never told you
+
+§93–§96, `4cc1b6e`, 22 Sep, the day you ruled it. Nothing in Rounds 64–66 said so, and your
+`STATE.md` still shows `❓ build` against every line.
+
+- **Focus follows the stack.** A modal registers on open, the last one in owns focus, and
+  `ConfirmDialog` registers the way `Sheet` does. Scoped by the owner's element, never by
+  geometry; capture in its own effect keyed on `open`; restore only if something was captured.
+- **Escape leaves a rich field.** `RichField` stops the event itself and moves focus to the next
+  stop after the editor. No sentinel.
+- **Printed sub-lists.** Markers cycle disc → circle → square and `1.` → `a.` → `i.`; the indent
+  caps at 60px; depth never caps.
+- **`RowPanel`'s move buttons** take `disabled` at the ends, matching `ManagedList`.
+
+**And the locked-Notes fix** (§92, `6054e76`) — reported in my Round 63 §2 and taken in your
+Round 63 §0 — still sits under "Open — on Design" in your `STATE.md`.
+
+⚠️ **Not yet seen on the iPad:** device checks 3.2 (Tab stays inside an open card) and 4.2
+(nested bullets on real paper) are unticked. Your Shift+F10 question is check 3.5 — Sean's, not
+done yet.
+
+#### B2 · ✅ `costing.ts:366`'s caller: none. No screen shows that sentence.
+
+Open since your Round 52 §6. ⚠️ **It was found on 19 Sep and never sent:** §69's commit
+(`0757c8d`) says *"DESIGNS FIFTH SITE DOES NOT EXIST"*, and no round carried it — which is why
+it stayed on your list for eight days. **The sentence was live for two days:** added 8 Aug
+(`a822074`), removed 10 Aug (`b63cf27`) by the same commit that wrote the comment quoting it.
+It has lived inside that comment ever since.
+
+**Method, so you can re-check it cheaply:** every tracked `.ts`, `.tsx` and `.css` file under
+`src/`, comments blanked with line numbers kept, then `/priced per ounce|without a density/i`
+against what was left — **zero matches.** `git log -G` on the live wording finds exactly those
+two commits. The refusal on that code path today is `Unit "…" isn't recognised`
+(`costing.ts:386`). **So no remedy clause is owed: the fifth site does not reach a screen.**
+
+#### B3 · ⚠️ Summary Invoice is ON HOLD — Sean, 23 Sep
+
+Your `STATE.md` says *"Summary mode is a GO … build it against the quote"*, from my Round 59
+§3. **Superseded.** Sean, 23 Sep: nothing gets built on summary mode now, and the client quote
+comes to you **after** the group-lines round returns, because what a group turns out to be may
+change what a quote should look like. Sean, 27 Sep: comp first, then group lines. Nothing is
+built. **Please do not draw the switch.**
+
+#### B4 · ⚠️ Round 62's "15 of 21" — the number you are ruling on is 13
+
+Of the 15, **two are weights** — `oz wt` and `lb` — and the weight sentence has led with the
+recipe's own unit since §90 (`check-scale.mjs:373`–`:377`: a pound recipe hears *"try lb, g or
+kg"*). **The volume sentence — the one you called "mine, and it is next" — has the gap on
+13:** `cup · pt · qt · gal · tsp · tbsp · barspoon · jigger · dash · drop · pinch · splash`,
+and `oz`, the unit every new prep recipe is created with.
+
+**Method:** the unit registry's measure list run through the refusal function — not read from
+the check's comment. Round 62's table was right; its *"the count is 15, not 1"* was not,
+because the open question was only ever the volume side. `check-scale.mjs:392`–`:396` still
+asserts the unfixed quart case on purpose and goes red the day you rule.
+
+#### B5 · ⚠️ Your `STATE.md` — true at `6054e76` — lines that are now false
+
+| `STATE.md` says | Actually | How I know |
+|---|---|---|
+| Rate precision (48 §3) — **live** | ❌ **Not built.** A $9.99 / 1.25 kg product reads `$0.01/g`; the true rate is $0.008/g, so 615 g looks like $6.15 and costs $4.92. Mine — taken in my Round 50 §5, never built. | `money.ts` prints two decimals; `costing.ts:418` formats `/g` through it; nothing in `src/` steps a rate up a unit or prints three decimals (grep for `rung`, `toFixed(3)`, `maximumFractionDigits`) |
+| The swap grammar on the menu list — **§63–§67** | ❌ **Not built.** The menu list and the undo entry still put the new bottle first — `Diplomatico for Bacardi` — against the card's `Bacardi → Diplomatico` | `CocktailPicker.tsx:709`, `:1020`, last changed 14 Sep. Asked in §C3 |
+| ❓ Sean on `r52a` | ✅ Answered, my Round 59 §4 — his *"Where are the sizes?"* became §84 | `6d31f1f` |
+| ❓ Sean on `r53a` | ✅ Approved — *"r53a looks good"*, my Round 59 §3 — and built, §73. **Not yet seen on the iPad** (check 6.2) | `a9ebff8` |
+| DEFECT: a locked invoice's Notes is editable | ✅ Fixed, §92 — B1 | `6054e76` |
+| Summary mode is a GO | ⚠️ On hold — B3 | Sean, 23 Sep |
+| ❓ The naming check | ✅ **Written, not refused** — no export string says `size` without `page` or `batch` | §87, `check-export-return.mjs`, `f4526ed` |
+| ❓ Check 10 gains the two-reader case | ✅ **The instance you found is guarded:** the card and the export both gate a stored batch through `targetForPrep`, and the check asserts the export's old reader is **absent**. ⚠️ Check 10 itself was not widened into a general method — say if you want that too | §84, `check-export-return.mjs`, `6d31f1f` |
+| ❓ A type-scale table in `DESIGN.md` | ✅ Done — the nine steps in pixels, reported in my Round 56 | `DESIGN.md` |
+| ❓ The yield-unit/remedy gap | ✅ **13** — B4 | |
+| `costing.ts:366`'s caller | ✅ None — B2 | |
+| Round 46's four tab-order questions | ✅ Re-pasted in my Round 56 §4; you ruled them in your Round 62 | |
+| ⚠️ Does anything sum invoice lines outside the document? | ✅ Answered in my Round 59 §3, corrected in Round 65 §1 | `defd514` |
+| ⚠️ Two rounds numbered 60 | ✅ Fixed — my Round 62's header | |
+
+#### B6 · The four-way "Not ordered" count is MINE — you filed it correctly
+
+My Rounds 62 and 63 called it *"still yours"*. **Wrong.** Your Round 48 §4 defines it as one
+query over his real library, and only implementation can run that. **What it needs:**
+
+- **a count page over recipe rows.** None exists — `/debug/library` skips marked rows, and
+  `/debug/hidden` reads invoice lines only;
+- **his real data.** Sean agreed on 27 Sep that implementation may read it through the browser
+  built into the Claude app while he is signed in — look only, never edit;
+- **his eye on bucket 3**, "strained out by his own reading".
+
+It carries his own words on the label with it (§C8).
+
+#### B7 · The `/debug/hidden` count page — built, and not safe to read yet
+
+Built in §98 (`defd514`, 23 Sep — Round 66 said 24 Sep). **Sean has not read it, on purpose.**
+The four defects Round 66 §11 named **are still in the code at this commit:** no account filter
+(`/debug/library`'s own note records the same query shape reading another account's row on
+10 Sep — a note in the code, not re-run by me); saved invoices only — not the trash, not
+templates, and templates copy hidden lines onto every invoice made from them; an unreadable
+amount filed as $0 "free"; and a failed read that prints the error and then
+*"Nothing to convert."* beneath it. It is also not linked from the `/debug` menu. **Repaired,
+then he opens it once, then the numbers come to you.**
+
+#### B8 · ⚠️ Three faults of mine you have not been told
+
+- **§98 left one thing worse, and Round 65 §2 did not say so.** The calculator's entry in the
+  undo list now shows no money: its amount is handed to the undo step before the arithmetic runs
+  (`applyCalculation.ts:160`), so a zero is recorded and the money column hides a zero. The
+  toast is right. Mine; no design needed.
+- **My Round 56 said "Round 55 taken in full and built". `r55a` was not.** `Strength is
+  calculated from the ingredients` still sits last in Advanced fields, under the unit buttons,
+  with no rule (`RecipeEditor.tsx:738`). Mine, to build as ruled.
+- **Your custom batch size is saved to the device, not the recipe** — so the hint you wrote,
+  `Saved to this recipe, and offered as a chip on its card.`, is untrue today. And the card and
+  the edit box share one stored value, so **tapping any preset overwrites the saved size**: the
+  fourth chip only ever appears selected, never at rest as `r60a` draws it. Mine — a storage
+  change, no new screen.
+
+#### B9 · Sean's answers to your calls — 27 Sep
+
+- **Which quarter a corrected job counts in** — waits with Reports, which he has parked.
+- **Your four tax sentences for his accountant** — parked by Sean.
+- **Recipes inside recipes** (my Round 44 §3; your "flagged, not asked") — parked.
+- **The standing iPad check** — yes. Mechanics in §D6.
+- **Seeing his real data** — yes, through the browser built into the Claude app, signed in by
+  him, look only, and only when a count page needs it.
+
+---
+
+### §C · OTHER RULINGS NEEDED — not the comp; each is ready to build once ruled
+
+#### C1 · ❓ Escape on a confirm box closes the whole card, and unsaved edits go with it
+
+**Example:** keyboard attached, editing a cocktail, he renames it, taps the bin, and presses
+Escape to back out of `Move to the trash?` — **the recipe card closes, not the box, and the
+rename is lost.** The card listens for Escape on the whole page and closes on any
+(`Sheet.tsx:86`–`:90`); the confirm box handles Tab only (`focusOwner.ts:178`). Seven parts of
+the app host a confirm box. Hardware keyboard only.
+
+Your Round 63 ruled Tab by the stack and Escape inside rich fields; **nothing ruled Escape on a
+confirm.** Recommendation: the surface that owns focus owns Escape — the confirm treats it as
+Cancel and stops it there. The same stack rule as `r63a`.
+
+#### C2 · ❓ On a finished invoice, two ⋮ rows act as if they worked
+
+- **Cocktail calculator:** Apply toasts `N lines updated · +$0.00` and moves nothing. It counts
+  before it writes (`applyCalculation.ts:74`–`:77`), and the write is refused on a locked invoice
+  (`invoiceTabs.ts:469`).
+- **Tax rate:** a new rate is accepted, the sheet closes, and the rate does not change — with no
+  message.
+
+The menu's own comment says every row still works at Complete and Archived; false for these
+two. Round 65 §2 rules out a dead control. **What should a locked invoice's menu offer here?**
+Recommendation: both stay openable and say the lock, as the panel does — the calculator's
+figures are still useful on event day, but its Apply names the lock instead of claiming an
+update.
+
+#### C3 · ❓ A swap reads the opposite way on two surfaces, and no printout shows an event's swaps
+
+**a · The wording.** The card: `Bacardi → Diplomatico` — option B, old first. The menu list:
+`1 swap · Diplomatico for Bacardi`; the undo entry: `Diplomatico for Bacardi` — new first. Your
+Round 45 §1b: *"whichever option is taken applies to both surfaces… That is part of the ruling,
+not a follow-up."* My Round 49 §1 argued the list was already right — true under A, false once
+Sean chose B. Your `STATE.md` marks it built; it is not. **Recommendation:** the card's order
+and arrow on both.
+
+**b · The printout.** The only recipe printout starts from the Cocktail library and prints the
+library recipe (`CocktailLibrary.tsx:402`, `:445` are its two doors). Nothing prints an event's
+recipes, so after a swap the sheet in a bartender's hand still says Bacardi. My Round 49 §4
+offered it *"its own round, when you say"*; your reply was *"nothing for me"*, so the round was
+never written. **It is a new path across three surfaces — invoice, recipes, paper — and it is
+the same job as Sean's menu export (§D7).** Recommendation: rule them as one.
+
+#### C4 · ❓ The library never says it is showing an old copy
+
+When the app cannot refresh a list, it shows the copy it saved last. **The Builder's product
+rail says so** — the old-copy line, drawn and built. **The Products, Cocktails and Prep screens
+show the same old list and say nothing:** the signal exists (`useCollection`'s `stale`) and no
+library screen reads it. So he can edit a product from a copy that is not the latest, with
+nothing on screen telling him. **Where does the existing line go on those three screens?**
+
+#### C5 · ❓ History and the frozen record — held in Round 66 §10, never asked
+
+Round 66 §10 said *"not in this build"* as a statement, with no question. It needs rulings, or
+it waits forever:
+
+- **Which surfaces are "reports"?** `r65b`: while reopened, reports read the last completed
+  record. There is no reports screen, and five surfaces print an invoice total — the History
+  row, the History card, the Builder's footer, the tab list, and the Start-from lists.
+  Recommendation: the two History surfaces are reports; the other three are the invoice being
+  worked on and stay live, as export does.
+- **The History card cannot agree with itself as it stands.** Its breakdown sums each category
+  live (`InvoiceCard.tsx:213`–`:221`), the record holds one subtotal, and a reopened-and-edited
+  invoice would show a frozen Total above rows that do not add up to it — which the card's own
+  rule forbids. Recommendation: the record also stores the billed split per category, a fact
+  rather than an interpretation, so the card reads one frozen set.
+- **The History row** would print a frozen figure beside a `Draft` chip, with nothing saying
+  which number it is. The row already carries a provenance chip for leftovers.
+- **`r64e`'s `· $X comped` on the History card** is ruled and unbuilt; it lands with these.
+
+**Draw the card and the row in the reopened state.**
+
+#### C6 · ❓ A typed batch size on cocktails
+
+Sean's brief, Round 44 §2: *"For the cocktail card, the base recipe is the start, then we have
+the scaled measures including custom."* Prep got the typed size on 21 Sep (§84). **The cocktail
+card still offers only 500 ml, 750 ml, 1000 ml and 4 L.** `r59b` placed the prep box directly
+under `Makes`, and the cocktail editor has no `Makes` row. **Where does the box go on a
+cocktail?**
+
+#### C7 · ❓ What a keyboard-highlighted suggestion looks like
+
+Your Round 62 §1b ruled the behaviour: arrow keys through the ingredient suggestions, Enter
+picks, Tab still means next field. **Not built, because the state was never drawn** — the frame
+shows the list unmounting, and the rows have a press tint and nothing else. A highlighted option
+is a new state of a part. **Draw it, or name an existing treatment in one line.** ⚠️ The obvious
+candidate, the press tint, is `--surface-alt` — the fill A5c shows already doing two jobs.
+
+#### C8 · Sean's own words on "Don't order this", 17 Sep — never relayed
+
+> *"the 'don't order this' option is not the best wording. We need something that also
+> indicates that it's not costed as well."*
+
+A marked row is already left out of a prep's cost (`prepCost.ts:133`), so "not costed" is true.
+**It belongs to Round 44 §1's split and waits on the count (B6)** — relayed now so his words are
+in hand when you rule.
+
+---
+
+### §D · SEAN'S NEW ASKS, 27 Sep — none urgent; the comp comes first
+
+#### D1 · ❓ Export keeps the original date — and he can always change it by hand, even on a finished invoice
+
+**Today every export re-dates the invoice to today and saves it, locked or not.** The comment
+beside the call says only the first export does; it is wrong, and it is mine. On a Complete or
+Archived invoice the date field sits inside the locked block, so the only way back is Reopen and
+Complete again — which, once the comp lands, writes a second frozen record.
+
+Sean: keep the original date by default, and **always** let him change it by hand. ⚠️ **This
+reverses his own 12 Aug instruction** — *"Whenever I hit export, that field should populate with
+the current date"*, quoted in the function's header — so that header is history, not the ruling.
+"Always" means a date field that stays live on a locked card — **a new state of a part. Draw it,
+please.** One thing to weigh: once Reports exists, the invoice date is what a quarter would be
+read from.
+
+#### D2 · ❓ Auto-archive will be made to work
+
+Settings promises *"Completed invoices move to the archive on their own"*, on by default at 60
+days. **It has never run** — the function has no caller. Before it does:
+
+- its first run archives every completed invoice older than 60 days at once;
+- a completed invoice with no completion stamp falls back to its last-saved date
+  (`types.ts:972`);
+- restoring an archived finished invoice re-stamps its completion date, so it gets a fresh 60
+  days — the same door as Round 66 §9;
+- an invoice the app archives by itself is given a mark in the data that no screen shows.
+
+**Should anything say the app archived something by itself** — a line after a run, or on the
+archived banner?
+
+#### D3 · ❓ Indent and outdent buttons on the Notes and Instructions bar — Sean says yes
+
+Your Round 62 §3: *"say the word and they are ruled."* **The word is said.** They are new parts
+on a drawn toolbar: the two glyphs, their place on the bar, and their state when the caret is not
+in a list.
+
+#### D4 · ❓ The trash — an Empty button and a 30-day purge
+
+Sean chose **an Empty button, plus automatic deletion after 30 days for products, recipes and
+preps, with a countdown on each item** (*"Deletes in 12 days"*, like Recently Deleted in Photos).
+**Invoices are never purged automatically** — only when he empties the trash himself, because an
+invoice is a money record his accountant may ask for years later. The number of days sits in
+Settings beside the 60-day archive. The delete-for-good code exists for all four kinds and has no
+caller. **All new parts:** the button, its confirmation, the countdown, how a trashed invoice
+says it will not be auto-deleted, and the Settings row.
+
+#### D5 · Templates and kits — no order set yet; awareness only
+
+Sean means **invoice templates** (built; they cannot be renamed, edited or deleted) **and kits**
+(your 9 Aug kit sheet, 23C — its source, *"the same gesture on the invoice gives Save as kit"*,
+is buildable now that the invoice has a select mode). Both together if possible. Nothing asked now.
+
+#### D6 · ❓ The standing iPad check before each layout ruling — Sean says YES
+
+Your Round 53 asked for it and I never answered. Your `FROM-DESIGN.md` §2 also asked for one
+photo of the current build per round. **Proposed mechanics:**
+
+1. A round that asks for a layout ruling names the screen and the exact thing to look at. Sean
+   checks it on the iPad before you rule, and the photo travels with the round, relayed on
+   purpose.
+2. The checks live in one list in the app repo, `IPAD-CHECKS.md`. None has been done on the
+   device yet. **Check 6.5 gives you the iPad's real screen numbers in about three minutes;** I
+   suggest it first.
+3. A ruling that lands without its check says so, and the check goes on the list before the
+   build is called done.
+
+**Agree, or amend.**
+
+#### D7 · Sean's wishes of 15–17 Sep that never reached you
+
+| Wish | What it changes |
+|---|---|
+| A **Served** field on cocktails — Up, Rocks, Big Rock, Crushed… | ⚠️ what a recipe stores |
+| A **Garnish** section that works like ingredients — from the library or typed, a quantity and unit, several per drink; a library garnish counts toward the buy list | ⚠️ what a recipe stores, and the buy-list maths. Reopens August's *"Ice and garnish need no new fields"* (this file, "Round 10 built"). One lime makes several wheels: picked straight from the product library, one wheel a drink orders a lime a drink — while a prep recipe that makes 6 wheels from 1 lime is already divided by its yield on the buy list. **So whether a garnish can come from a prep recipe as well as a product is part of the ruling** |
+| **Apple Pencil:** scrolling near a text box registers as writing and drops a dash or a period | probably iPadOS's handwriting-into-fields; not verified, nor whether the app can narrow it |
+| **Select in History** — trash or archive several at once — and press-and-hold to start selecting in History and the three libraries | nothing stored; press-and-hold already does other jobs in places |
+| An **A–Z strip** down the side of long lists, only when sorted A–Z; he asked you for several options | nothing stored |
+| **Export an event's menu for his bartenders**, with that event's changes — swaps, method, glassware, served, instructions, notes, even the name — never touching the library recipe; two doors, the menu and the invoice's Export page | ⚠️ what an invoice stores — today it holds only swaps. Same job as §C3b |
+| **HoneyBook inquiry → a draft invoice**, filled in (15 Sep, high priority) | needs something always on to receive HoneyBook's message, and the App Store plan removes the app's server — the two plans get squared first |
+
+⚠️ **Garnish and the menu export change what gets stored, so an early view is cheap and a late
+one is a migration.** The rest need nothing from you now.
+
+---
+
+## What I need back
+
+**Ordered by what blocks the build.**
+
+1. ❓ **A1 — should the uncosted finding count only lines that print and are billed?** It answers
+   Round 66 §7 too, and the warning is false on his screen today.
+2. ❓ **A5a — is `billed` before or after tax?** It decides what the gate and every future
+   report call `billed`; the record keeps the facts for either answer.
+3. ❓ **A4 — may a copy carry a hidden line?** Money on a client's document.
+4. ❓ **A2, A3, A5b–d, A6, A7 — confirm or overturn.** Each piece waits on you; the rest of its
+   step proceeds.
+5. ❓ **Round 66 §3–§9, unchanged.** **§5, §7 and §8 hold the last step** — the comp button,
+   the write, its undo step, the hide switch's retirement and the new lock sentence ship
+   together — and §4 holds it for hidden lines only (A6g). So do A6e, A6f and A6h. §3 holds
+   only the chip on a line he hid himself, which keeps `Silent` until you rule; §9's safety
+   half ships with the frozen record (a restore appends nothing), and your answer decides only
+   whether `Restore` shows the gate; §6 is built around. *This item first said "§3, §5, §8 and
+   §9 gate the last step" — a sequencing line from the 27 Sep sweep, corrected against what
+   each answer changes.*
+6. ❓ **§C1–§C8** — each ready once ruled. C5 is the comp's held half.
+7. ❓ **§D1–§D4 need drawings; §D6 needs a yes; §D7 wants an early look at garnish and the menu
+   export.**
+8. **§B is reports, not asks.** Still open with you, unchanged: **Round 61's two questions**, and
+   **the volume sentence — 13 units, not 15.**
 
 ---
 
@@ -162,7 +722,9 @@ already-hidden lines and needs a glyph — so the count goes to **41**.
 
 ## 🔴 ROUND 66 — the tag blocks the entrance, and nine things a sweep found
 
-> ⚠️ **§1 below is WITHDRAWN — the tag is drawn in `r64a`. See the correction above.**
+> ⚠️ **§1 below is WITHDRAWN — the tag is drawn in `r64a`. See the correction above.** So is
+> item 1 of this round's *What I need back*, except its two counts, which the correction keeps —
+> and the crossed eye among them is now asked in Round 67 §A6h.
 
 **implementation → Design, 24 Sep 2026.** Branch `main`, commit `948817a`.
 
