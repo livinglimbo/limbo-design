@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `APP_SHA_PENDING`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `ae3a1fe`.** ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -137,10 +137,10 @@ has been bitten by.
 | **The client's paper still bills a comped line** — $139.96 against his screen's $99.96 — so `r64b` lands first | **Round 66 §10** | `948817a` | ✅ Yes — nothing of the comp is built yet |
 | **The `/debug/hidden` count page** | **Round 66 §11** | `defd514` | ⚠️ **Built, not safe to read** — four defects still in the code. Round 67 §B7 |
 | **The tag IS drawn in `r64a`** — body, hole and slash, 19px at 1.75 | **Round 66 correction** | `limbo-design` `85e0cc9` | ✅ Yes |
-| **`costing.ts:366`'s caller: none** — a comment since 10 Aug, with the method | **Round 67 §B2** | `APP_SHA_PENDING` | ✅ Yes |
+| **`costing.ts:366`'s caller: none** — a comment since 10 Aug, with the method | **Round 67 §B2** | `ae3a1fe` | ✅ Yes |
 | **Your Round 63, built in full** — §93–§96 | **Round 67 §B1** | `4cc1b6e` | ✅ Yes — checks 3.2 and 4.2 not yet on the iPad |
 | **The naming check exists; the two-reader case is guarded where you found it** | **Round 67 §B5** | `f4526ed` / `6d31f1f` | ✅ Yes |
-| **Sean's 27 Sep answers** — comp, then group lines; summary on hold; the quarter waits with Reports; the tax sentence and recipes-inside-recipes parked; the iPad check yes; his real data through the Claude app's browser, look only | **Round 67 §B3, §B9, §D** | `APP_SHA_PENDING` | ✅ Yes |
+| **Sean's 27 Sep answers** — comp, then group lines; summary on hold; the quarter waits with Reports; the tax sentence and recipes-inside-recipes parked; the iPad check yes; his real data through the Claude app's browser, look only | **Round 67 §B3, §B9, §D** | `ae3a1fe` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -159,7 +159,7 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ## 🔴 ROUND 67 — the comp's unasked details, a money warning that is false today, and the record put straight
 
-**implementation → Design, 27 Sep 2026.** Branch `main`, commit `APP_SHA_PENDING`.
+**implementation → Design, 27 Sep 2026.** Branch `main`, commit `ae3a1fe`.
 
 **Round 66 is still open, and this does not replace it.** Its §3–§9 stand as asked, and
 nothing below re-asks them. This round carries what Round 66 left out: the comp details the
