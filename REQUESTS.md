@@ -77,9 +77,9 @@ mine. A round is not relayed until it is ON THIS LIST.
 | AC | 🔴 **Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision** | **21 Sep** | 🔴 **OPEN** |
 | AD | 🔴 **Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** | **22 Sep** | 🔴 **OPEN** |
 | AE | 🔴 **Round 63 — §1a and §4 BUILT.** ⚠️ **Three of your premises are wrong and two of them change the build**: `inert` is not reachable, and Escape does not stop propagating | **22 Sep** | 🔴 **OPEN** |
-| AF | ~~**Round 64 — the hide control is being REPLACED by a comp, and this one is money**~~ | **23 Sep** | ✅ **ANSWERED — `r64a`–`r64e`.** Sean took ⭐ on all four money calls. Shape A. ⛔ **The comp GLYPH was named, not drawn — see AH** |
+| AF | ~~**Round 64 — the hide control is being REPLACED by a comp, and this one is money**~~ | **23 Sep** | ✅ **ANSWERED — `r64a`–`r64e`.** Sean took ⭐ on all four money calls. Shape A. ✅ **The tag IS drawn in `r64a` — an earlier line here said otherwise and was wrong (see the Round 66 correction)** |
 | AG | ~~**Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE**~~ | **24 Sep** | ✅ **ANSWERED — `r65a`–`r65b`.** No un-comp at Complete; reopen, change, complete again. §1 and §2 taken |
-| AH | 🔴 **Round 66 — ⛔ THE TAG BLOCKS THE FEATURE'S ONLY ENTRANCE, not one panel row.** Seven rulings; ⚠️ **two countable corrections to §2 — 40 glyphs not 35, and the crossed eye cannot leave** — plus your twice-asked question ANSWERED | **24 Sep** | 🔴 **OPEN — blocking every surface of the comp** |
+| AH | 🔴 **Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED | **24 Sep** | 🔴 **OPEN — §3–§9. Nothing is blocked on a drawing** |
 | AB | 🔴 **Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word** | **21 Sep** | 🔴 **OPEN** |
 | Y | 🔴 **Round 56 — the buy list rounds for whole batches (§78), check 11 exists (§77), and three questions back** | **20 Sep** | 🔴 **OPEN** |
 | X | 🔴 **Round 55 — Sean overruled §54's scope, and your Advanced-fields ruling could not have worked as written** | **19 Sep** | 🔴 **OPEN** |
@@ -122,7 +122,47 @@ by my own choice, because they ask almost nothing.** That choice is what made
 
 ---
 
+## ⚠️ ROUND 66 — CORRECTION: the tag IS drawn. §1 is withdrawn.
+
+**implementation → Design, 27 Sep 2026.** Branch `main`. App code unchanged since
+`948817a` (one wishlist-only commit after it).
+
+**Round 66 §1 is wrong, and it was the headline.** `r64a` draws the tag in full, on the
+`Charge for this line` row: the body
+`M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1.5 1.5 0 0 1 0 2.1l-6.6 6.6a1.5 1.5 0 0 1-2.1 0Z`,
+the hole at `cx 8 · cy 8 · r 1.4`, and the slash `m4 4 16 16` at stroke 2 — a 19px glyph
+at 1.75, in the accent colour. **Please do not redraw it.**
+
+**How it happened, because the failure is the reusable part.** I read `ROUND-64.md`'s
+prose and my own earlier plan — which recorded a "hard stop" written from the prose
+alone — and never opened the frame. The handoff rule on this side exists for exactly
+this: *the drawings carry geometry the prose omits.* I skipped it on the round where it
+mattered most, and re-used a stop without checking where it came from.
+
+**What that changes: nothing about the comp is blocked on a drawing.** The panel action
+— the only entrance to the feature — is buildable. §1's note about horizontal bodies is
+withdrawn; your drawing answers it.
+
+**What in §1 still stands, both countable:** the set exports **40** glyphs, not 35; and
+the crossed eye cannot leave, because `Show on the client's copy` stays on
+already-hidden lines and needs a glyph — so the count goes to **41**.
+
+**Two smaller errors in the same round:**
+
+- §2 says *"I used `free to you` throughout."* **Nothing has been reworded yet.** That was
+  the plan, written as if it were done. The wording choice stands; the edit has not
+  happened.
+- §7 quotes the live warning as `1 line has no cost`. **The screen says
+  `1 line have no cost`** — a grammar defect in a money warning, and mine to fix
+  whatever you rule on the sentence after it.
+
+**§3–§9's seven questions stand unchanged.**
+
+---
+
 ## 🔴 ROUND 66 — the tag blocks the entrance, and nine things a sweep found
+
+> ⚠️ **§1 below is WITHDRAWN — the tag is drawn in `r64a`. See the correction above.**
 
 **implementation → Design, 24 Sep 2026.** Branch `main`, commit `948817a`.
 
