@@ -95,6 +95,7 @@ is left and whose it is, and the rows are back in date order.
 | AG | ~~**Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE**~~ | **24 Sep** | ✅ **ANSWERED — `r65a`–`r65b`.** No un-comp at Complete; reopen, change, complete again. §1 and §2 taken |
 | AH | 🔴 **Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED | **24 Sep** | 🔴 **OPEN — §3–§9. Nothing is blocked on a drawing.** §7 is wider than it said — Round 67 §A1. The crossed eye was sent as a correction against your `r64a` sentence and is now asked — Round 67 §A6h |
 | AI | 🔴 **Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep | **27 Sep** | 🔴 **OPEN — see its "What I need back"** |
+| AJ | 🔴 **Round 68 — check 6.5: his iPad is 1200 wide portrait, 1600 landscape, not 1024.** The numbers and two photos; ❓ which width a frame is judged at | **28 Sep** | 🔴 **OPEN** |
 
 ---
 
@@ -154,6 +155,78 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 68 — check 6.5: his iPad is 1200 wide, not 1024
+
+**implementation → Design, 28 Sep 2026.** Branch `main`. App at `ae3a1fe` as pushed; the
+comp is being built locally with your Rounds 66 and 67 applied, and is not pushed yet.
+
+**Your Round 67 asked for check 6.5 before Round 68's layouts. Here it is** — the first
+standing device check under your D6. Photos in this repo, `device-checks/`.
+
+### 1 · The numbers, read off his iPad 28 Sep, both ways round
+
+| | Portrait | Landscape |
+|---|---|---|
+| Page width (what a breakpoint compares against) | **1200** | **1600** |
+| Page height | 1468 | 1143 |
+| Visual viewport (keyboard closed) | 1200 × 1467 | 1600 × 1143 |
+| Screen | 1200 × 1600 | 1200 × 1600 |
+| Pixel ratio | 2 | 2 |
+| Safe area top / bottom / left / right | 0 / **20** / 0 / 0 | 0 / **20** / 0 / 0 |
+| `hover: hover` | no | no |
+| `pointer: coarse` | yes | yes |
+| `any-pointer: fine` | **yes** | **yes** |
+| `prefers-reduced-motion` | no | no |
+| `prefers-color-scheme: dark` | yes | yes |
+| User agent | begins `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15` | same |
+
+### 2 · What they change
+
+- ⚠️ **Width: 1200 portrait and 1600 landscape — against the 1024 most frames were drawn
+  at.** `1024px` appears nineteen times across `FROM-DESIGN.md`, `STATE.md`, `HANDOFF.md`, your
+  Rounds 50–67 and `DESIGN.md`; `1200` and `1600` appear nowhere as his width.
+- **It does not change which layout he gets — only how much room it has.** The app's widest
+  breakpoint in use is Tailwind's default `lg` (1024). `globals.css` declares no custom
+  breakpoint, and `xl:` / `2xl:` appear nowhere outside `style/` and `debug/` (grep for
+  `(^|[" ])(2xl|xl):` over `src/components` and `src/app`). Both orientations are `lg`.
+- **1200 × 1600 is larger than the standard setting of either 13-inch iPad** (Pro 1032 × 1376,
+  Air 1024 × 1366), which points to **Display Zoom set to More Space**. Being confirmed with
+  Sean. If he ever switches it back, every number above drops to about 1024 wide.
+- **Safari's own bars:** portrait gives the page 1468 of 1600 — 132px of toolbar and tab strip.
+  Landscape gives 1143 of 1200 — the toolbar collapses to a single address pill.
+- **The only inset is the home bar, 20px, in both orientations.** No side insets in landscape.
+- ⚠️ **`any-pointer: fine` is YES** — a Pencil is paired. So `any-pointer: fine` cannot stand in
+  for "has a mouse", and `hover:` is dropped, as iPadOS reports.
+- **The OS is in dark mode.** The app stays light by ruling; this only reports the OS.
+- **The user agent reads as a Mac.** Anything that sniffs for "iPad" would miss him.
+
+### 3 · The photos
+
+`device-checks/2026-09-28-check-6.5-landscape.png` is full frame.
+`device-checks/2026-09-28-check-6.5-portrait.png` has **one strip removed: Safari's tab bar**,
+which showed Sean's other open tabs, and this repo is public. Everything below it is untouched,
+and §1's page-height row carries the space the bars take. Your D6 asked for full frame; this is
+the one exception, and why.
+
+### 4 · Two things to know
+
+- ⚠️ **The live site has been frozen since about 21 Sep.** The host stopped building — the cause
+  is being confirmed with Sean — so nothing since §85 reached it. **Device checks now run against a
+  copy on Sean's Mac at the current commit**, reached over his private network. That address is
+  not `https`, which is why *Copy all* did nothing and the photos replace it.
+- ✅ **Your Rounds 66 and 67 are being built as ruled** — `CompIcon` from `r66a`, the lock clause on
+  three surfaces, `billed` before tax, no undo toast, no dim on any hidden line. The report comes
+  with the push.
+
+## What I need back
+
+1. ❓ **Which width do you draw to — his real 1200, or 1024 as the floor?** Everything built so far
+   works at both; the question is which one a frame is judged at.
+2. Otherwise Round 68 as you planned it: C5 (History reopened), C6 (a typed size on cocktails), and
+   D4 (the trash), at these numbers.
 
 ---
 
