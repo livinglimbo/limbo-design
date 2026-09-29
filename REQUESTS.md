@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `b1a55bd`.** ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `d948b32`** — `b1a55bd`'s code; it adds only the device-check record and check 9.1's photos. ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -95,8 +95,8 @@ is left and whose it is, and the rows are back in date order.
 | AG | ~~**Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE**~~ | **24 Sep** | ✅ **ANSWERED — `r65a`–`r65b`.** No un-comp at Complete; reopen, change, complete again. §1 and §2 taken |
 | AH | ~~**Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED~~ | **24 Sep** | ✅ **ANSWERED — your `ROUND-66.md` and frame `r66a`–`r66b`, in the design bundle (not this repo).** The tag redrawn, §3–§9 ruled, 41 glyphs taken. BUILT §99–§105 on `main`, not yet pushed |
 | AI | ~~**Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep~~ | **27 Sep** | ✅ **ANSWERED — your `ROUND-67.md` and frame `r67a`–`r67e`, in the design bundle.** §A BUILT §99–§105, not yet pushed; C1, C2, C3a, C4, C7 and D1–D3 ruled, not built; C3b waits for its own round; C5, C6 and D4 are Round 68's |
-| AJ | ~~**Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode~~ | **28 Sep**, rewritten **29 Sep** | ✅ **ANSWERED — your `ROUND-68.md` and frame `r68a`–`r68e`, in the design bundle. BUILT §109–§116 on `main`, not yet pushed, except the tab strip's cap** — Round 69 §5, §6. Your 🔧 asks #2 and #3 answered in Round 69 §1; #1, the device check, is `IPAD-CHECKS.md` 9.1, from Sean |
-| AK | 🔴 **Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops.** ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window | **29 Sep** | 🔴 **OPEN — see its "What I need back"** |
+| AJ | ~~**Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode~~ | **28 Sep**, rewritten **29 Sep** | ✅ **ANSWERED — your `ROUND-68.md` and frame `r68a`–`r68e`, in the design bundle. BUILT §109–§116 on `main`, not yet pushed, except the tab strip's cap** — Round 69 §5, §6. Your 🔧 asks #2 and #3 answered in Round 69 §1; #1, the device check, in Round 69 §7 |
+| AK | 🔴 **Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead | **29 Sep** | 🔴 **OPEN — see its "What I need back"** |
 
 ---
 
@@ -145,8 +145,9 @@ has been bitten by.
 | **Sean's 27 Sep answers** — comp, then group lines; summary on hold; the quarter waits with Reports; the tax sentence and recipes-inside-recipes parked; the iPad check yes; his real data through the Claude app's browser, look only | **Round 67 §B3, §B9, §D** | `ae3a1fe` | ✅ Yes |
 | **The 660 row's name column: 422** — `Buy separately — Pierre Ferrand Orange Curacao` (372.14) does not fit beside `Reminder` (30.30 over) or `Silent` (6.73 over); 330 upright | **Round 69 §1** | `b1a55bd` | ✅ Yes |
 | **`/style/workingcheck` at the 672 sheet: 466.79** — against 612.36 at 512 and 448.60 at 768; the real row's column is 470.38, not the lab's 478 | **Round 69 §1** | `b1a55bd` | ✅ Yes |
-| **His heights** — sideways 1068 (Safari, bars showing), 1143 (collapsed), 1168 (Home Screen app); upright 1468 and 1568. **How he works** — Safari and the Home Screen app about 50/50, preferring the Home Screen app; Safari on the Mac; More Space; iPadOS 26.6; a Magic Keyboard; windows he drags narrower | **Round 69 §2–§4** | `b1a55bd` | ✅ Yes |
+| **His heights** — sideways 1068 (Safari, bars showing — read at rest in §7), 1143 (collapsed), 1168 (Home Screen app; 1114 on the Builder until its browser bar goes, §7); upright 1468 and 1568 (1514). **How he works** — Safari and the Home Screen app about 50/50, preferring the Home Screen app; Safari on the Mac; More Space; iPadOS 26.6; a Magic Keyboard; windows he drags narrower | **Round 69 §2–§4** | `b1a55bd` | ✅ Yes |
 | **Sean on your Round 68 §4 — Light the default: yes**, with his choice remembered by his account (§107) | **Round 69 §2** | `b1a55bd` | ✅ Yes — built §109 |
+| **Check 9.1 — the Builder on his iPad**, six full-frame photos: 660 at x 770–1430 with 170 of desk each side; the on-screen keyboard 566 sideways, 456 upright | **Round 69 §7** | `b1a55bd` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -163,10 +164,14 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ---
 
-## 🔴 ROUND 69 — your Round 68 is built except the tab strip; the two numbers you asked for; Sean's answers; and sixteen things that stopped
+## 🔴 ROUND 69 — your Round 68 is built except the tab strip; the two numbers you asked for; Sean's answers; sixteen things that stopped; and the Builder on his iPad
 
-**implementation → Design, 29 Sep 2026. Branch `main`, app at `b1a55bd`.** Design repo at the commit that
-carries this round. Every `file:line` below is at `b1a55bd`; Round 68's were at `ae3a1fe`, and most have moved.
+**implementation → Design, 29 Sep 2026. Branch `main`, app at `d948b32`** — `b1a55bd`'s code plus the device-check
+record and check 9.1's photos. Design repo at the commit that carries this round. Every `file:line` below is at `b1a55bd`, and holds at
+`d948b32`; Round 68's were at `ae3a1fe`, and most have moved.
+
+**Your device check is in — §7.** Sean ran check 9.1 at 10:50 on 29 Sep: the Device Report and the Builder sideways in
+both apps, full frame, and the on-screen keyboard up both ways round in the Home Screen app.
 
 ⚠️ **Rewritten after your Round 68 reply arrived.** The first draft (`limbo-design` `50ef8f3`, never sent) was
 written before it; it is kept in history, with its WebKit and Apple sources. Its measurements stand — a six-agent
@@ -199,29 +204,35 @@ end, about 123px), and **1068 is Safari with its bars showing**. Its questions y
 | **Safari, bars showing** | 1200 × **1468** | 1600 × **1068** | 132 — status 32, address 44, tabs band 56 | 1262 / **918** |
 | Safari, bars collapsed to a pill | not read | 1600 × **1143** | 57 | — / 983 |
 | **Home Screen app** | 1200 × **1568** | 1600 × **1168** | 32 — the status bar alone | 1348 / 1004 |
+| Home Screen app, **on the Builder as it opens today** | 1200 × **1514** | 1600 × **1114** | 86 — the status bar and a 54 browser bar (§7) | 1302 / 958 |
 | App Store app | not built; Sean expects more room than the Home Screen app | | | |
 
-Every height adds back to the screen: 1468 + 132 = 1568 + 32 = 1600; 1068 + 132 = 1143 + 57 = 1168 + 32 = 1200.
+Every height adds back to the screen: 1468 + 132 = 1568 + 32 = 1514 + 86 = 1600; 1068 + 132 = 1143 + 57 = 1168 + 32
+= 1114 + 86 = 1200.
 
-- **1068 is read now, not inferred** — but from a photo scrolled to its end, so what it shows is that Safari's
-  height follows its bars, not the scroll. Safari sideways with the page at the top is still not photographed; it
-  should also be 1068. Check 9.1 (§7) asks for it.
+- **1068 is read at rest now** (§7): check 9.1's Safari Device Report sits at the top of its page. The earlier photo,
+  scrolled to its end, read 1068 too — so Safari's height follows its bars, not the scroll.
+- ⚠️ **The Home Screen row holds on the Device Report only.** On the Builder iPadOS draws a 54 browser bar, so it
+  gives 1114 and 1514 — still 46 more than Safari, 54 less than the row above. That is mine to fix (§7); 1168 is
+  what the fix should give back (untried). 1114 is the room below the bar, measured; that `100dvh` is 1114 there is likely, not read.
 - **He splits his time about evenly and prefers the taller one.** The draft recommended 1068, the least of the
   three; that is withdrawn. Which height a frame is judged at is yours.
 - **The home-bar inset** read **20** in Safari on 28 Sep (both ways round) and in the Home Screen app upright on
-  29 Sep, and **0** in both sideways readings on 29 Sep. The cause is not established. **Draw it as the OS's inset,
-  0 to 20, never a fixed 20.** Since §110 everything along the bottom edge reads it.
-- **`any-pointer: fine`** read yes in Safari and no in the Home Screen app, a minute apart. Nothing keys on it
-  (`any-pointer|any-hover` over `src`, debug and style excluded: no hit). The report reads once on load and on a
-  resize, so no reading is timed to its photo — mine to fix.
+  29 Sep, and **0** in every sideways reading on 29 Sep. ⚠️ **The 0s are almost certainly the Device Report's fault, not
+  the iPad's** — it prints `0px` on any fresh open (§7), and the Builder, minutes later, lays out with 20 sideways
+  in both apps (read from its pixels, §7). **Draw it as the
+  OS's inset, 0 to 20, never a fixed 20.** Since §110 everything along the bottom edge reads it.
+- **`any-pointer: fine`** read yes in Safari and no in the Home Screen app, a minute apart, earlier on 29 Sep; in
+  check 9.1 it read yes in both. Nothing keys on it (`any-pointer|any-hover` over `src`, debug and style excluded:
+  no hit). The report reads once on load and on a resize, so no reading is timed to its photo — mine to fix.
 - **The Home Screen app** has no manifest or Apple web-app tag behind it (`git grep` over `src`, `public`,
   `next.config.ts`: no hit), shares no storage with Safari, and today opens the copy on his Mac. Its 32px status
-  bar takes the page's own background — since §109, light on his dark iPad. Whether iPadOS draws the clock
-  readably on it is not yet seen.
+  bar is near-black (`#171717`) over the light page — not the page's colour, and neither green in `layout.tsx:150–153`
+  (whose comment says Safari tints with it; no photo shows either). The clock is white and readable.
 - **Photos**, in `device-checks/`: `2026-09-29-landscape-home-screen-app.png` and
   `2026-09-29-portrait-home-screen-app.png` (new — the 1568), full frame, as sent.
   `2026-09-29-landscape-safari-bars-showing.png` has the 132px band above the page removed, because its tab strip
-  shows Sean's other tabs; your D6 asks for full frame, so it is named for what it shows.
+  shows Sean's other tabs; your D6 asks for full frame, so it is named for what it shows. Check 9.1's six are in §7.
 
 ### 4 · Windows he drags narrower, and the Magic Keyboard
 
@@ -238,8 +249,8 @@ and anyone's he opens the app to, not only a smaller iPad's:
 Side by side, each window gets just under 800 sideways and just under 600 upright — inferred, not measured.
 
 - **On the case, tapping a field brings up no on-screen keyboard**, so Round 29's keyboard-up case is his
-  exception — off the case, accents, dictation, other users — not his rule. Its height is unmeasured; 9.1 asks
-  only if he uses it. With a hardware keyboard iPadOS draws a shortcut bar along the bottom that `visualViewport`
+  exception — off the case, accents, dictation, other users — not his rule. Its height is measured now: 566
+  sideways, 456 upright (§7). With a hardware keyboard iPadOS draws a shortcut bar along the bottom that `visualViewport`
   does not report — a 15 Aug record in a comment (`FormatToolbar.tsx`), not a measurement.
 - **The trackpad:** `hover:` styles still never apply; `HoverRow`'s scripted highlight does light for it. Any hover
   treatment you draw has to go through `HoverRow` to be seen. A secondary click should reach the long-press's
@@ -251,7 +262,7 @@ Side by side, each window gets just under 800 sideways and just under 600 uprigh
 |---|---|---|---|
 | **R68 §4** Light the default | §109 | `5743f31` (`f5fc76b`) | ⚠️ `ThemeToggle.tsx:32` alone was not enough: the pre-paint script in `layout.tsx` paints first and would have left the page dark with Light pressed. Both changed; `check-theme` ties them. Only a stored `system` follows the iPad. A device's System still never carries into an empty account (§107's rule — you didn't rule it). |
 | **R68 §2** the 660 cap, centred | §110 | `2ffd148` (`f6aa39a`) | `lg:max-w-[660px] lg:mx-auto lg:w-full` (`Builder.tsx:1118`), from 1024 up only. 660 at x 770–1430 at 1600 × 1068, 170 of desk each side; 568 upright. |
-| **R68 §7** your list of my faults | §110 | same | `min-w-0` (the page was 1292 wide at 1200; now 1200). The Builder subtracts 65 and the top inset, not 56 — the page equals the window at all five of his sizes. The home-bar inset on the invoice footer, Library's select bar and undo strip, the list spacer, the sidebar's foot and the open rail. **Not done: the 16px form fields.** |
+| **R68 §7** your list of my faults | §110 | same | `min-w-0` (the page was 1292 wide at 1200; now 1200). The Builder subtracts 65 and the top inset, not 56 — the page equals the window at all five of his sizes, in Chrome. ⚠️ On the iPad it probably runs 1 over (§7, fault 1). The home-bar inset on the invoice footer, Library's select bar and undo strip, the list spacer, the sidebar's foot and the open rail. **Not done: the 16px form fields.** |
 | **R68 §3** items never split | §110 | same | The footer summary, the gate's figures, and the `Was …` line (you wrote "record line", singular). At 392 the footer breaks after `+ 6% tax ·`, whole. |
 | **R68 §3** the calculator at 672 | §111 | `edc1e92` (`c730f10`) | 672 × 918 sideways. Event details stays 512. |
 | **R67 C2** locked calculator and tax rate | §111 | same | `r65a`'s padlock and `lockClause(stage)` where Apply was; the rate as plain text; no toast, because the write refuses. |
@@ -292,23 +303,130 @@ Mine, found, not yet fixed: an Undo strip from a bulk trash (8 seconds) can put 
 trashing the highest-numbered invoice hands its number to the next new one, and emptying the trash makes that
 permanent.
 
-### 7 · The next device check — from Sean, now that 660 is built
+### 7 · Check 9.1 — the Builder on his iPad
 
-Your "What I need back" #1 is `IPAD-CHECKS.md` **9.1**: the Builder sideways, page at rest, 10 or more lines, full
-frame, in the Home Screen app and in Safari; the page height at rest in both; the on-screen keyboard only if he
-uses it. It needs the copy on his Mac moved to `b1a55bd` first. The photos come in the next round, and your §8's
-four layout rulings wait on them — so your reply to this one needn't carry those.
+Your Round 68 "What I need back" #1, as `IPAD-CHECKS.md` 9.1. **Sean, 29 Sep, 10:50–10:54**: his 13-inch iPad Pro,
+More Space, iPadOS 26.6, the copy on his Mac at `b1a55bd`. Every number below is read off the photos' pixels by
+row and column scans, 2 image px to a CSS px, unless it says otherwise.
+
+| `limbo-app` · `docs/device-checks/2026-09-29-check-9.1-…` | What it shows |
+|---|---|
+| `home-screen-device-report-sideways.png` | Home Screen app, Device Report: **1168** |
+| `home-screen-builder-sideways.png` | Home Screen app, Builder, a 16-line test invoice, side menu open, not scrolled |
+| `home-screen-builder-keyboard-sideways.png` | the same, the rail's search focused, on-screen keyboard up |
+| `home-screen-builder-keyboard-upright.png` | the same upright, keyboard up |
+| `safari-device-report-sideways.png` | Safari, Device Report at the top of its page: **1068** |
+| `safari-builder-sideways.png` | Safari, Builder, a 27-line invoice, not scrolled |
+
+⚠️ **These six are in the app repo, not this one.** This repo is public; the photos show an invoice's name, date, guests and
+prices, and his supplier prices in the product rail. `limbo-app` is private and you can read it, so they live there.
+
+Full frame, uncut. ⚠️ **In the two Safari photos the two inactive tabs' titles and icons are filled with the strip's own grey
+(`#272727`)** — they are Sean's other tabs. A pixel diff against the originals changes nothing outside those two
+boxes. The Safari Device Report came as 16-bit Display P3 and is saved as 8-bit sRGB; the diff is in sRGB.
+
+**Heights at rest.** Safari reads **1068** at rest: its report's first line sits 27 below the page top, exactly as
+in the unscrolled Home Screen report. The Home Screen app reads **1168** on the Device Report, but on the Builder it
+gives **1114** sideways and **1514** upright — see the browser bar below. §3 is corrected to match.
+
+**The Builder at his widths — as built, to the pixel, in every photo:**
+
+| | Sidebar | Rail | Desk | Sheet | Desk |
+|---|---|---|---|---|---|
+| Sideways, 1600 | 240 | 360 | **170** | **660**, x 770–1430 | **170** |
+| Upright, 1200 | 240 | 360 | 16 | **568**, x 616–1184 | 16 |
+
+The same as Chrome on `/style/sheetcheck` at 1600 × 1068 and 1200 × 1514. **`r68a`'s 170 each side holds on the
+device**, and upright the cap does not bite.
+
+- **Nothing runs off sideways, and nothing is cut except inside the two lists, which scroll.** The invoice list
+  shows 733 in Safari (3 category bands, 9 whole lines, the 10th cut to 55 of 61) and 779 in the Home Screen app
+  (2 bands, 11 lines, 22 of a third band's 43). A line is 61, a band 43.
+- **Undo and ⋮ are clear of the home bar.** 44 × 44 at x 1305–1349 and 1361–1405, y 1118–1162: **38 above the screen's
+  edge, 18 above a 20 inset**, the same in both apps. The footer starts 1098, 102 from the foot. Chrome gives 19.5
+  above the inset; of the 1.5, 1.0 is fault 1 below, and 0.5 is the footer's text drawing 54 tall here, not 55.
+- **The home-bar inset is 20 sideways in both apps.** The footer's 1098 is 1 + 14 + 54 + 34, where 34 is
+  `0.875rem + env(safe-area-inset-bottom)` at 20 (`InvoiceSheet.tsx:684`); the rail's list stops at 1181, 20 above
+  the foot (`SourceRail.tsx:324`, `lg:pb-safe`). Inferred from pixels, consistent to about 1px, not read off the device.
+
+**The on-screen keyboard** — photographed in the Home Screen app only:
+
+| | Sideways | Upright |
+|---|---|---|
+| Keyboard, top edge to the screen's foot | **566** (63 of it the undo · predictions row) | **456** (61) |
+| Your Round 68 §3 — the picker takes over past about | 628 | 1028 |
+| Under that by | **62** | **572** |
+| Page left above it — Home Screen app, as photographed | 548 | 1058 |
+| — Safari (same keyboard assumed; not photographed) | **502** | 1012 |
+| — Home Screen app at 1168 / 1568, once the bar goes | 602 | 1112 |
+
+**At full screen the picker never takes over on his iPad.** The tightest case, Safari sideways, leaves 502 — 62 above your ~440.
+The focused field had 381 clear below it sideways and 891 upright, against the 180 the rule looks for.
+
+- **The page neither moves nor shrinks.** Above the keyboard, the sideways keyboard-up and keyboard-down photos
+  differ only at the field's focus ring and the status bar's clock and battery (a per-pixel diff). The keyboard lies over the Builder's foot.
+- **It hides the whole invoice footer, both ways round** — line count, subtotal, total, Undo, ⋮.
+- **Sideways, 4 rows of the rail's list sit above it** (12 upright). The list's box runs on under the keyboard to 1181,
+  so its last ~9 rows stay under it however far it scrolls. Whether dragging the page up reveals them is untried.
+- Adding from the search should still work — the field, its rows, their `+` and the `N in invoice` chip are all
+  above the keyboard — but nobody tapped `+` with it up.
+- Return in the field does nothing (no `onKeyDown`, no form: `SourceRail.tsx:339–347`). Autocapitalise is on (the
+  shift key is lit in both photos), and autocorrect is left at iOS's default, on — the field turns neither off (same
+  lines). The keyboard's own ↶ undoes typing, not the invoice: nothing in the app listens for it.
+- The focused field wears Safari's blue ring (`#7BC3F8`, 3px) outside its border; the app draws no focus style
+  of its own there (`SourceRail.tsx:346`, no ring or outline utility).
+- Not photographed: the shortcut bar iPadOS draws with the Magic Keyboard attached — his usual case.
+
+Sean on the keyboard: *"there could be times where I don't have my apple magic keyboard, so I see this as worth
+looking at."*
+
+**The Home Screen app's browser bar — mine, not yours.** On the Builder iPadOS draws a 54 bar under the status bar:
+✕, ‹, a page menu, the host, share, reload and Safari's compass. The Device Report has none.
+
+| | |
+|---|---|
+| Cause (inferred) | The icon opens on the Device Report (`/style/device`), its start page, and the app ships no manifest, so its scope falls to the start page's folder, `/style/`. The Builder, outside it, opens in iPadOS's in-app browser; by the same rule so would Library, History, Settings, sign-in, even `/style` itself (not photographed). The manifest spec's default and the photos agree; what Safari does for a site with no manifest at all is not documented, so this is read off the photos, not the source. |
+| Cost | 54 of height on every screen outside `/style/` — 1114 not 1168 sideways, 1514 not 1568 upright; an `86dvh` sheet 958 / 1302, not 1004 / 1348. |
+| Fix | Sean re-adds the icon from the Builder, at the live address (no code; predicted, untried), or the app ships a manifest with scope `/`. ⚠️ A manifest is fetched without cookies (Next adds `use-credentials` only on Vercel previews, `metadata.js:322`), so the proxy would send it to sign-in (`proxy.ts:18–20`, `lib/supabase/proxy.ts:5`) unless it is made public. |
+| Needs you? | **No** — neither changes anything drawn. Only a Home Screen icon image would be a new part: Phase 9. |
+
+Until it is fixed, the Home Screen photos of the Builder are the in-app browser's frame, not the app's.
+
+**Faults and oddities**
+
+| # | What | Whose |
+|---|---|---|
+| 1 | **The Builder probably runs 1px past the screen.** The top bar draws 66 on the iPad, not 65: its search field is 45 tall in Safari, 40 in Chrome (`GlobalSearch.tsx:77`, `py-2.5`), and the Builder subtracts a fixed 65 (`Builder.tsx:995`). The sheet's top sits at 127, against Chrome's 126. Likely 1069 in 1068, and 1115 in 1114 in the Home Screen app — the *"page scrolls a little"* that check 9.2 has Sean look for; not yet seen. Why Safari draws the field taller is not established. | Mine |
+| 2 | **The Device Report prints `0px` for every inset on a fresh open.** Its first read (`DeviceReport.tsx:62`) follows a render that returned nothing (`:71`), so the `<style>` defining `--probe-*` (`:81`) is not there yet and it falls back to `0px` (`:42`); it reads again only on a resize or rotation (`:63–64`). Headless Chrome, inset emulated at 20: `0px` on load, `20px` after a resize. | Mine |
+| 3 | The browser bar, above. | Mine and Sean's |
+| 4 | A line at quantity 0 showing `$0.00` on the test invoice. The invoice's − cannot make one — 0 removes the line (`Builder.tsx:776–781`); the calculator's apply can (`applyCalculation.ts:156`, no removal at 0). How this one got there is not known; I'll find out from Sean before asking you what a 0 should do. | Later |
+| 5 | Data, not layout: three `no cost data` lines filed under SPIRITS with no size (consistent with the product editor's defaults, `ProductEditor.tsx:56–58`); one product with two size spellings, `Bottle, 750ml` and `750 ml · Bottle`; Safari keeping three invoices open and the Home Screen app one (each keeps its own list on the device, `invoiceTabs.ts:60`). | Sean's |
+
+Already with you: the tab strip across the rail (§6 #1). Not new: no thousands separator and ISO dates — `r68b` draws both
+the other way on History's row (§6 #10); the Builder's own were never asked.
+
+**Sean on the sheet.** He noticed that the invoice is slimmer sideways. I told him why: your ruled 660
+cap, with the room going to the desk — his own 10 Aug *"clear margin around the top and both sides"*. Upright:
+*"It does fit perfectly once I rotate my iPad to Portrait though, so that's nice."*
+
+**Your Round 68 §8's four layout rulings can go ahead** — they waited on this photo: the rail row at 360, where a
+row's panel centres, Library's 976 against History's 720, and Settings' gap between a row's title and its arrow.
 
 Held for the next round, to keep this one short: the comp's small holds (§101–§105) and Custom Group Lines.
 
 ## What I need back
 
-1. ❓ **Which height you judge at** — sideways 1068 / 1143 / 1168, upright 1468 / 1568 (§3).
+1. ❓ **Which height you judge at** — sideways 1068 (now read at rest) / 1143 / 1168, upright 1468 / 1568 (§3). The
+   Home Screen app gives 1114 / 1514 on the Builder until its browser bar is fixed — mine (§7).
 2. ❓ **A frame of the Builder's top at 1600 with tabs**, and where the undo stack sits (§6, 1–2).
-3. **Confirm the layouts below 1024 stand for a window**, not only a smaller iPad — the bottom bar, the drawer,
+3. **Your Round 68 §8's four layout rulings** — the rail row at 360, a row's panel, Library against History,
+   Settings' gap. The photo they waited on is §7.
+4. **Confirm the layouts below 1024 stand for a window**, not only a smaller iPad — the bottom bar, the drawer,
    the phone layout, the 640 line (§4). If any assumed it filled the screen, say which.
-4. The rest of §6, in any order. Nothing is blocked on them.
-5. Still with you: Round 61's two questions, and the volume sentence (13).
+5. The rest of §6, in any order. Nothing is blocked on them.
+6. ❓ **The keyboard-up case on his iPad** (§7) — the footer out of sight while he types, Return, the rail's rows under
+   the keyboard, Safari's focus ring. No hurry: it is his exception, and he calls it worth looking at.
+7. Still with you: Round 61's two questions, and the volume sentence (13).
 
 ---
 
