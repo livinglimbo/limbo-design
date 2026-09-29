@@ -96,7 +96,7 @@ is left and whose it is, and the rows are back in date order.
 | AH | ~~**Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED~~ | **24 Sep** | ✅ **ANSWERED — your `ROUND-66.md` and frame `r66a`–`r66b`, in the design bundle (not this repo).** The tag redrawn, §3–§9 ruled, 41 glyphs taken. BUILT §99–§105 on `main`, not yet pushed |
 | AI | ~~**Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep~~ | **27 Sep** | ✅ **ANSWERED — your `ROUND-67.md` and frame `r67a`–`r67e`, in the design bundle.** §A BUILT §99–§105, not yet pushed; C1, C2, C3a, C4, C7 and D1–D3 ruled, not built; C3b waits for its own round; C5, C6 and D4 are Round 68's |
 | AJ | ~~**Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode~~ | **28 Sep**, rewritten **29 Sep** | ✅ **ANSWERED — your `ROUND-68.md` and frame `r68a`–`r68e`, in the design bundle. BUILT §109–§116 on `main`, not yet pushed, except the tab strip's cap** — Round 69 §5, §6. Your 🔧 asks #2 and #3 answered in Round 69 §1; #1, the device check, in Round 69 §7 |
-| AK | 🔴 **Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead | **29 Sep** | 🔴 **OPEN — see its "What I need back"** |
+| AK | 🔴 **Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.** | **29 Sep** | 🔴 **OPEN — see its "What I need back"** |
 
 ---
 
@@ -196,6 +196,7 @@ end, about 123px), and **1068 is Safari with its bars showing**. Its questions y
 | iPadOS | **26.6** |
 | Keyboard | *"When working on my iPad, I mostly type on a keyboard case (my Apple Magic Keyboard)."* It has a trackpad; the on-screen keyboard is rare. |
 | ❓ Your §4 — Light as the default | **Yes.** He had already chosen to have Light / Dark / System remembered by his account (§107, his option A), so Safari and the Home Screen app stop disagreeing. **Built — §109.** |
+| **The invoice, sideways** | ⚠️ ***"I want the landscape invoice width a bit wider."*** Said after seeing the 660 sheet on his iPad (§7), and after the reason was explained to him — your `r68a`, the room going to the desk, his own 10 Aug margin. Upright he is content: *"It does fit perfectly once I rotate my iPad to Portrait though, so that's nice."* **What I need back #1.** |
 
 ### 3 · His heights — which to judge at is yours
 
@@ -416,17 +417,23 @@ Held for the next round, to keep this one short: the comp's small holds (§101�
 
 ## What I need back
 
-1. ❓ **Which height you judge at** — sideways 1068 (now read at rest) / 1143 / 1168, upright 1468 / 1568 (§3). The
+1. ❓ **Sean wants the sideways invoice a bit wider than 660** (§2). Upright it is 568 and the cap never bites, so
+   only sideways changes. To rule from, measured in §1 and §7: with the side menu open his column is **1000** — 660 of
+   sheet and 170 of desk each side — and more with the menu folded. At 660 the name column is 422; if the rest of the
+   row stays as built, **`Buy separately — Pierre Ferrand Orange Curacao` beside `Reminder` first fits at about 691**.
+   He still wants a margin — his 10 Aug *"clear margin around the top and both sides"* — so not edge to edge.
+   **What width?**
+2. ❓ **Which height you judge at** — sideways 1068 (now read at rest) / 1143 / 1168, upright 1468 / 1568 (§3). The
    Home Screen app gives 1114 / 1514 on the Builder until its browser bar is fixed — mine (§7).
-2. ❓ **A frame of the Builder's top at 1600 with tabs**, and where the undo stack sits (§6, 1–2).
-3. **Your Round 68 §8's four layout rulings** — the rail row at 360, a row's panel, Library against History,
+3. ❓ **A frame of the Builder's top at 1600 with tabs**, and where the undo stack sits (§6, 1–2).
+4. **Your Round 68 §8's four layout rulings** — the rail row at 360, a row's panel, Library against History,
    Settings' gap. The photo they waited on is §7.
-4. **Confirm the layouts below 1024 stand for a window**, not only a smaller iPad — the bottom bar, the drawer,
+5. **Confirm the layouts below 1024 stand for a window**, not only a smaller iPad — the bottom bar, the drawer,
    the phone layout, the 640 line (§4). If any assumed it filled the screen, say which.
-5. The rest of §6, in any order. Nothing is blocked on them.
-6. ❓ **The keyboard-up case on his iPad** (§7) — the footer out of sight while he types, Return, the rail's rows under
+6. The rest of §6, in any order. Nothing is blocked on them.
+7. ❓ **The keyboard-up case on his iPad** (§7) — the footer out of sight while he types, Return, the rail's rows under
    the keyboard, Safari's focus ring. No hurry: it is his exception, and he calls it worth looking at.
-7. Still with you: Round 61's two questions, and the volume sentence (13).
+8. Still with you: Round 61's two questions, and the volume sentence (13).
 
 ---
 
