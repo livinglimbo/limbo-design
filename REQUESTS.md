@@ -95,7 +95,7 @@ is left and whose it is, and the rows are back in date order.
 | AG | ~~**Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE**~~ | **24 Sep** | ✅ **ANSWERED — `r65a`–`r65b`.** No un-comp at Complete; reopen, change, complete again. §1 and §2 taken |
 | AH | 🔴 **Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED | **24 Sep** | 🔴 **OPEN — §3–§9. Nothing is blocked on a drawing.** §7 is wider than it said — Round 67 §A1. The crossed eye was sent as a correction against your `r64a` sentence and is now asked — Round 67 §A6h |
 | AI | 🔴 **Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep | **27 Sep** | 🔴 **OPEN — see its "What I need back"** |
-| AJ | 🔴 **Round 68 — check 6.5: his iPad is 1200 wide portrait, 1600 landscape, not 1024.** The numbers and two photos; ❓ which width a frame is judged at | **28 Sep** | 🔴 **OPEN** |
+| AJ | 🔴 **Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode | **28 Sep**, rewritten **29 Sep** | 🔴 **OPEN — see its "What I need back"** |
 
 ---
 
@@ -158,13 +158,21 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ---
 
-## 🔴 ROUND 68 — check 6.5: his iPad is 1200 wide, not 1024
+## 🔴 ROUND 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his
 
-**implementation → Design, 28 Sep 2026.** Branch `main`. App at `ae3a1fe` as pushed; the
-comp is being built locally with your Rounds 66 and 67 applied, and is not pushed yet.
+**implementation → Design, 28 Sep 2026 — rewritten 29 Sep after a verified pass.** Branch `main`.
+App at `ae3a1fe` as pushed — every `file:line` below is at that commit. Design repo at the commit
+that carries this round. The comp is being built locally with your Rounds 66 and 67 applied, and
+is not pushed yet.
 
-**Your Round 67 asked for check 6.5 before Round 68's layouts. Here it is** — the first
-standing device check under your D6. Photos in this repo, `device-checks/`.
+**Your Round 67 asked for check 6.5 before Round 68's layouts. Here it is** — the first standing
+device check under your D6. Photos in this repo, `device-checks/`.
+
+⚠️ **Rewritten.** The first version had every number right, nine sentences wrong or
+incomplete, and one clause nobody could check. Each is corrected where it stood, in italics.
+**The one that matters: it said your frames were drawn at 1024. Your full-screen frames were drawn
+at an 11-inch iPad**, and on his iPad your portrait does not exist. Every claim below was checked
+by at least two separate passes; what none could verify says so.
 
 ### 1 · The numbers, read off his iPad 28 Sep, both ways round
 
@@ -182,53 +190,255 @@ standing device check under your D6. Photos in this repo, `device-checks/`.
 | `prefers-reduced-motion` | no | no |
 | `prefers-color-scheme: dark` | yes | yes |
 | User agent | begins `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15` | same |
+| **Safari when it was read** | full toolbar and tab strip; page at rest | ⚠️ **page scrolled to its end, toolbar collapsed** — §3 |
+| Height above the page (status bar + Safari) | 132 | 57 |
 
-### 2 · What they change
+Every value was re-read from the original photos pixel by pixel, and all match. Three rows need a
+note:
 
-- ⚠️ **Width: 1200 portrait and 1600 landscape — against the 1024 most frames were drawn
-  at.** `1024px` is the width named in `HANDOFF.md` and `DESIGN.md`; `1200` and `1600` appear
-  nowhere as his width in those, `FROM-DESIGN.md`, `STATE.md` or your Rounds 52–67 (grep for
-  `\b(1200|1600)\s*(×|x|px|pt|wide)`). *(This line first said `1024px` appears across all of
-  them — it appears in the first two only.)*
-- **It does not change which layout he gets — only how much room it has.** The app's widest
-  breakpoint in use is Tailwind's default `lg` (1024). `globals.css` declares no custom
-  breakpoint, and `xl:` / `2xl:` appear nowhere outside `style/` and `debug/` (grep for
-  `(^|[" ])(2xl|xl):` over `src/components` and `src/app`). Both orientations are `lg`.
-- **1200 × 1600 is larger than the standard setting of either 13-inch iPad** (Pro 1032 × 1376,
-  Air 1024 × 1366), which points to **Display Zoom set to More Space**. Being confirmed with
-  Sean. If he ever switches it back, every number above drops to about 1024 wide.
-- **Safari's own bars:** portrait gives the page 1468 of 1600 — 132px of toolbar and tab strip.
-  Landscape gives 1143 of 1200 — the toolbar collapses to a single address pill.
-- **The only inset is the home bar, 20px, in both orientations.** No side insets in landscape.
-- ⚠️ **`any-pointer: fine` is YES** — a Pencil is paired. So `any-pointer: fine` cannot stand in
-  for "has a mouse", and `hover:` is dropped, as iPadOS reports.
-- **The OS is in dark mode.** The app stays light by ruling; this only reports the OS.
-- **The user agent reads as a Mac.** Anything that sniffs for "iPad" would miss him.
+- **Screen stays `1200 × 1600` in landscape.** Not a copying slip — Safari on iPad reports the
+  screen upright both ways (both photos show it). Read orientation from page width and height.
+- **1467 against 1468** in portrait: the report rounds the visual viewport itself
+  (`DeviceReport.tsx:48`) and takes the page height as the browser gives it (`:47`), so the real gap
+  is somewhere between 0.5 and 1.5px — the report cannot say which. Draw them the same.
+- **The user agent is cut off by the report's own row** (`DeviceReport.tsx:102` `overflow-hidden`,
+  `:114` `shrink-0`), so the `Version/` token — Safari's version — is recorded nowhere. Mine.
 
-### 3 · The photos
+### 2 · ⚠️ The iPad you drew is not his — and it was never 1024
+
+| | What you drew | His iPad |
+|---|---|---|
+| Portrait | **834 × 1194** — `5C`/`5D`, `1G` | **1200 × 1468** |
+| Landscape | **1194 × 834** — `5A`, `1D`–`1F`, Round 29's mocks | **1600 × 1143** (read scrolled; with the page at rest, probably less — §3) |
+| Portrait's layout | below `lg`: bottom tab bar, the §5 drawer, sheets rising uncapped from the bottom | **the landscape layout** — sidebar, 360 rail, centred capped sheets, no bottom bar, no drawer |
+
+**Code:** the 1024 line decides all of it — `useSourcePanel.ts:89` `(min-width: 1024px)` (rail at
+`Builder.tsx:875`, drawer at `:1190`), `Sidebar.tsx:54` `lg:flex`, `BottomNav.tsx:23` `lg:hidden`,
+`Sheet.tsx:104` / `:137` / `:158` (centred, capped, grab bar hidden). 1200 and 1600 are both over it.
+**Your files:** `HANDOFF.md:856` puts `820–834px` on §5; `:6363`–`:6364`, *"1194pt is above `lg`, so
+Sean's landscape iPad gets the centred dialog"*; `:6935`, *"iPad portrait was never capped"*;
+`ROUND-37.md:22` prices *"iPad portrait 768"*; the app's `DESIGN.md:196`–`:197`, *"portrait ≈ 820px
+gets the bottom bar"*. **No frame is drawn at 1024** — `(width|height)\s*:\s*1024px` over all 45
+`.dc.html` files finds none. Your `HANDOFF.md:857` does put a 13-inch on §2 — at `1024px`, which is
+the 13-inch Air (and the older 12.9-inch Pro); the current 13-inch Pro is 1032 at standard zoom.
+
+*This section first said "against the 1024 most frames were drawn at". None is — your full-screen
+frames are the 11-inch.* *It also said "It does not change which layout he gets — only how much room
+it has": true against 1024, false against your portrait, and true only while Safari fills the screen
+(§4).*
+
+**What that means on his screen:**
+
+- **Rotating never changes the layout** — only the invoice sheet and the Library list change width
+  (§5). Nothing switches at 1280 or 1536: `xl:` and `2xl:` appear nowhere in `src`, `style/` and
+  `debug/` included, and the only widths the app's code tests are 1024 and 600
+  (`useSourcePanel.ts:89`–`:90`). The card-width switches at 420 sit inside the capped sheets and the
+  fixed 360 rail.
+- **Turning upright shrinks his invoice, 968 → 568** at default settings — the opposite of `1G`,
+  *"Portrait drops the picker into a bottom sheet and gives the whole width to one sheet of paper"*.
+- **His landscape (1143 tall) is nearly your portrait's height (1194)**, so *"landscape shows the top
+  of an invoice, portrait shows the invoice"* (`HANDOFF.md:750`–`:751`) is weak on his iPad twice over.
+- **Never on his screen at full size:** the §5 drawer and its heights, the stepper in place (only the
+  drawer passes it — `Builder.tsx:1218`), the bottom tab bar, and closing a sheet by dragging its grab
+  bar — he taps ✕ or outside. **None of that is wrong** — it is still what a smaller iPad or a phone
+  gets, and Sean may open the app to other bartenders. It is just not what he sees.
+
+⚠️ **The premise was mine first.** My Round 37 §0 told you *"An iPad in portrait is 768–834 CSS
+px… portrait was never capped"* (this file, the Round 37 section). It cited no measurement — the
+page that reads his iPad's width was built on 22 Sep (`b77c6d0`), and this round is its first reading.
+
+### 3 · Heights — two Safari states, not two orientations
+
+| | |
+|---|---|
+| **Portrait, 1468** | Read with the full toolbar and tab strip showing. The page is ≈1192 tall, so in portrait it cannot scroll — no other state was possible. |
+| **Landscape, 1143** | Read **scrolled 48px, to the page's very end**, with the toolbar collapsed to a pill. *Copy all* sits 118px below the page top against 166 in portrait; the card's bottom plus its 40px padding (`DeviceReport.tsx:76` `pb-10`) lands on 1143, within half a pixel; the photo shows a scroll bar. The report re-reads on every resize (`DeviceReport.tsx:63`). |
+| **Landscape at rest** | ⚠️ **Not measured.** About **1068** if Safari takes the same 132 it takes in portrait — an inference. |
+| **What the 132 is** | About 32 of iPadOS's status bar (clock, battery) and gap, the 44px address toolbar, then a 56px band holding 36px tabs — measured row by row in the original. Apple offers a *Compact Tab Bar* that would fold the tab strip away (*"select either Separate Tab Bar or Compact Tab Bar"*, Apple's Safari layout guide). |
+
+*This section first said portrait's 132 was "toolbar and tab strip" — it includes iPadOS's own
+status bar — and that in landscape "the toolbar collapses to a single address pill". It was
+collapsed because the page had been scrolled to its end; landscape with the page at rest was never
+read.*
+
+**What reads these heights:** sheets are `lg:max-h-[86dvh]` (`Sheet.tsx:136`) — at most 1262 tall in
+portrait and 983 in landscape at the measured heights — and the Builder is
+`h-[calc(100dvh-56px)]` (`Builder.tsx:837`). Four overlays set a height in `vh` instead —
+`FilterSheet.tsx:174`, `StartFromSheet.tsx:123`, `GateDialog.tsx:97`, `OpenInvoicesSheet.tsx:121` —
+which MDN defines as the *large* viewport, so they size against a taller screen than he has while
+Safari's bars show.
+
+**Widths, by contrast, are exact.** Chrome at 1200 and 1600 puts `/style/device`'s card at left 284
+and 484, width 632 — the same pixels as both photos. **A box's width measured in a desktop browser
+at his sizes is his width.** Text widths below were measured in Chrome, not Safari.
+
+### 4 · Which iPad, how big a pixel is, and the window
+
+| | |
+|---|---|
+| **Which iPad** | 1200 × 1600 at 2× is exactly 3:4 — the **13-inch iPad Pro** panel, 2064 × 2752 (*"2752-by-2064-pixel resolution at 264 ppi"*, support.apple.com/en-us/119891). The screenshots are 2400 × 3200 — more pixels than the panel has — so iPadOS is drawing a scaled screen: **Display Zoom, More Space.** A 13-inch Air would read about 1192 × 1590. Apple publishes no More Space sizes; being confirmed with Sean. |
+| **If he switches back** | 1032 × 1376. Portrait stays over 1024 — the same layout, with the invoice sheet at about 400. *This first said "every number above drops to about 1024 wide" — landscape would be 1376.* |
+| **How big a pixel is** | On More Space one CSS pixel is **0.86** of its standard size. A 44px target is about 7.3 mm, not 8.5; **13px text is physically what 11.2px is at standard zoom.** The 44px minimum is a written rule, and More Space shrinks iPadOS's own controls by the same factor. **The 13px floor was set by a device test at a zoom nobody recorded, on an iPad nobody named** — `more space|display zoom` over the app repo's `.md` files finds nothing. Device check 1.1 (the smallest text, still unticked) does not ask for the zoom today; it has to — mine. |
+| **The window** | Both photos carry a mark in the bottom-right corner that matches **iPadOS 26's window-resize handle** (*"drag any corner or the handle in the bottom right corner of the window"*, support.apple.com/en-us/125309). If so, Safari is a window at full size, and **his width is a window setting**: dragged narrower than 1024 he gets the bottom bar and the drawer, below 600 the phone. Unverified — being asked of Sean. |
+
+### 5 · Surface by surface — what changes, and what may look wrong at 1600
+
+Default settings — the sidebar starts open at 240 (`Sidebar.tsx:43`, `:56`) and the rail open at 360
+(`useSourcePanel.ts:29`, `:159`).
+
+| Surface | 1024 | **1200** | **1600** |
+|---|---|---|---|
+| Sheets | 672 — Event details and Calculator 512 (`narrow`, `Sheet.tsx:137`) | same | same |
+| History | 720 | 720 | 720 |
+| Settings | 768 | 768 | 768 |
+| Product rail | 360 | 360 | 360 |
+| Library list | 736 | 912 | 976 |
+| **Invoice sheet** | 392 | **568** | **968** — 1444 with sidebar and rail folded |
+
+Measured on a rebuild of each screen's frame from its exact class strings, dropped into a public
+`/style` page under the app's own stylesheet, in Chrome — the real screens need a login. Not Safari.
+
+**So a frame drawn at a cap — any sheet, History, Settings — is already right for his iPad, in
+width.** A sheet's height still changes with orientation (§3). Only the invoice sheet and the Library
+list take the extra room — plus the print previews, whose 816px paper is squeezed to 784 at 1024 and
+full at 1200 and up (`InvoiceDocumentView.tsx:79` `max-w-[8.5in]`; worked out from the classes, not
+measured). **At his widths, what may look wrong:**
+
+- **The invoice row, at 1600.** Its name column is 730 wide; a name starts 926px left of where its price
+  ends. Nothing caps the row (`InvoiceSheet.tsx:396`, `:427`, `:497`). No frame draws the
+  Builder's invoice sheet anywhere near that wide: the widest are your portrait `5C` and `1G` and the
+  early landscape option `1D`, all under 800 (the 816 frames are the printed paper); the layout you
+  built on, `5A` / `1E`, caps it at 660 — see §6.
+- **Library against History, at 1600.** A 242px product name and its price sit about 650px apart,
+  and switching between Library (976) and History (720) jumps the column 256px (192 at 1200).
+  `DESIGN.md:204` gives lists `max-w-5xl`; History uses `max-w-3xl` (`HistoryList.tsx:276`).
+- **Settings, at every width from 1024.** A row's title and its arrow sit about 710px apart.
+- **Dialogs centre on the whole screen, not the content.** At 1200 the centre lands exactly on the
+  seam between rail and invoice, so the press-and-hold panel (420 wide, `RowPanel.tsx:313`) covers
+  210px of rail and 194px of the invoice's names.
+- **The rail never widens, and at his widths it shows no stepper.** A product already on the invoice
+  gets an `N in invoice` chip (`SourceRail.tsx:569`–`:570`) that leaves its name 190px —
+  `Pierre Ferrand Orange Curacao` is cut by 47px, while the invoice beside it has 330–730px for the
+  same name.
+- At 1600 the search box stops at 448 and leaves 739px of empty bar — the shape your `5A` draws (a
+  capped box, then space), though `5A` caps it at 360.
+
+### 6 · ⚠️ Your own conclusions that rested on the 11-inch — please re-check the arithmetic
+
+| Where | Assumed | On his iPad | |
+|---|---|---|---|
+| **The calculator's working sentence** — `ROUND-37.md:82`–`:83` (*"in portrait, one line — free… The primary device pays nothing"*), `ROUND-39.md:73`, `:116`, `ROUND-41.md:60`, `HANDOFF.md:6935`–`:6936` (*"portrait 576"*); frames `51a`, `53a`, `54a` drawn at 728 | uncapped portrait; a 576 column | The calculator is `narrow` (`CalculatorSheet.tsx:152`) — **512 both ways, a column of about 318.** The five `/style/workingcheck` rows total **612px against 449 at 574, +164 (+37%)**: Simple syrup 4 lines → 7, Demerara 3 → 6. The specimen fixes one column the real row does not, so a row may differ by a line. | ❓ re-weigh — "free in portrait" is paid in both |
+| **Round 29, how far the list reaches** — `ROUND-29.md:105`–`:113`; `ROUND-29-LAB.md:81`, *"gains 117px of 834"* | the centred 86dvh dialog on a screen 834 tall; keyboard ≈353 | The same centred dialog both ways, but at most 983–1262 tall with 80–103 clear above and below (measured on `/style/scalecheck`). **Keyboard height on his iPad: never measured.** | redo the 117 and the escalation band at his heights |
+| **The invoice sheet's 660 cap** — `HANDOFF.md:320`, §21.3 (`:4422`, *"the sheet caps at 660px"*), `25B` (*"660px, the sheet's real maximum"*), `5A`, `1E` | 660, centred, beside a 64 rail | **No cap since 29 Jul** — `d2e5553` removed `max-w-[660px]`; `Builder.tsx:937`–`:938` has none. The sidebar you drew at 64 opens at 240. **568 upright, 968 sideways.** | ❓ below |
+| **The comp mocks — `r64a`, `r65a`–`b`, `r66a`–`b`, `r67a`–`e`** | set in `-apple-system, 'SF Pro Text'`; `r67a`'s footer at 13px | The app sets Spectral (`globals.css:546`–`:547`); the footer is `text-xs`, 15px (`InvoiceSheet.tsx:544`). Measured: `$24.99 · 750 ml bottle` at 15px is 151.9 in the frame's face, 138.7 in Spectral; `r67a`'s footer is 311.7 as drawn, 318.9 as built. | check any fit or wrap against Spectral, not the frame |
+| **Everything drawn at a cap** — Rounds 28 §2, 30, 31 §4, 33, 35, 36, 52–55; `HANDOFF.md:3044`'s 672 library sheet. Rounds 45 and 48 drew the recipe card at 512 (it is 672, card 632); Round 32's managed list at 672 (Settings is 768) | the cap | identical at 1024, 1200 and 1600, or wider | ✅ stands for width — the same or wider on his iPad, and a *fits* judgment only gets easier |
+
+⚠️ **The 660 cap went quietly, and that was mine.** I read your drawing as running the sheet flush
+right, and told you once as a finding (29 Jul, this file at `limbo-design` `de28cd9`: *"Sheet
+position | 'centred, max-width 660px' | runs flush to the right edge"*). My rewrite of this file the
+next day (`86622f3`) deleted it, and `660` appeared nowhere in this file again until this round
+(`git log -S660`). **Your rulings since still treat 660 as the sheet's maximum** — §21.3 (`:4422`),
+`25B`. At default settings the difference only shows at 1600: at 1024 (392) and upright (568) a 660
+cap would not bite. Upright with the sidebar or the rail folded (744, 868) it would.
+
+### 7 · Faults this pass found — mine, no design needed. Told so you do not rule around them.
+
+| Fault | How I know |
+|---|---|
+| **The Builder scrolls sideways in his portrait.** The invoice column cannot shrink below its longest name — a flex item with no `min-w-0` — so a long name widens the page instead of truncating. At 1200, default settings: any name over about 330px; a *Buy separately* line — always silent (`Builder.tsx:636`), so always carrying the *Silent* chip — over about 273px of text. `Buy separately — Pierre Ferrand Orange Curacao` makes the page 1298 wide, prices off-screen. At 1024 a 237px name is enough. | no `min-w-0` in `Builder.tsx` (grep counts 0); `InvoiceSheet.tsx:435` `truncate`, `:449` the chip; measured on the rebuild |
+| **At 1024 and up the app shell keeps nothing clear for the 20px home bar, and the bars on the bottom edge have no inset of their own.** (The formatting toolbar and some sheet footers do set it aside — `FormatToolbar.tsx:231`, `OpenInvoicesSheet.tsx:196`.) The Library's selection bar and undo strip are `sticky bottom-0 … py-3` with no inset (`SelectionBar.tsx:97`, `:229`), so about 8px of their buttons sits in the strip. The Builder's totals footer (`InvoiceSheet.tsx:537`–`:541`, `py-3.5`) is its bottom edge, with no inset. Against `DESIGN.md:278`–`:279`, *"Safe area insets on anything at the screen edge"*. | `AppShell.tsx:35` `lg:pb-0`; computed — not seen on the device |
+| **The Builder is 9px taller than the screen.** It subtracts 56 for the top bar (`Builder.tsx:837`); the top bar is 65 at 1024 and up — `py-2.5`, a 44px Settings target, a 1px border (`TopBar.tsx:31`, `:37`, `:63`). So the page scrolls 9px, and at rest the footer's action button sits about 11px into the home-bar strip. | measured on a rebuild of the top bar: 65; the 11px on a rebuild of the footer with a stand-in button, not the real stage control |
+| **Every form field renders at 16px, whatever its size.** The shared field is `text-base`, 18, and shows 16. `globals.css:834`, `input, select, textarea { font-size: 16px; }`, sits outside Tailwind's layers and beats every size class. It is there to stop Safari zooming on focus, which needs a 16px *floor*, not a fixed 16 — the app's `DESIGN.md:273`–`:274` says *"16px minimum font size on inputs"*. | measured: all 15 fields on `/style/scalecheck` compute 16px; a `<span>` with the same `text-base` computes 18 |
+| **The 834 premise lives where you check your work.** `/style/workingcheck` labels 768 *"UNCAPPED, the real primary"* and 512 *"landscape & desktop only"* (`page.tsx:94`–`:97`); code comments repeat it (`Sheet.tsx:124`–`:128`, `AppShell.tsx:12`–`:13`, `useSourcePanel.ts:84`–`:86`). | read |
+| **Four device checks test things his iPad does not draw** — 2.2 (the bottom bar), 2.4 (the portrait drawer), 6.7 (*"upright it uses a row of tabs at the bottom"*), 6.10 (flicking a sheet down by its grab bar) — and step 3 of 1.1 reads the words under the bottom bar's icons. They need rescoping before he runs them — mine. | `IPAD-CHECKS.md:136`, `:164`, `:515`, `:554`; 1.1 at `:56` |
+
+### 8 · Pointer, hover, dark mode, the user agent
+
+- ⚠️ **`any-pointer: fine` means a Pencil *or* a trackpad or mouse — the report cannot tell which.**
+  WebKit adds `fine` for either (`WebPageIOS.mm:4373`, WebKit main). For a Pencil it means iPadOS
+  *expects* Pencil input, and it stays true for ten minutes after (`WKStylusDeviceObserver.mm:37`,
+  `:56`) — so it can change mid-session. The one reading that would separate them, `any-hover`, is not
+  on the report (`DeviceReport.tsx:44`–`:59`); mine to add. His Pencil (Round 67 §D7) is the likelier
+  cause. *This line first said "a Pencil is paired" — a guess, stated as a fact.* **The conclusion
+  stands, stronger:** nothing should key on `any-pointer`.
+- **`hover: hover` is never true in Safari on iPad — trackpad or not.** WebKit ties it to a mouse
+  being the *primary* pointer, which on iPad it never is (`WebPageIOS.mm:4353`–`:4356`, WebKit
+  main; his reading, `no`, agrees). Tailwind's `hover:` sits inside `@media (hover: hover)`, so 23
+  lines in 15 files never apply on his iPad — the ✕, Retry, the top-bar icons, the Trash filter, the
+  sidebar's fold button among them. **The one hover he can see is the row highlight**, which is
+  scripted and ignores only a finger (`HoverRow.tsx:69`–`:73`), so a Pencil or a trackpad lights it.
+  `add-edge` keeps its dashed border at rest (`globals.css:875`–`:882`). This confirms my own 2 Aug
+  finding (your zip's `REQUESTS.md:6620`).
+- ⚠️ **Dark mode is not off — the app follows the OS unless Light is saved.** The whole dark palette
+  applies under `@media (prefers-color-scheme: dark) :root:not([data-theme="light"])`
+  (`globals.css:264`–`:265`); the theme defaults to System (`ThemeToggle.tsx:32`); Light / Dark /
+  System is live in Settings › General (`settings/general/page.tsx:38`). **Measured:** dark scheme,
+  nothing saved → a `#141110` page. His photos are light (`#F1EFEA`) under a dark OS, so Light must be
+  saved in Safari for that one address — inferred. **Anywhere he has not chosen Light opens dark
+  while his iPad is in dark mode — the App Store build included.** *This line first said "The app
+  stays light by ruling". No ruling says so — your `HANDOFF.md:156` keeps a dark theme in §1.1, `light only|stays light` over your
+  docs finds nothing, and my own Round 28 told you "today's reverted dark is still what ships" (your
+  zip's `REQUESTS.md:5951`).* The device page's own note says the same wrong thing
+  (`DeviceReport.tsx:58`) — mine.
+- **Safari's bars are plain near-black** (23, 23, 23) in both photos. The app's bar colour
+  (`#243A30`, `layout.tsx:150`–`:153`) shows nowhere — do not count on the status bar matching the green.
+- **The user agent reads as a Mac.** Safari's default on iPad since iPadOS 13, with the OS version
+  frozen (WebKit blog: "New WebKit Features in Safari 13", and "WebKit Features in Safari 26.0").
+  Nothing in the app sniffs it — `userAgent|maxTouchPoints|navigator\.platform` over `src` finds
+  only the report itself (`DeviceReport.tsx:59`).
+
+### 9 · The photos
 
 `device-checks/2026-09-28-check-6.5-landscape.png` is full frame.
-`device-checks/2026-09-28-check-6.5-portrait.png` has **one strip removed: Safari's tab bar**,
-which showed Sean's other open tabs, and this repo is public. Everything below it is untouched,
-and §1's page-height row carries the space the bars take. Your D6 asked for full frame; this is
-the one exception, and why.
+`device-checks/2026-09-28-check-6.5-portrait.png` has **the whole band above the page removed —
+iPadOS's status bar, Safari's address toolbar and its tab strip, 132px** — because the tab strip
+showed Sean's other open tabs, and this repo is public. Everything below it is untouched: compared
+against the original pixel by pixel, no difference. **So the portrait photo shows no Safari at all;
+the landscape one shows it collapsed.** §1's page-height row carries the space the bars take. Your D6
+asked for full frame; this is the one exception, and why. *This first said "one strip removed:
+Safari's tab bar".*
 
-### 4 · Two things to know
+### 10 · Two things to know
 
-- ⚠️ **The live site has been frozen since about 21 Sep.** The host stopped building — the cause
-  is being confirmed with Sean — so nothing since §85 reached it. **Device checks now run against a
-  copy on Sean's Mac at the current commit**, reached over his private network. That address is
-  not `https`, which is why *Copy all* did nothing and the photos replace it.
+- ⚠️ **The live site has been frozen since about 21 Sep.** The host stopped building — the cause is
+  being confirmed with Sean — so nothing since §85 (21 Sep) reached it. The live site answers
+  `/style/device`, added 22 Sep (`b77c6d0`), with *not found*, while `/style` loads (fetched 29 Sep).
+  **Device checks now run against a copy on Sean's Mac**, reached over his private network. That
+  address is not `https` — the copy answers plain `http` (checked 29 Sep), and the landscape
+  photo's address bar shows a bare machine name, which cannot normally carry an `https` certificate.
+  That is why *Copy all* did nothing: the clipboard exists only in a secure context, `https` or the
+  machine itself (MDN), and the page's call is optional (`DeviceReport.tsx:92`), so it fails
+  without a word. The photos replace it. *This first said the copy was "at the current commit".
+  Which commit it served on 28 Sep is not recorded; the device page and the theme files are the same
+  at `ae3a1fe` and at the local head.*
 - ✅ **Your Rounds 66 and 67 are being built as ruled** — `CompIcon` from `r66a`, the lock clause on
-  three surfaces, `billed` before tax, no undo toast, no dim on any hidden line. The report comes
-  with the push.
+  three surfaces, `billed` before tax, no undo toast, no dim on any hidden line. §99–§104 so far, on
+  his Mac. The report comes with the push.
 
 ## What I need back
 
-1. ❓ **Which width do you draw to — his real 1200, or 1024 as the floor?** Everything built so far
-   works at both; the question is which one a frame is judged at.
-2. Otherwise Round 68 as you planned it: C5 (History reopened), C6 (a typed size on cocktails), and
-   D4 (the trash), at these numbers.
+**Ordered by what matters.**
+
+1. ❓ **What size is a frame judged at?** Not 1200 against 1024 — **his 1200 × 1468 and 1600 × 1143
+   against your 834 × 1194 and 1194 × 834** (1143 was read scrolled; at rest it is probably less —
+   §3). Recommendation: draw full screens at his two sizes; keep drawing parts at their cap (672,
+   512), which are the same at every width from 1024 up; keep your 834 frames as what a smaller iPad
+   gets. *This first asked "his real 1200, or 1024 as the floor?" —
+   the wrong comparison (§2).*
+2. ❓ **The invoice sheet at his widths.** Does the 660 cap come back, and where does the room go at
+   1600? The sidebar's default is part of the same budget — it opens at 240, and you drew a 64 rail and
+   never sized the open one. Sean asked on 10 Aug for *"a clear margin around the top and both sides"*
+   (his words, quoted at `Builder.tsx:918`–`:921`).
+3. **Re-check §6** — the calculator's "free in portrait" rulings at a 318 column, Round 29 at his
+   heights, the comp frames against Spectral. Say which rulings change; the rest stand.
+4. ❓ **Dark mode: light only, or do Dark and System stay?** Nothing changes until you say. It decides
+   what the App Store build opens as on his dark iPad.
+5. Otherwise Round 68 as you planned it: C5 (History reopened), C6 (a typed size on cocktails) and D4
+   (the trash) — at his sizes.
+
+Being settled with Sean, nothing needed from you: the Display Zoom setting, whether he narrows
+Safari's window, iPadOS 26 or 27, a landscape reading before scrolling, and whether he types on a
+keyboard case — which decides how often Round 29's on-screen keyboard appears at all.
 
 ---
 
