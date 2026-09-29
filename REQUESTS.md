@@ -186,8 +186,10 @@ standing device check under your D6. Photos in this repo, `device-checks/`.
 ### 2 · What they change
 
 - ⚠️ **Width: 1200 portrait and 1600 landscape — against the 1024 most frames were drawn
-  at.** `1024px` appears nineteen times across `FROM-DESIGN.md`, `STATE.md`, `HANDOFF.md`, your
-  Rounds 50–67 and `DESIGN.md`; `1200` and `1600` appear nowhere as his width.
+  at.** `1024px` is the width named in `HANDOFF.md` and `DESIGN.md`; `1200` and `1600` appear
+  nowhere as his width in those, `FROM-DESIGN.md`, `STATE.md` or your Rounds 52–67 (grep for
+  `\b(1200|1600)\s*(×|x|px|pt|wide)`). *(This line first said `1024px` appears across all of
+  them — it appears in the first two only.)*
 - **It does not change which layout he gets — only how much room it has.** The app's widest
   breakpoint in use is Tailwind's default `lg` (1024). `globals.css` declares no custom
   breakpoint, and `xl:` / `2xl:` appear nowhere outside `style/` and `debug/` (grep for
