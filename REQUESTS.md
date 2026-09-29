@@ -96,6 +96,7 @@ is left and whose it is, and the rows are back in date order.
 | AH | ~~**Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED~~ | **24 Sep** | ✅ **ANSWERED — your `ROUND-66.md` and frame `r66a`–`r66b`, in the design bundle (not this repo).** The tag redrawn, §3–§9 ruled, 41 glyphs taken. BUILT §99–§105 on `main`, not yet pushed |
 | AI | ~~**Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep~~ | **27 Sep** | ✅ **ANSWERED — your `ROUND-67.md` and frame `r67a`–`r67e`, in the design bundle.** §A BUILT §99–§105, not yet pushed; C1, C2, C3a, C4, C7 and D1–D3 ruled, not built; C3b waits for its own round; C5, C6 and D4 are Round 68's |
 | AJ | 🔴 **Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode | **28 Sep**, rewritten **29 Sep** | 🔴 **OPEN — see its "What I need back"** |
+| AK | 🔴 **Round 69 — Sean answered what Round 68 left open.** More Space, confirmed; sideways is **1068** in Safari with its bars showing and **1168** from a Home Screen icon, which opens **dark**; he sometimes drags windows narrower, so the layouts below 1024 are his too; he types on a Magic Keyboard. ❓ judge sideways at 1068; ❓ dark mode, now on his screen; confirm the below-1024 layouts stand for a window | **29 Sep** | 🔴 **OPEN — see its "What I need back"** |
 
 ---
 
@@ -155,6 +156,221 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 69 — Sean answered what Round 68 left open: More Space, windows he will drag, a Magic Keyboard, and a second way in that is 1168 tall and dark
+
+**implementation → Design, 29 Sep 2026. Branch main, app at 70242d4.** Design repo at the commit
+that carries this round. Every `file:line` below is at `70242d4`.
+
+**Round 68 stands, and this does not re-ask it.** It went to you with five things *"being settled
+with Sean"*. He answered all five the same day and sent two more photos. **Three of the answers
+change what Round 68 asked you to draw at:** the height sideways, the widths he can reach, and how
+often the on-screen keyboard is up.
+
+⚠️ **Round 68's `file:line` references are at `ae3a1fe`, and six of the files it cites have moved
+since** — open them at `70242d4` with Round 68's numbers and you land on the wrong line. For example:
+`Builder.tsx`'s `h-[calc(100dvh-56px)]` is `:942`, not `:837`; `GateDialog.tsx`'s `max-h-[55vh]` is
+`:131`, not `:97`; the name's `truncate` in `InvoiceSheet.tsx` is `:504`, not `:435`; the 420 panel
+in `RowPanel.tsx` is `:369`, not `:313`; `max-w-[8.5in]` in `InvoiceDocumentView.tsx` is `:109`, not
+`:79`. The sixth is the app's `IPAD-CHECKS.md`: the checks its §7 names (1.1, 2.2, 2.4, 6.7, 6.10) are
+no longer at the lines it gives — find them by number. The sheet, hover, theme, viewport, report
+and breakpoint files have not moved.
+
+### 1 · His answers, 29 Sep
+
+| Round 68 left open | Sean |
+|---|---|
+| Display Zoom | *"It's on 'More Space'"* — **Round 68 §4's inference, confirmed.** One CSS pixel is 0.86 of its standard size on his screen; 13px text is physically what 11.2px is at standard zoom. Device check 1.1 now records it, in the app commit after `70242d4`. |
+| Whether he narrows Safari's window | *"Sometimes. Not very often myself – but future users might work in different sizes and drag more. I would like the flexibility."* — §5 |
+| iPadOS 26 or 27 | *"Version 26.6"* — his word; no photo can show it, because the user agent is frozen (Round 68 §8). So the resizable window is his (§5). The WebKit source cited here and in Round 68 is WebKit main; the release branches checked (`safari-7622`, `safari-7625`) match it in logic for everything cited, though not always at the same line numbers, but which build 26.6 ships is not known. |
+| A keyboard case | *"When working on my iPad, I mostly type on a keyboard case (my Apple Magic Keyboard)."* — §6 |
+| A landscape reading before scrolling | Two photos, both sideways: one *"opened the page directly from the browser"*, one *"opened from the Web App icon I saved to my homescreen ('add to homescreen')"* — §2 to §4 |
+
+### 2 · The numbers, beside Round 68's
+
+| | Safari upright, 28 Sep *(Round 68)* | Safari sideways, 28 Sep *(Round 68)* | **Safari sideways, 29 Sep** | **Home Screen app sideways, 29 Sep** |
+|---|---|---|---|---|
+| Page width | 1200 | 1600 | 1600 | 1600 |
+| **Page height** | 1468 | 1143 | **1068** | **1168** |
+| Visual viewport | 1200 × 1467 | 1600 × 1143 | 1600 × 1068 | 1600 × 1168 |
+| Above the page | 132 — status bar, address bar, tabs | 57 — Safari collapsed to a pill | **132** — the same bands as upright | **32 — the status bar alone** |
+| Page scrolled | no — it cannot scroll upright | to its end, ≈48 | ⚠️ **to its end, ≈123** | no |
+| Safe area bottom | **20** | **20** | **0** | **0** |
+| `any-pointer: fine` | yes | yes | yes | **no** |
+| Page drawn | light | light | light | ⚠️ **dark** |
+
+The report's values were read off the photos at full resolution; *Above the page*, *Page scrolled*
+and *Page drawn* were measured from the photos' pixels. The rest match in all four: screen
+1200 × 1600, pixel ratio 2, safe area top / left / right 0, `hover: hover` no, `pointer: coarse` yes,
+reduced motion no, `prefers-color-scheme: dark` yes, and the user agent cut off at `(KHTM` by the
+report's own row. Every sideways height adds back to the screen: 1068 + 132 = 1143 + 57 =
+1168 + 32 = 1200.
+
+- **1068 confirms Round 68 §3's inference exactly**, and the 132 splits row for row as it does
+  upright: 32 status bar, 44 address toolbar, a 56 band holding 36px tabs. ⚠️ **But the photo is not
+  "at rest" in the sense Round 68 used.** The page is scrolled to its very end: *Copy all* sits 175px
+  from the top of the screen, where unscrolled it would sit at about 298 (132 + 166, as upright) — so
+  the page is up about 123px, which is as far as it goes — and the *Device report* heading shows
+  faintly through the tab strip. **So Safari's height follows its bars, not the scroll** — 1068 with them showing, 1143 with
+  them collapsed. Safari sideways with the page at the top is still not photographed; it should also
+  be 1068 — not measured.
+- **Sheets.** `lg:max-h-[86dvh]` (`Sheet.tsx:136`) makes a sheet at most **918** tall in Safari with
+  its bars showing, 983 collapsed, **1004** in the Home Screen app and 1262 upright. Round 68 §3 quoted
+  983, the collapsed reading.
+- **The home-bar inset read 20 in both 28 Sep readings and 0 in both of these 29 Sep ones**, and the cause is
+  not established — no photo shows the home indicator. Untested: whether sitting in the Magic Keyboard
+  case changes it. **Draw it as the OS's inset, anywhere from 0 to 20 — never a fixed 20.** The app's
+  `pb-safe` / `pt-safe` already read it from the OS (`globals.css:580`–`:585`). Round 68 §7's fault
+  bites whenever it is 20.
+- ⚠️ **No reading is timed to its photo.** The report reads once when the page loads, then only on a
+  resize or rotation (`DeviceReport.tsx:62`–`:64`). A Pencil or trackpad arriving, or the inset
+  changing without a resize, leaves the old value on screen. Mine to fix: a time on each reading, and
+  a re-read when any value changes.
+- **`any-pointer: fine` read yes in Safari and no in the Home Screen app**, photographed a minute
+  apart. Given the point above, that shows the two *can* disagree — not that the hardware was the same
+  at both readings. **Round 68's conclusion holds harder: nothing should key on `any-pointer`**, and
+  nothing in the app does (`any-pointer|any-hover` over `src`, `style/` and `debug/` excluded: no hit).
+
+### 3 · What changes for Round 68's "What I need back" #1
+
+Round 68 asked you to judge full screens at **1200 × 1468 and 1600 × 1143**. The widths hold in every
+reading. **The height sideways depends on how he opens the app:**
+
+| How he opens it | Upright | Sideways |
+|---|---|---|
+| **Safari, its bars showing** | 1200 × 1468 | **1600 × 1068** |
+| Safari, its bars collapsed to a pill | not read | 1600 × 1143 |
+| **Home Screen app** | about 1200 × 1568 if the same 32px status bar — inferred | **1600 × 1168** |
+
+**Which of these he uses day to day is not known** — no photo shows a working screen, and it is
+being asked of Sean. Today the Home Screen icon opens the copy on his Mac, not the live site (§4),
+so for now it works only while his Mac is serving.
+
+**Recommendation: judge sideways at 1600 × 1068** — the least of the three sideways heights, so what
+fits there fits in 1143 and 1168 — and upright at 1200 × 1468, as before.
+
+### 4 · The Home Screen app — a second way in, and it opens dark
+
+- **What it is.** In Safari 26, every site added to the Home Screen opens as a web app of its own by
+  default (WebKit blog, "WebKit Features in Safari 26.0"). The app asks for none of it: at `70242d4`
+  there is no web-app manifest, no `apple-mobile-web-app-*` tag and no `apple-touch-icon` (`git grep`
+  over `src`, `public` and `next.config.ts`: no hit), so iPadOS chose its icon, and suggested its
+  name, when he added it.
+- **Where it points.** Almost certainly at the copy on his Mac: it shows `/style/device`, and the live
+  site answers that address *not found* (fetched 29 Sep). It has no address bar, so this is inferred,
+  not read. It works only while his Mac is serving.
+- **Only the status bar sits above it — 32px, painted in the page's own background** (`#141110`,
+  measured). The page starts below it: safe area top reads 0 even with `viewportFit: "cover"`
+  (`layout.tsx:146`). **The app's green shows nowhere, in either surface** — and its bar colours
+  (`#2E4A40` / `#243A30`, `layout.tsx:150`–`:153`) do not even match the header green,
+  `--accent-surface` `#2C4A3E` / `#24463A` (`globals.css:86`, `:217`). **Do not draw a green status
+  bar anywhere.**
+- ⚠️ **It opens dark — Round 68's ❓4, now on his own iPad.** Measured: page `#141110`, card
+  `#1A1712`, the dark tokens (`globals.css:264`–`:267`). Safari, a minute earlier, is light. The theme
+  is kept in the browser's own storage (`layout.tsx:159`–`:167`) and defaults to System
+  (`ThemeToggle.tsx:32`), and a Home Screen app shares no storage with Safari — WebKit says so by
+  design (bug 181849, Brent Fulgham, 1 Feb 2022). **So at `70242d4` every way in is a separate place
+  where Light has to be chosen** for the app to be light while his iPad is dark: Safari at each
+  address, this icon, a later icon made from the live site, and — inferred — the App Store build. The same holds for everything else the app keeps on the device: open invoice tabs,
+  the sidebar and rail as he left them, undo, and edits waiting to upload (`invoiceTabs.ts:60`,
+  `Sidebar.tsx:11`, `useSourcePanel.ts:81`, `undo.ts:36`, `sync.ts:39`–`:40`). Whether his sign-in
+  carries over is not known.
+
+### 5 · "The flexibility" — the layouts below 1024 are his too
+
+Every photo, the Home Screen app included, carries iPadOS 26's resize handle in the bottom-right
+corner (Apple, "Multitask on iPad", support.apple.com/en-us/125309: drag any corner, or that handle, to
+resize a window). Round 68 §4 left that unverified. Sean now says he drags it sometimes and wants the
+room to.
+
+**Round 68's *"on his iPad your portrait does not exist"* becomes *"does not exist at full
+screen."*** Dragged narrower, he reaches the layouts below 1024 — and the phone layout too, if a
+window can go under 600, which side by side upright probably does (inferred, below) — each switching
+live as he drags:
+
+| Window width | What he gets |
+|---|---|
+| 1024 and up | sidebar, rail, centred capped sheets — what he has now (`useSourcePanel.ts:89`) |
+| 600–1023 | the bottom bar, the §5 drawer, sheets rising from the bottom (`BottomNav.tsx:23`, `Sheet.tsx:104`) |
+| under 600 | the phone layout (`useSourcePanel.ts:79`, `:90`) |
+| ⚠️ **640 — a line Round 68 missed** | below it the filter sheet rises from the bottom, above it centres (`FilterSheet.tsx:166`, `:174`); the business form drops to one column (`BusinessForm.tsx:141`) |
+
+- **Side by side**, each app gets just under 800 sideways and just under 600 upright — inferred; the
+  divider was not measured and the split can be dragged. No Apple source found gives a minimum window
+  width, and a floating window's height was not measured.
+- **So your 834 frames and the layouts below 1024 are real for him and for anyone he opens the app
+  to — not only for a smaller iPad.** Nothing needs redrawing for that alone; it means none of them is
+  retired.
+- **Unverified, worth knowing:** Apple's WWDC25 session 208 says iPadOS 26 gives a window a taller
+  top safe area, to make room for its window controls, in apps not yet updated for iPadOS 26. Whether
+  anything like it reaches a web page is not known;
+  every reading so far is a window at full size. The top bar already reads the inset (`TopBar.tsx:31`
+  `pt-safe`).
+
+### 6 · The Magic Keyboard
+
+- **On the case, tapping a field does not bring up the on-screen keyboard** — iPadOS shows it only
+  when he asks for it, by touching and holding the screen's lower-right corner, and Apple names
+  accents and dictation as reasons to (support.apple.com/en-us/108762). **So Round 29's keyboard-up
+  case is his exception, not his rule.** It still has to work — off the case, for accents and
+  dictation, for other users — and Round 68's #3 still stands: redo it at his heights. The keyboard's
+  height on his iPad is still unmeasured.
+- **Typing on the case, he probably does not see the full 1068 or 1168.** The app's own record says iPadOS
+  puts its shortcut bar along the bottom whenever a hardware keyboard is attached, and that
+  `visualViewport` does not report it (`FormatToolbar.tsx:118`–`:146`, 15 Aug, from a screenshot Sean
+  took). That is a record in a comment, not a measurement: the bar's height, and whether it appears in
+  the Home Screen app, are unmeasured.
+- **The case holds the iPad one way round** (the same Apple page places the rear camera top-left, for
+  the cutout) — probably sideways, which is inferred. If so, **sideways usually means no on-screen
+  keyboard; upright usually means off the case, where it does come up.** Round 29's escalation band
+  then belongs to his upright more than his sideways. Being asked of Sean.
+- **The case has a trackpad.** Round 68's *"His Pencil … is the likelier cause"* of `any-pointer: fine`
+  is no longer favoured — either is possible. The report cannot separate them until `any-hover` is on
+  it (mine; WebKit reports hover for a trackpad or mouse and never for a Pencil —
+  `WebPageIOS.mm:4358`–`:4361`, WebKit main). Unverified: whether the Magic Keyboard's trackpad
+  registers as the kind of mouse WebKit counts.
+- **With the trackpad, `hover:` styles still never apply** — Tailwind's `hover:` needs
+  `(hover: hover)` (Round 68 §8), and WebKit makes that true only when a mouse is the *primary*
+  pointer, which it is only on Mac Catalyst (`WebPageIOS.mm:4321`–`:4328`, `:4353`–`:4356`). **The
+  scripted row highlight does light for it:** WebKit reports a trackpad as `mouse`
+  (`WKMouseInteraction.mm:249`–`:255`), and the highlight ignores only a finger (`HoverRow.tsx:68`–`:80`). On his usual setup, rows light as his pointer passes. **Any hover
+  treatment you draw has to go through that highlight to be seen on his iPad.**
+- **Press-and-hold, with the trackpad.** The app skips the hold for a mouse and opens the same thing
+  on a right-click instead (`useLongPress.ts:35`–`:39`, `:55`–`:60`; the undo stack,
+  `Builder.tsx:1108`–`:1111`, `:1117`). WebKit turns a secondary click or a Control-click into a
+  right-click, which fires that event (`WKMouseInteraction.mm:265`–`:271`, `WebFrame.cpp:1541`–`:1549`,
+  `:1592`–`:1595`, WebKit main), so a route almost certainly exists. Not tried on his iPad, and a two-finger click needs
+  Apple's *Two Finger Secondary Click* setting on. Worth knowing before press-and-hold carries more.
+
+### 7 · The photos
+
+- `device-checks/2026-09-29-landscape-safari-bars-showing.png` has **the band above the page removed —
+  status bar, address bar and tab strip, 132px** — as in Round 68 §9, because the tab strip shows
+  Sean's other open tabs. Everything below it is the original, pixel for pixel. ⚠️ **It is named for
+  what it shows — Safari's bars showing, the page scrolled to its end — not "at rest".** With the band
+  gone, the scroll is not visible in it; §2 carries the evidence.
+- `device-checks/2026-09-29-landscape-home-screen-app.png` is **full frame**, byte for byte what Sean
+  sent. It has no address bar and no tabs to hide.
+
+## What I need back
+
+**Only what has to be decided now.**
+
+1. ❓ **Round 68 #1, with the heights known: judge sideways at 1600 × 1068?** Upright stays
+   1200 × 1468. 1143 and 1168 give more room, so a frame that fits 1068 fits both.
+2. ❓ **Round 68 #4, dark mode — now on his screen.** His Home Screen app opens dark today, and at
+   `70242d4` every new way in will too, while his iPad is in dark mode, until Light is chosen there.
+3. **Confirm the layouts below 1024 stand for a window, not only for a smaller iPad** — the bottom
+   bar, the drawer, the phone layout, the 640 line. If any of them assumed it filled the whole screen,
+   say which.
+4. Round 68 #2, #3 and #5 stand as asked. In #3, weigh Round 29 as probably his upright, off-the-case case — inferred (§6).
+
+Being settled with Sean, nothing needed from you: which way in he works day to day; whether the case
+holds the iPad sideways; a reading on the case and off it, in both surfaces, to find what moves the
+home-bar inset. Mine: `any-hover`, which surface a reading came from, and a time on each reading,
+added to the report.
 
 ---
 
