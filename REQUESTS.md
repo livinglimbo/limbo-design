@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `d948b32`** — `b1a55bd`'s code; it adds only the device-check record and check 9.1's photos. ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `9b4d366`** — §118–§125's code, built from your Round 69, and their records (§126). ⚠️ **Not pushed while Round 70 is a draft:** `d948b32` is the last app commit you can read, and this line is re-checked before Round 70 goes. ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -96,7 +96,8 @@ is left and whose it is, and the rows are back in date order.
 | AH | ~~**Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED~~ | **24 Sep** | ✅ **ANSWERED — your `ROUND-66.md` and frame `r66a`–`r66b`, in the design bundle (not this repo).** The tag redrawn, §3–§9 ruled, 41 glyphs taken. BUILT §99–§105 on `main`, not yet pushed |
 | AI | ~~**Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep~~ | **27 Sep** | ✅ **ANSWERED — your `ROUND-67.md` and frame `r67a`–`r67e`, in the design bundle.** §A BUILT §99–§105, not yet pushed; C1, C2, C3a, C4, C7 and D1–D3 ruled, not built; C3b waits for its own round; C5, C6 and D4 are Round 68's |
 | AJ | ~~**Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode~~ | **28 Sep**, rewritten **29 Sep** | ✅ **ANSWERED — your `ROUND-68.md` and frame `r68a`–`r68e`, in the design bundle. BUILT §109–§116 on `main`, not yet pushed, except the tab strip's cap** — Round 69 §5, §6. Your 🔧 asks #2 and #3 answered in Round 69 §1; #1, the device check, in Round 69 §7 |
-| AK | 🔴 **Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.** | **29 Sep** | 🔴 **OPEN — see its "What I need back"** |
+| AK | ~~**Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.**~~ | **29 Sep** | ✅ **ANSWERED — your `ROUND-69.md` and frame `r69a`–`r69c`, in the design bundle. BUILT §118–§124 on `main`, not yet pushed** — each reviewed, and §125 fixed the invoice numbers' start. Your two asks, what stopped and what the building found are Round 70 |
+| AL | 🔴 **Round 70 — your Round 69 is built, in seven batches (§118–§125); ⏳ Sean's word on 720 and the photo; twenty things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard. ⚠️ **DRAFT — not sent until Sean's check 10.1 is in** | **29 Sep** (drafted) | ⏳ **DRAFT, NOT SENT** — flip to 🔴 OPEN when it goes |
 
 ---
 
@@ -161,6 +162,122 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 70 — your Round 69 is built, in seven batches; ⏳ Sean's word on 720 and the photo; twenty things back, two of them builds that wait on you
+
+> ⚠️ **DRAFT — NOT SENT.** Written 29 Sep, 17:50, before Sean's word on 720 and before the photo — his
+> check **10.1**, which needs the copy on his Mac moved to this build first. The two ⏳ slots in §1 are
+> the only things left to fill, with anything his check 10.7 says about #13. **Before it goes:** fill
+> §1; re-check the sha below against `git log` — nothing after `d948b32` is pushed, so none of it is
+> readable to you until it is; add the verdict and the photo to the DELIVERED table; flip row AL to
+> 🔴 OPEN.
+
+**implementation → Design, 29 Sep 2026. Branch `main`, app at `9b4d366`** — §118–§125's code and
+their records (§126). Design repo at the commit that carries this round. Every `file:line` below is
+at `9b4d366`.
+
+Your reply is `ROUND-69.md` and frame `r69a`–`r69c`, in the bundle's `ROUND-70/`. Each batch opened
+the frame and measured your numbers before building from them; each was then reviewed by a second pass
+that re-ran its fault injections and re-took its measurements. Measured in headless Chrome with the
+app's built CSS and Spectral loaded. **Safari was not run** — this Mac cannot drive it — so every
+piece below owes a look on his iPad (his Session 10).
+
+### 1 · ⏳ Your two asks
+
+| Your ask | Answer |
+|---|---|
+| **#1 — Sean's word on 720, on the iPad** (your §1) | ⏳ **Not yet.** Asked as you put it: right, or still slim — and if slim, **768** is your ceiling, with 116 of desk. *[Sean's words, and the date.]* |
+| **#2 — a photo of the Builder sideways at 720 with the undo list open** | ⏳ **Not yet.** Asked for as check 9.1's were: Safari, sideways, side menu open, page at rest, a copy with 10+ lines, the list opened by a long press on Undo, full frame. It goes in `limbo-app` `docs/device-checks/` beside 9.1's six, for the same reason: his prices and a client's name. *[File name; what it shows, read off its pixels.]* |
+
+**What the photo should show — Chrome, `/style/sheetcheck`** (the real sidebar, top bar, tab strip,
+InvoiceSheet, and now the real UndoStack over the Builder's scrim), 1600 × 1068, side menu open:
+
+| | Chrome | `r69a` |
+|---|---|---|
+| Sheet | **720** at x 740–1460, 140 of desk each side | 740–1460 |
+| Name column | **482** — `Buy separately — Pierre Ferrand Orange Curacao` (372.14) + 8 + `Reminder` (72.16) = 452.30, shown whole, 29.70 spare | 482 |
+| Undo list | x **1095–1435**; its right edge the ⋮'s (1435); its foot 8 above the footer's top — and still 8 with the inset at 20 | frame 1095–1435; prose 1096–1436 |
+| The page | exactly 1600 × 1068 | |
+
+⚠️ **One pixel, yours:** your prose puts the list at 1096–1436, *"the sheet's right edge minus 24"*;
+your frame measures 1095–1435, because its `right: 24px` sits inside the sheet's 1px border. Built to
+the frame and the ⋮.
+
+### 2 · What was built from your Round 69
+
+| Ruling | § | Commit (review) | Note |
+|---|---|---|---|
+| **§1** the cap, 660 → 720 | §118 | `5129d5d` (`b6b13bd`) | `lg:max-w-[720px]` (`Builder.tsx:1163`), from 1024 up only, centred. Upright 568. Folded: 720 with 28 each side upright, as you computed; 228 sideways. |
+| **§3** the undo list, measured from the sheet | §118 | same | It lives in the footer now (`InvoiceSheet.tsx:766`, an `overFooter` slot; the footer is `relative`). `right-6` is the footer's own `px-6`, so its edge is the ⋮'s; `bottom-[calc(100%+9px)]` is 8 above the footer's 1px rule (`Builder.tsx:1254`). The safe-area term is kept, in the footer's padding, so the list rises with it. Below 1024 it is where it was — see §3 #10. |
+| **§3** the tab strip | — | — | Nothing to build, as you said. |
+| **§4.1** the rail row, `r69b` | §119 | `ccefc14` (`d66e5d1`) | Its own part now, `RailProductRow.tsx`, so `/style/sheetcheck` draws the real row. Your numbers to the hundredth: chip 81.64 × 21.59 at x 12, price at x 101.64, 115.86 wide; column 280; lines 2 apart; row 61. The chip never cuts, the price does: `12 in invoice` whole at 88.61, the price cut to 183.39 of 224. Only the rail — the invoice row re-measured unchanged. Two departures: §3 #9. |
+| **§4.2** the row panel on the sheet's column | §118 | `5129d5d` | `RowPanelOverlay` (`RowPanel.tsx:110`), for the Builder's two mounts only. Still full-screen and centred up and down; only its left padding moves, to the column's edge plus the same 16, read from `data-sheet-column` on open and on a resize. **690–1110 at 1200, 890–1310 at 1600** — yours exactly. Below 1024 unchanged. ⚠️ The rail's comment said its panel was *"centred over the rail"*. It never was: `fixed inset-0` since `9d6bb59`, 2 Aug (read in git). Kept, marked wrong. |
+| **§4.3** Library at 720 | §118 | same | `library/layout.tsx:29`. |
+| **§4.4** Settings at 720 | §118 | same | All four pages — the index, Business, Cocktails, General — because your reason names the Cocktails page, and one at 720 beside three at 768 would be the same 48 jump inside Settings. Business already padded its form, so the padding moved out to the column and the form stays 720. Title to arrow at 720: 595 (Business), 590, 602. Library, Settings and History all at x 440–1160 at 1600, 240–960 at 1200. |
+| **§5** windows, not screens | §120 | `1915852` (`a97dd4f`) | Nothing reads the orientation or the screen, or sets the window's width against its height — grep over `src` (`orientation\|screen\.(width\|height\|avail)\|matchMedia\|innerHeight\|innerWidth\|device-width\|aspect-ratio\|landscape\|portrait`), then the same read from the syntax tree, debug and style excluded. Now held by a check. The four `vh` overlays are `dvh`. Every bottom edge reads the inset below 1024 too — but see §3 #3. "Portrait" relabelled in the code's notes; the lab reads your words, `a window 600–1023 wide`. |
+| **R69 §7 — my faults 1 and 2** | §120 | same | **1:** the top bar's field states its height (`h-10`, `GlobalSearch.tsx:96`). With Safari's 25px line forced in Chrome, the bar is 65 and the page equals the window at all seven of his heights — it was 66, and 1069 in 1068. **2:** the Device Report draws four probes from its first render and watches them; inset 20 reads `20px` on open and follows 20 → 0 with no resize. Neither yet seen on the iPad. |
+| **§6 #5** the bar, `r69c` | §121 | `e1845d0` (`8424340`) | Your place, `r67e`'s glyphs drawn at 22, 44 icons. Disabled per `r67e`, in `--text-faint`, never hidden, no `aria-pressed`. Indent runs `sinkListItem` and Outdent `liftListItem` — Tab's and Shift+Tab's — and Outdent refuses at the top level, where `liftListItem` would un-list the line. At 512: B 8–52 … Indent 301–345, Link 354–398, Done 438.63–504; the bar needs **479.38** — your *"about 480"*. At 390: Done flush at 324.63–390, the 1 × 28 rule at 323.63, the tools scroll 82. A control now acts when the finger lifts, and a swipe cancels it — otherwise a swipe across the scrolling tools would toggle what it started on. Four questions: §3 #5–#8. |
+| **§7** the keyboard | §122 | `d66717e` (`61b09fa`) | One part, `SEARCH_FIELD` (`lib/searchField.ts:62`), in all eight search fields — the rail's two, the swap's `Find a product or prep recipe` (where a pick would change the bottle), the four library screens' (your §35.3 family rule keeps History's with them), the top bar's. Found by what each is, from a list of all 65 inputs; the ingredient box is not one (§3 #15). `enterkeyhint="done"`; Return blurs and does nothing else, except while a word is being composed. A spacer the keyboard's height ends the rail's list while a field is focused: the last row ends at the keyboard's top, **502 = 502** at 1600 × 1068 and **1012 = 1012** at 1200 × 1468, in Products and Cocktails. `focus:border-accent focus:outline-none` on the rail's field and four others that lacked it. Nothing built for the footer, as ruled. One stop: §3 #1. |
+| **§6 #7–#16** | §123 | `71d8082` (`d1786a7`) | **#7** the note and `Restore` alone, read-only. **#8** Return lands on Keep — `autoFocus` had never held since §93: the stack's effect took focus back to the box. **#9** the field hidden. **#10** your note verbatim; money `$2,410.00` on screen, the printed invoice keeping `$2410.00`; dates `Oct 17` / `Sep 5, 2025`, a bare day read as his midnight, so `2026-10-17` is not the 16th in California. **#11** `Close`, the sentence gone, `No cocktails were chosen for this invoice.` **#12** the three nouns. **#14** the guard, and the first-run line. **#15** no stop, `--danger` 13px. **#16** the editors' panels on the stack. #3, #4 and #13 as built. #16's second half: §3 #2. |
+| **Your two found faults** | §124 | `6a63fd1` (review §125, `f98199f`) | **Numbers:** one row per number given out, in a per-account key — rows keyed by the number, because the sync layer replays a write as a merge onto the server's copy, and a single counter written by a device whose copy was behind would set the highest back down. The next is one past the highest of that list, the live invoices and the trash; every new invoice comes through one door; a purge holds its number first. The review found the one-time start could be skipped for good — a failed start, then one new invoice — and, run against the real sync code, a trashed №45 was given out again. Fixed: the start marks what it checked. **The strip:** Empty trash tells the strips after its deletes; one holding any item it deleted goes. |
+
+Checks 55 → 58 (`check-keyboard`, `check-dates`, `check-numbers`), every new assertion
+fault-injected and every exemption its own. All seven reviews found holes in the new checks — a
+comment standing in for code, a variant nobody tried, a hook never run the way the screen runs it —
+and closed them. The comp's worked example is unchanged: $99.96 billed, $40.00 comped, $105.96 at 6%.
+Both automatic jobs are still switched off.
+
+⚠️ **Two consequences Sean has been told, so you know them too.** The first open of this build writes
+one row to his account: his highest invoice number, trashed ones included. And a copy made for a
+device check now spends its number for good, so deleting it leaves a gap. Your ruling implies both;
+neither is asked.
+
+### 3 · Stopped, and found — yours
+
+| # | Ruling | What | Question |
+|---|---|---|---|
+| 1 | §7 | **"Keep a 2px border so the ring's width doesn't move the text."** There is no 2px to keep. The field is 1px — so are `FormatToolbar.tsx:259` at `d948b32`, the link field you cite (`border border-control-line`), `DESIGN.md`'s Input, every text field in the app, and `r69a`'s drawing of this one. The master file's one 2px search is a Look Lab specimen in another palette. **Not built.** Built: 1px, `--accent` on focus, no outline — the text sits at x 289, y 119 either way. | ❓ Keep 1px? Or 2px at rest, or 2px on focus only (which moves the text by 1 unless the padding gives it back)? Two different screens, neither drawn. |
+| 2 | §6 #16 | **⋮ → `Trash invoice…` disabled, with `Locked at Complete` as its second line.** No menu row has ever had a second line or a disabled state — `InvoiceOptionsMenu.tsx` read; no frame in the bundle draws one. The one disabled treatment a menu has is RowPanel's `Action`, `opacity-40` (`RowPanel.tsx:334`): it would put the reason at **1.87:1** (`--text-muted`) and the red label at **2.02:1**. **Not built** — the row still works on a locked invoice (`InvoiceOptionsMenu.tsx:241`), as before. | ❓ A frame: does the reason fade with the row; its size and colour; does a disabled danger row stay red? |
+| 3 | §5 | **Four sheets' feet take the inset in place of their own padding.** `py-N pb-safe`, and `.pb-safe` comes after `.py-*` in the built stylesheet (read there), so the inset replaces the bottom padding: Sheet's footer below 1024 (`Sheet.tsx:283`), FilterSheet's list (`FilterSheet.tsx:253`), StartFromSheet's footer (`StartFromSheet.tsx:259`), GateDialog's footer on a phone (`GateDialog.tsx:221–222`). `r68a` and §110 add it instead (14 + the inset). Measured on FilterSheet: at inset 0 its last group sits on the sheet's foot (0.19, −0.41, 0.39 at 390, 834, 1600); at 20, 20 clear. OpenInvoicesSheet looks the same but its button adds 12, so it is not one. | ❓ Add — own padding plus the inset, each foot 12–20 taller at every inset, a phone's included — or leave as is? No frame draws a sheet's foot below 1024. |
+| 4 | §5 | **Below 1024 the bottom bar is 62 tall, and the page and the drawer clear 56.** Its links are `min-h-row-list` (61, since §33, 31 Aug) plus a 1px rule (`BottomNav.tsx:43`); `<main>` pads `56px + inset` (`AppShell.tsx:65`); the bar's own comment says 56. So 6px of the page's end and of the drawer sit under it. **And the Library's select bar and undo strip lie wholly under it while he scrolls** — `sticky bottom-0`, reading the inset only from `lg:` up (`SelectionBar.tsx:107`, `:246`): 62 hidden at inset 0, 82 at 20, measured at 834 and 390, and a tap on its Clear lands on the bar's link. They clear only at the list's very end. Never his iPad at full screen; his window dragged narrower, and a phone. | ❓ Which moves — the bar to 56, or the clearance to 62 — and where the select bar sits below 1024? |
+| 5 | §6 #5, `r67e` | **"Still in the tab order the way RowPanel's move buttons are."** That spelling — `disabled` with `aria-disabled` (`RowPanel.tsx:330–331`) — takes a button **out** of the tab order: `focus()` on a disabled Outdent or Indent does not take (measured), and the move buttons carry the same attributes. Built the spelling, not the clause. Older than today: no control on the bar acts from the keyboard — they answer pointers only, so Return or Space on a focused Bold does nothing. | ❓ `aria-disabled` alone — reachable, announced as unavailable? And should the bar's controls answer the keyboard? |
+| 6 | §6 #5 | **"The button cut at the edge is the signal" reads at some widths only.** The controls have no border or fill, so a cut through the empty part of a 44 box shows nothing. Swept 300–520, one pixel at a time: a glyph is visibly cut at bar widths 331–352 (Outdent), 379–400 (Indent — 390 among them) and 432–453 (Link); at 305–330, 353–378, 401–431 and 454–479 — 375, 414 and 430 among them — the row seems to end cleanly, with Link out of sight. The rail's chips carry a border, which is why Round 29's cut reads at every width. | ❓ A drawing, if it has to read at every width. |
+| 7 | §6 #5 | **Bars 465–479 wide show the rule with every control whole** — only the row's trailing 8 is out of view. Neither `r69c` bar draws that. The reverse never happens: nothing is cut without the rule. | ❓ Fine as is? |
+| 8 | §6 #5, `r69c` | `r69c` draws the pressed list button `#FDFCFA` with an 8 radius, and Numbered and Bulleted at 1.75 with other paths. Kept: the `--accent` fill (§22.1 — the fill is the only exit from a mark) and `icons.tsx`'s two list glyphs. The prose rules neither. | ❓ Were they meant to change? |
+| 9 | §4.1, `r69b` | Mine — please confirm. `r69b`'s row carries `padding: 8px 12px`. Not built, because §33.5 B3: *"A row may carry NOTHING. `min-h-row-list` carries its height."* With it, your own chip row measures 61.84; without it the row is 61 and the text starts 7.58 down against your 8. And the 2 between the lines is on the drawer's rows too (upright and phone, a stepper, never a chip): one row, and `r69b` draws the 2 on its chipless Cointreau row. | |
+| 10 | §3 | **"Below 1024 … this lands where `right-6` does today."** Not quite: from 600 to 1023 the ⋮ ends 25 from the window's edge (measured) and 17 on a phone (from the classes), and the list's foot sits 21 above the footer at 600 × 900 and 900 × 1200, not `r69a`'s 8. Built literally: unchanged. | ❓ Measure it from the sheet below 1024 as well? |
+| 11 | §3 | **The list now lives inside the sheet, which clips.** Five steps are about 350 tall (three measured 227.5). A window 1024 or wider and under about 570 tall would cut the list's top, where the old list, pinned to the window, ran up over the tab strip. None of his sizes comes near: at 1068 about 500 spare. | ❓ Fine? |
+| 12 | §3, `r69a` | `r69a` draws Undo in its resting look with the list open, and no scrim. The app turns Undo gold and dims the screen while the list is open (7C; `Builder.tsx:1297`, `:1676`). Left as built. | ❓ Was `r69a` meant to change 7C? |
+| 13 | §7 | **Return on a hardware keyboard.** §7 speaks of the on-screen keyboard. Built as written, Return also leaves a search field on the Magic Keyboard — his usual case — and in Safari on the Mac, where it did nothing before. ⏳ His check 10.7 asks him whether he'd rather it did nothing there. *[His answer, if he gives one.]* | ❓ Did you mean it for his usual keyboard? |
+| 14 | §7 | Found, older than today: the rail's top search reads `Add a product or cocktail` (`SourceRail.tsx:362`) and filters products only. In the Cocktails segment typing in it changes nothing on screen; the picker below has its own search. | ❓ Its words, or what it searches? |
+| 15 | §7 | Found: the ingredient box searches products as he types and keeps iOS's autocorrect and capitals. *"Product names aren't dictionary words"* applies to it, but the ruling names search fields, and it is a name field whose Return picks a suggestion (§115; `IngredientRow.tsx:255`). Not changed. | ❓ Turn them off there too? |
+| 16 | §7 | Found: the swap's product list sits in a sheet. Whether its end runs under the keyboard is not measured; the padding is ruled for the rail only. | ❓ Measure it? |
+| 17 | §6 #10, `r69a` | `r69a` draws the sheet's header date `Oct 17, 2026`; A5b gives `Oct 17` in this year. Built to the prose (`InvoiceHeader.tsx:82`). | Please confirm. |
+| 18 | §6 #14 | A later auto-archive run, after a long absence, takes invoices months past their days and reads `60 days after Complete`; an invoice held back from the first run because it was open in a tab reads the same the next day. Only the first run was ruled. The run is still switched off. | ❓ Their line? |
+| 19 | §6 #10 | **History's trash rows cut `Restore` off at phone width.** At 390 and 430 it sits 77px past the list and is clipped by it. Older than today, but #10's record in the Deleted view widened it at 430 (43 read live, 77 recorded). At 1200 it fits. | ❓ Where does Restore go on a narrow row? |
+| 20 | §6 #8, #15, #16 | Left as they were, not ruled: the Builder's two row panels are not on the focus stack (the ruling names the editors; nothing sits under them today); `Pick at least one volume.` keeps amber 15px (not the refusal); the other refusals keep their stops — `Start with a number — …`, `A batch has to be more than zero.`, the unknown unit — and no frame draws them. | Say if any should follow. |
+
+**Mine, not yours, and unchanged:** the Home Screen app's 54 browser bar (Round 69 §7, fault 3) —
+the fix is Sean re-adding the icon from the Builder, or a manifest, and neither changes anything drawn.
+Two devices giving out invoice numbers while neither has heard from the other can still collide; only
+the server handing out numbers would prevent it (so since 2 Aug).
+
+## What I need back
+
+1. **#1 and #2** — the two builds that wait on you: the search field's border, and the locked
+   invoice's Trash row.
+2. **#3 and #4** — heights below 1024: the sheets' feet, and the bottom bar against the page, the
+   drawer and the select bar.
+3. **#5–#8** — the formatting bar.
+4. **#13** — Return on his keyboard.
+5. The rest, in any order. Nothing is blocked on them.
+6. Still with you: rate precision's volume half (your §6 #6 — *"Round 70"*, with a table of real
+   rates), Round 61's two questions, and the volume sentence (13).
+
+Held for a later round, to keep this one short: the comp's small holds (§101–§105) and Custom Group
+Lines.
 
 ---
 
