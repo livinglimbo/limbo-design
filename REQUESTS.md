@@ -319,13 +319,14 @@ Seems buggy and unreliable."*** — §128, `4afdd0e` (review `eac90ff`).
   *"every row carries its money"*, *"batch steps say how big they are"*. They now fill the list's existing
   `· N lines` and money; a cocktail's products fill the money (their label already gives the count).
   Nothing new drawn.
-- **Not a fault, and it may be what he saw:** a row of the list is *"undo to"*, your 7C rule 1, so tapping the
-  third row takes three. Only the heading `UNDO TO` says so. Which he did on 29 Sep is not known; his check
-  11.2 asks him.
+- **Not a fault in the build — and it IS what he hit.** A row of the list is *"undo to"*, your 7C rule 1, so tapping
+  the third row takes three. Only the heading `UNDO TO` says so. **Sean, 30 Sep:** *"The items disappeared when I
+  clicked a row … It just wasn't intuitive, so I didn't know."* So fault (1) above was real and is fixed, but it
+  was not what he saw; your #21 is.
 
 | # | Ruling | What | Question |
 |---|---|---|---|
-| 21 | 7C rule 1 | **A row reaches further than it reads.** Each row names one change (`Added Cream Sherry`); tapping it takes that change and every one above it. In his photo the third row would take three different products. Built as ruled. | ❓ Should a row show how far it reaches before he lets go — the rows above it marked while it is pressed, or other words? A new state of the list; not drawn. |
+| 21 | 7C rule 1 | ⚠️ **What Sean actually hit** — *"It just wasn't intuitive."* **A row reaches further than it reads.** Each row names one change (`Added Cream Sherry`); tapping it takes that change and every one above it. In his photo the third row would take three different products. Built as ruled. | ❓ Should a row show how far it reaches before he lets go — the rows above it marked while it is pressed, or other words? A new state of the list; not drawn. |
 | 22 | Round 66 §5 | **Nothing says what one tap of Undo took.** The button's words live only in `aria-label` and `title` (`Builder.tsx:1292–1295`), and the iPad shows no tooltips. In his photo one of the five newest adds is on screen, so undoing any of the other four looks like nothing happened — and invites a second tap. You ruled no toast for comps (Round 66 §5). | ❓ Any on-screen word for what an Undo took back? A new state. |
 | 23 | 7C rules 2, 3 | **Size and money: label or column.** §128 filled the list's columns only where the label said neither. Labels that already carry them — `Manhattan — 3 products`, `6 lines removed · −$412.88` — are left, or they would say it twice. | ❓ In the label or in the columns, and one rule for all? |
 
@@ -394,7 +395,8 @@ everything back by hand.
    drawer and the select bar.
 4. **#5–#8** — the formatting bar.
 5. **#13** — Return on his keyboard.
-6. **#21–#23** — the Undo list: how far a row reaches, a word for what an Undo took, and size and money.
+6. **#21–#23** — the Undo list. ⚠️ **#21 first: it is what Sean hit** — *"It just wasn't intuitive, so I didn't know."*
+   Then a word for what an Undo took, and size and money.
 7. The rest, in any order. Nothing is blocked on them.
 8. Still with you: rate precision's volume half (your §6 #6 — *"Round 70"*, with a table of real
    rates), Round 61's two questions, and the volume sentence (13).
