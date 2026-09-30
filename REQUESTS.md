@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `58cef8a`** — §118–§125's code, built from your Round 69; §127–§128's, two faults Sean found on his iPad; and their records (§126, §129). ⚠️ **Not pushed while Round 70 is a draft:** `d948b32` is the last app commit you can read, and this line is re-checked before Round 70 goes. ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `7eea775`** — §118–§125's code, built from your Round 69; §127–§128's, two faults Sean found on his iPad; their records (§126, §129); and 30 Sep's device checks with the retaken photo. ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -97,7 +97,7 @@ is left and whose it is, and the rows are back in date order.
 | AI | ~~**Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep~~ | **27 Sep** | ✅ **ANSWERED — your `ROUND-67.md` and frame `r67a`–`r67e`, in the design bundle.** §A BUILT §99–§105, not yet pushed; C1, C2, C3a, C4, C7 and D1–D3 ruled, not built; C3b waits for its own round; C5, C6 and D4 are Round 68's |
 | AJ | ~~**Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode~~ | **28 Sep**, rewritten **29 Sep** | ✅ **ANSWERED — your `ROUND-68.md` and frame `r68a`–`r68e`, in the design bundle. BUILT §109–§116 on `main`, not yet pushed, except the tab strip's cap** — Round 69 §5, §6. Your 🔧 asks #2 and #3 answered in Round 69 §1; #1, the device check, in Round 69 §7 |
 | AK | ~~**Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.**~~ | **29 Sep** | ✅ **ANSWERED — your `ROUND-69.md` and frame `r69a`–`r69c`, in the design bundle. BUILT §118–§124 on `main`, not yet pushed** — each reviewed, and §125 fixed the invoice numbers' start. Your two asks, what stopped and what the building found are Round 70 |
-| AL | 🔴 **Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo follows a fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23). ⚠️ **DRAFT — not sent until the photo is retaken** | **29 Sep** (drafted), **30 Sep** (his word, §4, §5) | ⏳ **DRAFT, NOT SENT** — flip to 🔴 OPEN when it goes |
+| AL | 🔴 **Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo, retaken on the fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23). | **29 Sep** (drafted), **30 Sep** (his word, §4, §5, the photo; sent) | 🔴 **OPEN** |
 
 ---
 
@@ -149,6 +149,7 @@ has been bitten by.
 | **His heights** — sideways 1068 (Safari, bars showing — read at rest in §7), 1143 (collapsed), 1168 (Home Screen app; 1114 on the Builder until its browser bar goes, §7); upright 1468 and 1568 (1514). **How he works** — Safari and the Home Screen app about 50/50, preferring the Home Screen app; Safari on the Mac; More Space; iPadOS 26.6; a Magic Keyboard; windows he drags narrower | **Round 69 §2–§4** | `b1a55bd` | ✅ Yes |
 | **Sean on your Round 68 §4 — Light the default: yes**, with his choice remembered by his account (§107) | **Round 69 §2** | `b1a55bd` | ✅ Yes — built §109 |
 | **Check 9.1 — the Builder on his iPad**, six full-frame photos: 660 at x 770–1430 with 170 of desk each side; the on-screen keyboard 566 sideways, 456 upright | **Round 69 §7** | `b1a55bd` | ✅ Yes |
+| **Sean on 720 — *"720 looks fine for now"*; check 10.1's photo, the Undo list open at 720, clean; Session 11 passed** | **Round 70 §1, §4** | `7eea775` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -165,17 +166,12 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ---
 
-## 🔴 ROUND 70 — your Round 69 is built, in seven batches; Sean: 720 is fine, and the photo follows a fix; two faults he found on his iPad, fixed; ❓ where Redo goes; twenty-four things back
+## 🔴 ROUND 70 — your Round 69 is built, in seven batches; Sean: 720 is fine, and the photo, retaken on the fix; two faults he found on his iPad, fixed; ❓ where Redo goes; twenty-four things back
 
-> ⚠️ **DRAFT — NOT SENT.** Written 29 Sep, 17:50. **30 Sep:** Sean's word on 720 is in (§1 #1); his
-> first photo caught a fault, so it is being retaken on the build that fixes it (§1 #2); the two faults
-> he found on his iPad are §4, and his question about Redo is §5. The one ⏳ slot left is the photo, with
-> anything his check 10.7 says about #13. **Before it goes:** fill §1 #2; re-check the sha below against
-> `git log` — nothing after `d948b32` is pushed, so none of it is readable to you until it is; add the
-> verdict and the photo to the DELIVERED table; flip row AL to 🔴 OPEN.
 
-**implementation → Design, 29–30 Sep 2026. Branch `main`, app at `58cef8a`** — §118–§125's code,
-§127–§128's (the two faults in §4), and their records (§126, §129). Design repo at the commit that
+**implementation → Design, 29–30 Sep 2026. Branch `main`, app at `7eea775`** — §118–§125's code,
+§127–§128's (the two faults in §4), their records (§126, §129), and 30 Sep's device checks with the retaken
+photo (`docs/device-checks/`). Design repo at the commit that
 carries this round. Every `file:line` in §1–§3 is at `9b4d366`; in §4 and §5, at `58cef8a` unless it
 says otherwise.
 
@@ -185,12 +181,12 @@ that re-ran its fault injections and re-took its measurements. Measured in headl
 app's built CSS and Spectral loaded. **Safari was not run** — this Mac cannot drive it — so every
 piece below owes a look on his iPad (his Session 10).
 
-### 1 · ⏳ Your two asks
+### 1 · Your two asks
 
 | Your ask | Answer |
 |---|---|
 | **#1 — Sean's word on 720, on the iPad** (your §1) | ✅ **720 stays.** Asked as you put it — right, or still slim, with **768** as your ceiling. Sean, 29 Sep, after seeing it sideways on his iPad: ***"720 looks fine for now."*** Your `r69a` stands; 768 is not needed, and nothing changes. |
-| **#2 — a photo of the Builder sideways at 720 with the undo list open** | ⏳ **Follows a fix.** His first (29 Sep, 23:04 — Safari, sideways, side menu open, an invoice of 35 lines, the list opened by a long press on Undo, full frame) caught a fault, §4a: Safari's `Copy · Find Selection · Look Up · Translate` bar over the tab strip, and selection handles down both edges of the screen. You should not judge a layout from a frame with a fault in it, so it is being retaken on the build that fixes it — his check 10.1, rewritten. **Read off its pixels, it already agrees with `r69a` to the pixel** (3200 × 2400, 2 to a point, edges found by brightness steps along rows and columns): sheet **740–1460**; list **1095–1435**, its right edge the ⋮'s (⋮ 1391–1435); its foot **8** above the footer's rule; the page **1068** tall, at rest. Not sent: it shows the fault, and two clients' names in the app's tab strip. The retake goes in `limbo-app` `docs/device-checks/` beside 9.1's six. *[File name; what it shows, read off its pixels.]* |
+| **#2 — a photo of the Builder sideways at 720 with the undo list open** | ✅ **Here, retaken 30 Sep on the build that fixes §4a** — `limbo-app` `docs/device-checks/2026-09-30-check-10.1-safari-builder-undo-list.png`. Safari, sideways, side menu open, a 34-line invoice, the Undo list open, full frame, clean: no Copy bar, no handles. **Read off its pixels** (3200 × 2400, 2 to a point): sheet **740–1460**; the list's foot about **8** above the footer's rule; its right edge on the ⋮'s, as in the first photo (29 Sep), where it measured **1095–1435** with the page **1068** tall at rest. ⚠️ It is in **dark**, his account's choice (§107); your frames are light. His other two browser tabs are covered with a flat fill; the app's own tab strip shows client names, so it lives in the private repo, beside 9.1's six. |
 
 **What the photo should show — Chrome, `/style/sheetcheck`** (the real sidebar, top bar, tab strip,
 InvoiceSheet, and now the real UndoStack over the Builder's scrim), 1600 × 1068, side menu open:
@@ -266,6 +262,9 @@ Two devices giving out invoice numbers while neither has heard from the other ca
 the server handing out numbers would prevent it (so since 2 Aug).
 
 ### 4 · Two faults Sean found on his iPad — mine, both fixed; three questions they raise
+
+✅ **Confirmed on his iPad, 30 Sep — his checks 11.1–11.3:** *"1, 2, and 3 are good."* No highlight on a hold,
+finger or Pencil; one tap of Undo takes back one change; the stage and packing ticks are left alone.
 
 Sean, 29 Sep, on his iPad during check 10.1 (13-inch iPad Pro, iPadOS 26.6, Safari, a finger and an Apple
 Pencil Pro). **Neither fix needed a drawing:** nothing new is on screen, and everything opens where it did.
