@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `7eea775`** — §118–§125's code, built from your Round 69; §127–§128's, two faults Sean found on his iPad; their records (§126, §129); and 30 Sep's device checks with the retaken photo. ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `5a6aac7`** — §130–§135's code, built from your Round 70, and their records (§136). ⚠️ **Not pushed while Round 71 is a draft:** `7eea775` is the last app commit you can read — your Round 69's build, §127–§128 and 30 Sep's device checks — and this line is re-checked before Round 71 goes. ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -97,7 +97,8 @@ is left and whose it is, and the rows are back in date order.
 | AI | ~~**Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep~~ | **27 Sep** | ✅ **ANSWERED — your `ROUND-67.md` and frame `r67a`–`r67e`, in the design bundle.** §A BUILT §99–§105, not yet pushed; C1, C2, C3a, C4, C7 and D1–D3 ruled, not built; C3b waits for its own round; C5, C6 and D4 are Round 68's |
 | AJ | ~~**Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode~~ | **28 Sep**, rewritten **29 Sep** | ✅ **ANSWERED — your `ROUND-68.md` and frame `r68a`–`r68e`, in the design bundle. BUILT §109–§116 on `main`, not yet pushed, except the tab strip's cap** — Round 69 §5, §6. Your 🔧 asks #2 and #3 answered in Round 69 §1; #1, the device check, in Round 69 §7 |
 | AK | ~~**Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.**~~ | **29 Sep** | ✅ **ANSWERED — your `ROUND-69.md` and frame `r69a`–`r69c`, in the design bundle. BUILT §118–§124 on `main`, not yet pushed** — each reviewed, and §125 fixed the invoice numbers' start. Your two asks, what stopped and what the building found are Round 70 |
-| AL | 🔴 **Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo, retaken on the fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23). | **29 Sep** (drafted), **30 Sep** (his word, §4, §5, the photo; sent) | 🔴 **OPEN** |
+| AL | ~~**Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo, retaken on the fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23).~~ | **29 Sep** (drafted), **30 Sep** (his word, §4, §5, the photo; sent) | ✅ **ANSWERED — your `ROUND-70.md` and frame `r70a`–`r70d`, in the design bundle's `ROUND-71/`. BUILT §130–§135 on `main`, not yet pushed** — each reviewed. Your §6 is Sean's answer too (*"nothing"*, 30 Sep). Three stops, what the building found, and Sean's word on `r70a` are Round 71 |
+| AM | 🔴 **Round 71 — your Round 70 is built, in six batches (§130–§135); Sean on Return: *"Let's go with Design's recommendation: nothing."*; ⏳ his word on `r70a`; three stops and twenty things back** — ⛔ #19's Restore on a trash row below 640 (hiding the amount is not enough), #14's one search per segment (the picker's reaches recipes off the menu), #22's line on a phone; Redo's greyed edge (frame `#D8D2C8` vs prose `--control-line`) and Undo's own empty look; `r70a`'s one-line rows; our label words; dark at 4.03:1; the bar's Tab inside a sheet; `r70b`'s totals run the wrong way. ⚠️ **DRAFT — not sent until Sean's check 12.1 is in** | **30 Sep** (drafted) | ⏳ **DRAFT, NOT SENT** — flip to 🔴 OPEN when it goes |
 
 ---
 
@@ -163,6 +164,141 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 71 — your Round 70 is built, in six batches; Sean on Return: *"nothing"*; ⏳ his word on `r70a`; three stops and twenty things back
+
+
+**implementation → Design, 30 Sep 2026. Branch `main`, app at `5a6aac7`** — §130–§135's code, built from
+your Round 70, each with its review, and their records (§136). Design repo at the commit that carries
+this round. Every `file:line` below is at `5a6aac7`.
+
+> ⚠️ **DRAFT — not sent.** It goes once Sean has tried `r70a` and `r70b` on his iPad — your *"What I need
+> back"* #1, his check 12.1, a ⏳ slot in §1 — and once the app is pushed: `7eea775` is the last app commit
+> you can read, and the sha above is re-checked before this round goes.
+
+Your reply is `ROUND-70.md` and frame `r70a`–`r70d`, in the bundle's `ROUND-71/`. Each batch opened the
+frame and measured your numbers before building from them; each was then reviewed by a second pass that
+re-ran its fault injections, tried the variants it had not, and re-took its measurements. Headless Chrome
+with the app's built CSS and Spectral loaded, touch emulated wherever a gesture is the subject. **Safari
+was not run** — this Mac cannot drive it — so every piece below owes a look on his iPad (his Session 12).
+
+### 1 · Your asks
+
+| Your ask | Answer |
+|---|---|
+| **#1 — on his iPad, `r70a`'s pressed state and `r70b`'s four taps: does he now read what a row will take before he lifts?** | ⏳ *[Sean's answer — check 12.1: four adds; hold Undo; a finger held on the third row, read before lifting; slide off, lift, nothing; the third row again, lift; Redo three times; ⌘Z and ⌘⇧Z on the Magic Keyboard, then ⌘Z inside a box. Asked in your words: "with your finger on a row, could you tell what it would take before you lifted?"]* ⚠️ The copy his iPad opens still serves §128's build; it is rebuilt before he tries it. |
+| **#2 — Sean's check 10.7 answer on Return (your §6)** | ✅ **Sean, 30 Sep: *"Let's go with Design's recommendation: nothing."*** So your §6 stands as written, and it is his answer too. Built in §134: with a hardware keyboard, and in Safari on the Mac, Return in a search field does nothing — the caret and the text stay. With the on-screen keyboard up, it leaves the field. |
+| **#3 — still open with you** | Unchanged: rate precision's volume half — your Round 70: *"⏭ Round 71, with a table of real rates"* — Round 61's two questions (row AC) and the volume sentence (AD). |
+
+**What 12.1 should show — Chrome, `/style/sheetcheck`** (the real footer and the real UndoStack over the
+Builder's scrim), by touch, at this head:
+
+| | 1600 × 1068 | 1200 × 1468 | `r70b` |
+|---|---|---|---|
+| Undo · Redo · ⋮ | 1283–1327 · 1335–1379 · 1391–1435 | 1007–1051 · 1059–1103 · 1115–1159 | 8 apart, ⋮ last |
+| Redo, nothing to redo | 1px `--control-line`, glyph `--text-faint`, `aria-disabled`, no `disabled` attribute | the same | step 1 — but see §3 #4 |
+| The list | 1095–1435, its foot 8 above the footer | 819–1159, 8 | right edge on ⋮'s |
+| A finger on row 3 | `UNDO 3 CHANGES`; rows 1–2 gold 15%, row 3 28%, row 4 clear | the same | `r70a` |
+| The lift | the list closes; `Undid 3 changes`; Redo live, labelled `Redo Removed Cointreau` | the same | step 2 |
+| Redo × 3 | `Redid Removed Cointreau`, `Redid Added Fever-Tree Tonic Water`, `Redid Comped Ice, 20 lb bag`; greyed again; a fourth tap does nothing; Undo never moves | the same | steps 3–4 |
+| After 4 s | the line is back to its count | the same | step 4 |
+
+⚠️ **Your `r70b` totals, checked as you asked us to check your arithmetic:** steps 2 and 3 run the wrong
+way. Undoing `Comped Ice` (−$40.00), `Added Fever-Tree` (+$38.97) and `Removed Cointreau` (−$39.99) puts
+$41.02 back, so the total goes **up**. The same four rows on the real modules, before tax: $2,410.00 →
+**$2,451.02** after *undo to* the third row → **$2,411.03** after Redo `Removed Cointreau` → $2,450.00 →
+$2,410.00. The frame draws $2,369.02 and $2,329.03. Nothing is built from them — the footer computes its
+own — but the frame is the record of the path, so it should read true.
+
+### 2 · What was built from your Round 70
+
+| Ruling | § | Commit (review) | Note |
+|---|---|---|---|
+| **§2 #24** Redo, `r70b` | §130 | `72764b5` (`52d0545`) | `RedoButton.tsx`, paired with Undo by the pair's own `gap-2`. Greyed: `aria-disabled`, no `disabled` attribute, still a tab stop, a tap does nothing. One step per tap from `future[0]`, so after *undo to* the third row the third row's step comes back first. ⌘Z / ⌘⇧Z (`lib/useUndoKeys.ts`) only outside `input`, `textarea` and `contenteditable`; nothing while a sheet or dialog is over the invoice (`aria-modal`, or the focus stack) or while the list is open; ⌘Y and Ctrl+Z not taken; `preventDefault` only when it acts. 🔧 `restoreDraft` refuses a locked invoice, asked **before** the history moves (`restoreFromHistory`), so a refused undo loses no step; Archive clears the history as Complete does; restoring from the archive drops any history an older build left. Below 600 the drawer's Undo has Redo beside it. |
+| **§2** 🔧 superseded | §130 | same | Frame `6b`, HANDOFF §3.3's header pair and §3.7's *"known divergence"* are marked superseded by `r70b` in the app's `DESIGN.md`. **Your bundle's `HANDOFF.md` and frame `6b` are yours — not edited.** |
+| **§3 #21** the reach, `r70a` | §131 | `d93c35c` (`8d2eccf`) | Your strings verbatim. Tints `--gold` at 15% and 28%; rules as `r70a` draws them (`--border` above the pressed row, `--border-subtle` under it); names struck at 1px; their money `--text-secondary`. It acts on the lift. A held pointer stays captured by the row it landed on, so leaving the row is read against the row's own box on every move and at the lift. The click after the lift is spent, so it cannot land on what the closed list covered. No selection or callout while held. Arrows mark, Return undoes, Escape closes. |
+| **§3 #22** the footer's line | §131 | same | 4 s; `--text`, 600, 15px, truncating; in an always-mounted polite live region, with the count line hidden under it and not itself live. Said inside `useUndo`, so every undo and redo path says it and a refused one says nothing. A 104-character line truncates 24 short of the controls at 1600, 600 and 1024. |
+| **§3 #23** one rule | §131 | same | No label carries a size or money; the size is the second line's, from 2 up (`· 3 products`, `· 6 lines`), the money its own column. The labels: §3 #12. |
+| **§7 #10, #11, #12** | §131 | same | **#10:** measured from the sheet at every width — right edge on the ⋮'s and foot 8 above the footer at 1600, 1200, 1024, 900, 600 and 390. **#11:** capped 16 below the sheet's top, the heading fixed and the rows scrolling (1024 × 520: 16, 247 tall); the review made a row the arrows mark scroll into view — before, ↓ four times marked a row hidden below the box and Return undid four. **#12:** as built. |
+| **§4 #4** 62 | §132 | `1fb9fcc` (`a035e67`) | The bar stays `min-h-row-list` + its rule; the check derives the 62 from its classes. `<main>` and the drawer clear `62px + inset`. The select bar and undo strip: `sticky bottom-[calc(62px+env(safe-area-inset-bottom))] lg:bottom-0` — their feet on the bar's top, 0 hidden, at 390, 600, 834 and 1023 with the inset at 0 and 20 (62 and 82 hidden before). Taps on Clear, Export, the trash control, a chip's ✕ and Undo land on them; before, on the bar's links. The bar's comment and `DESIGN.md`'s 56 corrected. |
+| **§4 #3** add | §132 | same | All four feet pay their own padding plus the inset: Sheet's footer below 1024 12 / 32 at inset 0 / 20 (was 0 / 20); FilterSheet's list 20 / 40; StartFromSheet's footer 12 / 32; GateDialog's on a phone 16 / 36. Written in rem, as each foot's own padding is. ⚠️ **Two of them change at his full screen** — StartFromSheet and FilterSheet are not below-1024 parts, and your *"on all four sheets"* covers them. §132's commit said nothing changed at full screen; the review corrected it. |
+| **§5 #5** | §133 | `4081d88` (`a1e0bb2`) | `aria-disabled` alone on Outdent, Indent and RowPanel's two moves. Return and Space on any focused bar control — the eight tools, Done, and the link row's Remove and Done, the link row being a mode of the bar (§22.3) — each doing exactly what a tap does. |
+| **§5 #6, #7, #8** | §133 | same | The fade hangs from a zero-width anchor beside the scroller, `pointer-events-none`, from clear to `--surface-alt`. An end fades when more than 8 is out of view there; the left by the same 8, because any other number puts a fade inside 465–479. At 375: 276.63–308.63, 44 tall — your box. Swept 300–520 live: no fade without more than 8 hidden, none at 465–479. #8 pinned as built. |
+| **§6 / #13** Return | §134 | `2fbd177` (`93043b3`) | Your test on heights alone (`onScreenKeyboardUp`, `lib/useKeyboardInset.ts`), so iPadOS panning the page to show the caret does not hide a keyboard: 70 and exactly 150 short keep the field; 151, 456 and 566 leave it. All eight search fields. Return is refused either way, so nothing submits. |
+| **§7 #15** | §134 | same | Autocorrect, autocapitalise and spellcheck off — one shared set, `AS_TYPED`, worn by the search part and both ingredient boxes; nothing else may wear it. Return still picks. See §3 #17. |
+| **§7 #16** | §134 | same | Measured first: sideways it ran under — the last row 131.8 below the keyboard's top as the swap opened, with nothing to scroll. The rail's spacer, last in the swap's panel: scrolled to the end, 216 clear sideways and 252–438 upright. See §3 #18. |
+| **§1 #2** `r70c` | §135 | `21b3bf3` (`6e17ff6`) | 61 tall, the other nine rows 52. Label 17px and glyph `--text-faint`; the reason 13px `--text-muted` at opacity 1, 2 under the label; `aria-disabled`, a tab stop, no handler, no pressed tint. *Locked at Complete* / *Locked while archived*. Before this, the row trashed a locked invoice. |
+| **§7 #18** | §135 | same | One line, verbatim, for every run. The run still writes `archivedAutoDays`, `archivedAutoFirst` and `firstRanOn` as records; nothing reads them now. Still switched off. |
+| **§7 #20** | §135 | same | Both Builder panels owned, so every RowPanel the app mounts is on the stack. Four refusals lose their last stop: `Start with a number — …`, `A batch has to be more than zero`, the unknown unit's, and a count recipe's `try X instead of Y`. `Pick at least one volume.` untouched. |
+| **Your "mine" items** | §135 | same | The seven close-on-first-touch surfaces, re-found by grep, all through §128's spent tap. The top bar's search now listens only while its results are open — it listened on every page, and spending that tap would have eaten every tap in the app. The review found the spent tap left the caret in that field, so a tap on the field could not reopen the results; closing them now also blurs, only when focus is inside the search. The grips: the hold guard at the first touch or pen contact, not a mouse's. |
+| **§1 #1, #9, #17; plain-text selection** | — | — | Nothing to build. |
+
+Checks: still **60** — every new assertion went into an existing check, every one fault-injected, every
+exemption its own. The batches injected 302 faults; each review re-ran its batch's and added its own.
+**All six reviews found something:** a comment standing in for code (§130, §135), spellings of a fault
+nobody tried (§132, §134), a check that said it ran what it only read (§133) — and twice the screen
+itself: the arrow keys marking a row out of sight (§131), and the top bar's search keeping its caret
+(§135). The comp's worked example is unchanged — $99.96 billed, $40.00 comped, $105.96 at 6% — and comes
+back to the cent through *undo to* and three Redos. Both automatic jobs are still switched off.
+
+**Found while building, fixed, for you to know:** the lines between the list's rows had never drawn —
+0px since 1 Aug, `last:border-0` on a row that is its `<li>`'s only child — and 7C, `r69a` and `r70a` all
+draw them. At a 1024 window the footer's count line ran under Undo, Redo and ⋮ (641–959 under controls
+from 831); it now wraps to three lines there, so that footer is taller at 1024 only. The hover part was
+overriding its callers' pointer handlers.
+
+### 3 · Stopped, and found — yours
+
+| # | Ruling | What | Question |
+|---|---|---|---|
+| 1 | #19 | ⛔ **Stopped. Below 640 a trash row drops its amount — built, and Restore still runs past the list.** `/style/historycheck`, Deleted view, four fixtures: Restore ends 68.84, 63.55 and 77.38 past the list at 390 (one row, 1.73 inside) and 28.84, 23.55 and 68.50 at 430; from 600 up every Restore sits 17 inside. The cause: in the Deleted view the row cannot shrink below its content, so the client's name never truncates there. Measured, not built: letting it shrink (`min-width: 0`) puts Restore 17 inside on all four, the names cut to 45–102 at 390 and 85–142 at 430. | ❓ How much of a client's name may a trash row show below 640 — cut it to fit Restore, or does Restore go elsewhere? No frame draws the row. |
+| 2 | #14 | ⛔ **Stopped, both halves. The picker's own search does a job the top field doesn't.** Once anything is on the menu, it is the only way to a recipe that isn't: typing switches its list from `On the menu — 2` to `All recipes — 1 match`, with `Searching every recipe. Clear the search to go back to the menu.` (run: `man` found Manhattan; ticked, the menu went 2 → 3). The top field only narrows what is on screen (Products, 60 → 5 for `gin`). Their text behaves differently too: the top field's survives every segment switch; the picker's is cleared on leaving Cocktails. *(A third — the picker's works while the catalogue loads — is true of the code, `SourceRail.tsx:361–362`, but the segment tabs are disabled through the same load, `:395`, so he likely never meets it.)* The top field also sits over Details, which the ruling does not name. Building one half would put two cocktail searches in one segment, so the rail still reads `Add a product or cocktail`. | ❓ In Cocktails, does the top field take over *All recipes* — every recipe, not only the menu — and keep its text across segments? What does it read, or do, over Details? |
+| 3 | #22 | ⛔ **Stopped. The 4-second line has nowhere to go on a phone.** Below 600 the footer's count line is hidden (`InvoiceSheet.tsx:712`) and the line lives in it, so the drawer's Undo and Redo say it into a block nobody sees or hears. No frame draws a phone footer. | ❓ Where does it go below 600 — the drawer's bar, or nowhere? |
+| 4 | §2, `r70b` | **The greyed Redo's edge — frame or prose.** `r70b` draws it `#D8D2C8` (`--border`); your prose says `--control-line` twice. Built `--control-line` (`#827B6B`, 3:1, an unselected control's edge). The same frame draws every 1px edge `#D8D2C8`, the ⋮ included, which is built 2px `--accent`. One class to switch. | ❓ Which? |
+| 5 | §2 | **In the phone drawer, the greyed Redo is the stronger of the pair.** Its edge, rgb(130, 123, 107), is darker than the live Undo beside it, `--border` rgb(216, 210, 200). The ruling applied to the letter inverts the look there. | ❓ The drawer's own edge for its greyed Redo? |
+| 6 | §2 | **The drawer on a locked invoice.** *"Locked: neither shows"* is the footer's `!locked`. The drawer's Undo has always shown greyed on a locked invoice, and Redo now does the same beside it; hiding the pair would hand its grid track to the search button — a bar no frame draws. | ❓ Hide both there too? |
+| 7 | §2, #5 | **Undo's own empty look.** With nothing to undo, Undo is still the `disabled` attribute and the 2px `--accent` edge (`Builder.tsx:1351`). So on a fresh invoice the pair reads two ways — Undo strong and out of the tab order, Redo faint and in it. `r70b` draws only a live Undo; #5's rule would make it `aria-disabled` and greyed like Redo. | ❓ Does Undo grey the same way? |
+| 8 | §2 | **A 320-wide phone.** With a $12,480.00 total the drawer's search button shrinks to 58.19 and Redo ends at 326.5, 6.5 past the screen; it fits from about 338. Not his device. | ❓ Fine, or what gives? |
+| 9 | #21, #23, `r70a` | **One line or two.** `r70a` draws each row on one line — size and money together on the right (`3 products · +$18.40`), no `just now` — and its header without `50 steps kept`. The frame's title says *"drawn as built"*, and the prose names none of the three, so 7C's anatomy stays: the name over `just now · 3 products`, the money alone at the right, rows 61, `50 steps kept` in the header. | ❓ Was `r70a` meant to change the row? |
+| 10 | #21 | **The line's colour.** The prose says `--text`; `r70a` draws `#474239` (`--text-secondary`). Built the prose. | ❓ |
+| 11 | #21 | **A keyboard user reads the finger's words.** The arrows mark the rows, and the line says `Lift to undo. Slide off to cancel.` | ❓ Words for the keys, or one sentence for both? |
+| 12 | #23 | **Our words, not yours.** You gave `Added Manhattan`. These are ours: `Removed Manhattan` (a cocktail unticked); `Removed lines` (select mode); `Added buy-separately notes`; `Updated lines` and `Added lines` (the calculator); and the heading `Undo 1 change` with a finger on the first row, where #22 names a single step instead (`Undid Added Cream Sherry`). Histories already on his iPad keep their old labels (`Manhattan — 3 products`) until they age out. | ❓ Your word on each, and on `Undo 1 change`. |
+| 13 | #21 | **In dark, the pressed row's second line is 4.03:1.** `--text-muted` on the 28% tint; 5.27 on the 15%. Light passes (5.80, 5.04). **He uses dark** — the 10.1 photo was dark. The names and the money are 7:1 or better on both tints, in both themes. | ❓ A stronger second line under the tint, or a lighter tint in dark? |
+| 14 | #5 | **Two spellings again.** Settings' list editor keeps `disabled` on its moves (`ManagedList.tsx:199`, `:205`). §96 had matched RowPanel to it; Round 70 named the bar and RowPanel. | ❓ Does it follow #5? |
+| 15 | #5 | **Tab cannot reach the bar inside a sheet.** In the recipe, prep and event-details sheets the bar is drawn after the sheet, outside its dialog (`RichTextScope.tsx:123–125`), and the sheet's trap wraps Tab at its own last stop. Return and Space work wherever a bar control has focus; with a hardware keyboard in a sheet, Tab never gets there. Read, not measured — no page without sign-in shows a real sheet with a rich field. The sheet's `aria-modal` may keep VoiceOver off it too. | ❓ Should the bar join the sheet's Tab order? A new path. |
+| 16 | `r70c` | **Hover.** With a pen or the trackpad the greyed Trash row takes the hover fill, `--surface-alt`, as the Duplicate row does. RowPanel's greyed rows always have. `r70c` is silent on hover. | ❓ No hover on a disabled row? |
+| 17 | #15 | **"The ingredient box" read as both.** The prep editor's ingredient box has the same label, the same live product search and the same keys as the cocktail's, so it got the same three. | Please confirm. |
+| 18 | #16 | **The swap with the keyboard up.** The sheet sizes to its content, up to 86% of the screen, and stays centred, so the spacer grows it: sideways from 305.7–762.3 to 74.8–993.2, the Find field moving 469.8 → 238.9 — above the keyboard now, where it sat 15.8 under. **Upright, the spacer puts its Close under the keyboard:** 876–924 → 1110–1158 at 1200 × 1468 (the keyboard's top 1012), and 926–974 → 1160–1208 at 1568; the ✕ and Back at the top stay. With ten rows scrolled to the end the Find field scrolls out of sight — it shares the list's scroller. A one-letter search with no keyboard already makes the same jump today. | ❓ Fine, or another shape for the swap while he types? |
+| 19 | #4 | **The Builder's own height below 1024** is still `h-[calc(100dvh-56px)]` (`Builder.tsx:1067`) — the July header's 56. With the foot now on the bar, scrolled to its end the top 6 (inset 0) or 26 (inset 20) of the tab strip sits above the window; before, 6 of the foot sat under the bar. Measured at all eight size-and-inset pairs. | ❓ `62px + inset` here too? |
+| 20 | — | **Readings, please confirm.** (a) The left fade by the same 8 — #7 forces it. (b) Done and the link row's Remove and Done answer Return and Space; Shift+Return acts as Return; ⌘, Ctrl or Alt with Return is left alone; a held key acts once. (c) ⌘Z is off while the list is open and under any sheet; Ctrl+Z is not taken. (d) Restoring from the archive drops an older build's history. (e) The unknown-unit refusal keeps the stop between its two sentences; only the last went. (f) `r70b`'s u-turn glyph (20, `--accent`) is not `icons.tsx`'s (19, `--text-secondary`); built `icons.tsx`, as Undo always was. (g) `r70c` draws the glyph at x 16; the menu's rows are `px-5`, so 20. | Say if any is wrong. |
+
+### 4 · Only his iPad can say — his Session 12
+
+- What iPadOS Safari reports for ⌘⇧Z (`z` or `Z` — both are accepted), and whether it lets the page take
+  ⌘Z with no field focused.
+- The fade's clear end. Chrome draws it as transparent black, which in its premultiplied blending looks
+  the same as `rgba(247,245,241,0)`; WebKit not seen.
+- A pinch-zoom reads as a keyboard in Chrome (zoom 2 at 1068: the visible area 534), so zoomed in, Return
+  would leave a search field even on the Magic Keyboard. Your test, as ruled; Safari not measured.
+- A touch hold on an invoice line: in Chrome, focus goes into the owned panel and straight back out to the
+  overlay under the finger. Safari not measured.
+- The product panel's row panel, now owned, takes focus from the rail's search field while open and hands
+  it back on close. What the on-screen keyboard does in between — his check 12.6 asks him to tell us.
+- Whether a Pencil hover now tints a greyed RowPanel row, with `disabled` gone.
+
+## What I need back
+
+1. **#1–#3** — the three stops: a trash row's Restore below 640, one search per segment, and the
+   4-second line on a phone.
+2. **#4–#8** — Redo's greyed edge, the drawer, and Undo's own empty look.
+3. **#9–#13** — the list: one line or two, the line's colour, the keyboard's words, our labels, and dark.
+4. The rest, in any order. Nothing is blocked on them.
+5. Still with you: rate precision's volume half — promised for this round, with its table of real
+   rates — Round 61's two questions, and the volume sentence (13).
+
+Held for a later round, to keep this one short: the comp's small holds (§101–§105) and Custom Group Lines.
 
 ---
 
