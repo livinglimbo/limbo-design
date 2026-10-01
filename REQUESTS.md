@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `c476989`** — §138–§141's code, built from your Round 71, and their records (§142). ⚠️ **Not pushed while Round 72 is a draft:** `d16852e` is the last app commit you can read — your Round 70's build, its records (§136) and Sean's word on his check 12.1 (§137) — and this line is re-checked before Round 72 goes. *Until 1 Oct this line read `5a6aac7`, pushed, with `d16852e` after it as records only.* ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `139e265`** — the code is `c476989`'s: §138–§141, built from your Round 71, and their records (§142). After it, `4ddfbac` changed only `netlify.toml` and `scripts/ship.mjs`, and `139e265` only `IPAD-CHECKS.md` (Sean's checks 13.1 and 13.2). *Until 1 Oct this line read `5a6aac7`, pushed, with `d16852e` after it as records only; Round 72's draft read `c476989`, before the push.* ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -98,8 +98,8 @@ is left and whose it is, and the rows are back in date order.
 | AJ | ~~**Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode~~ | **28 Sep**, rewritten **29 Sep** | ✅ **ANSWERED — your `ROUND-68.md` and frame `r68a`–`r68e`, in the design bundle. BUILT §109–§116 on `main`, pushed (checked 30 Sep), except the tab strip's cap** — Round 69 §5, §6. Your 🔧 asks #2 and #3 answered in Round 69 §1; #1, the device check, in Round 69 §7 |
 | AK | ~~**Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.**~~ | **29 Sep** | ✅ **ANSWERED — your `ROUND-69.md` and frame `r69a`–`r69c`, in the design bundle. BUILT §118–§124 on `main`, pushed (checked 30 Sep)** — each reviewed, and §125 fixed the invoice numbers' start. Your two asks, what stopped and what the building found are Round 70 |
 | AL | ~~**Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo, retaken on the fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23).~~ | **29 Sep** (drafted), **30 Sep** (his word, §4, §5, the photo; sent) | ✅ **ANSWERED — your `ROUND-70.md` and frame `r70a`–`r70d`, in the design bundle's `ROUND-71/`. BUILT §130–§135 on `main`, pushed (checked 30 Sep)** — each reviewed. Your §6 is Sean's answer too (*"nothing"*, 30 Sep). Three stops, what the building found, and Sean's word on `r70a` are Round 71 |
-| AM | ~~**Round 71 — your Round 70 is built, in six batches (§130–§135); Sean on Return: *"Let's go with Design's recommendation: nothing."*; Sean on `r70a` and `r70b`: *"All 1-6 are good to go."*; ❓ he wants a toast for Undo and Redo; three stops and twenty things back** — ❓ **the toast first (§0): he wants it *"easier to see (to catch attention)"* than the footer's line, and it reverses your Round 66 §5 and Round 70 #22 — please draw it**; ⛔ #19's Restore on a trash row below 640 (hiding the amount is not enough), #14's one search per segment (the picker's reaches recipes off the menu), #22's line on a phone; Redo's greyed edge (frame `#D8D2C8` vs prose `--control-line`) and Undo's own empty look; `r70a`'s one-line rows; our label words; dark at 4.03:1; the bar's Tab inside a sheet; `r70b`'s totals run the wrong way.~~ | **30 Sep** (drafted; his word on 12.1 and the toast; sent) | ✅ **ANSWERED — your `ROUND-71.md` and frame `r71a`–`r71b`, in the design bundle's `ROUND-72/`. BUILT §138–§141 on `main`, not yet pushed** — each reviewed. Your two asks of Sean (the box on his iPad; the rates over his catalogue), three stops and what the building found are Round 72 |
-| AN | 🔴 **Round 72 — your Round 71 is built, in four batches (§138–§141); ⏳ Sean on the box; ⏳ his catalogue through the new rates; twenty things back, five of them stops** — ⛔ the field's words (your Round 70 #14 *`Search 314 products`* vs Round 71 #2 *`Add a product or cocktail`*), the field over Details (its row never drawn without it), the swap's fit below 1024 (a bottom sheet lifted off the edge), ⛔ a card with no rate and the states with no one unit; the box in dark at 1.71:1, the frame's 54 against 49.25, the keyboard at every width, the bars from 600 up, the phone's drawer at full; rates — `Cost per L`, `about` on `each`, a free product's `$0.00`, the narrow card, and where a rate beside a total shows. | **1 Oct** (drafted; not sent) | 🔴 **DRAFT — not sent. Waits on Sean's 13.1 (the box) and 13.2 (the rates page)** |
+| AM | ~~**Round 71 — your Round 70 is built, in six batches (§130–§135); Sean on Return: *"Let's go with Design's recommendation: nothing."*; Sean on `r70a` and `r70b`: *"All 1-6 are good to go."*; ❓ he wants a toast for Undo and Redo; three stops and twenty things back** — ❓ **the toast first (§0): he wants it *"easier to see (to catch attention)"* than the footer's line, and it reverses your Round 66 §5 and Round 70 #22 — please draw it**; ⛔ #19's Restore on a trash row below 640 (hiding the amount is not enough), #14's one search per segment (the picker's reaches recipes off the menu), #22's line on a phone; Redo's greyed edge (frame `#D8D2C8` vs prose `--control-line`) and Undo's own empty look; `r70a`'s one-line rows; our label words; dark at 4.03:1; the bar's Tab inside a sheet; `r70b`'s totals run the wrong way.~~ | **30 Sep** (drafted; his word on 12.1 and the toast; sent) | ✅ **ANSWERED — your `ROUND-71.md` and frame `r71a`–`r71b`, in the design bundle's `ROUND-72/`. BUILT §138–§141 on `main`, pushed (checked 1 Oct)** — each reviewed. Your two asks of Sean (the box on his iPad; the rates over his catalogue), three stops and what the building found are Round 72 |
+| AN | 🔴 **Round 72 — your Round 71 is built, in four batches (§138–§141); Sean on the box: *"not life or death"*; his catalogue: 9 package rates and 2 recipe-row rates would drop; twenty things back, five of them stops** — ⛔ the field's words (your Round 70 #14 *`Search 314 products`* vs Round 71 #2 *`Add a product or cocktail`*), the field over Details (its row never drawn without it), the swap's fit below 1024 (a bottom sheet lifted off the edge), ⛔ a card with no rate and the states with no one unit; the box in dark at 1.71:1, the frame's 54 against 49.25, the keyboard at every width, the bars from 600 up, the phone's drawer at full; rates — `Cost per L`, `about` on `each`, a free product's `$0.00`, the narrow card, and where a rate beside a total shows. | **1 Oct** (drafted; his word on the box and his catalogue's counts; sent) | 🔴 **OPEN** |
 
 ---
 
@@ -153,7 +153,9 @@ has been bitten by.
 | **Check 9.1 — the Builder on his iPad**, six full-frame photos: 660 at x 770–1430 with 170 of desk each side; the on-screen keyboard 566 sideways, 456 upright | **Round 69 §7** | `b1a55bd` | ✅ Yes |
 | **Sean on 720 — *"720 looks fine for now"*; check 10.1's photo, the Undo list open at 720, clean; Session 11 passed** | **Round 70 §1, §4** | `7eea775` | ✅ Yes |
 | **Check 12.1 — Sean on `r70a` and `r70b`: *"All 1-6 are good to go."*** The six steps he was given for 12.1; your question not answered in its own words. **And his ask: a toast for Undo and Redo, instead of the footer's line alone** | **Round 71 §0, §1** | `5a6aac7` | ✅ Yes |
-| **Your Round 71 §5 table, worked by hand against its own rule — no row contradicts it**; and `r70b`'s corrected totals read in the frame ($2,451.02, $2,411.03) | **Round 72 §1** | `c476989` | ✅ Yes |
+| **Your Round 71 §5 table, worked by hand against its own rule — no row contradicts it**; and `r70b`'s corrected totals read in the frame ($2,451.02, $2,411.03) | **Round 72 §1**, and its opening for `r70b` | `c476989` | ✅ Yes |
+| **Check 13.1 — Sean on the box: *"In dark mode, the box is a bit dark, but it's not life or death for me."*** His whole answer. It speaks to dark only; your question was not answered in its own words | **Round 72 §0** | `139e265` | ✅ Yes |
+| **Check 13.2 — his catalogue through your Round 71 §5, by `/debug/rates`:** 298 products; 0 cards under $0.01; 1 card at $0.00 (a free water); 9 whole-package rates and 2 of 31 recipe-row rates that would drop; 22 with no rate. Counts only — his products' names and prices stay with implementation | **Round 72 §1** | `c476989`'s code, his catalogue on 1 Oct | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -170,36 +172,40 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ---
 
-## 🔴 ROUND 72 — your Round 71 is built, in four batches; ⏳ Sean on the box; ⏳ his catalogue through the new rates; twenty things back, five of them stops
+## 🔴 ROUND 72 — your Round 71 is built, in four batches; Sean on the box: *"not life or death"*; his catalogue through the new rates: 9 package rates and 2 recipe-row rates would drop; twenty things back, five of them stops
 
 
-**implementation → Design, 1 Oct 2026. Branch `main`, app at `c476989`** — §138–§141's code, built from
-your Round 71, each with its review, and their records (§142). Design repo at the commit that carries this
-round. Every `file:line` below is at `c476989`.
+**implementation → Design, 1 Oct 2026. Branch `main`, app at `139e265`** — the code is `c476989`'s:
+§138–§141, built from your Round 71, each with its review, and their records (§142). After it, `4ddfbac`
+changed only `netlify.toml` and `scripts/ship.mjs`, and `139e265` only `IPAD-CHECKS.md`. Design repo at the
+commit that carries this round. Every `file:line` below is at `c476989`, and the same at `139e265`.
 
-> ⚠️ **DRAFT — not sent.** It goes once Sean has answered your *"What I need back"* #1 on his iPad (his
-> check 13.1, a ⏳ slot in §0) and sent the rates page whole (#2, his check 13.2, a ⏳ slot in §1) — and
-> once the app is pushed: `d16852e` is the last app commit you can read, and the sha above is re-checked
-> before this round goes.
 
 Your reply is `ROUND-71.md` and frame `r71a`–`r71b`, in the bundle's `ROUND-72/`. Each batch opened the
-frame and measured your numbers before building from them; each was then reviewed by a second pass that
-re-ran its fault injections, tried the variants it had not, and re-took its measurements. Headless Chrome
-with the app's built CSS and Spectral loaded, touch emulated wherever a gesture is the subject. **Safari
-was not run** — this Mac cannot drive it — so every piece below owes a look on his iPad: his Session 13.
-`r70b`, corrected in place in your bundle, now draws $2,451.02 after *undo to* and $2,411.03 after one
-Redo (read in the frame) — what the real modules give.
+frame — it draws the box alone, so the rest is your prose and your table — and checked your numbers before
+building from them; each was then reviewed by a second pass that re-ran its fault injections, tried the
+variants it had not, and re-took its measurements. Headless Chrome with the app's built CSS and Spectral
+loaded, touch emulated wherever a gesture is the subject. **Safari was not run** — this Mac cannot drive
+it — so every piece below owes a look on his iPad: his Session 13, of which 13.1 and 13.2 are done (§0,
+§1) and the rest are not. `r70b`, corrected in place in your bundle, now draws $2,451.02 after *undo to*
+and $2,411.03 after one Redo (read in the frame) — what the real modules give.
 
-### 0 · ⏳ Sean on the box — your ask #1
+### 0 · Sean on the box — your ask #1
 
-⏳ **Sean, on his iPad (check 13.1):** *[his words, verbatim, when they come]*
+✅ **Sean, 1 Oct, his check 13.1:** *"In dark mode, the box is a bit dark, but it's not life or death for me."*
 
-Put to him as your question, in its own words: *"does it catch your eye without covering anything you
-need?"* — after undoing two adds, an Undo then a Redo, a tap on the box, and the same upright. Because he
-uses dark, he is also asked whether it still stands out there (§3 #4).
+That is his whole answer, and it speaks to dark only. He did not say whether the box catches his eye, or
+whether it covers anything he needs, in either theme — your question in its own words is still unanswered.
+Dark is your call (§3 #4).
 
-**What 13.1 should show — Chrome, `/style/sheetcheck`** (the real footer, UndoStack and toast holder), by
-touch, *undo to* the third row, at this head:
+What he was given, as 13.1: in Safari, sideways, on a copy — add two products; Undo once, and wait five
+seconds; Undo again and Redo straight away; Undo once more and tap the box; then the single Undo again
+upright, and again in Dark if he uses it. Then your question, in its own words — *"does it catch your eye without
+covering anything you need?"* — and *"if you use Dark: does it still stand out there?"*
+
+**Where the box sits — Chrome at `c476989`, `/style/sheetcheck`** (the real footer, Undo list and box), by
+touch, on `r70a`'s path — tap Undo, then hold it and lift on the third row — so its words are `r71b`'s, not
+the ones his 13.1 steps give:
 
 | | 1600 × 1068 | 1200 × 1468 | `r71a` |
 |---|---|---|---|
@@ -210,7 +216,7 @@ touch, *undo to* the third row, at this head:
 | Undo · Redo · ⋮ | clear | clear | clear |
 | Closed | by 4.6 s, hidden | the same | 4.5 s |
 
-### 1 · ⏳ His catalogue through the new rates — your ask #2
+### 1 · His catalogue through the new rates — your ask #2
 
 Implementation cannot read his library, so the rules run where his sign-in can: **`/debug/rates`**
 (`debug/rates/page.tsx`, `report.ts`, `RatesView.tsx`), owner-only by the `/debug` layout, one read of three
@@ -220,9 +226,22 @@ cards that print `under $0.01`; cards that print `$0.00` (§3 #12); every produc
 would drop, by recipe; and products with no rate at all. The page's words are ours. `check-rate` runs the
 report against a stand-in client and asserts its exact reads, the failed-read path and the no-user path.
 
-⏳ **What it found in his catalogue (check 13.2):** *[the five counts, and every dropped row, from his
-Full Page screenshot in Safari]* — the screenshot itself shows his products and what he pays, so it stays
-with implementation; the rows come here.
+✅ **What it found in his catalogue (check 13.2), 1 Oct** — read off his screenshot of the whole page. You
+asked for every row whose rate is dropped; they come here as counts and arithmetic, without his products'
+names or the rest of his prices — the screenshot shows what he buys and what he pays, so it stays with
+implementation, as his check promised him.
+
+| | Found |
+|---|---|
+| His products | **298** — 172 priced by volume, 10 by weight, 94 per item, and 22 the app cannot cost (the last row) |
+| A card that prints `under $0.01` | **0**, of 182 rates by volume or weight |
+| A card that prints `$0.00` | **1** — a filtered water, free to him (1 L at $0.00); its card reads `about $0.00/fl oz` (§3 #12) |
+| Beside the whole package, rate would drop | **9.** Eight are priced, and no rate of three places or fewer rebuilds the package price — e.g. 16 fl oz at $11.99, where `$0.75/fl oz` gives $12.00 and `$0.749/fl oz` gives $11.98; 144 fl oz at $11.49, where `$0.08` and `$0.080` both give $11.52. The ninth is the free water: its rate is zero at two places and at three. |
+| Beside a recipe row, rate would drop | **2**, of 31 rows checked — cocktail and prep rows linked to a product at a measure; 3 more, in a counted unit, were not judged. Both are 0.75 fl oz at $1.03, where `$1.38/fl oz` and `$1.380/fl oz` both give $1.04 |
+| No rate on the card at all | **22** — every one `No package quantity`. Not Round 71's; listed so nothing goes missing. By the code, each of these cards reads `Per ounce` over that reason (§3 #9) |
+
+The page's own note: *"Nothing on screen puts a rate beside a recipe row's total yet, so the two lists under it say what would be
+dropped if something did."*
 
 **Your table, worked by hand against its own rule first — no row contradicts it.** 1 fl oz = 29.5735 ml,
 so 750 ml = 25.3605 fl oz:
@@ -249,59 +268,63 @@ now rounds up (`money.ts`, `rateMoney`).
 | **§0.1–§0.9** the box, `r71a`–`r71b` | §138 | `d4ef7ab` (`d005d3a`) | `SheetToast.tsx`, its store `lib/data/sheetToast.ts`. Centred on the sheet, foot 16 above the footer; 288–448 wide and never wider than the sheet less 48 (`SheetToast.tsx:79`, `:81`, `placeToast` `:124`). 4.5 s from the last message (`sheetToast.ts:42`); a second replaces the words in place and restarts it; never stacks. A tap closes it and is spent (§128's `spendPress`); holding Undo hides it at once, with no fade. Words left, 17 semibold, truncating; the money right, never truncating, the Undo list's own figure — reversed for an undo, the row's own for a Redo; none when it rounds to $0.00. No action. `undoNote.ts`, its timer, `useUndoNote` and the footer's live region deleted; `bottom-[128px]` gone. Below 600: the window less 16 each side, foot 16 above the topmost of the footer, the drawer's bar and the select bar, each wearing `data-toast-floor` — **the Builder has no undo strip**; your list's fourth is the Library's. The keyboard rule at every width (§3 #6). `--accent-surface` / `--accent-surface-fg`, radius 12, padding 14 / 16, gap 16, `--shadow-toast` `0 6px 20px rgba(25,23,19,0.24)`; rises 8 and fades in over 180 ms, a 180 ms fade out that does not sink, reduced motion fades only. The polite `role="status"` holder stays mounted; its words are keyed per message. The eight other messages moved in with their words; the calculator's is `6 lines updated` · `+$412.88`. Locked says nothing; a comp says nothing; undoing it, `Undid Comped Ice, 20 lb bag` · `+$40.00`. New check, `check-toast`. **The review found** two of `check-undo`'s runs passing without what they named: an undo-to's money read one step too far went green because the step behind it never had money, and *"locked says nothing"* held with no lock, because Complete had emptied the history. Both now go red. |
 | **§1 #1** cut the name | §140 | `2710e4e` (`361c6a3`) | `max-sm:min-w-0` on the Deleted view's row button only (`HistoryRow.tsx`). Restore 17 inside on all four fixtures at 390, 430, 600 and 639; from 640 the row is unchanged. See §3 #15. |
 | **§1 #2** the top field takes over | §140 | same | In Cocktails the rail's field searches every recipe, with the picker's list switch and sentence verbatim — `All recipes — 1 match`, `Searching every recipe. Clear the search to go back to the menu.` Its text survives Products → Details → Cocktails. The picker's search, and its clearing, are gone. Two halves stopped: §3 #1, #2. |
-| **§2 #4, #5, #7** greyed | §139 | `2040871` (`e71b945`) | One greyed class, `GREYED` (`RedoButton.tsx`): 1px `--border`, `--text-faint` glyph, `aria-disabled`, no `disabled` attribute, tabIndex 0. Undo wears exactly it with nothing to undo, in the footer and the drawer; a tap does nothing and the drawer's still stops its click. On a fresh invoice the pair's computed styles differ only in Undo's `touch-action` and `user-select`, the hold's guard. In the drawer the live Undo and the greyed Redo share the edge; the glyph tells them apart. **The review found** *"still a tab stop"* asserted on one button of three; now on all three, rendered. |
-| **§2 #6, #8** | §139 | same | The drawer keeps its greyed pair when locked (rendered); 320 left alone. |
+| **§2 #4, #5, #7** greyed | §139 | `2040871` (`e71b945`) | One greyed class, `GREYED` (`RedoButton.tsx`): 1px `--border`, `--text-faint` glyph, `aria-disabled`, no `disabled` attribute, tabIndex 0. Undo wears exactly it with nothing to undo, in the footer and the drawer; a tap does nothing and the drawer's still stops its click. On a fresh invoice the pair's computed styles differ only in Undo's `touch-action` and `user-select`, the hold's guard. In the drawer the live Undo and the greyed Redo share the edge; the glyph tells them apart. **The review found** *"still a tab stop"* asserted on one button of three; now on all three. |
+| **§2 #6, #8** | §139 | same | The drawer keeps its greyed pair when locked, as built; 320 left alone. |
 | **§3 #9–#13** the list | §139 | same | 7C's anatomy stays and is now asserted — the review found *rows 61* and *50 steps kept* said to be asserted and not. Once the arrows move the mark: `Return to undo. Escape to cancel.` (`UndoStack.tsx:131`); whatever set the mark last names the line, so a finger after the keys gets the finger's words. Both calculator labels `Applied the calculator` (`applyCalculation.ts`), the size on the second line; saved histories keep their old labels until they age out (asserted on a stand-in storage). Under both tints the second line is `--text-secondary`: light 8.33 / 7.24, dark 9.19 / 7.04 (was 5.80 / 5.04 and 5.27 / 4.03). |
 | **§4 #14** | §140 | `2710e4e` (`361c6a3`) | `ManagedList`'s ↑ and ↓: `aria-disabled` alone, tabIndex 0, 44 × 44; a tap, Return and Space leave the order. |
 | **§4 #15** | §140 | same | The bar is drawn inside the sheet's dialog, between the fields and the footer (`richtext/sheetBar.ts`, `RichTextScope.tsx`), so the trap and `aria-modal` include it. As the dialog's last child, Tab from Notes reached the footer's Done and the bar closed (measured); here Tab from Notes lands on Bold, as outside a sheet. See §3 #16. |
 | **§4 #16** | §140 | same | No disabled row takes a hover tint under a pen or mouse — fixed once in `HoverRow.tsx`, so it covers the locked Trash row, RowPanel's greyed moves and the stage map's unreachable stages. Five spellings of disabled asserted. |
 | **§4 #17, #20** | — | — | Confirmed; nothing to build. |
-| **§4 #18** | §140 | same | From 1024 up, with the on-screen keyboard up, the swap's sheet runs from 16 below the visible area's top to 16 above the keyboard; Find and Close fixed, the list scrolls between (`useKeyboardInset.ts`, `Sheet.tsx`). 1600 × 1068 (keyboard top 502): 16–486, Find 180.09–228.09, Close 426–474; scrolled to the end Find and Close move 0. 1200 × 1468: 16–996, Close 936–984 (was 1110–1158, under the keyboard). Panned 100: 116–586. **The review found the fit keyed on any short visible area** — your Round 70 §6 test is *more than 150 short*, chosen so the Magic Keyboard's shortcut strip does not count, and the swap's Find focuses itself on open, so with a 70px stand-in for the strip every swap filled the screen (331.7–736.3 → 16–982). Now past 150 only. Below 1024: §3 #3. |
+| **§4 #18** | §140 | same | From 1024 up, with the on-screen keyboard up, the swap's sheet runs from 16 below the visible area's top to 16 above the keyboard; Find and Close fixed, the list scrolls between (`useKeyboardInset.ts`, `Sheet.tsx`). 1600 × 1068 (keyboard top 502): 16–486, Find 180.09–228.09, Close 426–474; scrolled to the end Find and Close move 0. 1200 × 1468: 16–996, Close 936–984 (was 1110–1158, under the keyboard). Panned 100: 116–586. **The review found the fit keyed on any short visible area** — your Round 70 §6 test is *more than 150 short*, chosen so the Magic Keyboard's shortcut strip does not count, and the swap's Find focuses itself on open, so with a 70px stand-in for the strip every swap filled the screen (331.7–736.3 → 16–982) — what he would see, if the strip shortens Safari's view at all (§4). Now past 150 only. Below 1024: §3 #3. |
 | **§4 #19** | §140 | same | `h-[calc(100dvh-62px-env(safe-area-inset-bottom))]`, the one window height below 1024: the tab strip at 0 and the foot on the bar at 390, 430, 600, 834 and 1023, inset 0 and 20. |
-| **§5 rules 1, 3, 4, 5** | §141 | `b823800` (`a6b6b72`) | One function spells every card rate (`aboutRate`, `costing.ts:474`), so the card, the library row, the Builder's row panel, the editor's live figure and a recipe row all read `about $0.99/fl oz`; `under $0.01/fl oz` under half a cent. The card's label `Per fluid ounce` (`ProductCard.tsx`). `about $7.99/kg` unchanged. The panel's label `Cost per fl oz` / `Cost per kg` (`panelCostLabel`, `costing.ts:521`); `Cost per ounce` gone, asserted with comments stripped. `check-rate` rewritten around your three lines and the table (§1). Measured: every rate one line on the card and the library row at 390, 1200 and 1600; the panel at 1200 and 1600 (420 wide), each value one line; at 390 the pack's value wraps and its row goes 52 → 60. Four stops: §3 #9–#12. **The review found** a comment calling the pack's unhedged `$0.96 each` yours (§3 #13), `check-rate`'s `about` line asking less than your rule 5, and `money.ts` saying the costing code never rounds — it rounds its rebuild to the cent. |
-| **§5 rule 2** | §141 | same | `rateBesideTotal` (`costing.ts:586`): ml per L, g per kg, fl oz per fl oz, any other unit per itself; two places, then three, the printed digits times the quantity half-up to the cent must print what `money()` prints, or the total stands alone; never a `$0.00` rate; a counted row has none. **No product surface prints a rate beside a total** (§115's finding, still true — the one exception is the prep card's cost-per line), so it runs in `check-rate` and on `/debug/rates` only. See §3 #14. |
+| **§5 rules 1, 3, 4, 5** | §141 | `b823800` (`a6b6b72`) | One function spells every card rate (`aboutRate`, `costing.ts:474`), so the card, the library row, the Builder's row panel, the editor's live figure and a recipe row all read `about $0.99/fl oz`; `under $0.01/fl oz` under half a cent. The card's label `Per fluid ounce` (`ProductCard.tsx`). `about $7.99/kg` unchanged. The panel's label `Cost per fl oz` / `Cost per kg` (`panelCostLabel`, `costing.ts:521`); `Cost per ounce` gone, asserted with comments stripped. `check-rate` rewritten around your three lines and the table (§1). Measured: every rate one line on the card at 390 and 1200 and on the library row at 390, 1200 and 1600; the panel at 1200 and 1600 (420 wide), each value one line; at 390 the pack's value wraps and its row goes 52 → 60. What stopped or was found: §3 #9–#13 and #20 (c), (d). **The review found** a comment calling the pack's unhedged `$0.96 each` yours (§3 #11), `check-rate`'s `about` line asking less than your rule 5, and `money.ts` saying the costing code never rounds — it rounds its rebuild to the cent. |
+| **§5 rule 2** | §141 | same | `rateBesideTotal` (`costing.ts:586`): ml per L, g per kg, fl oz per fl oz, any other unit per itself; two places, then three, the printed digits times the quantity half-up to the cent must print what `money()` prints, or the total stands alone; never a `$0.00` rate; a counted row has none. **No product's rate is printed beside a total anywhere** — the one rate beside a total is a prep's, on the prep card's cost-per line (§115's finding, still true) — so it runs in `check-rate` and on `/debug/rates` only. See §3 #14. |
 
 Checks: **61** — §138 added `check-toast`; every other new assertion went into an existing check, every one
-fault-injected, every comment-only spelling tried. The batches injected 220 faults; each review re-ran its
+fault-injected by its batch or its review, and comment-only spellings tried. The batches injected 220 faults; each review re-ran its
 batch's and added its own, and **all four reviews found something**: twice a check passing without what it
-named (§138, §139), once the written record (§141), and once the screen — the swap filling it under the
-Magic Keyboard's strip (§140). The comp's worked example is unchanged — $99.96 billed, $40.00 comped,
-$105.96 at 6%. Both automatic jobs are still switched off.
+named (§138, §139), once the written record (§141), and once the screen — the swap would fill it under the
+Magic Keyboard's shortcut strip, if that strip shortens Safari's view (§140, measured with a stand-in). The comp's worked example is unchanged — $99.96 billed, $40.00 comped,
+$105.96 at 6%. Both automatic jobs — the trash's 30-day delete and auto-archive — are still switched off.
 
 ### 3 · Stopped, and found — yours
 
 | # | Ruling | What | Question |
 |---|---|---|---|
 | 1 | §1 #2 | ⛔ **Stopped. The field's words — two rulings.** Your Round 70 #14: *"`Search 314 products` in Products and `Search 42 cocktails` in Cocktails."* Your Round 71 #2: *"The rail keeps reading `Add a product or cocktail`."* Neither withdraws the other; Round 70's strings were never built (§134 stopped #14 whole). It reads `Add a product or cocktail` (`SourceRail.tsx:380`). | ❓ Which — and if Round 70's, does Cocktails count every recipe (42), now that the field searches them all? |
-| 2 | §1 #2 | ⛔ **Stopped. *"Over Details, the field is not shown"* — its row has never been drawn without it.** The field shares its row with the panel's collapse chevron. Measured both ways at 1600: hidden in place, the row stays 64 with the chevron alone at 304–348; removed, the row is 60, the tabs rise 4 and the chevron jumps to 12–56; below 1024 the row is 16 and the tabs rise 48. The field still shows over Details. | ❓ Which, or a frame of that row? |
+| 2 | §1 #2 | ⛔ **Stopped. *"Over Details, the field is not shown"* — its row has never been drawn without it.** The field shares its row with the panel's collapse chevron. Measured both ways from 1024 up: hidden in place, the row stays 64 with the chevron alone at 304–348; removed, the row is 60, the tabs rise 4 and the chevron jumps to 12–56; below 1024 the row is 16 and the tabs rise 48. The field still shows over Details. | ❓ Which, or a frame of that row? |
 | 3 | §4 #18 | ⛔ **Stopped below 1024.** There the swap is a sheet from the bottom edge with only its top corners rounded; with its foot 16 above the keyboard, its square bottom corners would float over the scrim. Not drawn. Below 1024 keeps §134's spacer (834 × 1194: sheet 359.41–1194, spacer 400). | ❓ Fit it there too — and what are its bottom corners? |
-| 4 | §0 look | **In dark, the box is 1.71:1 against the sheet.** *"The Library strip's fill"* holds in light only: the strip is `bg-accent` (`SelectionBar.tsx:264`), which lifts to `#7FA894` in dark, while `--accent-surface` stays `#24463A` (`globals.css:217`). The box on the sheet `#1A1712`: 1.71:1 (light, 9.50:1); its text on it 8.92:1; the strip on the sheet 6.75:1. Built with your named tokens. **He uses dark.** | ❓ Keep `--accent-surface` in dark, or `--accent` / `--accent-fg` as the strip does? |
+| 4 | §0 look | **In dark, the box is 1.71:1 against the sheet.** *"The Library strip's fill"* holds in light only: the strip is `bg-accent` (`SelectionBar.tsx:264`), which lifts to `#7FA894` in dark, while `--accent-surface` stays `#24463A` (`globals.css:217`). The box on the sheet `#1A1712`: 1.71:1 (light, 9.50:1); its text on it 8.92:1; the strip on the sheet 6.75:1. Built with your named tokens. **He uses dark**, and has now looked there (§0). | ❓ Keep `--accent-surface` in dark, or `--accent` / `--accent-fg` as the strip does? |
 | 5 | §0 look | **Height: the frame's box is 54, built 49.25.** `r71a` sets no line-height on the box's spans, so they take Spectral's normal; built at the app's `text-sm` (17 / 1.25), which the same frame writes on its 17px rows. Widths identical in the same Chrome: 288, 305.31, 326.89, 448, 358; the foot the same. | ❓ 49.25 fine? |
 | 6 | §0.6 | **The keyboard sentence is built at every width.** It sits under *"Below 1024"*; without it, at his 1600 × 1068 the box would sit under his 566 keyboard (foot 968, the keyboard's top 502). Measured with it: 1600 × 1068 with 566 up, foot 486; 1200 × 1468 with his 456, foot 996 (top 1012); 100 short is not a keyboard (your 150), so the foot stays put. | Please confirm. |
 | 7 | §0.1, §0.6 | **From 600 up the bars are not floors, as ruled — so the box lies across them.** In the Builder's select mode at 1600 × 1068 the box is 918.75–968 and the select bar 908–984: the bar's count, money and Remove sit under it; the same at 1200 and 900. In a 600–1023 window with the drawer raised, it floats over the drawer's list (900 × 1200 at half: box 838.75–888, the drawer's top 668). | ❓ The topmost-bar rule at every width? |
 | 8 | §0.6 | **With the phone's drawer at full, the topmost-bar rule puts the box at the top of the screen**, over the top bar: 390 × 844, y −0.25 to 49 (the drawer's top 65); 430, foot 62. | ❓ Where, then — or no box while the drawer is full? |
-| 9 | §5 rule 1 | ⛔ **Stopped. A card with no rate still reads `Per ounce`** over its reason (`No price set`; `ProductCard.tsx:158`). Rule 1 names a card that has a volume rate; this card may be a weight with no price. | ❓ Its label? |
+| 9 | §5 rule 1 | ⛔ **Stopped. A card with no rate still reads `Per ounce`** over its reason (`No price set`; `ProductCard.tsx:158`). Rule 1 names a card that has a volume rate; this card may be a weight with no price. In his catalogue it is 22 cards, every one over `No package quantity` (§1). | ❓ Its label? |
 | 10 | §5 rules 1, 4 | ⛔ **Stopped. Four states have no one unit to name, and read `Cost`.** The panel: a pack (per fl oz *and* each), a product priced per item, one with no cost yet — `Cost per ounce` is ruled out and each of your three labels names one unit, so they read `Cost`, the card's existing word over a pack's two rates. The card: a pack keeps `Cost` over `about $0.08/fl oz · $0.96 each`, though rule 1 says every volume card is labelled `Per fluid ounce`. **And `Cost per L` cannot arise:** the panel's rate has no total beside it, so it is a card rate, and rule 1 puts every volume card rate per fluid ounce. | ❓ The words for each; and was `Cost per L` meant for something rule 1 leaves? |
 | 11 | §5 rule 5 | **Does `about` reach a per-item figure?** `$0.96 each` on a pack and `$0.40 each` on a product priced per item. Rule 5 (*"every card rate carries `about`"*) and your `CHECKS.md` #2 read as yes; §115 and every per-item card say no. Unchanged and pinned, so a change has to come from you. A comment of ours said you had approved the unhedged `each`; you had not — corrected. | ❓ |
-| 12 | §5 rule 5 | **A free product prints `about $0.00/fl oz`** ($0 ÷ 25.3605 = 0). *"No rate prints `$0.00`"* meets `money.ts`'s settled *"a true zero is a fact"* and Sean's *"zero is a price"*. The check holds the ban for positive rates only; beside a total a zero rate is never printed, the total alone. ⏳ How many of his cards it is: §1. | ❓ `about $0.00`, `free`, or no rate? |
+| 12 | §5 rule 5 | **A free product prints `about $0.00/fl oz`** ($0 ÷ 25.3605 = 0). *"No rate prints `$0.00`"* meets `money.ts`'s settled *"a true zero is a fact"* and Sean's *"zero is a price"*. The check holds the ban for positive rates only; beside a total a zero rate is never printed, the total alone. How many of his cards it is: one, a free filtered water (§1). | ❓ `about $0.00`, `free`, or no rate? |
 | 13 | §5 rule 1 | **On a narrow recipe card the longer rate is cut off.** `about $X/fl oz` is 9 characters longer than `$X/oz`. `/style/swapcheck` at 390 (name column 279): `← Tanqueray London Dry · about $1.10/fl oz` needs 293 and is cut after `about $1.10/fl`; `$1.10/oz` fit. Not only swapped rows: a linked row whose product's name differs from the recipe's word — 346 card, `Tanqueray London Dry · about $0.99/fl oz` needs 273 in 235; 390 card, `Agave Nectar, Light, Organic · about $0.41/fl oz` 313 in 267. Whole at 632, his card at full screen. | ❓ Which gives way first — the name or the rate? |
-| 14 | §5 rule 2 | **Where does a rate beside a total show?** Built and checked; no product surface prints one (§2). Your Round 48 §3 names *"a costed row, a working sentence, an invoice line"*. | ❓ Which, and drawn where? |
+| 14 | §5 rule 2 | **Where does a rate beside a total show?** Built and checked; no screen prints a product's (§2). Your Round 48 §3 names *"a costed row, a working sentence, an invoice line"*. | ❓ Which, and drawn where? |
 | 15 | §1 #1 | **The premise: *"the card shows the name in full"* is not true at 390.** The client's name appears once on the trash card, in its heading (232.61 wide), which cuts `Harlow & Finch wedding` (271) and `Castellano anniversary` (247). At 430 (272.61) all four fit. The card is unchanged. | ❓ Fine as is? |
 | 16 | §4 #15 | **Escape (§94) moved with the bar.** Escape from the last rich field in a sheet now lands on Bold and the bar stays up; before, it landed on Done and the bar closed. | Please confirm. |
 | 17 | §0.3, #12 | **Undoing the calculator says `Undid Applied the calculator`**, and redoing it `Redid Applied the calculator` — #12's label inside §0.3's *"the line's words"*. Both rulings followed literally; no ruling decides the combined words. | ❓ |
 | 18 | §0.3 | **The money is before tax.** At 6%, *undo to* the third row shows `+$41.02` while the footer's taxed total moves $43.48 (41.02 × 1.06 = 43.4812 — computed, not measured). A tax-rate step has no figure, so undoing it shows no money though the total moved. | ❓ Fine — it is the list's column, as ruled? |
-| 19 | §2 #4, 7C | **Three found, not built.** (a) In dark the greyed edge is 1.26:1 against its fill (light 1.47); the glyph 4.34 (light 3.29) — your token, ruled; he uses dark. (b) 7C draws its newest row semibold on a `#F8F5EC` fill; no build has drawn that. (c) 7C draws every money figure in one colour; since 1 Aug the list sets a negative amount at rest in `--danger`. | ❓ Each. |
+| 19 | §2 #4, 7C | **Three found, not built.** (a) In dark the greyed edge is 1.26:1 against its fill (light 1.47); the glyph 4.34 (light 3.29) — your token, ruled; he uses dark. (b) 7C draws its newest row semibold on a `#F8F5EC` fill; no build since 1 Aug has drawn it. (c) 7C draws every money figure in one colour; since 1 Aug the list sets a negative amount at rest in `--danger`. | ❓ Each. |
 | 20 | — | **Readings, please confirm.** (a) One box per Builder, not per invoice, because the eight messages already cross tabs — so a tab switched to within 4.5 s still shows the last message. (b) With no invoice open (only `Couldn't open X` can be said then), the window's centre and foot stand in for the sheet and footer. (c) Prep rates still read `$0.07/oz` beside products' `about $X/fl oz`, and the editor's `Cost per oz override` label is unchanged — your §5 rules products. (d) The shared spelling takes `under $0.01` to the weight half too (`under $0.01/kg`, was `about < $0.01/kg`); it needs a kilogram under half a cent, so he will not meet it. | Say if any is wrong. |
 
 ### 4 · Only his iPad can say
 
-- **The box (13.1)** — your question; and how it reads in dark (#4).
-- **The rates page (13.2)** — §1.
+- ✅ **The box (13.1)** and ✅ **the rates page (13.2)** — done 1 Oct, §0 and §1. His word on the box speaks to dark
+  only; whether it catches his eye without covering anything was not answered in those words.
+- **The live site is updating again since 1 Oct**; since `4ddfbac` it builds only when the app's own files change,
+  not for notes alone. §138–§141 are on it (its `/style/sheetcheck` carries the box, read 1 Oct), so his checks
+  can run on the live site again.
 - Whether the Magic Keyboard's shortcut strip shortens Safari's visible area at all. If it does not, the
   §140 review's fix changes nothing he sees; if it does by more than 150, every swap fills the screen
   (13.9).
 - The swap with the on-screen keyboard, both ways up (12.3, corrected); Tab and Escape in Event details'
-  Notes (13.6); whether Safari's Tab reaches a greyed Undo (13.3), and VoiceOver says *dimmed* for both.
+  Notes (13.6); whether Safari's Tab reaches a greyed Undo (13.3); whether VoiceOver says *dimmed* for both (in no
+  check yet).
 - The keys' words in the list, and the second line under the gold in dark (13.4).
 - The Cocktails search (13.5); the fluid-ounce rates on his own cards (13.7); a Pencil over a greyed row
   (13.8).
@@ -311,8 +334,8 @@ $105.96 at 6%. Both automatic jobs are still switched off.
 1. **#1–#3, #9, #10** — the five stops: the field's words, the field over Details, the swap below 1024, a
    card with no rate, and the states with no one unit.
 2. **#4–#8** — the box: dark, its height, the keyboard at every width, the bars from 600 up, the drawer at
-   full. ⏳ With Sean's word from §0.
-3. **#11–#14** — rates: `about` on `each`, a free product (⏳ with his count from §1), the narrow card, and
+   full. With Sean's word from §0: *"In dark mode, the box is a bit dark, but it's not life or death for me."*
+3. **#11–#14** — rates: `about` on `each`, a free product (his count from §1: one), the narrow card, and
    where a rate beside a total shows.
 4. The rest, in any order. Nothing is blocked on them.
 5. Still with you: Round 61's two questions (row AC) and the volume sentence (AD).
