@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `5a6aac7`** — §130–§135's code, built from your Round 70, and their records (§136). ⚠️ **Not pushed while Round 71 is a draft:** `7eea775` is the last app commit you can read — your Round 69's build, §127–§128 and 30 Sep's device checks — and this line is re-checked before Round 71 goes. ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `5a6aac7`** — §130–§135's code, built from your Round 70, and their records (§136); pushed, so you can read it. `d16852e` (§137), after it, is records only: Sean's word on his check 12.1, in `IPAD-CHECKS.md`. *Re-checked 30 Sep, night, as Round 71 went — until then this line said `7eea775` was the last app commit you could read.* ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -93,12 +93,12 @@ is left and whose it is, and the rows are back in date order.
 | AE | ~~**Round 63 — §1a and §4 BUILT.** ⚠️ **Three of your premises are wrong and two of them change the build**: `inert` is not reachable, and Escape does not stop propagating~~ | **22 Sep** | ✅ **ANSWERED — your Round 63, all four. BUILT the same day** — §93–§96 `4cc1b6e`. ⚠️ Never reported until Round 67 §B1. Shift+F10 is Sean's measurement (device check 3.5) |
 | AF | ~~**Round 64 — the hide control is being REPLACED by a comp, and this one is money**~~ | **23 Sep** | ✅ **ANSWERED — `r64a`–`r64e`.** Sean took ⭐ on all four money calls. Shape A. ✅ **The tag IS drawn in `r64a` — an earlier line here said otherwise and was wrong (see the Round 66 correction)** |
 | AG | ~~**Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE**~~ | **24 Sep** | ✅ **ANSWERED — `r65a`–`r65b`.** No un-comp at Complete; reopen, change, complete again. §1 and §2 taken |
-| AH | ~~**Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED~~ | **24 Sep** | ✅ **ANSWERED — your `ROUND-66.md` and frame `r66a`–`r66b`, in the design bundle (not this repo).** The tag redrawn, §3–§9 ruled, 41 glyphs taken. BUILT §99–§105 on `main`, not yet pushed |
-| AI | ~~**Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep~~ | **27 Sep** | ✅ **ANSWERED — your `ROUND-67.md` and frame `r67a`–`r67e`, in the design bundle.** §A BUILT §99–§105, not yet pushed; C1, C2, C3a, C4, C7 and D1–D3 ruled, not built; C3b waits for its own round; C5, C6 and D4 are Round 68's |
-| AJ | ~~**Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode~~ | **28 Sep**, rewritten **29 Sep** | ✅ **ANSWERED — your `ROUND-68.md` and frame `r68a`–`r68e`, in the design bundle. BUILT §109–§116 on `main`, not yet pushed, except the tab strip's cap** — Round 69 §5, §6. Your 🔧 asks #2 and #3 answered in Round 69 §1; #1, the device check, in Round 69 §7 |
-| AK | ~~**Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.**~~ | **29 Sep** | ✅ **ANSWERED — your `ROUND-69.md` and frame `r69a`–`r69c`, in the design bundle. BUILT §118–§124 on `main`, not yet pushed** — each reviewed, and §125 fixed the invoice numbers' start. Your two asks, what stopped and what the building found are Round 70 |
-| AL | ~~**Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo, retaken on the fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23).~~ | **29 Sep** (drafted), **30 Sep** (his word, §4, §5, the photo; sent) | ✅ **ANSWERED — your `ROUND-70.md` and frame `r70a`–`r70d`, in the design bundle's `ROUND-71/`. BUILT §130–§135 on `main`, not yet pushed** — each reviewed. Your §6 is Sean's answer too (*"nothing"*, 30 Sep). Three stops, what the building found, and Sean's word on `r70a` are Round 71 |
-| AM | 🔴 **Round 71 — your Round 70 is built, in six batches (§130–§135); Sean on Return: *"Let's go with Design's recommendation: nothing."*; ⏳ his word on `r70a`; three stops and twenty things back** — ⛔ #19's Restore on a trash row below 640 (hiding the amount is not enough), #14's one search per segment (the picker's reaches recipes off the menu), #22's line on a phone; Redo's greyed edge (frame `#D8D2C8` vs prose `--control-line`) and Undo's own empty look; `r70a`'s one-line rows; our label words; dark at 4.03:1; the bar's Tab inside a sheet; `r70b`'s totals run the wrong way. ⚠️ **DRAFT — not sent until Sean's check 12.1 is in** | **30 Sep** (drafted) | ⏳ **DRAFT, NOT SENT** — flip to 🔴 OPEN when it goes |
+| AH | ~~**Round 66 — seven rulings on the comp.** ⚠️ **Its §1 said the tag was never drawn. WRONG — it is drawn in `r64a`; corrected 27 Sep.** The two countable corrections stand (40 glyphs; the crossed eye cannot leave), plus your twice-asked question ANSWERED~~ | **24 Sep** | ✅ **ANSWERED — your `ROUND-66.md` and frame `r66a`–`r66b`, in the design bundle (not this repo).** The tag redrawn, §3–§9 ruled, 41 glyphs taken. BUILT §99–§105 on `main`, pushed (checked 30 Sep) |
+| AI | ~~**Round 67 — the comp's unasked details, a money warning false today, and the record put straight.** §A the comp; §B report-backs; §C eight other items; §D Sean's asks of 27 Sep~~ | **27 Sep** | ✅ **ANSWERED — your `ROUND-67.md` and frame `r67a`–`r67e`, in the design bundle.** §A BUILT §99–§105, pushed (checked 30 Sep); C1, C2, C3a, C4, C7 and D1–D3 ruled, not built; C3b waits for its own round; C5, C6 and D4 are Round 68's |
+| AJ | ~~**Round 68 — check 6.5: his iPad is 1200 × 1468 upright and 1600 × 1143 sideways, and the portrait you drew is not his.** ⚠️ **Rewritten 29 Sep after a verified pass** — the first version said your frames were drawn at 1024; your full-screen frames are an 11-inch (834 × 1194 / 1194 × 834), and at 1200 his portrait gets the landscape layout. ❓ what size a frame is judged at; ❓ the invoice sheet's 660 cap, gone since 29 Jul; re-check §6; ❓ dark mode~~ | **28 Sep**, rewritten **29 Sep** | ✅ **ANSWERED — your `ROUND-68.md` and frame `r68a`–`r68e`, in the design bundle. BUILT §109–§116 on `main`, pushed (checked 30 Sep), except the tab strip's cap** — Round 69 §5, §6. Your 🔧 asks #2 and #3 answered in Round 69 §1; #1, the device check, in Round 69 §7 |
+| AK | ~~**Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.**~~ | **29 Sep** | ✅ **ANSWERED — your `ROUND-69.md` and frame `r69a`–`r69c`, in the design bundle. BUILT §118–§124 on `main`, pushed (checked 30 Sep)** — each reviewed, and §125 fixed the invoice numbers' start. Your two asks, what stopped and what the building found are Round 70 |
+| AL | ~~**Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo, retaken on the fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23).~~ | **29 Sep** (drafted), **30 Sep** (his word, §4, §5, the photo; sent) | ✅ **ANSWERED — your `ROUND-70.md` and frame `r70a`–`r70d`, in the design bundle's `ROUND-71/`. BUILT §130–§135 on `main`, pushed (checked 30 Sep)** — each reviewed. Your §6 is Sean's answer too (*"nothing"*, 30 Sep). Three stops, what the building found, and Sean's word on `r70a` are Round 71 |
+| AM | 🔴 **Round 71 — your Round 70 is built, in six batches (§130–§135); Sean on Return: *"Let's go with Design's recommendation: nothing."*; Sean on `r70a` and `r70b`: *"All 1-6 are good to go."*; ❓ he wants a toast for Undo and Redo; three stops and twenty things back** — ❓ **the toast first (§0): he wants it *"easier to see (to catch attention)"* than the footer's line, and it reverses your Round 66 §5 and Round 70 #22 — please draw it**; ⛔ #19's Restore on a trash row below 640 (hiding the amount is not enough), #14's one search per segment (the picker's reaches recipes off the menu), #22's line on a phone; Redo's greyed edge (frame `#D8D2C8` vs prose `--control-line`) and Undo's own empty look; `r70a`'s one-line rows; our label words; dark at 4.03:1; the bar's Tab inside a sheet; `r70b`'s totals run the wrong way. | **30 Sep** (drafted; his word on 12.1 and the toast; sent) | 🔴 **OPEN — all of it. What I need back #1 is Sean's toast** |
 
 ---
 
@@ -151,6 +151,7 @@ has been bitten by.
 | **Sean on your Round 68 §4 — Light the default: yes**, with his choice remembered by his account (§107) | **Round 69 §2** | `b1a55bd` | ✅ Yes — built §109 |
 | **Check 9.1 — the Builder on his iPad**, six full-frame photos: 660 at x 770–1430 with 170 of desk each side; the on-screen keyboard 566 sideways, 456 upright | **Round 69 §7** | `b1a55bd` | ✅ Yes |
 | **Sean on 720 — *"720 looks fine for now"*; check 10.1's photo, the Undo list open at 720, clean; Session 11 passed** | **Round 70 §1, §4** | `7eea775` | ✅ Yes |
+| **Check 12.1 — Sean on `r70a` and `r70b`: *"All 1-6 are good to go."*** The six steps he was given for 12.1; your question not answered in its own words. **And his ask: a toast for Undo and Redo, instead of the footer's line alone** | **Round 71 §0, §1** | `5a6aac7` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -167,28 +168,113 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ---
 
-## 🔴 ROUND 71 — your Round 70 is built, in six batches; Sean on Return: *"nothing"*; ⏳ his word on `r70a`; three stops and twenty things back
+## 🔴 ROUND 71 — your Round 70 is built, in six batches; Sean on Return: *"nothing"*; on `r70a`: *"good to go"* — and ❓ he wants a toast for Undo; three stops and twenty things back
 
 
 **implementation → Design, 30 Sep 2026. Branch `main`, app at `5a6aac7`** — §130–§135's code, built from
-your Round 70, each with its review, and their records (§136). Design repo at the commit that carries
-this round. Every `file:line` below is at `5a6aac7`.
-
-> ⚠️ **DRAFT — not sent.** It goes once Sean has tried `r70a` and `r70b` on his iPad — your *"What I need
-> back"* #1, his check 12.1, a ⏳ slot in §1 — and once the app is pushed: `7eea775` is the last app commit
-> you can read, and the sha above is re-checked before this round goes.
+your Round 70, each with its review, and their records (§136); `d16852e` (§137) after it is records only.
+Design repo at the commit that carries this round. Every `file:line` below is at `5a6aac7`.
 
 Your reply is `ROUND-70.md` and frame `r70a`–`r70d`, in the bundle's `ROUND-71/`. Each batch opened the
 frame and measured your numbers before building from them; each was then reviewed by a second pass that
 re-ran its fault injections, tried the variants it had not, and re-took its measurements. Headless Chrome
 with the app's built CSS and Spectral loaded, touch emulated wherever a gesture is the subject. **Safari
-was not run** — this Mac cannot drive it — so every piece below owes a look on his iPad (his Session 12).
+was not run** — this Mac cannot drive it — so every piece below owes a look on his iPad. His check 12.1
+passed on 30 Sep (§1); the rest of his Session 12 (12.2–12.6) is still to do, and §4 says what it would reach.
+
+### 0 · ❓ Sean wants the toast back for Undo and Redo
+
+**Sean, 30 Sep, after his check 12.1, verbatim:** *"Okay. All 1-6 are good to go. One thing though – I preferred having the “Toast” box thingy that used to pop up as opposed to just the line above the total. I need it to be easier to see (to catch attention)."*
+
+**This reverses your Round 66 §5 and your Round 70 #22, at his request — and nothing is built until you
+draw it.** The footer's line stays as you ruled it until then. A box for Undo has never been on the
+Builder's screen, and it crosses the footer, the list, the keyboard and the drawer, so it needs a frame, not
+a sentence.
+
+**"Back" is his word. The Builder's Undo has never opened a box.** Method: every distinct `setToast(` line
+ever added anywhere in `src`, from `git log --all -p` — fifteen, two of them the timers that clear a box.
+The only three on an undo or a redo are the debug lab's, in the table's third row. What he could have
+seen pop up:
+
+| What | Where | When it shows |
+|---|---|---|
+| **The Builder's box** — the only one it has | `Builder.tsx:1759–1766`; its classes unchanged since `8860b63` (29 Jul), though `text-sm` has grown from 14 to 17 under them (`ec5bf10`); gone after 4.5 s (`:170–174`) | Eight messages today: a tab closed by the cap, `… closed to make room. All work is saved.` (`:186`, `:249` — your HANDOFF §3.1's, without its **Reopen**); `Started from X.` (`:210`); `Duplicated X.` (`:232`); `Couldn't open X — it didn't load.` (`:243`); `Saved "X" as a template.` (`:267`); the gate's Review, `Uncosted lines print as $0.00 — check them in the invoice.` (`:450`); the calculator's Apply, `6 lines updated · +$412.88`, only when something was written (`:1712`, your Round 67 C2); and `Templates aren't built yet — coming with the Start from sheet.` (`:1520` — see the foot of this section) |
+| **The Library's strip** — the one pop-up with an Undo in it | `SelectionBar.tsx:237`; 8 s (`useBulkTrash.ts:42`) | After a move to the trash in Products, Cocktails or Prep: `2 products moved to the trash` and **Undo**, in the accent fill across the foot |
+| **Undo and Redo toasts** | The debug lab only, `/debug/autosave`: `X — undone`, `X — redone`, `Undone to before "X"` (`AutosaveLab.tsx:331`, `:342`, `:367`), since `57032c4` | Never in the Builder |
+| **The app this one replaced** | `invoice-builder.html`, outside this repo: a dark box at the foot, 2.4 s (`showToast`, `:2017–2029`); `showToast(` is on 46 of its lines, the definition among them | Saves, stage changes, trash and restore — and never an undo: it had none (`undo` appears only in *"This cannot be undone"*) |
+
+Which one he means, his words don't say. The Builder's box is the one he has certainly seen on this screen:
+every copy his checks have him make, ⋮ → **Duplicate invoice**, opens with `Duplicated X.` in it (`:1475` →
+`:232`). If it changes the drawing, ask in your reply and he'll answer here.
+
+**Your own toasts for the Builder's Undo, drawn and never built there.** HANDOFF §3.3's first layer,
+*"Toast + Undo for discrete destructive acts"* (`HANDOFF.md:535`), with the persistent pair for everything
+else because *"a toast per tap is unusable"* (`:539`). 7B on the phone: Redo *"in the toast, for seconds after an undo"* (`:645`);
+*"Undo announces itself"*, naming the restored state (`:663`); at `bottom: 128px` so that *"it never covers
+the control that produced it"* (`:665–666`) — the same 128 the Builder's box sits at below 1024. When 9A
+took the phone's label away on 29 Jul, your note leaned on it: *"The toast (which names the restored state)
+and the long-press stack are now carrying that weight"* (`:657–659`). Neither toast was built — the
+`setToast(` list above has no undo or redo outside the debug lab — and your Round 70 §2 retired 7B's: *"That
+replaces 7B's phone toast."*
+
+**The rulings it reverses.** Round 66 §5, ruled for the comp, headed *"No Undo in a toast, and no toast"*:
+*"You undo from the footer, like every other edit in the Builder."* My Round 70 #22 asked for any word for
+what an Undo took, and cited it; your #22 put the word in the count line, *"for 4 seconds, as a polite live region
+… No toast is added, so Round 66 §5 stands"*, and `r70b` says why: *"That uses the slot already there, so
+no toast is added and Round 66 §5 stands. The total under it changes at the same moment, which is the
+proof."*
+
+**What the line does now** (§131, `d93c35c`). 15px `--text`, 600, truncating, in place of the count line
+(`InvoiceSheet.tsx:725–728`) for 4 s (`undoNote.ts:36`), in a polite live region that is always mounted.
+All five ways to undo or redo say it — Undo, Redo, a row of the list, ⌘Z and ⌘⇧Z, the drawer's pair —
+because `useUndo` does (`useInvoiceTabs.ts:130`, `:136`, `:147`; the words, `undo.ts:218`, `:223`); a
+refused one says nothing. Below 600 it is hidden with the count line (`InvoiceSheet.tsx:712`) — §3 #3.
+
+**Today's box, saying `Undid 3 changes` — measured, not built.** `/style/sheetcheck` on the Mac copy at
+`5a6aac7` (the real footer), headless Chrome, Spectral loaded, a box appended with `Builder.tsx:1762`'s
+classes word for word: 1px `--border`, `--surface`, 12 padding, 12 radius, 17px `--text`, the modal shadow
+(`0 8px 40px`, 22%), 448 wide at most, 47.25 tall. In the Builder it is `fixed` with no transformed
+ancestor (`AppShell.tsx:43`, `:71`, `:74`; `Builder.tsx:1067`), so it takes the window as its frame there too.
+
+| Window | The box | What it lands on |
+|---|---|---|
+| 1600 × 1068 | x 576–1024, y 988.75–1036 — 32 off the foot (`lg:bottom-8`), centred on the window | The footer (984–1068): the count line's left 259 (765–1095, y 997–1020) and the top 16.5 of the total (1019.5–1054). **The line it would sit beside, and the total `r70b` calls the proof.** 164 of it lies left of the sheet (740–1460). Undo and Redo (1283–1379) are clear |
+| 1200 × 1468 | 376–824, 1388.75–1436 | The same: the line's left 183 (641–971) and the total's top 16.5; 240 left of the sheet (616–1184) |
+| 834 × 1194 | 193–641, 1018.75–1066 — 128 up (`bottom-[128px]`) | Clear of the footer (from 1119) by 53, over the sheet above it |
+| 390 × 844 | 16–374, 668.75–716 | Over the rows; the line is hidden here |
+
+**Please draw it:**
+
+1. **Where.** At both his sizes, today's box covers the line and the top of the total. Over the sheet or
+   the window, and clear of what?
+2. **How long.** The line is 4 s, the box 4.5, the Library's strip 8. A second undo while it shows —
+   replace it, as the line does, or something else?
+3. **What it says.** The line's words (`Undid 3 changes`), with the money (`Undid 3 changes · +$41.02`), or
+   7B's restored state? Your #23 keeps money out of the list's labels.
+4. **Whether it carries an action.** Redo, as 7B's did — Redo now sits beside Undo; Undo, as the Library's
+   strip does; or nothing. *"No Undo in a toast"* is the other half of Round 66 §5.
+5. **Whether the footer's line stays** beside it, or goes back to the count.
+6. **Below 1024**, 128 up as today and as 7B? And **below 600**, where the line has nowhere to go (§3 #3) —
+   does the box answer that stop?
+7. **On a locked invoice** the footer shows neither Undo nor Redo (the drawer greys them — §3 #6), and ⌘Z
+   is not listened for (`Builder.tsx:310`; `restoreDraft` would refuse it anyway), so nothing is said.
+   Nothing there?
+8. **The other eight messages** share today's box. If yours differs, do they move to it?
+9. **The comp.** Round 66 §5 withdrew `r64c`'s `— $40.00 · Undo` for comping a line. Does that stand, if
+   Undo gets a box?
+
+🔧 Mine, once it is drawn: its live region stays mounted between messages, as the line's does — today's box
+mounts with its words in it (`Builder.tsx:1759–1766`). Not tried with VoiceOver.
+
+**Found while listing, not touched:** `Start from a template` on an empty invoice (`InvoiceSheet.tsx:327`)
+still shows *"Templates aren't built yet — coming with the Start from sheet."* (`Builder.tsx:1519–1521`,
+since `871f5ad`, 30 Jul). False since `da291e4` built that sheet on 1 Aug. Mine to raise in its own round.
 
 ### 1 · Your asks
 
 | Your ask | Answer |
 |---|---|
-| **#1 — on his iPad, `r70a`'s pressed state and `r70b`'s four taps: does he now read what a row will take before he lifts?** | ⏳ *[Sean's answer — check 12.1: four adds; hold Undo; a finger held on the third row, read before lifting; slide off, lift, nothing; the third row again, lift; Redo three times; ⌘Z and ⌘⇧Z on the Magic Keyboard, then ⌘Z inside a box. Asked in your words: "with your finger on a row, could you tell what it would take before you lifted?"]* ⚠️ The copy his iPad opens still serves §128's build; it is rebuilt before he tries it. |
+| **#1 — on his iPad, `r70a`'s pressed state and `r70b`'s four taps: does he now read what a row will take before he lifts?** | ✅ **Sean, 30 Sep, after his check 12.1: *"All 1-6 are good to go."*** On `5a6aac7`'s build: the Mac copy his iPad opens was rebuilt at that commit (21:10) before he tried it. **What the words cover:** the six steps he was given for 12.1 — four adds; hold Undo; rest on the third row and read the mark, then slide off and lift (nothing); lift on it (three go, `Undid 3 changes`); Redo three times; ⌘Z and ⌘⇧Z (so Safari lets the page take both — half of §4's first bullet; which letter it reports stays unseen, and both are accepted). 12.1's step 9, ⌘Z inside a box, was not among them, and his checks 12.2–12.6 are still to do. *(This first read "1-6" as six checks — wrong: they were the six steps listed for him.)* **He did not answer your question in its own words** — it was put to him as *"with your finger on a row, could you tell what it would take before you lifted?"* What *"good to go"* passes is that step's Good: the rows marked, `UNDO 3 CHANGES`, `Lift to undo. Slide off to cancel.`, nothing yet undone. **And one thing he would change — §0, first in What I need back.** |
 | **#2 — Sean's check 10.7 answer on Return (your §6)** | ✅ **Sean, 30 Sep: *"Let's go with Design's recommendation: nothing."*** So your §6 stands as written, and it is his answer too. Built in §134: with a hardware keyboard, and in Safari on the Mac, Return in a search field does nothing — the caret and the text stay. With the on-screen keyboard up, it leaves the field. |
 | **#3 — still open with you** | Unchanged: rate precision's volume half — your Round 70: *"⏭ Round 71, with a table of real rates"* — Round 61's two questions (row AC) and the volume sentence (AD). |
 
@@ -228,7 +314,7 @@ own — but the frame is the record of the path, so it should read true.
 | **§5 #6, #7, #8** | §133 | same | The fade hangs from a zero-width anchor beside the scroller, `pointer-events-none`, from clear to `--surface-alt`. An end fades when more than 8 is out of view there; the left by the same 8, because any other number puts a fade inside 465–479. At 375: 276.63–308.63, 44 tall — your box. Swept 300–520 live: no fade without more than 8 hidden, none at 465–479. #8 pinned as built. |
 | **§6 / #13** Return | §134 | `2fbd177` (`93043b3`) | Your test on heights alone (`onScreenKeyboardUp`, `lib/useKeyboardInset.ts`), so iPadOS panning the page to show the caret does not hide a keyboard: 70 and exactly 150 short keep the field; 151, 456 and 566 leave it. All eight search fields. Return is refused either way, so nothing submits. |
 | **§7 #15** | §134 | same | Autocorrect, autocapitalise and spellcheck off — one shared set, `AS_TYPED`, worn by the search part and both ingredient boxes; nothing else may wear it. Return still picks. See §3 #17. |
-| **§7 #16** | §134 | same | Measured first: sideways it ran under — the last row 131.8 below the keyboard's top as the swap opened, with nothing to scroll. The rail's spacer, last in the swap's panel: scrolled to the end, 216 clear sideways and 252–438 upright. See §3 #18. |
+| **§7 #16** | §134 | same | Measured first: sideways it ran under — the last row 131.8 below the keyboard's top as the swap opened, with nothing to scroll. The rail's spacer, last in the swap's panel: scrolled to the end, the last row 215–223 clear of the keyboard sideways and 243–462 upright, at 1068 / 1168 and 1468 / 1568 (`2fbd177`). See §3 #18. |
 | **§1 #2** `r70c` | §135 | `21b3bf3` (`6e17ff6`) | 61 tall, the other nine rows 52. Label 17px and glyph `--text-faint`; the reason 13px `--text-muted` at opacity 1, 2 under the label; `aria-disabled`, a tab stop, no handler, no pressed tint. *Locked at Complete* / *Locked while archived*. Before this, the row trashed a locked invoice. |
 | **§7 #18** | §135 | same | One line, verbatim, for every run. The run still writes `archivedAutoDays`, `archivedAutoFirst` and `firstRanOn` as records; nothing reads them now. Still switched off. |
 | **§7 #20** | §135 | same | Both Builder panels owned, so every RowPanel the app mounts is on the stack. Four refusals lose their last stop: `Start with a number — …`, `A batch has to be more than zero`, the unknown unit's, and a count recipe's `try X instead of Y`. `Pick at least one volume.` untouched. |
@@ -274,7 +360,7 @@ overriding its callers' pointer handlers.
 | 19 | #4 | **The Builder's own height below 1024** is still `h-[calc(100dvh-56px)]` (`Builder.tsx:1067`) — the July header's 56. With the foot now on the bar, scrolled to its end the top 6 (inset 0) or 26 (inset 20) of the tab strip sits above the window; before, 6 of the foot sat under the bar. Measured at all eight size-and-inset pairs. | ❓ `62px + inset` here too? |
 | 20 | — | **Readings, please confirm.** (a) The left fade by the same 8 — #7 forces it. (b) Done and the link row's Remove and Done answer Return and Space; Shift+Return acts as Return; ⌘, Ctrl or Alt with Return is left alone; a held key acts once. (c) ⌘Z is off while the list is open and under any sheet; Ctrl+Z is not taken. (d) Restoring from the archive drops an older build's history. (e) The unknown-unit refusal keeps the stop between its two sentences; only the last went. (f) `r70b`'s u-turn glyph (20, `--accent`) is not `icons.tsx`'s (19, `--text-secondary`); built `icons.tsx`, as Undo always was. (g) `r70c` draws the glyph at x 16; the menu's rows are `px-5`, so 20. | Say if any is wrong. |
 
-### 4 · Only his iPad can say — his Session 12
+### 4 · Only his iPad can say
 
 - What iPadOS Safari reports for ⌘⇧Z (`z` or `Z` — both are accepted), and whether it lets the page take
   ⌘Z with no field focused.
@@ -288,14 +374,22 @@ overriding its callers' pointer handlers.
   it back on close. What the on-screen keyboard does in between — his check 12.6 asks him to tell us.
 - Whether a Pencil hover now tints a greyed RowPanel row, with `disabled` gone.
 
+**Where his check 12.1 left them** (§1). The first, half: ⌘Z and ⌘⇧Z worked on the invoice, so the page takes
+both; the letter is not something he can see. The others wait on Session 12's remaining checks (12.2–12.6), still to
+do; the fade is his check 10.5's, still to do; the pinch-zoom and the Pencil hover are in no check yet.
+
 ## What I need back
 
-1. **#1–#3** — the three stops: a trash row's Restore below 640, one search per segment, and the
-   4-second line on a phone.
-2. **#4–#8** — Redo's greyed edge, the drawer, and Undo's own empty look.
-3. **#9–#13** — the list: one line or two, the line's colour, the keyboard's words, our labels, and dark.
-4. The rest, in any order. Nothing is blocked on them.
-5. Still with you: rate precision's volume half — promised for this round, with its table of real
+1. **§0 — Sean's toast for Undo and Redo.** He prefers a box to *"just the line above the total"*: *"I
+   need it to be easier to see (to catch attention)."* Please draw it — §0's nine questions: where, how long, what it says, whether it
+   carries an action, whether the line stays, below 1024 and below 600, on a locked invoice, the other
+   eight messages, and the comp. Nothing is built until you do.
+2. **#1–#3** — the three stops: a trash row's Restore below 640, one search per segment, and the
+   4-second line on a phone (which §0 may answer).
+3. **#4–#8** — Redo's greyed edge, the drawer, and Undo's own empty look.
+4. **#9–#13** — the list: one line or two, the line's colour, the keyboard's words, our labels, and dark.
+5. The rest, in any order. Nothing is blocked on them.
+6. Still with you: rate precision's volume half — promised for this round, with its table of real
    rates — Round 61's two questions, and the volume sentence (13).
 
 Held for a later round, to keep this one short: the comp's small holds (§101–§105) and Custom Group Lines.
