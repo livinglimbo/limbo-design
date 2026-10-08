@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `139e265`** — the code is `c476989`'s: §138–§141, built from your Round 71, and their records (§142). After it, `4ddfbac` changed only `netlify.toml` and `scripts/ship.mjs`, and `139e265` only `IPAD-CHECKS.md` (Sean's checks 13.1 and 13.2). *Until 1 Oct this line read `5a6aac7`, pushed, with `d16852e` after it as records only; Round 72's draft read `c476989`, before the push.* ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `f7e737f`** — §145–§147, built from your Round 72, each with its review, and their records (§148, reviewed). ⚠️ **Not pushed while Round 73 is a draft:** `34ca8b0` is the last app commit you can read — after `139e265`, Sean's tick and note on checks 1.1 and 1.2 (`2bb6856`), the wishlist's 7 Oct entries in his words (`a6ac438`), §143 (the top bar off the paper) and its records (§144) — and this line is re-checked before Round 73 goes. *Until 8 Oct this line read `139e265`, the code `c476989`'s.* ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -99,7 +99,8 @@ is left and whose it is, and the rows are back in date order.
 | AK | ~~**Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.**~~ | **29 Sep** | ✅ **ANSWERED — your `ROUND-69.md` and frame `r69a`–`r69c`, in the design bundle. BUILT §118–§124 on `main`, pushed (checked 30 Sep)** — each reviewed, and §125 fixed the invoice numbers' start. Your two asks, what stopped and what the building found are Round 70 |
 | AL | ~~**Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo, retaken on the fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23).~~ | **29 Sep** (drafted), **30 Sep** (his word, §4, §5, the photo; sent) | ✅ **ANSWERED — your `ROUND-70.md` and frame `r70a`–`r70d`, in the design bundle's `ROUND-71/`. BUILT §130–§135 on `main`, pushed (checked 30 Sep)** — each reviewed. Your §6 is Sean's answer too (*"nothing"*, 30 Sep). Three stops, what the building found, and Sean's word on `r70a` are Round 71 |
 | AM | ~~**Round 71 — your Round 70 is built, in six batches (§130–§135); Sean on Return: *"Let's go with Design's recommendation: nothing."*; Sean on `r70a` and `r70b`: *"All 1-6 are good to go."*; ❓ he wants a toast for Undo and Redo; three stops and twenty things back** — ❓ **the toast first (§0): he wants it *"easier to see (to catch attention)"* than the footer's line, and it reverses your Round 66 §5 and Round 70 #22 — please draw it**; ⛔ #19's Restore on a trash row below 640 (hiding the amount is not enough), #14's one search per segment (the picker's reaches recipes off the menu), #22's line on a phone; Redo's greyed edge (frame `#D8D2C8` vs prose `--control-line`) and Undo's own empty look; `r70a`'s one-line rows; our label words; dark at 4.03:1; the bar's Tab inside a sheet; `r70b`'s totals run the wrong way.~~ | **30 Sep** (drafted; his word on 12.1 and the toast; sent) | ✅ **ANSWERED — your `ROUND-71.md` and frame `r71a`–`r71b`, in the design bundle's `ROUND-72/`. BUILT §138–§141 on `main`, pushed (checked 1 Oct)** — each reviewed. Your two asks of Sean (the box on his iPad; the rates over his catalogue), three stops and what the building found are Round 72 |
-| AN | 🔴 **Round 72 — your Round 71 is built, in four batches (§138–§141); Sean on the box: *"not life or death"*; his catalogue: 9 package rates and 2 recipe-row rates would drop; twenty things back, five of them stops** — ⛔ the field's words (your Round 70 #14 *`Search 314 products`* vs Round 71 #2 *`Add a product or cocktail`*), the field over Details (its row never drawn without it), the swap's fit below 1024 (a bottom sheet lifted off the edge), ⛔ a card with no rate and the states with no one unit; the box in dark at 1.71:1, the frame's 54 against 49.25, the keyboard at every width, the bars from 600 up, the phone's drawer at full; rates — `Cost per L`, `about` on `each`, a free product's `$0.00`, the narrow card, and where a rate beside a total shows. | **1 Oct** (drafted; his word on the box and his catalogue's counts; sent) | 🔴 **OPEN** |
+| AN | ~~**Round 72 — your Round 71 is built, in four batches (§138–§141); Sean on the box: *"not life or death"*; his catalogue: 9 package rates and 2 recipe-row rates would drop; twenty things back, five of them stops** — ⛔ the field's words (your Round 70 #14 *`Search 314 products`* vs Round 71 #2 *`Add a product or cocktail`*), the field over Details (its row never drawn without it), the swap's fit below 1024 (a bottom sheet lifted off the edge), ⛔ a card with no rate and the states with no one unit; the box in dark at 1.71:1, the frame's 54 against 49.25, the keyboard at every width, the bars from 600 up, the phone's drawer at full; rates — `Cost per L`, `about` on `each`, a free product's `$0.00`, the narrow card, and where a rate beside a total shows.~~ | **1 Oct** (drafted; his word on the box and his catalogue's counts; sent) | ✅ **ANSWERED — your `ROUND-72.md` and frame `r72a`–`r72c`, in the design bundle's `ROUND-73/` (7 Oct). BUILT §145–§147 on `main`, not yet pushed** — each reviewed. Your two asks (the box in dark on his iPad; the dark contrast reading), what stopped and what the building found are Round 73 |
+| AO | 🔴 **Round 73 — your Round 72 is built, in three batches (§145–§147); Sean's call: the box's words at normal weight — his decision, reversing `r71a`'s semibold; the box in dark 6.75:1 on the sheet, its words 7.06:1; ⏳ Sean on the box in dark; twenty-one things back, two of them stops; and the three you named next** — ⛔ the cut name *"shows it whole when tapped"* (the row takes no tap), ⛔ whether an editor's header is a card's heading; 7C's colour and the pressed row; the drawer at half; `about` on a per-item price the app works out (your `$0.40 each` was 12 limes for $4.80), an exact division, the override, preps' units; the breaks at 390; the comp's small holds a–l; what *Start from a template* does on an empty invoice; Custom Group Lines — the whole path, drawn, before any code. | **8 Oct** (drafted; not sent) | 🔴 **DRAFT — not sent. Waits on Sean's 14.1 (the box in Dark) and the push** |
 
 ---
 
@@ -156,6 +157,8 @@ has been bitten by.
 | **Your Round 71 §5 table, worked by hand against its own rule — no row contradicts it**; and `r70b`'s corrected totals read in the frame ($2,451.02, $2,411.03) | **Round 72 §1**, and its opening for `r70b` | `c476989` | ✅ Yes |
 | **Check 13.1 — Sean on the box: *"In dark mode, the box is a bit dark, but it's not life or death for me."*** His whole answer. It speaks to dark only; your question was not answered in its own words | **Round 72 §0** | `139e265` | ✅ Yes |
 | **Check 13.2 — his catalogue through your Round 71 §5, by `/debug/rates`:** 298 products; 0 cards under $0.01; 1 card at $0.00 (a free water); 9 whole-package rates and 2 of 31 recipe-row rates that would drop; 22 with no rate. Counts only — his products' names and prices stay with implementation | **Round 72 §1** | `c476989`'s code, his catalogue on 1 Oct | ✅ Yes |
+| **Sean's call on the box as built from `r71a` — its words at normal weight:** *"Bold looks clunky. Let’s keep it normal."* Built §145; his decision, not a question | **Round 73 §0** | `07d9687` | ✅ Yes |
+| **The box in dark, as built:** its words 7.06:1 on the fill, the fill 6.75:1 on the sheet (light 9.34 / 9.50); the light shadow in both themes, the app having no dark one | **Round 73 §2** | `07d9687` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -169,6 +172,297 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 73 — your Round 72 is built, in three batches; Sean's call: the box's words at normal weight; the box in dark at 6.75:1, its words 7.06:1; ⏳ Sean on the box in dark; twenty-one things back, two of them stops; and the three you named next — the comp's small holds, the Templates sentence, Custom Group Lines
+
+
+**implementation → Design, 8 Oct 2026. Branch `main`, app at `f7e737f`** — §145–§147, built from your Round 72,
+each with its review, and their records (§148, reviewed). Design repo at the commit that carries this round.
+Every `file:line` below is at `f7e737f`, and the same at `1401325`, the last code commit.
+
+> ⚠️ **DRAFT — not sent.** It goes once Sean has answered your *"What I need back"* #1 on his iPad (his check
+> 14.1, a ⏳ slot in §1) — and once the app is pushed: `34ca8b0` is the last app commit you can read (§143's fix,
+> §5, and its records), and the sha above is re-checked before this round goes.
+
+Your reply is `ROUND-72.md` and frame `r72a`–`r72c`, in the bundle's `ROUND-73/`. Each batch opened the frame and
+checked your numbers before building from them; each was then reviewed by a second pass that re-ran its fault
+injections, tried the variants it had not, and re-took its measurements on that build's own output. Headless
+Chrome with the app's built CSS and Spectral loaded, both themes wherever colour is the subject, touch emulated
+wherever a gesture is. **Safari was not run** — this Mac cannot drive it — so every piece below owes a look on his
+iPad: his Session 14. **Every review found something, and all of it is fixed**: twice gaps in the checks (§145
+three, §146 four, each found by a fault that went green), and once on screen — §147 had decided your #11's
+premise for you (§4 #14); that review also corrected a width §147 had misreported (§3).
+
+### 0 · Sean's call on the box's words — his decision, built
+
+✅ **Sean, 7 Oct, on the box as built from `r71a`:** *"Regarding the “toast” from the undo function: I like the box – I
+don’t like the text. Bold looks clunky. Let’s keep it normal."*
+
+**Built in §145.** The box's words were `r71a`'s 17 semibold; they are now normal weight. `r71a` and `r72a` set
+the money with no weight of its own, so **nothing in the box is bold now**: every element computes to 400 in both
+themes. Widths at normal weight, `/style/sheetcheck`: 288 / 300.55 / 321.63 / 448, and 358 at 390 (at semibold:
+288 / 305.31 / 326.89 / 448). Height unchanged, 49.25. **It is his decision, and it reverses
+`r71a`'s semibold; it is not a question.** It covers the undo box only — the Library's `UndoStrip`
+(`SelectionBar.tsx:266`, `:272`) keeps its semibold words and button.
+
+❓ **The one thing to ask:** with the words and the money now one weight, should anything else in the box follow —
+or change to keep the two apart? And does the strip follow, so the app's two pop-ups match, as `r72a` says they
+now do in colour?
+
+### 1 · ⏳ Sean on the box in dark — your ask #1
+
+⏳ **Sean, on his iPad (check 14.1):** *[his words, verbatim, when they come]*
+
+Put to him in your words: in Safari, sideways, Dark, on a copy — add two products, Undo once, read the box, wait;
+again upright; then, if he likes, once in Light. *"In Dark, does it catch your eye without covering anything you need?"* — and,
+for §0, *"does the writing, now that it isn't bold, read right?"*
+
+### 2 · The dark readings — your ask #2
+
+Rendered, `getComputedStyle` on the verify build, `/style/sheetcheck` (the real footer, `UndoStack` and toast
+holder):
+
+| | Light | Dark | `r72a` |
+|---|---|---|---|
+| Fill | `#2C4A3E` | `#7FA894` | `#2C4A3E` / `#7FA894` |
+| Words | `#FCFAF6` | `#14120E` | `#FCFAF6` / `#10201A` |
+| **Words on the fill** | **9.34:1** | **7.06:1** | — / 6.38:1 |
+| **Fill on the sheet** (`#FDFCFA` / `#1A1712`) | 9.50:1 | **6.75:1** — was 1.71:1 | 9.50 / 6.75 |
+| Shadow | `0 6px 20px rgba(25,23,19,0.24)` | the same | dark: `rgba(0,0,0,.5)` |
+| Weight · size · height | 400 · 17 / 21.25 · 49.25 | the same | 600 words · 17 / 1.25 |
+
+- The tokens decide, as you said: `text-accent-fg` in dark is `#14120E`, not `r72a`'s `#10201A`, and reads 7.06
+  where yours would be 6.38.
+- **The shadow:** `globals.css` has one `--shadow-toast` (`:489`) and neither dark block sets one, so the light one
+  stays in both themes, as ruled. ⚠️ It is the only shadow in the app without a dark version — every `--elev-*`
+  goes to black at 40–60% in dark (`:242`–`:247`, `:323`–`:328`) — so in dark it barely shows. Built as ruled,
+  since *"the fill alone already sets it apart"*; say if `r72a`'s `rgba(0,0,0,.5)` was meant to become one.
+
+### 3 · What was built from your Round 72
+
+| Ruling | § | Commit (review) | Note |
+|---|---|---|---|
+| **§2 #4** the strip's classes | §145 | `3593d52` (`ba4fc26`) | `SheetToast.tsx:295`: `bg-accent … text-accent-fg shadow-toast`, read off `UndoStrip` itself. No `accent-surface` left on the box, asserted. Readings in §2. |
+| **§2 #5** 49.25 | §145 | same | Re-measured after the weight change: 49.25, both themes, 17 on 21.25. |
+| **§2 #6** the keyboard, every width | §145 | same | The foot never lower than 16 above a keyboard's top: 1600 × 1068 with 566 up, 486 (in select mode too); 1200 × 1468 with 456, 996; 900 × 1200 with 400, 784; 390 × 844 with 336, 492; panned 40, 532. 100 short is not a keyboard: 968. |
+| **§2 #7** the topmost bar, every width | §145 | same | Select mode, 1600 × 1068: bar 908–984, box 842.75–892 — your 892 (before: 918.75–968, across the bar's count, money and Remove). 1200 × 1468: 1292. Home Screen app, inset 20: 1600 × 1168 select 972; 1200 × 1568 select 1372. 900 × 1200, drawer at peek in select mode: 877. |
+| **§2 #8** the middle | §145 | same | A bar is a floor only while its top is below the window's middle; above it, the floor is the bottom bar, which wears `data-bottom-bar` (`BottomNav.tsx`). 390 × 844, drawer at full (top 65): foot 766, inset 20: 746 — your *"766 − inset"*. 900 × 1200 at full (118): 1122. A tap on the box closes it and is spent: a test button placed under it got no click; a second tap, the box gone, got one. See §4 #3, #4. |
+| **§4 #19** the list's money | §145 | same | (c) At rest every figure is `--text`, plus or minus: light `rgb(25,23,19)` 17.46:1, dark `rgb(243,238,226)` 15.43:1 — a minus at rest was `--danger`. (b) No row singled out, now asserted whole from the `<li>` down. (a) Nothing to build. See §4 #1, #2. |
+| **§1 #1** the field's words | §146 | `5068186` (`036426b`) | `Search ${rows.length} products` / `Search ${cocktails.length} cocktails` (`SourceRail.tsx:422`–`:423`) — each the whole list that segment's search runs over: every live product, and every recipe, on the menu or not. Spoken name `Search products` / `Search cocktails` (`:425`). *Add a product or cocktail* is in no file the app ships, comments stripped. The loading prompt is unchanged. |
+| **§1 #2** hidden in place | §146 | same | `invisible` and `inert` on the field's box over Details (`:350`–`:351`), mounted. 1200 × 1468 and 1600 × 1068, both themes, all three segments: row 0–64, field 12–296, chevron 304–348, tabs at 64. Focus refused, skipped by Tab, ignored by the accessibility tree; *man* typed in Cocktails survives Details → Products → Cocktails. Nothing inside opts back into `visible` — the review's find. |
+| **§1 #3** | — | — | Nothing to build; §134's spacer stands. |
+| **§3 #13** the name gives way | §146 | same | The row's second line is `r72c`'s: a no-wrap line, gap 4, the words in a `min-w-0 truncate` span, the rate in a `shrink-0` span carrying its own `· ` (`RecipeCard.tsx`, `SubLine`). `/style/swapcheck` at 390, name column 278.72: `← Tanqueray London Dry` cut at 159.94 of 174, `· about $1.10/fl oz` whole at 114.78; `Agave Nectar, Light, Organic` cut at 147.98 of 194, its rate whole. No rate cut at 390 or at the 588 card; light colour `rgb(95,89,78)`, `r72c`'s `#5F594E`. See §4 #7. |
+| **§4 #15** headings wrap | §146 | same | `CardTitle`'s `<h2>` is `text-balance` at 24 / 1.15 unless the heading is `live`: the invoice card in every state, the product card, the recipe and prep editors' locked cards, the picker's recipe card. The deleted invoice card at 390 (232.61 wide): `Harlow & / Finch wedding` (103.77 / 161.45), `Castellano / anniversary` (114.89 / 126.13), each 55.19 tall, nothing cut; ✕'s top level with the heading's. At 430, 1200 and 1600 every name one line. See §4 #8, #9. |
+| **§3 #11** `about` marks a division | §147 | `c430410` (`1401325`) | A pack's each `about $0.96 each`; a pack of one's each is the price typed, with no `about` (`about $0.96/fl oz · $11.49 each`). The one function that divides records whether it did (`eachDivided`, `costing.ts:249`–`:253`), and that reaches the card, the library row, the Builder's panel, the editor's live figure and a recipe row. **A product priced per item reads as you wrote — `$0.40 each`, no `about` — divided or typed.** See §4 #14. |
+| **§3 #12** zero | §147 | same | `$0.00/fl oz`, `$0.00/kg`, `$0.00 each` — no `about` (`costing.ts:546`). A positive rate never prints `$0.00`; a pack's each under half a cent reads `under $0.01 each`. |
+| **§1 #9** `Cost` | §147 | same | Over its reason (`ProductCard.tsx:151`); `Per ounce` absent from the card, comments stripped. |
+| **§1 #10** `Cost`, and `Cost per L` | §147 | same | Built in §141; now asserted word for word: `Cost` over a pack's two rates on the card, and on the panel for a pack, an item and no cost yet. The panel's labels are `Cost` / `Cost per fl oz` / `Cost per kg`; no file spells `Cost per L` outside a comment. |
+| **§3 #14** | §147 | same | Nothing new. `rateBesideTotal` stays in `check-rate` and `/debug/rates`; a check now fails if any other screen calls it. The comment that promised Round 48 §3's three places is corrected. |
+| **§4 #20** | §147 | same | (c) a prep reads `about $0.07/fl oz` (was `$0.07/oz`); the override box is `Cost per fl oz override` (`ProductEditor.tsx:583`), and the hint that sends him there names it so (`:520`). (a), (b), (d) confirmed: their comments and `check-toast`'s label now say so, and (d) was run — $1.20 over 500 kg reads `under $0.01/kg`. See §4 #15–#21. |
+| **§4 #16–#18** | — | — | Confirmed; nothing to build. |
+
+`/debug/rates` follows the amended rules and states them, and gains a list: products priced per item that the app
+works out from a count, with a count of those typed for one (§4 #14). Measured on the Builder's panel at 1200
+and 1600: a pack's `about $0.08/fl oz · about $0.96 each` is 227.94 in 236, one line, row 52 — §147 first reported
+235.44, which is the recipe row's width; its review corrected it.
+
+Checks: **62**, none added — `check-toast`, `check-undo`, `check-keyboard`, `check-cards`, `check-money`,
+`check-heights`, `check-stale`, `check-rate` and `check-costing` extended. Every new assertion fault-injected, with
+comment-only spellings tried; the batches injected 95 faults and the reviews re-ran theirs and added their own. The
+comp's worked example is unchanged — $99.96 billed, $40.00 comped, $105.96 at 6%. Both automatic jobs are still
+switched off.
+
+### 4 · Stopped, and found — yours
+
+| # | Ruling | What | Question |
+|---|---|---|---|
+| 1 | §4 #19 (c) | **Which colour is 7C's.** *"One colour, `--text`, as 7C draws it"* — 7C draws the money at rest `#4A4338`, its own `--text-secondary`; `r70a` drew it in the app's `--text-muted` (`#5F594E`). Built `--text`, the token you named. | ❓ `--text`, or 7C's grey? One class. |
+| 2 | §4 #19 (c), `r70a` | **A pressed row's money is now fainter than at rest.** Pressed rows keep `r70a`'s `--text-secondary` — light `rgb(71,66,57)`, dark `rgb(216,209,194)` — one step fainter than `--text` at rest. In `r70a` pressed was one step stronger (rest was `--text-muted`). | ❓ Pressed money to `--text` too, or as it is? |
+| 3 | §2 #8 | **A phone's drawer at half is above the middle too.** 390 × 844: the drawer's top at half is 342, above 422, so the box sits at the bottom bar there as well — 766, over the drawer's list. Half is where the drawer rests, so on a phone this is the usual case, not the rare one. 900 × 1200 at half (668) is below its middle: foot 652. | ❓ Intended? |
+| 4 | §2 #8 | **From 1024 up there is no bottom bar**, so a bar above the middle would fall back to the window's foot. Not ruled; nothing reaches it today. | ❓ The window's foot? |
+| 5 | §2 #4 | **The shadow** — see §2. | Fine as built? |
+| 6 | §0 | **Sean's call** — see §0. | The one question there. |
+| 7 | §3 #13 | ⛔ **Stopped. *"the card shows it whole when tapped"* (`r72c`) is not true.** The ingredient row takes no tap; its only control is Swap or Undo (`RecipeCard.tsx`). A touch-emulated tap on the cut name in `/style/swapcheck` changed nothing. The library's cocktail card has no Swap at all, and the editor's row cuts the name too. A tap that shows the name would be new behaviour, so it is not built. | ❓ Draw it — or drop the clause? |
+| 8 | §4 #15 | ⛔ **Stopped. The three editors' headers** — the product, recipe and prep editors while editing — echo the name as he types, so they stay one cut line (`live`); every read card wraps. | ❓ Is an editor's header *"a card's heading"*? |
+| 9 | §4 #15 | **Left as they were, not card headings by our reading:** the Builder's invoice name, an `<h1>` that truncates (`InvoiceHeader.tsx`); `Sheet.tsx`'s plain titles and the calculator's `Cocktail calculator`; the invoice sheet's category headings; `SectionLabel`. | ❓ Does the invoice's own name follow? |
+| 10 | §1 #2 | **The collapsed rail over Details.** Its 🔍 opens the rail, but nothing takes focus — the field is inert. And that 🔍 is named `Search products` in every segment (`SourceRail.tsx:277`), while the field now names its segment. | ❓ What should the 🔍 do over Details, and its name? |
+| 11 | §1 #2 | **Below 1024, the drawer's `Add item` at peek opens it to half on the current segment** — and on Details there is now no field. Not his iPad at full screen. | ❓ Open on Products? |
+| 12 | §1 #1, §3 #13, §4 #15 | **Readings, built literally.** At a count of one it reads `Search 1 products`, as the library fields do — no singular ruled. On a first load Cocktails can read `Search 0 cocktails` until the recipes arrive (read in the code, not measured). On a narrow swap to a prep, `· prep` rides with the rate, so only the name gives way. A single word wider than a card's heading now runs past it — `r72c` sets no `overflow-wrap`, so none was added. | Say if any is wrong. |
+| 13 | `r72b` | **The frame and the app differ, and the app was kept.** `r72b` draws the tabs Products · Cocktails · Details; the app, and your HANDOFF, put Details first (`SourceRail.tsx:73`–`:75`). `r72b` draws no magnifier in the field; the app has one. `r72b` sets the field's text at 18; every input renders 16 under `globals.css:897` — already with you. | ❓ Any of them meant? |
+| 14 | §3 #11 | **The premise: your `$0.40 each` was a division.** Round 72 #11 asked about *"`$0.40 each` on a product priced per item"*; that `$0.40` was `check-rate`'s 12 limes for $4.80. So for exactly that product your example (`$0.40 each`) and your rule (*"every rate the app divides carries `about`"*) disagree. §147 built the rule; its review put back your example, since a wrong premise is yours to re-rule, not ours. So **a product priced per item reads with no `about`** — 12 for $4.80 reads `$0.40 each`, as does $0.40 typed for one; the app records which it divided, and `/debug/rates` lists the divided ones. With it: under half a cent, a per-item product reads `< $0.01 each`, a pack's each `under $0.01 each`. His catalogue has 94 products priced per item (Round 72 §1); ⏳ *[how many the app divides, from his check 14.7, if he has read it]*. | ❓ Does a per-item price the app works out from a count say `about`? |
+| 15 | §3 #11, #12 | **An exact division keeps `about`.** A pack of 24 bags at $24 reads `about $1.00 each` (`check-rate`). Rule 5's words reach it; #12's reason — *"nothing is rounded and `about` would be untrue"* — would reach it too. | ❓ |
+| 16 | Round 71 §5 rule 1, §3 #11 | **The override is a rate he typed, and still says `about`** — `about $1.10/fl oz`, as §141 built it. Rule 1 puts `about` on every volume card; #11 says a price he typed never gets it. Pinned in `check-rate` where it is. | ❓ |
+| 17 | §4 #20 (c) | **A prep that yields a weight or a count keeps its own unit**, now with `about` (`prepCost.ts:276`–`:282`): a kilogram yield `about $2.30/kg`; a gram yield per gram, where a weighed product's card climbs to the kilogram (§115); a counted yield `about $0.19/each`, where a product reads `$0.40 each`. Read in the code. | ❓ Does a prep follow the products here too? |
+| 18 | §4 #20 (c) | **The prep card's own label stays `Cost`.** #20 (c) named the rate and the override's label only. | ❓ |
+| 19 | §4 #20 (c) | **Two sentences still say *per ounce*:** the editor's hint, *"Costing works inside a dimension: volume per ounce, weight per gram, anything countable per item…"* (`ProductEditor.tsx:520`), and the not-costed hint, *"…where cost per ounce is meaningless."* (`:601`). Your reason for #20 (c) reaches them; the ruling named the label. | ❓ |
+| 20 | Round 48 §3 | **A free product's card shows Price `—`**, so `$0.00/fl oz` is the only money on it — against Round 48 §3's *"the rate must never be the only money on that card"*. Older than this batch; found while building it. One card in his catalogue, the filtered water. | ❓ |
+| 21 | §3 #11, §4 #20 | **The longer strings at 390** — none on his iPad at full screen. The editor's 21px figure for a pack wraps: `about $0.08/fl oz · about $0.96` / `each` (330.75 in 320; the old string fit). The panel's pack value breaks after the second `about`: `about $0.08/fl oz · about` / `$0.96 each` (before, before `each`); row 60, as it was. The prep card's Cost row with a batch target: `about $0.06/fl oz · unchanged at any target` leaves 3.53 between `Cost` and its value — a $10 rate would overlap it by 4.52. | ❓ Where should each break? |
+
+### 5 · FYI — the top bar on his PDFs (§143), no design change
+
+Sean, 1 Oct, in his check 1.2, saving a real client invoice as a PDF: *"On the top of the invoice, there is a banner
+from the working app that persists. It’s the green “Limbo” banner with the universal search box at the top of the
+app. Definitely wrong."* A bug, fixed at its source on 7 Oct (§143, `188d72a`, review `8b01701`): the print block
+hides `[data-print="hide"]`, `nav` and `aside`, and the top bar was a `<header>` with no mark — so it had printed
+across page 1 of every invoice, prep sheet and recipe sheet since the print route landed (3 Aug). It now carries
+the mark (not `header` in the CSS list — the invoice's letterhead is a `<header>` too), and `<main>`'s bottom-bar
+clearance is zeroed on paper, which removes a blank last page at some lengths. On screen nothing changed. New
+check, `check-print`. 1.2's own *Good* already ruled *"No app furniture anywhere on the paper"*, so nothing here is
+yours; it is live (read 8 Oct), and 1.2 waits on his next PDF.
+
+### 6 · The comp's small holds (§101–§105) — held since Round 69, yours
+
+Held in `COMP-BUILD.md`'s status block (*"Held, and why"*) since 29 Sep, and named in Rounds 69–72 as held for a
+later round. **Each re-read in the code at `1401325`; all still stand.** One is gone: §103's per-section line
+counts were closed by §112 — your Round 68 §5 (C5) ruled the record also keeps each category's line count, and
+§112 built it; History reads it. None of them changes any money: the worked example is untouched.
+
+| # | Your ruling | What | Question |
+|---|---|---|---|
+| a | Round 67 A6d | **The specimens' label.** You ruled *"labelled as a state the app can't reach yet."* §105 is the commit that makes that state reachable, so the literal label would have been false the day it shipped. Built `— a specimen` (`/debug/states`, `StatesLab.tsx:189`, `:208`, `:227`, `:248`). | ❓ `a specimen`, or other words? |
+| b | Round 67 A2a | **A comp whose PRICE can't be read.** Its dash is in the Unit cell (`— / bag`), but the export still says *"…so its amount prints as a dash."* (`invoiceDocument.ts:380`). A2a worded the quantity case — *"…so its quantity prints as a dash."* (`:385`) — from our premise *"the dash is in Qty"*, true of one case of two. Reachable since §105: comp a line whose saved price is not a number, and export. | ❓ Its words? |
+| c | `r65a` | **The no-price value wraps.** `No cost recorded · printed as Complimentary` (`comp.ts:133`) takes two lines in the panel's 236 value column — measured by §105 on 29 Sep; the words and the column unchanged since (the column re-measured 236 on 8 Oct). `r65a` draws only the $40.00 case. | ❓ Two lines fine? |
+| d | `r64c` | **A comp with no price prints `$0.00 / tray`** in its Unit cell beside `Complimentary` (§101) — the same `$0.00` an uncosted charged line prints today. `r64c` says the client's copy is correct regardless. | ❓ Keep, or a dash? |
+| e | `r64a`, `r67a` | **The footer clause's colour.** `r64a` draws `· $40.00 comped` accent and semibold; `r67a` draws it plain, in the line's grey. Built as `r64a` (`InvoiceSheet.tsx:758`) — the frame that ruled the footer's look; `r67a` answered where the clause goes, and leaves out Send too. | ❓ Which? |
+| f | `r67a` | **`Packed` beside `Comp`.** `r67a` draws `Packed` quiet and captions the pair *"Quiet, then accent"*; the app's Packed chip is the filled tone (`procurement.ts:79`–`:80`, `ProcurementBar.tsx:97`), pinned since §19 — so a packed comp shows a filled green chip beside a tinted green one. Order as ruled; Packed's tone untouched. | ❓ |
+| g | `r67a` | **A priceless line's meta and dash.** `r67a` draws `No price · tray` in a muted grey (`#6E685D`) and its dash in `#5F594E`, the app's `--text-muted`; the app says `no cost data · tray` (`InvoiceSheet.tsx:412`), dash at full contrast, on every uncosted line. Nothing in the prose rules either. | ❓ |
+| h | Round 66 §9 | **From Archived, the stage list offers every track stage, Complete included**, whatever it was archived from (`StageMenu.tsx:83`–`:85`). With §9 applied — leaving the archive is ungated — an invoice archived from Draft reaches Complete with no gate and no record: the state of every invoice completed before 28 Sep, by a way in that never asked. | ❓ |
+| i | — | **The newest record unreadable, an older one not:** the gate names the older date (`latestCompletedRecord`, `types.ts:1938`, the last readable one). | Fine? |
+| j | Round 67 A5c, `r67b` | **The Replaces row's glyph:** `r67b` draws it grey; the app's note glyph is gold (`GateDialog.tsx:175`). Built as the app's, per A5c. | ❓ |
+| k | Round 67 A3h | **A comp priced, at a quantity of 0** (or a negative figure) is uncounted, so it would get *"1 comped line has no cost recorded"* — untrue: its cost is recorded, and is zero (`types.ts:1668`–`:1669`, `:1678`–`:1683`). A3h ruled one count for a missing price and an unreadable quantity, not a readable zero. | ❓ Its words? |
+| l | Round 67 A3b | **A packed hidden line** — one hidden before the switch retired — would carry two strikes, name and amount, as A3b rules for a comp. Undrawn for a hidden line. | ❓ |
+
+### 7 · The Templates sentence — held since Round 71
+
+**What he sees.** On an empty invoice the second button, **Start from a template** (`InvoiceSheet.tsx:322`) —
+your HANDOFF §5.3, 10C: *"The second door matters. Templates are otherwise reachable only at creation"* — shows only
+*"Templates aren't built yet — coming with the Start from sheet."* (`Builder.tsx:1546`–`:1547`). True when it was
+written (`871f5ad`, 30 Jul); **false since `da291e4` built the Start from sheet on 1 Aug**, and since §138 said in
+your green box, the loudest thing on the screen. On 23 Sep Sean said *"Templates haven't even been built yet!"*
+(`WISHLIST.md`, the templates entry); that entry says the sentence *may* be why — he has not said.
+
+**What exists.** The `+` tab's Start from sheet (5B): Blank invoice · Templates, with usage counts · Duplicate.
+Choosing a template there makes a **new** invoice — `startFromTemplate` calls `createBlank()` (`Builder.tsx:196`–`:208`),
+which opens a new tab and Event details — with the template's lines scaled to the guest count. So pointing the
+empty invoice's button at that sheet as it stands would leave this empty invoice behind as a second tab, and ask for
+event details he has already given.
+
+❓ **What does Start from a template do on an empty invoice** — fill *this* invoice from the template list, keeping
+its client, date and guests (the door 10C describes; a path never drawn); open the Start from sheet as it is; or go
+until the templates work below? And until you rule: the sentence is false, so say if the button should go now.
+
+**Not asked now, for awareness — as Round 67 D5 told you.** Sean, 27 Sep, in his own words in chat: *"I mean invoice
+templates (and KITS)."* (`WISHLIST.md`, *Sean's answers*, B7 and B11, records it as the *"BIG job"* templates being
+**invoice templates, and KITS**) — the templates exist but cannot be renamed,
+edited or deleted (your HANDOFF §4's third home, a Templates section in Library, never drawn); kits are your 23C
+sheet, with its one open question, where *Save as kit* sits on the invoice's selection bar; and, as B11 records it,
+if kits can be built at the same time as templates, build both together. Queued after Custom Group Lines — that order is ours,
+from the 27 Sep triage; Sean set comp, then groups. If your answer to the button wants to wait for that round, say
+so.
+
+### 8 · Custom Group Lines — the round, before any code
+
+**Why now.** Sean held it back on 20 Sep: *"I did not intend for you to send the Custom Group Lines request to
+Design yet. It's going to be a VERY meticulous build, so I want that as its own focus… We will do that later."* He
+lifted the hold on 27 Sep with an order: *"Comp first then group lines."* The comp is built (§99–§105), so this is
+its round. You have heard of groups only in passing — our Round 57 §4 (named so you would not design toward it)
+and your `ROUND-56-57.md` on its overlap with summary mode, our Round 64 §6 and your `r64e`, and your Round 67
+A8. **Nothing is built, and nothing will be before you draw the path.** It changes what an invoice can hold, and it crosses fourteen surfaces
+he or a client can see — four of them parts this app has never drawn — so by CLAUDE.md's own rule it needs the
+whole path drawn as a sequence of taps, not four screen answers.
+
+**His brief, 20 Sep, verbatim** (`WISHLIST.md`, *Hiding line items, collapsing categories, and Custom Group
+Lines*, §3 and §4):
+
+> *"It would also be advantageous to be able to hand select my own custom group of line items, consolidate them
+> into one 'custom group line' and rename it. (E.g. I have bagged ice, 2" ice cubes, and column ice — I consolidate
+> them and can rename the 'custom group line item' something like 'ice' or 'general ice'. Whatever I choose.)"*
+
+> *"This would be a feature that would manifest on the client facing side (i.e. the exported invoice). So we would
+> have to figure out how on my end I could see what items are grouped. So perhaps once I group them and rename them,
+> I could tap and hold (like I do to see the item info/card of a single line item now) and then I could see all of
+> the items that are in that custom group. And the resulting card should show me each of the line items and their
+> respective information, the same information that all (regular) line items have, that way I could make
+> adjustments within that card, which would ultimately affect the price of the sum of all the ingredients in that
+> group. Then I would need the ability to add or remove items to or from that group. And also to cancel the group
+> outright — which would place all those items back in their respective places on the invoice (within their own
+> categories)."*
+
+> *"So I'm thinking that we would need a new button to the line item cards and that would allow me to add an item
+> to a group (maybe in the footer of the card — something like 'Add to a Group Line'. This would then open a list
+> of whatever group name I have created, and then I could just click that group name and the single line item would
+> disappear into that respective custom group line item's name on the invoice."*
+
+> *"I would need the ability to choose what item category the custom group would fall into — or, and this is super
+> important, to be able to type a new 'custom' category, that way, on the client side, they could see something
+> like 'general ice' or 'delivery charges', etc."*
+
+> *"I suppose we would want two doors into this feature: The first in that dotted menu on the bottom right of the
+> invoice. Here we could have a new option called 'Custom Group Line'. This would show a card that has 'Add New' AND
+> any previously created groups. The second door: The individual line item cards — accessible by opening any line
+> item (press and hold) and then clicking 'Custom Group Line'. Then we have the same options for 'add new' and the
+> current list of groups (if applicable)."*
+
+**His answers, 23 Sep** (`BUILD-PLAN.md`, *Answered*): grouped lines **disappear into the group** on his screen, and
+he presses and holds the group to see and edit what is inside — not implementation's recommendation, chosen
+knowingly; on the client's copy a group is **one line, nothing else**; he **picks where a typed category sits** on
+the client's invoice; packing and the leftovers count show the **individual items, always** (the option he chose:
+grouping is only about what the client sees); a **duplicate** carries its groups, **templates** are revisited later; your
+all-or-none ruling on folding categories he accepts, to revisit once groups exist.
+
+**What his first answer costs** — written down so you rule on it rather than discover it (`BUILD-PLAN.md`, read
+22 Sep, not re-measured today): with members moving inside the group, about fourteen places that read an invoice
+line by line stop seeing them, five silently and in money — the total drops; the cocktail calculator, unable to
+find the bagged ice, files a second bagged-ice line, billing a client twice; the product rail says a product is not
+on the invoice when it is; the packing ticks and the leftovers count lose the members. None of that is a reason to
+overrule him; each is a reader you have to rule a group's look for.
+
+| # | What | Evidence, at `f7e737f` | Question |
+|---|---|---|---|
+| 1 | **The whole path** | Fourteen surfaces he or a client sees, nine more that change silently. Four parts never drawn: the group's row on the invoice; the card that shows what is inside; the chooser — new group or an existing one — when a line joins; the editor where a group is named and given its category. | ❓ The path, drawn as taps, from both doors to the client's paper and back out (*"cancel the group outright"*). |
+| 2 | **The group's card** | He names press-and-hold. The panel is `w-[420px] max-w-[calc(100vw-2rem)] overflow-hidden` (`RowPanel.tsx:492`), and a grep for `max-h` and `overflow-y` in that file returns nothing (re-run 8 Oct) — built for one row, so a group of eight would clip its bottom members, not scroll them. The nearest part that owns a list of editable rows is the recipe editor's ingredient list. | ❓ What is the card — a scroller in the panel, a full sheet like the calculator's, or a summary with a *see all* row? |
+| 3 | **Qty and Unit on the client's copy** | The document is a fixed four-column table — Item, Qty, Unit, Amount — and *General ice* holds three of each. Summary mode dropped the columns (*"a quantity for a whole category is not a fact"*), but a group line sits in the same table as itemised lines — the mix you refused for folding one category. **The hardest question in it.** | ❓ |
+| 4 | **Where a typed category prints** | He picks. Today `CATEGORY_ORDER` is nine names in van-loading order (`types.ts:2124`), and `categoryRank` sends anything else last (`:2181`–`:2190`) — so two typed categories tie at the bottom, in whatever order the sort leaves them. | ❓ How does he pick, and where is it shown? |
+| 5 | **The data-health page** | `invoice.category.unlisted` (`dataAudit.ts:155`) reports every section whose category is not in the nine, as *"Known and expected"* — so it would fire every time the feature works. | ❓ What should it say about a typed category? |
+| 6 | **How membership is remembered** | Members inside the group need no identity but blind the readers above. Members left in place need a new hidden tag on every line, because rows are addressed by position with the name as a guard (§80, §83, §85) — and a deletion shifts positions, and nothing makes a product's name unique. The tag rides inside the invoice, so it is a one-time fill-in, not a migration of separate records. | ❓ Which — both costs stated, no recommendation carried in. |
+| 7 | **The ⋮ menu's eleventh row** (his first door) | Up to ten rows at `min-h-[52px]` (`InvoiceOptionsMenu.tsx:132`), in a `w-[300px] overflow-hidden` box (`:139`) with no scroller, opening upward from the footer. Arithmetic off the classes, not a device measurement — his iPad is the check. | ❓ Does it take an eleventh? |
+| 8 | **A standing ruling it reopens** | Sean, 10 Aug, had *Move to category* removed from invoice lines — he picks categories in the libraries, and two places to set one fact is how they drift. `check-invoice-edits.mjs:169`–`:171` asserts it. A group's category comes from neither. | ❓ Told so you rule it reopened, not worked around. |
+| 9 | **A comped line in a group** — your Round 67 A8, carried | Your Round 64 reply (`r64e`): a comped line is never absorbed into a group — on his screen it stays visible under the group; on paper it prints on its own line, `Complimentary`, directly below it, and the group's total leaves out its cost. Sean's answer: members disappear into the group. | ❓ On his screen, does a comp stay out when every other member goes in? If that is Sean's call, say so and I will put it to him. |
+
+**Not in this round:** summary mode's switch (your Round 67: you won't draw it; Sean, 23 Sep: nothing on summary
+mode now) and the client quote with ranges — Sean: it comes to you after this round returns, because what a group
+turns out to be may change what a quote should look like.
+
+### 9 · Only his iPad can say
+
+None of Session 14 is on the live site until the next push.
+
+- **The box in Dark, and its normal-weight words (14.1)** — your ask; §1.
+- The box above the select bar (14.2); the Undo list's money in one colour, in both themes (14.3).
+- The field's words and the gap over Details, sideways (14.4).
+- A long product name on a recipe card, and a long client name on an invoice card, in a narrow window (14.5) —
+  only if he uses two apps side by side; at his full screen everything fits one line.
+- The rate words on his own products and preps (14.6); and two numbers off `/debug/rates` for §4 #14 (14.7).
+- Still open from Session 13: whether the Magic Keyboard's shortcut strip shortens Safari's view (13.9); Tab and
+  Escape in Event details' Notes (13.6); the rest.
+
+## What I need back
+
+1. **§0** — only whether anything else in the box follows Sean's normal weight. With his answer to your ask #1,
+   §1.
+2. **#7 and #8** — the two stops: the cut name *"shows it whole when tapped"*, and the editors' headers.
+3. **#1–#5** — the box and the list: 7C's colour, the pressed row, the drawer at half, no bottom bar from 1024, the
+   shadow.
+4. **#14–#21** — rates: `about` on a per-item price the app works out (the premise), an exact division, the
+   override, preps' units and label, the two *per ounce* sentences, the free card's only money, and the breaks at
+   390.
+5. **§6** — the comp's small holds, a–l.
+6. **§7** — what Start from a template does on an empty invoice, and whether the false sentence goes now.
+7. **§8** — Custom Group Lines: the whole path, drawn. Nothing is built before it.
+8. The rest, in any order. Nothing else is blocked on them.
+9. Still with you: Round 61's two questions (row AC) and the volume sentence (AD).
 
 ---
 
