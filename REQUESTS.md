@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `f7e737f`** — §145–§147, built from your Round 72, each with its review, and their records (§148, reviewed). ⚠️ **Not pushed while Round 73 is a draft:** `34ca8b0` is the last app commit you can read — after `139e265`, Sean's tick and note on checks 1.1 and 1.2 (`2bb6856`), the wishlist's 7 Oct entries in his words (`a6ac438`), §143 (the top bar off the paper) and its records (§144) — and this line is re-checked before Round 73 goes. *Until 8 Oct this line read `139e265`, the code `c476989`'s.* ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `0a03c7b`** — the code is `1401325`'s, the last commit to touch it: §145–§147, built from your Round 72, each with its review; `f7e737f`'s tree holds the same code with §148's records. After `1401325`, `07d9687` and `f7e737f` (§148 and its review), `b48e5aa` (Session 14 on the live site) and `0a03c7b` (Sean's checks 14.1 and 1.2) changed only notes and records — `git log --stat`, nothing under `src/` or `scripts/`. *Until 8 Oct this line read `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -99,8 +99,8 @@ is left and whose it is, and the rows are back in date order.
 | AK | ~~**Round 69 — your Round 68 is built except the tab strip; the 660 name column (422 — the note does not fit) and `/style/workingcheck` at 672 (466.79); Sean's answers; sixteen stops; and check 9.1, the Builder on his iPad** — 660 with 170 of desk each side, as `r68a` draws it; keyboards 566 sideways and 456 upright, so the picker never takes over at full screen; the Home Screen app loses 54 to a browser bar on the Builder (mine). ⚠️ **Rewritten 29 Sep after your Round 68 reply** — the 04:15 draft (`50ef8f3`) predated it. ❓ which height a frame is judged at (1068 at rest / 1143 / 1168 sideways, 1468 / 1568 upright — he uses Safari and the Home Screen app about equally and prefers the taller); ❓ a frame of the Builder's top at 1600 with tabs; confirm the layouts below 1024 stand for a window; ✅ your Round 68 §8's four layout rulings can go ahead ⚠️ **And Sean wants the sideways invoice a bit wider than 660 — What I need back #1.**~~ | **29 Sep** | ✅ **ANSWERED — your `ROUND-69.md` and frame `r69a`–`r69c`, in the design bundle. BUILT §118–§124 on `main`, pushed (checked 30 Sep)** — each reviewed, and §125 fixed the invoice numbers' start. Your two asks, what stopped and what the building found are Round 70 |
 | AL | ~~**Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo, retaken on the fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23).~~ | **29 Sep** (drafted), **30 Sep** (his word, §4, §5, the photo; sent) | ✅ **ANSWERED — your `ROUND-70.md` and frame `r70a`–`r70d`, in the design bundle's `ROUND-71/`. BUILT §130–§135 on `main`, pushed (checked 30 Sep)** — each reviewed. Your §6 is Sean's answer too (*"nothing"*, 30 Sep). Three stops, what the building found, and Sean's word on `r70a` are Round 71 |
 | AM | ~~**Round 71 — your Round 70 is built, in six batches (§130–§135); Sean on Return: *"Let's go with Design's recommendation: nothing."*; Sean on `r70a` and `r70b`: *"All 1-6 are good to go."*; ❓ he wants a toast for Undo and Redo; three stops and twenty things back** — ❓ **the toast first (§0): he wants it *"easier to see (to catch attention)"* than the footer's line, and it reverses your Round 66 §5 and Round 70 #22 — please draw it**; ⛔ #19's Restore on a trash row below 640 (hiding the amount is not enough), #14's one search per segment (the picker's reaches recipes off the menu), #22's line on a phone; Redo's greyed edge (frame `#D8D2C8` vs prose `--control-line`) and Undo's own empty look; `r70a`'s one-line rows; our label words; dark at 4.03:1; the bar's Tab inside a sheet; `r70b`'s totals run the wrong way.~~ | **30 Sep** (drafted; his word on 12.1 and the toast; sent) | ✅ **ANSWERED — your `ROUND-71.md` and frame `r71a`–`r71b`, in the design bundle's `ROUND-72/`. BUILT §138–§141 on `main`, pushed (checked 1 Oct)** — each reviewed. Your two asks of Sean (the box on his iPad; the rates over his catalogue), three stops and what the building found are Round 72 |
-| AN | ~~**Round 72 — your Round 71 is built, in four batches (§138–§141); Sean on the box: *"not life or death"*; his catalogue: 9 package rates and 2 recipe-row rates would drop; twenty things back, five of them stops** — ⛔ the field's words (your Round 70 #14 *`Search 314 products`* vs Round 71 #2 *`Add a product or cocktail`*), the field over Details (its row never drawn without it), the swap's fit below 1024 (a bottom sheet lifted off the edge), ⛔ a card with no rate and the states with no one unit; the box in dark at 1.71:1, the frame's 54 against 49.25, the keyboard at every width, the bars from 600 up, the phone's drawer at full; rates — `Cost per L`, `about` on `each`, a free product's `$0.00`, the narrow card, and where a rate beside a total shows.~~ | **1 Oct** (drafted; his word on the box and his catalogue's counts; sent) | ✅ **ANSWERED — your `ROUND-72.md` and frame `r72a`–`r72c`, in the design bundle's `ROUND-73/` (7 Oct). BUILT §145–§147 on `main`, not yet pushed** — each reviewed. Your two asks (the box in dark on his iPad; the dark contrast reading), what stopped and what the building found are Round 73 |
-| AO | 🔴 **Round 73 — your Round 72 is built, in three batches (§145–§147); Sean's call: the box's words at normal weight — his decision, reversing `r71a`'s semibold; the box in dark 6.75:1 on the sheet, its words 7.06:1; ⏳ Sean on the box in dark; twenty-one things back, two of them stops; and the three you named next** — ⛔ the cut name *"shows it whole when tapped"* (the row takes no tap), ⛔ whether an editor's header is a card's heading; 7C's colour and the pressed row; the drawer at half; `about` on a per-item price the app works out (your `$0.40 each` was 12 limes for $4.80), an exact division, the override, preps' units; the breaks at 390; the comp's small holds a–l; what *Start from a template* does on an empty invoice; Custom Group Lines — the whole path, drawn, before any code. | **8 Oct** (drafted; not sent) | 🔴 **DRAFT — not sent. Waits on Sean's 14.1 (the box in Dark) and the push** |
+| AN | ~~**Round 72 — your Round 71 is built, in four batches (§138–§141); Sean on the box: *"not life or death"*; his catalogue: 9 package rates and 2 recipe-row rates would drop; twenty things back, five of them stops** — ⛔ the field's words (your Round 70 #14 *`Search 314 products`* vs Round 71 #2 *`Add a product or cocktail`*), the field over Details (its row never drawn without it), the swap's fit below 1024 (a bottom sheet lifted off the edge), ⛔ a card with no rate and the states with no one unit; the box in dark at 1.71:1, the frame's 54 against 49.25, the keyboard at every width, the bars from 600 up, the phone's drawer at full; rates — `Cost per L`, `about` on `each`, a free product's `$0.00`, the narrow card, and where a rate beside a total shows.~~ | **1 Oct** (drafted; his word on the box and his catalogue's counts; sent) | ✅ **ANSWERED — your `ROUND-72.md` and frame `r72a`–`r72c`, in the design bundle's `ROUND-73/` (7 Oct). BUILT §145–§147 on `main`, pushed (checked 9 Oct)** — each reviewed. Your two asks (the box in dark on his iPad; the dark contrast reading), what stopped and what the building found are Round 73 |
+| AO | 🔴 **Round 73 — your Round 72 is built, in three batches (§145–§147); Sean's call: the box's words at normal weight — his decision, reversing `r71a`'s semibold; the box in dark 6.75:1 on the sheet, its words 7.06:1; Sean on the box in dark, his 14.1: *"good"*; twenty-one things back, two of them stops; and the three you named next** — ⛔ the cut name *"shows it whole when tapped"* (the row takes no tap), ⛔ whether an editor's header is a card's heading; 7C's colour and the pressed row; the drawer at half; `about` on a per-item price the app works out (your `$0.40 each` was 12 limes for $4.80), an exact division, the override, preps' units; the breaks at 390; the comp's small holds a–l; what *Start from a template* does on an empty invoice; Custom Group Lines — the whole path, drawn, before any code. | **8 Oct** (drafted), **9 Oct** (his word on 14.1 and 1.2; sent) | 🔴 **OPEN** |
 
 ---
 
@@ -159,6 +159,8 @@ has been bitten by.
 | **Check 13.2 — his catalogue through your Round 71 §5, by `/debug/rates`:** 298 products; 0 cards under $0.01; 1 card at $0.00 (a free water); 9 whole-package rates and 2 of 31 recipe-row rates that would drop; 22 with no rate. Counts only — his products' names and prices stay with implementation | **Round 72 §1** | `c476989`'s code, his catalogue on 1 Oct | ✅ Yes |
 | **Sean's call on the box as built from `r71a` — its words at normal weight:** *"Bold looks clunky. Let’s keep it normal."* Built §145; his decision, not a question | **Round 73 §0** | `07d9687` | ✅ Yes |
 | **The box in dark, as built:** its words 7.06:1 on the fill, the fill 6.75:1 on the sheet (light 9.34 / 9.50); the light shadow in both themes, the app having no dark one | **Round 73 §2** | `07d9687` | ✅ Yes |
+| **Check 14.1 — Sean on the box in dark, on his iPad: *"1 and 2 are good."*** His whole answer; "1" is 14.1, put to him on the live site, sideways, in Dark, after two adds and one Undo, as *"Does the light green box catch your eye without covering anything? Does the writing read right now that it isn't bold?"* — your question, with *"anything"* for *"anything he needs"*, and §0's | **Round 73 §1** | `0a03c7b` | ✅ Yes |
+| **Check 1.2 again, after §143 — the top bar off his PDF:** the "2" of the same answer, put to him as *"redo the PDF check (1.2) to confirm the green bar is gone from the paper"* — the bar only | **Round 73 §5** | `0a03c7b` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -175,25 +177,24 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ---
 
-## 🔴 ROUND 73 — your Round 72 is built, in three batches; Sean's call: the box's words at normal weight; the box in dark at 6.75:1, its words 7.06:1; ⏳ Sean on the box in dark; twenty-one things back, two of them stops; and the three you named next — the comp's small holds, the Templates sentence, Custom Group Lines
+## 🔴 ROUND 73 — your Round 72 is built, in three batches; Sean's call: the box's words at normal weight; the box in dark at 6.75:1, its words 7.06:1; Sean on the box in dark: *"good"*; twenty-one things back, two of them stops; and the three you named next — the comp's small holds, the Templates sentence, Custom Group Lines
 
 
-**implementation → Design, 8 Oct 2026. Branch `main`, app at `f7e737f`** — §145–§147, built from your Round 72,
-each with its review, and their records (§148, reviewed). Design repo at the commit that carries this round.
-Every `file:line` below is at `f7e737f`, and the same at `1401325`, the last code commit.
-
-> ⚠️ **DRAFT — not sent.** It goes once Sean has answered your *"What I need back"* #1 on his iPad (his check
-> 14.1, a ⏳ slot in §1) — and once the app is pushed: `34ca8b0` is the last app commit you can read (§143's fix,
-> §5, and its records), and the sha above is re-checked before this round goes.
+**implementation → Design, 8 Oct 2026, sent 9 Oct. Branch `main`, app at `0a03c7b`** — the code is `1401325`'s:
+§145–§147, built from your Round 72, each with its review. After it, `07d9687` and `f7e737f` (§148, the records,
+and its review), `b48e5aa` (Session 14 on the live site) and `0a03c7b` (Sean's checks 14.1 and 1.2) changed only
+notes and records (`git log --stat`). Design repo at the commit that carries this round. Every `file:line` below
+is at `1401325`, and the same at `0a03c7b`.
 
 Your reply is `ROUND-72.md` and frame `r72a`–`r72c`, in the bundle's `ROUND-73/`. Each batch opened the frame and
 checked your numbers before building from them; each was then reviewed by a second pass that re-ran its fault
 injections, tried the variants it had not, and re-took its measurements on that build's own output. Headless
 Chrome with the app's built CSS and Spectral loaded, both themes wherever colour is the subject, touch emulated
 wherever a gesture is. **Safari was not run** — this Mac cannot drive it — so every piece below owes a look on his
-iPad: his Session 14. **Every review found something, and all of it is fixed**: twice gaps in the checks (§145
-three, §146 four, each found by a fault that went green), and once on screen — §147 had decided your #11's
-premise for you (§4 #14); that review also corrected a width §147 had misreported (§3).
+iPad: his Session 14, of which 14.1 is answered (§1) and 14.2–14.7 are still open. **Every review found something,
+and all of it is fixed**: twice gaps in the checks (§145 three, §146 four, each found by a fault that went green),
+and once on screen — §147 had decided your #11's premise for you (§4 #14); that review also corrected a width
+§147 had misreported (§3).
 
 ### 0 · Sean's call on the box's words — his decision, built
 
@@ -207,17 +208,35 @@ themes. Widths at normal weight, `/style/sheetcheck`: 288 / 300.55 / 321.63 / 44
 `r71a`'s semibold; it is not a question.** It covers the undo box only — the Library's `UndoStrip`
 (`SelectionBar.tsx:266`, `:272`) keeps its semibold words and button.
 
+**On his iPad, 9 Oct:** asked *"Does the writing read right now that it isn't bold?"*, he answered *"good"* — §1.
+
 ❓ **The one thing to ask:** with the words and the money now one weight, should anything else in the box follow —
 or change to keep the two apart? And does the strip follow, so the app's two pop-ups match, as `r72a` says they
 now do in colour?
 
-### 1 · ⏳ Sean on the box in dark — your ask #1
+### 1 · Sean on the box in dark — your ask #1
 
-⏳ **Sean, on his iPad (check 14.1):** *[his words, verbatim, when they come]*
+✅ **Sean, 9 Oct, on his iPad (check 14.1):** *"1 and 2 are good."*
 
-Put to him in your words: in Safari, sideways, Dark, on a copy — add two products, Undo once, read the box, wait;
-again upright; then, if he likes, once in Light. *"In Dark, does it catch your eye without covering anything you need?"* — and,
-for §0, *"does the writing, now that it isn't bold, read right?"*
+That is his whole answer. "1" is check 14.1; "2" is check 1.2 again, the top bar off his PDF (§5). Both were put
+to him on 9 Oct in one message. "1", in these words (its three bullets run together): *"On the live site in
+Safari, held sideways, on a copy of an invoice: Switch to dark mode, tap + on two products, then tap Undo. Does
+the light green box catch your eye without covering anything? Does the writing read right now that it isn't
+bold?"*
+
+So his *"good"* answers two questions:
+
+- **Yours.** You wrote *"without covering anything he needs"*; he was asked *"without covering anything"* — the
+  wider question, so *"good"* to it covers yours.
+- **§0's** — his own call, the words at normal weight, now seen on his screen.
+
+What it does not cover: 14.1's steps 3 and 4 — the box again upright, and once in Light (`IPAD-CHECKS.md`) —
+were not in that message, so they are not reported; nor is anything of 14.2–14.7. The live site has carried
+§145–§147 since 8 Oct: its `/style/sheetcheck` drew the box `bg-accent … text-accent-fg` on 8 Oct, after the push.
+Read again 9 Oct: at 15:52 the box is `bg-accent … text-accent-fg shadow-toast` with no weight class (§145); by
+16:02 `/style/swapcheck`'s names sit in `min-w-0 truncate` spans (§146), and the live script prints a product
+priced per item with `moneyPer(…, "each")`, no `about` — `costing.ts:781` as §147's review left it (§147 before
+its review gave a divided one `about`).
 
 ### 2 · The dark readings — your ask #2
 
@@ -291,7 +310,7 @@ switched off.
 | 11 | §1 #2 | **Below 1024, the drawer's `Add item` at peek opens it to half on the current segment** — and on Details there is now no field. Not his iPad at full screen. | ❓ Open on Products? |
 | 12 | §1 #1, §3 #13, §4 #15 | **Readings, built literally.** At a count of one it reads `Search 1 products`, as the library fields do — no singular ruled. On a first load Cocktails can read `Search 0 cocktails` until the recipes arrive (read in the code, not measured). On a narrow swap to a prep, `· prep` rides with the rate, so only the name gives way. A single word wider than a card's heading now runs past it — `r72c` sets no `overflow-wrap`, so none was added. | Say if any is wrong. |
 | 13 | `r72b` | **The frame and the app differ, and the app was kept.** `r72b` draws the tabs Products · Cocktails · Details; the app, and your HANDOFF, put Details first (`SourceRail.tsx:73`–`:75`). `r72b` draws no magnifier in the field; the app has one. `r72b` sets the field's text at 18; every input renders 16 under `globals.css:897` — already with you. | ❓ Any of them meant? |
-| 14 | §3 #11 | **The premise: your `$0.40 each` was a division.** Round 72 #11 asked about *"`$0.40 each` on a product priced per item"*; that `$0.40` was `check-rate`'s 12 limes for $4.80. So for exactly that product your example (`$0.40 each`) and your rule (*"every rate the app divides carries `about`"*) disagree. §147 built the rule; its review put back your example, since a wrong premise is yours to re-rule, not ours. So **a product priced per item reads with no `about`** — 12 for $4.80 reads `$0.40 each`, as does $0.40 typed for one; the app records which it divided, and `/debug/rates` lists the divided ones. With it: under half a cent, a per-item product reads `< $0.01 each`, a pack's each `under $0.01 each`. His catalogue has 94 products priced per item (Round 72 §1); ⏳ *[how many the app divides, from his check 14.7, if he has read it]*. | ❓ Does a per-item price the app works out from a count say `about`? |
+| 14 | §3 #11 | **The premise: your `$0.40 each` was a division.** Round 72 #11 asked about *"`$0.40 each` on a product priced per item"*; that `$0.40` was `check-rate`'s 12 limes for $4.80. So for exactly that product your example (`$0.40 each`) and your rule (*"every rate the app divides carries `about`"*) disagree. §147 built the rule; its review put back your example, since a wrong premise is yours to re-rule, not ours. So **a product priced per item reads with no `about`** — 12 for $4.80 reads `$0.40 each`, as does $0.40 typed for one; the app records which it divided, and `/debug/rates` lists the divided ones. With it: under half a cent, a per-item product reads `< $0.01 each`, a pack's each `under $0.01 each`. His catalogue has 94 products priced per item (Round 72 §1); how many of those the app divides is **not available**: check 14.7, which reads it off `/debug/rates`, is not in his 9 Oct answer, which covers 14.1 and 1.2 only. So the question stands on that reading: 94 per item, the divided share unknown. | ❓ Does a per-item price the app works out from a count say `about`? |
 | 15 | §3 #11, #12 | **An exact division keeps `about`.** A pack of 24 bags at $24 reads `about $1.00 each` (`check-rate`). Rule 5's words reach it; #12's reason — *"nothing is rounded and `about` would be untrue"* — would reach it too. | ❓ |
 | 16 | Round 71 §5 rule 1, §3 #11 | **The override is a rate he typed, and still says `about`** — `about $1.10/fl oz`, as §141 built it. Rule 1 puts `about` on every volume card; #11 says a price he typed never gets it. Pinned in `check-rate` where it is. | ❓ |
 | 17 | §4 #20 (c) | **A prep that yields a weight or a count keeps its own unit**, now with `about` (`prepCost.ts:276`–`:282`): a kilogram yield `about $2.30/kg`; a gram yield per gram, where a weighed product's card climbs to the kilogram (§115); a counted yield `about $0.19/each`, where a product reads `$0.40 each`. Read in the code. | ❓ Does a prep follow the products here too? |
@@ -310,7 +329,14 @@ across page 1 of every invoice, prep sheet and recipe sheet since the print rout
 the mark (not `header` in the CSS list — the invoice's letterhead is a `<header>` too), and `<main>`'s bottom-bar
 clearance is zeroed on paper, which removes a blank last page at some lengths. On screen nothing changed. New
 check, `check-print`. 1.2's own *Good* already ruled *"No app furniture anywhere on the paper"*, so nothing here is
-yours; it is live (read 8 Oct), and 1.2 waits on his next PDF.
+yours; it is live (read 8 Oct, and again 9 Oct at 15:52: the top bar on `/style/sheetcheck` is
+`<header data-print="hide">`).
+
+✅ **Sean re-checked 1.2, 9 Oct, after the fix** — put to him as *"redo the PDF check (1.2) to confirm the green
+bar is gone from the paper"*. His answer is the "2" of *"1 and 2 are good."* (§1): the bar is gone from his PDF.
+He named no other fault. The message named the bar only, and not where to print from, so nothing here says
+which copy of the app he used, or that he went through the rest of 1.2's list (the header on pages 2 and 3, the
+columns, no blank last page).
 
 ### 6 · The comp's small holds (§101–§105) — held since Round 69, yours
 
@@ -328,7 +354,7 @@ counts were closed by §112 — your Round 68 §5 (C5) ruled the record also kee
 | e | `r64a`, `r67a` | **The footer clause's colour.** `r64a` draws `· $40.00 comped` accent and semibold; `r67a` draws it plain, in the line's grey. Built as `r64a` (`InvoiceSheet.tsx:758`) — the frame that ruled the footer's look; `r67a` answered where the clause goes, and leaves out Send too. | ❓ Which? |
 | f | `r67a` | **`Packed` beside `Comp`.** `r67a` draws `Packed` quiet and captions the pair *"Quiet, then accent"*; the app's Packed chip is the filled tone (`procurement.ts:79`–`:80`, `ProcurementBar.tsx:97`), pinned since §19 — so a packed comp shows a filled green chip beside a tinted green one. Order as ruled; Packed's tone untouched. | ❓ |
 | g | `r67a` | **A priceless line's meta and dash.** `r67a` draws `No price · tray` in a muted grey (`#6E685D`) and its dash in `#5F594E`, the app's `--text-muted`; the app says `no cost data · tray` (`InvoiceSheet.tsx:412`), dash at full contrast, on every uncosted line. Nothing in the prose rules either. | ❓ |
-| h | Round 66 §9 | **From Archived, the stage list offers every track stage, Complete included**, whatever it was archived from (`StageMenu.tsx:83`–`:85`). With §9 applied — leaving the archive is ungated — an invoice archived from Draft reaches Complete with no gate and no record: the state of every invoice completed before 28 Sep, by a way in that never asked. | ❓ |
+| h | Round 66 §9 | **From Archived, the stage list offers every track stage, Complete included**, whatever it was archived from (`StageMenu.tsx:86`, `:102`, `:108`; ungated at `Builder.tsx:424`, `:438`). With §9 applied — leaving the archive is ungated — an invoice archived from Draft reaches Complete with no gate and no record: the state of every invoice completed before 28 Sep, by a way in that never asked. | ❓ |
 | i | — | **The newest record unreadable, an older one not:** the gate names the older date (`latestCompletedRecord`, `types.ts:1938`, the last readable one). | Fine? |
 | j | Round 67 A5c, `r67b` | **The Replaces row's glyph:** `r67b` draws it grey; the app's note glyph is gold (`GateDialog.tsx:175`). Built as the app's, per A5c. | ❓ |
 | k | Round 67 A3h | **A comp priced, at a quantity of 0** (or a negative figure) is uncounted, so it would get *"1 comped line has no cost recorded"* — untrue: its cost is recorded, and is zero (`types.ts:1668`–`:1669`, `:1678`–`:1683`). A3h ruled one count for a missing price and an unreadable quantity, not a readable zero. | ❓ Its words? |
@@ -428,7 +454,7 @@ overrule him; each is a reader you have to rule a group's look for.
 | 5 | **The data-health page** | `invoice.category.unlisted` (`dataAudit.ts:155`) reports every section whose category is not in the nine, as *"Known and expected"* — so it would fire every time the feature works. | ❓ What should it say about a typed category? |
 | 6 | **How membership is remembered** | Members inside the group need no identity but blind the readers above. Members left in place need a new hidden tag on every line, because rows are addressed by position with the name as a guard (§80, §83, §85) — and a deletion shifts positions, and nothing makes a product's name unique. The tag rides inside the invoice, so it is a one-time fill-in, not a migration of separate records. | ❓ Which — both costs stated, no recommendation carried in. |
 | 7 | **The ⋮ menu's eleventh row** (his first door) | Up to ten rows at `min-h-[52px]` (`InvoiceOptionsMenu.tsx:132`), in a `w-[300px] overflow-hidden` box (`:139`) with no scroller, opening upward from the footer. Arithmetic off the classes, not a device measurement — his iPad is the check. | ❓ Does it take an eleventh? |
-| 8 | **A standing ruling it reopens** | Sean, 10 Aug, had *Move to category* removed from invoice lines — he picks categories in the libraries, and two places to set one fact is how they drift. `check-invoice-edits.mjs:169`–`:171` asserts it. A group's category comes from neither. | ❓ Told so you rule it reopened, not worked around. |
+| 8 | **A standing ruling it reopens** | Sean, 10 Aug, had *Move to category* removed from invoice lines — he picks categories in the libraries, and two places to set one fact is how they drift. `check-invoice-edits.mjs:169`–`:178` asserts it. A group's category comes from neither. | ❓ Told so you rule it reopened, not worked around. |
 | 9 | **A comped line in a group** — your Round 67 A8, carried | Your Round 64 reply (`r64e`): a comped line is never absorbed into a group — on his screen it stays visible under the group; on paper it prints on its own line, `Complimentary`, directly below it, and the group's total leaves out its cost. Sean's answer: members disappear into the group. | ❓ On his screen, does a comp stay out when every other member goes in? If that is Sean's call, say so and I will put it to him. |
 
 **Not in this round:** summary mode's switch (your Round 67: you won't draw it; Sean, 23 Sep: nothing on summary
@@ -437,21 +463,23 @@ turns out to be may change what a quote should look like.
 
 ### 9 · Only his iPad can say
 
-None of Session 14 is on the live site until the next push.
+Session 14 is on the live site since 8 Oct (§1); 14.1 is answered and 14.2–14.7 are still open.
 
-- **The box in Dark, and its normal-weight words (14.1)** — your ask; §1.
+- ✅ **The box in Dark, and its normal-weight words (14.1)** — answered 9 Oct, §1; not upright or in Light.
+  ✅ **1.2 again**, the top bar off his PDF — gone, 9 Oct, §5.
 - The box above the select bar (14.2); the Undo list's money in one colour, in both themes (14.3).
 - The field's words and the gap over Details, sideways (14.4).
 - A long product name on a recipe card, and a long client name on an invoice card, in a narrow window (14.5) —
   only if he uses two apps side by side; at his full screen everything fits one line.
-- The rate words on his own products and preps (14.6); and two numbers off `/debug/rates` for §4 #14 (14.7).
+- The rate words on his own products and preps (14.6); and two numbers off `/debug/rates` for §4 #14 (14.7) —
+  not in his answer; #14 stands without them.
 - Still open from Session 13: whether the Magic Keyboard's shortcut strip shortens Safari's view (13.9); Tab and
   Escape in Event details' Notes (13.6); the rest.
 
 ## What I need back
 
 1. **§0** — only whether anything else in the box follows Sean's normal weight. With his answer to your ask #1,
-   §1.
+   §1: *"1 and 2 are good."* — "1" is 14.1, both questions as put to him.
 2. **#7 and #8** — the two stops: the cut name *"shows it whole when tapped"*, and the editors' headers.
 3. **#1–#5** — the box and the list: 7C's colour, the pressed row, the drawer at half, no bottom bar from 1024, the
    shadow.
