@@ -100,7 +100,7 @@ is left and whose it is, and the rows are back in date order.
 | AL | ~~**Round 70 — your Round 69 is built, in seven batches (§118–§125); Sean: *"720 looks fine for now"*; the photo, retaken on the fix; two faults he found on his iPad, fixed (§127, §128); ❓ where Redo goes; twenty-four things back** — the search field's 2px border (#1) and the locked invoice's disabled Trash row (#2) are the two builds that wait on you; Redo (#24) is Sean's own ask; the sheets' feet and the 62-vs-56 bottom bar below 1024; four on the formatting bar; Return on his Magic Keyboard; three on the Undo list (#21–#23).~~ | **29 Sep** (drafted), **30 Sep** (his word, §4, §5, the photo; sent) | ✅ **ANSWERED — your `ROUND-70.md` and frame `r70a`–`r70d`, in the design bundle's `ROUND-71/`. BUILT §130–§135 on `main`, pushed (checked 30 Sep)** — each reviewed. Your §6 is Sean's answer too (*"nothing"*, 30 Sep). Three stops, what the building found, and Sean's word on `r70a` are Round 71 |
 | AM | ~~**Round 71 — your Round 70 is built, in six batches (§130–§135); Sean on Return: *"Let's go with Design's recommendation: nothing."*; Sean on `r70a` and `r70b`: *"All 1-6 are good to go."*; ❓ he wants a toast for Undo and Redo; three stops and twenty things back** — ❓ **the toast first (§0): he wants it *"easier to see (to catch attention)"* than the footer's line, and it reverses your Round 66 §5 and Round 70 #22 — please draw it**; ⛔ #19's Restore on a trash row below 640 (hiding the amount is not enough), #14's one search per segment (the picker's reaches recipes off the menu), #22's line on a phone; Redo's greyed edge (frame `#D8D2C8` vs prose `--control-line`) and Undo's own empty look; `r70a`'s one-line rows; our label words; dark at 4.03:1; the bar's Tab inside a sheet; `r70b`'s totals run the wrong way.~~ | **30 Sep** (drafted; his word on 12.1 and the toast; sent) | ✅ **ANSWERED — your `ROUND-71.md` and frame `r71a`–`r71b`, in the design bundle's `ROUND-72/`. BUILT §138–§141 on `main`, pushed (checked 1 Oct)** — each reviewed. Your two asks of Sean (the box on his iPad; the rates over his catalogue), three stops and what the building found are Round 72 |
 | AN | ~~**Round 72 — your Round 71 is built, in four batches (§138–§141); Sean on the box: *"not life or death"*; his catalogue: 9 package rates and 2 recipe-row rates would drop; twenty things back, five of them stops** — ⛔ the field's words (your Round 70 #14 *`Search 314 products`* vs Round 71 #2 *`Add a product or cocktail`*), the field over Details (its row never drawn without it), the swap's fit below 1024 (a bottom sheet lifted off the edge), ⛔ a card with no rate and the states with no one unit; the box in dark at 1.71:1, the frame's 54 against 49.25, the keyboard at every width, the bars from 600 up, the phone's drawer at full; rates — `Cost per L`, `about` on `each`, a free product's `$0.00`, the narrow card, and where a rate beside a total shows.~~ | **1 Oct** (drafted; his word on the box and his catalogue's counts; sent) | ✅ **ANSWERED — your `ROUND-72.md` and frame `r72a`–`r72c`, in the design bundle's `ROUND-73/` (7 Oct). BUILT §145–§147 on `main`, pushed (checked 9 Oct)** — each reviewed. Your two asks (the box in dark on his iPad; the dark contrast reading), what stopped and what the building found are Round 73 |
-| AO | 🔴 **Round 73 — your Round 72 is built, in three batches (§145–§147); Sean's call: the box's words at normal weight — his decision, reversing `r71a`'s semibold; the box in dark 6.75:1 on the sheet, its words 7.06:1; Sean on the box in dark, his 14.1: *"good"*; twenty-one things back, two of them stops; and the three you named next** — ⛔ the cut name *"shows it whole when tapped"* (the row takes no tap), ⛔ whether an editor's header is a card's heading; 7C's colour and the pressed row; the drawer at half; `about` on a per-item price the app works out (your `$0.40 each` was 12 limes for $4.80), an exact division, the override, preps' units; the breaks at 390; the comp's small holds a–l; what *Start from a template* does on an empty invoice; Custom Group Lines — the whole path, drawn, before any code. | **8 Oct** (drafted), **9 Oct** (his word on 14.1 and 1.2; sent) | 🔴 **OPEN** |
+| AO | 🔴 **Round 73 — your Round 72 is built, in three batches (§145–§147); Sean's call: the box's words at normal weight — his decision, reversing `r71a`'s semibold; the box in dark 6.75:1 on the sheet, its words 7.06:1; Sean on the box in dark, his 14.1: *"good"*; twenty-one things back, two of them stops; and the three you named next** — ⛔ the cut name *"shows it whole when tapped"* (the row takes no tap), ⛔ whether an editor's header is a card's heading; 7C's colour and the pressed row; the drawer at half; `about` on a per-item price the app works out (your `$0.40 each` was 12 limes for $4.80), an exact division, the override, preps' units; the breaks at 390; the comp's small holds a–l; what *Start from a template* does on an empty invoice; Custom Group Lines — the whole path, drawn, before any code. Sean asks for several mock-ups of Start from a template and of Custom Group Lines, look and mechanics (9 Oct). | **8 Oct** (drafted), **9 Oct** (his word on 14.1 and 1.2; sent) | 🔴 **OPEN** |
 
 ---
 
@@ -177,7 +177,7 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ---
 
-## 🔴 ROUND 73 — your Round 72 is built, in three batches; Sean's call: the box's words at normal weight; the box in dark at 6.75:1, its words 7.06:1; Sean on the box in dark: *"good"*; twenty-one things back, two of them stops; and the three you named next — the comp's small holds, the Templates sentence, Custom Group Lines
+## 🔴 ROUND 73 — your Round 72 is built, in three batches; Sean's call: the box's words at normal weight; the box in dark at 6.75:1, its words 7.06:1; Sean on the box in dark: *"good"*; twenty-one things back, two of them stops; and the three you named next — the comp's small holds, the Templates sentence, Custom Group Lines — and Sean asks for several mock-ups of both
 
 
 **implementation → Design, 8 Oct 2026, sent 9 Oct. Branch `main`, app at `0a03c7b`** — the code is `1401325`'s:
@@ -379,6 +379,10 @@ event details he has already given.
 its client, date and guests (the door 10C describes; a path never drawn); open the Start from sheet as it is; or go
 until the templates work below? And until you rule: the sentence is false, so say if the button should go now.
 
+❓ **Sean, 9 Oct, verbatim:** *"I want multiple mock-ups for the look and “mechanics” of the “Start from a template” AND “Custom Group Lines”."* So for this door, please
+draw **more than one** answer to the question above — how each looks, and how it works tap by tap — and say which you
+would pick. He chooses between your drawings.
+
 **Not asked now, for awareness — as Round 67 D5 told you.** Sean, 27 Sep, in his own words in chat: *"I mean invoice
 templates (and KITS)."* (`WISHLIST.md`, *Sean's answers*, B7 and B11, records it as the *"BIG job"* templates being
 **invoice templates, and KITS**) — the templates exist but cannot be renamed,
@@ -457,6 +461,11 @@ overrule him; each is a reader you have to rule a group's look for.
 | 8 | **A standing ruling it reopens** | Sean, 10 Aug, had *Move to category* removed from invoice lines — he picks categories in the libraries, and two places to set one fact is how they drift. `check-invoice-edits.mjs:169`–`:178` asserts it. A group's category comes from neither. | ❓ Told so you rule it reopened, not worked around. |
 | 9 | **A comped line in a group** — your Round 67 A8, carried | Your Round 64 reply (`r64e`): a comped line is never absorbed into a group — on his screen it stays visible under the group; on paper it prints on its own line, `Complimentary`, directly below it, and the group's total leaves out its cost. Sean's answer: members disappear into the group. | ❓ On his screen, does a comp stay out when every other member goes in? If that is Sean's call, say so and I will put it to him. |
 
+❓ **Sean, 9 Oct, verbatim:** *"I want multiple mock-ups for the look and “mechanics” of the “Start from a template” AND “Custom Group Lines”."* So for the feature as a whole,
+please draw **more than one** way it could look and work — each as the whole path of taps above (#1), from both doors
+to the client's paper and back out — and say which you would pick, and how #2–#9 differ between them where they do.
+He chooses between your drawings. Nothing is built until he has.
+
 **Not in this round:** summary mode's switch (your Round 67: you won't draw it; Sean, 23 Sep: nothing on summary
 mode now) and the client quote with ranges — Sean: it comes to you after this round returns, because what a group
 turns out to be may change what a quote should look like.
@@ -487,8 +496,10 @@ Session 14 is on the live site since 8 Oct (§1); 14.1 is answered and 14.2–14
    override, preps' units and label, the two *per ounce* sentences, the free card's only money, and the breaks at
    390.
 5. **§6** — the comp's small holds, a–l.
-6. **§7** — what Start from a template does on an empty invoice, and whether the false sentence goes now.
-7. **§8** — Custom Group Lines: the whole path, drawn. Nothing is built before it.
+6. **§7** — what Start from a template does on an empty invoice, drawn as **more than one mock-up**, look and
+   mechanics, for Sean to choose (his ask, 9 Oct); and whether the false sentence goes now.
+7. **§8** — Custom Group Lines: the whole path, drawn as **more than one mock-up**, look and mechanics, for Sean to
+   choose (his ask, 9 Oct). Nothing is built before he has.
 8. The rest, in any order. Nothing else is blocked on them.
 9. Still with you: Round 61's two questions (row AC) and the volume sentence (AD).
 
