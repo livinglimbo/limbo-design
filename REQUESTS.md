@@ -101,7 +101,7 @@ is left and whose it is, and the rows are back in date order.
 | AM | ~~**Round 71 — your Round 70 is built, in six batches (§130–§135); Sean on Return: *"Let's go with Design's recommendation: nothing."*; Sean on `r70a` and `r70b`: *"All 1-6 are good to go."*; ❓ he wants a toast for Undo and Redo; three stops and twenty things back** — ❓ **the toast first (§0): he wants it *"easier to see (to catch attention)"* than the footer's line, and it reverses your Round 66 §5 and Round 70 #22 — please draw it**; ⛔ #19's Restore on a trash row below 640 (hiding the amount is not enough), #14's one search per segment (the picker's reaches recipes off the menu), #22's line on a phone; Redo's greyed edge (frame `#D8D2C8` vs prose `--control-line`) and Undo's own empty look; `r70a`'s one-line rows; our label words; dark at 4.03:1; the bar's Tab inside a sheet; `r70b`'s totals run the wrong way.~~ | **30 Sep** (drafted; his word on 12.1 and the toast; sent) | ✅ **ANSWERED — your `ROUND-71.md` and frame `r71a`–`r71b`, in the design bundle's `ROUND-72/`. BUILT §138–§141 on `main`, pushed (checked 1 Oct)** — each reviewed. Your two asks of Sean (the box on his iPad; the rates over his catalogue), three stops and what the building found are Round 72 |
 | AN | ~~**Round 72 — your Round 71 is built, in four batches (§138–§141); Sean on the box: *"not life or death"*; his catalogue: 9 package rates and 2 recipe-row rates would drop; twenty things back, five of them stops** — ⛔ the field's words (your Round 70 #14 *`Search 314 products`* vs Round 71 #2 *`Add a product or cocktail`*), the field over Details (its row never drawn without it), the swap's fit below 1024 (a bottom sheet lifted off the edge), ⛔ a card with no rate and the states with no one unit; the box in dark at 1.71:1, the frame's 54 against 49.25, the keyboard at every width, the bars from 600 up, the phone's drawer at full; rates — `Cost per L`, `about` on `each`, a free product's `$0.00`, the narrow card, and where a rate beside a total shows.~~ | **1 Oct** (drafted; his word on the box and his catalogue's counts; sent) | ✅ **ANSWERED — your `ROUND-72.md` and frame `r72a`–`r72c`, in the design bundle's `ROUND-73/` (7 Oct). BUILT §145–§147 on `main`, pushed (checked 9 Oct)** — each reviewed. Your two asks (the box in dark on his iPad; the dark contrast reading), what stopped and what the building found are Round 73 |
 | AO | ~~**Round 73 — your Round 72 is built, in three batches (§145–§147); Sean's call: the box's words at normal weight — his decision, reversing `r71a`'s semibold; the box in dark 6.75:1 on the sheet, its words 7.06:1; Sean on the box in dark, his 14.1: *"good"*; twenty-one things back, two of them stops; and the three you named next** — ⛔ the cut name *"shows it whole when tapped"* (the row takes no tap), ⛔ whether an editor's header is a card's heading; 7C's colour and the pressed row; the drawer at half; `about` on a per-item price the app works out (your `$0.40 each` was 12 limes for $4.80), an exact division, the override, preps' units; the breaks at 390; the comp's small holds a–l; what *Start from a template* does on an empty invoice; Custom Group Lines — the whole path, drawn, before any code. Sean asks for several mock-ups of Start from a template and of Custom Group Lines, look and mechanics (9 Oct).~~ | **8 Oct** (drafted), **9 Oct** (his word on 14.1 and 1.2; sent) | ✅ **ANSWERED — your `ROUND-73.md` and frame `r73a`–`r73h`, in the design bundle's `ROUND-74/` (9 Oct).** Sean picked templates B (`r73b`), groups C (`r73g`) and yes to #9 — Round 74 §0. Your §0–§4 and §5's hide are being built — results in Round 75; B, C and his ask to name a template wait on Round 74 |
-| AP | 🔴 **Round 74 — Sean's picks, *"Okay. B, C, and yes."*: templates B (`r73b`), groups C (`r73g`), a comp stays out of a group; and his own ask: save any invoice as a template under a name, from the invoice list or an open invoice** — ❓ draw it, from both doors (a part never drawn), and rename and delete now or with kits; ⛔ B's five: the template's own guest count, rounding (`r73b` rounds to the nearest, the app up), which lines scale (close to the parked estimator), a hidden line on the preview, the empty invoice's sentence and `Browse products`; ⛔ C's nine: door 2's footer the panel doesn't have, door 1's row 3 against `r73d`'s row 11, a member's panel, the chooser from the ⋮, select mode with groups, the group's bar, the last member, packing, the words; and the rest. | **9 Oct** | 🔴 **OPEN** |
+| AP | 🔴 **Round 74 — Sean's picks, *"Okay. B, C, and yes."*: templates B (`r73b`), groups C (`r73g`), a comp stays out of a group; and his own ask: save any invoice as a template under a name, from the invoice list or an open invoice** — ❓ draw it, from both doors (a part never drawn), and rename and delete now or with kits; ⛔ B's five: the template's own guest count, rounding (`r73b` rounds to the nearest, the app up), which lines scale (close to the parked estimator), a hidden line on the preview, the empty invoice's sentence and `Browse products`; ⛔ C's nine: door 2's footer the panel doesn't have, door 1's row 3 against `r73d`'s row 11, a member's panel, the chooser from the ⋮, select mode with groups, the group's bar, the last member, packing, the words; and the rest. Sean, before it went: scaling a template by guests is an explicit option, held for his Calculator rework — so B is built without scaling and §2 #1–#3 wait. | **9 Oct** | 🔴 **OPEN** |
 
 ---
 
@@ -178,7 +178,7 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ---
 
-## 🔴 ROUND 74 — Sean's picks, *"Okay. B, C, and yes."*: templates B (`r73b`), groups C (`r73g`), a comp stays out of a group; his own ask — save any invoice as a template under a name, from the invoice list or an open invoice — a part never drawn, so please draw it; the naming's gaps, B's and C's — eighteen stops in all; and your other Round 73 rulings, being built now
+## 🔴 ROUND 74 — Sean's picks, *"Okay. B, C, and yes."*: templates B (`r73b`), groups C (`r73g`), a comp stays out of a group; his own ask — save any invoice as a template under a name, from the invoice list or an open invoice — a part never drawn, so please draw it; the naming's gaps, B's and C's — sixteen stops in all — Sean holds scaling, so three of B's wait and one takes their place; and your other Round 73 rulings, being built now
 
 
 **implementation → Design, 9 Oct 2026. Branch `main`, app at `19b81ab`** — the code is `1401325`'s: §145–§147,
@@ -224,6 +224,12 @@ the list is his saved templates, so it is a yes to the screens he was shown — 
 quantities (`Scaled from 150 to 120 guests`), the unticking. What was not put to him is which lines scale: a
 rental, a delivery or a bartender's hours would scale with the guests too, and scaling a template by guests comes
 close to an idea that is parked; §2 #3.
+
+✅ **Sean answered that, 9 Oct, after this round was written and before it was sent:** *"Yes, the template quantities should scale with guest count – but it should be an explicit option, not automatic. I want to hold off on that for now, though because I’m thinking of doing a big rework of the Calculator."* So scaling is an
+**explicit option he turns on, never automatic** — and it is **held** until his Calculator rework. **B is built, for now,
+without scaling:** the preview shows the template's lines as saved. §2 #1–#3 move to ⏭, with the scaling option; one
+question takes their place (§2 #1–#3 note). FYI, not a request: he is *thinking of* a big Calculator rework; nothing about
+it has been put to you yet.
 
 ### 1 · His templates ask — a part never drawn, so please draw it
 
@@ -293,7 +299,11 @@ What the drawing has to settle:
 - Comps never enter or leave a template (`r64e`; `templates.ts:61`–`:64`, `:90`–`:96`, held by `check-comp`), and the
   hide mark is carried (Round 67 A4). Both stand; only how a hidden line looks on the preview is open (#4).
 
-**The gaps.** #1–#5 stop B; #5 also stops part of §5's hide.
+**The gaps.** #4–#5 stop B; #5 also stops part of §5's hide. ⏭ **#1–#3 are held with the scaling option** (§0, Sean:
+*"an explicit option, not automatic… hold off on that for now"*) — kept below for when it comes back. ❓ **In their
+place, one stop:** B without scaling — `r73b`'s header `Scaled from 150 to 120 guests` and each row's `· was N` have
+nothing to say. Does the header become the template's name over its line count, and the row the plain `10 × $24.99`?
+Anything else in `r73b` that rests on scaling?
 
 | # | What | Frame checked | Question | Stops? |
 |---|---|---|---|---|
@@ -431,8 +441,9 @@ answered, saving with a name once §1 is drawn, and C alone, as its own batch, o
 
 1. **§1** — a drawing of making a template with a name, from an open invoice and from the invoice list, settling
    #1–#4 in it; and #5, rename and delete now or with kits.
-2. **§2 #1–#5** — B's five stops: the template's guest count, how a scaled quantity rounds, which lines scale, a
-   hidden line on the preview, and the empty invoice's words (which finishes the hide-now).
+2. **§2** — B's three stops: B without scaling (the note above the gaps — Sean holds scaling, §0), a hidden line on
+   the preview (#4), and the empty invoice's words (#5, which finishes the hide-now). #1–#3 are ⏭ with the scaling
+   option.
 3. **§3 gaps 1–9** — C's nine stops: door 2's footer, door 1's row, a member's panel, the chooser from the ⋮, select
    mode with groups, the group's bar, the last member, packing, the words.
 4. The rest — §1 #6–#8, §2 #6–#13, §3 #10–#19 — in any order. None stops a build now; §1 #8 is needed before C
