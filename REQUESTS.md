@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `124fb62`** — the code is `fc14783`'s, the last commit to touch it: §153–§158 (templates), §160–§167 (your Round 75, and the Retry fix) and §169–§179 (Custom Group Lines), each with its review. After it only `124fb62` (§180, the records) — `git diff --stat fc14783 124fb62 -- src scripts` is empty. Pushed: `origin/main` is `124fb62` (`git ls-remote`, 10 Oct, 13:48). *Until Round 76 this line read `9f21178`, the code `31a78b4`'s (§149–§151, built from your Round 73). Until Round 75 it read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `56cfbe3`** — the code is still `fc14783`'s, the last commit to touch it: §153–§158 (templates), §160–§167 (your Round 75, and the Retry fix) and §169–§179 (Custom Group Lines), each with its review. After it only `124fb62` (§180, the records) and `56cfbe3` (`IPAD-CHECKS.md`, Session 18 on the live site) — `git diff --stat fc14783 56cfbe3 -- src scripts` is empty. Pushed: `origin/main` is `56cfbe3` (`git ls-remote`, 10 Oct, 16:15). *Until Round 77 this line read `124fb62`, the same code. Until Round 76 it read `9f21178`, the code `31a78b4`'s (§149–§151, built from your Round 73). Until Round 75 it read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -103,7 +103,8 @@ is left and whose it is, and the rows are back in date order.
 | AO | ~~**Round 73 — your Round 72 is built, in three batches (§145–§147); Sean's call: the box's words at normal weight — his decision, reversing `r71a`'s semibold; the box in dark 6.75:1 on the sheet, its words 7.06:1; Sean on the box in dark, his 14.1: *"good"*; twenty-one things back, two of them stops; and the three you named next** — ⛔ the cut name *"shows it whole when tapped"* (the row takes no tap), ⛔ whether an editor's header is a card's heading; 7C's colour and the pressed row; the drawer at half; `about` on a per-item price the app works out (your `$0.40 each` was 12 limes for $4.80), an exact division, the override, preps' units; the breaks at 390; the comp's small holds a–l; what *Start from a template* does on an empty invoice; Custom Group Lines — the whole path, drawn, before any code. Sean asks for several mock-ups of Start from a template and of Custom Group Lines, look and mechanics (9 Oct).~~ | **8 Oct** (drafted), **9 Oct** (his word on 14.1 and 1.2; sent) | ✅ **ANSWERED — your `ROUND-73.md` and frame `r73a`–`r73h`, in the design bundle's `ROUND-74/` (9 Oct). BUILT §149–§151 on `main`, pushed (checked 9 Oct)** — your §0–§4 and §5's hide, each reviewed; measured in Round 75 §2, what stopped and what the building found in Round 75 §3. Sean picked templates B (`r73b`), groups C (`r73g`) and yes to #9 — Round 74 §0; B, C and his ask to name a template were answered in your Round 74 (row AP) |
 | AP | ~~**Round 74 — Sean's picks, *"Okay. B, C, and yes."*: templates B (`r73b`), groups C (`r73g`), a comp stays out of a group; and his own ask: save any invoice as a template under a name, from the invoice list or an open invoice** — ❓ draw it, from both doors (a part never drawn), and rename and delete now or with kits; ⛔ B's five: the template's own guest count, rounding (`r73b` rounds to the nearest, the app up), which lines scale (close to the parked estimator), a hidden line on the preview, the empty invoice's sentence and `Browse products`; ⛔ C's nine: door 2's footer the panel doesn't have, door 1's row 3 against `r73d`'s row 11, a member's panel, the chooser from the ⋮, select mode with groups, the group's bar, the last member, packing, the words; and the rest. Sean, before it went: scaling a template by guests is an explicit option, held for his Calculator rework — so B is built without scaling and §2 #1–#3 wait.~~ | **9 Oct** | ✅ **ANSWERED — your `ROUND-74.md` and frame `r74a`–`r74h`, in the design bundle's `ROUND-75/` (10 Oct).** Templates are built next, as ruled — naming from both doors, Replace, rename and delete, B without scaling, the empty invoice's sentence (§2 #5a) — then C alone (Round 75 §0); §1 #8, carrying groups, with C. Your ask of Sean, the `+` sheet's order: he wants it reordered — Round 75 §1, and the drawing is yours (row AQ). Your measured results: Round 75 §2 |
 | AQ | ~~**Round 75 — your Round 74 received: templates built next (naming from both doors, Replace, rename and delete, B without scaling, the empty invoice's sentence), then C as its own build; Sean on the `+` sheet: *"Yes, the order bothers me. Reorder. Build."*; your Round 73's smaller rulings built and measured (§149–§151); eighteen things back, two of them stops** — ❓ draw the `+` sheet's order (reorder, not remove — he chose it); ⛔ a typed 0 in Price (#20: the app saves an emptied Price as 0), ⛔ a comp at a quantity of 0 on its two panels (k); the prep card's second rate (`Makes 1 L · $4.92 per L`), an override past the cent, `under $0.01 each`, the stack's 4, the pack row at 320, the footer's break before `·`; Event details' Client field; `Add item` from 600 to 1023; the loading rule in both segments, the library fields while loading, `Search 1 invoices`, `Search 1 recipe`; the box with no invoice open; the stated line counting a zero; b's two sentences and a charged line's second dash; out of the archive — `Complete unlocks`, the dimmed rows, the old app's archives.~~ | **9 Oct**, night (drafted; sent) | ✅ **ANSWERED — your `ROUND-75.md` and frame `r75a`, in the design bundle's `ROUND-76/` (10 Oct). BUILT §160–§165 on `main`, pushed (checked 10 Oct)** — each reviewed (§161, §163, §165); *"Nothing is left open with me."* Your §4 and §5 close AC and AD. What the building found is Round 76 §2 |
-| AR | 🔴 **Round 76 — your Round 75 built (§160–§165), rows AC and AD closed; templates (§153–§159) and Custom Group Lines, option C (§169–§180), each walked end to end, no total moved; a Retry bug fixed (§166–§167); ninety-five things back, four of them stops** — ⛔ History's card at 390 (`r74b`'s 358 is 350 built); ⛔ `Add lines`' tick, both ticked and greyed, never drawn (`r74g`); ⛔ a long group name on B's preview below 1024 (`r74d` draws no member); ⛔ one `Name & category` Save that renames and moves (no label, no frame); ❓ what he hears when Retry sets a change aside, and five more Retry calls; ❓ which rounding is right past the cent ($0.38 in his footer, $0.39 on the paper); and 84 readings — §1 #2–#26, §2 #1–#17, §4 #4–#44 and #46 | **10 Oct** | 🔴 **OPEN** |
+| AR | ~~**Round 76 — your Round 75 built (§160–§165), rows AC and AD closed; templates (§153–§159) and Custom Group Lines, option C (§169–§180), each walked end to end, no total moved; a Retry bug fixed (§166–§167); ninety-five things back, four of them stops** — ⛔ History's card at 390 (`r74b`'s 358 is 350 built); ⛔ `Add lines`' tick, both ticked and greyed, never drawn (`r74g`); ⛔ a long group name on B's preview below 1024 (`r74d` draws no member); ⛔ one `Name & category` Save that renames and moves (no label, no frame); ❓ what he hears when Retry sets a change aside, and five more Retry calls; ❓ which rounding is right past the cent ($0.38 in his footer, $0.39 on the paper); and 84 readings — §1 #2–#26, §2 #1–#17, §4 #4–#44 and #46~~ | **10 Oct** | ✅ **ANSWERED — your `ROUND-76.md` and frame `r76a`–`r76d`, in the design bundle's `ROUND-77/` (10 Oct).** The four stops drawn (`r76a`–`r76c`, and one step per Save); §2 your recommendation, and Sean said yes — *"Yes for the matching paper. Build."* (Round 77 §0); §3 ruled, with `r76d`. **Being built next, all but `r76d`** — Round 77 §0; its results and the drafts count you asked for in Round 78. Your §3 question — where the pill shows — Round 77 §1, and `r76d` waits on your answer (row AS) |
+| AS | 🔴 **Round 77 — your Round 76 received; Sean on §2: *"Yes for the matching paper. Build."*; everything in it but `r76d` being built, results and the drafts count in Round 78; your §3 question answered: the pill renders only on Library › Products, Cocktails and Prep Recipes (`LibraryHeader.tsx:136`), and in the Builder a given-up save is only the red end of the detail line, `Saved · 3 not synced`, with no Retry — gone when locked or with no invoice open; the Builder banner's `Retry now` does nothing for it** — ❓ place the pill on his iPad, and anything `r76d` needs because of it | **10 Oct** | 🔴 **OPEN** |
 
 ---
 
@@ -177,6 +178,179 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 77 — your Round 76 received; Sean on §2: *"Yes for the matching paper. Build."* — everything in it but `r76d` is being built next, its results and the drafts count in Round 78; your §3 question: the pill shows only on the Library, and in the Builder a given-up save is a red end to the invoice's detail line, with no Retry — please place the pill
+
+
+**implementation → Design, 10 Oct 2026. Branch `main`, app at `56cfbe3`** — no app commit in this round. The code is
+still `fc14783`'s (§179): after Round 76's `124fb62` (§180, the records) there is one commit, `56cfbe3` (`IPAD-CHECKS.md`
+only — Session 18 on the live site), and `git diff --stat fc14783 56cfbe3 -- src scripts` is empty. **Pushed:**
+`origin/main` is `56cfbe3` (`git ls-remote`, 10 Oct, 16:15; this Mac's reflog has the push at 14:14). Design repo at the
+commit that carries this round. Every `file:line` below is at `56cfbe3`, and the same at `fc14783`.
+
+Your reply is `ROUND-76.md` and frame `r76a`–`r76d`, in the bundle's `ROUND-77/`. **This round reads its prose, and
+`r76d`'s words** (§1 c). The build opens `r76a`–`r76c` frame by frame before its code; anything it finds comes back in
+**Round 78**, not here.
+
+### 0 · Your Round 76 — received; Sean on §2; built next
+
+✅ **Received, 10 Oct.** The four stops drawn (`r76a`–`r76c`, and §1's labels table), §2's rounding, §3's six Retry
+rulings with `r76d`, and the readings of §4–§6 — taken as written.
+
+**Sean on §2, your ❓ #1.** The question went to him in implementation's words, not yours — its framing and its example
+are ours. As it was put to him, `…` where this record of it is cut:
+
+> *"Your call: should the total on your screen match the client's paper, to the cent? Today, when a price goes past the
+> cent, the two can differ by a penny. For example, take two lines at 3 × $0.125: The client's paper rounds each line
+> first: $0.38 + $0.38 = $0.76. Your on-screen total adds first, then rounds: $0.75. Design recommends rounding each line
+> first, the way the paper does … Invoices you've already marked Complete stay exactly as they are. I recommend yes."*
+
+✅ **Sean:** *"Yes for the matching paper. Build."*
+
+The example is the code's arithmetic, read: the paper rounds each line, `round2(price * qty)` (`invoiceDocument.ts:187`),
+and adds the rounded lines (`:283`, `:303`) — 3 × 0.125 = 0.375 → $0.38; the footer's subtotal is `computeTotal`
+(`InvoiceSheet.tsx:402`), which adds unrounded `price * qty` (`types.ts:1853`), rounded once when it is shown
+(`money.ts:100`). Round 76 §4 #45's case was three lines of 1 × $0.125 — $0.39 on the paper, $0.38 added first, the
+footer's way (`check-group-fold.mjs:336`–`:340`): the same fault, another case.
+
+**Built next, as you ruled — everything in your Round 76 except `r76d`:** §1's four stops (`r76a`, `r76b`, `r76c`, and
+one undo step per Save with its labels); §2, every figure rounded the paper's way; §3 #4, the trash row's guard; the
+readings, §4–§6. Sean's *"Build"* is the go-ahead. §3 #1 and #2 are `r76d`'s and wait with it, for §1 below.
+
+**Your 🔧 on §2, the count of drafts that would move.** It needs his signed-in data, which implementation reads only
+through the app, never the database — so an owner-only page that counts them, and by how much, is part of this build, as
+`/debug/rates` counted his catalogue (Round 72 §1). **The count comes in Round 78.** He answered without it: the question
+carried none.
+
+**Your #3, Sessions 15–18** — still with Sean: 31 checks, none ticked (`IPAD-CHECKS.md`, read 10 Oct, 16:18 — grep
+`^### \[ \] 1[5-8]\.` 31, `^### \[x\] 1[5-8]\.` 0; 15.8 set aside, 16.4 replaces it). **Your #4**, the client quote,
+comes after this build, in Sean's order.
+
+### 1 · Your ask #2 — where the sync pill shows on his iPad, and what the Builder says when a save is given up
+
+**Yes, but weakly.** In the Builder a given-up save shows only as the red end of the invoice's detail line, under the
+client's name — `Saved · 3 not synced` — with no Retry and no Dismiss; and it is gone on a Complete or archived invoice,
+with no invoice open, and on History, Settings and Reports. **The only control that brings a given-up save back is the
+pill's Retry, on the Library.** The Builder's stuck banner has a `Retry now` that does nothing for one, and its words
+are wrong for it.
+
+**How it was measured.** A copy of the app at `56cfbe3` outside the repo, with one lab page added that renders the real
+components; built, served on this Mac only, measured in headless Chrome 154, Light. The given-up state was forced by
+three made-up given-up records in that page's own browser storage — no sign-in, no database. The repo is untouched (`git
+status` clean). **Chrome, not Safari** (Round 76 §5). Re-measured by this round's review on the same build with its own
+probe — the pill, its Retry and Dismiss at 1600; the save status, detail line, header, sheet, Undo and ⋮ at 1600 and
+1200, the save status and header at 390; the banner at all three widths; the `Retry now` press — each matches its
+figure below. His Home Screen heights, 1600 × 1168 and 1200 × 1568 (no inset), by the review only: the pill, its
+buttons, the save status and the header keep every x, y and width; only the footer's buttons move, 100 lower.
+
+**a · Where the pill renders.** grep `SyncIndicator|LibraryHeader` over `src`:
+
+- `SyncIndicator` is drawn in one app place, `LibraryHeader.tsx:136` (imported `:5`), and `LibraryHeader` by
+  `ProductLibrary.tsx:257`, `CocktailLibrary.tsx:207` and `PrepLibrary.tsx:211`. **So: Library › Products, Cocktails and
+  Prep Recipes, nowhere else** — not the Builder, History, Settings, Reports, the top bar, the sidebar or the bottom bar.
+  Its other renders are the dev pages `/debug/sync` (`SyncLab.tsx:42`) and `/style` (`style/page.tsx:390`).
+- grep `useSyncState|useSaveState|useSyncStuck|getSyncState|SyncIndicator|SyncStuckBanner|getFailedOps|retryFailedOps|failedCount`
+  over `src/app/(app)/history`, `settings`, `reports`, `src/components/settings` and `src/components/nav`: 0 matches.
+  grep `not synced|not saved|waiting to sync|Retry now` over `src`, comments and the debug and style pages left out:
+  only `SyncIndicator.tsx`, `saveState.ts`, `LoadError.tsx` (with them in, six more files, each a comment or a dev page).
+
+**b · What the Builder says when a save is given up.**
+
+| Where | What it says, and when | Evidence |
+|---|---|---|
+| The detail line, under the client's name | `Saved · 3 not synced`, its end in the danger red (measured `rgb(147, 48, 58)`). No Retry, no Dismiss. **Not on a locked invoice:** measured on a Complete one, no status at all — `Oct 17 · 200 guests · Wedding · Complete`. **No invoice open:** `No invoice open`, nothing about saves | `Builder.tsx:165`, `:1380`; `saveState.ts:86`–`:88`; `{!locked && …}` `InvoiceHeader.tsx:210`; `Builder.tsx:1240` |
+| The stuck banner, under the header | Only when something is waiting or given up, something has synced earlier in this session, and that was 5 minutes ago or more. After a reload "last synced" starts empty and is set only by a successful load or a clean flush. **Its count is waiting changes only:** with 3 given up it reads *"0 changes are waiting. They'll go up on their own…"* — false for them. **Its `Retry now` runs the ordinary pass, which returns at once when nothing waits:** measured, 3 given up before the press and after, 0 network requests, the line still `Saved · 3 not synced` | `useSyncStuck.ts:36`, `:48`; `LoadError.tsx:88`, `:90`–`:126`; `sync.ts:98`, `:458`, `:1076`; `Builder.tsx:1389`–`:1395`, `:1393`; `sync.ts:635` |
+| The phone's tab control, below 600 only | `saved · {date}`, whatever the state — at 390 above the header, on screen with the red `Saved · 3 not synced` | `PhoneTabControl.tsx:51` |
+| The open-invoices list (the tab strip's `⌄`, on his iPad too) | `N of 8 open · all saved`, whatever the state | `OpenInvoicesSheet.tsx:126` |
+| Closing the page | The browser's leave-page warning is asked for only while saves are waiting, never for given-up ones | `sync.ts:1245`–`:1246` |
+
+**One state, three wordings:** the pill `3 not saved`, the detail line `Saved · 3 not synced`, the banner *"changes are
+waiting"*. `StaleLine`, the old-copy line, is about a failed refresh, not saves.
+
+**c · "A venue with no signal" — what the code does.** When the iPad knows it is offline, a failed attempt is not counted
+(`sync.ts:1035`–`:1038`), so the save waits — `Saved · N waiting to sync` (`saveState.ts:96`) — and is not given up. A
+save is given up after 6 failures counted while the iPad believes it is online (`MAX_ATTEMPTS`, `sync.ts:58`; `:1057`):
+wifi that reaches nothing, or the server refusing the save. ⚠️ **For `r76d`:** its sheet says *"You made these on this
+iPad while it had no signal."* By the code, no signal alone never gives a change up.
+
+**d · The pill on the Library, measured — 3 given up.**
+
+- **1600 × 1068:** the pill x 902.2, y 100.3, 113.7 × 33.5; with Retry and Dismiss, x 902.2, y 95, 262.9 × 44 — Retry
+  63 × 44 at x 1023.8, Dismiss 70.3 × 44 at x 1094.8. The header row x 560, y 89, 720 wide; the segmented control
+  330.2 × 56, each segment 104.7 × 48. **The given-up state wraps the row onto two lines:** `+ Add product` (142.2 × 48)
+  and Select (48 × 48) drop to y 153, the row 56 → 112 tall, the search row y 157 → 213 (720 × 48). At rest: one line,
+  56 tall, the actions on the right at x 1081.8. Top bar 0–65; sidebar 240.
+- **1200 × 1468:** the same, 200 to the left — the pill x 702.2, the row x 360 — and it wraps too. At rest the actions
+  at x 881.8.
+- **390 × 844:** three lines, 164 tall — the segmented control y 81, the pill and its buttons y 145 (the pill x 16,
+  y 150.3), the actions y 197; the search row y 257; the bottom bar y 782, 62 tall.
+- The pill itself is not a button, 33.5 tall. Its words stay grey, `rgb(71, 66, 57)`; only its 8 dot is red.
+
+| The pill's words (the same element, words swapped) | `Saved` | `Not synced` | `3 not saved` | `12 not saved` | `3 waiting` | `Saving…` | `Save failed` | `5m ago` |
+|---|---|---|---|---|---|---|---|---|
+| Width | 77.3 | 113.7 | 113.7 | 121.7 | 100.9 | 93.4 | 111 | 86.8 |
+
+**e · The Builder's chrome, where something could live — measured, no recommendation.** Default layout — sidebar 240,
+product panel 360 — 3 given up.
+
+| Area | 1600 × 1068 | 1200 × 1468 |
+|---|---|---|
+| Top bar | x 240, 1360 × 65 | x 240, 960 × 65 |
+| Its `Invoice Builder` title | x 264, 125 wide | x 264, 125 wide |
+| Its search field | x 445, 400 × 40 | x 445, 400 × 40 |
+| Settings button | x 1532 | x 1132 |
+| Free, search field to Settings | 687 | 287 |
+| Tab strip | x 240, y 65, 1360 × 45 | x 240, y 65, 960 × 45 |
+| Its tabs | `Pemberton gala` 141.8 and ×, `Harlow & Finch wedding` 190 and ×; `+` at x 679.8; `⌄` at x 1548 | the same; `⌄` at x 1148 |
+| Free in the tab strip, 2 tabs open | 824.2 | 424.2 |
+| Product panel | 360 × 958 | 360 × 1358 |
+| Its search row | y 110, 64 tall — field 284 × 48, collapse 44 × 44 at x 544 | the same |
+| Its Details / Cocktails / Products | y 174, 45 tall | the same |
+| Its category chips | y 225, 44 tall | the same |
+| Invoice sheet | x 740, y 126, 720 wide | x 616, 568 wide |
+| Invoice header — no buttons in it | 718 × 105.2, y 127 | 566 × 105.2 |
+| Its detail line | x 761, y 189.6, 678 × 21.6 | x 637, 526 wide |
+| The save status in it | x 1061.5, 163.7 × 21.3 | x 937.5, 163.7 wide |
+| Invoice footer | y 984, 718 × 84 | y 1384, 566 × 84 |
+| Its count and total | x 765, 217.8 × 55 | x 641, 217.8 wide |
+| Undo, Redo, ⋮ — each 44 × 44 | x 1283, 1335, 1391 | x 1007, 1059, 1115 |
+
+- **Sidebar and product panel both collapsed** (64 and 60; each remembered per device): at 1600 the sheet 720 at x 502,
+  the save status x 823.5, the tab strip 1000 free; at 1200 the sheet 720 at x 302, the save status x 623.5, the tab
+  strip 600 free, Undo x 845, ⋮ x 953.
+- **The stuck banner, when shown:** directly under the header, the sheet's width; 69 tall at 1600, 88.8 at 1200, 152.5
+  at 390; its `Retry now` 112.2 × 44. **A Complete invoice:** its `Reopen` banner at y 231.8, 70 tall.
+- **390 × 844:** the top bar 0–65, search at x 274, Settings at x 330; the phone's tab control x 12, y 73, 366 × 48; the
+  header y 139, 105.2 tall; the save status x 205.3, 163.7 wide, which squeezes the event details to 103.7 (`Oct 17 · 200
+  …`) — at rest `Saved` is 57.6 at x 311.4; the product drawer at rest y 705, 77 tall (total, Undo, Redo), half open y 342,
+  440 tall; the bottom bar y 782, 62 tall.
+
+| The save status's words | `Saved` | `Saved · just now` | `Saved · 2 minutes ago` | `Saving…` | `Saved · 3 waiting to sync` | `Saved · 3 not synced` | `Saved · 12 not synced` |
+|---|---|---|---|---|---|---|---|
+| Width | 57.6 | 134.5 | 174.7 | 74.6 | 197.2 | 163.7 | 172.2 |
+
+**f · The lab's limits.** The banner was forced on: with no sign-in nothing ever syncs, so its 5 minutes can't pass
+naturally — it was fed the real hook's count (0 waiting) and wired to the Builder's own Retry. For the same reason the
+lab's pill reads `Not synced` at rest; the real app's `Saved` width is from the swap above. The lab's top bar reads
+`Limbo`, so the real title was swapped in before the search field was measured; the Products segment is not highlighted
+— colour only, not size. The tab strip's free room depends on how many invoices are open and how long their names are
+(two made-up ones in the lab). The frames — the app's, the Library page's, the Builder's — and the footer's Undo and ⋮
+are copied from their own classes (`AppShell.tsx`, the Library's `layout.tsx`, `Builder.tsx`), not the pages
+themselves, which need a sign-in; the top bar, sidebar, bottom bar, Library, tab strip, product panel, header, sheet,
+Redo, banner and drawer are the real components.
+
+❓ **Please place it** — where the pill, or whatever says a save was given up, shows on his iPad, and on which screens.
+`r76d` waits for it. **Nothing in b is changed by the build that comes next** — the banner's `Retry now` and its count, the
+two lines that always say `saved`, the close warning: none of them is in a ruling yet.
+
+## What I need back
+
+1. ❓ **The pill's place** (§1) — on which screens, and where on each at 1600 × 1068 and 1200 × 1468 — and anything
+   `r76d` needs because of it: the Builder's banner and its `Retry now` (§1 b), the two lines that always say `saved`
+   (§1 b), and `r76d`'s *"while it had no signal"* (§1 c).
+2. Nothing else from this round. The build's results, anything it stops on, and the drafts count come in **Round 78**.
 
 ---
 
