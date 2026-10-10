@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Reflects `limbo-app` at `main` @ `9f21178`** — the code is `31a78b4`'s, the last commit to touch it: §149–§151, built from your Round 73, each with its review. After it only `9f21178` (§152, the records) — `git diff --stat 31a78b4 9f21178 -- src scripts` is empty. Both are pushed: `origin/main` is `9f21178` (`git ls-remote`, 9 Oct, 23:13). *Until Round 75 this line read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
+> **Reflects `limbo-app` at `main` @ `124fb62`** — the code is `fc14783`'s, the last commit to touch it: §153–§158 (templates), §160–§167 (your Round 75, and the Retry fix) and §169–§179 (Custom Group Lines), each with its review. After it only `124fb62` (§180, the records) — `git diff --stat fc14783 124fb62 -- src scripts` is empty. Pushed: `origin/main` is `124fb62` (`git ls-remote`, 10 Oct, 13:48). *Until Round 76 this line read `9f21178`, the code `31a78b4`'s (§149–§151, built from your Round 73). Until Round 75 it read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -88,8 +88,8 @@ is left and whose it is, and the rows are back in date order.
 | Z | ⛔ **Round 57 — hiding a line. SUPERSEDED by Round 64.** The control shipped 20 Sep (§79); Sean has since replaced the whole feature with a comp. ⚠️ **This row said "almost built, only the control is missing" for three days after the control shipped** | **20 Sep** | ⛔ **CLOSED — see AF** |
 | AA | ~~**Round 59 — §81 is BUILT and your check 12 passes.** Your six asks answered, the three tab surfaces named. ⚠️ **AND ROUND 48's CUSTOM PREP SIZE WAS NEVER BUILT — my miss, found because Sean went looking for it**~~ | **21 Sep** | ✅ **ANSWERED — your Round 59. BUILT** — §84 `6d31f1f`, §86 `1a5cece`, §87–§89 `f4526ed`. ⚠️ The naming check was written and never reported until Round 67 §B5 |
 | AB | ~~**Round 60 — Round 48's custom batch size is BUILT.** ⚠️ **Your §2 contradicts itself for a prep that yields a weight**, I resolved it with your own general rule, and **one new sentence needs your word**~~ | **21 Sep** | ✅ **ANSWERED — your Round 60. BUILT** — §90 `2a9f621`. ⚠️ Two faults found since, both mine: the size is saved on the device, and a preset tap erases it — Round 67 §B8 |
-| AC | 🔴 **Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision** | **21 Sep** | 🔴 **OPEN — both questions.** Deferred as *"their own round"* in your Rounds 59, 60, 62 and 63, and listed as still open in 64 and 65 |
-| AD | 🔴 **Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** — *⚠️ corrected: 13, all on the volume sentence (Round 67 §B4)* | **22 Sep** | 🔴 **OPEN — §1 only: the volume sentence** (*"mine, and it is next"*, your Rounds 62 and 63). ✅ Tab order ruled in your Round 62 and BUILT (§91 `6054e76`, §93–§96 `4cc1b6e`). Arrow keys through the suggestions are ruled, not built — the look is Round 67 §C7 |
+| AC | ~~**Round 61 — two products may share a name, and for weeks that decided which invoice line a control acted on.** §83 closed seven of those; **two questions are yours**. ⚠️ **Was mis-numbered 60 and mis-lettered AB — Design caught the collision**~~ | **21 Sep** | ✅ **ANSWERED — your `ROUND-75.md` §4 (10 Oct): B** — two products may share a name, and the editor says so; Leftovers counts them together; §3 a nod. **BUILT §160 `9212a1e`** (review §161 `b7036dd`), pushed (checked 10 Oct). Deferred as *"their own round"* in your Rounds 59, 60, 62 and 63, and listed as still open in 64 and 65. Its readings: Round 76 §2 #1–#8 |
+| AD | ~~**Round 62 — tab order, all four questions across three surfaces**, plus the remedy-list count you asked for: ⚠️ **15 of 21, not `qt` alone** — *⚠️ corrected: 13, all on the volume sentence (Round 67 §B4)*~~ | **22 Sep** | ✅ **ANSWERED — §1, the volume sentence, in your `ROUND-75.md` §5 (10 Oct):** amendment 2 extends to it — the recipe's own unit first, then the first two of `ml`, `L` and `fl oz` that aren't it. **BUILT §164 `57818bc`** (review §165 `e789c03`), pushed (checked 10 Oct); its readings, Round 76 §2 #16–#17. ✅ Tab order ruled in your Round 62 and BUILT (§91 `6054e76`, §93–§96 `4cc1b6e`). Arrow keys through the suggestions are ruled, not built — the look is Round 67 §C7 |
 | AE | ~~**Round 63 — §1a and §4 BUILT.** ⚠️ **Three of your premises are wrong and two of them change the build**: `inert` is not reachable, and Escape does not stop propagating~~ | **22 Sep** | ✅ **ANSWERED — your Round 63, all four. BUILT the same day** — §93–§96 `4cc1b6e`. ⚠️ Never reported until Round 67 §B1. Shift+F10 is Sean's measurement (device check 3.5) |
 | AF | ~~**Round 64 — the hide control is being REPLACED by a comp, and this one is money**~~ | **23 Sep** | ✅ **ANSWERED — `r64a`–`r64e`.** Sean took ⭐ on all four money calls. Shape A. ✅ **The tag IS drawn in `r64a` — an earlier line here said otherwise and was wrong (see the Round 66 correction)** |
 | AG | ~~**Round 65 — §98 built, and ⚠️ A CLAIM I MADE IN ROUND 64 WAS FALSE**~~ | **24 Sep** | ✅ **ANSWERED — `r65a`–`r65b`.** No un-comp at Complete; reopen, change, complete again. §1 and §2 taken |
@@ -102,7 +102,8 @@ is left and whose it is, and the rows are back in date order.
 | AN | ~~**Round 72 — your Round 71 is built, in four batches (§138–§141); Sean on the box: *"not life or death"*; his catalogue: 9 package rates and 2 recipe-row rates would drop; twenty things back, five of them stops** — ⛔ the field's words (your Round 70 #14 *`Search 314 products`* vs Round 71 #2 *`Add a product or cocktail`*), the field over Details (its row never drawn without it), the swap's fit below 1024 (a bottom sheet lifted off the edge), ⛔ a card with no rate and the states with no one unit; the box in dark at 1.71:1, the frame's 54 against 49.25, the keyboard at every width, the bars from 600 up, the phone's drawer at full; rates — `Cost per L`, `about` on `each`, a free product's `$0.00`, the narrow card, and where a rate beside a total shows.~~ | **1 Oct** (drafted; his word on the box and his catalogue's counts; sent) | ✅ **ANSWERED — your `ROUND-72.md` and frame `r72a`–`r72c`, in the design bundle's `ROUND-73/` (7 Oct). BUILT §145–§147 on `main`, pushed (checked 9 Oct)** — each reviewed. Your two asks (the box in dark on his iPad; the dark contrast reading), what stopped and what the building found are Round 73 |
 | AO | ~~**Round 73 — your Round 72 is built, in three batches (§145–§147); Sean's call: the box's words at normal weight — his decision, reversing `r71a`'s semibold; the box in dark 6.75:1 on the sheet, its words 7.06:1; Sean on the box in dark, his 14.1: *"good"*; twenty-one things back, two of them stops; and the three you named next** — ⛔ the cut name *"shows it whole when tapped"* (the row takes no tap), ⛔ whether an editor's header is a card's heading; 7C's colour and the pressed row; the drawer at half; `about` on a per-item price the app works out (your `$0.40 each` was 12 limes for $4.80), an exact division, the override, preps' units; the breaks at 390; the comp's small holds a–l; what *Start from a template* does on an empty invoice; Custom Group Lines — the whole path, drawn, before any code. Sean asks for several mock-ups of Start from a template and of Custom Group Lines, look and mechanics (9 Oct).~~ | **8 Oct** (drafted), **9 Oct** (his word on 14.1 and 1.2; sent) | ✅ **ANSWERED — your `ROUND-73.md` and frame `r73a`–`r73h`, in the design bundle's `ROUND-74/` (9 Oct). BUILT §149–§151 on `main`, pushed (checked 9 Oct)** — your §0–§4 and §5's hide, each reviewed; measured in Round 75 §2, what stopped and what the building found in Round 75 §3. Sean picked templates B (`r73b`), groups C (`r73g`) and yes to #9 — Round 74 §0; B, C and his ask to name a template were answered in your Round 74 (row AP) |
 | AP | ~~**Round 74 — Sean's picks, *"Okay. B, C, and yes."*: templates B (`r73b`), groups C (`r73g`), a comp stays out of a group; and his own ask: save any invoice as a template under a name, from the invoice list or an open invoice** — ❓ draw it, from both doors (a part never drawn), and rename and delete now or with kits; ⛔ B's five: the template's own guest count, rounding (`r73b` rounds to the nearest, the app up), which lines scale (close to the parked estimator), a hidden line on the preview, the empty invoice's sentence and `Browse products`; ⛔ C's nine: door 2's footer the panel doesn't have, door 1's row 3 against `r73d`'s row 11, a member's panel, the chooser from the ⋮, select mode with groups, the group's bar, the last member, packing, the words; and the rest. Sean, before it went: scaling a template by guests is an explicit option, held for his Calculator rework — so B is built without scaling and §2 #1–#3 wait.~~ | **9 Oct** | ✅ **ANSWERED — your `ROUND-74.md` and frame `r74a`–`r74h`, in the design bundle's `ROUND-75/` (10 Oct).** Templates are built next, as ruled — naming from both doors, Replace, rename and delete, B without scaling, the empty invoice's sentence (§2 #5a) — then C alone (Round 75 §0); §1 #8, carrying groups, with C. Your ask of Sean, the `+` sheet's order: he wants it reordered — Round 75 §1, and the drawing is yours (row AQ). Your measured results: Round 75 §2 |
-| AQ | 🔴 **Round 75 — your Round 74 received: templates built next (naming from both doors, Replace, rename and delete, B without scaling, the empty invoice's sentence), then C as its own build; Sean on the `+` sheet: *"Yes, the order bothers me. Reorder. Build."*; your Round 73's smaller rulings built and measured (§149–§151); eighteen things back, two of them stops** — ❓ draw the `+` sheet's order (reorder, not remove — he chose it); ⛔ a typed 0 in Price (#20: the app saves an emptied Price as 0), ⛔ a comp at a quantity of 0 on its two panels (k); the prep card's second rate (`Makes 1 L · $4.92 per L`), an override past the cent, `under $0.01 each`, the stack's 4, the pack row at 320, the footer's break before `·`; Event details' Client field; `Add item` from 600 to 1023; the loading rule in both segments, the library fields while loading, `Search 1 invoices`, `Search 1 recipe`; the box with no invoice open; the stated line counting a zero; b's two sentences and a charged line's second dash; out of the archive — `Complete unlocks`, the dimmed rows, the old app's archives. | **9 Oct**, night (drafted) | 🔴 **OPEN** |
+| AQ | ~~**Round 75 — your Round 74 received: templates built next (naming from both doors, Replace, rename and delete, B without scaling, the empty invoice's sentence), then C as its own build; Sean on the `+` sheet: *"Yes, the order bothers me. Reorder. Build."*; your Round 73's smaller rulings built and measured (§149–§151); eighteen things back, two of them stops** — ❓ draw the `+` sheet's order (reorder, not remove — he chose it); ⛔ a typed 0 in Price (#20: the app saves an emptied Price as 0), ⛔ a comp at a quantity of 0 on its two panels (k); the prep card's second rate (`Makes 1 L · $4.92 per L`), an override past the cent, `under $0.01 each`, the stack's 4, the pack row at 320, the footer's break before `·`; Event details' Client field; `Add item` from 600 to 1023; the loading rule in both segments, the library fields while loading, `Search 1 invoices`, `Search 1 recipe`; the box with no invoice open; the stated line counting a zero; b's two sentences and a charged line's second dash; out of the archive — `Complete unlocks`, the dimmed rows, the old app's archives.~~ | **9 Oct**, night (drafted; sent) | ✅ **ANSWERED — your `ROUND-75.md` and frame `r75a`, in the design bundle's `ROUND-76/` (10 Oct). BUILT §160–§165 on `main`, pushed (checked 10 Oct)** — each reviewed (§161, §163, §165); *"Nothing is left open with me."* Your §4 and §5 close AC and AD. What the building found is Round 76 §2 |
+| AR | 🔴 **Round 76 — your Round 75 built (§160–§165), rows AC and AD closed; templates (§153–§159) and Custom Group Lines, option C (§169–§180), each walked end to end, no total moved; a Retry bug fixed (§166–§167); ninety-five things back, four of them stops** — ⛔ History's card at 390 (`r74b`'s 358 is 350 built); ⛔ `Add lines`' tick, both ticked and greyed, never drawn (`r74g`); ⛔ a long group name on B's preview below 1024 (`r74d` draws no member); ⛔ one `Name & category` Save that renames and moves (no label, no frame); ❓ what he hears when Retry sets a change aside, and five more Retry calls; ❓ which rounding is right past the cent ($0.38 in his footer, $0.39 on the paper); and 84 readings — §1 #2–#26, §2 #1–#17, §4 #4–#44 and #46 | **10 Oct** | 🔴 **OPEN** |
 
 ---
 
@@ -176,6 +177,298 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 76 — your Round 75 is built (§160–§165), and with it Round 61 and the volume sentence — rows AC and AD closed; templates built (§153–§159) and Custom Group Lines, option C (§169–§180), each walked end to end, no total moved; a bug fixed that let Retry write old copies over newer work (§166–§167); ninety-five things back, four of them stops
+
+
+**implementation → Design, 10 Oct 2026. Branch `main`, app at `124fb62`** — the code is `fc14783`'s (§179):
+`git diff --stat fc14783 124fb62 -- src scripts` is empty. **Code** — each touches `src/` or `scripts/`: §153–§158
+(`9a5ab31`…`65352cf`), §160–§167 (`9212a1e`…`bd4e447`), §169–§179 (`e81dd89`…`fc14783`). **Records only** — no file
+under `src/` or `scripts/` (`git show --stat`): `7780477` (Session 15, before §153), `bc13245` (§159), `d33f319` (§168),
+`124fb62` (§180). **Pushed, and live:** `origin/main` is `124fb62` (`git ls-remote`, 10 Oct, 13:48; this Mac's reflog has
+the push at 13:45 — the pushes before it `bc13245` at 03:10, `e789c03` at 06:40, `d33f319` at 07:39), and the live site
+carries it: `/style/sheetcheck`'s 17 scripts, read 13:48 and again 14:07, hold `Prints as one line` (§173), `Add to a
+group line` (§175), `Take out of` (§177) and `limbo:set-aside` (§166). Design repo at the commit that carries this
+round. Every `file:line` under `src/` below is at `124fb62`, and the same at `fc14783`.
+
+**70 checks** (62 at Round 75 — new: `check-templates` §153, `check-dots` §162, `check-revive` §166, `check-group-lines`
+§169, `check-group-paper` §171, `check-group-fold` §173, `check-group-doors` §175, `check-group-panel` §177).
+`SHIP_VERIFY=1 npm run build` at `fc14783`: eslint, 70 checks, `next build`, exit 0, 0 ✗, 5,669 ✓ (§180). **Money:** no
+total moved in any batch — $99.96 billed, $40.00 comped, $6.00 tax, $105.96 at 6%, re-run in each batch or its review,
+and with the gin grouped (§180). Both automatic jobs still off: `AUTO_ARCHIVE_ON` false (`autoArchive.ts:68`),
+`AUTO_DELETE_LIVE_FROM` null (`trash.ts:82`).
+
+Your reply is `ROUND-75.md` and frame `r75a`, in the bundle's `ROUND-76/`. **Every stop below names the frame it was
+checked against, by file and id** — opened again for this round. The frames each batch built against, as its commit and
+its review name them: `r74a`, `r74b` (§153), `r74d`, `r73b`, `r73a` step 2 and HANDOFF 10C (§155), `r74c` (§157), `r75a`
+(§160–§165), `r73d`, `r73e`, `r73g`, `r73h` and `r74d`–`r74h` (§169–§179).
+
+### 0 · Your Round 75 — received and built; rows AC and AD closed
+
+✅ **Received, 10 Oct.** *"Nothing is left open with me"* — taken as written. Sean, 10 Oct: *"Keep working through all
+these."* Built in this order, each batch reviewed by a second pass that re-did all or part of its fault injections (each
+review's commit says how many), added its own with comment controls, and — where there is a screen — re-took its
+measurements on that build's own output:
+
+1. **Templates**, as your Round 74 §1–§2 ruled — §153–§158 (§1 below).
+2. **Your Round 75**, whole — §160–§165 (§2 below; reviews §161 `b7036dd`, §163 `f40d70b`, §165 `e789c03`):
+   - §1 the `+` sheet's order, as `r75a` draws it — §160 `9212a1e`; your 🔧, the file's header comment, carries the order
+     and names Continue's place, last, after the rule.
+   - §2 #1 and #15, the two stops — §162 `7d85bca`. §3 #2–#7 — §162. §3 #8–#18 — §164 `57818bc`.
+   - §4, **Round 61** — §160: B, the editor's sentence; leftovers counted together; §3's nod confirmed as built
+     (check-invoice-edits reads the tick by its row, `pickedSet.has(rowKey)`; check-rowref 2b removes one of two `Ice`
+     rows).
+   - §5, **the volume sentence** — §164; `check-scale`'s pinned unfixed state went red as its comment promised, and your
+     wording is pinned in its place.
+3. **A data-safety bug** the templates build found — §166–§167 (§3 below).
+4. **Custom Group Lines, option C**, its own build with nothing else in it — §169–§179 (§4 below).
+
+**Row AC is closed** by your §4, built in §160; **row AD** by your §5, built in §164. Your 🔧 #1 is this round: what the
+frames get wrong is in §1 and §4. Your 🔧 #2, Session 15 on his iPad, is not done yet — §5.
+
+**Next, in Sean's order** (21 Sep, 27 Sep): the client quote — his words, 21 Sep: *"Let's tackle this after the custom
+group line."* It comes to you after the group-lines round returns (Sean, 23 Sep, as our Round 67 §B3 recorded it) —
+read here as after this round, which carries C's stops — because what a group turns out to be may change what a quote
+should look like (our words, not his).
+
+### 1 · Templates — built against your Round 74 §1–§2
+
+| Your ruling | § · commit (review) | What it does now — measured, unless said |
+|---|---|---|
+| **§1 #1, #3, #4** the naming sheet, its box, a taken name | §153 `9a5ab31` (§154 `17f2f42`) | `Save as a template` / `From {invoice} · N lines`, 512 at 1600 × 1068 (x 544) and 1200 × 1468 (x 344), full width at 390; the field 48, empty and focused on open; `Save template` `aria-disabled` at 0.5 until a name is typed (spaces are none); Return presses it; Escape closes the sheet alone, focus back on the door. The box `Saved Anniversary dinner as a template`, no money, 16.00 above the card's footer at all three sizes, centred to 0.01, 9.34:1 light / 7.06:1 dark, gone at 4.52–4.54 s and with the card. Never in undo: run on an open invoice with a history, neither the history nor the draft changes. `  wedding BAR ` → `r74a` 1′'s sentence word for word and `Replace Wedding bar` (196.03 × 48); `templateNamed` ignores case and the ends (`templates.ts:128`); the id, name, uses, note and any unknown field kept, only the lines replaced. |
+| **§1 #2** History's fourth button | §153 (§154) | 1600 and 1200, one row: Open in a tab 176.41 · Duplicate 180.41 · Save as template 183.19 (its words whole) · the 12 · the bin 48. 600: words shown. Below 600 the glyph alone, its spoken name kept. **390: ⛔ #1.** |
+| **§1 #5** rename and delete | §157 `6a0ca31` (§158 `65352cf`) | A hold on a template in the fill sheet or the `+` sheet's Templates — or a right-click, or the context-menu key on a focused row — opens its panel, 420 × 181.75: `4 categories · 22 items · used 6×`, `Rename…`, `Delete template…` (`--danger`, 7.52:1 / 4.59:1). Rename: `Rename template`, the field filled and selected (0–11); another's name refused — `You already have a template called Corporate happy hour.`, `Rename` greyed, Return does nothing. Delete: `ConfirmDialog` in `r74c`'s words, focus on `Keep it`. Neither is an undo step; neither says a box. A tap still chooses. |
+| **§1 #6, #7**, the glyph | §153 (§154) | ⋮'s row greyed on an empty invoice: 61 tall, `No lines to save`, label 3.29:1 / 4.34:1, a tap reaches nothing; History's button greyed the app's one way. 0-line templates out of every list. `withoutJobMarks` (`types.ts:2564`) clears the comp and the whole packing status on save, apply, both Duplicates and the fill. `TemplateIcon` path for path `r74b`'s; the set 45, and 46 with the group's (§175). |
+| **§1 #8** carrying groups | §169 `e81dd89` | Built with C — §4. |
+| **§2 #4–#13**, #5 (a) and (c) | §155 `7bd6021` (§156 `09fe67d`) | Empty invoice: HANDOFF 10C — the full sentence, `Browse products` 160.27 × 44 filled, `Start from a template` 193.8 × 44 outlined, 12 apart, the pair centred (0.00), stacked at 390; locked or no templates, the (a) sentence and one button. `Fill this invoice from a template`, 672, centred; the preview `4 categories · 22 items · as saved`, `12 × $24.99`, the hidden line's struck `$36.00`, the reminder's dash; Chartreuse unticked → `--text-muted` 6.77:1 / 6.74:1 and `· left out`, the footer `21 of 22 lines · $2,268.04 billed`, `Add 21 lines`; `Add 0 lines` `aria-disabled`. Add: THIS invoice, one undo step `Filled from Wedding bar`, the box `Filled from Wedding bar, 21 lines` · `+$2,268.04` — step, box, footer and total one figure. Keys: Escape back, then closed; focus on the first tick, back on the row; Space ticks; Return adds. Long names never cut. Dragged down at 390: closed, no box. |
+| **The whole path** | §159 `bc13245` (records; walked on `65352cf`'s build) | The real Builder and real History over seeded storage: save from ⋮ → Replace → save from a History card → fill an empty invoice with one line left out (+$1,406.97, one step) → Undo (−$1,406.97) → rename, a taken name refused → delete. 47 ✓, 0 ✗ at 1600 × 1068 Light and 1200 × 1468 Dark; no undo step from a save, rename or delete; nothing reached the database. |
+
+**Found and fixed on the way, no design change:** nothing in the app had ever loaded his templates from the server
+(§153 — grep of `src` for a `useCollection` or `loadCollection` naming the key: none), so on a device that had never
+saved one a taken name would have saved a second `Wedding bar`; a card could open with the naming sheet already over it (§154); a load answered
+across a write laid the older copy back, and whole-record writes could put an old name back (§157); a template his
+other device deleted could be made again from one field (§158).
+
+| # | Ruling | What, and how we know | Question |
+|---|---|---|---|
+| 1 | ⛔ §1 #2, `r74b` | **History's card at 390 — stopped.** `r74b` (`Round 74 - saving a template, and the group's parts.dc.html`): *"At 390 the footer adds up to 358: Open in a tab gets about 140, which fits its words."* The built row is **350**: the sheet's footer pads 20 a side; the bin keeps its 12 dead zone (`SheetFooter.tsx:279`, your 25 Aug ruling); Duplicate stretches. Measured at 390: `Open in a tab` 103 wide shows 79 of its 104 — `Open in…`; Duplicate 107, the glyph 48, the bin 48. Whole from 440 (128, 0.14 to spare); 430 and 436 cut it. Worked from the measured widths: Duplicate sized to its words, as `r74b` draws it, gives Open 106.62 of the 127.86 it needs; your 358 with no dead zone, 134.62. Not his iPad's widths (1200 upright, 1600 sideways — his Device Report). Built as ruled; nothing improvised. | ❓ Which gives — the footer's 20, the bin's 12, Duplicate's width, or Open's words? |
+| 2 | — | **Singular and zero, not drawn:** `Saving replaces its lines with this 1.`, `its 1 use`, `its 0 uses` (`templates.ts:327`–`:329`); `1 of 1 line`, `Add 1 line`, `Filled from {name}, 1 line`. | ❓ Right? |
+| 3 | §2 #6 | **The summary's order.** #6 quotes `22 items · 4 categories`, and `r74c`/`r74d` draw it so; the app has always said `4 categories · 22 items` (`templateSummary`). Built the app's, on the rows, the preview's header and the panel. | ❓ Which? |
+| 4 | — | **Apostrophes:** `· not on the client’s copy` curly, as `r74d` draws it; the panel's `Show on the client's copy` straight. | ❓ Which, everywhere? |
+| 5 | §1 #5 | **No box after a rename or a delete** — none ruled; #1 words the save's. | ❓ Words, or silence? |
+| 6 | §1 #5 | **The rename sheet has no line under its title** — `r74a`'s names an invoice; a rename has none. | ❓ Right? |
+| 7 | §1 #4, #5 | **A 0-line template's name is still taken:** saving under it replaces (it gets lines); a rename to it is refused — though no list shows it. | ❓ Right? |
+| 8 | §1 #5 | **A template's own name is never taken** — `wedding bar` over `Wedding bar` renames. | ❓ Right? |
+| 9 | §1 #7 | **"Packing marks" read as the whole packing status** — No status, On hand, Shipping, Delivered, Packed and the old `ordered` — since clearing Packed alone would carry last job's Shipping and Delivered onto a job that has ordered nothing. So `On hand` is cleared too, though Sean's words for it describe the bottle, not the job. | ❓ Right? |
+| 10 | §1 glyph | **`BookmarkIcon`, ⋮'s old glyph, is drawn nowhere** (`icons.tsx:369`; grep of `src` for `BookmarkIcon`: the definition and one comment) — kept because your 45 counted it. | ❓ Does it leave (the set 45 with the group's)? |
+| 11 | §1 #4 | **A Save before his templates arrive.** Both doors now load them while the sheet is open, and the Builder on mount (found above). On a device that has never loaded them, a Save pressed before the load lands cannot see a name taken elsewhere and makes a second of it. | ❓ Hold Save until the load lands — a greyed state no frame draws — or leave it? |
+| 12 | §2 #7 a, #8 | **No templates:** the sentence is its (a) form, as #8 rules for a locked invoice. | ❓ Right? |
+| 13 | §2 #5 c | **The door's look:** §151's hidden button class for class — `--text-secondary`, 400; HANDOFF 10C (`Invoice Builder - iPad.dc.html`, 9995–10015) draws accent words at 600. *"Goes back to"* read as the built button. | ❓ Which? |
+| 14 | §2 #6 | **`r73a`'s `Quantities are scaled to this invoice's 120 guests` is not built** — it rests on scaling, which Sean holds; **nor is each row's `›`** — #6 gave the row the app's words (§155). | ❓ Right? |
+| 15 | §2 #13 | **"Two lines" is not a cap below 1024:** at 390 a line's name gets 192, and a 57-letter name takes 3 lines, an 88-letter one 5 (row 142.75) — wrapped, never cut (§155, §156). The preview's title is a sheet title (Round 73 §1 #9): one line, cut. | ❓ Right? |
+| 16 | §2 #12 | **Return adds with focus on ‹ or ✕ too** — *"wherever focus is in the preview"*. | ❓ Right? |
+| 17 | §2 #12 | ⚠️ **A held Return is one press — ours** (`Sheet.tsx:231`, `if (!e.repeat)`). §156 measured one key-repeat of the Return that opened `Wedding bar`'s preview fill the invoice with all 22 lines, $2,478.01 — through a preview he never saw. Untested on his Magic Keyboard (§5). | ❓ Confirm? |
+| 18 | — | **A fill counts as a use**, and undoing it doesn't take the use back. | ❓ Right? |
+| 19 | §2 #7, #8 | **A line or a lock arriving while the fill sheet is open:** Add closes the sheet and the write refuses — nothing written, nothing said (`Builder.tsx:325`–`:329`; `templateFill` asks the door's conditions again). | ❓ Right, or say why? |
+| 20 | §1 #1, `r74a` | **Built parts kept over `r74a`:** title 20 → 18 (20 is no step of the scale); title to its line 2 → 4; the ✕ kept (`r74a` leaves it out); the 2px ring → the field's 1px `--accent` edge; the hint's line height 1.4 → 1.3; the sheet's own footer (`r74a`: a `--border-subtle` rule on `--surface-alt`); Cancel's words `--accent` → `--text`; buttons 10 apart → 8. | ❓ Confirm? |
+| 21 | §2, `r74d` | **Over `r74d`:** title 20 → 18; the tick in the select mode's 44 box at the row's 20, ring at 30, words at 76 (`r74d`: 20 and 58); the reminder's dash `--text` (`r74d` #5F594E); the sheet's own footer and its 20 above the first band; ‹ and ✕ in the sheet's 44 box (`r74d`: bare glyphs) — ‹ the set's chevron turned, `--accent`, spoken `Back to templates` (ours). | ❓ Confirm? |
+| 22 | §1 #5, `r74c` | **Over `r74c`:** the name 20 → 17; its line `--text-muted` → the panel's `--text-secondary`; header 12 → 14 and glyph to words 14 → 12; `Delete template…` in the danger row's semibold; the set's pen and bin. | ❓ Confirm? |
+| 23 | §1 #5 | **The template panel is centred on the window**, not the invoice column as a line's is (Round 69 §4.2): on the column it would hang 174 past the fill sheet's right edge at 1600. `r74c` draws the panel alone. | ❓ Right? |
+| 24 | §2 #7 a | **The fill sheet stays open, empty, after its last template is deleted**, until ✕; the door hides. | ❓ Right? |
+| 25 | Round 62 | **After a confirmed delete, focus is on nothing** — the row it came from is gone, and your focus ruling restores only what was captured. | ❓ Right? |
+| 26 | — | **Found, not changed:** the `+` sheet's template rows carry `last:border-0` on a button that is always its row's last child, so no rule is drawn between rows (`TemplateRows.tsx:61`, moved class for class from the `+` sheet). | ❓ Intended? |
+
+### 2 · Your Round 75 — built and measured
+
+| Your ruling | § · commit (review) | What it does now — measured, unless said |
+|---|---|---|
+| **§1** the `+` sheet's order, `r75a` | §160 `9212a1e` (§161 `b7036dd`) | Blank invoice · Templates · Duplicate a past invoice · the rule · Continue a working invoice, at 1600, 1200 and 390, both themes; 512 × 784.47. Duplicate's foot to the rule 20; the rule 1px `rgb(216, 210, 200)` / `rgb(48, 42, 34)`, equal to the header's measured beside it; rule to label 17, label to list 4; rows 61; the locked invoices not listed. The rule is the Continue label's own box, so it goes with its section. A hold on a template still opens its panel. |
+| **§2 #1** a stored 0 | §162 `7d85bca` (§163 `f40d70b`) | `shownCost` reads a stored 0 as no price wherever a product's or a prep's cost is shown: Price `—`, `Cost` / `No price set` (`--text-faint`), no rate; the panel `Cost` · `Not set` · `Add cost`; a prep's zero rate none. `getCost`, the money, unchanged — a free ingredient still $0.00 in a recipe. Nothing saved differently, nothing migrated. |
+| **§2 #15** a comp at 0 | §162 (§163) | `Comped · $0.00 at quantity 0` (193.94; two lines at 320 only); locked, `$0.00 at quantity 0 · printed as Complimentary`, the dot always ending its line; the row's `$0.00` unstruck; the clause and stated line never `$0.00`. |
+| **§3 #2–#7** | §162 (§163) | #2 `Makes 1 L`, `Makes 750 ml · whole batches only`. #3 `about $1.10/fl oz` for $1.105, unsnapped. #4 `under $0.01 each`, one spelling. #5 4.00. #6 every `CardKit` fact row stacks when its value doesn't fit beside its label: the pack row at 320, `Cost` 30.64 (was squeezed to 1.73), its value 4.00 below, row 43. #7 the footer, the gate and the fill sheet's footer draw `RateRuns`; every other ` · ` that can wrap is held to the item before it (`check-dots`). Squeezed 400 → 60 on every page: before, 29 shipping blocks could open a line with `·`; after, 0 of 204 — the review found one more, the editor's `Displays as … · Pack`, and held it. |
+| **§3 #8–#14** | §164 `57818bc` (§165 `e789c03`) | #8, #10 nothing to build. #9 nothing built; our *"below 1024"* corrected in the records. #11, #12 `searchPrompt(count, loading, noun)`: nothing cached → `Search products` · `Search recipes` · `Search invoices` from first paint; one cached → `Search 1 product` · `Search 1 recipe` · `Search 1 invoice`; `check-keyboard`'s one exception gone. #13 the library `recipe`, the rail `cocktail`. #14 with nothing open: 1132 at 1600 × 1168 with an inset of 20 (was 1152); 766 at 390 × 844, the bottom bar at 782 (was 828, over it); with the invoice open, every floor unmoved. |
+| **§3 #16–#18** | §164 (§165) | #16 nothing to build. #17 your sentences verbatim, each keeping `Fix it in the Builder before sending this.` #18 (a) Complete from Archived reads `stays locked` (79.83 wide, 15px, the same colour as `unlocks`); (b) dimmed, as built; (c) Draft, as built. |
+| **§4** Round 61 | §160 (§161) | `You already have a product called Ice, in Mixers / Non-Alcohol at $27.00 · bag.` under Name, 4 below, 13px, 9.72:1 / 11.76:1, polite; Save live; case and the ends ignored (`nameKey`, now one function with the templates', `sameName.ts:71`–`:73`); never itself. Leftovers: `Ice` · `2 invoice lines · counted together` · `2 left`; an old record `Ice: 2` reads onto the one row; nothing migrated. |
+| **§5** the volume sentence | §164 (§165) | The REAL prep editor, `500 g` typed: cup, pt, qt, gal, tsp, tbsp, barspoon, jigger, dash, drop, pinch, splash and oz → `try {unit}, ml or L instead of g`; ml, L and fl oz → `try ml, L or fl oz`; `litre` → `try litre, ml or fl oz`. The weight side unchanged. |
+
+**Stopped: nothing.** `r75a` draws §1 whole, and §4's sentence is `r74a` 1′'s part. **Found by the reviews and fixed:**
+check gaps, each a fault that went green — §161: an open invoice's row could copy on a tap, and Save could be greyed
+beside its press; §163: a held `·` could have been SAVED into his products (`check-dots` §6), and `shownCost` could have
+read a negative price as no price. And one line §162's sweep missed, held by §163: the editor's `Displays as … · Pack`.
+
+| # | Ruling | What, and how we know | Question |
+|---|---|---|---|
+| 1 | §4 | **The category in full:** `in Mixers / Non-Alcohol`, where your example says `in Mixers`. Nothing in the app shortens a category (grep: two hits, both the full name). | ❓ Right? |
+| 2 | §4, §2 #1 | **A product with no price:** the rail's own words, `…at no cost data · 1 L bottle.` (`sameName.ts:79`; run on `bd4e447`) — where your §2 #1 now calls a stored 0 "no price yet". The words are the rail's second line too. | ❓ Which words, here and on the rail? |
+| 3 | §4 | **A pack:** the rail's short `$28.00 · 24 per case`; the invoice line's own second line reads `24 bottle × 12 fl oz · Case`. | ❓ Right? |
+| 4 | §4 | **Several others of the name:** the first in his library is named, not counted. **No category:** `…called Ice at $27.00 · bag.` | ❓ Right? |
+| 5 | §4 | **A product in the trash is not named** — the editor is handed his live library — so restoring one makes two. | ❓ Right? |
+| 6 | §4 §5 | **Leftovers' shared row:** under the first of its categories in invoice order, a category left with no row not drawn; its unit — which decides whether the bottle gauge shows — the first line's. | ❓ Right? |
+| 7 | §4 §5 | **The added-up quantity shows once the row is open** (`of 5`); the second line is your words whole, so it never says `5 bought`. | ❓ Right? |
+| 8 | §4 §5 | **The sheet's counts count rows now** — `1 of 4 lines have something left`, `The other 3 lines…`. Counting invoice lines left `The other N` one too many when two shared a name. | ❓ Right? |
+| 9 | §2 #1 | **"The editor stays as built" read as the saving** — an emptied Price still saved as 0 — not the editor's live figure, which is a product's rate: it read `$0.00/fl oz` in accent under an empty Price, and reads `No price set` (21, `--warning`) now. If you meant the figure too, it is one call. | ❓ Right? |
+| 10 | §2 #1 | **Filters and counts still read a stored 0 as costed:** Products' `No cost recorded` (`ProductLibrary.tsx:191`), the rail's `No cost data`, Prep's `needs a cost`, the data audit, `/debug/library`. So the free water's card says `No price set` and the `No cost recorded` filter leaves it out. | ❓ Follow the card? |
+| 11 | §2 #1 | **The library row's price column prints `$0.00`** for a stored 0 and for no price at all — the row is not the card. | ❓ Follow the card? |
+| 12 | §2 #1 | **A free ingredient's prep row prints `$0.00` and `Ingredient cost` sums it** — amounts, not rates. And a prep's zero rate can also come from rows weighed at 0 against a weight-priced product, which your premise doesn't name; it reads the same, `—`. | ❓ Right? |
+| 13 | §3 #17 | **A CHARGED line with neither figure readable** prints three dashes — Qty, Unit, Amount — and gets both (b) sentences, which name all three between them. #17 words the comp's two and a charged line's one plus its amount. | ❓ One sentence, and its words? |
+| 14 | §3 #17 | **The totals' dashes:** a charged line whose amount can't be worked out makes the paper's Subtotal, Tax and Total print `—` (the subtotal sums the printed lines), and no sentence names them. | ❓ Named too, or is the line's sentence enough? |
+| 15 | §3 #18 a | **The archive banner, (a)'s twin:** an invoice archived from Complete reads *"Editing, comps and deleting are locked while archived. Restore it to make changes — it returns to the stage it came from."* (`InvoiceHeader.tsx:265`–`:269`). It returns to Complete, locked, so "to make changes" is false — on what will be the commonest archived invoice once the sweep is on. | ❓ Its words? |
+| 16 | §5 | **The unknown-unit refusal is untouched:** a volume prep hears `"blorps" isn't a unit the app knows. Try ml, L or fl oz` (`batchScaling.ts:438`), and its weight twin `Try g or kg` (`scaleTo.ts:354`–`:356`) never took amendment 2. | ❓ Extend §5 to both? |
+| 17 | §5 | **`oz` and `fl oz`:** a recipe stored `oz` (every new prep) hears `try oz, ml or L`; one picked from the list, stored `fl oz`, hears `try ml, L or fl oz` — the picker shows both as `fl oz`. And "in the list" is by spelling, case and all: an old `l` hears `try l, ml or fl oz`, `Fl Oz` `try Fl Oz, ml or L` (the picker writes `L` and `fl oz`, so only old or hand-made spellings). Your own example. | ❓ Fine as it is? |
+
+**No answer needed:** #18 (c)'s count is not made — it needs his signed-in data, which implementation reads only
+through the app; it waits for a page he opens. The `1fr 160px 1fr` track no window draws (`SourceDrawer.tsx:308`) is
+left; ours to tidy. And a fault of ours, said so it is seen: a product stored with no id is told from itself by being
+the same object, so a library reload under its open editor can name it as its own twin — 2 of his 314; Save works
+either way.
+
+### 3 · A bug we fixed, no design change: Retry wrote old copies over newer work (§166 `586b06f`, §167 `bd4e447`)
+
+Not a ruling of yours — found while building templates' rename and delete (§157 `6a0ca31`). **Nothing on screen
+changed.**
+
+**What it did.** At a venue with bad signal, a change that fails six times is given up, and the banner says it wasn't
+saved and offers Retry. **Retry put that old change back over anything saved since.** Reproduced before any fix, on the app's
+real saving code against a stand-in for the server, never the database (`check-revive`, on `e789c03`: 22 of 49 red):
+
+- **An invoice:** Castellano at $419.88; 9 × Diplomatico added and given up ($752.79); then gin 12 → 14 saved ($802.77).
+  Retry → **$752.79** on the server and in History — gin back to 12, $49.98 gone — while his open tab still read $802.77
+  (A1). The same over his other device's edit: $459.88 and 140 guests overwritten by $752.79 and 120 (A2).
+- **Elsewhere:** a product's price ($27.99 → $26.49), the default tax rate (6.25% → 7%), a template's name (`Garden
+  wedding` → `Garden party`), a product edited since being trashed — deleted — and a template his other device deleted
+  — made again (A4–A10).
+- **A new invoice's first save**, blank and given up, wiped his later edits: Ortiz $99.96 → **$0.00**, no lines, no
+  client (A11, found by §167).
+
+**What changed.** Every change now records a fingerprint of what the fields it writes held when he made it (`baseOf`,
+`sync.ts:831`); Retry replays it only onto exactly that. Otherwise it is **set aside** — kept on this device
+(`limbo:set-aside`, `sync.ts:53`; the newest 50, at most 100,000 characters, each record's newest first, `:54`–`:57`)
+and never written. A
+change never given up replays as before: 150 random runs with no Retry, and 150 with Retry and nothing newer, came out
+identical to the code before (§167). `check-revive` 56 assertions, 0 red. The banner and its words are as they were
+(`SyncIndicator.tsx`: `git log 9f21178..124fb62` on the file is empty), and nothing reads what is set aside
+(`check-revive` asserts the banner doesn't). No total is worked out differently — this decides which saved copy
+survives. Pushed 07:39; read back from the live site at 13:35 (§180).
+
+**What it leaves — product calls; nothing on screen yet.** #1 would be a new state of the banner, so it needs a frame if
+anything shows.
+
+| # | What, and how we know | Question |
+|---|---|---|
+| 1 | **When Retry sets a change aside, he isn't told.** The banner clears, as it always has, and the change sits on this device where nothing shows it. | ❓ What does he hear — and can he see, or bring back, what was set aside? |
+| 2 | **A change given up by the build before §166 has no fingerprint**, so it is always set aside — even where nothing newer exists (B5). | ❓ Fine? |
+| 3 | **It leans to what is already saved:** a change made on a device whose copy was behind — his other device saved, this one hadn't loaded it — is set aside, though it came later (§167). | ❓ Fine? |
+| 4 | **Trashing is two writes, and nothing ties them.** Castellano trashed and given up, back in History after a load, gin 12 → 14 ($469.86), then Retry: History keeps $469.86, the trash gets the $419.88 copy, and a Restore would lay $419.88 back over $469.86 (§167; A9 for a product). Before §166 Retry deleted the $469.86 outright — so no worse. | ❓ Two copies until he restores one — acceptable? |
+| 5 | **A template replace given up, then the template deleted on his other device:** Retry leaves it deleted (A10) — where a replace never given up makes it again, whole (§158). | ❓ Right? |
+| 6 | **A record changed and changed back looks unchanged.** A product trashed and given up, then trashed again and restored: Retry's delete lands, and his Restore is undone — as before §166. Telling them apart needs a version number on every record, a change to what is stored. | ❓ Worth it? |
+
+### 4 · Custom Group Lines, option C — built against your Rounds 73 §6 and 74 §3
+
+Sean, 9 Oct: *"Okay. B, C, and yes."* — C is `r73g`, and *yes*: a comp can't join a group. Then *"Build"*, and on
+10 Oct *"Keep working through all these."* Its own build, with nothing else in it, as he asked on 20 Sep (*"It's going to be a
+VERY meticulous build, so I want that as its own focus"*, `WISHLIST.md:716`–`:718`). In this section a bare # is your Round 74 §3's.
+
+| Your ruling | § · commit (review) | What it does now — measured, unless said |
+|---|---|---|
+| **74 §3** *"one fact, one place"*, #7, #19; **§1 #8** | §169 `e81dd89` (§170 `2bf4fd4`) | A group is a record — id, name, category, place, nothing else; a member is a real line carrying its id; count, line two and amount worked out from the tags; one settle on every edit, save, copy and load. Copies carry groups under new ids: both Duplicates, Save as template, a replace, the `+` path, the fill (an unticked member left out, an emptied group dropped). Data health lists *Fixed on load*. B's preview: a member's quiet `{group}` chip, 13/600, the `Hidden` chip's colours, 8 from the name, row 61 at 1600 and 1200. Invoices from before byte-identical after a load. |
+| **73 §6 #3, #4** and shared 6; **#10, #11, #12, #18**; `r73h` | §171 `ac6eaea` (§172 `2bbea44`) | On paper a group is ONE line under its category — its name, Qty and Unit EMPTY (not dashes), its members' printed figures summed; no member prints; a comp prints in its own place. Letter page: the row's cells Item 340 · Qty 60 · Unit 168 · Amount 104, the item rows' own. Narrow page: name and amount only. #18a and #18b verbatim. The paper, History's *What it came to* and the record at Complete split by the printed category, one derivation: Spirits $99.96 · Rental Supply $85.00 · Delivery charges $110.00 · Miscellaneous $192.00 = $486.96, Total $516.18 — at 1600, 1200 and 390, both themes. |
+| **The chip, #8, #10, #11, #13–#16**; `r73g` steps 1–2, `r74h` | §173 `98fa91d` (§174 `87824dd`) | Closed, one row of 61: the chevron in a 44 box, the name, `Group · N` (68.1 × 21.6, 13/600, border and words `--text-secondary` — `rgb(71, 66, 57)` / `rgb(216, 209, 194)`), line two the members, the paper's sum, no stepper. Open: `Prints as one line`, each member a full row 60 in (36 below 600), no fill, its home category on line two, its amount `--text-muted`. His sheet draws the paper's bands. Packing opens every group and writes nothing; locked, the chevron stays. Open or closed in memory per invoice, closed on a reload and from History. With no group: 5,880 renders byte for byte as before (§174). |
+| **#1, #2, #4, #5, #6 a, c, d, #12, #15**, the labels; `r73d`, `r74e`–`r74g` | §175 `527e3ad` (§176 `43d7abf`) | Door 1: ⋮ row 4 of 11, `Group lines…`, `r74e`'s glyph path for path (the set 46); greyed 61 tall as locked Trash — `Locked at Complete` / `Locked while archived` / `No lines yet`; the menu scrolls under the footer's top less 16 (968 / 1368 / 681). Door 2: `Add to a group line…` after `Select lines…`, before `Comp this line`; absent on a comp, a hidden line, a reminder, a member. The chooser 300 × 289 in the menu's place, 420 in the panel's (358 at 390); an existing group from ⋮ opens its fold, its row scrolled to the top. The editor 512, `Name on the client’s invoice` focused, chips in print order, `New category…` dashed. Choosing: the built select mode with the group's bar (76; 125.75 on two rows at 390), the four reasons verbatim. Each write one undo step, its label in the box, no money. |
+| **#3, #5 d, #7, #9, #13, #16**, `Name & category`; `r73g` step 3, `r74e` | §177 `234eddd` (§178 `4d96951`) | A hold on a group's row: its panel, 420 × 337.75 on the column (358 at 390) — the name over `Prints under Miscellaneous · 3 lines · $167.00`, each member `6 × $8.50`, its amount and `Take out` (63.47 × 44), five rows of 52 then scrolling (eight members: 260 of 416), then `Name & category` and `Ungroup`. Locked: the members stay, every action goes, the lock sentence. A member's panel: `Take out of General ice` in door 2's slot, no Comp. Take out and Ungroup (no confirm) each one undo step, and Name & category one step per thing it changes (⛔ #3), each with its ruled label and no box. `Add lines`: ⛔ #1. |
+| **The whole path** | §179 `fc14783` | Walked in headless Chrome at 1600 × 1068, 1200 × 1468 and 390 × 844, light and dark — 30 steps, all six walks identical but for the width of door 2's chooser: door 1 to `Group 3 lines` across two categories; open; + and −; Take out; Name & category (`Ice and delivery`, New category `Delivery charges`, After Rental Supply); packing on and off; ⋮ to an existing group; Ungroup; door 2's Make group `Rentals`, then a join. **The footer read `12 lines · subtotal $516.96 + 6% tax · $40.00 comped`, $547.98, at every step** but the deliberate + ($525.46 / $556.99 — one $8.50) and back. On the real Builder path in Node: Undo all 8, Redo all 8, then a reload from the server — every figure byte-identical to the same invoice with no group, the server's copy the draft after every save. Printed: one line `Ice and delivery`, Qty and Unit empty, $123.50 (7 × $8.50 + 2 × $32.00); Total $556.99, the sheet's. |
+
+**Money:** about 37,000 random group writes across the batches (3,291 · 1,591 · ~27,000 · 879 · 1,194 · 91 · 2,646 ·
+277, §170–§177) moved no figure, every group's row the paper's line; the comp's worked example with the gin grouped,
+$99.96 / $40.00 / $6.00 / $105.96. **Every review found something, all fixed, none money** — §170 and §174 gaps in the
+checks only, each closed with new assertions; and in the code: §172, an old invoice's empty
+category row dropped to the foot of History's card once any group existed; §176, the group's bar counted a line an
+Undo had made a comp again — `1 selected · $0.00` over a live `Group 1 line` the write refused, dropping the group he
+had named; §178, `Save` with nothing touched wrote a `Moved …` step on three record shapes this build never writes;
+§179, a fault in the lab only.
+
+| # | Ruling | What, and how we know | Question |
+|---|---|---|---|
+| 1 | ⛔ 74 §3 #6 b, `r74g` | **`Add lines` — stopped.** #6 b: *"`Add lines` shows the group's members ticked and greyed, not counted."* `r74g` (`Round 74 - saving a template, and the group's parts.dc.html`, lines 259–287) draws the tick two ways — ticked, filled `#2C4A3E` with ✓, and greyed, an empty ring `2px #D8D2C8` on `#F7F5F1` — never one tick that is both; its note: *"The group's own members show ticked and greyed, and they aren't counted."* The built tick's greyed overrides ticked (`InvoiceSelectBar.tsx:163`–`:171`). Also checked: `r74d` (ticked or empty), `r73g` step 3 (`Add lines` a chip, no mode after it), `r73d` (the withdrawn square ticks), `r73e` (prose). Nor does any frame draw the held group's own row in that mode — open, so its members show? with what tick? Not built: the panel has no `Add lines` row; the write exists (`Added 2 lines to General ice`); door 2 adds one line at a time meanwhile. *"Cancel just leaves the mode"* waits with it. | ❓ Draw the tick that is ticked and greyed, and the group's row in the mode. |
+| 2 | ⛔ 74 §1 #8, `r74d` | **A long group name on B's preview below 1024 — stopped.** `r74d` (`Round 74 - saving a template, and the group's parts.dc.html`, lines 155–186) draws no member: its rows are the gin, Chartreuse, the towels and the reminder. At 390 the name and the chip share 192: `Delivery charges` (chip 111.5) squeezes `Van delivery, 30 mi` to 72.5 over three lines, row 100.3; a 41-letter `Bar setup, delivery and breakdown charges` (chip 264.7) leaves the line's name 0 wide, the row 312.8 tall, and the chip 68.7 into the amount column. 1600 and 1200: row 61, fine. Not at his iPad's widths (1200 upright, 1600 sideways). | ❓ Wrap the chip, drop it under the name, or cap it? |
+| 3 | ⛔ 74 §3 #9, `r73g` | **One `Name & category` Save that changes both.** The labels table has `Renamed General ice to Ice` and `Moved General ice to Rentals`, and no row for both. No frame draws the editor on an existing group: `r73d` draws only `New group line`; `r73g` names `Name & category` as a button (`Round 73 - templates and groups.dc.html`, line 492); `r74e`–`r74h` draw none. Built meanwhile as two undo steps, name first — `Renamed General ice to Ice and delivery`, then `Moved Ice and delivery to Delivery charges` — each only if it changed, no box (`groupDoors.ts:451`–`:470`). | ❓ One step or two — and its label? |
+| 4 | #9 | **One line grouped is named:** `Grouped Column ice as General ice` from door 1, never `Grouped 1 lines`; the chooser's `1 line`, the bar's `Group 1 line`. | ❓ Right? |
+| 5 | #12 | **A typed category shared by two groups has one place** (each write keeps both equal); two typed categories placed alike print in stored order; a loop prints last. | ❓ Right? |
+| 6 | #19 | **Two records of one id:** the first is the group, the later one goes as having no member. An unreadable record (no category) is kept, with its tags. | ❓ Right? |
+| 7 | #19 | **Data health, a third repair:** a group's tag on a comp, a hidden line or a reminder is taken off and listed — #19 names two. The titles are ours: `Line tagged with a group that doesn't exist`, `Group with no members`, `Line that can't be grouped carried a group's tag`, each detail ending `Not serious: no money changes.` (`dataAudit.ts:317`–`:326`). The list lives on the device whose load made the fix. | ❓ Words? |
+| 8 | #19, 74 §3 #1 | **…and that third finding calls the comp "a line that prints on its own"** (`dataAudit.ts:326`) — which the first uses for a line that lost its tag (`:318`). Your §3 #1's *"a comped line"* is a comp word on screen, and `check-money` refuses unruled ones (§170 tried it, and put it back). | ❓ Which words? |
+| 9 | #9 | **A change of place alone** is labelled with the category it already had: `Moved Fees to Delivery charges`. | ❓ Right? |
+| 10 | #19 | **A group stored with an empty name** — only a hand edit or another device; the editor refuses one — prints and draws a nameless line, its chevron unnamed. Nothing repairs or reports it. | ❓ Report it in data health? |
+| 11 | #18 a | **Two or more members with no cost:** each gets your sentence, in stored order; with lines that print too, `They will print as $0.00. Lime.` comes first, naming only those; the title counts every line with no cost. | ❓ Right? |
+| 12 | #18 a | **The Review toast after the gate** still says `Uncosted lines print as $0.00 — check them in the invoice.` (`Builder.tsx:596`; Round 67 A1, *"Both strings stay"*) — untrue of a member, which prints inside its group's line. | ❓ Words? |
+| 13 | #18 b | **The possessive is always `'s`**, as you wrote it: `Delivery charges's amount prints as a dash`. One sentence per group; two of one name say it once. | ❓ Right? |
+| 14 | #18 a, b | **A member whose PRICE isn't a number** hears "prints $0.00 less than it should", while the paper prints the group's amount as a dash. Ungrouped, the same line already hears "They will print as $0.00" and prints a dash. | ❓ Which? |
+| 15 | #11 | **Order where you are silent:** two groups both last in a band follow their first members' stored order; a band only groups make sits, in the record, after the section holding its earliest member; with a group on the invoice, categories outside the nine (Prep Ingredients, an old name) print in the order first seen and two sections of one name print together — with no group, stored order (only old data has them apart); a record read while reopened, whose group has since been taken apart, sorts its typed category last. | ❓ Right? |
+| 16 | #10 | **History's `N lines`** counts the invoice's lines in a band — `Miscellaneous · 5 lines` — where the paper prints the group as one row. | ❓ Right? |
+| 17 | #10 | **Leftovers and B's preview keep the nine-category order**, members under their home categories (Sean, 23 Sep: leftovers show the individual items). | ❓ Right? |
+| 18 | `r73g`, `r74h` | **The chevron is the set's** `ChevronIcon` — `m7 10 5 5 5-5`, 10 × 5 at stroke 2 (`icons.tsx:932`). `r73g` and `r74h` draw `m9 6 6 6-6 6`, 12 × 6 at 1.75 — about a sixth larger — which is the rail's private chevron path for path (`SourceRail.tsx:126`). Using it means moving it into the set — past your 46 — or a second copy (§174). The fill sheet's ‹ (§155) made the same choice. | ❓ Which chevron? |
+| 19 | #8, `r74h` | **While packing the chevron is drawn and is not a button** — a tap would take away ticks packing opened the group to show. | ❓ Right? |
+| 20 | `r73g` | **Line two truncates to one line**, the row staying 61. At 390, `r73g`'s own three names don't fit its 220. | ❓ Right? |
+| 21 | #15 | **The 36 indent applies below 600**; from 600 to 1023 it is 60 — #15 rules *"At 390"*. | ❓ Right? |
+| 22 | #8, `r74h` | **`r74h` draws a packing member `2 × $40.00 · Ice` with no stepper;** built as the packing row is — `$40.00 · bag · Ice`, its stepper kept. | ❓ Which? |
+| 23 | #15 | **Room at 390:** a member's name gets 136 open and 80 packing (a line in no group 152 / 96). Our Round 74 guessed about 110 from the frame's paddings, unmeasured — the guess was ours, not yours. | ❓ Fine? |
+| 24 | `r73g`, `r74h` | **Members' amounts in `--text-muted`** come from `r73g` and `r74h`'s #5F594E, not from ruled words. | ❓ Confirm? |
+| 25 | #10 | **The footer's `N lines` counts stored lines** — `11 lines` while 8 rows show with every group closed. | ❓ Right? |
+| 26 | #16 | **Open and closed:** History closes an invoice's groups whether or not it was open in a tab; the `+` sheet's Continue keeps them; a copy starts closed (new ids); an Undo brings a group back as he left it (the same id); a hold on a closed group leaves it closed (*"stays"*). | ❓ Right? |
+| 27 | 73 §6 shared 4, `r73d` | **`New category…`'s two fields sit inside the editor**, under the chips — `r73d` draws them as a 512 box of their own. And `r73d`'s line under `Prints` — *"The options are First, After Spirits, … , After Rentals. The place is saved with the group."* — read as a note to us, and not built. | ❓ Right? |
+| 28 | `r73d` | **`r73d` disagrees with itself:** `After Rentals, last` in its box, `After Rentals` in that line. Built the box's — `After Miscellaneous, last` (`groupDoors.ts:196`), and the box starts there. | ❓ Right? |
+| 29 | #4, `r74f` | **Door 2's chooser is `r74f`'s rows and header in the 420 shell** — `r73d` drew a dashed `+` box, a `›` on each group and a 20 title, and a `›` would promise a step that isn't there (a group takes the line at once). ‹ the set's chevron turned, `+` the set's `PlusIcon`; rows 20 in, the menu's, where `r74f` draws 16. | ❓ Confirm? |
+| 30 | #6, `r74g` | **The group's bar is the built bar:** Cancel's words `--text`, buttons 48, padding 12 × 16 (`r74g`: accent, 44, 12 × 20). Below 600 two rows, a long name wrapping, never cut; at 0, `0 selected`. | ❓ Confirm? |
+| 31 | #5, `r74g` | **In select mode the tick takes the chevron's place**, so a fold doesn't change until Done; an open group's members tick one by one; a part-ticked group's tick puts every member on. | ❓ Right? |
+| 32 | `r74g` | **`r74g` is light only.** In dark the greyed ring is `--border` on `--surface-alt` — `rgb(48, 42, 34)` on `rgb(33, 29, 24)` — faint on the dark sheet; the reason beside it says why. | ❓ Fine? |
+| 33 | #4 | **Escape closes the chooser** from either shell; ‹ is the way back. | ❓ Right? |
+| 34 | #2 | **A locked invoice with no lines** greys row 4 with the lock's reason, not `No lines yet`; a section with no lines counts as empty. | ❓ Right? |
+| 35 | #12 | **A typed category spelled exactly as one of the nine is that category**, its place unread; `spirits` in small letters becomes a band of its own. | ❓ Fold the case? |
+| 36 | #12 | **A group may take a name another group on the invoice already has** — two lines of one name print. | ❓ Refuse it, as a template rename does? |
+| 37 | #6 d | **⋮ › Select lines while choosing drops the group being made**, as Cancel in its editor does. Choosing and the editor hide when the invoice locks, and come back as he left them if it is reopened; another tab shows neither. | ❓ Right? |
+| 38 | `r73g` step 3 | **`r73g`'s chip footer built as the panel's action rows**, as `r74e` built door 2 — the style your Round 74 withdrew there: `Name & category` with the set's pen, `Ungroup` with the group's glyph, your words, no ellipsis though `Name & category` opens a sheet, and `Ungroup` a plain row, not the danger row. | ❓ Confirm? |
+| 39 | `r73g` step 3, `r74e` | **Built parts over `r73g`:** member rows 52 — `r73g`'s written floor; its own rows measure 53 (a 44 button, 4 above and below, its rule), which showed four rows and most of a fifth in a five-row cap — so the 4 above and below went, and exactly five show; the header 17 / `--text-secondary` (`r73g` 20 / muted). A member's header: the built line, then `· in General ice` (`r74e` draws its own order, the home category replaced). Locked rows keep the amount at the row's 20 — `r73g` draws no locked panel. | ❓ Confirm? |
+| 40 | `r73g` step 3 | **Every action closes the panel**, as on a line's — a second Take out is a second hold. | ❓ Right? |
+| 41 | `r73g` step 3 | **A member with no price** reads `2` and the dash; one whose quantity isn't a number reads `NaN × $24.99` — the sheet's own stepper shows `NaN` for it too. | ❓ Words? |
+| 42 | `r74f` | **`Ungroup` and `Name & category` only by a press and hold** — `r74f`: *"Its panel is one press and hold away"* — where the app's standing note on the hold (`useLongPress.ts:13`) says every panel option has another way in. | ❓ Another way in? |
+| 43 | #5 | **In either select mode the group's row has no pen highlight** — the hold is suspended there, and the hover with it. | ❓ Right? |
+| 44 | #12 | **Moving a typed category's place** is `New category…` and `Prints` again — whose list offers every band, the group's own current typed category among them (`groupDoors.ts:192`–`:200`). `After {that}` is lost when the group leaves it, so that choice prints last. | ❓ Leave it out of the list? |
+| 45 | money | **Past the cent, two roundings — not about groups.** The paper rounds each line, then adds; his footer adds, then rounds once: 3 × $0.125 reads **$0.38 in his footer and $0.39 on the paper**, grouped or not (§173, §174). A group's row (the paper's way) and its band (the sheet's) can differ by that cent. The record adds as the footer does: a fuzz case's record subtotal read $267.45 against the paper's $267.47 (§172), and grouping changes which lines are rounded together, so the record's split can stop adding to the subtotal by a cent. Whole-cent invoices are exact. | ❓ Which is right? A money call — yours to frame for Sean, as Round 64's were. |
+| 46 | — | **Found, not caused by groups:** on screen at 390 the print route's paper scrolls 15 sideways and its Item column is 0 wide, on every invoice — Qty, Unit and Amount are fixed at 60 + 168 + 104 = 332, past the 246 inside its 0.75in padding (§171). Printed, the narrow page is right. | ❓ Should the screen copy follow the narrow page? |
+
+**No answer needed:** once an invoice has had a group it keeps an empty `groups` list — a save merges, so dropping
+the field would leave the stored group standing. And, ours, dormant: Restore from the archive deletes five archive
+fields from the draft (`stages.ts:104`–`:108`; §169 and §170 said four) while the save merges, so the stored copy keeps them; every reader asks
+the stage first.
+
+### 5 · Only his iPad can say
+
+**Sessions 15–18 in `IPAD-CHECKS.md` — 31 checks, none ticked** (read 10 Oct, 13:50). All four are on the live site.
+
+- **Session 15** — your Round 73's rest; 8 checks (15.8 skipped: 16.4 replaces it). Your 🔧 #2. Live since 9 Oct.
+- **Session 16** — templates: save under a name, Replace, from History, fill with a line left out, Undo, a taken name
+  refused, delete. 7 checks, about 25 minutes, in order on test templates. Live since 10 Oct, morning.
+- **Session 17** — your Round 75: the `+` window's order, the same-name sentence, `No price set`, leftovers counted
+  together, the search counts, `stays locked`. 6 checks. Live since 10 Oct, morning.
+- **Session 18** — groups: both doors and a comp refused, the fold, an item inside, the panel and Take out, adding a
+  line, Name & category, the PDF, packing, Ungroup with Undo and Redo. 10 checks, about 40 minutes, in order on one
+  throwaway invoice. **Live since this afternoon** — pushed 13:45, read back from the live site at 13:48 (header); the session's own header, written before the push, still says it isn't.
+
+**Beyond the sessions, only the device can answer:** Safari — this Mac cannot drive it, so none of the above has run
+there; whether a field focused after the tap raises the on-screen keyboard (the naming sheet, the editor); whether his
+Magic Keyboard can open a panel at all — Shift+F10 or a menu key, the only keyboard way to a template's or a group's
+panel (check 3.5) — and marks a held Return as a repeat (§1 #17); whether a tick's focus ring shows after a touch. **None of it blocks you.**
+
+## What I need back
+
+1. ⛔ **The four stops:** §1 #1 (History's card at 390); §4 #1 (`Add lines` — the tick both ticked and greyed, and the
+   group's row in the mode, drawn), #2 (a long group name on B's preview below 1024), #3 (one Save that renames and
+   moves — one step or two, and its label).
+2. **The readings:** §1 #2–#26, §2 #1–#17, §4 #4–#46, in any order — but §4 #45 first among them: it is money, which
+   rounding is right past the cent. The *Confirm?* rows — §1 #17, #20–#22, §4 #24, #29, #30, #38, #39 — can be
+   answered together.
+3. **Then §3** — the six Retry calls, #1 first: what he hears when a change is set aside.
 
 ---
 
