@@ -646,6 +646,11 @@ choice.
    - ⚠️ Pricing his buy list at two guest counts needs quantities that follow the guest count. That is the same kind of
      scaling he held on 9 Oct. Whether it waits with it is his to say, and we'll ask him. It's flagged here so the drawing
      doesn't assume it comes free.
+     ✅ **Asked and answered, 11 Oct, after this round was written.** Put to him (ours): *"Should the Estimate's
+     guest-count range wait for the rework too, or come with the Estimate?"* — with implementation's suggestion, a box on
+     the Estimate where he types the two guest counts, templates still not changing quantities on their own. **Sean:**
+     *"Let it come with the estimate."* So the guest-count range is part of the Estimate's first build, as an explicit
+     control on it; template scaling stays held for his Calculator rework.
    - How a guest range and a descriptor combine is arithmetic nobody has decided. It isn't asked of you; it's flagged.
    - Typing opens §2 #6 (a negative), and a high under its low, which §191 reads low to high today.
 3. ❓ **Descriptor values**, from Q3: set once, by him, with a figure learned from his events as a reference. We read his
