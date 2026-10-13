@@ -21,6 +21,7 @@ with a note admitting it. One file that stays true beats three that don't.
 | File | What it's for |
 |---|---|
 | **`REQUESTS.md`** | **Start here.** What implementation is stuck on right now — the agenda for the next round. |
+| `REQUESTS-ARCHIVE.md` | Rounds 75 and earlier, moved out of `REQUESTS.md` unedited on 12 Oct 2026 so that file stays under 500 KB, small enough for Design to copy in and search. Look an old round up here. |
 | `DESIGN.md` | The system as built. Real values, real class names. |
 | `DECISIONS.md` | Every decision and its reasoning, including rejected ones. Read before re-proposing anything. |
 | `design-tokens.json` | Machine-readable mirror of the app's `globals.css`. |
