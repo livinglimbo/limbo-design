@@ -2,7 +2,7 @@
 
 > **Moved here from `REQUESTS.md` on 12 Oct 2026, at Design's request:** `REQUESTS.md` had grown to 1.07 MB, too large for Design to copy in or search. Nothing was edited — every line below is byte for byte as it stood in `REQUESTS.md` at limbo-design `bd0d234`.
 >
-> **Line numbers.** A `REQUESTS.md:NNNN` written before the split refers to the file at `bd0d234` (readable on GitHub). For a number above 2874, this file's line is that number minus 2864. Lines 1–2874 kept their numbers in `REQUESTS.md`.
+> **Line numbers.** A `REQUESTS.md:NNNN` written before the split refers to the file at `bd0d234` (readable on GitHub). For a number above 2874, this file's line is that number minus 2864. Lines 1–2874 kept their numbers in `REQUESTS.md` at the split (`0f4c0d0`); each round written there since moves them, so read a `REQUESTS.md:NNNN` at the commit it was written at.
 >
 > **The live file** — the open index, the DELIVERED table and Rounds 76 onward — is `REQUESTS.md`.
 

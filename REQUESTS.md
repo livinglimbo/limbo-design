@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Split 12 Oct 2026, at your request:** this file had reached 1.07 MB. Rounds 75 and earlier are now in `REQUESTS-ARCHIVE.md`, unedited; this file keeps the header, the index, the DELIVERED table and Rounds 76–82, and every line here kept its number. **Reflects `limbo-app` at `main` @ `a7fb009`** — `a7fb009` changes only `CLAUDE.md` (a note on this split) after `1a9d18d`; the code is unchanged. — the code is `1bf91a7`'s (§209 · review), and it is **LIVE**: `git ls-remote origin main` reads `1a9d18d` (12 Oct, 19:24), the live build id has been `537ayQEoB6ro_4-42seob` since 19:17:07, and the live `/style/panelcheck` — a page only §209 has — answers 200 with its heading (curl, 19:24). `4597fb3` and `1a9d18d` (§210) are records only: `git diff --stat 1bf91a7 1a9d18d -- src scripts package.json` is empty. *Until Round 82 this line read `42f6ad2`, the code `0afe219`'s, with LIVE at `e8f8a1c` and §203–§206 to go up with Round 81 — they went up at 15:41:56 and were live at 15:45:53; §207–§208 followed as `39efefe`, live by 16:49:51.* *Until Round 81 this line read `a4606d9`, the code `c6ccb79`'s, LIVE; `a4606d9` went up with Round 80 at 19:05:17 on 11 Oct.* *Until Round 80 this line read `f6871e4`, the code `11027e7`'s, with LIVE at `ebefce8` and §189–§192 held on implementation's Mac by Round 79 §1 — all pushed since, as `9e35afd` (13:31:59) and `c6ccb79` (17:06:27, 11 Oct).* *Until Round 79 this line read `909c0b3`, the code `887e6e8`'s — both rebased onto §186 at 23:38 on 10 Oct with the same changes, and pushed as `1103643` and `ed17565` (Round 79's header lists every pair). Until Round 78 it read `56cfbe3`, the code `fc14783`'s (§153–§158 templates, §160–§167 your Round 75 and the Retry fix, §169–§179 Custom Group Lines), pushed. Until Round 77 it read `124fb62`, the same code. Until Round 76 it read `9f21178`, the code `31a78b4`'s (§149–§151, built from your Round 73). Until Round 75 it read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
+> **Split 12 Oct 2026, at your request:** this file had reached 1.07 MB. Rounds 75 and earlier are now in `REQUESTS-ARCHIVE.md`, unedited; this file keeps the header, the index, the DELIVERED table and Rounds 76 onward. At the split (`0f4c0d0`) every line here kept its number; each round since goes in above the last and moves the lines below it, so a `REQUESTS.md:NNNN` is read at the commit it was written at (Round 83 §0). **Reflects `limbo-app` at `main` @ `a4544b0`** — after `1a9d18d`, `a7fb009` changes only `CLAUDE.md` (a note on this split), and `4533923` and `a4544b0` only `WISHLIST.md` (Sean's glass asks, Round 83); the code is unchanged — it is `1bf91a7`'s (§209 · review), and it is **LIVE**: the live build id has been `537ayQEoB6ro_4-42seob` since 19:17:07, and at 20:58 the live `/style/panelcheck` — a page only §209 has — answers 200 with its heading on that build (curl). `git ls-remote origin main` reads `a7fb009` (12 Oct, 21:02); `4533923` and `a4544b0` go up with Round 83. `4597fb3` and `1a9d18d` (§210) are records only: `git diff --stat 1bf91a7 a4544b0 -- src scripts package.json` is empty. *Until Round 83 this line read `a7fb009`, the same code, with `git ls-remote` reading `1a9d18d` at 19:24; before the split it said nothing of line numbers.* *Until Round 82 this line read `42f6ad2`, the code `0afe219`'s, with LIVE at `e8f8a1c` and §203–§206 to go up with Round 81 — they went up at 15:41:56 and were live at 15:45:53; §207–§208 followed as `39efefe`, live by 16:49:51.* *Until Round 81 this line read `a4606d9`, the code `c6ccb79`'s, LIVE; `a4606d9` went up with Round 80 at 19:05:17 on 11 Oct.* *Until Round 80 this line read `f6871e4`, the code `11027e7`'s, with LIVE at `ebefce8` and §189–§192 held on implementation's Mac by Round 79 §1 — all pushed since, as `9e35afd` (13:31:59) and `c6ccb79` (17:06:27, 11 Oct).* *Until Round 79 this line read `909c0b3`, the code `887e6e8`'s — both rebased onto §186 at 23:38 on 10 Oct with the same changes, and pushed as `1103643` and `ed17565` (Round 79's header lists every pair). Until Round 78 it read `56cfbe3`, the code `fc14783`'s (§153–§158 templates, §160–§167 your Round 75 and the Retry fix, §169–§179 Custom Group Lines), pushed. Until Round 77 it read `124fb62`, the same code. Until Round 76 it read `9f21178`, the code `31a78b4`'s (§149–§151, built from your Round 73). Until Round 75 it read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -110,6 +110,7 @@ is left and whose it is, and the rows are back in date order.
 | AV | ~~**Round 80 — your Round 79 built and LIVE (§193–§197, each reviewed); ⛔ six stops — the word-pair editor first (adding, changing and removing a pair: `r79c` draws pairs at rest only, and puts `Add a word pair` in the band), then line two's short words (`r79b`'s `drinkers`, `premium`), the price word's line, which categories start chosen, ⛔ money: invoices last completed before 28 Sep have no record (your §3 example, completed before then, would read $1,479.50 where its paper printed $1,479.49 — make a record, read `legacyPaperCent`, or accept?), and `page 2 of 2` (your `HANDOFF.md` §14.1 end rule is not in the app); ❓ Sean's rule — *"Let's round up every half cent across the app. I don't want to see them anywhere."* — how a qty × price line reads when its whole-cent price doesn't multiply out, the rate beside a total, `under $0.01`, the override box, the Price box's save, `money()` half up; ❓ 58 readings**~~ | **11 Oct** | ✅ **ANSWERED — your `ROUND-80.md` and frame `r80a`–`r80d`, in the design bundle's `ROUND-81/` (12 Oct). BUILT §199–§205 on `main`, each reviewed** — §199 (the comma, first, as you asked) LIVE at 00:48 (`16c76b0`), §200–§202 LIVE at 11:40 (`e8f8a1c`), §203–§205 go up with Round 81. Sean: *"Build."* and, on your §1 #5 sentence, *"The sentence looks fine."* Your §1 #1–#3 drawn (`r80a`–`r80c`) and built, with #4; #5 (b) and #6 built; §3 #1–#6 built; §2's calls built but #48. Five stops and 66 readings are Round 81 (row AW) |
 | AW | 🔴 **Round 81 — your Round 80 built (§199–§205, each reviewed), in your order; §199–§202 LIVE, §203–§205 go up with it; ⛔ five stops — Event details' guest box (it stores his words as text, and three places read them: reading them in the device's marks could change counts already saved — how?); the trash guard (Round 76 §3 #4: no frame draws the row, its `Delete for good` or its confirm); Prep's `Needs a cost` (it already follows its card under your Round 76 §5 #12 — leave it, or define a new flag?); #48 (10 categories fit with the totals, not 11 — our Round 80 reading was wrong, and your `✅ 11.` rests on it); `18a`'s end rule, which Chrome still leaves on a sheet of its own with the closing line where the line table breaks across the last sheet (№ 14: 24 of 241 Letter positions) — and the alternative opens a sheet with the totals alone; ❓ 13 of 66 readings are calls** | **12 Oct** | 🔴 **OPEN** |
 | AX | 🔴 **Round 82 — Sean's switch, split: three marks in the press-and-hold panel — keep out of the bottle, don't buy, strained or otherwise separated — all new parts: ❓ please draw them (names, glyphs, the row and the card), with a topper's per-glass line on the card and the printout, and what each does to the bottle, the shopping list and the cost; the four-way count you asked for in Round 48 §4, read on his iPad at 17:50: 5 marked, all 5 your group 1 (4 a weight against a volume), your number 0 of 5, Round 52's 4 — four filtered waters ("don't buy", ours, by his 20 Sep words) and the Orange Crush's Sprite (*"Yes, sprite is a topper"*); ❓ how the five move, and whether `don't cost this` is its own mark (his 17 Sep words on the label with it); the recipe editors' press-and-hold panel, never placed since §28, now centred on the window (§209, LIVE, our reading — no frame draws it): ❓ centred or anchored to the row (centred, it covers the held row at 1600 × 1115), and ❓ Safari's ring on a focused panel, sheet or confirm** | **12 Oct** | 🔴 **OPEN** |
+| AY | 🔴 **Round 83 — Sean's ask, glass on everything that opens over the app (*"Okay. Well I also want glass on any cards/boxes/menus/etc. that pop up over other things in the app."*), and on the invoice's bars (*"And what about in the header/footer bar on the invoice?"*); a correction first: his look-lab pick "Bare" is the blur ON at full strength (`LookLab.tsx:582`, `:624`), live in one place — a phone's drawer header — where nothing moves behind it (measured); what opens over the app, in 19 rows, figures flagged; ❓ six — the recipe (one, or by size), figures on glass, the scrim, dark, the iPad's speed (no measurement on record; the look lab first?), one part or many; ❓ the bars — nothing passes behind them (measured), so glass there means the lines run under them: yes or no, the recipe, and the drawer's header with them. A new state of every pop-up: a frame or the look lab's switch, please — nothing is built. §0, the split, as you asked** | **12 Oct** | 🔴 **OPEN** |
 
 ---
 
@@ -174,6 +175,8 @@ has been bitten by.
 | **Your Round 80 §2 🔧, the comma count: can't be had** — no record keeps what was typed (price history keeps the old price, the new and the time; the queues keep values; Undo whole invoices), so `1,700` and `1.7` typed leave identical records | **Round 81 §0 a** | `16c76b0` | ✅ Yes |
 | **The four-way count of `silent` rows** (your Round 48 §4, with your number and Round 52's) — 5 marked (1 on cocktails, 4 on prep recipes); 1 → 5 (4 a weight against a volume, 1 another unit); 2 → 0; 3 → his reading, no name suggesting it; 4 → 0; a topper, by name → 0; your number 0 of 5; Round 52's 4. The five rows named — four filtered waters, and the Orange Crush's Sprite | **Round 82 §1 e** | `1a9d18d` (the page's code is `9dde1b8`'s); his library, read by him on 12 Oct — the top at 17:50, the rows at 18:40–18:41 | ✅ Yes |
 | **Sean on the switch, 12 Oct** — *"Yes to both of questions. And Build the count."* (the champagne bought, kept out of the bottle, shown per glass with the bottles — our recommendations, his yes); one switch → two (17:08); the third mark, all three in the press-and-hold panel (17:5x); *"Yes, sprite is a topper"* (18:53) | **Round 82 §1 a, d, f** | `1a9d18d` | ✅ Yes |
+| **The split, as you asked** — `REQUESTS.md` from 1,065,812 bytes to 301,895; Rounds 75 and earlier in `REQUESTS-ARCHIVE.md`, byte for byte; an old `REQUESTS.md:NNNN` above 2874 is line NNNN − 2864 there; a `REQUESTS.md:NNNN` is read at the commit it was written at | **Round 83 §0** | `limbo-design` `0f4c0d0` | ✅ Yes |
+| **"Bare" is the blur ON** — your §42.1 recipe, 0.92, `blur(24px) saturate(1.15)` (`LookLab.tsx:68–72`, `:582`, `:624`); live in one place, a phone's drawer header, with the drawer's own solid panel behind it (measured), so it frosts nothing; `check-material` at 1 of 2 and 1 of 1 | **Round 83 §1** | `a4544b0` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -187,6 +190,204 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 83 — Sean wants glass on everything that opens over the app, and on the invoice's header and footer bars — ❓ please draw it, or put it on the look lab's switch first; nothing is built. A correction first: his look-lab pick "Bare" is the blur ON, and the one place it is live today has nothing moving behind it. And the split you asked for is done
+
+
+**implementation → Design, 12 Oct 2026. Branch `main`, app at `a4544b0`** — the code is `1bf91a7`'s (§209 · review),
+unchanged since: `git diff --stat 1bf91a7 a4544b0 -- src scripts package.json` is empty. After §210 came notes only:
+`a7fb009` (`CLAUDE.md`, the split) and `4533923`, `a4544b0` (`WISHLIST.md`, Sean's two asks in §2 and §3). GitHub reads
+`a7fb009` (`git ls-remote`, 12 Oct, 21:02); `4533923` and `a4544b0` go up with this round. **Every `file:line` below is at
+`a4544b0`**; under `src/` they are the same at `1bf91a7`.
+
+**The code is LIVE, read back by curl, no browser:** at 20:58 the live `/style/panelcheck` answers 200 with its heading on
+build `537ayQEoB6ro_4-42seob`, the build since 19:17:07; the live look lab, `/style/look`, answers 200 (20:59).
+
+**Rounds 81 and 82, just below, are still open (rows AW, AX).** Sean was handed a paste for them at `0f4c0d0`; whether it
+has reached you isn't known here. Nothing in this round changes either.
+
+**How it was measured.** Headless Chrome with its own throwaway profile, against a dev server on this Mac, on `/style` lab
+pages only — no sign-in, none of his data; both stopped afterwards. Sizes are CSS px at 1600 × 1068 and 390 × 844, light
+and dark. Chrome, not Safari; no iPad. A `HANDOFF.md:NNNN` or `ROUND-28.md:NNNN` is your file as it came in your Round 81
+handoff.
+
+### 0 · The split, as you asked — nothing to answer
+
+- **Before:** `REQUESTS.md` at `bd0d234` was 1,065,812 bytes, 14,898 lines.
+- **After (`0f4c0d0`):** `REQUESTS.md` keeps the header, the open index, the DELIVERED table and Rounds 76–82 — 301,895
+  bytes, 2,877 lines, ending with a pointer to the archive. With this round it is 323,093 bytes (`wc -c`), under your
+  500 KB.
+- **The archive:** `REQUESTS-ARCHIVE.md`, Rounds 75 and earlier — 765,366 bytes at `0f4c0d0` (765,496 with this round:
+  its header's note on line numbers is longer): a ten-line header, then `bd0d234`'s lines 2875–14898, byte for byte (the
+  two runs hash the same, `shasum`, re-checked with this round). `README.md:24` lists it in the read order.
+- **Line numbers.** At the split, lines 1–2874 kept their numbers (`bd0d234`'s lines 4–2874 and `0f4c0d0`'s hash the
+  same; line 3, the header line, changed). An old `REQUESTS.md:NNNN` above 2874 is line NNNN − 2864 in the archive.
+  ⚠️ **This round moves them:** row AY and this round go in above Round 82, so from line 113 down the live file's lines
+  shift. A `REQUESTS.md:NNNN` is read at the commit it was written at — an old one at `bd0d234`, which GitHub keeps. Both
+  files' notes now say so.
+- **From now on** each round checks the size after it is written; one that would take the file past 500 KB moves the
+  oldest rounds to the archive the same way.
+
+### 1 · A correction: "Bare" is the blur ON
+
+Sean relayed your answer from your chat — it is in no file we can read: that you read his look-lab pick "Bare" as no
+blur, and that the app's code would settle it. It does: **"Bare" is the glass at full strength — your §42.1 recipe.**
+
+- The lab's four blur modes are `off | bare | plate | graded` (`LookLab.tsx:74`). Only `off` is solid — its note: *"The
+  bar is opaque"* (`:81`). `bare`, `plate` and `graded` all count as glass (`:582`), and glass is `blur(24px)
+  saturate(1.15)` on `rgba(var(--surface-rgb), 0.92)` (`:68–72`, applied at `:624`). On screen the lab names it *"Blur ·
+  Bare"* (`:763`), with Bare's note: *"The violation as asked for. 0.92 alpha, 24px blur, saturate 1.15 — the row
+  underneath stops being a row."* (`:88–89`).
+- **The pick** is recorded by the commit that built it, `6509002` (12 Sep): *"Sean picked from the Look Lab on the
+  device"* … *"THE BLUR — bare, on the drawer header, with the total on it"*. In the app that is `chrome-translucent-num`
+  (`globals.css:1527–1531`), with its solid fallback where the filter isn't supported (`:1539–1544`).
+
+**Where glass is live today** — two call sites (grep `chrome-translucent` over `src`, outside `/style` and `/debug`):
+
+| Where | Recipe | Shown | What moves behind it (measured) |
+|---|---|---|---|
+| The Library's selection bar (your "mode bar") | §39.2's: 0.82, `blur(14px)` — `chrome-translucent`, `SelectionBar.tsx:121` | every width | **rows** — 3 behind it at scroll 600 (`/style/footcheck#library`, 1600 and 390) |
+| The top of the products drawer | **Bare's**: 0.92, `blur(24px) saturate(1.15)` — `chrome-translucent-num`, `SourceDrawer.tsx:258` | **below 600 only**: it is in the phone branch that opens at `:240`; the 600–1023 header (`:404–406`) is solid | **nothing.** It sits inside the drawer's own solid panel (`:238`, `bg-surface-alt`) — measured at 390: the panel 390 × 440 at y 342, `rgb(247, 245, 241)`, opaque (dark: `rgb(33, 29, 24)`); the header 390 × 77 at y 343, inside it. The list is the panel's next child, below the header, clipped (`:441`) |
+
+⚠️ **So the one place Bare is live frosts the drawer's own flat fill** — what §39.2 called *"blurring a flat fill — which is
+a no-op"* (`HANDOFF.md:1318`). The look lab's specimen is the opposite: its bar is sticky inside the scrolling list, so
+rows pass under it (`LookLab.tsx:621–628`). `(ours — from the measured colours; not looked at on his phone)` On the drawer
+it shows as 92% `--surface` over `--surface-alt`: a flat strip a shade lighter than the panel. **Bare frosts rows only in
+the look lab.**
+
+**The count.** `check-material` allows at most 2 call sites of the plain recipe and 1 of Bare's
+(`scripts/check-material.mjs:198–217`), and fails the build on a blur typed by hand (`:147–157`). Run at `a4544b0`:
+*"plain translucency at 1 of 2 allowed call sites"*, *"the figure exception at 1 of 1 allowed call site"*. So **a second
+use of Bare's recipe fails the build today, and so would a third of the plain one, as you asked**: *"A rule that is now an
+exception should still be a rule with a number attached."* (`ROUND-28.md:641–642`). The check counts class names, not
+figures: a figure on a second plain-recipe surface would pass it (1 → 2 of 2). *(The check's own failure line, "A second is a new decision, not a
+detail" (`:214`), is ours, not yours.)*
+
+### 2 · ❓ Glass on everything that opens over the app
+
+**Sean, 12 Oct** (recorded in `WISHLIST.md` at 20:35, `4533923`): *"Okay. Well I also want glass on any
+cards/boxes/menus/etc. that pop up over other things in the app."*
+
+**What opens over the app today — all of it solid but the drawer's header on a phone (§1, row 19).** Fills, measured in both themes: `bg-surface` `#FDFCFA` light /
+`#1A1712` dark; `bg-surface-alt` `#F7F5F1` / `#211D18`; `bg-accent` `#2C4A3E` / `#7FA894`. Every scrim is black, at the
+same strength in both themes. **💲 = carries money.**
+
+| # | What Sean sees | Part · `file:line` | Behind it | Fill today | Figures | 1600 × 1068 · 390 × 844 |
+|---|---|---|---|---|---|---|
+| 1 | **Every sheet** | `Sheet`: scrim `Sheet.tsx:277`, box `:336`. 21 call sites in 17 files | the whole window; black **0.40**, z-60 | `bg-surface`, `shadow-modal` | 💲 the Estimate (`EstimateSheet.tsx:189`); Fill from a template (`FillTemplateSheet.tsx:200`); History's invoice card (`InvoiceCard.tsx:295`); the product card and editor (`ProductCardSheet.tsx:74`, `ProductEditor.tsx:219`); the cocktail and prep cards (`RecipeEditor.tsx:299`, `:370`; `PrepEditor.tsx:875`, `:955`; `CocktailPicker.tsx:658`). Counts or numbers, no money: the save window, export size, calculator, tax rate (a %), leftovers, event details. Words only: word pair, group editor | from 1024 up, centred, 672 wide — 512 when `narrow` (the save window, word pair, event details, group editor, save as template); below 1024, full width from the foot, up to 92dvh tall. The Estimate: 672 × 755 · 390 × 776 |
+| 2 | Save as template, over History's card | `SaveTemplateSheet.tsx:255` | **two scrims**, 0.40 over 0.40 | as 1 | a count | 512 × 285 · 390 × 320 |
+| 3 | Filter and sort — the 3 libraries and History | `FilterSheet.tsx:174–192`, built by hand; used 4× | black **0.25**, z-50 | `bg-surface` | counts | 512 × 854 · 390 × 675 |
+| 4 | Start from (the `+` sheet) | `StartFromSheet.tsx:170–181`, by hand | **0.25**, z-50; pinned to the top | `bg-surface` | 💲 subtotals (`:268`, `:310`) | 512 × 606 · 358 × 606 |
+| 5 | Open invoices (⌄, or the phone's tab control) | `OpenInvoicesSheet.tsx:112–120`, by hand | **0.25**, z-50; at the foot, every width | `bg-surface` | 💲 each tab's total | 512 × 274 · 390 × 274 |
+| 6 | The Send and Complete gates | `GateDialog.tsx:118–130` | **0.35**, z-50 | `bg-surface`; money rows `bg-warning-bg` | 💲 the findings, was and now | 520 × 244 (368 with two findings) · 390 × 265 (392) |
+| 7 | Every confirm | `ConfirmDialog.tsx:80`, `:102`. 14 call sites in 10 files | **0.50**, z-80 — the top layer | `bg-surface` | counts in titles (*"Clear 3 changes?"*), no money | 384 × 170 · 350 × 170 |
+| 8 | The press-and-hold panel | `RowPanel.tsx:632` in `RowPanelOverlay` (`:173`); 6 mounts | **no scrim.** In the Builder the invoice's lines and prices are behind it; in the editors, the card sheet's 0.40 | `bg-surface` | 💲 cost per unit, price history, a group's members (`2 × $40.00`) | 420 × 262 · 358 × 262 |
+| 9 | The group chooser, in the panel's place | `GroupChooser.tsx:207` | no scrim | `bg-surface` | 💲 each group's sum | 420 wide (read) |
+| 10 | ⋮ Invoice options | `InvoiceOptionsMenu.tsx:188` | no scrim; a tap outside closes it | `bg-surface` | the stage word only | 300 × 644, both |
+| 11 | Change stage | `StageMenu.tsx:135` | no scrim | `bg-surface` | none | 400 × 308 · 358 × 308 |
+| 12 | The group chooser, from the ⋮ | `GroupChooser.tsx:157` | no scrim | `bg-surface` | 💲 each group's sum | 300 wide |
+| 13 | The "Undo to" list | `UndoStack.tsx:298` | dims the window: black **0.45**, z-40 (`Builder.tsx:2070`) | `bg-surface` | 💲 each step's change | 340 × 307, both |
+| 14 | The Undo box | `SheetToast.tsx:419`; a second copy in History's card | no scrim; 16 above the footer, over the invoice's lines | **`bg-accent`**, solid | 💲 `−$69.99` | 288 × 49 · 358 × 49 |
+| 15 | The Library's Undo strip, after a bulk action | `SelectionBar.tsx:264` | sticky at the foot | **`bg-accent`**, solid | counts | read |
+| 16 | Search results | `GlobalSearch.tsx:45` | no scrim | `bg-surface` | none | read |
+| 17 | The floating save pill (below 1024, when the top bar slides away) | `SavePillFloat.tsx:249`; the pill `SavePill.tsx:97` | over the page, z-30 | `bg-surface`, `shadow-toast` | a count | 180 × 44, at 390 |
+| 18 | The formatting bar above the keyboard | `FormatToolbar.tsx:580` | over the sheet, z-70 | `bg-surface-alt` | controls only | not measured — it needs a keyboard |
+| 19 | The products drawer, below 1024 | `SourceDrawer.tsx:193`, panel `:238` | **no scrim** — your *"No scrim. The invoice is never dimmed or disabled."* (`HANDOFF.md:737`) | `bg-surface-alt`; its header glass below 600 (§1) | 💲 the total, on the header | 390 × 440 at half |
+
+**Stacking, highest first:** confirm 80 › formatting bar 70 › sheets 60 › the hand-built boxes, panel, menus, Undo box and
+search 50 › the phone's bottom bar and the Undo list's dim 40 › top bar, drawer, selection bars, floating pill 30.
+
+**Not on the list, and why:** ingredient suggestions sit in the page and push the rows down (rendered in the row at
+`IngredientRow.tsx:426–437`; no `absolute` or `fixed` on the list, `IngredientPicker.tsx:350`); Technique, Glass and every dropdown are Safari's own lists (`RecipeEditor.tsx:560`, `:576`;
+`FormField.tsx:94`), which the app's styling can't reach; expanding rows open in place; a phone has no side menu
+(`Sidebar.tsx:65`, measured 0 tall at 390); there is no tag sheet (`grep -rniE 'TagSheet|tag sheet' src`: nothing).
+**Not asked, for completeness:** the green top bar (`TopBar.tsx:124`) and the phone's bottom bar (`BottomNav.tsx:32`) are
+solid, and on the Library's lab copy (`/style/footcheck#library`) 2 rows sit behind each at scroll 600.
+
+`(ours)` Every box above but four (rows 14, 15, 18 and 19's panel) is `bg-surface`, which every card on every page shares — so glass
+would come from a utility of its own, not from changing the colour.
+
+❓ **For you:**
+
+1. **The recipe** for a surface that opens over the app — blur, alpha, saturate, its edge, its shadow, and the fallback
+   where the filter isn't supported (today's: solid `--surface`, `globals.css:1539–1544`). One recipe, or by size — a
+   300-wide menu against a 672 sheet, or a sheet that covers the whole window below 1024?
+2. **Figures on glass.** §39.2: never *"behind a **NUMBER**"* (`HANDOFF.md:1332`); §42.1 took one exception and gave it
+   24px (`:6242–6247`, frame `44a`). The 💲 rows: five kinds of sheet in row 1, and rows 4, 5, 6, 8, 9, 12, 13, 14 and
+   19. What do they get — Bare's 24px, the lab's `plate` (*"The bar is glass; the figure is not"*, `LookLab.tsx:96`) or
+   `graded` (*"opaque under the figure"*, `:103`), or solid?
+3. **The scrim.** Under a scrim, glass frosts a dimmed page. Does the scrim stay, lighten, or go? Today there are five
+   strengths (0.25, 0.35, 0.40, 0.45, 0.50) and none under the panel, the menus, the Undo box or the drawer — over those,
+   glass would frost the invoice's own lines and prices. And glass over glass: Save as template over History's card
+   (row 2), a confirm over any sheet.
+4. **Dark.** The tint follows `--surface-rgb` — `26, 23, 18` in dark (`globals.css:258`, `:341`), which `check-material`
+   holds to `--surface`; the scrims are black in both themes. Dark glass over a dimmed dark page — what shows, and is the
+   recipe the same?
+5. **The iPad's speed.** Your §36.6, objection 3: *"`backdrop-filter` on a scrolling 314-row list is the one real
+   performance risk in this app"* (`HANDOFF.md:1852–1853`); objection 2: behind a sheet is *"a list of 300 near-identical
+   rows. Blurred, that is a grey rectangle"* (`:1849–1850`). The drawer's body is solid (`SourceDrawer.tsx:238`), and its
+   comment gives that risk as the reason (`:218–223`). **No measurement of it is on record, on any device:** `git grep
+   -niP 'backdrop.{0,80}(fps|frame|jank|perf|slow|measur)' a4544b0` finds nothing in the app repo (your Round 81
+   `HANDOFF.md`, which is not in it, matches at `:1347` and `:1852` — claims, not measurements), and none of the four commits `git log -i
+   --grep=backdrop` lists measures it. `(ours)` A 672 sheet over the Library's list looks like the case to try. In the
+   look lab first, on his iPad, as §42 did? The lab has one specimen today, a bar over a list (`LookLab.tsx:614–628`); a box over a page
+   would be a new one.
+6. **One part or many.** `Sheet` reaches 21 call sites (17 files), `ConfirmDialog` 14 (10 files), `RowPanelOverlay` 7
+   mounts. Built by hand, each its own change: `FilterSheet` (used 4×), `StartFromSheet`, `OpenInvoicesSheet`,
+   `GateDialog` (2 gates), the 4 menus (rows 10–13), the Undo box (2 mounts), the formatting bar. All at once, or some
+   first? And `check-material` will need your new number.
+
+⚠️ **This is a new state of every pop-up, so it needs a frame — or the look lab's switch — before anything is built.
+Nothing is built.**
+
+### 3 · ❓ The invoice's header and footer bars
+
+**Sean, 12 Oct, minutes later** (recorded at 20:37, `a4544b0`): *"And what about in the header/footer bar on the
+invoice?"* `(ours)` Read as: glass there too. **We told him** both bars are solid today and the invoice's lines never
+pass under them, so a glass bar would have nothing behind it to frost and would look as it does now — and that changing
+that is a layout change, and yours.
+
+| Bar | Part · `file:line` | Fill today | Figures | 1600 × 1068 · 390 × 844 |
+|---|---|---|---|---|
+| Header | `InvoiceHeader.tsx:111`, `shrink-0` | none of its own — the card's `bg-surface` (`Builder.tsx:1412`) | invoice №, date, guests; no money | 718 × 105 · 388 × 105 |
+| Footer | `InvoiceSheet.tsx:1163`, `shrink-0` | `bg-surface-alt`, solid | 💲 from 600 up: the line count, subtotal, tax %, the comp clause and the total (`:1204–1238`). Below 600 they're hidden (`:1168`) and the drawer's header carries the total | 718 × 84 · 388 × 73 |
+| Select bar, in select mode, above the footer | `InvoiceSelectBar.tsx:79`, sticky | `bg-surface`, solid | `N selected` and a 💲 `−$` total | 718 × 76 · 388 × 76 |
+
+**The catch, measured.** The lines are their own scroller (`InvoiceSheet.tsx:912`, `min-h-0 flex-1 overflow-y-auto`), and
+the bars sit outside it, above and below — y, in px:
+
+| | Header | Lines | Footer |
+|---|---|---|---|
+| 1600 × 1068 | 127–232 | 232–984 | 984–1068 |
+| 390 × 844 | 119–224 | 224–697 | 697–770 |
+
+In select mode the lines end at the select bar's top (908 · 621). **Nothing passes behind any of the three.** Glass on
+them as they stand would frost a flat fill — the drawer header's case in §1.
+
+❓ **For you:**
+
+1. **Glass there, with the lines running under the bars — or not?** It is a layout change, and your own rulings say what
+   comes with it:
+   - *"A fixed bar over a list REQUIRES bottom padding on the list"* … *"Equal to the bar's height — 60px here. Without
+     it the bar covers the last row permanently"* (`HANDOFF.md:1335–1338`) — `(ours)` and the same at the top. So at rest the lines would
+     still start below the header (105) and end above the footer (84; 73 at 390), and look as they do now until they
+     move.
+   - The total over moving lines is §39.2's own case: *"the blurred row under `$477.17` reads as a grey smudge competing
+     with a figure that has to be read exactly"* (`HANDOFF.md:1320–1321`) — which is why *"the totals bar is OPAQUE"*
+     (`:1323`).
+2. **If yes, the recipe:** §42.1's 24px for the footer, which carries the total — and for the header, which carries no
+   money, §39.2's 14px?
+3. **The drawer's header, on a phone** (§1): the same catch — Bare there frosts nothing. The list under it, as in the look
+   lab, or leave it as it is?
+
+## What I need back
+
+1. ❓ **§2 — the recipe and the six**, and whether a frame or the look lab's switch comes first (if the lab, what it should
+   hold). Nothing is built until then.
+2. ❓ **§3 — the bars:** the lines under them or not, the recipe if so, and the drawer's header with them.
+3. **Rounds 82 and 81** (rows AX, AW): still open; nothing here changes them.
 
 ---
 
@@ -2874,4 +3075,4 @@ panel (check 3.5) — and marks a held Return as a repeat (§1 #17); whether a t
 
 ## Older rounds — Round 75 and earlier are in `REQUESTS-ARCHIVE.md`
 
-Moved there on 12 Oct 2026 at Design's request: this file had reached 1.07 MB, too large for Design to copy in or search. Nothing was edited — the archive holds them byte for byte as they stood here at `bd0d234`. Lines 1–2874 of this file kept their numbers; a `REQUESTS.md:NNNN` above 2874 written before the split is line NNNN − 2864 in the archive.
+Moved there on 12 Oct 2026 at Design's request: this file had reached 1.07 MB, too large for Design to copy in or search. Nothing was edited — the archive holds them byte for byte as they stood here at `bd0d234`. Lines 1–2874 of this file kept their numbers at the split (`0f4c0d0`); each round written since goes in above the last and moves the lines below it, so a `REQUESTS.md:NNNN` is read at the commit it was written at. A `REQUESTS.md:NNNN` above 2874 written before the split is line NNNN − 2864 in the archive.
