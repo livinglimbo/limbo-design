@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Split 12 Oct 2026, at your request:** this file had reached 1.07 MB. Rounds 75 and earlier are now in `REQUESTS-ARCHIVE.md`, unedited; this file keeps the header, the index, the DELIVERED table and Rounds 76 onward. At the split (`0f4c0d0`) every line here kept its number; each round since goes in above the last and moves the lines below it, so a `REQUESTS.md:NNNN` is read at the commit it was written at (Round 83 §0). **Reflects `limbo-app` at `main` @ `6129dbd`** — the code is `deb5973`'s (§220 · review); `6129dbd` (§221) is records only: `git diff --stat deb5973 6129dbd -- src scripts package.json` is empty. **LIVE is `cf720ec`'s build** (§211–§214): build id `0_kUXfw5OLAq4ngBws4KX` since 13 Oct, 02:28, read again 16 Oct, 15:31 and 16:01, by curl — the live `/style/trashcheck` carries §213's fixture `Castellano anniversary`, and `/style/markscheck` (§215) and `/style/separatecheck` (§217) answer 404. `git ls-remote origin main` reads `11d2efa` (16 Oct), whose nine commits after `cf720ec` touch no app code; §215–§221 go up with Round 84. *Until Round 84 this line read `a4544b0`, the code `1bf91a7`'s (§209 · review), LIVE on build `537ayQEoB6ro_4-42seob`; `4533923` and `a4544b0` went up with Round 83.* *Until Round 83 this line read `a7fb009`, the same code, with `git ls-remote` reading `1a9d18d` at 19:24; before the split it said nothing of line numbers.* *Until Round 82 this line read `42f6ad2`, the code `0afe219`'s, with LIVE at `e8f8a1c` and §203–§206 to go up with Round 81 — they went up at 15:41:56 and were live at 15:45:53; §207–§208 followed as `39efefe`, live by 16:49:51.* *Until Round 81 this line read `a4606d9`, the code `c6ccb79`'s, LIVE; `a4606d9` went up with Round 80 at 19:05:17 on 11 Oct.* *Until Round 80 this line read `f6871e4`, the code `11027e7`'s, with LIVE at `ebefce8` and §189–§192 held on implementation's Mac by Round 79 §1 — all pushed since, as `9e35afd` (13:31:59) and `c6ccb79` (17:06:27, 11 Oct).* *Until Round 79 this line read `909c0b3`, the code `887e6e8`'s — both rebased onto §186 at 23:38 on 10 Oct with the same changes, and pushed as `1103643` and `ed17565` (Round 79's header lists every pair). Until Round 78 it read `56cfbe3`, the code `fc14783`'s (§153–§158 templates, §160–§167 your Round 75 and the Retry fix, §169–§179 Custom Group Lines), pushed. Until Round 77 it read `124fb62`, the same code. Until Round 76 it read `9f21178`, the code `31a78b4`'s (§149–§151, built from your Round 73). Until Round 75 it read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
+> **Split 12 Oct 2026, at your request:** this file had reached 1.07 MB. Rounds 75 and earlier are now in `REQUESTS-ARCHIVE.md`, unedited; this file keeps the header, the index, the DELIVERED table and Rounds 76 onward. At the split (`0f4c0d0`) every line here kept its number; each round since goes in above the last and moves the lines below it, so a `REQUESTS.md:NNNN` is read at the commit it was written at (Round 83 §0). **Reflects `limbo-app` at `main` @ `d1e7dbe`** — the code is `88443e0`'s (§234 · review); `d1e7dbe` (§235) is records only: `git diff --stat 88443e0 d1e7dbe -- src scripts package.json` is empty. **LIVE is `6129dbd`'s build** (§215–§221): build id `W8wq1IMtvDRHl3daq4VZQ`, pushed 16 Oct at 16:13:32 with Round 84, read 17 Oct, 19:52 and again 20:25, by curl — `/style/markscheck` and `/style/separatecheck` answer 200, and the live `/style/trashcheck` does not say `Another copy is in` (§222's). `git ls-remote origin main` reads `6129dbd` (17 Oct); §222–§235 go up with Round 85. *Until Round 85 this line read `6129dbd`, the code `deb5973`'s (§220 · review), with LIVE at `cf720ec`'s build `0_kUXfw5OLAq4ngBws4KX`; `6129dbd` went up with Round 84.* *Until Round 84 this line read `a4544b0`, the code `1bf91a7`'s (§209 · review), LIVE on build `537ayQEoB6ro_4-42seob`; `4533923` and `a4544b0` went up with Round 83.* *Until Round 83 this line read `a7fb009`, the same code, with `git ls-remote` reading `1a9d18d` at 19:24; before the split it said nothing of line numbers.* *Until Round 82 this line read `42f6ad2`, the code `0afe219`'s, with LIVE at `e8f8a1c` and §203–§206 to go up with Round 81 — they went up at 15:41:56 and were live at 15:45:53; §207–§208 followed as `39efefe`, live by 16:49:51.* *Until Round 81 this line read `a4606d9`, the code `c6ccb79`'s, LIVE; `a4606d9` went up with Round 80 at 19:05:17 on 11 Oct.* *Until Round 80 this line read `f6871e4`, the code `11027e7`'s, with LIVE at `ebefce8` and §189–§192 held on implementation's Mac by Round 79 §1 — all pushed since, as `9e35afd` (13:31:59) and `c6ccb79` (17:06:27, 11 Oct).* *Until Round 79 this line read `909c0b3`, the code `887e6e8`'s — both rebased onto §186 at 23:38 on 10 Oct with the same changes, and pushed as `1103643` and `ed17565` (Round 79's header lists every pair). Until Round 78 it read `56cfbe3`, the code `fc14783`'s (§153–§158 templates, §160–§167 your Round 75 and the Retry fix, §169–§179 Custom Group Lines), pushed. Until Round 77 it read `124fb62`, the same code. Until Round 76 it read `9f21178`, the code `31a78b4`'s (§149–§151, built from your Round 73). Until Round 75 it read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -111,7 +111,8 @@ is left and whose it is, and the rows are back in date order.
 | AW | ~~**Round 81 — your Round 80 built (§199–§205, each reviewed), in your order; §199–§202 LIVE, §203–§205 go up with it; ⛔ five stops — Event details' guest box (it stores his words as text, and three places read them: reading them in the device's marks could change counts already saved — how?); the trash guard (Round 76 §3 #4: no frame draws the row, its `Delete for good` or its confirm); Prep's `Needs a cost` (it already follows its card under your Round 76 §5 #12 — leave it, or define a new flag?); #48 (10 categories fit with the totals, not 11 — our Round 80 reading was wrong, and your `✅ 11.` rests on it); `18a`'s end rule, which Chrome still leaves on a sheet of its own with the closing line where the line table breaks across the last sheet (№ 14: 24 of 241 Letter positions) — and the alternative opens a sheet with the totals alone; ❓ 13 of 66 readings are calls**~~ | **12 Oct** | ✅ **ANSWERED — your `ROUND-81.md` and frame `r81a` (`Round 81-83 - glass, three marks, the trash guard.dc.html`), by email on the night of 12 Oct, dated 13 Oct (the Mac's tools can't open the handoff folder). BUILT §212–§214 on `main`, each reviewed, and LIVE since 13 Oct, 02:28 (`cf720ec`)** — your §1 #1, #2 (b)–(f), #3 and #4; #5 tried, today's rule stands (its numbers in Round 84 §2); §2's calls but #11 and #41's card line. Three stops are Round 84 §1 #1–#3 (row AZ) |
 | AX | ~~**Round 82 — Sean's switch, split: three marks in the press-and-hold panel — keep out of the bottle, don't buy, strained or otherwise separated — all new parts: ❓ please draw them (names, glyphs, the row and the card), with a topper's per-glass line on the card and the printout, and what each does to the bottle, the shopping list and the cost; the four-way count you asked for in Round 48 §4, read on his iPad at 17:50: 5 marked, all 5 your group 1 (4 a weight against a volume), your number 0 of 5, Round 52's 4 — four filtered waters ("don't buy", ours, by his 20 Sep words) and the Orange Crush's Sprite (*"Yes, sprite is a topper"*); ❓ how the five move, and whether `don't cost this` is its own mark (his 17 Sep words on the label with it); the recipe editors' press-and-hold panel, never placed since §28, now centred on the window (§209, LIVE, our reading — no frame draws it): ❓ centred or anchored to the row (centred, it covers the held row at 1600 × 1115), and ❓ Safari's ring on a focused panel, sheet or confirm**~~ | **12 Oct** | ✅ **ANSWERED — your `ROUND-82.md` and frame `r82a`–`r82c`, by email on the night of 12 Oct, dated 13 Oct. BUILT §213 (your §2 #2, §3 #2; LIVE) and §215–§220 on `main` (your §1 #1–#7), each reviewed** — §215–§220 go up with Round 84. Sean: *"So we're starting those builds, yeah?"* Three stops and a call are Round 84 §1 #4–#7 (row AZ) |
 | AY | ~~**Round 83 — Sean's ask, glass on everything that opens over the app (*"Okay. Well I also want glass on any cards/boxes/menus/etc. that pop up over other things in the app."*), and on the invoice's bars (*"And what about in the header/footer bar on the invoice?"*); a correction first: his look-lab pick "Bare" is the blur ON at full strength (`LookLab.tsx:582`, `:624`), live in one place — a phone's drawer header — where nothing moves behind it (measured); what opens over the app, in 19 rows, figures flagged; ❓ six — the recipe (one, or by size), figures on glass, the scrim, dark, the iPad's speed (no measurement on record; the look lab first?), one part or many; ❓ the bars — nothing passes behind them (measured), so glass there means the lines run under them: yes or no, the recipe, and the drawer's header with them. A new state of every pop-up: a frame or the look lab's switch, please — nothing is built. §0, the split, as you asked**~~ | **12 Oct** | ✅ **ANSWERED — your `ROUND-83.md` and frame `r83a`–`r83b`, by email on the night of 12 Oct, dated 13 Oct. The lab BUILT §211 and LIVE since 12 Oct, 23:46 (`f179c21`) — Sean tried it on his iPad and iPhone on 13 Oct and PARKED glass** (`WISHLIST.md`, his words: Round 84, *Glass*); §2 #6 and §3 are not built in the app. Nothing asked while it is parked |
-| AZ | 🔴 **Round 84 — your Rounds 81–83 built (§211–§220, each reviewed), by email; Round 81 LIVE, Round 82's marks go up with it; glass parked by Sean — nothing asked; ⛔ six stops — the trash row's line two (`r81a` line 215: History's row has no such line), Widens' held categories (no frame; `r80b`'s ruled hint would be untrue), the product card's past-the-cent line (never drawn, no frame), the panel's subtitle (`r82a` lines 152–153, named in no ruling), the one-drink heading (`r82c` line 191 against Sean's 18 Sep *"call it 'Base'"*), and the printout's drink count with two or more batch columns (`r82c` lines 196–198); ❓ the on-hand line's unit (`r82b` line 179's `2 L`); ❓ six readings and a keyboard route for the panel (3.5: his keyboard has no F10); Round 81 #5's numbers; 19.1 and 21.2's counts** | **16 Oct** | 🔴 **OPEN** |
+| AZ | ~~**Round 84 — your Rounds 81–83 built (§211–§220, each reviewed), by email; Round 81 LIVE, Round 82's marks go up with it; glass parked by Sean — nothing asked; ⛔ six stops — the trash row's line two (`r81a` line 215: History's row has no such line), Widens' held categories (no frame; `r80b`'s ruled hint would be untrue), the product card's past-the-cent line (never drawn, no frame), the panel's subtitle (`r82a` lines 152–153, named in no ruling), the one-drink heading (`r82c` line 191 against Sean's 18 Sep *"call it 'Base'"*), and the printout's drink count with two or more batch columns (`r82c` lines 196–198); ❓ the on-hand line's unit (`r82b` line 179's `2 L`); ❓ six readings and a keyboard route for the panel (3.5: his keyboard has no F10); Round 81 #5's numbers; 19.1 and 21.2's counts**~~ | **16 Oct** | ✅ **ANSWERED — your `ROUND-84.md` and frame `r84a`–`r84e` (`Round 84 - the six stops.dc.html`), by iCloud, 17 Oct. BUILT §222–§228 on `main`, re-checked in three batches and reviewed (§229–§234)** — your §1 #1–#7 and §2's calls but #18a; #23 and 3.5 as built. Four stops — #18a's check and its refusal box, the card behind a waiting row (#18b), the guarded row's height — are Round 85 §1 (row BA) |
+| BA | 🔴 **Round 85 — your Round 84 built (§222–§234, each batch reviewed), by iCloud; ❓ Sean's ask first: a way back from the editing card to the read-only card, and *"a few options for where the mechanism to “go back” is located. Be creative."* — a path across parts, nothing built; ⛔ four stops — what `Delete…`'s check compares (#18a: products carry no `savedAt`, and preps an `updatedAt`, not `savedAt`, `types.ts:133`, `:832`; `trashedAt` differs where `savedAt` doesn't), the box after a refusal (no frame draws it: its words are in none of the 82 HTML files you sent on 17 Oct; `r84a`, lines 31–58, draws the rows), the card behind a waiting row (#18b names the row; `r81a` draws the guarded card's foot, neither it nor `r84a` a waiting card; `deleted = Boolean(onRestore || onOpenLive)`), the guarded row's height (`r84a` lines 40–41 against your §33.5 B3); ❓ nine readings; the contrasts you asked for (`--warning` 7.44 / 8.93, the switch's edge 4.10 / 3.62); 23.3 done** | **17 Oct** | 🔴 **OPEN** |
 
 ---
 
@@ -183,6 +184,8 @@ has been bitten by.
 | **Check 3.5 — no:** his Magic Keyboard has no F10 and no function row, so Shift+F10 is no route into the press-and-hold panel | **Round 84 §3** | `limbo-app` `4ea8148` | ✅ Yes |
 | **Check 22.7 — the editors' centred panel on his iPad: *"Done. It works."*** — steps 4–5 not said | **Round 84 §3** | `limbo-app` `bdd426f` | ✅ Yes |
 | **The glass lab on his iPad and iPhone, 13 Oct — every pane and both bars read as solid at 0.92–0.76; Sean PARKED glass**, his words verbatim | **Round 84, *Glass*** | `limbo-app` `4933079` | ✅ Yes — parked |
+| **Your Round 84 🔧 #3 and #31, measured:** `--warning` at 15 on `--surface` 7.44:1 light, 8.93:1 dark; the switch's off edge, `--control-line`, 4.10:1 light and 3.62:1 dark against the panel (3.86 / 3.39 on `--surface-alt`), so no other token was needed — in all three theme blocks, held by `check-money` and `check-marks` | **Round 85 §2 #13, #17** | `limbo-app` `d1e7dbe` | ✅ Yes |
+| **Check 23.3 — Sean moved the Sprite himself: *"23.3 is good."*** (17 Oct, 4:42 PM; his screenshot private) — `Separate · each drink`, its `1.5` not struck | **Round 85 §3** | `limbo-app` `4d248f9` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -196,6 +199,429 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 85 — your Round 84 is built (§222–§234, each batch reviewed); it came by iCloud. ❓ Sean's ask first: a few options for where "go back" lives — *"Be creative."* ⛔ Four stops: what `Delete…`'s check compares (#18a), the box after a refusal, the card behind a waiting row (#18b), and the guarded row's height. Also the readings, the contrasts you asked for, and what his iPad still owes
+
+
+**implementation → Design, 17 Oct 2026. Branch `main`, app at `d1e7dbe`.** The code is `88443e0`'s (§234 · review).
+`d1e7dbe` (§235) is records only: `git diff --stat 88443e0 d1e7dbe -- src scripts package.json` is empty. **Every
+`file:line` below is at `d1e7dbe`.** A frame line is a line of `Round 84 - the six stops.dc.html` (178 lines), re-read
+for this round. **None of this round's build is live yet: it goes up with this round's send.**
+
+**What is LIVE, read back by curl (no browser):**
+- **`6129dbd`, §215–§221 and our Round 84** — pushed 16 Oct at 16:13:32 (`git reflog`). On 17 Oct at 19:52, and again
+  at 20:25:
+  - the live `/style/trashcheck` carries build id `W8wq1IMtvDRHl3daq4VZQ`, and does not say `Another copy is in`
+    (§222's line, not live);
+  - `/style/markscheck` and `/style/separatecheck` answer 200 (404 on 16 Oct).
+- **GitHub reads `6129dbd`** (`git ls-remote`, 17 Oct).
+- **His iPad has it:** he did check 23.3 on it at 4:42 PM on 17 Oct (§3).
+
+**How it was measured:**
+- **Browser:** headless Chrome only, each run with its own throwaway profile, all stopped and deleted.
+- **Servers:** the verify build (`SHIP_VERIFY=1`) on `127.0.0.1`, stopped afterwards.
+- **Pages:** `/style` lab pages that carry the real parts on stand-ins. No sign-in and none of his data.
+- **Themes and sizes:** light and dark, at 1600 × 1068, 1200 × 1468 and 390 × 844.
+- **Code:** Node ran the real code against stand-ins (a fake server, and for #18b the four real screens with the real
+  sync layer), never the database.
+- **Not covered:** Chrome, not Safari, and no iPad.
+- **Final build on these records** (17 Oct, done 20:35, after a review of the records corrected their words; no code
+  changed): exit 0, 8,711 lines with ✓ and none with ✗; *"all 87 checks are wired into the build"*. 87 check scripts
+  on disk and 87 in the build, compared name by name; this round added none.
+
+**What Sean sent, 17 Oct, his own words:** *"Build."* — for your Round 84. "Build" covers what you ruled. Where a
+ruling stops, so did the build (§1).
+
+### 0 · Your Round 84: received by iCloud, built, then re-checked in three batches
+
+**How it came.** By the iCloud handoff folder again.
+- The zip reached it at 15:58 on 17 Oct (its time in `design-imports/`). The Mac's tools could read the folder and move
+  the zip out of it — closed to them from about 10 Oct, which is why Rounds 81–83 came by email.
+- Extracted at 16:00. `ROUND-84.md`, the frame, `MANIFEST.md`, `STATE.md` and `github.md` are copied into `limbo-app`'s
+  `docs/design/`, byte for byte (`27759f3`; `cmp`, 17 Oct). That repo is private; this one is public, so they are not
+  here.
+- `HANDOFF.md` and the main canvas are byte for byte the 12 Oct source, so the redacted copies there stand: frame
+  `20A`'s real invoice, with its client's name and every price removed (`docs/design/README.md` says so). A grep for
+  the client's name and for that invoice's figures finds nothing in `docs/design/`.
+- **This file with this round:** 408,714 bytes (`wc -c`), under your 500 KB, so no round moves to the archive.
+
+**How it was built.** §222–§228 were built first and committed between 16:33 and 17:23. Then three batches
+re-checked them against the code and your files — not the records — and each batch was reviewed again by a pass of its
+own (batches 2 and 3 adversarially) that opened the frame, read it whole, drew it headless, re-took the numbers with a
+driver of its own and ran fault injections of its own.
+
+**a · Batch 1 — the trash row, `Delete…`'s safety, the comma (your §1 #1, #4, #5; §2 #7, #14, #18a, #18b).** §222
+(`758a0b7`), §225 (`456c56b`), §229 (`d5b21c3`); review §230 (`6e52bc3`).
+- **#1 (`r84a`):** `Another copy is in History` (`in Cocktails`, `in Prep`, `in Products`) is a line of its own under
+  the row's line two, 15, `--text-secondary`, on a guarded row only (`anotherCopyLine`, `trash.ts`). `Trashed Oct 9 ·`
+  is written nowhere. The days-left chip stays.
+- **#18b:** until the screen's live list has loaded, a trash row shows neither Restore nor `Delete…`, nor the line.
+  - **§229 found a hole and closed it, within your words:** `loading` also ends when the read fails. With nothing
+    cached and the live read refused, every trashed copy was offered Restore. Run before the fix on the real sync
+    layer, Restore wrote `Paper Plane (older)` over the live `Paper Plane` on the stand-in server. Each screen now waits on
+    `!loading && !error`.
+  - Run on the four real screens (Cocktails, Prep, Products, History), the live read answered late: no button until
+    it lands, nothing written, the live copy byte for byte.
+- **#14:** `Delete…`'s confirm is the shared `ConfirmDialog`, handed only its own props (held by an assertion).
+- **#4 and #5:** as built, now held absent: neither editor hands the panel a subtitle; `One drink` is drawn nowhere.
+- **§2 #7:** `0,125`, `0,750`, `00,125` and `01,000` are refused, read as no number, with `Did you mean 0.125? A comma
+  only separates thousands.` (`00.125?`, `01.000?`). `0`, `0.125`, `10,125` and `1,000` are unchanged; a device whose
+  decimal is a comma is untouched.
+- **#18a: not built** — §1 #1 and #2.
+- **The review (§230):** no fault in the app. **One hole closed:** `Trashed Oct 9 ·` written as JSX text beside the
+  chip passed `check-trash`.
+
+**b · Batch 2 — Widens' held chips, the card's line, the on-hand word, the switch's edge (your §1 #2, #3, #7; §2 #23,
+#31).** §223 (`476f77e`), §224 (`3c9e7b2`), §226 (`e4a4558`), §228 (`fc06c42`); re-checked §231 (`f4803e2`), reviewed
+§232 (`1ecdf89`).
+- **#2 (`r84b`):** a held chip sits last — dashed 1.5 edge in `--control-line`, no fill, `--text-secondary`, a trailing
+  ✕, spoken `Rentals, no longer follows guests, remove`. A tap takes it off, Save drops it, Cancel brings it back, and
+  a category that follows again returns as an ordinary chosen chip. The hint names it, word for word as ruled. The
+  per-chip line is written in no shipped file.
+- **#3 (`r84c`):** under the card's Price row, inside the Cost group, the group's full width: `Priced past the cent:
+  $0.125. Retype it to whole cents.`, 15, `--warning`, no glyph, 4 under Price. It shows while the stored price is past
+  the cent and goes when a whole-cent price is saved.
+- **#7 (`r84e`):** `2 bottles`, `1 bottle`, `12 cans`, `10 packs` — the shopping list's word. The figure stays at the
+  steppers' figure x and the word follows it, never wrapping; blank with no count.
+- **#31 (`r84e`):** `SwitchTrack` has a 1px edge, `--control-line` off and its own `--accent` on. The padding gives up
+  the pixel (3 → 2), so the track stays 44 × 26 and the knob where it was. The fill stays.
+- **#23:** the alias, as built.
+- **The reviews:** no fault in the app; **five holes closed** — the per-chip line in lower case passed; a ✕ drawn before
+  the word passed; a switch drawn on its own with no edge passed (§231); and your two 🔧 floors, the switch edge's 3:1
+  and `--warning`'s 4.5:1, were not held in the dark block an iPad on System uses — `--warning`'s was held nowhere
+  (§232). Both are held in all three theme blocks now.
+
+**c · Batch 3 — the printout, and the told items (your §1 #6; §2 #37, #45, #47, #44, and #60, #61, which you call
+ours).** §227 (`18c33fa`), §233 (`9e2605b`); review §234 (`88443e0`).
+- **#6 (`r84d`):** today's header stays; each batch column's Yields cell gets its drinks under it; the Separate block is
+  rows of the same table under a full-width heading. His French 75 on sample amounts (1 oz gin, ½ lemon, ½ simple, 3 oz
+  champagne Separate), run on the real sheet:
+
+  | Row | Per drink | 750 ml | 1000 ml | 1750 ml (your `r84d`) |
+  |---|---|---|---|---|
+  | Gin / Lemon / Simple | 1 oz / 0.5 oz / 0.5 oz | 375 / 187 / 187 | 500 / 250 / 250 | 875 / 437 / 437 |
+  | Yields | 1 drink | 12.7 over `12–13 drinks` | 16.9 over `16–17 drinks` | 29.6 over `29–30 drinks` |
+  | `Separate · each drink`, then Champagne | 3 oz | about 1½ bottles | about 2 bottles | about 3½ bottles |
+
+  With no Per drink column: `Champagne · 3 oz a glass`. The `for 12–13 drinks` clause and `Each glass` are gone from
+  the paper; the card keeps its line.
+- **#37:** no line two, and no printout cell, when a Separate row's unit is missing or one the registry can't read.
+- **#45:** the strength line leaves Strained rows out and keeps Separate rows in — gin, ice Strained and champagne read
+  23.2% ABV, where the ice unmarked dilutes it to 16.6%; the Service line stops listing a Separate row; the footnote is
+  unchanged.
+- **#47:** a group with only Separate rows draws no rule above the block.
+- **#60 (ours):** run before the fix on his recipe's shape (the syrup's water 615 g, Don't buy, against a litre), the
+  row read *"The Whiskey Sour asks for 0.75 g and this is sold in L. Say how much each one holds and this can be
+  counted."* It now reads *"The Simple Syrup 1:1 asks for 615 g and this is sold in L. A weight can't become a volume
+  here — change the row's unit, or add a weight to the product."* The remedy is your Round 52 §6 #2 sentence. **Found
+  beside it and fixed:** a merge clash named the cocktail beside the prep's figure (`The Daiquiri asks for 12 each`,
+  where 12 limes is the lime juice's).
+- **#44:** nothing works out a cocktail's cost per drink (a scan of 230 app files, names and words, comments stripped:
+  0). A check now goes red the day one is written, so whoever writes it has to hold Sean's rule on it.
+- **#61:** nothing to build without a new part — §2 #33.
+- **The review (§234): one fault on the paper, fixed.** On the phone paper the Separate rows' words ran together —
+  `3 ozabout 1` (Per drink and four batch columns, 0.7 apart), `about 41about 55` (four, no Per drink, 0.5); the app's
+  paper for your `r84d` sheet (Per drink, 750, 1750) was 1.1 apart. Those cells now carry `r84d`'s 12 gap
+  (`column-gap: 12px`, frame lines 119–131) as left padding, on those rows only. After it, every gap is 12 or more at 1600 and 1200, and no cell took another line.
+  **Three holes closed:** the drinks line worked from the rounded figure passed (768 ml is 12.98 drinks — `13` to one
+  decimal — and must read `12–13 drinks`); the #44 check missed six spellings (`Pour cost`, `Drink cost`, …) and files
+  not yet committed.
+
+**Your 3.5:** received — no keyboard route built.
+
+**Money, the first rule.** No stored figure moves, and no completed invoice's either.
+- The build's own checks hold, on every build: the comp's worked example (4 × gin at $24.99 + a $40.00 bag of ice, ice
+  comped → $99.96 billed, $40.00 comped, $105.96 at 6%) and yours ($1,395.75 at 6% → $83.74 tax, $1,479.49 on its
+  paper).
+- `check-onhand`'s 4,602 figures, papers and renders across 270 invoices are byte for byte as before.
+- §234 compared 896 printouts and 140 cards against the code before §227: every recipe without a Separate row is byte for
+  byte. The calculator differs from the code before §233 only in the water row's sentence, at 10, 40, 100, 250 and
+  1,000 guests, both rounding modes. Nothing here is stored.
+
+**Fault injections** (each new or changed assertion broken on purpose, and tried against a comment):
+
+| § | Cases | Red | Controls green |
+|---|---|---|---|
+| §222 | 21 | 18 | 3 (one first run mis-aimed, fixed and re-run) |
+| §223 | 13 | 12 | 1 |
+| §224 | 7 | 6 | 1 |
+| §225 | 4 | 4 | — |
+| §226 | 5 | 5 | — |
+| §227 | 22 | 21 | 1 |
+| §228 | 14 | 14 | — |
+| §229 | 19 | 16 | 3 |
+| §230 · review | 29 | 23 | 5, and 1 green that should have been red: the hole, red since |
+| §231 | 32 | 29 | 3 |
+| §232 · review | 69 | 62 | 7 |
+| §233 | 12 | 10 | 2 |
+| §234 · review | 37 | 33 | 4 |
+
+### ❓ Sean's ask, first — a way back, and a few options for where it lives
+
+**His words, 17 Oct**, with a screenshot of the Orange Crush's editor (kept private; he circled the editor's top-left
+corner and wrote *"NEED A PATH BACK TO THE READ ONLY CARD"*): *"Just a note. I want a way to go back from the editing
+card to the read-only card. In fact, there are quite a few places where navigating back and forth between
+cards/actions is unavailable. We should fix that. Investigate. Start with this screenshot as a reference."*
+
+**And, later the same day:** *"Add this to the request for round 85 in design: I want a few options for where the
+mechanism to “go back” is located. Be creative."*
+
+**What the app does today** — read from the code on 17 Oct, nothing run:
+- **A cocktail's card and its editor are one window.** `Edit recipe` unlocks it (`RecipeEditor.tsx:345`). `Save` saves
+  and then closes the window (`:441–448`), so he lands on the list, not the card.
+- **Every other way out also closes it, and nothing asks first.** ✕, a tap beside the window and Escape close it
+  (`Sheet.tsx:209`, `:278`). A search of `RecipeEditor.tsx` for `dirty`, `Discard` and `unsaved` finds only the batch
+  instructions' own question (`:813`), so typed changes are dropped without a word.
+- **A product's card closes the moment `Edit product` is tapped** (`ProductLibrary.tsx:264–268`), and closing the editor
+  leaves him on the list (`:573`).
+- **Where a way back does exist:** two ‹ inside windows, both yours — the template preview's (`r74d`, `Back to
+  templates`, `FillTemplateSheet.tsx:236–243`) and the group chooser's (`r74f`, `GroupChooser.tsx:59–75`) — and a ← on
+  each Settings section's page, back to the Settings list (`SettingsHeader.tsx`). Found by searching for
+  `aria-label="Back` and for a left-turned chevron; that is two spellings, so it may not be every one.
+- **Not re-checked here,** from another session's map of the same day (read from the code, nothing run): the Builder's
+  ⋮ flows, History's card and Settings behave the same way; three press-and-hold rows do nothing; the iPad's Back
+  closes too. That map also said the template preview's ‹ was the only one — the list above corrects it.
+
+**Ours, a recommendation, not a request:** one rule for going back across the whole app, not one per window.
+
+❓ **Please draw a few options for where the way back sits — Sean: *"Be creative."*** Start where he did: the cocktail
+editor back to its read-only card. It is a path across parts (card → editor → card), so it needs a frame. Nothing is
+built.
+- ❓ And what does going back do to something typed and not yet saved — keep it, ask, or drop it?
+
+### 1 · ⛔ The stops — four, each a question
+
+Each stop names the ruling it rests on and what was checked: the frame and its lines, or the files.
+
+1. ⛔ **What `Delete…`'s check compares** (your §2 #18a).
+   - **What the ruling says:** `Delete…` checks the trashed copy's `savedAt` against the stored one at that id.
+   - **What the frames draw:** no refusal. `r84a` (lines 31–58) draws the rows only, and a grep of all 82 HTML files you
+     sent on 17 Oct (every frame and lab page) for `another device`, `changed on another` and `Nothing was deleted`
+     finds 0.
+   - **What the code has:** of the four kinds in the trash, only invoices and cocktails carry `savedAt`. A product
+     (`LibraryItem`, `types.ts:133`) carries no save time — its one date, `lastUsed` (`:230`), is never moved by a
+     save — and a prep recipe (`:753`) an optional `updatedAt` (`:832`). Trashing a cocktail spreads the recipe and
+     stamps `trashedAt` (`cocktails.ts:34–40`), so a trashed copy keeps the `savedAt` of the copy it came from.
+   - **Measured** on the real sync layer, in the case our Round 84 #18 raised — his other device trashes the live copy
+     before this one syncs — with this device's two copies begun by the trash's two writes, the second given up:
+     - a recipe's `savedAt`, shown and stored: `2026-10-09T14:00` and `2026-10-09T14:00` — equal;
+     - a product's: none and none;
+     - `trashedAt`: `2026-10-09T15:00` shown, `2026-10-17T09:00` stored — different.
+     - `Delete…` as built then leaves the live list and the trash both empty: the recipe is gone.
+   - **What is built:** nothing of #18a. `Delete…` still deletes by id, as it has since §213 (live since 13 Oct).
+   - ❓ **May the check compare `trashedAt` (on all four kinds, new on every trash), instead of `savedAt` or as well?**
+2. ⛔ **The box after a refusal** (#18a, its second half).
+   - **What the ruling says:** the box says `This copy changed on another device. Nothing was deleted.`
+   - **What the frame draws:** nothing — see #1.
+   - **The problem:** `Delete` can't stay in that box. After the reload the row may no longer be guarded, and `Delete`
+     would then take the only copy.
+   - **What the check needs, told:**
+     - "The stored one" has to be read from the server when he taps. A device with its own trash write still queued
+       reads its own cache back (`loadCollection`).
+     - An offline tap can't check at all.
+     - The delete is sent again, by id, when the queue sends it, so the check would have to travel with it.
+   - ❓ **The box's title and buttons? And what happens when the check can't be made — offline, or with this device's
+     own write still waiting?**
+3. ⛔ **The card behind a waiting row** (#18b).
+   - **What the ruling says:** the row shows no button until the live list has loaded. It names the row only.
+   - **What the code does:** a waiting row still opens its card, and the card offers Restore from the stale cache
+     (driven: `onRestore` was handed to `RecipeEditor` while the live read was in the air).
+   - **Why it can't simply be withheld:** each card counts as deleted only when it is handed Restore or `Open it` —
+     `const deleted = Boolean(onRestore || onOpenLive)` (`InvoiceCard.tsx:177`, `RecipeEditor.tsx:168`,
+     `PrepEditor.tsx:876`). Handed neither, a trashed copy's card reads as live and editable.
+   - ❓ **Does the card wait too, and what does its foot show while it waits?** No frame draws it: `r81a` draws the
+     guarded card's foot (`Open it`) and `r84a` the rows; neither draws a card whose row is still waiting.
+4. ⛔ **The guarded row's height** — two rulings meet.
+   - **What the frame draws:** `r84a` lines 40–41 draw both History rows, Restore's and the guarded one, `min-height:
+     68px` with `padding: 8px 16px` (the Cocktails rows at lines 47–48 the same, at 20 a side); the guarded row's three
+     lines sit 2 apart. Its prose: *"It shows only on a guarded row, so every other row keeps its height."* The app's
+     trash rows are 61, their text centred.
+   - **What an older ruling says:** your §33.5 B3, *"A row may carry NOTHING. `min-h-row-list` carries its height."* —
+     so the list row has no padding of its own.
+   - **Measured** (verify build, `/style/trashcheck`, all three sizes, both themes): the guarded History row is 61.59
+     tall. Its text sits 0 below the row's top and 1 (the row's rule) above its bottom, against 9.45 and 10.45 on every
+     other trash row. Cocktails' and Prep's rows are built the same way (read from their classes, 21.25 + 19.5 + 19.5
+     in 61; not measured). The product row has padding of its own and keeps it.
+   - ❓ **Does the guarded row grow, so its three lines keep `r84a`'s 8 above and 8 below, or stay in its 61?**
+
+None of them moves money as built.
+
+### 2 · Readings
+
+`(ours)` marks a string or a placement no ruling or frame gives; each is the plainest form, built and listed here.
+❓ marks a reading that wants your call. The rest are told.
+
+**The trash (§1 #1, §2 #18b)**
+
+1. **Sizes, measured:** the line 15px, 9.72:1 light and 11.76:1 dark on `--surface`; directly under line two (0 on
+   History's row, 2 on the product row's); one line on History's row at every size, two on the product row's at 390.
+   `Delete…` 86.03 × 44.
+2. `(read as)` **A live read that FAILED with nothing cached has not loaded,** so its trash rows wait as for a slow
+   load (§229, above).
+3. **What the wait cannot tell apart,** told. A failed read WITH a cache shows the cached list, and the guard reads that
+   cache, which may be stale. The wait counts only a failed read with an EMPTY list:
+   - a list cached empty (everything trashed) waits too after a failed read;
+   - a failed read followed by a record made on this device ends the wait with only that record in the list;
+   - `loading` also ends with the cache standing in when this device holds a queued write to the live list, or a write
+     lands while the read is in the air (`sync.ts`, `loadOnce`).
+4. **With nothing cached, all four screens show `Loading recipes…` (`Loading invoices…`, …) and no rows** until the live
+   list arrives. So our Round 84 #18's "nothing cached" edge is really a stale-cache edge.
+
+**The comma (§2 #7)**
+
+5. `(read as)` **`0,`, `0,1`, `0,75`, `-0,125`, `0,125.5` and `0,000` are refused too,** at once, never "incomplete":
+   none can become whole groups. So the line shows while he types — `Did you mean 0?`, `0.1?`, `0.12?`, `0.125?` — as
+   `1,7000`'s does. `12,99` still waits until he leaves the box.
+6. ❓ **Guest words typed `0,500` between 13 Oct and this send** were stored with the count 500. They now read as no
+   count, so the Builder and the Estimate fall back to reading the words, which gives none. Not checked against his
+   data (no database access). Your premise is that nobody types it. Leave it?
+
+**Widens (§1 #2)**
+
+7. `(read as)` **Your Round 81 §2 #11 — *"Save needs any one chosen, so an old pair can always be saved"* — is not
+   withdrawn,** so a held chip still on the row counts as the one: a pair whose only category no longer follows still
+   saves.
+8. `(ours)` **After a held chip is taken off, focus is on the page, not the sheet** (keyboard, headless Chrome): the next
+   Tab carries on from the chip's place, and Escape still closes the sheet.
+9. **Sizes, measured:** held chips 44 tall, 16 left and 12 right (the frame's chips are 14, the app's tap chip 16);
+   the edge 4.10:1 light and 3.62:1 dark against the sheet; words 9.72:1 and 11.76:1; the hint 6 under, 13
+   `--text-muted`, 6.77:1 and 6.74:1. The 1.5 edge computes 1px in headless Chrome, as Round 84 #48.
+
+**The product card's line (§1 #3)**
+
+10. `(ours)` **After a cut figure the full stop is left off:** `Priced past the cent: $7.5769… Retype it to whole
+    cents.`
+11. ❓ **The card's Price is a figure, not a box.** `r84c` line 97 draws Price as a 160-wide box reading `$0.125`, and
+    the ruling says the line shows "with or without focus". On the card Price is a read-only `$0.13`, with no box and
+    no focus; it is kept as built. The editor's Price box (§212) shows every digit while it has focus. Does the card's
+    Price change?
+12. **Colour: frame and prose differ.** `r84c` line 98 draws the line in `#75521A` (the light `--gold-text`, Don't
+    buy's colour); the ruling names `--warning` (`#7A4800`). Built as the named token. Both pass 4.5:1.
+13. 🔧 **`--warning` at 15 on `--surface`: 7.44:1 light, 8.93:1 dark** (in both dark blocks — `[data-theme="dark"]`
+    and the one an iPad on System uses). No token changed. One line at 1600 and 1200, two at 390.
+
+**The on-hand word (§1 #7)**
+
+14. `(ours)` **An on-hand line whose product has been deleted shows the figure alone.**
+15. **At 390, measured:** each figure's centre at the steppers' figure x, 231 (1301 at 1600, 1025 at 1200; 257, 1051
+    and 1327 in the locked rows); each word starting where its figure ends, on one line, 17px, 16.74:1 light and 14.95:1
+    dark on the fill. `2 bottles` ends 61 short of the `—`, whose right edge stays at 369.
+16. ❓ **Your #7's two halves can't both hold for a long word.** A product counted `each` with no packaging takes the
+    head of its name as the list's word, which can be long. Made up in the page at 390, `12 bags of ice, 20 lb` widened
+    the cell to 194 and moved the figure 36 left, on one line, with no sideways scroll. As built, the width wins. And
+    the list's quirks come with the word: `Bags of ice, 20 lb` counted `each` reads `2 bags of ices`, as the list does.
+
+**The switch (§2 #31)**
+
+17. 🔧 **The off edge, `--control-line`, against the panel (`--surface`): 4.10:1 light, 3.62:1 dark**, in both dark
+    blocks; against `--surface-alt` 3.86 and 3.39. The token passes, so no other was needed. The off fill alone reads
+    1.36 / 1.08; on, the edge is the fill, 9.50 / 6.75.
+18. ❓ **A correction of ours, and the knob.** Our Round 84 #31 said an off switch in dark showed "only the knob". That
+    was wrong. The knob is `--surface`: 1.00:1 against the panel and 1.08:1 against the off fill. So before §226
+    nothing of an off switch showed in dark, and as built it is an outline with no knob to be seen. `r84e` line 163
+    draws the dark knob `#EDE8DF`, plainly visible; the ruling names the edge and the fill, not the knob. Does the knob
+    change?
+19. **`r84e`'s specimen is not the app's switch:** 51 × 31 with a 27 knob (the app's `r68e` switch is 44 × 26 with 20);
+    a light off fill of `#E6E1D9` (`--border-subtle`, not `--surface-recessed` `#DFDAD1`); in dark `#2A251D` with a
+    `#8A8273` edge (neither is a token; `--control-line` dark is `#7A6F5C`); a shadowed knob in light. Built to the
+    prose.
+
+**The printout (§1 #6, §2 #37, #45, #47)**
+
+20. ❓ `(ours/read as)` **The Yields drinks line prints only on a recipe with Separate rows.** A recipe without them
+    prints byte for byte as before. Your #6 says *"One rule for every sheet"*. Every sheet, or only those?
+21. `(read as)` **`r84d`'s drawing with no Per drink column repeats `750 ML` at the heading's right.** The full-width
+    heading your prose names is built.
+22. `(ours)` **With no Per drink column, a Separate row with no amount has nothing after its name.**
+23. `(ours)` **The 12 gap on the Separate rows' cells** — §234's fix, above — follows `r84d`'s `column-gap: 12px`. The
+    bottle's rows and Yields keep today's cells.
+24. ❓ **"A cell may wrap to two lines."** On the phone paper with Per drink and four batch columns, a Separate cell takes
+    three (`about / 1½ / bottles`); with three batch columns the Yields cell does (`8.5 / 8–9 / drinks`). Before the gap
+    and after.
+25. **At a 390 window** the phone paper is narrower than 4 in, and the gap costs a line there (four batch columns: 3 to
+    4; Per drink and three: 2 to 3). The letter paper with Per drink and four batch columns now reaches 14 past its
+    sheet's edge (it reached 41 into its margin before); the window already scrolled to 489 for that paper's 2.2 in
+    Service column, before and after.
+26. **When the one-decimal figure is whole, the cell reads `13` over `12–13 drinks`** (768 ml of the French 75 is 12.98
+    drinks), as our Round 84 #38 has it.
+27. ❓ **#37 rules line two only.** With no Per drink column, a row with no unit or `top` keeps its amount after the
+    name: `Egg white · 1 a glass`, `Top · 2 top a glass`.
+28. **Five or more batch columns are possible** — the export takes any number of typed sizes. Your ruling covers one to
+    four.
+29. **Today's header and cells, kept as you keep them, against `r84d`:** `1750 ml` where it draws `1.75 L`; `0.5 oz`
+    where `½ oz`; a bare `375` where `375 ml`; and the last Separate row has the faint rule every row has, where `r84d`
+    draws none.
+30. **#45:** Pure alcohol and Acid also leave Strained rows out, being worked out from the same rows as Strength.
+
+**The shopping list (#60 and #61, ours)**
+
+31. `(ours)` **#60's sentence names the prep recipe** — `The Simple Syrup 1:1 asks for 615 g …` — since no ruling words
+    it for a prep, and the plainest true form is the record whose figure it quotes. Measured: 13px `--gold-text`,
+    6.88:1 light and 8.68:1 dark; 5 lines in the 350 box, 2 in the 632 and 728 boxes.
+32. ❓ **The weight remedy reads one way only.** On the water row, "add a weight to the product" means giving the water
+    its size as a weight instead of its litre (changing the syrup's water row to ml also fixes it). But sugar sold in lb
+    against a syrup row in cups is told to *"add a weight to the product"* — and it has one.
+33. ❓ **#61 needs a new part, so nothing is built.** The fault lives in code already loaded on an old device. This send
+    adds no stored shape the live build would misread (read, not run: since `6129dbd` the only changed write is Widens'
+    Save dropping held categories — the same list, shorter), so there is no reload warning this time. A guard against a
+    stale build — a "new version" line, or reloading on its own — would be a new state of the app. Do you want one?
+34. **Ours, not fixed:** a water row fed by two syrups names whichever drink was ticked first's syrup (`Simple Syrup 1:1
+    asks for 615 g` or `Rich Syrup 2:1 asks for 410 g`) — the tick-order wording your §51.4 rules out. Before §233 it
+    named the first drink instead. A merge clash still lists its two sides in the order the drinks arrive (old).
+
+**Smaller, told**
+
+35. **#4:** the Builder's own row panels (`InvoiceSheet`, `SourceRail`, `TemplateList`) keep the subtitles they were
+    ruled with. Your withdrawal covers the recipe and prep editors' panel, and neither passes one.
+36. **#5:** `batchScaling`'s `label: "One drink"` is a data field nothing that draws reads. Left alone.
+
+**Contrast, measured** (headless Chrome, rendered, on `--surface` unless named; dark is the same in both dark blocks):
+
+| What | Light | Dark |
+|---|---|---|
+| The card's line, `--warning` at 15 | 7.44 | 8.93 |
+| The switch's off edge, `--control-line`, against the panel | 4.10 (3.86 on `--surface-alt`) | 3.62 (3.39) |
+| The off fill alone | 1.36 | 1.08 |
+| The knob, against the panel / the off fill | 1.00 / 1.36 | 1.00 / 1.08 |
+| The on track (its edge is its fill) | 9.50 | 6.75 |
+| A held chip's dashed edge, against the sheet | 4.10 | 3.62 |
+| A held chip's words, `--text-secondary` | 9.72 | 11.76 |
+| The Widens hint, `--text-muted` at 13 | 6.77 | 6.74 |
+| `Another copy is in History`, `--text-secondary` | 9.72 | 11.76 |
+| `Delete…`, `--danger` | 7.52 | 4.59 |
+| The on-hand word, on the on-hand fill | 16.74 | 14.95 |
+| #60's sentence, `--gold-text` at 13 | 6.88 | 8.68 |
+| Don't buy, `--mark-dontbuy` = `--gold-text` (#23) | `#75521A` | `#D9AE68` |
+
+### 3 · What his iPad still owes
+
+- **23.3 — done, 17 Oct, 4:42 PM:** *"23.3 is good."* His screenshot (private) shows the Orange Crush's editor with the
+  Sprite reading `Separate · each drink` in green and its `1.5` not struck. He moved the Sprite himself, as your Round
+  82 asked.
+- **Still open from Session 23:** 23.1 (a deleted copy of an invoice he still has), 23.2 (`12,99`), 23.4 (a batched
+  French 75), 23.5 (a Whiskey Sour with egg white) and 23.6 (a Don't buy water on a real draft). Your *"His Session 23,
+  when it's done"* waits on these. Five of them carry a 17 Oct note for what this send changes, so a right answer
+  doesn't read as broken.
+- **Session 24 — new, five checks, after this send:** the guarded row's line (24.1), `0,125` in a price box (24.2), a
+  French 75 printout with two batch sizes (24.3), an on-hand line reading `2 bottles` (24.4), and the switch's edge in
+  dark (24.5).
+- **22.1–22.5** are in progress; he was part-way through 22.1 on 15 Oct.
+- **No glass check:** glass is parked.
+- Every screen measurement in this round is Chrome's. Nothing was printed on an iPad.
+
+## What I need back
+
+1. ❓ **Sean's ask:** a few options for where the way back sits — *"Be creative."* — starting from the cocktail editor
+   back to its card, and what going back does to unsaved typing.
+2. ⛔ **§1's four stops**, each a question:
+   1. what `Delete…`'s check compares;
+   2. the box after a refusal, and when the check can't be made;
+   3. the card behind a waiting row;
+   4. the guarded row's height.
+3. ❓ **§2's calls:** 6, 11, 16, 18, 20, 24, 27, 32 and 33. The rest are told.
+4. **His Sessions 23 and 24** come back in a later round.
 
 ---
 
