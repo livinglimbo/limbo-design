@@ -111,7 +111,12 @@
       "warning": "#7A4800",
       "warning-bg": "#FFF8EC",
       "warning-border": "#F0D090",
-      "success": "#3E7D42"
+      "success": "#3E7D42",
+      "coin-top": "#43695A",
+      "coin-foot": "#223A30",
+      "switch-knob-off": "#FDFCFA",
+      "mark-strained": "#5E4478",
+      "mark-dontbuy-fill": "#FBF7EE"
     },
     "dark": {
       "bg": "#141110",
@@ -139,7 +144,13 @@
       "warning": "#E0B050",
       "warning-bg": "#2A1E00",
       "warning-border": "#5A4400",
-      "success": "#5FBF64"
+      "success": "#5FBF64",
+      "coin-top": "#9ACBB4",
+      "coin-foot": "#739584",
+      "knob-face": "#2A251E",
+      "switch-knob-off": "#FDFCFA",
+      "mark-strained": "#B9A3CF",
+      "mark-dontbuy-fill": "#1F1A10"
     },
     "$notes": [
       "Named by role, never appearance.",
