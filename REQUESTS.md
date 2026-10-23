@@ -1,6 +1,6 @@
 # Open requests — implementation → Claude Design
 
-> **Split 12 Oct 2026, at your request:** this file had reached 1.07 MB. Rounds 75 and earlier are now in `REQUESTS-ARCHIVE.md`, unedited; this file keeps the header, the index, the DELIVERED table and Rounds 76 onward. At the split (`0f4c0d0`) every line here kept its number; each round since goes in above the last and moves the lines below it, so a `REQUESTS.md:NNNN` is read at the commit it was written at (Round 83 §0). **Moved 20 Oct 2026, to keep this file under your 500 KB:** Round 76, whole, is now at the top of `REQUESTS-ARCHIVE.md`'s rounds, unedited — byte for byte as it stood here at limbo-design `7fc529c` (`cmp` of the moved text against `git show 7fc529c:REQUESTS.md`, its lines 4368–4659, finds no difference) — so this file keeps the header, the index, the DELIVERED table and Rounds 77 onward. Its 292 lines went in above Round 75 there, so every older line of the archive moved down by 292: an archive line cited before 20 Oct (Round 86's `REQUESTS-ARCHIVE.md:2151`, for one) is that number plus 292 now (Round 87, its opening). **Moved again at Round 88, the same day, for the same reason:** Rounds 78 and 77, whole, are now at the top of `REQUESTS-ARCHIVE.md`'s rounds, above Round 76, unedited — byte for byte as they stood here at limbo-design `4c60bce` (`cmp` of the moved text against `git show 4c60bce:REQUESTS.md`, its lines 4354–4917, finds no difference) — so this file keeps the header, the index, the DELIVERED table and Rounds 79 onward. Their 564 lines went in above Round 76 there, so an archive line cited at `4c60bce` or before is that number plus 564 now: Round 86's `REQUESTS-ARCHIVE.md:2151`, line 2443 at Round 87, is line 3007 (Round 88, its opening). **Reflects `limbo-app` at `main` @ `c4e2011`** — records only (§261, `67691d9`, and §262, its review); the code is `5f9c5e7`'s (§260 · review): `git diff --stat 5f9c5e7 c4e2011 -- src scripts package.json` is empty. **LIVE is `5f9c5e7`'s build** (§246–§260): build id `jwMwkotyJmbuyNSizNHVp`, pushed 20 Oct at 12:04:05, read 20 Oct, 12:44, and again at 13:09, by curl — the live `/login` and `/style/trashcheck` carry it, its stylesheet holds §254's `.switch-knob` and its scripts §257's refused body (`git log -S` finds them first in `938c9fb` and `2920356`). `git ls-remote origin main` reads `5f9c5e7` (20 Oct, 12:58); `67691d9` and `c4e2011` go up with Round 88 — records only, and `netlify.toml`'s `ignore` skips a build when nothing under `src`, `public` or the build files changed. Netlify's deploy list was not read. *Until Round 88 this line read `751b1ce`, the code `1eb0841`'s (§243 · review), with LIVE at `72c3bc7`'s build `NVGtN5nE6jP81lrvxd2au` and `git ls-remote` at `8b00634`; `751b1ce` went up with Round 87, at 02:04:54 on 20 Oct.* *Until Round 87 this line read `72c3bc7`, the same code, with LIVE at `d1e7dbe`'s build `5agCBiRrKMy0jW6xLyECl` and `git ls-remote` at `d1e7dbe`; `72c3bc7` went up with Round 86, at 13:53:41 on 18 Oct.* *Until Round 86 this line read `d1e7dbe`, the code `88443e0`'s (§234 · review), with LIVE at `6129dbd`'s build `W8wq1IMtvDRHl3daq4VZQ`; `d1e7dbe` went up with Round 85.* *Until Round 85 this line read `6129dbd`, the code `deb5973`'s (§220 · review), with LIVE at `cf720ec`'s build `0_kUXfw5OLAq4ngBws4KX`; `6129dbd` went up with Round 84.* *Until Round 84 this line read `a4544b0`, the code `1bf91a7`'s (§209 · review), LIVE on build `537ayQEoB6ro_4-42seob`; `4533923` and `a4544b0` went up with Round 83.* *Until Round 83 this line read `a7fb009`, the same code, with `git ls-remote` reading `1a9d18d` at 19:24; before the split it said nothing of line numbers.* *Until Round 82 this line read `42f6ad2`, the code `0afe219`'s, with LIVE at `e8f8a1c` and §203–§206 to go up with Round 81 — they went up at 15:41:56 and were live at 15:45:53; §207–§208 followed as `39efefe`, live by 16:49:51.* *Until Round 81 this line read `a4606d9`, the code `c6ccb79`'s, LIVE; `a4606d9` went up with Round 80 at 19:05:17 on 11 Oct.* *Until Round 80 this line read `f6871e4`, the code `11027e7`'s, with LIVE at `ebefce8` and §189–§192 held on implementation's Mac by Round 79 §1 — all pushed since, as `9e35afd` (13:31:59) and `c6ccb79` (17:06:27, 11 Oct).* *Until Round 79 this line read `909c0b3`, the code `887e6e8`'s — both rebased onto §186 at 23:38 on 10 Oct with the same changes, and pushed as `1103643` and `ed17565` (Round 79's header lists every pair). Until Round 78 it read `56cfbe3`, the code `fc14783`'s (§153–§158 templates, §160–§167 your Round 75 and the Retry fix, §169–§179 Custom Group Lines), pushed. Until Round 77 it read `124fb62`, the same code. Until Round 76 it read `9f21178`, the code `31a78b4`'s (§149–§151, built from your Round 73). Until Round 75 it read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
+> **Split 12 Oct 2026, at your request:** this file had reached 1.07 MB. Rounds 75 and earlier are now in `REQUESTS-ARCHIVE.md`, unedited; this file keeps the header, the index, the DELIVERED table and Rounds 76 onward. At the split (`0f4c0d0`) every line here kept its number; each round since goes in above the last and moves the lines below it, so a `REQUESTS.md:NNNN` is read at the commit it was written at (Round 83 §0). **Moved 20 Oct 2026, to keep this file under your 500 KB:** Round 76, whole, is now at the top of `REQUESTS-ARCHIVE.md`'s rounds, unedited — byte for byte as it stood here at limbo-design `7fc529c` (`cmp` of the moved text against `git show 7fc529c:REQUESTS.md`, its lines 4368–4659, finds no difference) — so this file keeps the header, the index, the DELIVERED table and Rounds 77 onward. Its 292 lines went in above Round 75 there, so every older line of the archive moved down by 292: an archive line cited before 20 Oct (Round 86's `REQUESTS-ARCHIVE.md:2151`, for one) was that number plus 292 from then until Round 88 (Round 87, its opening). **Moved again at Round 88, the same day, for the same reason:** Rounds 78 and 77, whole, are now at the top of `REQUESTS-ARCHIVE.md`'s rounds, above Round 76, unedited — byte for byte as they stood here at limbo-design `4c60bce` (`cmp` of the moved text against `git show 4c60bce:REQUESTS.md`, its lines 4354–4917, finds no difference) — so this file keeps the header, the index, the DELIVERED table and Rounds 79 onward. Their 564 lines went in above Round 76 there, so an archive line cited at `4c60bce` or before was that number plus 564 from then until Round 89: Round 86's `REQUESTS-ARCHIVE.md:2151`, line 2443 at Round 87, was line 3007 (Round 88, its opening). **Moved again at Round 89, 23 Oct, for the same reason:** Rounds 82, 81, 80 and 79, whole, are now at the top of `REQUESTS-ARCHIVE.md`'s rounds, above Round 78, unedited — byte for byte as they stood here at limbo-design `05cbb50` (the same as at `9e45f20`; `cmp` of the moved text against `git show 05cbb50:REQUESTS.md`, its lines 2952–4777, finds no difference) — so this file keeps the header, the index, the DELIVERED table and Rounds 83 onward. Their 1826 lines went in above Round 78 there, so an archive line cited from Round 88 to `05cbb50` is that number plus 1826 now — one cited from 20 Oct to `4c60bce`, plus 2390, and one cited before 20 Oct, plus 2682: Round 86's `REQUESTS-ARCHIVE.md:2151`, line 2443 at Round 87 and 3007 at Round 88, is line 4833 (Round 89, its opening). **Reflects `limbo-app` at `main` @ `d7430b9`** — your Round 88 §3 b #15 and #16, §350 `995c154` and §351 · review `cc65bf2`, code, combined onto `ab4c4f5`, with words only over them (`278f526`, `375aef2`, `7621a7e` and `d7430b9`); they go up with Round 89, not live when this line was written. Under them, the guest count — §320 `892f166`, §321 · review `a6fa33f`, §323 `79b0a30` (Sean's answer) and §324 · review `2983a98`: your Round 87 §3 d with §4 c #4's first half — under its records `dfca305` and `ab4c4f5`, sent 23 Oct at 02:29 UTC. **LIVE is `ab4c4f5`'s build** (the guest count, on §330–§332 — your Round 88 §3 a — and §263–§313 and §340–§341): build id `Wp9Kw2tkGtL6yviAgprUH`, sent 23 Oct at 02:29:18 UTC (`origin/main`'s reflog), live by 02:37 UTC, read by curl — its scripts carry §323's `guestsFor` (`git log -S` finds it first in `79b0a30`). Before it, `a4d5ace`'s build `v2CdGFfbuSl04eU6tt0td` (§330–§332) was live by 21:27 UTC on 22 Oct; `eeddf7d`, sent between, words and saved work only, built nothing (`netlify.toml`'s `ignore`; read from the rule, not seen). GitHub's `main` was `ab4c4f5` when this line was written (`origin/main`'s reflog). `d7430b9` goes up with Round 89, and with §350–§351 it is code, so the site builds again — not read when this line was written. Netlify's deploy list was not read. Design read Round 88 at `REQUESTS.md` @ `85fea3c` against `limbo-app` @ `e71580b`, not the `c4e2011` this line then named (its `ROUND-88.md:3–4`). *Until Round 89 this line read `c4e2011` — records only (§261, `67691d9`, and §262, its review) — the code `5f9c5e7`'s (§260 · review), with LIVE at `5f9c5e7`'s build `jwMwkotyJmbuyNSizNHVp` and `git ls-remote` at `5f9c5e7`; `67691d9` and `c4e2011` went up with Round 88, 20 Oct.* *Until Round 88 this line read `751b1ce`, the code `1eb0841`'s (§243 · review), with LIVE at `72c3bc7`'s build `NVGtN5nE6jP81lrvxd2au` and `git ls-remote` at `8b00634`; `751b1ce` went up with Round 87, at 02:04:54 on 20 Oct.* *Until Round 87 this line read `72c3bc7`, the same code, with LIVE at `d1e7dbe`'s build `5agCBiRrKMy0jW6xLyECl` and `git ls-remote` at `d1e7dbe`; `72c3bc7` went up with Round 86, at 13:53:41 on 18 Oct.* *Until Round 86 this line read `d1e7dbe`, the code `88443e0`'s (§234 · review), with LIVE at `6129dbd`'s build `W8wq1IMtvDRHl3daq4VZQ`; `d1e7dbe` went up with Round 85.* *Until Round 85 this line read `6129dbd`, the code `deb5973`'s (§220 · review), with LIVE at `cf720ec`'s build `0_kUXfw5OLAq4ngBws4KX`; `6129dbd` went up with Round 84.* *Until Round 84 this line read `a4544b0`, the code `1bf91a7`'s (§209 · review), LIVE on build `537ayQEoB6ro_4-42seob`; `4533923` and `a4544b0` went up with Round 83.* *Until Round 83 this line read `a7fb009`, the same code, with `git ls-remote` reading `1a9d18d` at 19:24; before the split it said nothing of line numbers.* *Until Round 82 this line read `42f6ad2`, the code `0afe219`'s, with LIVE at `e8f8a1c` and §203–§206 to go up with Round 81 — they went up at 15:41:56 and were live at 15:45:53; §207–§208 followed as `39efefe`, live by 16:49:51.* *Until Round 81 this line read `a4606d9`, the code `c6ccb79`'s, LIVE; `a4606d9` went up with Round 80 at 19:05:17 on 11 Oct.* *Until Round 80 this line read `f6871e4`, the code `11027e7`'s, with LIVE at `ebefce8` and §189–§192 held on implementation's Mac by Round 79 §1 — all pushed since, as `9e35afd` (13:31:59) and `c6ccb79` (17:06:27, 11 Oct).* *Until Round 79 this line read `909c0b3`, the code `887e6e8`'s — both rebased onto §186 at 23:38 on 10 Oct with the same changes, and pushed as `1103643` and `ed17565` (Round 79's header lists every pair). Until Round 78 it read `56cfbe3`, the code `fc14783`'s (§153–§158 templates, §160–§167 your Round 75 and the Retry fix, §169–§179 Custom Group Lines), pushed. Until Round 77 it read `124fb62`, the same code. Until Round 76 it read `9f21178`, the code `31a78b4`'s (§149–§151, built from your Round 73). Until Round 75 it read `19b81ab`, the code `1401325`'s (§145–§147, built from your Round 72; after it, `07d9687`, `f7e737f`, `b48e5aa`, `0a03c7b`, `d7ad633` and `19b81ab` changed only notes and records). Earlier on 9 Oct it read `0a03c7b`; on 8 Oct, `f7e737f`; until 8 Oct, `139e265`, the code `c476989`'s. Round 73's draft read `f7e737f` and called `34ca8b0` the last app commit you could read — stale as soon as you could read the draft: `f7e737f` and the draft were pushed together on 8 Oct.* ⚠️ **READ `main` — there
 > are no other branches.** `trash-filter-34` was merged and deleted on
 > 13 Sep; if you have it checked out or cited, it no longer exists.
 >
@@ -114,14 +114,24 @@ is left and whose it is, and the rows are back in date order.
 | AZ | ~~**Round 84 — your Rounds 81–83 built (§211–§220, each reviewed), by email; Round 81 LIVE, Round 82's marks go up with it; glass parked by Sean — nothing asked; ⛔ six stops — the trash row's line two (`r81a` line 215: History's row has no such line), Widens' held categories (no frame; `r80b`'s ruled hint would be untrue), the product card's past-the-cent line (never drawn, no frame), the panel's subtitle (`r82a` lines 152–153, named in no ruling), the one-drink heading (`r82c` line 191 against Sean's 18 Sep *"call it 'Base'"*), and the printout's drink count with two or more batch columns (`r82c` lines 196–198); ❓ the on-hand line's unit (`r82b` line 179's `2 L`); ❓ six readings and a keyboard route for the panel (3.5: his keyboard has no F10); Round 81 #5's numbers; 19.1 and 21.2's counts**~~ | **16 Oct** | ✅ **ANSWERED — your `ROUND-84.md` and frame `r84a`–`r84e` (`Round 84 - the six stops.dc.html`), by iCloud, 17 Oct. BUILT §222–§228 on `main`, re-checked in three batches and reviewed (§229–§234)** — your §1 #1–#7 and §2's calls but #18a; #23 and 3.5 as built. Four stops — #18a's check and its refusal box, the card behind a waiting row (#18b), the guarded row's height — are Round 85 §1 (row BA) |
 | BA | ~~**Round 85 — your Round 84 built (§222–§234, each batch reviewed), by iCloud; ❓ Sean's ask first: a way back from the editing card to the read-only card, and *"a few options for where the mechanism to “go back” is located. Be creative."* — a path across parts, nothing built; ⛔ four stops — what `Delete…`'s check compares (#18a: products carry no `savedAt`, and preps an `updatedAt`, not `savedAt`, `types.ts:133`, `:832`; `trashedAt` differs where `savedAt` doesn't), the box after a refusal (no frame draws it: its words are in none of the 82 HTML files you sent on 17 Oct; `r84a`, lines 31–58, draws the rows), the card behind a waiting row (#18b names the row; `r81a` draws the guarded card's foot, neither it nor `r84a` a waiting card; `deleted = Boolean(onRestore || onOpenLive)`), the guarded row's height (`r84a` lines 40–41 against your §33.5 B3); ❓ nine readings; the contrasts you asked for (`--warning` 7.44 / 8.93, the switch's edge 4.10 / 3.62); 23.3 done**~~ | **17 Oct** | ✅ **ANSWERED — your `ROUND-85.md` and frame `r85a`–`r85j` (`Round 85 - the way back.dc.html`), by iCloud, 18 Oct. BUILT §236–§243 on `main`, in four batches, each reviewed** — your §0's *"True in every option"* and `r85f`, §1 #1–#4 but the product row, §2's calls but #18 and #25's table, and #33's quiet reload. Sean's pick (A plus D), the inventory you asked for and three stops are Round 86 (row BB) |
 | BB | ~~**Round 86 — your Round 85 built (§236–§243, four batches, each reviewed), by iCloud; ❓ Sean's pick first, *"Let’s do A plus D. Build."*, and how he pictures it, *"Card when editing, and the trail in the Builder's multi-step windows"* — a mix no frame draws (`r85a` A alone, `r85d` D alone): please draw it; the inventory you asked for — every window step with no way back and how each is left today (the library, the Builder's ⋮ flows, the three press-and-hold rows — `Add cost`'s Round 67 A6(b) rests on our false premise — History's card, Settings); ⛔ three stops — the knob (`r85j`: `#FDFCFA` 2.58:1 against the dark on fill, and the app's knob has no shadow for light to keep), the letter paper's table (the Service column sits under it, not beside), the product row (not a `min-h-row-list` row, `ProductRow.tsx:102`); ❓ six readings**~~ | **18 Oct** | ✅ **ANSWERED — your `ROUND-86.md` and frame `r86a`–`r86k` (`Round 86 - A plus D.dc.html`; `r86i` the look Sean picked, `r86k` its motion), by iCloud, 20 Oct, 02:33. BUILT §248–§260 on `main`, in four batches, each reviewed, with plan 014 (§246–§247), and LIVE — sent at 07:53, 10:03 and 12:04 (`5f9c5e7`, read back 12:44)** — your §0, the inventory but B9 (Sean kept the calculator's settings with the invoice — Round 88 §1 a), §1 #1–#3 and §2. Your iPad check is his 26.5. What the building left open is Round 88 §2–§3 (rows BI, BJ) |
-| BC | ~~**Round 87 §6 — the swap's money; plan 013 stops on it. Between the swap and Update, how does the line read — named Diplomatico, priced as what?** Your §45.2 moves the product at the swap (`ROUND-31.md:127`) and holds the money for the proposal (`:128–129`); `48a` panel 7 puts `+$64.04` in the proposal under *Because of your swap* (`Round 33 - the substitution, end to end.dc.html:278–291`), and no panel draws the line in between; the built calculator has no such group (a search of `src`: none); plan 013 as written moves the price at the swap. Also: the volume clause (`ROUND-33.md:117–119`; no place for it in `CalculatorSheet.tsx:454–520`), a comp on a swap, a blocked row's mark~~ | **20 Oct** | ✅ **ANSWERED — your `ROUND-87.md` §6 and frame `r87g` (`Round 87 - the swap the guard and the pie.dc.html`, turn 2), by iCloud, 20 Oct, 04:06 and 04:51: reading (iii)** — the line stays Bacardi at Bacardi's price until Update; `Swaps to apply`; the volume clause withdrawn; a comp stays on its line and never takes a billed quantity. **Plan 013 is to be built with it, sixth in line** (Round 88 §4) |
-| BD | ~~**Round 87 §4 b — the zero guard; plan 011 stops on it, and 012 waits on 011.** Sean's *Do nothing, say why*: the words (*"Add guests and hours first."* is the option's, not a ruling), where they go, the button's state against your Round 65 §2 (`ROUND-65.md:25`) and the Round 48 frame's *"Not greyed"* (`Round 48 - scaled measures on the card.dc.html:267`) beside `r79a`'s greyed ⋮ row (`ROUND-79.md:116–117`), the rows while it's off (`ROUND-36.md:180–182`), pace 0 and a 0% mix, which part draws it. Today Update is live at 0 guests (`CalculatorSheet.tsx:269`; `calculator.ts:131`, `:1870–1895`)~~ | **20 Oct** | ✅ **ANSWERED — your §4 b and `r87h`: nothing greyed; a reason and a button that fixes it, in five cases; the rows `Not counted`, `stays at 1`; a foot part of its own.** Plans 011 and 012 are to be built with it and go live together, fifth in line (Round 88 §4) |
-| BE | ~~**Round 87 §2 — the pie, Sean's big Calculator rework.** ❓ May your 28B (*"no beer estimator, no invented split across products"*, `HANDOFF.md:3825–3827`) be reversed, and Round 31 §4's Settings block (`ROUND-31.md:361–378`) come back? Then frames, as a sequence of taps: the calculator's shares and items, the empty kind, on hand, the cocktail or poured-on-its-own split on the calculator's list and the Builder's line, the mark, Settings' crowd styles and pours, a product's pour. The data exists and nothing reads it (`drinkSplits.ts`; a search of `src` and `scripts` for its name and exports finds one comment that names it, `lib/estimateWords.ts:45`)~~ | **20 Oct** | ✅ **ANSWERED — your §2 and `r87i`–`r87l`: 28B reversed, Round 31 §4's Settings block back, one rule (a typed share is pinned), the words tap by tap, the edge states, the worked figures.** The pie is a plan of its own, last in Sean's order (Round 88 §4); the tuned line's words are Round 88 §1 c (row BH) |
-| BF | ~~**Round 87 §3 — the estimate.** ❓ Frames for `View estimate` in ⋮, `Mark as sent?` after `Print or save as PDF`, every sent copy with its date, `Estimate sent Oct 19 · $…` under the title and on History's row, *changed since you sent it* — nothing records a send today (a search of `src` for `sentAt`, `markedSent`, `Mark as sent`, `Estimate sent`, `View estimate`: none); per guest smaller first (`perGuest`, `estimateDocument.ts:441–451`); `Included` for a comp-only category (`To be confirmed` today, `estimateSheet.ts:450`, `:507`); the calculator's count as the base (Event details' today: `invoiceGuests`, `estimateSheet.ts:489–490`) and `Also set Event details to N guests?` at Update~~ | **20 Oct** | ✅ **ANSWERED — your §3 a–d and `r87m`–`r87o`.** §3 a–c are one plan, ninth in line; §3 d with §4 c #4's box, tenth (Round 88 §4) |
-| BG | ~~**Round 87 — the rest.** §1 b, any objection to plans 009, 010 and 014 before Sean's Build (nothing new drawn); §4 a, the hand-set row — your §23.6 and `27b` rule it (`HANDOFF.md:4051`, `:4060–4061`), never built (`calcQty` is read nowhere: a search of `src`), and `28a`'s band has no tick (`CalculatorSheet.tsx:440` is the sheet's only checkbox); §4 c, the hours' words and Sean's two *"ask to update the other"* boxes; §4 d, a red Calculate after an untick (`ROUND-33.md:88–103` rules it for swaps); §5, `Bring its cocktail menu too?` — a template holds no menu (`templates.ts:204–215`); §7, the knobs on a locked invoice (`lockStage` only at `CalculatorSheet.tsx:126`, `:142`, `:234`, `:261`, `:350`)~~ | **20 Oct** | ✅ **ANSWERED — your §1 b (no objection), §4 a (`r87q`), §4 c (`r87p`, `r87o` 2), §4 d (`r87r`), §5 (`r87s`, `r87v`), §7 (`r87t`) and §8 (`r87u`).** 014 BUILT §246–§247 before your answer came, and LIVE (sent at 07:53), so §4 d's red button is a step of its own; 009 with §7 is next, then 010 with §4 c — Sean flipped §4 c #4 (Round 88 §1 b, row BH); the rest in Round 88 §4's order |
+| BC | ~~**Round 87 §6 — the swap's money; plan 013 stops on it. Between the swap and Update, how does the line read — named Diplomatico, priced as what?** Your §45.2 moves the product at the swap (`ROUND-31.md:127`) and holds the money for the proposal (`:128–129`); `48a` panel 7 puts `+$64.04` in the proposal under *Because of your swap* (`Round 33 - the substitution, end to end.dc.html:278–291`), and no panel draws the line in between; the built calculator has no such group (a search of `src`: none); plan 013 as written moves the price at the swap. Also: the volume clause (`ROUND-33.md:117–119`; no place for it in `CalculatorSheet.tsx:454–520`), a comp on a swap, a blocked row's mark~~ | **20 Oct** | ✅ **ANSWERED — your `ROUND-87.md` §6 and frame `r87g` (`Round 87 - the swap the guard and the pie.dc.html`, turn 2), by iCloud, 20 Oct, 04:06 and 04:51: reading (iii)** — the line stays Bacardi at Bacardi's price until Update; `Swaps to apply`; the volume clause withdrawn; a comp stays on its line and never takes a billed quantity. **Plan 013 BUILT and LIVE — §274–§281 (`610683c` … `4a3e59e`), sent 21 Oct at 22:45 UTC, with Sean's four answers; what `r87g` doesn't draw is Round 89 §7 (row BO).** *(Until Round 89: "Plan 013 is to be built with it, sixth in line (Round 88 §4)".)* |
+| BD | ~~**Round 87 §4 b — the zero guard; plan 011 stops on it, and 012 waits on 011.** Sean's *Do nothing, say why*: the words (*"Add guests and hours first."* is the option's, not a ruling), where they go, the button's state against your Round 65 §2 (`ROUND-65.md:25`) and the Round 48 frame's *"Not greyed"* (`Round 48 - scaled measures on the card.dc.html:267`) beside `r79a`'s greyed ⋮ row (`ROUND-79.md:116–117`), the rows while it's off (`ROUND-36.md:180–182`), pace 0 and a 0% mix, which part draws it. Today Update is live at 0 guests (`CalculatorSheet.tsx:269`; `calculator.ts:131`, `:1870–1895`)~~ | **20 Oct** | ✅ **ANSWERED — your §4 b and `r87h`: nothing greyed; a reason and a button that fixes it, in five cases; the rows `Not counted`, `stays at 1`; a foot part of its own.** **Plans 011 + 012 BUILT and LIVE — §272–§273 (`17251a7`, `c614d9b`), sent together 21 Oct at 07:20 UTC; Round 89 §6 (row BN).** *(Until Round 89: "…to be built with it and go live together, fifth in line".)* |
+| BE | ~~**Round 87 §2 — the pie, Sean's big Calculator rework.** ❓ May your 28B (*"no beer estimator, no invented split across products"*, `HANDOFF.md:3825–3827`) be reversed, and Round 31 §4's Settings block (`ROUND-31.md:361–378`) come back? Then frames, as a sequence of taps: the calculator's shares and items, the empty kind, on hand, the cocktail or poured-on-its-own split on the calculator's list and the Builder's line, the mark, Settings' crowd styles and pours, a product's pour. The data exists and nothing reads it (`drinkSplits.ts`; a search of `src` and `scripts` for its name and exports finds one comment that names it, `lib/estimateWords.ts:45`)~~ | **20 Oct** | ✅ **ANSWERED — your §2 and `r87i`–`r87l`: 28B reversed, Round 31 §4's Settings block back, one rule (a typed share is pinned), the words tap by tap, the edge states, the worked figures.** **The pie is plan 015, written and reviewed (`b716180`, `ab78525`), NOT built; the tuned line's words are your Round 88 §1 c, `Tuned from your own events`; its 36 items are Round 89 §1 (rows BK, BL).** *(Until Round 89: "The pie is a plan of its own, last in Sean's order (Round 88 §4); the tuned line's words are Round 88 §1 c (row BH)".)* |
+| BF | ~~**Round 87 §3 — the estimate.** ❓ Frames for `View estimate` in ⋮, `Mark as sent?` after `Print or save as PDF`, every sent copy with its date, `Estimate sent Oct 19 · $…` under the title and on History's row, *changed since you sent it* — nothing records a send today (a search of `src` for `sentAt`, `markedSent`, `Mark as sent`, `Estimate sent`, `View estimate`: none); per guest smaller first (`perGuest`, `estimateDocument.ts:441–451`); `Included` for a comp-only category (`To be confirmed` today, `estimateSheet.ts:450`, `:507`); the calculator's count as the base (Event details' today: `invoiceGuests`, `estimateSheet.ts:489–490`) and `Also set Event details to N guests?` at Update~~ | **20 Oct** | ✅ **ANSWERED — your §3 a–d and `r87m`–`r87o`.** **§3 a–c BUILT and LIVE — §300–§302 (`d2c296b`, `7af8688`, `4ff9b97`), sent 22 Oct at 05:55 UTC, live by 06:03, build `tjcASscDcUmefjVyffzCt`; Round 89 §8 (row BP). §3 d with §4 c #4's box (its first half) BUILT and LIVE — §320–§324 (`892f166`, `a6fa33f`, `79b0a30`, `2983a98`), with Sean's 22 Oct answer, the newer number wins — sent 23 Oct at 02:29 UTC, build `Wp9Kw2tkGtL6yviAgprUH` by 02:37; Round 89 §0 G1–G18 (row BS).** *(Until Round 89: "§3 a–c are one plan, ninth in line; §3 d with §4 c #4's box, tenth".)* |
+| BG | ~~**Round 87 — the rest.** §1 b, any objection to plans 009, 010 and 014 before Sean's Build (nothing new drawn); §4 a, the hand-set row — your §23.6 and `27b` rule it (`HANDOFF.md:4051`, `:4060–4061`), never built (`calcQty` is read nowhere: a search of `src`), and `28a`'s band has no tick (`CalculatorSheet.tsx:440` is the sheet's only checkbox); §4 c, the hours' words and Sean's two *"ask to update the other"* boxes; §4 d, a red Calculate after an untick (`ROUND-33.md:88–103` rules it for swaps); §5, `Bring its cocktail menu too?` — a template holds no menu (`templates.ts:204–215`); §7, the knobs on a locked invoice (`lockStage` only at `CalculatorSheet.tsx:126`, `:142`, `:234`, `:261`, `:350`)~~ | **20 Oct** | ✅ **ANSWERED — your §1 b (no objection), §4 a (`r87q`), §4 c (`r87p`, `r87o` 2), §4 d (`r87r`), §5 (`r87s`, `r87v`), §7 (`r87t`) and §8 (`r87u`).** 014 BUILT §246–§247 before your answer came, and LIVE (sent at 07:53), so §4 d's red button is a step of its own; **009 with §7 (§263–§265), 010 with §4 c (§266–§267), §8 (§268–§269), §4 d (§270–§271), §5 (§290–§294) and §4 a (§310–§313) all BUILT and LIVE, 20–22 Oct — and §4 c #4's first half (typed hours asked about at Update), which §266 left for §3 d's box (`83e0925`: *"NOT BUILT HERE"*), BUILT with §3 d where the guests differ too — hours on their own ask nothing yet, Round 89 §0 G1 (row BF, §320–§324, live 23 Oct); their notes are Round 89 §3–§5, §9 and §10 (rows BN, BQ), and §0 G1–G18 (row BS).** *(Until Round 89: "009 with §7 is next, then 010 with §4 c — Sean flipped §4 c #4 (Round 88 §1 b, row BH); the rest in Round 88 §4's order".)* |
 | BH | ~~**Round 88 §1 — Sean's decisions that need your words.** (b) Your §4 c #4 flipped by Sean: the calculator follows changed bar times — the in-place note's words (ours: `The calculator now uses 5 hours, from the bar times. You'd typed 6.` · `Keep 6`) and when it goes; (c) the tuned crowd style's line with no client's name (ours: `Tuned from your own events`); (d) the bar opening and closing at once — Sean: *"Warn me with a prompt, but allow me to bypass."* — your gold line, or a box that lets him say 24 hours (please draw it)~~ | **20 Oct** | ✅ **ANSWERED — your Round 88 §1 b (`r88a` 1–2), §1 c and §1 d (`r88a` 3–5), received 22 Oct by upload to the cloud session.** §1 b and §1 d build after the guest count (§3 d), which changes the same Event details code; §1 c goes into plan 015 (the pie) |
-| BI | ~~**Round 88 §3 a — the way back, as built.** The card and its editor don't share `r86k`'s line (✕ moves 8 right and 4 up, the title 24 → 22); B2–B4's *"footer's button"* doesn't exist (`setGate("send")` once, `Builder.tsx:652`; the stage list opens only from ⋮ › `Stage…`, :1738); `r86b` 3 against §0 on what asks; long trails squeeze steps behind under 44 wide (22.4 at 390); the trail's knob in dark; the switch's knob under Reduce Motion; choosing lines for a new group holds no history step; B17's name; ticking is two undo steps~~ | **20 Oct** | ✅ **ANSWERED — your Round 88 §3 a #1–#10 (`r88b`, `r88c` 1–4, `r88d`), received 22 Oct.** #3 and #6 as built; #1, #2, #4, #5, #7, #8, #9 and #10 build as one batch, now |
-| BJ | ~~**Round 88 §3 b — the rest.** Reopen's box cuts its words (298 of the 643 H4's pair needs); S5 across the page's two lists; the search words and the quiet reload; five figure columns on 4 × 8 in, and the prep's Letter; an older calculator fault — a readable pour and an unreadable one on one product (`calculator.ts:940–946`); the `To make` note after Update (`CocktailPicker.tsx:967–968`)~~ | **20 Oct** | ✅ **ANSWERED — your Round 88 §3 b #11–#16 (`r88e`, `r88f` 1–2, `r88g` 1–2), received 22 Oct.** #11–#14 build now, beside §3 a; #15 (a money row) and #16 after the guest count, with §1 b and §1 d |
+| BI | ~~**Round 88 §3 a — the way back, as built.** The card and its editor don't share `r86k`'s line (✕ moves 8 right and 4 up, the title 24 → 22); B2–B4's *"footer's button"* doesn't exist (`setGate("send")` once, `Builder.tsx:652`; the stage list opens only from ⋮ › `Stage…`, :1738); `r86b` 3 against §0 on what asks; long trails squeeze steps behind under 44 wide (22.4 at 390); the trail's knob in dark; the switch's knob under Reduce Motion; choosing lines for a new group holds no history step; B17's name; ticking is two undo steps~~ | **20 Oct** | ✅ **ANSWERED — your Round 88 §3 a #1–#10 (`r88b`, `r88c` 1–4, `r88d`), received 22 Oct.** #3 and #6 as built; **#1, #2, #4, #5, #7–#10 BUILT and LIVE — §330–§332 (`49d3165`, `2f68d26`, `e1c700e`), sent 22 Oct at 21:19 UTC, build `v2CdGFfbuSl04eU6tt0td` by 21:27; what they leave open is Round 89 §0 W1–W14 (row BR).** *(Until Round 89: "#1, #2, #4, #5, #7, #8, #9 and #10 build as one batch, now".)* |
+| BJ | ~~**Round 88 §3 b — the rest.** Reopen's box cuts its words (298 of the 643 H4's pair needs); S5 across the page's two lists; the search words and the quiet reload; five figure columns on 4 × 8 in, and the prep's Letter; an older calculator fault — a readable pour and an unreadable one on one product (`calculator.ts:940–946`); the `To make` note after Update (`CocktailPicker.tsx:967–968`)~~ | **20 Oct** | ✅ **ANSWERED — your Round 88 §3 b #11–#16 (`r88e`, `r88f` 1–2, `r88g` 1–2), received 22 Oct.** **#11–#14 BUILT and LIVE — §340–§341 (`5072c08`, `3d27f4e`), build `YgTMdtU4KHAPowmpQReGq`, sent 22 Oct at 15:12 UTC — except #14's Separate-row case, held for Round 89 §2 (row BM); #15 and #16 BUILT — §350–§351 (`995c154`, `cc65bf2`), on `main` with Round 89 (`d7430b9`), not live when it was written; what they leave open is Round 89 §0 U1–U10 (row BT).** *(Until Round 89: "#11–#14 build now, beside §3 a; #15 (a money row) and #16 after the guest count, with §1 b and §1 d".)* |
+| BK | 🔴 **Round 89 §1 a–b — the pie's Batches C and D, the Drink calculator and Event details, which go live together; plan 015 stops on them.** Drawings first: ⛔ #10 a kind he pins and lets go (every old invoice opens with Cocktails pinned); ⛔ #17 Crowd style's place beside your Round 88 strip and the Cocktail hour row (`EventDetailsSheet.tsx:500–535`, `:615–655`). Then ⛔ #1 Undo of shares and of a crowd style's kept figures (009's settings are never an Undo step but for §266's Keep: `keepStageAndTicks`, `invoiceTabs.ts:1451–1475`); #2 the zero guard and the foot with the pie (`Set drink mix` targets the Drink mix knob the pie removes, `CalculatorSheet.tsx:514–517`; where `1 on hand · not ordered` sits, `calculator.ts:2411–2420`); #3 a Duplicate's pins and kept styles — two readings, both run (313.5 vs 291.6 cocktail drinks); #4 a keg, a pack or a can recorded by volume, a mixer on its own (`Keg`, `types.ts:4196`); #5 your Round 88 #15's floor in a merged row; #6 a pinned kind and an empty one, all pinned under 100 (+$543.80 if they grow); #7 `Split evenly`, `Just added`, made room (C's checks assert it, plan:1257–1258); #8 the edges no frame draws; #9 a product whose only line is a comp — a beer with the pie, any bottle at Update today (`productLineIn`, `types.ts:154–168`; asked once, for §7 #89 too); #11 a beer filed under Wine (`migrations.ts:266–295`); #12 a line with no Library product (91% of real lines carry no product id and are matched by name, `types.ts:60–61`); #13 cocktails only = every drink a cocktail (648 vs 291.6); #14 before the Settings pages (`drinkSplits.ts:95–100`, `:113–120`); #15 the share boxes 40 or 48 (`FormField.tsx`). ❓ #16 his typed beer counts — the words, in case Sean keeps them *(Code lines at `e540b42`.)* | **23 Oct** | 🔴 **OPEN** |
+| BL | 🔴 **Round 89 §1 c–e — the pie's Batches E and F, and what the plan builds provisionally.** ⛔ E: #18 two firsts in the press-and-hold panel (one answer with §10 #143; `RowPanel.tsx:970`); #19 the switch on a copy and a template (`withoutJobMarks`, `types.ts:3642–3660`); #20 the switch on a locked invoice (please draw); #21 the Builder's split; #22 unticking, swapping and the switch (`applyCalculation.ts:225–232`); #23 words and icons for each kind, the names; #24 your own words disagree — a mixer's switch line (`ROUND-87.md:126–127` vs `:158–159`). ⛔ F (no longer waiting on Round 88 §1 c): #25 The calculator on the Settings list (please draw; your Round 31 Ask A §2, *"Sub-sections: NO"*, `ROUND-31.md:317–327`); #26 renaming or deleting a built-in style; #27 our Round 88 §1 c premise was wrong — a second account would read `Tuned` (`drinkSplits.ts:96`, `tuned: true`; nothing writes `tuned`, a search of `src`); #28 what makes a style tuned, and a style he adds; #29 a product's pour help line. ❓ Not ⛔, the plan's provisionals until answered: #30–#36 (`5 glasses a bottle`, ⋮'s row name, Topo Chico drawn `New`, the working sentences, the red button, on hand on its own, a waiting swap's old bottle) *(Code lines at `e540b42`.)* | **23 Oct** | 🔴 **OPEN** |
+| BM | 🔴 **Round 89 §2 — your Round 88 §3 b as built (§340–§341, LIVE).** ⛔ #37 the Separate block once it follows the last table — held at one table (`RecipeSheet.tsx:248–249`); while his French 75 is in a printout every recipe in it prints at 13.61pt (90.7%) at five columns, about two-thirds at eight. ❓ #38 our #14 premise corrected (five and six columns fitted unshrunk, 249.81 in 249.8) — does four-a-table hold for every recipe, since the split can add a sheet; and the phone row's `one recipe per page` (`ExportSizeSheet.tsx:106`); #39 may a split table break across sheets (his Mai Tai); #40 History's and the rail's filters across the quiet reload (`libraryView.ts:234`); #41 a tap refused below the window (please draw; `ManagedList.tsx:117–123`, `:160`); #42 the recipe sheet's Letter foot reads `prep sheet` (`RecipeSheet.tsx:565`) *(Code lines at `e540b42`.)* | **23 Oct** | 🔴 **OPEN** |
+| BN | 🔴 **Round 89 §3–§6 — your Round 87 as built: the hours, the cocktail hour, the red button, nothing to count (§263–§273, LIVE).** ❓ New states, live with no frame — accept or draw: #47 whole packages on a locked invoice, #77 on hand under the guard. ❓ #49 a pre-§263 invoice's locked defaults (`calcSettings.ts:129–131`); #50–#52 the note's Undo labels, Undo of Keep after a calculator write, a typed 0 (`calcSettings.ts:324–327`); #58 the five lengths below 414 (please draw; −0.80 at 390, overlap at 320); #59 dark 1.05:1; #61 the whole row a target; #62, #64; #65 `r87r`'s unticked drink leaves the list (`CocktailPicker.tsx:325`); #67 the red at 15 or 17 (`CocktailPicker.tsx:904`); #68 guests not one number (`calcSettings.ts:237`); #71 `Update 0 lines` greyed (`CalculatorSheet.tsx:626`, `:639`); #72 the guard's measures; #74 locked with nothing to count; #76 an empty `Proposed` band (please draw; `CalculatorSheet.tsx:883–892`) *(Code lines at `e540b42`.)* | **23 Oct** | 🔴 **OPEN** |
+| BO | 🔴 **Round 89 §7 — the swap's money (§274–§281, LIVE on client invoices).** ❓ Confirm Sean's answers: #80 free stays free, #81 3 free 2 charged, #82 swaps applied before the step, #83 a comp before any Update, #84 a bottle the calculator can't count. Please draw: #85 the `Proposed` row beside a free line (`= 4.4` beside `2 → 2`; live by Sean's **Ship it, ask Design**); #86 bottle ↔ prep swaps; #87 a swap to a bottle already billed (+$76); #88 after Update, changed or undone (+$140); #90 two old bottles to one (+$72); #92 a closed group. ❓ #91 `recalculate to apply` on a locked invoice; #93 a Don't buy swap to a bottle with no size; #94 the row's alignment; #95 a gift comped before the swap ($231.96 vs $196.96); #96 a charged line at 0 prints `0 × $35.00`; #97 a bottle added as its own line (six for five); #98 + lands on the free line ($138.97 → $103.97); #99 pre-step invoices comped (+$105/+$64/+$99); #100's three new states, live with no frame — accept or draw. (#89, a lone comp, is asked at §1 #9, row BK) | **23 Oct** | 🔴 **OPEN** |
+| BP | 🔴 **Round 89 §8 — the estimate's sends, per guest, `Included` (§300–§302, LIVE).** ❓ #107 an all-comped row that doesn't follow guests (`estimateSheet.ts:173`); #108 one that does; #109 `Included` beside only `To be confirmed`; #111 a sent copy shows today's logo (`estimateSent.ts:285`); #113 the sent line at 390 (please draw; `SentLineText.tsx:37–43`); #116 the tax rate moving reads not changed (`estimateSent.ts:303–321`); #117 a sent copy in History's trash (please draw); #118 two sends on one day *(Code lines at `e540b42`.)* | **23 Oct** | 🔴 **OPEN** |
+| BQ | 🔴 **Round 89 §9–§10 — templates' menu and a number set by hand (§290–§294, §310–§313, LIVE).** Told: Sean's *"Keep it."* (#122) and **Use the calculator** (#139). ❓ #123 your `ROUND-87.md:368` now holds for a new save only; #124 the taken-name sentence says nothing of the menu (`templates.ts:443`, `:472–474`; the toast `:481`); #125 the switch open on; #126 taking a menu off a template (please draw); #127 swaps past four drinks; #128 his drinks not loaded, or a failed read (please draw); #140 the foot's second clause — `6 unchanged`, `stay as they are` or `stay as it is` (`calculator.ts:2413–2414`; one answer with §1 #2); #143 where `Use the calculator’s number` sits (`RowPanel.tsx:970`; one answer with §1 #18); #144 the panel offers `calcQty`, the number last WRITTEN (`InvoiceSheet.tsx:1578`; +$119.96); #145; #147 a §280 row held for one line of his ($232.99 vs $92.99, `calculator.ts:2371`); #148 a locked sheet's held row, a new state, live with no frame — accept or draw *(Code lines at `e540b42`.)* | **23 Oct** | 🔴 **OPEN** |
+| BR | 🔴 **Round 89 §0 W1–W14 — your Round 88 §3 a as built (§330–§332, LIVE).** ❓ W13 the window moves up the screen at Edit — keep its top edge, or stay centred (`Sheet.tsx:389` at `e1c700e`, `lg:items-center`; a prep card 37.2 up at 1600 × 1068, 185.1 at 1200 × 1468, a cocktail's 0; if it moves, please draw it, extends `r88b`); W14 one Back that seems to do nothing after leaving by the side menu while choosing lines — leave it, or stop the link (every page's links would change; if it stops, please draw the sequence, extends `r74g`) — and with it W8: leaving that way, the group's name and category he typed go, with nothing asked; W12 the app's confirm got your #10 — confirm, or it comes out (your Round 88 `README.md:44`); W10 a folded step still a keyboard Tab stop; W11 a press begun on the dim and let go inside closes a Sheet and the app's confirm, not a gate. Told: W1–W3, our Round 88 premises corrected (the tax sheet 672 on his iPad; 383, not 381; your widths on the app's Spectral); W4–W9, ours | **23 Oct** | 🔴 **OPEN** |
+| BS | 🔴 **Round 89 §0 G1–G18 — the guest count as built (your Round 87 §3 d with §4 c #4's first half; §320–§324, LIVE).** ❓ G1 first: hours alone differing — no box as built, or the Bar times row alone (your Round 87 §4 c #4; if it asks, please draw that box, extends `r87o` 2). Told: G2, Sean decided the newer number wins, with our four readings of it, (a)–(d) — and two questions: keeping his own count when the lines already match it (one answer with G5's second and #71), and a note like your Round 88 §1 b's (`r88a` 1–2) for the guests (a new part; please draw, if yes — with G1 it decides what is built soonest). Please draw: G3 the path with no count in Event details (the box, the hint, line two); G4 the Bar times row on two lines (`Keep 9 PM–1 AM`, `Keep 7:30–11:30 PM`). ❓ G5 the estimate's boxes when the lines' count isn't Event details' (120 → 121 moves no line; if Update is offered for the count alone, its words, and its foot drawn if it changes, extends `r87h`); G6 two spellings of one count (`1200` / `1,200`); G7 a count with a decimal (if whole counts only, please draw the refusal, extends `r87o` 3). Told: G8–G18, among them G12, a copy starting with no count (money) | **23 Oct** | 🔴 **OPEN** |
+| BT | 🔴 **Round 89 §0 U1–U10 — your Round 88 §3 b #15 and #16 as built (§350–§351, on `main` with Round 89, not live when it was written).** ⛔ U1 first: one sentence for two or more drinks the app can't count — please give it, or draw it (extends `r88g` 1); the stand-in that goes up meanwhile — our call, not a design, live until you rule — runs each drink's sentence on in one gold block, in the order he ticked them, which your *"The order never matters"* forbids (6 lines at 390). ❓ U2 the foot — `1 has no product to change` for every floor and blank size, where your #15 and `r88g` 1 say `1 line needs a number from you` (our Round 88 #15 quoted a foot nothing shows; marked wrong there); U3 `Give it in oz or ml` for a product counted or weighed (a lime `wedge`); U4 a pour with no amount, `asks for 0 top`, in two sentences; U5 a swap's band on a floor reads `Needs a bottle size` (`swapsToApply.ts:826–827` at `eeddf7d`); U6 §81's older floors, the working then the refusal too?; U7 the floor with its line on — `stays at 1`, the sentence, `Needs at least 39 bottles` — accept or draw; U10 an older row the order still decides — the same in every order, or as built until §81's merge is ruled on. Told: U8 the app kept over `r88g` (the working's words and colour, 1.4, no 3px gaps, the name's colour); U9 ours | **23 Oct** | 🔴 **OPEN** |
 
 ---
 
@@ -201,6 +211,11 @@ has been bitten by.
 | **Ten faults in the calculator and the estimate, read in the code** — its settings forgotten, 4 hours always, Update live at 0 guests (measured on a made-up draft: `Update 4 lines`, −$44.98), a swap billing both bottles, the untick, a copy's menu, per guest backwards, the base count, no record of a send, a comp-only category's `To be confirmed` | **Round 87 §1 a** | `limbo-app` `751b1ce` | ✅ Yes |
 | **Round 86 built and live, and your 🔧 measurements** — §1 #1's four knobs in all three blocks (9.34, 1.36, 7.06 and 18.80:1; your *"about 7.07"* computes 7.0649), §1 #2's four-column case (on 4 × 8 in, 13.58 into the sheet's own 0.35 in and 20.02 inside its edge; at 390, 0.01), the product row held (66.75; guarded 88.25); five faults found by doing, fixed; your iPad check is his 26.5 | **Round 88 §0** | `limbo-app` `5f9c5e7` | ✅ Yes |
 | **Sean's 20 Oct decisions** — the calculator's settings kept with the invoice, not B9 (*"I want whatever you and I agreed on to go."*); the new bar times win over typed hours; no client's name on screen; a warning he can bypass when the bar opens and closes at once; each step live as it passes its review | **Round 88 §1** | `limbo-app` `67691d9` | ✅ Yes |
+| **Round 87 built and live, step by step** — §263–§313, every step reviewed before it went up; the live builds read back by curl (`tjcASscDcUmefjVyffzCt`, `0cV-ceBvlFzPbFflxO8Kg`, `giu3LCgANm6XEuqowE6CI`) | **Round 89 §0** | `limbo-app` `e540b42` | ✅ Yes |
+| **Your Round 88 §3 a built and live, and your trail widths on the app's own Spectral (§330–§332)** — Menu 57.78, Change stage 108.45, Ready to send 111.91, Group lines 97.41, Tax rate 108.22, New group line 162.69 (your lab's 57.8 … 162.7); the tax sheet 672 at 1024 and up, its four steps whole; a card's window moving up the screen at Edit, 37.2 and 185.1 on a prep card, 0 on a cocktail's | **Round 89 §0 W1–W14** | `limbo-app` `e1c700e` | ✅ Yes |
+| **Sean's answers, 20–22 Oct** — *"Keep building…"*; free stays free; 3 free, 2 charged; *"…Yes."* for swaps applied before the step; **Ship it, ask Design**; *"Keep it."*; **Use the calculator (Recommended)**; **Newer number wins (Recommended)** on the guest count — every question and button's words ours | **Round 89, opening; §0 G2** | `limbo-app` `eeddf7d` | ✅ Yes |
+| **The phone paper's columns, measured (§341):** five and six figure columns fitted unshrunk without a Separate row (249.81 in 249.8, 15pt); eight ran 22pt into the sheet's own margin, unshrunk; the split adds a sheet to the Paloma (5–6) and Margarita (8); with the French 75 in a printout every recipe prints at 13.61pt (90.7%) at five columns, about two-thirds at eight | **Round 89 §2 #37–#39** | `limbo-app` `3d27f4e` | ✅ Yes — until #37 is answered and built |
+| **Your Round 88 §3 b #15 and #16 built, measured (§350–§351)** — the floor `at least 39 bottles` in gold, its sentence under the working, 2 lines at 1200 and 1600, 3 at 390; with the line on at 1, `stays at 1`, the sentence, `Needs at least 39 bottles`; two drinks it can't count, 6 lines at 390; the note inside the rail (360) and the drawer; Update byte for byte on 4,000 and then 23,000 seeded invoices | **Round 89 §0 U1–U10** | `limbo-app` `d7430b9` | ✅ Yes |
 
 ⚠️ **Rounds 38, 40 and 42 are status reports and were never on the open index,
 by my own choice, because they ask almost nothing.** That choice is what made
@@ -214,6 +229,1282 @@ from *Sean's answer on the swap row* down were added on 27 Sep**, each re-checke
 code or your files that day. Rows marked ⚠️ or ❌ are deliveries that turned out partly wrong
 or were superseded; they stay, marked, so a re-ask gets the correction and not the old answer.
 
+
+---
+
+## 🔴 ROUND 89 — ⛔ The pie waits on you: plan 015 is written and reviewed, nothing of it is built, and 28 of §1's 36 items hold its batches — the Drink calculator (C) first, then Event details (D), the Builder's line (E) and Settings (F); your Round 88 §1 c settled F's wait on it (§1). ⛔ The Separate block on the phone paper, held at one table (§2 #37). ⛔ One sentence for two or more drinks the app can't count (§0 U1): your Round 88 §3 b #15 and #16 are BUILT and go up with this round (§350–§351); for that one case a stand-in goes up — our call, not a design — live until you rule. ❓ Please draw nineteen: a kind he pins and lets go, Crowd style's place beside your Round 88 strip, the switch on a locked invoice, Settings' The calculator rows, the swaps `r87g` doesn't draw, the guest count's path with no count in Event details and its Bar times row on two lines (§0 G3, G4), and the rest, each naming the frame it extends. ❓ Your Round 87 as built — every step live, §263–§313 — with Sean's seven answers since: three to confirm (§7 #80–#82), one that asks you to draw (#85), three told (#122, #139, and the guest count's, §0 G2). ❓ The guest count — your Round 87 §3 d — BUILT and LIVE (§320–§324), G1 first: hours alone differing. Received: your answer to Round 88, every ruling read; §3 a (§330–§332) and §3 b #11–#14 BUILT and LIVE, with what they leave open (§0 W1–W14). And every (ours), and the rest
+
+
+**implementation → Design, 23 Oct 2026. Branch `main`, app at `d7430b9`.** This round was written against
+`e540b42` (records, words only, on `3d27f4e`, §341 · review; live 22 Oct). Three pieces of code have landed on `main`
+since. **Your Round 88 §3 a, the way back finished** — §330 `49d3165`, §331 · review `2f68d26`, §332 · review, second
+round `e1c700e` — cherry-picked onto `e540b42` with no clash, so there is no §333; records `ee67d07` and `a4d5ace`; sent
+22 Oct at 21:19 UTC and LIVE (below, and §0 W1–W14). **The guest count — your Round 87 §3 d with §4 c #4's first half**
+— §320 `892f166`, §321 · review `a6fa33f`, §323 `79b0a30` (Sean's answer: the newer number wins) and §324 · review
+`2983a98`, combined onto `eeddf7d` under records `dfca305` and `ab4c4f5`; sent 23 Oct at 02:29 UTC and LIVE by 02:37 UTC
+(below, and §0 G1–G18). There is no §322 commit: §322 was the verify after §321, which changed nothing and so made no
+commit; it walked again the stale count §321 had left as ruled, and that went to Sean (G2; `limbo-app`'s `PROGRESS.md`,
+its §322). **Your Round 88 §3 b #15 and #16, a pour the app can't count and the To make note** — §350 `995c154` and §351
+· review `cc65bf2` — combined onto `ab4c4f5` and on `main` with this round, at `d7430b9`: not live when this was
+written (§0 U1–U10). `eeddf7d`, between the way back and the guest count, is words and saved work only (`git diff --stat
+e1c700e eeddf7d -- src scripts package.json` is empty).
+
+**Commit:** `d7430b9` carries §350–§351 on top of `ab4c4f5`, the guest count's last records, on GitHub since 23
+Oct, 02:29 UTC. Under `ab4c4f5`, the guest count's code and its check, `check-guest-count` — §320, §321 · review, §323
+and §324 · review — picked onto `eeddf7d` in that order, each message unchanged, with one clash, `package.json`'s build
+line, where both lanes had added a check after `check-hand-set` (both kept), so there is no §325 — under its records,
+words only, with no § of their own: `dfca305` (*"Records — the guest count (§320–§324): …"*) and `ab4c4f5`, a check of
+them (*"Records check — the guest count's records (dfca305): …"*). On `ab4c4f5`, §350 and §351 · review, with their
+check, `check-uncounted`, picked in that order, each message unchanged, with one clash, `package.json`'s build line,
+where the guest count had added `check-guest-count` and §350 `check-uncounted` (both kept), so there is no §352. Over
+them, words only, with no § of their own: `278f526`, their records (*"Records — §350–§351: …"*); `375aef2`, a check of
+those (*"Records check — §350–§351's records (278f526), three wording slips …"*); `7621a7e` (*"Records — the guest count
+(§320–§324) LIVE: …"*); and `d7430b9` itself (*"held/ removed — both things it held are done: …"*, this round's
+saved draft among them). The verify build on the combined code: `SHIP_VERIFY=1 npm run build` on `cc65bf2`, 23 Oct,
+02:32:25–02:42:10 UTC — exit 0, 13,535 lines, 11,666 with ✓, none with ✗ or ✘, *"all 105 checks are wired into the
+build"*; after the records, `check-checks` and `check-marks` again, exit 0 (`278f526`'s message, THE GATE; not run again
+for this round). The commits over `cc65bf2` are words only — `git diff --stat cc65bf2 d7430b9 -- src scripts
+package.json` is empty — and `npm run ship`, which sends this round, runs the full build again before it sends.
+§350–§351 go up with this round.
+
+**Every `file:line` below is at `e540b42`** unless it names another commit. `main` has moved past it: §330–§332, the
+guest count and §350–§351 change several of the files cited (`CalculatorSheet.tsx`, `calcSettings.ts`, `calculator.ts`,
+`EventDetailsSheet.tsx`, `invoiceTabs.ts`, `types.ts`, `applyCalculation.ts`, `outOfDate.ts`, `estimateSheet.ts`,
+`barHours.ts`, `ConfirmDialog.tsx`, `CocktailPicker.tsx`, `Sheet.tsx`, `templates.ts`, `globals.css`), so read a cited
+line at `e540b42`: `git show e540b42:<path>`. Each cited line in those files was read again at the new code (`e1c700e`,
+the guest count's last step, and §351's): what it says still holds, except where an item says otherwise — #1, #58–#59,
+#68, #71 and #75, and #16's one fixed sentence, now gone (§0's table). §0's G-items cite no line in the guest count's
+files, whose lines moved at the combine: they name the function; its U-items cite `eeddf7d`'s lines, or name the
+function. A file is named bare, as you name them (`templates.ts` is `src/lib/data/templates.ts`). A frame line is a line
+of the frame's HTML source in `limbo-app`'s `docs/design/` (private): `Round 87 - the swap the guard and the
+pie.dc.html` (`r87a`–`r87l`), `Round 87 - the estimate and the rest.dc.html` (`r87m`–`r87v`), `Round 88 - the note, the
+same time twice, the way back as built.dc.html` (`r88a`–`r88g`). A bare `:NNN` is `ROUND-87.md`'s in §1 and §3–§10, and
+`ROUND-88.md`'s in §2; §0 names the file. `plan:NNN` is `plans/015-the-pie.md` at `e540b42`. `(ours)` is a choice no
+ruling or frame makes, built — or, in the pie, planned — as the nearest thing already ruled.
+
+**What is LIVE, read back by curl (no browser):**
+- **`ab4c4f5`'s build, `Wp9Kw2tkGtL6yviAgprUH` — everything through §341, §330–§332 and the guest count**: Round 87
+  whole but §2 (the pie), and your Round 88 §3 a and §3 b #11–#14. Sent 23 Oct at 02:29:18 UTC (`origin/main`'s reflog:
+  `ab4c4f5`, with `dfca305`, `2983a98`, `79b0a30`, `a6fa33f`, `892f166` and `eeddf7d` under it); the live site carried
+  it by 02:37 UTC.
+- **How we know it is the guest count's:** its scripts carry `guestsFor`; `git log -S` finds it first in `79b0a30`
+  (§323), and `git grep` finds it in no `src` at `eeddf7d`. Before it, `a4d5ace`'s build, `v2CdGFfbuSl04eU6tt0td`
+  (§330–§332), sent 22 Oct at 21:19:18 UTC, was live by 21:27 UTC: its stylesheet carries `--knob-face` and
+  `wb-card-name`, which `git log -S` finds first in `49d3165` (§330) and `git grep` finds in no `src` at `e540b42` (the
+  read is recorded in `limbo-app`'s `PROGRESS.md`, its head at `eeddf7d`). And before that, `e540b42`'s build,
+  `YgTMdtU4KHAPowmpQReGq` (§263–§313, §340–§341), sent 22 Oct at 15:12:24 UTC, was live by 15:20 UTC — a curl copy
+  carrying that build and a name only §340 added (`a4d5ace`'s message).
+- **GitHub's `main` was `ab4c4f5` when this was written** (pushed 23 Oct at 02:29:18 UTC, `origin/main`'s reflog).
+  `eeddf7d`, sent 22 Oct at 21:43:40 UTC, was words and saved work only, nothing under `src`, `public` or the build
+  files, so `netlify.toml`'s `ignore` skipped its build (`git show --stat eeddf7d`: `PROGRESS.md` and `held/` only) —
+  read from the rule, not seen. `d7430b9` goes up with this round, and with it §350–§351 (`995c154`, `cc65bf2`) —
+  code, so the site builds again; that build had not been read when this was written. Netlify's own deploy list was not
+  read. Times in this round are UTC; Round 88's were the Mac's (EDT).
+
+**How it was measured:** this round measured nothing new. Every figure in it is from the commit named beside it, and
+each of those says how: headless Chrome or Chromium only, each run with its own throwaway profile, stopped after; the
+verify build (`SHIP_VERIFY=1`) or `next dev` on `127.0.0.1` with every other host refused; temporary `/style` pages
+mounting the real screens over made-up data, deleted before the gate; Node running the real code against stand-ins (a
+fake table, React as plain calls), never the database. **Not covered:** Safari, his iPad, his account and real invoices,
+a real printer. **105 checks at `d7430b9`.** 102 at `e540b42`, 102 on disk and 102 in the build, compared name by
+name (*"all 102 checks are wired into the build"*, `3d27f4e`'s gate): since Round 88's 93, §263 added
+`check-calc-memory`, §268 `check-cocktail-hour`, §270 `check-untick-red`, §272 `check-zero-guard` and `check-copy-menu`,
+§274 `check-swaps-to-apply`, §290 `check-template-menu`, §300 `check-estimate-sent`, §310 `check-hand-set`. §330 added
+`check-way-finished`: 103 on `main` since `49d3165` (*"all 103 checks are wired into the build"*, the combine's gate,
+`ee67d07`). The guest count added `check-guest-count`: 104 on its combined tree, 104 on disk and 104 in the build (*"all
+104 checks are wired into the build"*, `dfca305`'s gate). §350 (`995c154`) added `check-uncounted`: 105 at
+`d7430b9`, 105 on disk and 105 in the build, compared name by name (`git ls-tree` and the build line); its gate
+is the **Commit:** line's.
+
+**This file with this round:** with Rounds 82, 81, 80 and 79 still here it would have been about 608,203 bytes — this
+file plus the 153,028 bytes moved — over the 480 KB this file keeps under (your limit is 500 KB), so Rounds 82, 81, 80
+and 79 — the oldest rounds here — moved to the top of `REQUESTS-ARCHIVE.md`'s rounds, above Round 78, whole and
+unedited: `cmp` finds no difference between the moved text and `git show 05cbb50:REQUESTS.md`'s lines 2952–4777 (the
+same as at `9e45f20`: `git diff 9e45f20 05cbb50 -- REQUESTS.md` is empty), and a `diff` of the rest of the archive
+against `05cbb50` finds none either, each line 1826 lower. Round 81 went with them: with Rounds 80 and 79 alone this
+file would have been about 528,865 bytes — this file plus Rounds 82 and 81's 73,690 — over your 500 KB. Round 82 went
+too: with Rounds 81, 80 and 79 alone it would have been about 484,425 bytes — this file plus Round 82's 29,250 — over
+the 480 KB. This file is now 455,175 bytes (`wc -c`), under 480 KB. **So an archive line cited from Round 88 to
+`05cbb50` is that number plus 1826; one cited from 20 Oct to `4c60bce`, plus 2390; one cited before 20 Oct, plus 2682**
+— Round 86's `REQUESTS-ARCHIVE.md:2151`, line 2443 at Round 87 and 3007 at Round 88, is line 4833 now. The header and
+the archive's own header say so. The archive is now 1,020,097 bytes; if it has grown too large for you to search, say so
+and it splits again.
+
+**What Sean sent, 20–22 Oct, his own words.** Below, **bold** is a button he tapped; the words after it are that
+button's, and every question and every button's words are ours. On 20 Oct (23:42 UTC), to build on: *"Keep building. And
+give updates and each goes live."* On the swap's money (§7): **Yes, free stays free** — *"Marking a line free means
+those bottles are free. Pressing Update again keeps them free and charges nothing extra. This is what the app does
+today."*; **3 free, 2 charged** — *"Your 3 free bottles stay free, and only the 2 extra the Mojito needs are charged. 5
+bottles in all. …"*; to whether a swap applied before the update should stay free once comped, he typed: *"I don't care
+about invoices before this update – they are not critical. Do you still need an answer to that question? Yes."* — read
+as yes; and **Ship it, ask Design** — *"Step 4 goes live once its checkers pass. The money is right, only the
+explanation line reads oddly in this rare case. Design gets the question in its next round and draws the right
+wording."* On 22 Oct, on saving over a template (§9): *"Keep it."* And on a copy of an invoice with a number he set by
+hand (§10): **Use the calculator (Recommended)** — *"A copy or a template starts fresh. Update sets the rye to 31,
+exactly as copies work today. Your hand-set numbers stay protected on the invoice where you set them. Nothing new for
+Design to draw."* Later on 22 Oct, on the guest count: **Newer number wins (Recommended)** — the question and the
+option's words are at §0 G2.
+
+### 0 · Received, built and live
+
+**How your answer to Round 88 came.** Sean saved the zip on 21 Oct (*"Well the handoff is in."*) and uploaded it to a
+cloud session on 22 Oct, about 12:31 UTC: `design-imports/Limbo Invoice Builder Design — Round 88 (22 Oct).zip`,
+extracted to `_extracted/ROUND-88/`. `ROUND-88.md`, the frame and `lab/round88-trail-widths.html` are in `limbo-app`'s
+`docs/design/` (private, so not here). Read whole, with its frames, `r88a` to `r88g`. You read `REQUESTS.md` @ `85fea3c`
+against `limbo-app` @ `e71580b`, not the `c4e2011` our header named (your `ROUND-88.md:3–4`, and the README's :5–7):
+noted, and right — §263–§267 were in it. This round's header names `d7430b9`.
+
+**Each of your rulings, and where it stands:**
+
+| Your ruling | State | How known |
+|---|---|---|
+| §1 a — B9 withdrawn | **Received as built.** Plan 009, §263–§265, live since 20 Oct | — |
+| §1 b — the note turns round (`r88a` 1–2) | **Queued, after the guest count** (§320–§324, live): both change `calcSettings.ts` and `EventDetailsSheet.tsx`. The words are still ours, and Keep still takes the line away, at `e540b42` and in the guest count | `calcSettings.ts:338`: still `The calculator now uses 5 hours, from the bar times. You’d typed 6.` (`barTimesNoteWords`, the same in the guest count) |
+| §1 c — `Tuned from your own events` | **Received.** Goes into plan 015's Batch F, so Batch F no longer waits on Round 88 (§1) | — |
+| §1 d — the strip and `Use 24 hours` (`r88a` 3–5) | **Queued, after the guest count**, with §1 b | `git grep -n barAllDay e540b42 -- src`: none |
+| §2 — the 58 readings | **Received.** Its readings #4, #16 and #20 (your Round 88 §2's numbers) changed with §3 a, and §330 built them: the editor's name 24 (#1), the oldest step giving way first (#4) | §330's message, #1 and #4 |
+| §3 a #1, #2, #4, #5, #7–#10 | **BUILT and LIVE, as one batch** — §330 `49d3165`, §331 · review `2f68d26`, §332 · review, second round `e1c700e`; sent 22 Oct at 21:19 UTC, build `v2CdGFfbuSl04eU6tt0td` by 21:27 — below, W1–W14 | the live stylesheet carries `--knob-face` and `wb-card-name`; `git log -S` finds both first in `49d3165` |
+| §3 a #3, #6 | **As built** | `TaxRateSheet.tsx:83–86`; `globals.css:1217–1225` |
+| §3 b #11–#14 | **BUILT and LIVE** (§340 `5072c08`, §341 · review `3d27f4e`; build `YgTMdtU4KHAPowmpQReGq`), except Round 88 #14's Separate-row case, held (§2) | — |
+| §3 b #12 | **Built with §3 b #11–#14.** Your *For implementation* 3 leaves §3 b #12 out of its list; your §3 b #12, *"Yes"*, rules it | `ManagedList.tsx` |
+| §3 b #15 | **BUILT — §350 `995c154`, §351 · review `cc65bf2` — on `main` with this round, not live when this was written.** A money row, so it went through the money checks: nothing billed moves (§0 U). ⛔ One stop, U1: the sentence for two or more drinks; the rest is U2–U10 | `check-uncounted`, 57 assertions; 30 faults injected (§350's 22, §351's 8), each red on its own; the fault was where you put it, four lines lower (`calculator.ts:944–949`, `:955`) |
+| §3 b #16 | **BUILT with #15** (§350; §351 fixed a syrup poured Don't buy named as missing), **on `main` with this round, not live when this was written**: your sentences, word for word; our readings are U9 | the one fixed sentence (`CocktailPicker.tsx:976–977`) is gone from the picker: `check-uncounted` asserts its absence |
+| *For implementation* 4 — four checks for his iPad | **Checks 3 and 4 are in his session**, worded as you asked: 27.30 (a card to its editor and back) and 27.31 (a long trail at his phone's width), on his iPad since §330–§332 went live, not ticked yet. 1 and 2 go in once §1 b and §1 d are built (§11) | `limbo-app` `IPAD-CHECKS.md` at `d7430b9`: 27.30 *"Design's check: from a card to its editor and back, nothing moves"*, 27.31 *"Design's check: on the phone, a long trail folds its oldest step first"*, each marked *"on your iPad since 5:27 PM"* (Eastern; 21:27 UTC) — at `eeddf7d` both still said *"Not on your iPad until the next update goes up"*, written before the 21:19 send; a search for `Use 5` finds none, and for `Use 24` only the note that those two wait for §1 b and §1 d (`IPAD-CHECKS.md:493`, the same line at both) |
+
+**§266's own notes your answer also settles** (written after Round 88 went, so in no round): the note's words and the
+bypass are yours now; `1 hour` as built; no note when the new times give no figure; the rail's `6–6 PM`; the strip's
+look as built (your §1 b, §1 d). Nothing of these is asked again.
+
+**Not re-checked this round:** the leftovers of ours that closed index rows O, P, S, X, Y, AB, AD and AI still name
+(each says *mine*). They stand as written there, not checked against `e540b42`.
+
+**The way back, finished — your Round 88 §3 a #1, #2, #4, #5 and #7–#10: BUILT and LIVE.** §330 (`49d3165`); §331 ·
+review (`2f68d26`: three reviews, 9 findings, all real); §332 · review, second round (`e1c700e`: 2 blocking, both real).
+Lettered W, so they take none of this round's numbers. As ruled: the card and its editor on one line (`CardLine`,
+`r88b`'s markup; the editor's name a record's, 24, `.wb-title.wb-record`); the gate takes the trail and loses its
+eyebrow (`Menu › Change stage › Ready to send`; Cancel back to `Change stage`); a long trail gives way oldest first
+(`fitTrail`, `trailFold.ts`); `--knob-face`; choosing lines a history step (Back and Escape do what Cancel does); B17
+`Daiquiri › Swap Bacardi Superior`; a tick one Undo step, `Added Daiquiri`; a press begun inside a window no longer
+closes it. Measured headless (Chromium; 1600 × 1068, 1200 × 1468, 768 × 1024 and 390 × 844; light and dark), each
+commit's MEASURED. Not covered: Safari, VoiceOver, the iPad's edge swipe, the Builder driven end to end (it sits behind
+a login). **Money:** nothing billed moves — a tick leaves the same menu, lines and total as the two steps it replaces
+($121.37 both, +$18.40). Your two iPad checks are his 27.30 and 27.31 (§0's table).
+
+*Premises of your Round 88 §3 a, corrected — told; they held at `e540b42` as much as now:*
+
+- W1. **`Set rate` in the 512 sheet doesn't arise on his iPad** (your #4). TaxRateSheet is not `narrow`, so at 1024 and
+  up it is 672 and the four steps stand whole (592 for the groove, measured); the first fold shows below 600 (at 390:
+  `Ready to send › Tax rate`). In a 512 window it reads `Change stage › Ready to send › Tax rate`, as ruled. At
+  `e540b42`: no `narrow` passed (`TaxRateSheet.tsx:160–166`), and the Sheet's default is 672 (`Sheet.tsx:89`,
+  `:128–130`).
+- W2. **Your 381 for the 512 sheet** includes `r88c`'s 1px border; the real Sheet has none (383). The same result in
+  every case.
+- W3. **Your trail widths reproduce on the app's own Spectral** — your lab, run headless on the app's fonts: Menu 57.8,
+  Change stage 108.5, Ready to send 111.9, Group lines 97.4, Tax rate (knob) 108.2, New group line (knob) 162.7; the
+  real Trail 57.78, 108.45, 111.91, 97.41, 108.22 and 162.69. B19's real knob, `How did it go, roughly?`, is 224.6
+  against your stand-in's `Which ones are tagged?`, 227.6: it folds either way.
+
+*(ours), told — object if you would:*
+
+- W4. **Our `›` takes 14** (border-box 5 + margins 2 and 7); `r88c` draws it content-box, 15.5. The rule runs on what is
+  drawn, so ours folds on our widths: door 1 at 390, `Group lines` 84.3 (your about 83).
+- W5. **`r72c`'s 1.15 is withdrawn for the card's body too.** `CardTitle` is one component, card and body, so the
+  record's name is 24 / 1.2 in both, as `r88b` and your README's Type say; 36 of the 171 stored renders `check-separate`
+  compares moved (35 cards and the event card), nothing else.
+- W6. **`fitTrail`'s exact give-way:** a step shrinks only as far as the line needs, never under its floor (64, or its
+  own width), then folds with its `›`; a step wider than 140 is written at 140 by the measure, not by CSS; the knob is
+  cut only once every step has folded, and the last `›` is never freed.
+- W7. **Escape while choosing lines** acts only with no window over the page and the key not already taken; since §331
+  it also steps aside for any menu open over it (`role="menu"`: the ⋮, the stage list, the Undo list): one Escape closes
+  the ⋮ and leaves him choosing, his ticked lines kept; the next does what Cancel does (your Round 86 §0 q4: Escape does
+  what the top-left does).
+- W8. **Leaving the page by the side menu while choosing lines** goes where he tapped, choosing dropped, as leaving by
+  Back did before §330 (§331: before it, the Builder came straight back and the group he was making was gone) — and the
+  group's name and category he typed go with it, with nothing asked. The Builder holds them only while it is open
+  (`GroupDoors.tsx`'s state, read at `e1c700e`, not run), and the app's ask-before-leaving (`useAskOnLeave`) is used by
+  Settings' business form alone (`git grep useAskOnLeave e1c700e -- src`; the same with the guest count). Your Round 88
+  #7's *"Nothing is lost, so nothing asks"* rules Back, the swipe and Escape, which now do what Cancel does — not a page
+  tapped in the side menu or the phone's bottom bar. ❓ Asked with W14.
+- W9. **The calculator keeps its `heading`** (it names no record); `CardLine` is a new shared part, drawn by the five
+  read cards (a product's, a cocktail's locked card, a prep's, the Builder's recipe card, History's) and the labs; B4
+  unchanged — Review closes the window, and the way back is ⋮ › Stage… › Ready to Send, which checks again.
+
+*Asked:*
+
+- W10. ❓ **A folded step is still a keyboard Tab stop, out of sight.** It is the visually-hidden pattern (absolute, 1 ×
+  1, `clip-path: inset(50%)`, never `display: none`), so VoiceOver reads it, as ruled — and a keyboard's Tab lands on a
+  button he can't see. His 27.31 says it is with you. Keep it a Tab stop, or take it out of the Tab order?
+- W11. ❓ **A press begun on the dim and let go inside the window** still closes a Sheet (the click lands on the dim) but
+  not a gate (it lands on their shared parent) — as before §330, untouched: your #10 rules a press begun inside. The
+  app's confirm (W12) closes, as a Sheet does: its dim is the box's parent, so the click lands on the dim, which answers
+  a press begun there (`ConfirmDialog.tsx:192`, `:193`, `:199`, `:227` at `e1c700e`; read from its code, not run).
+  Should all three match, and which way? *(ours), told:* a press begun inside that ends in no click — a scroll — leaves
+  the dim's note of where it began set until the next press, which sets it again; only a scripted click could see it
+  (§331).
+- W12. ❓ **The app's confirm got your #10 too** (§331). `ConfirmDialog` — the trash and `Delete…` boxes, `r85g`'s
+  one-button boxes, the template's choice, Settings' and History's confirms — no longer closes on a press begun on its
+  words and let go over the dim; a plain tap on the dim still cancels. Your Round 88 README's map (`README.md:44`) names
+  *"`Sheet.tsx` scrim, `GateDialog.tsx` scrim"*; your ruling says *"A press that began inside a window doesn't close
+  it"* (`ROUND-88.md:138`). Confirm, or say otherwise and it comes out.
+- W13. ❓ **The window moves up the screen at Edit** (§332, measured; older than §330). Inside the window ✕ and the name
+  keep their places from card to editor, as `r88b` rules (✕ 12 · 12 in both; the name 24 in both, 20 → 76). But at 1024
+  and up a Sheet is centred (`lg:items-center`, `Sheet.tsx:389` at `e1c700e`; the same class at `e540b42`), so when Edit
+  makes the window taller its top moves up the screen, ✕ and the name with it: a prep card 37.2 up at 1600 × 1068 (the
+  card 844 tall, top 112; the editor 918.5 — the 86dvh cap — top 74.8) and 185.1 at 1200 × 1468; a product's about 175
+  and 262 (estimated: no lab opens a product's editor from its card, §332); a cocktail's 0 (both windows at the cap).
+  Should a card and its editor keep the window's top edge — windows held at the top on the iPad, or the editor opening
+  where the card's top was — or stay centred? Nothing moved in code: either would build past your ruling. If it moves,
+  please draw it (extends `r88b`): where the window sits at 1024 and up, for a card and for its editor. His 27.30 tells
+  him it is with you.
+- W14. ❓ **One Back that seems to do nothing** (§331's leftover, as §332 left it). After he leaves the Builder by the
+  side menu while choosing lines — or while the calculator's `Choose cocktails` is held, as since §250 — that step's
+  entry stays in the browser's history under the new page (no page can take an entry out from under another), so after
+  Back to the Builder, one Back there does nothing (the old step's entry, then the page's own). Nothing closes wrong and
+  nothing leaves the page wrong: §332 fixed the walk that did (Back there no longer left the next window open, and
+  closing it no longer took him off the page). Closing the gap means a link stops while such a step is held, lets the
+  step go, then goes — as the app's ask-before-leaving does — and that changes how every page's links behave: a path
+  across parts, so it is yours. The same stop would decide W8: while he is choosing lines, a page link could let the
+  group's name and category go, keep them, or ask. Leave it, or stop the link — and then what of W8's name and category?
+  If the link stops, please draw the sequence (extends `r74g`, the group's bar while choosing lines): the tap, what he
+  sees as the step lets go or asks, the new page.
+
+**The guest count — your Round 87 §3 d, with §4 c #4's first half: BUILT and LIVE** (§320 `892f166`; §321 · review
+`a6fa33f`: three reviews, 19 findings; §323 `79b0a30`, Sean's answer; §324 · review `2983a98`: three reviews, 12
+findings, the one blocking fixed; sent 23 Oct at 02:29 UTC, live by 02:37). Lettered G. As ruled (`r87o` 1–3): the
+calculator keeps the count its last Update used, and its Guests box opens at it — until Event details' count changes
+(Sean's decision, G2); the estimate scales from that count and names it (`From Hartley wedding · 22 lines at 150
+guests`; `The quantities are for 150 guests. Event details says 120. Categories that follow guests scale to each end.`);
+when the calculator's count differs from Event details', Update asks — `Also set Event details to 150 guests?` · `It
+says 120. The invoice’s paper prints that.` · `Keep 120` / `Set to 150` — both answers update the lines, `Set to 150` in
+the same Undo step, Escape back to the calculator with nothing written; with hours typed too, one box, `Update Event
+details too?`, a row each (`Keep 6–10 PM` | `6–11 PM` | `5–10 PM`); after a Keep it doesn't ask again until one of the
+two figures changes. The box is the app's one confirm (`ConfirmDialog`'s choice, §290's) with `r87u`'s row
+(`ChoiceRow.tsx`, lifted out of Event details as §268 asked). Five keys only an Update writes, in the calculator's
+settings: `guests`, `keptGuests`, `keptBarTimes`, `keptHours` (§321), `guestsFor` (§323–§324). Measured headless
+(Chromium; 1200 × 1468, 1600 × 1068 and 390 × 844; light and dark), and the real sheet driven against the real tabs.
+**Money:** nothing billed moves but through Update's lines, as before; every invoice saved before it gives the same
+estimate, byte for byte (1,080 sheets and papers against the app before it). What moves is the estimate's scale where an
+Update kept a count Event details doesn't hold (150 to 180 typed reads ×1 to ×1.2 of the 150-guest lines, not ×1.25 to
+×1.5), and what the calculator offers. A stored shape: every device needs reloading, now that it is live.
+`check-guest-count`, 193 assertions. Not covered: Safari, his iPad, his account and real invoices.
+
+*First — it decides what the guest count asks:*
+
+- G1. ❓ **Hours alone differing, the guests agreeing** (your Round 87 §4 c #4: *"Hours typed in the calculator are asked
+  about at Update, in §3 d's box"*). Built read literally from your §3 d — *"The box at Update shows only when the
+  calculator's guests differ from Event details'"* — so no box: the typed figure stands against the bar times, as since
+  §266, and `r87o` draws no box with the Bar times row alone. Or §4 c #4's *"asked about at Update"*, with the Bar times
+  row alone? If it should ask, please draw that box (extends `r87o` 2, whose title, `Update Event details too?`, stands
+  over both rows): its title and words with the Bar times row alone.
+
+*Sean's decision, told — and what it leaves for you:*
+
+- G2. **Told — Sean decided: once Event details' count changes after an Update, the newer number wins.** The case:
+  §320's reviews found it and §321 left it as ruled (its #12, for you and Sean); §322, the verify after §321, walked it
+  again — updated at 120, then Event details 200, the calculator opened at 120, `Event details says 200`, `Update 0
+  lines`; and with anything else changed, Update asked `Also set Event details to 120 guests?` with `Set to 120` filled
+  and focused, so Return put the old count back over the newer one. That is your *"Its Guests box opens at that count"*
+  (`ROUND-87.md:281–282`) read alone. Our question to him, 22 Oct: *"Say you press Update at 120 guests, then the client
+  says 200 and you change Event details to 200. As Design drew it, the calculator keeps using 120 and says "Update 0
+  lines"… What should happen?"* He tapped **Newer number wins (Recommended)** — the option read: *"Change Event details
+  after pressing Update, and the calculator starts from the new count, as it does today. A count you typed in the
+  calculator holds only until then. It's the same rule you picked for hours on 19 Oct ("the newer one"). The rest of the
+  guest count goes live now, and Design is told in Round 89."* **What it changes in your §3 d (§323–§324):** the
+  calculator's count stands only while Event details' guest box reads as it did at that Update (a fifth Update key,
+  `guestsFor` — its count, or his words when it holds none); once Event details' count changes, the calculator opens at
+  Event details' count, as the app did before §320, so line two says `On the invitation`. *(ours), read from his option
+  — object if you would:* (a) Event details' box is compared as it reads — a count as a count, anything else as his
+  words, trimmed: other words, or cleared, are a change; the same words, or blank then and now, are not; (b) cleared or
+  in words since, the calculator opens at 0, the zero guard, as before §320; (c) put back, the Update's count (and a
+  Keep) stands again — as your Round 88 §1 b has the hours note go when *"the times [are] put back to the ones the 6 was
+  typed against"* (`ROUND-88.md:25–27`); (d) no note that the calculator moved. Two effects to see: (i) cleared or in
+  words since, the estimate keeps printing the Update's count (`From Hartley wedding · 3 lines at 120 guests`, boxes 120
+  to 120) with no hint — Event details has no count to name — while the calculator asks for guests, and `r87r`'s red
+  after an untick can't show, as before §320; (ii) when he types a count other than Event details', Update asks only if
+  a line would move — typing back the count he kept, or the old count, the button reads `Update 0 lines`, greyed, and
+  nothing is asked. ❓ (1) After Event details' count changes, how does he keep his own count when the lines already
+  match it? Today he can't, short of moving a line. One answer with G5's second question and §6 #71. ❓ (2) Your Round 88
+  §1 b note says when the calculator follows the bar times (`r88a` 1–2: `The calculator now uses 5 hours from the bar
+  times, not the 6 you typed.` · `Keep 6`; then `The calculator uses the 6 hours you typed, not the 5 from the bar
+  times.` · `Use 5`). The count moves with none, as before §320 — our (d). Should it have one, in `r88a`'s two forms —
+  `The calculator now uses 200 guests from Event details, not the 120 you used.` · `Keep 120`, then `The calculator uses
+  the 120 guests you used, not the 200 from Event details.` · `Use 200`? Not built: a new part. If yes, please draw it
+  (extends `r88a` 1–2): where it sits — the hours note sits under Bar closes in Event details — and its two forms. It
+  decides what is built soonest: your §1 b, queued after the guest count, changes the hours note.
+
+*Asked:*
+
+- G3. ❓ **Please draw: the path with no count in Event details** (extends `r87o`; a path across the zero guard, the
+  calculator, Update and the estimate). `r87h`'s `Enter guests` puts the cursor in the calculator's Guests box; on a new
+  invoice Event details is blank, so he types 90 there and taps Update. As built: (a) no box — Event details stays blank
+  and the invoice's paper prints no count, while the estimate scales from 90; (b) the estimate's hint: none (§321;
+  §320's was `r87o` 3's sentence without its middle, words you never wrote); (c) the calculator reopens at 90 with `On
+  the invitation` while Event details stays blank, or holds the same words as at the Update; once it holds a count, at
+  that count; other words, or cleared, at 0 (§323–§324). The same with Event details in words (`80–100`, `about 90`),
+  and with `0` — where the box does ask, `It says 0. The invoice’s paper prints that.` · `Keep 0` / `Set to 90`, and
+  after `Keep 0` line two says `Event details says 0` while the estimate treats 0 as no count. Sean wanted the box *"so
+  the invoice, estimate and paper agree"* (his 19 Oct **Ask to match**; the option's words, ours). The box or none, and
+  in what words; the hint; line two.
+- G4. ❓ **Please draw: the Bar times row on two lines** (extends `r87o` 2, which draws `white-space: nowrap` and `Keep
+  6–10 PM` only). Measured on the real box at 440: a choice 128.67 wide, 108.67 for its words — `Keep 6–10 PM` 94.97,
+  one line; `Keep 9 PM–1 AM` 116.86, `Keep 10 PM–2 AM` and `Keep 8 PM–12 AM` 124.36, `Keep 7:30–11:30 PM` 132.47 and
+  `Keep 11:30 AM–4 PM` 143.11, each two lines, the track 48 → 51.5; a moved time with minutes too (`11:30 AM–5 PM`
+  109.95, `7:30 PM–12:30 AM` 129.95). At 390: 98.67 a choice, 78.67 for its words; `Keep 6–10 PM` and `Keep 7:30–11:30
+  PM` two lines, the other four three (the track 70.25). For a mobile bar a 9 PM–1 AM close is normal, not an edge.
+  Built: two lines, centred, each time held to its AM or PM by a no-break space; nothing clipped. Please draw the row
+  for `Keep 9 PM–1 AM` and for `Keep 7:30–11:30 PM`. (The same part as §4 #58's row.)
+- G5. ❓ **The estimate's guest boxes when the lines' count isn't Event details'.** After `Keep 120` at 150, with nothing
+  typed, the client's estimate says `about 150 guests` while the invoice's paper says 120. On G2's path, after Event
+  details goes 120 → 200 with no Update since, the estimate says `about 120 guests` (the lines' count) while the paper
+  says 200; the hint says so, and the calculator offers `Update 3 lines` at 200. And when the new count moves no line
+  (120 → 121): the calculator opens at 121, `On the invitation`, `Update 0 lines`, greyed — it says the two agree —
+  while the estimate says `The quantities are for 120 guests. Event details says 121.`, and its boxes and its paper keep
+  120 until he types 121 there. Start the boxes at the lines' count or Event details'? And when Event details has
+  changed since and no line would change, should the stored count follow Event details (the estimate reading Event
+  details' count), or Update be offered for the count alone — where the zero guard (§272, plan 011) has an Update that
+  writes nothing keep nothing? One answer with G2 (1) and §6 #71. If Update is offered for the count alone, its words,
+  and a frame if the foot changes (extends `r87h`).
+- G6. ❓ **Two spellings of one count.** The box and line two spell it as the calculator's box does — `Keep 1200`, `Event
+  details says 1200`; the estimate's hint as the paper does — `Event details says 1,200`. `Set to 1300` writes `1300`
+  into Event details' words, which the paper prints as typed (`1,300` would read as 1.3 on a comma-decimal device,
+  §212). `r87o` draws no count past 999 (§321, read from the frame). Which spelling in the box, and which does `Set to`
+  write?
+- G7. ❓ **A count with a decimal.** The calculator's Guests box takes `150.5`, as Event details' does; `Set to 150.5`
+  writes it to Event details and the paper, and the estimate rounds it (151). Whole counts only in the box — a refusal,
+  a new state of the box — or `Set to` the rounded count? If whole counts only, please draw the refusal (extends `r87o`
+  3's Guests row).
+
+*Told, as built — object if you would:*
+
+- G8. (ours) **Line two names Event details' count whenever the two differ** — after a Keep that still holds, or while
+  he types another count — not only after a Keep; `On the invitation` otherwise. Since §323 it no longer arises when
+  Event details changed after the Update: the calculator opens at Event details' count (G2).
+- G9. (ours, measured) **`r87o` 2 built at its 440, `r87o` 1 at the app's confirm, 384** (`max-w-sm`), as §290 and §300
+  built `r87v` 3 and `r87m` 3: at 384 a Bar times choice would be 110 wide, its words 90, and `Keep 6–10 PM` (94.97)
+  would run over by 5.
+- G10. **The choices 48**, each its whole slice (the app's 44 floor), the fill 42, on `r87u`'s part as §268 built it —
+  not `r87o` 2's 40 on a 46 track.
+- G11. (ours) **Undo takes the count back with its Update** (the knobs never, §263): the count says what the lines were
+  worked for, and the estimate scales from it. One Undo takes the lines and `Set to 150` together; Undo and Redo bring
+  the count back and forth (#1's note).
+- G12. ⚠️ (ours) **A copy starts with no count — and money.** A Duplicate carries the five knobs and not the count or
+  what was kept; a template holds no settings (your Round 87 §5). Sean's only words for it are his 19 Oct **Yes**, whose
+  option read *"…Guest count and hours still come from the copy's own Event details."* (ours; his 22 Oct answer was
+  about a number set by hand). Its money: a copy keeps lines worked for the source's count, and its estimate scales them
+  from the copy's own Event details until its first Update — the mismatch your §3 d set out to fix.
+- G13. (ours) **`Keep 6–10 PM` is remembered as `Keep 120` is:** not asked again until the typed hours or the bar times
+  change — the hours he kept are stored beside the bar times he kept (§321; before it, a different figure typed after
+  the Keep never brought the row back).
+- G14. (ours, from the frames) **`On the invitation` in `--text-muted`**, as `r87o` 3, `r87t` and `r87h` draw it; the
+  built line was `--text-secondary`. Both of line two's states are `--text-muted` now.
+- G15. (ours) **The step's label stays `Applied the calculator`** (your Round 71 #12), with `Set to 150` inside it.
+- G16. (ours) **The smaller readings:** no Bar times row for hours no bar can be made of (24 or more, 0, or a figure no
+  whole minute gives — 4.334; 4.33 is 4 h 20); `1 guest`, `1 hour`; focus lands on the filled answer, and a tap too soon
+  after the Update tap answers nothing (the confirm's choice, §290–§291); with nothing typed, the estimate's boxes start
+  at the count it scales from; `Set to 150` writes Event details' guest box as that box writes it (the words, and the
+  count beside them, §212).
+- G17. **Frame against build:** `r87o`'s title 20 and body 15 are the confirm's 18 and 17 (as §300 noted); `r87o` 2's
+  Guests line ends with a full stop and `r87o` 3's line two doesn't — both as drawn; the buttons sit the confirm's 20
+  below, not `r87o`'s 8 inside a 10 gap.
+- G18. **How §4 c #4's two halves meet.** The in-place note (§266, as Sean flipped it, your Round 88 §1 b) answers a bar
+  time changed in Event details; the box answers hours typed in the calculator, at Update. After `Keep 6` there, the
+  next Update with the guests apart asks about the bar times in the box; setting the bar times from the box is no change
+  in Event details, so its note doesn't show; the moved times are stamped against the typed hours inside the Update's
+  own step, so Undo puts the bar times and the typed figure back together (§321) — with #51's limit: a knob turned after
+  the Update carries the live stamp into every Undo copy, as it does for `Keep 6`. For your Round 88 §1 d, queued after
+  the guest count: `Use 24 hours` expects the bar times to read 24, *"so `barTimesKey`, typed hours and §3 d's box all
+  work as for any other times"* (`ROUND-88.md:47–50`); the box's moves refuse a span of a day or more today, and typed
+  hours of 24 get no Bar times row — settled in that build.
+
+**A pour the app can't count, and the To make note — your Round 88 §3 b #15 and #16: BUILT, on `main` with this round,
+not live when this was written** (§350 `995c154`; §351 · review `cc65bf2`: three reviews, 16 findings — among its fixes:
+the note had named a syrup poured Don't buy as missing after every Update). Lettered U: this round's F is the pie's
+Batch F. As ruled (`r88g` 1–2): a pour in a unit the app can't read (`top`, `rinse`, `float`, a blank, or any unit the
+app's unit list doesn't hold — U3), beside a pour of the same product it can count, reads as §81's floor whichever drink
+was ticked first (U10 is an older row the order still decides) — `at least 39 bottles` in gold, the working counting
+only the drink it could count, then your sentence, `The Kir Royale asks for 1 top, a measure the app can’t count. Give
+it in oz or ml to count it.`, in 13 semibold `--gold-text`; it stays out of `Update N lines` and writes nothing. The
+note: before Update as built; then `Prep you batch yourself. Their ingredients are on the invoice.`, or your one-name
+and two-name sentences, word for word. Measured headless (Chromium; 1200 × 1468, 1600 × 1068 and 390 × 844; light and
+dark): the sentence under the working's last line every time, 2 lines at 1200 and 1600, 3 at 390, the quantity never
+over the words; the note inside the rail (360) and the drawer. **Money:** nothing billed moves — Update writes byte for
+byte what it wrote before, on 4,000 seeded invoices (§350) and 23,000 more (§351); every row that changed was blocked,
+or an on-hand row written blank, before and after. The red button after an untick is the same on all but one of the
+23,000: there a `wedge` between a `2 barspoon` and a `3 g` of one product used to hide their clash, so an untick that
+changes that row now turns it red, as it should. `check-uncounted`, 57 assertions. Not covered: Safari, his iPad, his
+own recipes.
+
+*First — the one stop:*
+
+- U1. ⛔ **Two or more drinks the app can't count, on one product.** Your #15: *"With two or more drinks it can't count,
+  it's one sentence that opens with the count, as #36 (b) rules."* #36 (b) (`ROUND-86.md:215`: *"It opens with the
+  count, in #33's words, and keeps the rest"*) was built in §258 as `Two recipes ask for this, and it is sold in ml.`
+  Here the rest doesn't survive the count: `Two recipes ask for this, a measure the app can’t count.` calls the product
+  a measure, and the figure it would keep differs drink to drink (`1 top`, `2 rinse`). No frame draws it, so it was not
+  guessed. **The stand-in — our call, not a design:** §351 left open whether this case goes up with a stand-in or is
+  held, and we send it with this round — words only, no money, and a rare path, since only older recipes hold such units
+  (U3). It stays ⛔ for you: live as a stand-in until you rule. The drinks' drawn sentences run on in one gold block, one
+  after the other (#36 (a)'s form for two refusals), the same sentence said once — in the order he ticked them, which
+  your *"The order never matters"* forbids. The quantity, the working and the row's state are the same in every order;
+  only the sentences' order moves. Two drinks: `at least 26 bottles`, the block 3 lines at 1200 and 1600, 6 at 390
+  (109.13 tall). ❓ Please give the sentence, or draw it (extends `r88g` 1).
+
+*Asked:*
+
+- U2. ⚠️ **The foot — and our own wrong report under your ruling.** Our Round 88 #15 said that with the French 75 ticked
+  first the foot read `1 line needs a number from you`. It didn't: that is `footFor`'s foot, calculate()'s
+  (`calculator.ts:985`, `:1800` at `eeddf7d`), which nothing renders: the sheet's foot is `proposals`'
+  (`CalculatorSheet.tsx:487` at `eeddf7d`, rendered at its `:599–600` and `:623`), and `git grep '\.foot\b' eeddf7d --
+  src` finds no other reader of calculate()'s (its one other hit, `SheetToast.tsx:339`, is a toast's own `g.foot`);
+  `footFor`'s own comment, `:1803`, agrees. `proposals`' foot counts every blocked row that isn't a clash — every §81
+  floor and every blank size — as `1 has no product to change` (`calculator.ts:2403`, `:2419` at `eeddf7d`). Our clause
+  is marked wrong in place, in Round 88's #15 below. Your #15 has the floor count *"in the foot as one that needs a
+  number from him"*, and `r88g` 1 draws `1 line needs a number from you` · `Update 1 line`; built, the floor counts as
+  every floor row does, `1 has no product to change`. ❓ Should floors and blank sizes say `1 line needs a number from
+  you` — words only, but on every invoice with a blank size — or the foot stay?
+- U3. ❓ **`Give it in oz or ml` for a product counted or weighed.** Built word for word; your reason covers `top`,
+  `rinse` and `float` (*"they have no fixed measure"*). It reaches a blank and any unit the app's unit list doesn't
+  hold, beside a pour of the same product it can count. Measured, it refuses `top`, `rinse`, `float`, a blank,
+  `sprig(s)`, `leaf`/`leaves`, `wedge(s)`, `wheel`, `twist`, `slice`, `peel`, `cube`, `scoop`, `part(s)`, `whole`,
+  `egg`, `bunch`, `handful`, `to taste`, `spray` and `mist`, and reads `dash`, `splash`, `drop`, `barspoon`, `pinch`,
+  `cup`, `tbsp`, `tsp`, `piece`, `each`, `oz`, `ml` and `g` among the rest (the real `parseUnit`). Only older recipes
+  hold such units: the unit picker offers the list alone. The lime, measured: a Margarita's `1 wedge` of `Lime, whole`,
+  sold by the each, beside its Lime juice prep (12 limes to 500 ml), reads `at least 464`; done as told — `0.25 oz` or
+  `10 ml` — it becomes a clash with no number (`The Lime juice asks for 12 each and the Margarita asks for 0.25 oz. Fix
+  one to the other’s kind of unit…`); `0.125 each` counts it, 546. ❓ Should the remedy follow the product's kind — oz or
+  ml for a volume, each for a count, g for a weight?
+- U4. ❓ **A pour with no amount, named in two sentences.** A recipe row with no figure reads `The Kir Royale asks for 0
+  top, a measure the app can’t count…` (`asks for 0, a measure…` with no unit) — and the sentence the app already showed
+  for that row with the Kir Royale alone, at `eeddf7d` and now, says the same: `The Kir Royale asks for 0 top and this
+  is sold in ml…` (with no unit, two spaces after `asks for 0`). Both read the recipe row's own figure, 0 when it has
+  none: the new sentence through `clashSideOf` (§233), the as-built one directly (`need.perDrink ?? need.qty`). So a
+  stand-in in one would name one row two ways. ❓ How should a pour with no amount be named, in both?
+- U5. ❓ **A swap's band on a floor** (`r87g` 3). Every blocked `no-package-size` row in `Swaps to apply` reads `Needs a
+  bottle size. Add one in the Library.` (`swapBlockedWords`, `swapsToApply.ts:826–827` at `eeddf7d`), and a floor is
+  one. A French 75 and a Kir Royale both swapped from Champagne to a Prosecco with its 750 ml read it — false — in
+  either order; before §350 the Kir-Royale-first order read the clash's `Two recipes ask for this, and it is sold in ml.
+  Say how much each one holds and this can be counted.` (the other order, and every §81 floor, already read the false
+  one). Update writes the same in all four. `r87g` rules the band's words for a missing size and for a clash; a floor is
+  neither. ❓ What does the band say on a floor — the floor's own sentence (the obvious candidate, not built) — and on
+  §81's floors, which show none (their refusal is on the row, not on screen — U6)? If more than its words change, please
+  draw it (extends `r87g` 3).
+- U6. ❓ **§81's older floors.** A row whose prep share was refused still shows only its `?` term, its working gold, no
+  sentence — kept byte for byte. Should it take `r88g` 1's form too: the working, then its refusal?
+- U7. ❓ **The floor with its line on** — a new state with no frame, live once this round's build is up: accept as built,
+  or draw. The tick puts the product on at 1, so in use the row reads `stays at 1`, your sentence, then `Needs at least
+  39 bottles` (§88's `r59d` rule; the sentence 2 lines at 1200 and 1600, 3 at 390). `r88g` 1 draws the row with no line.
+  ❓ That order of the two gold lines? If not, please draw it (extends `r88g` 1).
+
+*Told, as built — object if you would:*
+
+- U8. **Frame against the app, the app's kept:** the working's words are the app's (`297 French 75s × 3 oz × 1.1 cushion
+  ÷ 750 ml (25.36 oz) per bottle = 38.65`), not the frame's shorthand; its colour `--text-secondary` (#474239), where
+  `r88g` draws both rows' working #5F594E; the row's line height 1.4, not 1.35; no 3px gaps between name, working and
+  sentence (the app's rows have none); and the name — `r88g` 1 draws `Champagne` in `--text`, the app draws a blocked
+  row's name in `--text-secondary` — all but a `Not counted` row's, which keeps `--text` (`CalculatorSheet.tsx:912` at
+  `eeddf7d`) — as before §350.
+- U9. (ours) **#15:** a pour through a prep is named by the prep and its row's figure (`The Kir base asks for 1 top, a
+  measure…`, §233's naming); a pour with no unit reads its figure alone (`asks for 1, a measure…`); a row with nothing
+  it can count (every share refused) shows its refusals, then the sentence; the same sentence twice is said once (§258's
+  rule). **#16:** *before Update* means no line on the invoice the calculator wrote — the red button's own test, so an
+  invoice calculated before 21 Oct counts as calculated, and an Undo past the first Update is before it again; *on the
+  invoice* means any line of the product that isn't on hand — billed, a comp, or one he hid; *would buy* means a prep's
+  row linked to a Library product and not Don't buy — water with no product, or a product no longer in the Library,
+  doesn't count against it, a prep with nothing to buy is on, and a syrup poured Don't buy is one he has, so its own
+  ingredients aren't asked for (§351, the calculator's own skip); three or more names `A’s, B’s and C’s`, and a name
+  ending in s takes `’s` too.
+
+*Asked — an older row:*
+
+- U10. ❓ **One older row the order still decides** (§351). A Punch whose share of a prep is refused (4 oz against a 1 kg
+  yield), a French 75's `3 oz` and a Kir Royale's `top`, on one product: Punch first, a floor — the refusal, then the
+  Kir Royale's sentence, the French 75's 3 oz unnamed; the French 75 or the Kir Royale first, a clash — `The French 75
+  asks for 3 oz and the Sparkling base asks for 500 g…`. The Kir Royale's pour reads the same in every order; the rest
+  is §81's older merge, between a refused share and a readable pour of another kind, not changed here. Your #15 calls
+  tick order deciding a row §51.4's fault; whether that reaches this row is yours. ❓ Should this row read the same in
+  every order — as the Punch-first floor (the refusal, then the Kir Royale's sentence) or as the clash — or stay as
+  built until §81's merge is ruled on?
+
+**Round 87 — every step but the pie is BUILT and LIVE**, in the order sent below — Sean's order (our Round 88 §4) had §4
+a seventh, §5 eighth and §3 a–c ninth, and those three went up in reverse; §3 d, the guest count, tenth, went up last
+(§0 G) — each reviewed again, adversarially, by checkers of its own before it went up:
+
+| Your Round 87 | What | § | Sent (UTC) |
+|---|---|---|---|
+| §1 b, §7 (`r87t`) | Plan 009: the calculator keeps its settings with each invoice; a locked one's figures read-only | §263–§265 | 20 Oct, by 18:52 (from the Mac) |
+| §4 c (`r87p`) | Plan 010: the hours from the bar times, line two's states, the rail's 12-hour times, the note (ours then) | §266–§267 | 20 Oct, 19:41 (the Mac) |
+| §8 (`r87u`) | The cocktail-hour switch | §268–§269 | 21 Oct, 02:35 |
+| §4 d (`r87r`) | The red button after an untick | §270–§271 | 21 Oct, 04:54 |
+| §4 b (`r87h`); :372 | Plans 011 + 012: the zero guard; a duplicate with its menu and swaps | §272–§273 | 21 Oct, 07:20 |
+| §6 (`r87g`) | Plan 013: `Swaps to apply`; Update moves the line; Sean's four answers | §274–§281 | 21 Oct, 22:45 |
+| §3 a–c (`r87m`, `r87n`) | The estimate's sends, per guest smaller first, `Included` | §300–§302 | 22 Oct, 05:55; build `tjcASscDcUmefjVyffzCt` |
+| §5 (`r87s`, `r87v`) | Templates and the cocktail menu; Sean's *"Keep it."* | §290–§294 | 22 Oct, 06:29; build `0cV-ceBvlFzPbFflxO8Kg`, read 06:37 |
+| §4 a (`r87q`) | A number set by hand; Sean's **Use the calculator** | §310–§313 | 22 Oct, 12:34; build `giu3LCgANm6XEuqowE6CI`, read 12:43 |
+| §3 d, §4 c #4's first half (`r87o`) | The guest count: the calculator keeps the count its last Update used; the box at Update; Sean's **Newer number wins** | §320–§324 | 23 Oct, 02:29; build `Wp9Kw2tkGtL6yviAgprUH`, read 02:37 |
+
+Each cloud send's live build was read back by curl after it; the Mac's two were found in the first build read, 21 Oct at
+04:55 (`limbo-app` `PROGRESS.md:100–101`, and its 20–22 Oct entry). **Money:** no stored figure moves on its own
+anywhere in §263–§313 (each commit's MONEY; `check-onhand`'s renders byte for byte at every gate). What moves, on
+purpose, is at Update: the hours from the bar times (§266), nothing written with nothing to count (§272), a swap billed
+on its own line (§274–§281, with Sean's answers), a number set by hand left alone (§310). Against the app before the
+swap's step (*live*, §7), the bill is higher: by Sean's answers, where live made bottles free that are now charged (#81,
++$13 in the test; #96, +$35 at 40 guests); by your Round 87 §6 #2 (b), read for a gift comped before the swap (#95,
++$64); and with nothing ruling it, in #87's last form (4 of 105,000 fuzzer runs, +$20 to +$57), #97 (six bottles for
+five poured, +$13) and #99 (+$105 / +$64 / +$99). Each is asked below.
+
+**Not built of Round 87:** §2, the pie — plan 015 is written, reviewed and waiting on §1 here. §3 d with §4 c #4's box
+is BUILT and LIVE since 23 Oct (§320–§324, in the table above; G1–G18 above).
+
+### 1 · ⛔ The pie — plan 015 waits on you
+
+Plan 015 (`plans/015-the-pie.md`, `b716180`, reviewed by three checkers — design, data and code, 40 findings, all real,
+three with a part that was not — and revised in `ab78525`) builds your §2 in six batches: **A**, the arithmetic, no
+screen; **B + C + D**, the stored shapes, the Drink calculator and Event details, which go live together; **E**, the
+Builder's line and the switch; **F**, Settings and a product's pour. **Nothing of it is built:** a search of `src` for
+`onItsOwn`, `Also served on its own` and `Drink calculator` finds none. Batch A could start once step 5 was on `main`
+(plan:88); in Sean's order (our Round 88 §4: the guest count tenth, the pie eleventh) it starts after the guest count,
+on the provisional readings each item names, pinned in named fixtures. C waits for every ⛔ answer. Where A and B build a
+provisional meanwhile (#3, #4, #6, #11, #12), an answer that differs changes those assertions before C, and C never
+ships on one of them (plan:1784–1786). The items in §1 e are not ⛔: the plan builds their provisionals until you answer.
+
+**Your Round 88 §1 c settled Batch F's wait on Round 88:** the tuned line is now your words, `Tuned from your own
+events`, and the other three keep `Starting guess`. F now waits on #4 and #25–#29 below. The rest of your Round 88
+changes the pie only where #2, #5 and #17 say (its frames hold nothing of the pie: a search of the frame's source for
+`crowd`, `tuned` and `drink mix` finds none). Sean's order puts the guest count before the pie, as our Round 88 §4 told
+you, and you received it (`ROUND-88.md:10`); the guest count is live since 23 Oct (§320–§324, §0), and plan
+015's Batch B is read again against it before it is built.
+
+Each item names what waits on it. **⛔ C** holds the Drink calculator, and with it D, since they go live together. Items
+with no ⛔ will be built as the provisional until you answer.
+
+**a · ⛔ Batch C — the Drink calculator.** Beer is counted with no switch (:124), so C reaches every invoice at its first
+Update.
+
+1. ⛔ **Undo of shares, and of a crowd style's kept figures** (plan Q1). :145 says `Split evenly` unpins every drink in
+   the kind *"in one undo step"*, but the pie stores its shares with 009's settings (:420–421), and 009's settings are
+   never an Undo step but for §266's `Keep 6`: `keepStageAndTicks` keeps the live settings on every Undo
+   (`invoiceTabs.ts:1451–1475`, the Keep at :1463–1469; your :13 had no objection to 009). Picking a crowd style is an
+   Undo step, `Crowd style` (`EventDetailsSheet.tsx:647`); the plan keeps one copy of each style's figures
+   (`mix.styles`), so Undo of a pick finds that style's copy. ❓ (a) Is a share he types — a drink's or a kind's — its
+   own Undo step, and what does its label say? (b) Is `Split evenly` one step? (c) Do the five knobs stay out of Undo,
+   as 009 built them? (d) When he picks a style he already used on this invoice, does it re-read Settings (*"refills"*,
+   :120) or bring back the figures it filled with then (*"changes no invoice already filled from it"*, :165)?
+   Provisional: every Undo keeps the live pie; one kept copy per style. Note: the guest count (§320–§324, live) puts the
+   five keys an Update writes on Update's own Undo step while the knobs stay out (§0 G11) — a second model inside 009's
+   settings the answer can follow.
+2. ⛔ ❓ **The zero guard and the foot, with the pie** (plan Q2; :102–103, `r87l` e, `r87i` 6). With the pie the guard
+   fires only when no served kind has any drinks. (a) When every served kind is at 0%, which box does the foot's `Set
+   drink mix` put him in? Today it is the Drink mix knob's (`CalculatorSheet.tsx:514–517`), which the pie removes.
+   Provisional: the first served kind's. (b) Where does `1 on hand · not ordered` (`r87i` 6) sit among the foot's
+   clauses? Today they run, in this order, `1 line set by hand · 6 stay as it is · 1 uses two units that can’t be added
+   · 1 has no product to change` (`calculator.ts:2411–2420`). Your Round 88 #15's `1 line needs a number from you`
+   (`r88g` 1) is not among them as built: a floor counts in `has no product to change`, as every floor did (§0 U2).
+   Provisional (ours): after `set by hand`, before `stay as it is`. The same foot's second clause is #140; please
+   answer them together.
+3. ⛔ **What travels with a copy: the pie's pins and its kept crowd styles** (plan Q5, its first half; the line's switch
+   is #19). Your :360 says the pie never travels with a template. For a Duplicate there are two readings, both run:
+   **(a)** the copy keeps its source's pie, so no figure differs between source and copy — provisional, built in B;
+   **(b)** every copy is a new invoice, nothing pinned, so a copy of an old cocktails-and-beer invoice with no wine
+   counts 313.5 cocktail drinks where its source counts 291.6, and a copy of a cocktails-only invoice counts every drink
+   a cocktail. Sean has answered both sides of this for other things: 19 Oct, a copy keeps the calculator's settings (he
+   tapped **Yes**, *"A copy keeps how you set the calculator"*; our question named the drink mix); 22 Oct, a number he
+   set by hand starts fresh on a copy (**Use the calculator**, §10 #139). A typed share is both a setting and a number
+   he set. ❓ Which reading? If you rule it is Sean's, we ask him. Code: `carriedCalcSettings` carries the five knobs
+   only (`calcSettings.ts:187–190`).
+4. ⛔ **Beer and soft drinks that aren't one can or bottle; a mixer on its own; pours for counted kinds** (plan Q12; ⛔ C,
+   E and F). *"One can or bottle a drink"*: for a product counted in `each`, `can` or `bottle` the plan reads `1 ÷` its
+   pack size (a case of 24 → 1/24 of a case a drink). ❓ How is each of these counted: (a) **a keg** (`Keg` packaging,
+   `types.ts:4196`; `keg` a count unit, `units.ts:179–180`) — read literally, 108 drinks × 1 keg × 1.1, about 119 kegs;
+   (b) **a growler, or a pack recorded by volume** (a 12-pack as 144 fl oz: one pack a drink, 12 times too many); (c)
+   **a single can recorded by volume** (the test data's Fever-Tree, `6.8 fl oz`: one a drink is right, and nothing tells
+   it from a growler)? (d) A mixer switched on counts as Non-alcoholic at one can or bottle a drink — on a 1 L tonic, a
+   bottle a drink: right? (e) `r87k` 13 draws a spirit's own pour in `oz`: for a beer or a mixer, in what unit?
+   Provisional: only `each`/`can`/`bottle` products that are not a Keg are counted; every other beer or soft drink shows
+   the existing can't-be-counted state (`AlertTriangleIcon`) and writes nothing.
+5. ⛔ **Your Round 88 #15's floor, in a row the pie merges** (with #4). The pie puts a bottle's cocktail need and its own
+   on-its-own need in one row. Ginger beer in the Moscow Mule, in oz, and also switched on as Non-alcoholic, recorded as
+   `6.8 fl oz`: the Mule's part counts; the neat part is #4's case. ❓ Is that row Round 88 #15's floor — `at least N`,
+   the Mule's working, then a gold sentence for the part it can't count (whose words?) — or blocked whole? The money is
+   the same either way, nothing written; the words differ. (Round 88 #15 itself is BUILT with this round, §0 U1–U10.)
+6. ⛔ **A pinned kind and an empty one; every served kind pinned** (plan Q16). (a) Does a pinned kind grow when another
+   kind is empty? The plan reads no — needed so an invoice saved before the pie keeps its 45% (:204). Worked: cocktails
+   pinned at 50, no wine → 324 drinks (50%), not 346.0 (50 ÷ 93.64, wine's 6.36 shared out). (b) When every served kind
+   is pinned and they add to less than 100 — above all an old invoice with cocktails only, pinned at 45 — do they stay
+   put, the other 55% not counted as today, or grow to 100% (`r87l` c's rule for drinks, applied to kinds)? Growing
+   takes your event from Espolòn 10 → 22 and Tito's 7 → 15, +$543.80 at his next Update (run). (c) On a NEW invoice, do
+   all-pinned kinds grow as `r87l` c's drinks do? Provisional: a pinned kind never grows, on any invoice; all pinned
+   under 100 → the rest not counted. ❓ Confirm (a) and (b); rule (c).
+7. ⛔ ❓ **`Split evenly`, unticked pins, `Just added`, made room** (plan Q17; C's own checks assert *"`Split evenly` as
+   Q17's answer places it"*, plan:1257–1258). (a) When does `Split evenly` show? `r87i` 4 draws it; `r87i` 5, with a pin
+   still on, doesn't. (b) A pinned drink unticked and ticked again: back at its old pin, or `Just added · even split`?
+   (c) *Just added* since when — since the drinks the last Update counted (ours: `menuAtUpdate`, `outOfDate.ts:144`)?
+   And for a beer added by hand, where nothing records the last Update's lines? (d) `Pinned · made room` shows until the
+   sheet closes: are the shrunk figures then kept? Ours: kept at the next commit or Update; opening writes nothing.
+8. ⛔ ❓ **The edges no frame draws** (plan Q18 a–f; C draws them, and the plan stops on any word or state not drawn,
+   plan:1781). (a) A drink pinned at 0% inside a kind: do its bottles read `Not counted · the Paloma is at 0%`? (b) The
+   Margarita at 100 with an unpinned drink at 0. (c) A kind becoming served while the served kinds are pinned to 100:
+   does `r87l` b's 1 ÷ n apply to kinds? (d) An empty kind that is pinned (an old invoice's cocktails, none ticked):
+   `None on the invoice · its 45% goes to the others`, still marked pinned? (e) The refusal with two or more drinks
+   pinned — `r87l` a's words name one, `Only 40% is left. The Margarita is pinned at 60%.` — and for kinds, `… Cocktails
+   is pinned at 60%`? (f) All five kinds pinned below 100: what `Total` reads (`Total 96%`?), in what colour, since it
+   isn't refused. Please give the words; draw any that is more than words.
+9. ⛔ ❓ **A product whose only line is free — a beer with the pie, any bottle at Update today** (plan Q18 g; plan 015's
+   For Sean #2; §7 #89). (ours) A hidden or comped line counts as poured, and since the swap's step a product whose ONLY
+   line is a comp takes the whole count at Update, still free (`productLineIn` returns the billed line, else falls back,
+   `types.ts:154–168`). Live today: Tito's comped at 1 becomes 7 comped (§7 #89). With the pie: a gift case of beer
+   typed as 1 and comped becomes 6 cases `Complimentary` on the client's copy at the next Update. Your Round 87 §6 #2
+   (b), *"A comp never takes a billed quantity"* (:67–69), rules a comp beside a billed line, not a comp alone. Which:
+   (a) as built — the lone comp takes the whole count, free; (b) the comp keeps its own figure and a billed line beside
+   it carries the rest; (c) a billed line at the whole count beside the comp? One answer covers both; Sean hears it in
+   plain words.
+10. ⛔ ❓ **Please draw: a kind he pins, and letting it go** (plan Q22; extends `r87i` 2 and 4). Every invoice saved
+    before the pie opens with Cocktails pinned (:204), but no frame draws a served kind pinned above 0% (`r87i` 2 and
+    `r87t`, all unpinned; `r87l` d, a kind at 0%). (a) That kind's line two: `PinIcon` + `Pinned` as a drink's (`r87i`
+    4), its drinks' names, or both? (b) How does he unpin a kind, so cocktails follow the crowd style again — the
+    control, its words, its place? Not `Split evenly` (that unpins a kind's drinks, which split evenly; kinds split by
+    the crowd style), and a new pick refills only kinds that aren't pinned (:120). (c) The calculator's Crowd style row
+    when Event details has none — `—`, which counts as Cocktail-forward (:128): show `—` or `Cocktail-forward`? Today
+    the field defaults to `—` under `Recorded for later` (`EventDetailsSheet.tsx:644–655`). Sean is told, meanwhile,
+    that his old invoices' cocktails stay exactly as they are.
+11. ⛔ **A beer filed under Wine** (plan Q23). On 9 Aug every `Wine & Beer` section and product moved to `Wine`
+    (`migrations.ts:266–295`; `types.ts:4023`, *"everything moves to Wine, and he re-files"*), and a new line files
+    under its product's Library category (`applyCalculation.ts:243`, `:362`). ❓ Which decides a line's kind: its invoice
+    SECTION, or its product's Library category now (the section for a line with no product)? And what does a beer still
+    under Wine show — counted as wine (5 oz glasses; a case of 24 meets `Say how much each one holds`; beer's 31% goes
+    to the others), or a state that says so? Run on your event with the beers under Wine: cocktails 422.6 (not 313.5),
+    spirits 140.9 (not 104.5); on an old invoice, Buffalo Trace about 16 (not 8). Provisional: the section decides, in a
+    named fixture. Sean is asked whether his beers are re-filed.
+12. ⛔ **A line with no Library product** (plan Q24). 91% of real lines carry no product id and are matched by name
+    (`types.ts:60–61`: *"only 9% of real line items carry `libraryItemId`"*); a line typed by hand may match none. ❓
+    Does it take a share of its kind as an on-hand bottle does — *"Guests still drink it"*, the option Sean tapped on 19
+    Oct (words ours, `WISHLIST.md:779`; your :149–151 gives the on-hand row's words) — so its row can't be counted and
+    its share is bought by nobody — or is it left out, so its kind's other drinks grow to cover it? Provisional: it
+    takes its share; its row shows the existing no-product state and writes nothing.
+13. ⛔ **Cocktails only = every drink a cocktail** (plan Q25). *"A kind with nothing on the invoice gives its share to
+    the others"* (:119) gives cocktails 100% on any new invoice with nothing else on it yet, or where the client brings
+    the beer and wine: 648 drinks against 291.6 today, Espolòn 10 → 22, Tito's 7 → 15, +$543.80 in the run. Your worked
+    example covers no wine only. ❓ Intended for a menu still being built (tick the cocktails, Update, add the beer later
+    — it buys 2.2× first), and for a client who supplies their own? Provisional: built as ruled, and Sean hears it
+    first.
+14. ⛔ **Before the Settings pages exist** (plan Q26). The four built-in crowd styles are one seed today
+    (`drinkSplits.ts:95–100`; `r87k` 10 draws them equal), and the pages (Batch F) wait on #4 and #25–#29. Between C + D
+    and F, picking `Beer-heavy crowd` fills exactly the same mix, under words that say it fills the drink mix. And if
+    his account holds a crowd-style row from the old Settings block — Round 31 Ask A §4 kept those values *"exactly
+    where they are"* (`ROUND-31.md:362–366`) — it would drive his splits with no page to see it (the reader spreads a
+    stored row, `drinkSplits.ts:113–120`). Whether it does is not known: it is his data, readable only through the app
+    signed in as him, and no record says he saved one. The provisional gives the same screen either way. ❓ Does C wait
+    for F's crowd-style pages, or read only the built-in figures, ignoring a stored row, until F lets him see them?
+    Provisional (ours): the second. Sean is told the four are the same until then.
+15. ⛔ **The share boxes' height** (plan Q28). `r87i` 2 draws each share box 58 × 40 and the Crowd style dropdown 40 tall
+    — under the 44 floor, and shorter than every box in the calculator today (`FIELD`, `h-12`, 48, `FormField.tsx`). The
+    rows around them are 60. ❓ 40 as drawn, or the app's 48?
+16. ❓ **Sean's own beer, wine and spirit counts on old invoices — asked of Sean; of you, what it reads if he keeps
+    them** (plan 015's For Sean #2). As you drew it (`r87i` 6, Modelo `48 → 120 cans`, counted in `Update 5 lines`), the
+    first Update after the pie offers to change counts he typed himself: a line he added has no `calcQty`, so Update
+    writes it (:315), and step 5's *set by hand* doesn't cover it (`setByHand` needs a `calcQty`, `types.ts:3263–3268`).
+    He is asked in plain words, *fine, or keep mine?* ❓ So either answer can be built: if he says keep, does a pie line
+    he typed before the pie read as set by hand — `stays at 48`, `You set 48 by hand · the calculator says 144`, `Use
+    144` — or otherwise? Until he answers, the plan builds it as drawn.
+
+**b · ⛔ Batch D — Event details.**
+
+17. ⛔ ❓ **Please draw: Crowd style's place, now beside your Round 88 strip** (plan Q3; extends `r88a` 1–4 and `r87i` 1).
+    Three things claim the place under Bar opens / Bar closes: Crowd style (`r87i` 1, :132 — across both bar-time
+    columns, 410 in a 440 card, with `Fills the drink mix in the calculator.`), the Cocktail hour row (`r87u`, :390 —
+    built, `EventDetailsSheet.tsx:500–535`), and your Round 88 strip (`r88a` 1–4 draw the times, then the strip, then
+    `Cocktail hour`, and no Crowd style). Today Crowd style sits under `Recorded for later`, 240 wide beside Bar type
+    (`EventDetailsSheet.tsx:615–655`). ❓ The order of the three, and is Crowd style inside The bar group or a group of
+    its own? Provisional: none — D waits.
+
+**c · ⛔ Batch E — the Builder's line and the switch.**
+
+18. ⛔ **Two firsts in the press-and-hold panel** (plan Q4; one answer with §10 #143). The pie's switch `Also served on
+    its own` is *"at the top"* of the panel (:154, `r87j` 8); so is step 5's `Use the calculator’s number` (:309, `r87q`
+    3). §310 built that as the first action row, under the info rows Cost, Price history and Used by
+    (`RowPanel.tsx:970`), which is §10 #143's own question. ❓ When a line shows both — a Tito's he set by hand that is
+    also an ingredient — which comes first? And a row held at his number (`stays at 3`) for a bottle that is both an
+    ingredient and served on its own: does it still show its two parts (`5 for the Moscow Mule`, `3 on its own`)?
+19. ⛔ **The line's switch on a copy and a template** (plan Q5, its second half). Lines keep their fields today
+    (`withoutJobMarks` spreads each line, `types.ts:3642–3660` — and since §313 it also sets a hand-set line's `calcQty`
+    to its own figure, :3653–3655; `templateFromInvoice`, `templates.ts:214`, on saving; `applyTemplate`, `:692–702`, on
+    starting), so by default `Also served on its own` travels with a Duplicate and with a template. ❓ Should it?
+20. ⛔ ❓ **Please draw: the switch on a locked invoice** (plan Q6; extends `r87j` 8, as `r65a` states a comp). Does a
+    locked line's panel state that the bottle is served on its own, or show nothing of the switch? A locked line's panel
+    has no actions today (`RowPanel.tsx`, §310's note). `r87t` draws the calculator only.
+21. ⛔ **The split on the Builder's line** (plan Q7; `r87j` 7). `5 for the Moscow Mule · 3 on its own`: ❓ worked out live
+    and divided to the line's own figure (ours), or the split of the last Update? On a line he set by hand (live since
+    step 5), is his figure divided, or no split shown? And its place: in the price line's place (`$22.99 · 750 ml`), as
+    §274's swap words took it — `r87j` 7 draws Espolòn with no price line at all — and which wins when a swap waits on
+    the same line? Today line two is the swap's words, else on hand, else the price line.
+22. ⛔ **Unticking, swapping and the switch** (plan Q8). (a) Tito's switched to also served on its own, then the Mule
+    unticked: does Tito's line stay, since unticking takes off *"every line only that drink needed"*? Ours: it stays.
+    (b) Buffalo Trace bought for neat pours, later used by a ticked Manhattan (switch off), then the Manhattan unticked:
+    the untick takes it off, since it can't know the bottle was there first — acceptable? (c) Tito's switched on, the
+    Mule's Tito's swapped for Ketel One, then Update: the swap copies the old line whole
+    (`applyCalculation.ts:225–232`), so the line becomes Ketel One with the switch on, Tito's 52 neat pours become Ketel
+    One's, and no Tito's is left. ❓ Does the neat pour follow the swap, stay with a new Tito's line, or turn off?
+23. ⛔ ❓ **Words and icons for each kind; the names** (plan Q19; C draws the parts' icons and E the switch's words, so
+    the plan's stop applies, plan:1781). (a) Two cocktails on one bottle: the part's words (`5 for the Moscow Mule and
+    Mule Spritz`?) and the switch's line (`… as well as the Moscow Mule and …`?). (b) Undo labels for a liqueur's or a
+    mixer's switch — you gave Tito's only (`Tito's served on its own`, `r87j` 8). (c) For Wine, Beer & seltzer and
+    Non-alcoholic, `r87j` 8–9 drawing Spirits only, with `RocksIcon`: do the switch and the part in Proposed and on the
+    Builder's line take each kind's own icon from your key (`WineIcon`, `CanIcon`, `StrawIcon`, :31, as :160's columns
+    do), and does the switch's line read `Counts toward Wine as well as …`? (d) The frames write `Tito’s`, `Modelo ·
+    Lagunitas`; the app has no short name for a product (`LibraryItem`'s only name is `description`, `types.ts:195–260`;
+    a search of `src` for `shortName`, `nickname` or `displayName` finds none), so the plan uses the line's own
+    description, as step 5 does: `Tito’s Handmade Vodka · Buffalo Trace`, cut to one line with the frame's ellipsis.
+    Right, or a short name?
+24. ⛔ **A correction to your own words: a mixer's switch line.** Your :158–159 gives *"a liqueur or a mixer"* the switch
+    off, `Serve on its own`, with `Counts toward Spirits when on.`; your :126–127 says a switched-on mixer counts as
+    **Non-alcoholic**. `r87j` 9 draws Cointreau (a liqueur) only. Read literally, a mixer's line would say Spirits while
+    it counts as Non-alcoholic. ❓ Its words — `Counts toward Non-alcoholic when on.` (ours)? Batch E's check follows
+    your answer (the plan's E check, not yet written, would assert :158–159's, plan:1330–1331).
+
+**d · ⛔ Batch F — Settings and a product's pour.**
+
+25. ⛔ ❓ **Please draw: The calculator on the Settings list** (plan Q9; extends `r87k` 10–13, which draw the two pages
+    and the product editor only). `r87k`: *"Settings gets a section, The calculator, with two pages."* Your Round 31 Ask
+    A §2 (`ROUND-31.md:317–327`, 13 Sep): *"Sub-sections: NO. A list, not a tree."* — *"One level of destination.
+    `CardGroup` is the second level, and it already exists."* (recorded at `settings/page.tsx:29–32`; four destination
+    rows today). ❓ One row opening a page that holds Crowd styles and Pours, or two rows under a heading — and each
+    row's summary line?
+26. ⛔ **Crowd styles: the built-ins, and a deleted one** (plan Q10). Round 31 Ask A §3's control #4 rules a managed list
+    — list, add, rename, reorder, delete (`ROUND-31.md:344`; built as `ManagedList`, Settings › Cocktails). What is the
+    crowd styles' own: ❓ may a BUILT-IN style be renamed or deleted — Cocktail-forward is what `—` counts as (:128)?
+    What does an invoice whose style was deleted read? Ours: its stored copy, else Cocktail-forward.
+27. ⛔ **A correction to our Round 88 §1 c: a second account would read `Tuned`, not `Starting guess`.** We told you a
+    second account *"starts from the same seed with no events of its own, so its Cocktail-forward would read `Starting
+    guess`"*. The code says the opposite: the one seed marks Cocktail-forward `tuned: true` for every account
+    (`drinkSplits.ts:96`, `cocktail: { split: { ...LIMBO_MEASURED }, tuned: true }`), nothing writes `tuned` (a search
+    of `src` for `tuned` finds the seed, its type and comments only; `setPresets` is called nowhere,
+    `drinkSplits.ts:122` its only hit), and the plan reads the built-ins from the seed. So a second bartender would see
+    `Tuned from your own events` under figures from Sean's events, under a name that reads `Cocktail-forward (typical
+    Limbo)` (`types.ts:4095`). The app is built as though other bartenders could use it. ❓ What should a second
+    bartender's Cocktail-forward read — `Starting guess`, as our Round 88 §1 c told you, or something else — and does it
+    keep figures from Sean's events? Is *(typical Limbo)* a name every account gets? (Ours, to object to: `tuned` stored
+    on Sean's account, not in the seed — nothing written on reading.)
+28. ⛔ ❓ **What makes a crowd style tuned, and what a style he adds reads** (new; not in the plan). `r87k` 10: *"A check
+    marks a style an event has tuned."* Nothing in the app tunes a style from an event — the learned figure is *"Later,
+    with rework"* (plan:1832–1833) and nothing writes `tuned` (#27). (a) When Sean saves his own figures for `Mixed /
+    balanced` (`r87k` 11), does its line turn from `Starting guess` to `Tuned from your own events`, or stay until
+    something tunes it? (b) A style he adds (`r87k` 11's `Corporate happy hour`): `Starting guess`, no line, or a third?
+    Your Round 88 §1 c ruled the four built-ins' words only.
+29. ⛔ **A product's pour: which help line** (plan Q27; `r87k` 13). `Only used when it's served on its own.` shows *"on a
+    bottle only cocktails use"* (:170–171), but the Library's product editor knows no invoice or menu. ❓ What decides it
+    there — any recipe uses the product, or its category (a liqueur, a mixer)? And `r87k` 13 draws `Blank uses the
+    Spirits pour, 1.5 oz.` under a box holding `2`: standing help, shown filled or blank? Provisional: the Spirits line,
+    shown filled or blank; the cocktails-only line waits.
+
+**e · What plan 015 builds provisionally until you answer** — nothing of it is built yet.
+
+30. ❓ **`5 glasses a bottle`** on Pours (plan Q11; :166–168, `r87k` 12). Worked from 750 ml ÷ the wine pour (25.36 ÷ 5 =
+    5.07 → 5)? Rounded how, and what at a 6 oz pour (4.2)? Plan 015's provisional (ours, plan:1537): 750 ml ÷ the pour,
+    rounded down.
+31. ❓ **⋮'s row name** (plan Q13; :135). The ⋮ row reads `Cocktail calculator…` (`InvoiceOptionsMenu.tsx:384`). With the
+    sheet renamed `Drink calculator`, does the row become `Drink calculator…`? The plan keeps the row as built (live)
+    meanwhile, and will build the sheet's subtitle `648 drinks` as drawn, two frames agreeing (plan:1557–1562).
+32. **A correction to your drawing: Topo Chico drawn `New`** (plan Q14). `r87i` 6 draws `Topo Chico … New 24 bottles`,
+    counted under Non-alcoholic. Your §2 e (:126–127) counts a mixer only when its INVOICE LINE is switched on, so a
+    mixer always has a line and can never be `New`; with no Topo Chico line, Non-alcoholic is an empty kind giving its
+    2% away. The plan builds it by the rule (its fixture is a Topo Chico line, switched on). ❓ Confirm the drawing is
+    schematic, or say how Topo Chico comes to be served.
+33. ❓ **The working sentences and the beer's unit** (plan Q15; `r87i` 6). (a) `r87i` 6 writes the working inline (`52
+    Moscow Mules × 2 oz + 52 × 1.5 oz on its own, +10% ÷ 750 ml`); your Round 51 §3 rules the vertical sum the app
+    draws. Keep the vertical sum, with `r87i` 6's term words (`52 × 1.5 oz on its own`, `108 drinks × 1 can`)? (b) The
+    app counts a beer line in its package (`2 → 5 cases`) where `r87i` 6 draws `48 → 120 cans · cases of 24`: which? (c)
+    The word after `× 1` — `can` for the beers, `bottle` for Topo Chico: the product's own unit, or Pours' `can or
+    bottle`? Provisional in the plan: the vertical sum with `r87i` 6's words, the line counted in its package
+    (plan:1566).
+34. ❓ **The red button** (plan Q20; :346–350). Adding or removing a line served on its own changes its kind's other
+    figures, as a tick does, and a tick doesn't turn the rail's button red (ours, §270: *"one ticked since had no share
+    to hand on"*, `outOfDate.ts:172`). The same here — no red? The plan builds no red meanwhile.
+35. (ours) **On hand, served on its own, is never written.** :150–151: it *"orders and bills nothing, and isn't
+    counted"*. So its `about 4 bottles` on the Builder's line will be worked live and never stored — unlike §219's
+    on-hand cocktail rows, which Update does write (`calculator.ts:2149`). It will get its own row state, in no foot
+    clause but `N on hand · not ordered`. Confirm.
+36. (ours) **A waiting swap's old bottle is the swap's** (plan Q29). Bacardi swapped to Diplomatico in the Daiquiri and
+    waiting for Update: Bacardi counts as used by the ticked Daiquiri, not served on its own. Read plainly it would be
+    served on its own; its row would then stop the swap moving the line (the swap moves only if no row has the old
+    product, `calculator.ts:2168–2170`), and Update would bill Diplomatico `New` beside a Bacardi neat-pour count (run
+    on a made-up wedding). Your :58 changes the product *"on the same line"*, and :50 keeps Bacardi only if another
+    drink uses it. Confirm.
+
+### 2 · ⛔ Your Round 88 §3 b, as built (§340–§341)
+
+Built as ruled and live (§0). Measured by §340's and §341's own runs: headless Chromium, `page.pdf` at 4 × 8 in, the
+PDFs read back with `pdftotext`/`pdfminer`; the screens at 390 × 844.
+
+37. ⛔ **Round 88 #14 — the Separate block, once it follows the last table.** Its cells sit under the table's columns:
+    Per drink, and each batch column's own `about 1½ bottles`. Under the last table alone, the first table's batch
+    figures would print nowhere, and `r88f` 1 draws no Separate row. ❓ Which columns do its cells sit under? **Held at
+    one table until you answer** (`RecipeSheet.tsx:248–249`: the split runs only when there is no Separate row).
+    Measured: any printout that includes his French 75 still prints EVERY recipe in it smaller — the split Margarita
+    beside it at 13.61pt (90.7%) on both sheets at five columns, against 15pt alone; about two-thirds at eight. This
+    decides whether his usual menu printout changes at all.
+38. ⚠️ **Round 88 #14 — our premise, corrected; does four-a-table hold for every recipe?** Our Round 88 #14 said the
+    phone paper's table *"runs 65.88 into its margin … Chrome's PDF shrinks the page to about 91%"*. That was his French
+    75 WITH its Separate row only. Without one, five and six columns fitted, unshrunk (249.81 in 249.8, 15pt), the
+    figure columns squeezed to 27.5 and 23 wide; at eight the Margarita ran 22pt into the sheet's own 0.35 in, one
+    sheet, 15pt, not shrunk, neighbouring figures touching (0 apart). The split can add a sheet: the Paloma 1 → 2 sheets
+    at five and six columns, the Margarita 1 → 2 at eight, its foot line alone on the second. ❓ Does four-a-table stand
+    for every recipe, or only when the one table would run past the sheet? Built as ruled (:159, *"holds four figure
+    columns at most"*) until you say. And the export chooser's phone row reads `4 × 8in · one recipe per page`
+    (`ExportSizeSheet.tsx:106`), untrue now for a recipe the split takes onto two sheets: keep, or new words?
+39. ❓ **Round 88 #14 — may a split table break across sheets?** On a recipe already taller than one sheet, the second
+    table starts at the foot of one sheet and finishes on the next, under its repeated header (his Mai Tai, at five to
+    eight columns: the second table starts on sheet 1 and finishes on sheet 2; at five, sheet 1 ends with its header and
+    first row). `r88f` 1 draws a recipe that fits one sheet. Break, or move whole to the next sheet (`break-inside:
+    avoid` on each split table — a candidate, not built)?
+40. ❓ **Round 88 #13 — History's and the rail's filters.** (ours) Only the search words are kept, in the tab
+    (`libraryView.ts:234`), and the swap's search, in its window, keeps its hold (`CocktailPicker.tsx:205`). What
+    follows: with search words AND a filter both set (History's stage, Archived or Deleted; the rail's category or `No
+    price set`), the quiet reload used to wait and keep both; now it goes ahead, the words come back and the filter
+    resets. ❓ Should those filters keep as L8's do? Told, too: the words now also come back when he leaves the screen
+    and returns, not only after the reload — what *"the same keeping as L8's"* (:154) gives.
+41. ❓ **Please draw: Round 88 #12 — a tap refused below the window** (a new state of S5's row, `ROUND-86.md:162`; no
+    frame draws it: a search of every frame in `docs/design/` for `already in the list` finds none). A tap in one list
+    can be refused because the other list's open row holds a name already in that list. At 390 × 844 nothing he can see
+    happens: the held Glassware row (y 947) and its sentence `“Collins” is already in the list.` (1509–1530) are both
+    below the window (`ManagedList.tsx:117–123`, `:160`). Bring the row and its sentence into view, or say the sentence
+    where he tapped? The same is older within one list (the sentence at 962 in 844). Left as built until you answer;
+    rare — it needs a duplicate name typed first.
+42. ❓ **The recipe sheet's Letter foot reads `prep sheet`** — `{business} · prep sheet` (`RecipeSheet.tsx:565`), older
+    than §340 (the same at `e4beee9`). Printed words: should it read `recipe sheet`?
+43. (ours) **Round 88 #11 — what is an Undo step:** Undo's and Redo's own report, `Undid …` / `Redid …`, keeps one cut
+    line (`SheetToast.tsx:481`). The group doors' labels and the calculator's and the fill's money messages are not, so
+    they wrap; a short one still reads as one line.
+44. (ours) **Round 88 #11 — a word with no space breaks anywhere** (`wrap-anywhere`, as `CardKit`'s wrapped title has
+    it) rather than running under Reopen. Measured by §341's design review: 5 lines, 134.25 tall at 390, nothing cut.
+45. (ours) **Round 88 #14 — past eight figure columns**, the same rule: never more than four a table, as few tables as
+    that allows, as even as possible — 9 is 3 + 3 + 3, 10 is 4 + 3 + 3 (`RecipeSheet.tsx:184–191`).
+46. **Frame against prose:** `r88e` draws `text-wrap: pretty`, where the prose says only that the truncate comes off —
+    built as drawn. `r88f` 1's prose figure (*"13.58 into the sheet's own 0.35 in"*) is his French 75 with its Separate
+    row (§255's); `r88f` 1's own Margarita at four columns is 249.81 in 249.8 (0.01). `r88f` 2's prep heading is built
+    at the recipe sheet's 15pt, its subtitle unchanged.
+
+### 3 · The calculator's settings and hours (§263–§267) — you read the code, our notes never reached you
+
+Our Round 88 was written before §263, so §265–§267's notes for you went in no round. Your answer settled the ones in §0.
+The rest:
+
+47. ❓ (ours) **New state, live, no frame — whole packages on a locked invoice** (§264; `r87t`). Stated as the row's own
+    words when on, no row when off (`CalculatorSheet.tsx:455`). The locked row is 63.14 tall against 69 open, so
+    `Proposed` rises 5.86 on a locked invoice. `r87t` draws no How-you-buy group. Accept as built, or draw?
+48. **Locked figures, against `r87t`** (§265). Each figure sits where its box was — the digits' right edge at 888, 875.5
+    and 871.25 at 1200 — not on `r87t`'s one shared edge; rows 73 (`r87t` 61); the figure 17 where the open box draws 16
+    (`globals.css`'s top-level input size, 16px); a transparent 1px border kept, so the digits end where the box's did
+    (`r87t` draws none). `Figure` at `CalculatorSheet.tsx:107`.
+49. ❓ **An invoice completed before §263** has no stored settings, so its locked calculator shows today's defaults — 1.2
+    / ×1.4 / 45% / 10%, and the bar times' hours, else 4 — as plain fact (`readCalcSettings`, `calcSettings.ts:129–131`;
+    the hours, `:213`). They may not be what he used that night. Say so, or as built?
+50. ❓ **The note's Undo labels** (§266; your Round 88 §1 b: *"Each tap is one undo step"*). Built, ours: `Keep 6`, its
+    toast `Undid Keep 6`. Your second tap, `Use 5`, isn't built; ours would be `Use 5`, `Undid Use 5`. Confirm, or
+    reword.
+51. ❓ **Undo of `Keep 6` after a later calculator write** (§267). A calculator write is carried into every Undo copy
+    (§263's rule), so Undo of Keep then changes nothing and still says `Undid Keep 6`. Changing it needs a ruling on
+    whether a calculator write is newer than Keep. With your §1 b the line stays on screen after Keep, so this will show
+    more. Which is newer?
+52. ❓ **Hours emptied to 0 in the calculator** are a typed 0 (§267), so your §1 b's line would read `…not the 0 you
+    typed.` · `Keep 0` (`barTimesNote`, `calcSettings.ts:324–327`, has no test for 0). §272's guard covers the
+    calculator's side (`Enter hours`). Should the note treat a typed 0 as no typed figure?
+53. (ours) **A half-filled pair of bar times** reads `No bar times yet · using 4` (`calcSettings.ts:286`).
+54. (ours) **Hours typed with no bar times to read** show the pen and `You typed this` alone; typed AND equal to the bar
+    times, `From the bar times, …` (`calcSettings.ts:272–278`).
+55. (ours) **The rail's Bar row:** one time alone reads `6 PM`; a bar past midnight into the same half of the day reads
+    both halves, `11 PM–10 PM`; an unreadable time is shown as stored (`barTimesText`, `barHours.ts:174`).
+56. **Frame against prose and build** (§266). `ROUND-87.md:327`'s straight `Can't` against `r87p`'s curly — built curly,
+    `Can’t read the bar times · using 4` (`calcSettings.ts:285`); `r87p` 2's half-width time fields against the app's
+    170 each (the strip spans the wrapping row, 442); `r87p` 1's line two at 1.35 and rows 61 against the app's 1.3 and
+    73.
+57. **At 390** the Hours row's typed line `You typed this · the bar times say 5` wraps and leaves `5` alone on its
+    second line (the row 80.03 tall; §267, measured). For the record, unless you'd keep the number with its words.
+
+### 4 · The cocktail hour (§268–§269)
+
+Measured by §269: headless Chromium on `next dev` at `127.0.0.1`, a temporary page drawing the real `EventDetailsSheet`
+and rail over made-up invoices, at 320, 360, 375, 390, 414, 768 and 1200, light and dark.
+
+58. ❓ **Please draw: the five lengths below about 414 wide** (extends `r87u`, drawn at 520 only). With `1½ hours` chosen
+    (62.02 wide, semibold), its distance inside its fill: 1200, 11.39 (fill 84.8); 414, 1.59; 390, −0.80 (fill 60.41);
+    375, −2.30; 360, −3.80; at 320 the words overlap — `1 hour` / `1½ hours` by 2.83, `1½ hours` / `2 hours` by 6.08.
+    Nothing scrolls sideways. Less padding, 13, `1½ hr`, two lines? His iPad, at 1200 and 1600, fits with room.
+    (`EventDetailsSheet.tsx:577–598`.) Since the guest count the row is drawn through `ChoiceRow.tsx`, lifted out of
+    Event details as §268 asked, its markup as it was; the guest count's box (`r87o` 2) uses it too, so #58 and #59
+    answer for both (§0 G4, G10).
+59. ❓ **Dark: the chosen length barely shows.** Its fill `rgb(26, 23, 18)` on the track `rgb(20, 17, 13)`, 1.05:1
+    (light: 1.24:1). Only the semibold, `--text` against `--text-secondary`, and the 0.5 shadow mark it
+    (`EventDetailsSheet.tsx:598`, `shadow-control`). Enough?
+60. **Spacing inside The bar:** built 12 from Bar closes' box to the rule, the 60 row, 12 to `Starts` (its label 28.5
+    under the 26 track), 12 from `Optional` to `How long`; `r87u` draws 16, 4 and 14 (18 under its 31 switch). Told,
+    unless you'd have `r87u`'s. `r87u`'s `#E9E4DA` is read as `--surface-sunken` (`#E8E4DD`).
+61. ❓ **Only the 44 switch is a target**, as in Settings. Should the whole row flip it, as the mark rows do
+    (`EventDetailsSheet.tsx:529`)? `check-marks` (§231) would follow the answer.
+62. ❓ **On a locked invoice**, `Length not set` and `Choose how long it runs.` stay gold, faded with the fieldset
+    (`cocktailHour.ts:294`, `:276`). Keep them gold, quiet them to `--text-secondary`, or take them away?
+63. (ours) **The old record's readings and §268's frame notes.** `ch` `"no"` is never on; other words in `ch` read as
+    none, so, as with `ch` blank, on only with a length in `chdur`; `true` / `false` as yes / no; a number in `chdur` as
+    its text (1 = 1 hour), and a bare number as the old app's hours; a start read in the box's `HH:MM`, or none; a
+    length not one of the five reads as the old words, `You wrote “2hrs”. Choose how long it runs.`, curly quotes; other
+    spellings (`1½ hours`, `2hrs`, `45m`) read as a length; the old words outlive the first write; tapping the chosen
+    length again writes nothing (`r87u` draws no way back to none); each choice gets its whole 48 slice. Frame notes:
+    the switch at the app's 44 × 26, not `r87u`'s 51 × 31; the chosen length's shadow the app's token, not `r87u`'s
+    value; the whole of `5 PM · length not set` gold (`cocktailHour.ts:158–202`).
+64. ❓ **A start typed in words in the old `ch`** (`5pm`) is shown nowhere. Acceptable, since neither app could write
+    one?
+
+### 5 · The red button after an untick (§270–§271)
+
+65. ⚠️ **A premise under `r87r`: the unticked drink leaves the list.** `r87r` keeps the unticked Tom Collins in view, an
+    empty circle beside the red. The built `On the menu` list holds ticked drinks only (§44.3a, §45.7;
+    `CocktailPicker.tsx:325`), so the Collins leaves the list at the untick, and after a reload, or the next day, the
+    red names nothing on screen. ❓ Should the red name the drink, or is it right as built?
+66. **For the record:** `r87r`'s caption *"the bourbon would go from 8 to 16"* is plan 014's two-drink figure; on the
+    three drinks `r87r` draws it is 11 → 16 (measured with an assumed Old Fashioned, 2 oz bourbon). The build follows
+    the calculator.
+67. ❓ **The red's size.** Round 87 draws it at 15 semibold three times (`r87a`, `r87g`, `r87r`), while :18 says *"as
+    `CocktailPicker.tsx:844` builds it"*: 17, padding 16 (now `CocktailPicker.tsx:904`). In the 360 rail the red's words
+    take two lines (305.77 in 292). 15, on one line — the swap's red too — or 17 as built?
+68. ❓ **Guests that aren't one number.** When Event details' guests are blank, `80–100`, `about 90` or `120 guests`, the
+    calculator opens at 0 guests (`calcSettings.ts:237` reads Event details only) and can't tell whether the untick
+    moved a figure, so the red can't show. Stay normal, as built, or red on any untick of a counted drink there?
+    Read again with the guest count (§320–§324): an invoice updated since opens at that Update's count while Event
+    details reads as it did then, so there the red shows (`check-untick-red` B14); it still can't show on one with no
+    Update since, or where Event details was cleared or its words changed since the Update — those open at 0, as
+    before (§0 G2 (i)).
+69. (ours) **What counts as an untick.** Update keeps the drinks it counted (`menuAtUpdate`, `types.ts:1933`), and an
+    untick turns the button red only for one of them; the untick itself is the reason; on-hand lines count; a drink
+    re-ticked or deleted since is no reason; the note is written only while a calculated line remains; red wins over a
+    prep → prep swap's hedged `may be out of date`; on a locked invoice the red shows and its note stands until reopened
+    (`outOfDate.ts:123`).
+
+### 6 · Nothing to count, and a copy's menu (§272–§273)
+
+70. (ours) **The empty calculator keeps 28B's words until the pie.** `r87l` e puts the guard's fifth case's words in
+    28B's empty state with the pie's body line. Built: 28B's `Nothing to quantify yet` and its body stay until the pie
+    (`CalculatorSheet.tsx:766`), with no foot there (`CalculatorFoot.tsx:57–69`). The pie brings `r87l` e (#2).
+71. ❓ **`Update 0 lines`, greyed** — Round 65 §2's dead control, against your §4 b's *"Nothing is greyed out."* It shows
+    in three cases: every line already matches the calculator (§273); one line set by hand with nothing else moving
+    (§313's item 5); and, since the guest count, a count typed back that the lines already stand at (§0 G2 (ii), G5).
+    The button is disabled at 0 and drawn at half strength (`CalculatorSheet.tsx:626`, `:639`). Does the foot give
+    way to words, or the button stay?
+72. ❓ **The guard's own measures, against `r87h`.** Its button 48 (`r87h` 44); the foot on `--surface` (`r87h`
+    `--surface-alt`); rows 17 (`r87h` 15); its words 15 in `--accent` (as `r87h`), where Update is 17 in `--accent-fg`
+    on `--accent` (`CalculatorSheet.tsx:639`) and `Choose cocktails` 17 in `--text` (`:779`), and Round 87's other frame
+    draws `Lines only` and `Keep 120` at 17 `--text`. At 320 the drink-mix sentence takes three lines and the foot grows
+    73 → 83.5 — stack it? (`CalculatorFoot.tsx:91`.)
+73. (ours) **A row refused for its own reason** — no product, no size, two units — reads `Not counted` under the guard;
+    its own reason comes back with a count.
+74. ❓ **Locked, with nothing to count**, the rows read `Not counted` beside the lock sentence, and nothing says why.
+    Your §7 keeps the lock sentence and §4 b rules the rows; turn 1's `r87b` put `Not counted · 0 guests`. Should the
+    locked case say why, and where?
+75. **For the record, until the guest count:** a calculated invoice with no guest count in Event details reopens on the
+    guard, its counted lines `Not counted` / `stays at 25`, and `Enter guests` goes to a box forgotten when the sheet
+    closes (`calcSettings.ts:237`). Read again with the guest count (§320–§324): an invoice updated since reopens at
+    that Update's count while Event details still reads as it did (§0 G3 (c)); one updated before it, or whose Event
+    details was cleared or its words changed since, still reopens on the guard, and a count typed there and not
+    Updated is still forgotten when the sheet closes — only an Update stores the count.
+76. ❓ **Please draw: an empty `Proposed` band** (extends `r87h`). A drink ticked with none of its lines on the invoice,
+    at 0 guests: the `Proposed` label stands over nothing (`CalculatorSheet.tsx:883–892`). No frame draws it: each of
+    the ten `Proposed` labels in the Round 87 and 88 frames stands over a row (read). Keep the band, hide it, or a line
+    in it?
+77. ❓ (ours) **New state, live, no frame — on hand under the guard:** an on-hand row shows two second lines, `On hand ·
+    not billed` and then `Not counted`; an on-hand line held blank reads a bare `—`. `r87h` draws bought rows only.
+    Accept as built, or draw?
+78. (ours) **A copy brings the drinks its figures were counted for** (`menuAtUpdate`) and only its own menu's swaps —
+    your template rule (:370–371) read for a duplicate (:372). Its second half, the original's red stuck after a swapped
+    drink was unticked, was fixed by §274 (only drinks on the menu count).
+79. (ours) **With the guard up, the foot's counts aren't shown** (`1 has no product to change`); the text holds the
+    reason instead. On a locked invoice the counts say nothing either.
+
+### 7 · The swap's money (§274–§281)
+
+Numbers in brackets are §281's list, so the commits can be read beside this. Money is measured on made-up invoices
+shaped like `r87g` (five rums), by the real code in Node, against what the live app charged before the swap's step
+(*"live"*).
+
+**a · Sean's answers — confirm they read as your §6 does**
+
+80. ❓ **[13] A comp on the new bottle's line after the Update that applied the swap stays free** — Sean, **Yes, free
+    stays free**. Built §278: the swap's line takes the count and stays free. Confirm nothing in `r87g` reads otherwise.
+81. ❓ **[18] A second drink switched onto an earlier swap's free bottles** — Sean, **3 free, 2 charged**: the comp keeps
+    its bottles and only the rest is charged; free plus charged equals poured. Built §279; §280 lowers the charged lines
+    with the count. Confirm.
+82. ❓ **[23] Invoices switched and updated before the swap's step, comped now** — Sean's *"…Yes."*, read as free stays
+    free there too. Built §281: a comp he puts on the new bottle's billed line while the swap reads applied takes the
+    swap's mark. Confirm nothing in `r87g` or your Round 87 §6 #2 (b) reads otherwise.
+83. ❓ **[15] A comp made after the swap but before any Update** looks exactly like [23]'s lines, so it stays free too:
+    $167.96, live's (as Round 87 §6 #2 (b)'s words read, $231.96). Round 87 §6 #2 (b) still holds for a gift comped
+    BEFORE the swap (#95). May it be read this way?
+84. ❓ **[17] A new bottle the calculator can't count, already billed, comped after Update:** not red; once it is sized,
+    the count goes on the comp ($167.96, live's). Confirm against your Round 87 §6 #3.
+85. ❓ **Please draw: [20] the `Proposed` row beside a free swap line** (extends `r87g`'s row). Live as built by Sean's
+    **Ship it, ask Design**; the wording is yours. The working counts every bottle poured, the figure only the charged
+    ones: `= 4.4` beside `2 → 2`; `= 5.5` / `2 → 3` at 40 guests; `= 1.1` / `2 → 0` at 8; `= 4.95` / `1 → 1` (an Old
+    Cuban's form); `= 2.2` / `1 → 0` for a bottle he typed in. A working that can't produce the number beside it,
+    against Round 36 (`ROUND-36.md:102`, `:182`, `:245–250`) and :97–98. How should the row show the bottles the free
+    line already holds?
+
+**b · What `r87g` doesn't draw** — each is pinned in `check-swaps-to-apply` as built, not fixed
+
+86. ❓ **Please draw: [1] bottle → prep and prep → bottle swaps** (extends `r87g`). Built: no line two, no row; the old
+    bottle (or the prep's limes) stays billed after Update; a bottle → prep swap's red stays while that bottle's line
+    does. A row that takes a line off?
+87. ❓ **Please draw: [2] a swap to a bottle already billed** (extends `r87g`) reads applied at once: no line two, no
+    row, no red, and Update leaves the old bottle billed for no drink (+$76). One more form: with Sean's answer to [23],
+    a comp keeps such a swap applied, so an old bottle left for no drink stays billed where §280 had turned it into the
+    new one (4 of 105,000 fuzzer sequences, +$20 to +$57 against live). (A second, the Mojito's swap naming both drinks
+    after a comped move, §276, was fixed in §279: line two names only the drinks still waiting,
+    `swapsToApply.ts:182–183`.) Take the old line off, or turn it into the new bottle?
+88. ❓ **Please draw: [3] after Update, the swap changed again** (extends `r87g`; +$140), **or undone** (both billed),
+    **or undone and made again** (silent, $167.96 by the mark). Should the line move again as a swap row, and Undo after
+    Update read as a swap back?
+89. **[4] A product whose only line is a comp takes the whole count**, all free (Tito's comped at 1 → 7 comped) — asked
+    once, at #9, with the pie's beer; one answer covers both.
+90. ❓ **Please draw: [5] two old bottles swapped to one new bottle** (extends `r87g`). One row (*"One row for each
+    swap"*, :52); the first line takes the whole count; the second old bottle is left billed after Update (+$72). Two
+    rows splitting the count, or a row that takes the second line off?
+91. ❓ **[8] On a locked or Complete invoice** a waiting swap's line two still reads `recalculate to apply`, where Update
+    can never run (§276 took it off only where the mark reads applied). Keep, other words, or none?
+92. ❓ **Please draw: [9] a closed group** (extends `r87g`'s line two to the group's row) whose member carries a waiting
+    swap shows no word or mark. Groups come back closed, so the rail's red is the only sign. A mark on the group's row?
+93. ❓ **[10] A Don't buy swap to a bottle with no size** is blocked — nothing written, red — where the same bottle
+    unswapped is written as a blank on-hand line (§219). Write it blank?
+94. ❓ **[11] The swap row's alignment.** Its text has `r87g`'s 10 above and below (that row only); the stepper and
+    amount stay centred, where `r87g` aligns them to the top. Top?
+95. ❓ **[19] A gift comped BEFORE the swap** — should it count as the swap's free bottles? As built, your Round 87 §6 #2
+    (b): the swap's bottles go on charged beside it, $231.96 (live $167.96); with the Mojito $230.97 (live $125.97).
+    Counting it: $196.96, and the calculator's row `2 → 7` reads `2 → 6`. Sean has been told it is yours.
+96. ❓ **[21] More guests and fewer.** More go on the charged line and the free ones stay (+$35 at 40 guests against
+    live). Fewer take the charged line to 0, never below; free lines are never lowered, so the free line alone can hold
+    more than is poured (831–943 of 15,000 fuzzer sequences per seed). A line at 0 stays, and prints on the client's
+    copy `Diplomatico Reserva 0 × $35.00 … $0.00`. Stay, go, or not print?
+97. ❓ **[22] A bottle he adds as a line of its own:** beside a free line alone, Update writes it at the count less the
+    free bottles, `1 → 0`; beside a free and a charged line it is left as typed — six for five, $173.97 (live $160.97).
+    Right?
+98. ❓ **[24] The + button lands on the bottle's first line.** In `r87g`'s order that is the free one, so the next Update
+    lowers the charged line: a charged bottle made free, $138.97 → $103.97. Count the free bottles at their figure now,
+    or at the figure the swap's Update wrote (`calcQty`; an option, not built)? Since step 5 the other order changed: +
+    on the CHARGED line is now his own number, held, so Update keeps it ($173.97, where it was $138.97).
+99. ❓ **[26] An invoice switched, updated AND comped before the swap's step** opens red, and its Update charges the new
+    bottle again (+$105 / +$64 / +$99 against live). Sean is told the two taps that settle it — `Charge for this line`,
+    then `Comp this line`. A rule reading any unmarked comp of the new bottle as the swap applied would reach it, but
+    would also read Round 87 §6 #2 (b)'s gift that way (62 assertions red when tried), so it isn't built. Should it be?
+
+**c · Told, as built — object if you would**
+
+100. (ours) **[6] Against the ruling's words:** line two takes the price line's place, on a locked invoice too; one row
+     for two drinks; `stays Bacardi Superior`, the line's full name, wrapping at up to 45%; `Proposed` not drawn when
+     every row is a swap's; a bottle of another category moves the line (a category emptied goes); a line he hid moves
+     like any other, with no money line; at Update the packing mark goes, since he packed the old bottle. ❓ **New
+     states, live, no frame — accept as built, or draw:** two swaps from one line (the second goes `New`, line two
+     stacks); an on-hand swap row (the mark, no money line); the guard's swap row.
+101. **[7] Frame against build:** rows 17 (`r87g` 15); the CardGroup bar 44 (30); Update 48 on `--surface` (44 on
+     `--surface-alt`); a blocked swap row counted in the foot as `1 has no product to change`. The foot's `10 stay as it
+     is` against `r87g`'s `10 lines stay as they are` is §10 #140.
+102. (ours) **[12] One size within 1%** (`25.4 fl oz` is 750 ml); a unit the app can't read (`cl`) compares by its
+     words.
+103. **[14] For the record:** Update leaves an unseen mark, `swapApplied`, on a line it applies a swap on — and on the
+     New line, the billed line it finds, a lone comp, and a comp marked by [23]'s rule. The mark moves money: a charged
+     line beside the swap's free one bills only the rest. This replaces §274's *"never stored"*.
+104. (ours) **[16] Two comps of the new bottle:** the swap's takes the count; the gift stays as it is (`productLineIn`
+     prefers the marked line).
+105. (ours) **[25] A row beside the swap's charged lines speaks for them** (`5 → 2`) and lowers them last-listed first;
+     one row may write two lines; `Update N lines` counts it once.
+106. (ours) **§274's smaller readings:** `an` before a vowel; the size is the line's unit as he reads it against the
+     product's (case and spacing aside), and a line with no unit says nothing of size; a new bottle gone from the
+     Library is not a waiting swap (the card shows the broken link); a line or bottle gone since the sheet opened moves
+     nothing.
+
+### 8 · The estimate's sends, per guest, `Included` (§300–§302)
+
+107. ❓ **An all-comped row that doesn't follow guests** (Ice) shows two empty boxes and `All comped on the invoice · you
+     type this one` on the sheet, where `r87n` 2 draws `Included` and no boxes (`estimateSheet.ts:173`, `:539`, `:568`).
+     Should the sheet show `Included` there, and how does he type a figure? Is `r87n` 2 schematic about boxes — it draws
+     Rentals typed with none?
+108. ❓ **An all-comped category that follows guests, his words picked:** built `All comped on the invoice · guests ·
+     drinkers · premium`, or the first part alone, since a $0 row names a widening that never happens? No frame draws
+     it: a search of the frames for `All comped on the invoice` finds only `r87n`'s, with nothing after it.
+109. ❓ **`Included` beside only `To be confirmed` categories:** built as `To be confirmed` in total. The literal reading
+     prints `$0 · plus Bar Tools, to be confirmed` (8 of 270 test invoices).
+110. (ours) **A hidden line beside comps** leaves the category all comped; a comped line with no price is a comp.
+111. ❓ **A sent copy keeps no logo picture** — up to 400 KB in every Undo step and the shared cache — so it shows
+     today's logo, against your Round 87 §3 a #3's *"never changes"* (:234–237) (`estimateSent.ts:285`, `:296–297`).
+     Option, not built: each picture stored once, by its fingerprint. Sean has been told it is for you and him; he
+     hasn't answered.
+112. **The list's radio and row, and the confirm's type:** `r87m` draws a 22 radio with a 10 dot, rows 56, and the
+     confirm at 20 / 15; built the app's 24 radio with its 7px ring, rows 61, and 18 / 17 (`EstimateSends.tsx:29–32`,
+     `:61`).
+113. ❓ **Please draw: the sent line, narrow** (extends `r87m`, not drawn at 390). It wraps only after a dot; at 390,
+     History's line takes three lines with a year and a wide total (the row 97 → 117), the glyph centred
+     (`SentLineText.tsx:37–43`).
+114. **When `Mark as sent?` comes up around the iPad's print sheet** — on `afterprint` or when `window.print()` returns,
+     whichever comes first (`EstimatePrintClient.tsx:147–155`). Unseen on his iPad: his check 27.13 asks it. Told, until
+     it is seen.
+115. (ours) **The toast's Undo after the invoice is locked** does nothing: the write is refused
+     (`EstimatePrintClient.tsx:166`).
+116. ❓ **Only the tax rate moving** (6% → 6.5%, every printed figure the same) reads as not changed since the send
+     (`estimateSent.ts:303–321` compares the printed figures, not the rate). Does the rate count?
+117. ❓ **Please draw: a sent copy in History's trash** (extends `r87m`'s sent line). A trashed copy with a send shows
+     `Another copy is in History` and then the sent line — four lines. No frame draws both: `Another copy is in History`
+     is drawn only in the Round 81–83, 84 and 85 frames, before the sent line existed, and the sent line (`Sent Oct 19`)
+     only in `Round 87 - the estimate and the rest`, which draws no trash (searches of `docs/design/`).
+118. ❓ **Two sends on one day** with nothing changed list as two identical `Sent Oct 21` rows. Should a second Mark as
+     sent add a row, or the row carry a time? Sean's 19 Oct **Ask again, keep each** says keep every copy, not how
+     same-day copies read.
+119. (ours) **An emptied invoice with a send** says no `changed since` anywhere — the page's rule, now the sent line's.
+     Its list holds only the sends (`Make an estimate…` is greyed there); a locked or empty invoice with no send,
+     reached by its address, shows the paper as built and asks nothing.
+120. **Frame against prose** (§300): the confirm's two buttons as `r87m` 3 draws them — `Not now` outlined, left; `Mark
+     as sent` filled, right, at the right edge — in the app's type; the toast the app's own, not `r87m` 4's dark one;
+     the chosen send's line two, `The paper the client got. Printing it doesn’t ask.`, as `r87m` 6 draws it though the
+     prose doesn't name it.
+121. (ours) **§300's smaller readings:** `Type` on an `Included` row opens its boxes empty, and it reads `Included`
+     until a figure is typed; `Changed` waits for Settings › Estimates in all three places; the copy kept is the paper
+     on screen when he pressed Print, dated when the box came up, and written at once, not after the usual 700 ms; a
+     stored copy this build can't read is kept untouched; at most 200 copies, 200 rows, 4,000 characters; opened from ⋮
+     (`?view`), the way back reads `Back to the Builder`.
+
+### 9 · Templates and the cocktail menu (§290–§294)
+
+122. **Told — Sean decided: saving over a template keeps its menu.** With the switch off, or not shown, saving over a
+     template keeps its menu and swaps; switched on, the invoice's replace them. His *"Keep it."*, built §293.
+123. ❓ **So your :368 now holds for a new save only.** *"No menu, no box. That covers a template saved with the switch
+     off"*: a template saved NEW with the switch off has no menu and no box; one saved OVER with it off keeps its menu,
+     and its box. Confirm.
+124. ❓ **The taken-name sentence says nothing of the menu.** `You already have a template called Wedding bar. Saving
+     replaces its lines with these 2. It keeps its name.`, and the toast `Replaced Wedding bar` (`templates.ts:443`,
+     `:472–474`, `:466`; the toast, `:481`). Say the menu is kept (switch off or not shown), or replaced (on)? Your
+     words, if so.
+125. ❓ **Should the switch open ON** when the typed name is a template with a menu? Off every time means a re-save keeps
+     the old menu under new lines unless he turns it on.
+126. ❓ **Please draw: taking a menu off a template** (extends `r87v` 1). The only way today is `Delete template…`, which
+     is for good and takes its uses. Is a way wanted, and where? Sean has been told it waits for you.
+127. ❓ **Past four drinks, are the swaps named?** Built as your :367 example: no — `Margarita, Moscow Mule, Paloma and 5
+     more.` (`templates.ts:1085–1087`, `:1115`).
+128. ❓ **Please draw: his drinks not loaded yet, or a failed read** (extends `r87v` 1 and 3). With no copy of his drinks
+     on the device (first open, cleared data) or a read that failed, a template's tap starts with its lines alone and no
+     question, and the naming sheet has no switch. A held or failed state of the row needs your words.
+129. (ours) **The box's taps:** a pointer tap within 500 ms of the box opening answers nothing (the keyboard acts at
+     once); focus starts on `Bring the menu`; a held Return answers nothing (`ConfirmDialog.tsx:95`, `:165`).
+130. **`r87v` 1's row sits 14 above the foot;** built the sheet's 20.
+131. **The preview's order:** built `4 categories · 22 items · 4 cocktails · as saved`, the app's summary since §155
+     (`templates.ts:813–817`); `r87v` 2 draws `22 items · 4 categories · …`.
+132. **The box in the shared confirm's measures:** 384 wide (350 at 390), padding 20, title 18, body 17, where `r87v` 3
+     draws 440, 22 / 18 and 20, 15. Its answers are built 18, to the words.
+133. (ours) **A swap whose new bottle is gone** stays with the template; its drink comes with its recipe's own bottle; a
+     trashed drink isn't brought.
+134. (ours) **On an invoice that already swaps the same drink's bottle,** the invoice's own swap stands, and the box's
+     sentence leaves out a swap `Bring the menu` won't write; a template's second answer to one question is left out
+     too.
+135. (ours) **Nothing after a start or a fill says the menu came:** `Started from Wedding bar.`, `Filled from Wedding
+     bar, 21 lines`.
+136. (ours) **The `+` sheet's and the fill list's rows** don't say `· 4 cocktails` — only the preview, as ruled.
+137. **Frame against build:** `r87v` 1's switch 51 × 31, built as the app's `Switch`, 44 × 26; line two 1.35 → 1.3; the
+     sheet's hint and Cancel kept, which `r87v` 1 doesn't draw.
+138. (ours) **Several swaps within four drinks:** `with Diplomatico and Demerara syrup in the Daiquiri`; `with Tito's in
+     the Moscow Mule and Diplomatico in the Daiquiri`; a name opening `The` keeps its own; `1 cocktail`, singular;
+     turning the switch with no name typed doesn't make the naming sheet ask before closing.
+
+### 10 · A number set by hand (§310–§313)
+
+139. **Told — Sean decided: a copy or a template starts as the calculator's.** A line set by hand arrives with its
+     `calcQty` set to its own figure, so Update sets it as today's copies are set; his hand-set numbers stay protected
+     on the invoice he set them on (`types.ts:3655`). His **Use the calculator (Recommended)** — *"Nothing new for
+     Design to draw."*
+140. ❓ **The foot's second clause.** Your :308 and `r87q` say `1 line set by hand · 6 unchanged`; `r87g` says `10 lines
+     stay as they are`; built Round 31's `stays as it is` — `1 line set by hand · 6 stay as it is`
+     (`calculator.ts:2413–2414`). Which, for every foot? (With #2's clause order.)
+141. **The row, against `r87q`:** `r87q` draws 8 above and below, centred (61 tall), 20 at each side, a 2px gap, line
+     two at 1.35; built 12, top-aligned (69), 14, no gap, 1.3.
+142. **At 390:** the row 80 tall held, 101.3 after `Use 7`; a 57-character name 122.5 → 186.3. `r87q` is drawn at 580
+     only.
+143. ❓ **Where `Use the calculator’s number` sits in the panel:** under Cost, Price history and Used by, 181 below the
+     panel's top (`RowPanel.tsx:970`); `r87q` 3 draws it under the header. Above them, or as built? With the pie's #18:
+     one row order.
+144. ⚠️ ❓ **The panel's figure is the one the calculator last WROTE** (`calcQty`, `InvoiceSheet.tsx:1578`), not what it
+     says now — your :311 sets the line to `calcQty`, and :309 calls it *"the calculator's number"*. Two cases where
+     they differ: (a) the sheet says 3, and the panel offers 2; (b) the calculator now agrees with him (3 → 3), and the
+     panel offers 7 (+$119.96). Hide it when they agree, name the current figure, or keep it as ruled? Since §313 it
+     shows only on the invoice he set it on; a copy arrives without it.
+145. ❓ **When the calculator comes to agree** and nothing else changes, nothing makes the line calculated again: the
+     agreeing pass runs only when an Update writes. Should it?
+146. (ours) **A swap row whose old line he set by hand is the calculator's** (your Round 87 §6 #5): the swap moves it.
+     Confirm.
+147. ❓ **A §280 row held when any of its lines is his,** `You set 6 by hand` naming all of them. Sean's answer settled
+     the copy case. It remains where he sets it himself: + on a copy's formerly free line, or after `Charge for this
+     line` and a +, Update leaves 6 charged for 2 poured ($232.99 against $92.99 before step 5, at 8 guests; $278.97
+     against $243.97 at 32) (`calculator.ts:2371`). Hold only his line, or not count a line changed while it was another
+     kind?
+148. ❓ (ours) **New state, live, no frame — a locked sheet's held row:** no button; the foot names it beside the lock
+     sentence. Accept as built, or draw?
+149. (ours) **The Undo step names the line:** `Rittenhouse Rye back to the calculator’s 7` (`r87q`: `Rye back to the
+     calculator's 7`), the app's apostrophe (`invoiceRows.ts:277`).
+150. (ours) **§310's smaller readings:** the button's spoken name adds the line's, `Use 7 for Rittenhouse Rye`; an
+     on-hand row keeps its mark above the pen line, a prep's limes their `via`; no toast for `Use the calculator’s
+     number`; `stays at 3` and `Use 7` centred on each other at the row's top; `r87q` 2 drops `· the calculator says 7`
+     once `Use 7` is tapped — built as drawn, though the prose doesn't say.
+
+### 11 · What his iPad still owes
+
+- **Your Round 88 checks** (*For implementation* 4): a card to its editor and back, and one long trail at his phone's
+  width, are his 27.30 and 27.31, on his iPad since §330–§332 went live (5:27 PM Eastern, 21:27 UTC; `IPAD-CHECKS.md` at
+  `d7430b9` says so — at `eeddf7d` it still said they were not, written before the send) — 27.30 tells him the
+  window's move is with you (W13), 27.31 the Tab stop (W10); the strip turning round and `Use 24 hours` go in once §1 b
+  and §1 d are built. §341's three — a long recipe on the phone paper with Per drink and four sizes (count the sheets,
+  see where the second table breaks), History's search words kept across the side menu, Reopen's message read whole —
+  are 27.28, 27.27 and 27.25, among §340's 27.25–27.29, on his iPad since §340 went live. His 26.5 has a dated note
+  since §330; 27.3 and 27.4 are rewritten as §1 d and §1 b land.
+- **Session 27 — forty-five checks** (27.1–27.45, `IPAD-CHECKS.md` at `d7430b9`): 27.1–27.35 for what went up
+  20–22 Oct; 27.36–27.42 for the guest count, on his iPad since it went live (02:37 UTC, 23 Oct), once he reloads every
+  device — the file at `d7430b9` still says *"not on your iPad until the next update goes up"* of them, written
+  before the 02:29 send; and 27.43–27.45 for §350–§351 (the To make note, a syrup marked Don't buy, a recipe that says
+  `top`), for once they are live. None ticked yet. His first check is 27.13 — `Mark as sent?` around the iPad's print
+  sheet (#114).
+- **Sessions 23–26:** our Round 88 promised them back in a later round. None has come back: in Sessions 23–27 only 23.3
+  is ticked, and it went to you in Round 85 §3 (a search of `IPAD-CHECKS.md` at `e540b42` for ticked headings).
+- Every screen measurement here is Chrome's or Chromium's. Nothing was printed on an iPad.
+
+## What I need back
+
+0. ⛔ **§0 U1, G1 and G2 (2) first — they decide what is built soonest.** U1, the one sentence for two or more drinks the
+   app can't count: a stand-in goes up with this round in its place — our call, not a design: words only, no money, a
+   rare path — live until you rule, and your words replace it as soon as they come; please give them, or draw it. G1,
+   hours alone differing (your Round 87 §4 c #4): the guest count, live since 23 Oct, asks nothing then; your answer
+   decides whether it should, and if it should, please draw its box. G2 (2), a note when the calculator's guests follow
+   Event details, in `r88a`'s forms (drawn, if yes): your Round 88 §1 b, queued after the guest count, changes the hours
+   note, so the guests' would be built with it.
+1. ⛔ **§1 a + b — the pie's C and D, which go live together:** #1–#15 and #17. First the two drawings they can't be
+   built without, #10 and #17; then the money on every invoice's first Update after the pie — #4, #6, #9 (with §7 #89,
+   live today), #11, #12, #13; then #1–#3, #5, #7, #8, #14, #15. #2 with §10 #140, one foot. #16: the words, in case
+   Sean keeps his counts.
+2. ❓ **§7 — the swap's money, live on client invoices now:** confirm #80–#84; then #85 (drawn — the row is live by
+   Sean's **Ship it, ask Design**), #87, #88 and #90 (drawn — an old bottle left billed: +$76, +$140, +$72), #95, #96,
+   #97, #98, #99; then #86 and #92 (drawn), #91, #93, #94.
+3. ❓ **§0 — the guest count as built (§320–§324, live):** G2 (1) with G5's second question and §6 #71, one answer; G3
+   and G4 (drawn); G5, G6, G7. Sean's decision (G2) is told, with our four readings of it, (a)–(d); G8–G18 are told.
+4. ❓ **§0 — the way back as built (§330–§332, live):** W13 (the window's top edge) and W14 (the Back that does nothing,
+   with W8's name and category) first, then W12, W10 and W11. W1–W9 are told; W14 carries W8's question.
+5. ❓ **§0 — a pour the app can't count and the To make note, as built (§350–§351, on `main` with this round, not live
+   when it was written):** U2 (the foot, under our own wrong report) and U5 (a swap's band on a floor) first; then U3,
+   U4, U6, U7 (a new state with no frame, live once this round's build is up — accept or draw) and U10 (an older row the
+   order still decides). U8 and U9 are told.
+6. ⛔ **§1 c–d — the pie's E and F:** #18 with §10 #143, #19, #20 (drawn), #21–#24; #25 (drawn), #26–#29. Then §1 e,
+   #30–#36: the plan builds their provisionals until you answer.
+7. ⛔ **§2 #37 — the Separate block;** then #38–#42. #38 and #39 decide whether a recipe takes a second sheet.
+8. ❓ **New states with no frame — accept as built, or draw:** #47, #77, #100's three and #148, live; and §0 U7, live
+   once this round's build is up.
+9. ❓ **The rest of §3–§10's ❓:** #49–#52; #58 (drawn), #59, #61, #62, #64; #65, #67, #68; #71, #72, #74, #76 (drawn);
+   #107–#109, #111, #113 (drawn), #116, #117 (drawn), #118; #123–#125, #126 (drawn), #127, #128 (drawn); #144, #145,
+   #147.
+10. **The nineteen drawings, all in the items above** — an index, in the order the build needs them: #10, #17 (C and D);
+    #85–#88, #90 (live money); G3, G4 (the guest count, live); #20, #25 (E and F); then #41, #58, #76, #92, #113, #117,
+    #126, #128. Each says which frame it extends. **And nine more, only if your answer builds them:** U1's sentence, if
+    words alone won't do (extends `r88g` 1), G1's box with the Bar times row alone (`r87o` 2), G2's note (`r88a` 1–2),
+    G5's foot (`r87h`), G7's refusal (`r87o` 3), W13's window (`r88b`), W14's sequence (`r74g`), U5's band (`r87g` 3),
+    U7's row (`r88g` 1).
+11. **Every (ours), *For the record* and frame note** — told, as built: W1–W9, G2's (a)–(d), G8–G18, U8 and U9 among
+    them. Object to any.
+12. **His Sessions 23–27** come back in a later round.
 
 ---
 
@@ -583,9 +1874,11 @@ without a file are `ROUND-86.md`'s.
 15. ❓ **An older calculator fault** (§260; `calculator.ts:940–946`, the merge's `!bothReal` branch — the same at
     `fe226c4`). A product poured by one drink in a unit the app reads and by another in one it can't — a French 75's
     `3 oz` of Champagne and a Kir Royale's `1 top`, in made-up data: with the French 75 ticked first, 16 bottles worked
-    from the readable pour alone, the working naming the French 75 only, no `at least` and no sentence (the foot: `1
-    line needs a number from you`); ticked the other way, #36 (b)'s sentence and no quantity. `top`, `rinse` and `float`
-    are units the app can't read. ❓ How should it read — and should the order matter?
+    from the readable pour alone, the working naming the French 75 only, no `at least` and no sentence (the foot: ~~`1
+    line needs a number from you`~~ *⚠️ wrong — corrected 23 Oct, Round 89 §0 U2: that is calculate()'s foot, which
+    nothing on screen shows; at `eeddf7d` the foot on screen read `1 has no product to change`*); ticked the other way,
+    #36 (b)'s sentence and no quantity. `top`, `rinse` and `float` are units the app can't read. ❓ How should it read —
+    and should the order matter?
 16. ❓ **The picker's `To make` note after Update** (§247, seen in passing): *"Prep you batch yourself. Their ingredients
     aren’t on the invoice yet — check each recipe for what to buy."* (`CocktailPicker.tsx:967–968`) still shows once the
     calculator's Update has put the sugar, limes and lemon juice on. ❓ Its words once they are on.
@@ -2949,1832 +4242,6 @@ them as they stand would frost a flat fill — the drawer header's case in §1.
 
 ---
 
-## 🔴 ROUND 82 — Sean's switch, split: three marks in the press-and-hold panel — keep out of the bottle, don't buy, strained or otherwise separated — all new parts, so please draw them, with a topper's per-glass line on the card and the printout; the four-way count you asked for in Round 48 §4, read on his iPad: 5 marked, all 5 your group 1 — four filtered waters, and a Sprite that is a topper by his word; and the recipe editors' press-and-hold panel, never placed, now centred on the window (§209, LIVE) — two calls
+## Older rounds — Round 82 and earlier are in `REQUESTS-ARCHIVE.md`
 
-
-**implementation → Design, 12 Oct 2026. Branch `main`, app at `1a9d18d`** — the code is `1bf91a7`'s (§209 · review), the
-last commit to touch it. `4597fb3` and `1a9d18d` (§210) are records only: `git diff --stat 1bf91a7 1a9d18d -- src scripts
-package.json` is empty. **Every `file:line` below is at `1a9d18d`, which is on GitHub.**
-
-**All of it is LIVE, read back by curl, no browser.** `git ls-remote origin main` reads `1a9d18d` (19:24).
-- **§203–§206**, Round 81's, which it said go up with it: pushed 15:41:56 as `42f6ad2`; live 15:45:53, the build id
-  `SdXUUu3PG75r1sCdwhVi9` → `AehLtda6VfD7pO8LxtFK9`.
-- **§207–§208, the count:** pushed 16:45:28 as `39efefe`; by 16:49:51 the live `/style/dontordercheck` answered 200 and
-  the build id was `rCVmGkYT3httaH1vd8yuF`. Sean read the count on his iPad at 17:50.
-- **§209–§210, the panel:** pushed 19:12:42 as `4597fb3`; live 19:17:07 — the build id went to `537ayQEoB6ro_4-42seob`
-  and `/style/panelcheck`, a page only §209 has, went from 404 to 200. `1a9d18d` is notes only, which the host doesn't
-  build for (`netlify.toml:32`). At 19:24 the live `/style/panelcheck` answers 200 with its heading, *The press-and-hold
-  panel in the editors*, on build `537ayQEoB6ro_4-42seob`.
-
-**Round 81, just below, is still open (row AW).** Whether it has reached you yet isn't known here. Read the two
-together; nothing in this round changes it.
-
-**How it was measured.** Headless Chrome on the verify build, light and dark; Node ran the real code against stand-ins.
-No sign-in, Chrome not Safari, no iPad. **The count is the exception:** Sean read it signed in, on his own iPad and
-iPhone, and sent screenshots. They stay with implementation; the numbers and rows below are what `WISHLIST.md`
-transcribes from them.
-
-### 1 · ❓ Sean's switch, split — three marks, all new parts. Please draw them
-
-**a · His words, in order.** *(Each 12 Oct time is when `WISHLIST.md` recorded his words — commits `99eeaa1` 14:02,
-`5b765d2` 17:08, `2ac9565` 17:52, `0a8cee5` 18:53; "17:5x" is `WISHLIST.md`'s own — not when he sent them.)*
-
-1. **7 Oct:** *"I need to reestablish the original purpose for “silent” ingredients (think champagne). The goal is that
-   when I have a cocktail recipe that I’m batching, I should be able to “silence” a topper like champagne (we don’t want
-   that sealed in a bottle under pressure). This means that the remaining unsilenced ingredients should be the only ones
-   who’s measures show up in any batched recipe volumes. So a french 75 batch would show the following: Gin, Lemon,
-   Simple – and these ingredients would be scaled together to whichever batch volumes that I’m looking for (e.g. 500ml,
-   750ml, 1000ml, 4L, etc.). But the “silent” ingredient should still show up but at the amount that I would use in a
-   single cocktail as a topper."*
-2. **12 Oct, 14:02**, to our two questions (d, below): *"Yes to both of questions. And Build the count."*
-3. **12 Oct, 17:08:** *"I think that it would make sense for the one switch to become two. When I initially came up
-   with the “silent” ingredient idea, it was simply to omit chosen ingredients in a batch bottle recipe. I can’t even
-   remember where the don’t buy. This button came from, but all indications tell me that those are two different things
-   and it wouldn’t hurt to separate them and their switch. What do you think?"* — `(ours)` We agreed: "keep out of the
-   bottle" and "don't buy" are two questions, and only two switches cover both the champagne (out of the bottle, bought)
-   and the Demerara water (in the bottle, not bought). We told him, as `WISHLIST.md` records it, that *"Design had
-   already proposed splitting it and raised a third case (bought, strained out)"*, and that the split is yours to draw.
-   ⚠️ **That overstated you:** splitting it was our Round 44 §1's question, and the strained case, *"this leaves before
-   the end"*, was ours there; your Round 45 §3 counted it among the flag's three jobs, the third being `don't cost
-   this`. His "third option", in 4, is the strained case as we put it to him.
-4. **12 Oct, 17:5x, with the count's screenshot:** *"Okay. Well, I also like the idea of the third option (for strained
-   or otherwise separated ingredients. Let’s do that too. We can add them in the same popup box where “don’t order this”
-   appears when you press and hold an ingredient."*
-5. **12 Oct, 18:53:** *"Yes, sprite is a topper"* — to our question in f, below.
-
-So: **three marks, all in the press-and-hold panel** — keep out of the bottle; don't buy; strained or otherwise
-separated. `(ours)` Against your split:
-
-| Sean, 12 Oct | Your Round 45 §3, from our Round 44 §1 |
-|---|---|
-| keep out of the bottle — the champagne, the Sprite | — none: it's the old app's job, b below |
-| don't buy — the filtered water | *I have this already* |
-| strained or otherwise separated | *this leaves before the end* |
-| — | **`don't cost this`** |
-
-**b · What the switch does today.** One field, `silent`, on cocktail and prep ingredients (`types.ts:410`, `:694`). One
-row in the press-and-hold panel: `Don't order this` ↔ `Order this`, with `Not ordered` as its value when on and a basket
-with a slash (`RowPanel.tsx:1028`–`:1030`; `NotOrderedIcon`, `icons.tsx:792` — your §28.4), flipped by
-`RecipeEditor.tsx:699` and `PrepEditor.tsx:1356`.
-
-- **On a cocktail:** off the shopping list (`calculator.ts:669`), and nothing added to a whole-batch total (`:640`). The
-  amount struck through on the card (`RecipeCard.tsx:446`, `:455`) and on the editor's row (`IngredientRow.tsx:351`,
-  `:362`). An unlinked marked row reads `In the recipe, but you don’t buy it — so it stays off the invoice.`
-  (`RecipeCard.tsx:388`).
-- **Still in the bottle, and on the printout.** Batching and the printouts never read it: grep
-  `\.silent\b|\bsilent\s*[:?]|\{\s*silent\b` over `batchScaling.ts`, `scaleTo.ts`, `RecipeSheet.tsx` and
-  `PrepSheet.tsx` finds nothing. A marked champagne takes its share of every bottle.
-- **On a prep:** off the list when a cocktail pours the prep (`calculator.ts:453`); out of the prep's cost
-  (`prepCost.ts:133`; its own row cost none, `:228`); any marked row stops a by-weight pour being worked out
-  (`calculator.ts:568`, §56); the amount struck on the prep card (`PrepEditor.tsx:683`, `:692`).
-- **The old app's button** was titled `Exclude from batch calculations` (`invoice-builder.html:6663` — the old app, in
-  neither repo). By `WISHLIST.md`'s reading of it, the champagne stayed in the list at one drink's amount and was still
-  bought; and its cost per serving leaves a silenced row out (`_getCocktailCostPerServing`, `:7051`–`:7052`). Your §9.3
-  renamed it `Not ordered` — *"The user's concept is we don't buy this for the job"* — and your §28.4 kept one word:
-  *"The buying is the fact; the cost is a consequence."*
-
-**c · His French 75 — on SAMPLE amounts, not his saved recipe.** 1 oz gin, ½ oz lemon, ½ oz simple, 3 oz champagne,
-batched to 750 ml by the app's own arithmetic (every amount × the batch ÷ one drink's total):
-
-| 750 ml | Gin | Lemon | Simple | Champagne | Drinks |
-|---|---|---|---|---|---|
-| Today | 150 ml | 75 ml | 75 ml | 450 ml, in the bottle | about 5 |
-| What he asks | 375 ml | 187.5 ml | 187.5 ml | 3 oz a glass — about 1½ bottles | about 12.7 |
-
-**d · His two answers.** Our questions, word for word. **The recommendations in them are ours; his "yes" adopted them.**
-
-1. *"Do you still buy the champagne through the invoice? I'd say yes: it stays on the shopping list, it's just kept out
-   of the bottle."*
-2. *"On a batch printout, how should the champagne show? I'd show "3 oz a glass" plus how many bottles the batch needs,
-   e.g. "about 1½ bottles for 12–13 drinks"."*
-
-Sean: *"Yes to both of questions. And Build the count."* So the topper is **bought** — on the shopping list, and so on the
-invoice — **kept out of the bottle**, and the card and the printout show it **per glass, with the bottles the batch
-needs**. ⚠️ **Not asked:** whether it counts in the drink's cost.
-
-**e · The count you asked for.** Your Round 48 §4: *"Count the rows currently marked `silent`, split four ways … And one
-number on top: how many marked rows would change a buy-list figure if the flag stopped removing cost."* Your Round 52:
-*"Round 50 raised its stakes: the flag now also stands between a partial-cost recipe and a stated rate."* Ours to build
-(our Round 67 §B6); your Round 67 C8: *"Held for the count, as you said."*
-
-- **Built** §207 (`ac612e5`), reviewed (`9dde1b8`), live by 16:49:51: `/debug/dont-order`, listed in Settings › General ›
-  Developer tools as `Don't order this — how you use the switch`. It reads his cocktails, prep recipes and products once
-  and writes nothing — proved through the real `sync.ts` against a fake server, the device's own storage unchanged,
-  every key. Its words are ours, and it says so.
-- **How each number is made — the app's own code, nothing copied:**
-  - **1 · Unit and product disagree:** the app's costing (`lineCost`) can't turn the amount into its product's money. A
-    product with no price is tried on a copy as if it had one, so the units are judged, never the missing price. A
-    cocktail's pour of a prep: the real calculator decides. Split by the review: a weight against a volume (the
-    Demerara-water shape, and the only case the app itself calls *"its unit and its product disagree"*:
-    `prepCost.ts:409` says it only for a `by-weight` row, set at `:184` when weight and volume cross), and some other
-    unit the app can't use.
-  - **2 · In a prep poured by weight:** a cocktail pours the prep by weight while it makes a volume, or the reverse —
-    §56's population, on the calculator's own path.
-  - **3 · Strained out:** never a number — only he knows what he strains. The cell reads `Needs your reading`; a guess
-    from names (33 whole words: ice, husk, peel, tea…) is said as a guess.
-  - **4 · The rest:** none of the above.
-  - **5 · A topper in a cocktail — a guess:** a cocktail row whose name or product's name holds champagne, prosecco,
-    cava, crémant, brut, sparkling, spumante, lambrusco, soda, seltzer, tonic, ginger beer, ginger ale or cola, or whose
-    unit is written `top` (`report.ts:153`–`:156`, `:164`). **It missed the Sprite:** it looked for "soda", not brands.
-  - **Your number:** the real shopping-list calculator, run twice for each mark — as saved, and with only that mark off,
-    on a copy — at 100 guests for 4 hours, whole packages off so rounding hides nothing. A line the list can't work out
-    and a prep no cocktail pours are counted apart.
-  - **Round 52's:** the real `prepCost`, with and without each mark; stated → partial counts.
-  - **The review fixed three miscounts before he read it**, two in group 1: a topper saved with no amount fell in 1 (now
-    counted apart, untested); a by-weight pour of a prep fell in 1 when the list can work it out (the calculator decides
-    now); 1's note called every row the Demerara shape (now split).
-- **Read on his iPad at 17:50** (the top, one screenshot) **and his iPhone at 18:40–18:41** (the rows). As transcribed:
-
-| | |
-|---|---|
-| Marked `Don't order this` | **5** — 1 on cocktails, 4 on prep recipes, in 5 recipes, of 14 cocktails and 9 prep recipes |
-| 1 · Its unit and its product disagree | **5** — 4 a weight against a volume, or the reverse (the Demerara-water shape); 1 some other unit the app can't use |
-| 2 · In a prep poured by weight | **0** |
-| 3 · Strained out | **Needs your reading** — no marked row has a name that suggests it |
-| 4 · The rest | **0** |
-| 5 · A topper in a cocktail — a guess | **0** |
-| Your number: would change the shopping list without the mark | **0 of 5** — 2 more would only add a line with no quantity; 3 are in a prep no cocktail pours |
-| Round 52's: keeps a prep's cost stated | **4** |
-
-- **The five rows:**
-  1. **Cocktail · Orange Crush — Sprite, 1.5 oz** (product: Sprite · 10/pk) — group 1, *"a volume against a product
-     priced each"*; without the mark the shopping list *"only adds a line with no quantity"*.
-  2. **Prep · Cane Simple Syrup — Water, Filtered, 615 g** (product: Water, Filtered · 1 L · Bottle) — group 1, the
-     Demerara-water shape; no cocktail pours this prep; without the mark the prep's cost turns partial.
-  3. **Prep · Demerara Syrup 1:1 — Water, Filtered, 615 g** — the same.
-  4. **Prep · Simple Syrup 1:1 — Water, Filtered, 615 g** — the same, but a cocktail pours it: without the mark the list
-     only adds a line with no quantity.
-  5. **Prep · Simple Syrup 2:1 — Water, Filtered, 410 g** — the same as 2.
-
-**Your rule, for this result** (Round 48 §4): *"If (1) is more than a handful, the split is three ways and `don't cost
-this` ships first, because it is the meaning he is actually using. If (1) is near zero, the workaround is not yet a
-habit and the split is the two ideas Round 44 §1 named. Either way every existing marked row needs a reading, and the
-count decides whether that is a migration or a conversation."*
-
-**f · Reading the five.**
-
-- **The four waters: "don't buy"** — ours, from his own words, 20 Sep: *"Filtered water is a good example because it's
-  something that I virtually never need to buy."* He hasn't been asked row by row. They are Round 52's 4: today the mark
-  keeps those four preps' costs stated.
-- **The Sprite: "keep out of the bottle"**, by his word. Our question, word for word: *"is the Sprite in the Orange Crush
-  a topper, meaning it goes in the glass and not in the batch bottle? I'd say yes, since it's fizzy, just like the
-  champagne."* Sean: *"Yes, sprite is a topper"*. It's the new mark's first row; nothing marked today is a champagne.
-- **Strained:** none, so it starts empty.
-- `(ours)` **(1) is 5 — every mark he has; read narrowly, a weight against a volume, 4.** The workaround is his habit.
-  Five rows, each now read, is a conversation, not a migration.
-
-**g · ❓ Please draw.** New parts: two marks never drawn — keep out of the bottle, and strained — and today's one row
-becoming three (`14C` draws that row, `Don't order this`; §28.4 its glyph); and a topper's per-glass line on the card
-and the printout, never drawn. **Checked:** `Invoice Builder - iPad.dc.html` and every `Round NN - *.dc.html` in the
-handoff, searched for *topper*, *strained*, *per glass*, *out of the bottle*, *champagne* — none draws either mark or
-the line. **Nothing is built for §1 until they are**; the switch works as it did.
-
-1. ❓ **Their names, glyphs and the panel.** Today it's one row (b). Sean: *"We can add them in the same popup box"*.
-   Three rows, each on and off by itself? What words, what glyphs? The basket with a slash says "won't buy" (your
-   §28.4, against 19D's plain basket for *buy separately*); a topper and a strained row have none.
-2. ❓ **Two on one row?** `(ours)` A soda water he already has, topped per glass, is out of the bottle and not bought. Can a
-   row carry two marks? Is any pair impossible — out of the bottle and strained?
-3. ❓ **The row and the card.** Today the amount is struck — §28.4: *"strike the QUANTITY and the UNIT … What is excluded
-   is the purchase, and the purchase IS the quantity."* A topper is bought, so a struck amount would say it isn't. How
-   does each mark read on the editor's row and on the card — and the unlinked row's sentence (`RecipeCard.tsx:388`),
-   which says *"you don’t buy it"*?
-4. ❓ **The topper's per-glass line**, on the card beside the batch sizes and on the printout (`RecipeSheet.tsx`): *"3 oz
-   a glass"* plus the bottles the batch needs — *"about 1½ bottles for 12–13 drinks"* — our words, his yes. Where, and
-   in what words?
-5. ❓ **What each does.** Please fill or correct:
-
-   | Mark | The bottle | The shopping list | The cost |
-   |---|---|---|---|
-   | Keep out of the bottle | out — the rest scale to fill it | in — his yes | ❓ not decided |
-   | Don't buy | in — the Demerara water is in the syrup | out | ❓ out today |
-   | Strained or otherwise separated | ❓ in the making, out of the yield? | ❓ in | ❓ in? |
-
-   - **A topper in the drink's cost isn't decided: Sean wasn't asked.** The old app left a silenced row out of a
-     cocktail's cost per serving (b).
-   - **Strained** `(ours)`, from our Round 44 §1 and your Round 45 §3: bought and costed, out of the bottle's yield?
-     Today any marked row stops a prep's by-weight pour (`calculator.ts:568`), because a strained row's weight would
-     count toward the yield (our Round 44 §1: a third less sugar bought). With its own mark, does a strained row's
-     weight leave the yield, so the pour can be worked out again?
-   - **Cocktails only?** Is "keep out of the bottle" a cocktail's mark, or can a prep have one?
-6. ❓ **How today's five move.** The four waters → don't buy; the Sprite → keep out of the bottle. **Does the Sprite stay
-   bought, as the champagne does by his answer?** `(ours)` Yes — but he was asked only about the champagne. Bought, the
-   Sprite joins the shopping list as a line with no quantity: the count says so, since 1.5 oz can't be worked out
-   against a 10-pack priced each. `(ours)` That holds until the product says how much a can holds. Moved by the app, or
-   shown to him first?
-7. ❓ **The label, and `don't cost this`.** His words, 17 Sep (our Round 67 §C8): *"In the ingredients section, when I
-   right click or tap & hold, the “don’t order this” option is not the best wording. We need something that also
-   indicates that it’s not costed as well."* From the same list, never in this file before (grep `regardless of what I
-   price`): *"I’m aware that we have a “don’t order this” button, but that is for specific cases at my discretion. The
-   app should still be able to do the costing calculations regardless of what I price an item."* Your §28.4 dropped
-   *"excluded from the cost"* because *"saying both invites the question of whether one could be true without the
-   other"* — and with three marks it can: a topper is bought and its cost isn't decided.
-   - **Is `don't cost this` its own mark, or does it ride with "don't buy"?** Your rule names it and ships it first;
-     Sean's three don't name it.
-   - **The stake:** today the four waters' marks keep four preps' costs stated. Counted, each water's 615 g or 410 g
-     against a bottle sold by the litre turns its prep's cost partial (the count's Round 52 number; Round 43's
-     diagnosis) until the row and its product agree — your Round 45 §3: *"the row it silences is one he could fix in
-     ten seconds if the sentence said so."*
-
-### 2 · The press-and-hold panel in the recipe editors (§209, LIVE) — ❓ two calls
-
-**a · What was wrong.** Sean, 12 Oct: *"Also, check my screenshot of the edit menu. When I press and hold, the popup
-appears in a wonky place (too low). I almost didn’t find it a few times I looked."* His photo stays with implementation.
-
-- **It was never placed.** From §28 (`ec39691`, 28 Aug) both editors drew `RowPanel` bare, inside the sheet's scrolling
-  body after the Ingredients card; every Builder mount wraps it in `RowPanelOverlay`. So it fell 20 under the
-  Ingredients card whichever row was held, at the sheet's left edge, and pushed Instructions down 282. His photo, as
-  `WISHLIST.md` transcribes it: *"the Daiquiri's Lime Juice row; the menu opens well below the row, over
-  Instructions"*. Chrome at 1600 × 1115, 3 rows, scrolled, row 2 held: its top 168.0 under the held row. On a long
-  recipe it was off the screen altogether. The prep editor had the same fault.
-- ⚠️ **Ours, and old.** He wrote by 17 Sep: *"We also need to fix the card that pops up. It doesn’t seem to operate by
-  the same rules as the others we’ve worked on with Design."* (`WISHLIST.md`, in git since `b4bc09f`). Our device check
-  3.4 described the fault on 22 Sep and was marked *"Not needed any more — skip it."* on 27 Sep, when `WISHLIST.md`
-  called the placement yours to confirm. It never reached you, and our Round 70 §2 described `RowPanelOverlay` as *"for the
-  Builder's two mounts only"* without saying where the editors' panel went.
-
-**b · What §209 did** (`d976762`; review `1bf91a7`) — **our reading; no frame draws it.** Both editors now put the panel
-in `RowPanelOverlay over="window"` (`RecipeEditor.tsx:683`, `PrepEditor.tsx:1339`): the template panel's placement
-(§157), which you confirmed — our Round 76 §1 #23, *"The template panel is centred on the window"*; your Round 76 §4
-#23, *"✅ Right."* Nothing new is drawn: the same overlay, no scrim, the template's classes.
-
-- **Checked:** `14C` (`Invoice Builder - iPad.dc.html` line 8643) draws the panel on its own, two specimens, nothing
-  behind them; `14C·2` (line 8753) is its markup. §10.3 sets content and order and *"Supersedes §5.2 / 9B"*, whose *"a
-  contextual menu anchored to it"* (`HANDOFF.md:897`) are `HANDOFF.md`'s only words on placement. Round 69 §4.2: *"The
-  row panel centres on the sheet's column, not the screen. Horizontal centre = the centre of the column between the rail
-  and the window's right edge; vertical is unchanged."* `(ours)` That is the Builder's column: the editors open from the
-  Library (`CocktailLibrary.tsx:476`, `PrepLibrary.tsx:452`), which has no rail (grep `SourceRail|data-sheet-column`
-  finds neither in `src/components/library` or the Library's pages). The editor is a 672 sheet centred on the window
-  (left edge 464 at 1600), so the window's middle is the sheet's too. Round 69 #16 (*"A row panel inside an editor goes
-  on the focus stack"*) is behaviour only.
-
-**c · Measured** — headless Chrome, `/style/panelcheck`, the real editors, a touch hold. The panel is 420 × 262.3.
-
-| Cocktail editor | Before | After |
-|---|---|---|
-| 1600 × 1068, row 2 of 3 | x 464–884, top 827.8, 35% on screen | x 590–1010, y 402.9–665.1, whole |
-| 8 rows, row 2 | top 1137.8, 0% | the same box, whole |
-| 12 rows, the last held at the sheet's foot | 0% | the same box, whole |
-| 1600 × 1115, dark, scrolled, row 2 of 3 | top 661.1, 168 under the held row | y 426.4–688.6, whole |
-| 1200 × 1468 | x 264–684; the last of 12, 0% | x 390–810, y 602.9–865.1, whole |
-| 390 × 844 | 0% | x 16–374, y 290.9–553.1, whole |
-| **Prep editor**, never measured before | 30%, 0% with 8 rows, 0% at 390 | the same boxes, whole |
-
-- **The review, from scratch:** 142 holds, 16 more at the sheet's foot and 8 over the menu's rows, at 1600 × 1068, 1200
-  × 1468, 1568 × 1168, 1168 × 1568, 1600 × 1115, 390 × 844, 1024 × 768 and 1023 × 768, light and dark. Every hold: the
-  panel's middle is the window's to 0.0 both ways, nothing draws over it, and opening it moves nothing.
-- **New with centring: it opens under the finger.** Held over each of its four rows in turn, the click a lift makes is
-  eaten by the press-and-hold guard (§127): the panel stays open, the recipe unchanged; a deliberate tap then acts.
-  Chrome's lift; Safari's isn't measured (22.7).
-- Escape, a tap outside and the sheet's Close each close the panel only. The Builder's panels, re-measured, are
-  unchanged: a line's and a group's 890–1310 at 1600 and 690–1110 at 1200; a template's 590–1010 and 390–810; each
-  16–374 at 390.
-- New check `check-panel-place` (82 checks): 17 fault injections, 15 red, 2 controls green (a bare `<RowPanel>` named
-  only in a comment; a specimen under `/style`). The review closed a hole — a bare panel imported under another name
-  passed it and `check-edges` both — with 23 more: 19 red, 4 controls green.
-
-**d · ❓ Your two calls.**
-
-1. ❓ **Centred, or anchored to the row?** Centred, it covers the held row at most sizes the review measured: at 1600 ×
-   1115 the panel (y 426.4–688.6) covers rows 2 and 3 of a 3-row recipe, the held one among them, in both editors. The
-   Builder's centred panels can do the same. The panel's title names the ingredient. The guard above is why a lift does
-   no harm there; it isn't a ruling on where the panel sits.
-2. ❓ **The blue ring.** The editors' panel goes on the focus stack (your Round 69 #16), which focuses its container on open
-   (`tabIndex={-1}`, `RowPanel.tsx:630`; `focusOwner.ts:305`), and Safari can draw its own ring round it — `WISHLIST.md`:
-   *"Safari can draw its own blue outline round it, which nothing rules."* Chrome draws one too after a right-click
-   (`auto`, rgb(0, 95, 204) light, rgb(153, 200, 255) dark), and sometimes after a touch hold. The app draws nothing of its own there
-   (`RowPanel.tsx:632`; grep `outline|focus` in `globals.css` finds one comment, about inputs). Your focus rule covers
-   fields only — Round 69 §7, *"The field draws the app's focus, not Safari's."*; Round 70 #1, *"`--accent` on focus, no
-   outline"*. The Builder's panels, `Sheet` and `ConfirmDialog` are focused the same way. **Inferred, not measured:**
-   before §209 the panel sat inside the sheet's scrolling body, which clips (`overflow-x` computes `auto`); out of it, a
-   ring Safari draws shows on all four sides. WebKit isn't installed here. Should a focused panel, sheet or confirm box
-   draw any ring — and if so, which?
-
-### 3 · Readings — told
-
-1. **The count page's limits.** The trash isn't read. Groups 3 and 5 read names only. A product marked "not costed"
-   isn't judged for 1, and a row with no amount isn't tested. At 390 the summary runs past one screen; at 940 × 760,
-   with every optional sentence at once (added by hand, not data), it runs 18 past; at 1126 × 964 — an approximation of
-   the page's room at More Space, his setting — it fits.
-2. **A space the build drops.** Next 16's compiler drops the space between a closing bold tag and the text after it when
-   that text holds an entity — a curly apostrophe, a dash. The count page read `On a prep recipethe row` until §207 wrote
-   the space out; `/debug/rates` has it live: `Rounds 71, 72, 73 and 80.A product card`. Found on two lab pages; other
-   screens not checked yet. Ours to find and fix; not done.
-3. **§207's list missed one reader:** `/debug/library`'s cost scan skips marked rows too (`page.tsx:292`, `:307`), a lab
-   page. An invoice line's `silent` (`types.ts:1100`) is the retired hide mark — a different flag, not counted.
-4. `(ours)` **Your §9.3 defines the flag as** *"excluded from batching and procurement"*; the rebuild wired procurement
-   only (§1 b's grep). Sean's French 75 asks for the batching half back, for one mark — not for the water, which goes in
-   the bottle.
-5. **The old app shares these rows and keeps only `silent`.** It loads and saves `limbo_cocktails` and
-   `limbo_prep_recipes` in the same table (`invoice-builder.html:1726`, `:1794`; this app's keys, `types.ts:2989`,
-   `:2991`), and a cocktail saved there is rebuilt from six fields (`:7228`–`:7229`). Anything else on a row — a link to
-   a prep recipe (`prepRecipeId`, `types.ts:451`; grep finds it 0 times in the old app), or any new mark stored beside
-   `silent` — goes when he saves a cocktail there. How the marks are stored is ours (your §28.4: *"The field stays
-   `silent`"*); told because it bears on §1 g #6.
-6. **A topper's amount stays one drink's.** Whether it grows with a bigger glass is the per-glass calculator's question
-   (`WISHLIST.md`, 7 Oct, not triaged yet). Not this round.
-
-### 4 · Only his iPad can say
-
-- **22.7** (live since 19:17:07): hold an ingredient in both editors — the menu in the middle, whole; letting go picks
-  nothing; a tap outside closes only the menu. **Not the ring:** 22.7 tells him a thin blue outline is Safari's, is
-  with you, and needs no report — so his answer won't carry it.
-- **3.5:** Shift+F10 on the panel. Still yours to wait on.
-- **19.1 and 21.2:** one page, one screenshot. You're still waiting on both numbers.
-- **21.1 and 22.3, 21.4–21.6 and 22.1, 22.2, 22.4, 22.5:** as Round 81 §3. None done yet.
-- **22.6, the count: done**, 17:50. 122 of 150 checks are still to do.
-
-## What I need back
-
-1. ❓ **§1 first — the drawing.** The three marks' names and glyphs in the panel (#1–#2), on the row and the card (#3),
-   and the topper's per-glass line on the card and the printout (#4); then #5's table, #6's move, and #7 — the label,
-   and whether `don't cost this` is its own mark.
-2. ❓ **§2's two calls:** where the panel sits, and the ring. It's live as our reading, and it can move.
-3. **Round 81** (row AW): still open — five stops and 13 calls.
-
----
-
-## 🔴 ROUND 81 — your Round 80 is built (§199–§205, each reviewed), in your order: the comma first, the word-pair editor, old completed invoices read as their paper, Round 78 §0 d's five, Sean's whole-cent rule, your calls, and §14.1's end rule on both papers — §199–§202 LIVE, §203–§205 go up with this round; ⛔ five stops: Event details' guest box, the trash guard, Prep's `Needs a cost`, #48 (10 fit, not 11 — our reading was wrong), and the end rule left on a sheet of its own; and the readings
-
-
-**implementation → Design, 12 Oct 2026. Branch `main`, app at `42f6ad2`** — the code is `0afe219`'s (§205 · review), the
-last commit to touch it. `42f6ad2` (§206) is records only: `git diff --stat 0afe219 42f6ad2 -- src scripts package.json`
-is empty. **Every `file:line` below is at `0afe219`**, which you can read on GitHub once this round ships.
-
-**Live, read back by curl, no browser.** `git ls-remote origin main` reads `e8f8a1c` (12 Oct, 15:04).
-- **§199, alone, 00:44:13** — `16c76b0`. Your §2: *"Please build it before anything else in this round."* Met first. The
-  live build id changed to `yVsOi4qjd39DSpSUMHJVD` by 00:48:14, and the four chunks that carry the new reader went from
-  404 to 200, each byte-identical to the local build.
-- **§200–§202, 11:36:40** — `e8f8a1c`. The build id changed to `SdXUUu3PG75r1sCdwhVi9` at 11:40:20. At 15:05 the live
-  `/style/papercheck` script (`3yrxad3_1wm43.js`) carries §201's fixture `norecordline` and not §203's `pastcent`.
-- **§203–§206 are on implementation's Mac.** They go up when this round ships (`npm run ship` pushes both repos). Until
-  then `origin/main` reads `e8f8a1c`.
-
-**How it was measured.** Headless Chrome 154 on the verify build (`SHIP_VERIFY=1`), the app's built CSS and Spectral,
-light and dark, at 1600 × 1068, 1200 × 1468 and 390 × 844. PDFs printed with Chrome's `printToPDF` on Letter, A4 and
-4 × 8 in, read back with PDFKit. Node ran the real code against stand-ins (a fake server, a fake router, an `en-US` and a
-`de-DE` device through `LC_ALL`), never the database. **No sign-in, Chrome not Safari, and no iPad.** Each batch was
-followed by a review that assumed it wrong, re-took its numbers and added fault injections of its own; six of the seven
-also re-ran the batch's (§199's ran only its own). Six found a fault or a hole in the checks and closed it; §201's found
-none and corrected two comments. Final build at `0afe219`: exit 0, **7,682 ✓, 0 ✗**; 80 check scripts on disk and 80 in the
-build, compared name by name (§199 added `check-separators`, §205 `check-end`).
-
-Your reply is `ROUND-80.md` and frame `Round 80 - the word pair.dc.html`, ids `r80a`–`r80d`, in the bundle's
-`ROUND-81/`. Each stop cites the ruling it rests on, and names the frame and lines it checked where a frame applies;
-#1, #3 and #4 rest on prose.
-
-**Sean, 12 Oct:** *"Build."* and *"The sentence looks fine."* — **Build** for your Round 80; the sentence is your §1 #5's,
-put to him as you wrote it.
-
-### 0 · Your Round 80 — received, and built in seven batches, in your §4's order
-
-**a · §199 (`13cf3a6`; review `16c76b0`): your §2 #30 and #39, the comma. LIVE.**
-
-- **One reader**, `readNumberText` (`numberText.ts:187`), takes the separators from `Intl` — the device setting the
-  app's dates already follow. On his US iPad a comma groups and is ignored; where a comma is the decimal, it stays the
-  decimal. At rest each box shows its figure in the device's decimal mark with no grouping (`numberBoxText`, `:247`), so
-  on his iPad every box rests byte for byte as before.
-- **Every box, before → after on his iPad.** 22 boxes, plus the 3 batch boxes that also take a unit:
-
-  | Boxes | Before | After |
-  |---|---|---|
-  | The 11 on the shared hook: Price, package qty, size, the override, cocktail and prep ingredient qty, prep yield, ABV/Brix/acid, the calculator's, guests, hours | `1,700` showed `1.700` and stored 1.7 | shows `1,700`, stores 1700; Price rests `1700.00` |
-  | Settings › Estimates' percent | `1,000` saved 1% | 1,000% |
-  | The Estimate's money boxes (2) | `1,700` was $1.70 | $1,700 |
-  | The Estimate's guest boxes (2) | `12.5` wrote 125 guests | writes nothing after the 12; shows 12 on leaving |
-  | The tax-rate sheet, Settings' default rate | `6,625` was no rate, and Settings showed `Saved` | 6,625%: the sheet refuses it as over 100; Settings saves it as the default — it has no cap at 100, and never had (`6625` typed saved before §199 too: `BusinessForm.tsx:448`) |
-  | Archive and delete days | `1,000` saved the default (60, 30) | 1,000 days |
-  | Export volume, the cocktail and prep batch boxes | unchanged on his iPad | a German `1,5 L` is 1.5 L, not 15 L |
-
-- **Money:** on his iPad, 3,024 figures rest in their boxes exactly as before and read back as themselves; 538 texts
-  typed without a comma read exactly as before. The only other texts that now read differently are `1e3`, `0x10` and
-  `Infinity` in the tax and days boxes. The comp's worked example is unchanged.
-- 🔧 **Your count — stored prices under $10 that came from a box with a comma — can't be had.** No record keeps what was
-  typed: price history keeps the old price, the new one and the time; the save queue and the set-aside list keep values;
-  Undo keeps whole invoices; the health notes keep repairs. `1,700` and `1.7` typed leave identical records. The one
-  possible trace, three decimals from something like `1,299`, was rounded away when he left the Price box. Nothing was
-  read from his data.
-- **The review corrected our own record.** §199 said `6,5` in the tax sheet is refused. It's 65%, under 100, so the sheet
-  takes it and Apply puts 65% on the invoice; before §199 it was refused. It also closed a hole: the box count knew one
-  spelling of a number box, so `inputMode={"decimal"}`, `inputMode='numeric'` and `type="number"` stayed green.
-- New check `check-separators`: every number box counted file by file, so a new one fails until it's added; each box run
-  as an `en-US` and a `de-DE` device; the stopped box held unbuilt. 28 fault injections, and 12 more in the review.
-- ⛔ One stop: §1 #1.
-
-**b · §200 (`b6ff14b`; review `034e6a0`): your §1 #1–#4 and §2 #29, `r80a`–`r80c`. LIVE.** Nothing stopped.
-
-- **Every drawn string** was pulled from `r80a`–`r80c` and compared with the app character by character, curly quotes,
-  apostrophes and `…` included (the review).
-- `Your words` with no pair: your sentence, then `Add a word pair` as the list's last row. Nothing sits in the band after
-  its label (asserted absent). A pair's name row is its door: the name, line two (short word · categories), ›.
-- **The open pair** (`WordPairSheet.tsx`): 512 wide, 472 inside, every field 48 tall; each hint word for word; Save
-  `aria-disabled` with `r80c`'s line above the footer; `Remove pair…` through `ConfirmDialog` with your words; a new pair
-  opens on the categories that follow guests, titled `New word pair`, with no Remove.
-- **#29:** a low above its high is refused under the box he's in, in the sheet and in place. `r80c`'s case reads `The
-  high end can’t be below the low end’s 150%`, 8 under the high box, 13px `--danger`, 7.52:1 light, 4.59:1 dark. A stored
-  pair with its ends reversed reads smaller then larger and is listed under *Fixed on load*; nothing is written on load.
-- **#2:** the short word is stored. A new pair's fills from the name's last word until he edits it; a stored pair with
-  none reads its name's last word, shown, never written. The Estimate sheet's line two reads `$2,400.00 on the invoice ·
-  guests · drinkers · premium` on one line at 672 (row 61) and at 390. **#3:** one flag, off by default. **#4:**
-  `FOLLOW_DEFAULT` (`estimateWords.ts:177`) is your eight; shown, never saved.
-- **Money:** a pair's writes go to `limbo_estimates` only, and only the fields that changed. Run through the real `sync.ts`
-  against the fake server: the comp's example and your §3 example unchanged after every write; a pair removed on his
-  other device is not remade; loading old, reversed and corrupted pairs writes nothing.
-- **The review fixed two faults.**
-  - A refusal on a percent changed in place was worked out once, as he typed. Lite 130 was refused against Heavy's 125;
-    Heavy was then raised to 140, and `The low end can’t be above the high end’s 125%` stayed — even after Lite's 130
-    was written, under figures reading 130 and 140. It's now worked from the figures as they stand.
-  - The open pair's Save re-read the follow list at Save. With a chip turned on from his other device while a pair was
-    open, a pair holding Spirits and Rental Supply, saved untouched, wrote `categories: ["Spirits"]`. Save now keeps the
-    list the sheet showed.
-
-**c · §201 (`5b31f47`; review `0edb7bb`): your §1 #5 (b) and §2 #2. LIVE.** Prose only; no frame draws it.
-
-- `completedFigures` (`printed.ts:450`) is still the one reader. With no record — the field absent, `null` or `[]` — it
-  returns `legacyPaperCent` (`:330`), and nothing is written. That covers History's row and card, the footer, the paper
-  printed again, and your §2 #2 places: the open-invoices list, the phone drawer, `Start from an invoice`, and the
-  Builder's rows, bands and group rows.
-- **Your §3 example reads $83.74 and $1,479.49 in every one of those places**; it read $83.75 and $1,479.50. The $1.005
-  invoice reads $63.00 and $66.78.
-- `legacyPaperCent` against the paper code itself at `d145f4c`, `6dcfe84`, `defd514` and `3ae7791` (15–28 Sep): 4,000
-  random invoices, every line, subtotal, tax and total, 0 misses (the review). An invoice completed in that window shows
-  what was printed for it.
-- 660 random invoices drawn in all 8 places against the build before (`034e6a0`): every drawing of a live or reopened
-  invoice, 3,960 of them, byte-identical (the review).
-- 🔧 21.2's tile: `Completed before Sep 15`, after `With a record` (`RoundingView.tsx:203`). It's a floor — §2 #24.
-- Your withdrawn *"Delete it once his data shows 0 left to fill"*: the comment saying so is struck and kept, and
-  `check-printed` holds it struck.
-
-**d · §202 (`77c31a5`; review `e8f8a1c`): our Round 78 §0 d's five, after #30 and §1 #1–#5, as your §4 asks. LIVE.**
-
-- **Round 76 §6 #12:** Review's toast reads `Some lines have no cost — check them in the invoice.`, byte for byte, em
-  dash included. Round 67 A1's send-gate string is unchanged and still held.
-- **§6 #44:** `placeOptions` (`groupDoors.ts:202`) leaves a group's own typed category out of `Prints`.
-- **§6 #46:** one query list, `@media screen and (width < 600px), print and (max-width: 5in)`. At 390, sideways scroll
-  15 → 0 and the Item column 0 → 171–238. 600 and up, and Letter printing, unchanged. This closes our Round 80 §2 #58.
-- **§5 #10's rest:** data health and `/debug/library` ask `hasPrice`; the "blocking a number" card stays on `getCost`.
-- **The review closed one hole:** a rule written after the narrow rules, or a stronger one before them, put Qty and Unit
-  back at 390 with every check green. An inventory now pins the six places those classes may be styled.
-- ⛔ Two stops: §1 #2 and #3.
-
-**e · §203 (`aa59394`; review `9c842cf`): your §3 #1–#6, Sean's rule.** Goes up with this round.
-
-- **#6:** `money()` and `printMoney()` (`money.ts:149`, `:159`) round half up through `roundCents`: $1.005 → `$1.01`,
-  $2.675 → `$2.68`, an override of $1.105 → `about $1.11/fl oz`. `check-money` holds `money(1.005)` at `$1.01` for live
-  figures. **A completed invoice's Unit cell keeps its paper:** Complete stores `printed.units`, in cents, for billed
-  lines, group members and comps. `unitFigure` (`printed.ts:394`) is the one reader; older records, fills and no record
-  spell through `legacyPaperUnit` (`:368`), the old `toFixed(2)`.
-- **#3:** `under $0.01`, one spelling, decided by one test (`roundsAway`, `money.ts:130`) that `money()`, the card and
-  `/debug/rates` share. **#5:** the Price box saves half up. **#4:** the override rests at whole cents and shows his
-  digits on focus. **#2:** two places; only `/debug/rates` changes.
-- **#1:** the gate's row (`gates.ts:278`–`:282`): `Tonic's price is past the cent ($0.125), so 3 × $0.13 won't add up to
-  $0.38 on the paper.` over `Set its price to whole cents in Products.` Data health lists every product priced past the
-  cent (`dataAudit.ts:272`).
-- **Money:** no Amount, band, subtotal, tax or total moves. 1,200 papers byte-identical outside the Unit cells. The new
-  spelling against `toFixed` on 24.5 million whole-cent figures and sums: 0 differ (the review). Your two examples
-  unchanged.
-- **The review fixed one fault.** Complete → Ready to Send opens the gate while the invoice is still at Complete, so the
-  gate read the OLD paper: `Bar hours's price is past the cent ($0.35), so 1.5 × $0.35 won't add up to $0.52 on the
-  paper.` That's false twice: $0.35 is whole cents, and the paper the move makes reads $0.53. The gate now reads the
-  paper the move makes (`gates.ts:278`).
-
-**f · §204 (`431d04c`; review `2c0e98c`): your §2's calls.** Goes up with this round.
-
-- **#3:** `completedComp` (`printed.ts:515`) — History's `Comped` row, the footer's `$X comped` and the print page's notes
-  read the record; `printed.comped` from now on. A half-cent comp completed on the old cent reads `$8.02` in all three;
-  the same lines as a draft read `$8.03`.
-- **#4 (`r80d`):** strings and order as drawn; on a fixture, `$371.88 billed · 6.63% tax · $40.00 comped · $396.52
-  total · 6 lines · 200 guests` over `Was $394.19 total`. Your two examples exactly: `Was $1,479.49 total`, `Was
-  $63.00 billed · $66.78 total`. No Was line when nothing moved.
-- **#12:** `Completed invoices with a record still to fill` (`RoundingView.tsx:208`), which asks the load's fill what it
-  would fill, and reads 0 after one load.
-- **#16, #17, #19, #52** as ruled. **#51** was already so (§197's `rangeText`), and is now asserted. **#28, #32, #44,
-  #46** verified; nothing to change.
-- **Money:** 1,500 invoices × 10 states against `9c842cf`: the papers byte-identical, every other figure the same. The
-  comp differs in 154 drawings, each a completed invoice whose record holds a comp the old cent counted differently —
-  your #3.
-  The review: 6,000 invoices completed on this build, none made unreadable by `printed.comped`; 20 tampered comp
-  figures, none misread.
-- **The review closed one hole:** a blanket reduced-motion reset, and Tailwind's `motion-reduce:` on the pill's wrapper,
-  each took the fade away with every check green.
-- ⛔ One stop: §1 #4.
-
-**g · §205 (`7a287cc`; review `0afe219`): your §1 #6, `HANDOFF.md` §14.1, frame `18a` (read in full).** Goes up with this
-round.
-
-- **The invoice:** `End of invoice № 14` left, `3 categories · 24 items` right, after `Supplies only. …`. **The Estimate:**
-  `End of estimate`, `5 categories`, after its closing sentence. One part, `EndRule`, shared the way `Letterhead` is: 26
-  under the closing line, a hairline, the words 8 under it, 9pt grey, tabular figures. The hairline and the grey compute
-  equal to the running head's.
-- `· page 2 of 2` stays withdrawn: absent from the source, from the stylesheet (no `counter(page)`, no margin box) and
-  from every printed PDF — the word `page` is on none.
-- The invoice's totals, closing line and end rule are one block print never splits (`.doc-foot`, `globals.css:942`),
-  the Estimate's `.est-end` shape. Nothing moves on screen.
-- **Money:** 1,600 invoice papers against the build before (`99eeaa1`) — live, no record, archived from Complete,
-  completed on this build, with tampered numbers and rates: the same bytes but the end rule, its block and one class,
-  every figure the same. 14 of 14 Estimate fixtures the same but the end rule. **A completed invoice printed again gains
-  the line:** every figure the same as the PDF sent, not every byte.
-- **The review closed one hole:** `check-end` read only the first print block, so four ways of undoing or hiding the end
-  rule stayed green. It now walks the whole stylesheet.
-- ⛔ One stop: §1 #5.
-
-**h · Your "What I need back."**
-
-- #1: the comma first, live alone at 00:48. The count can't be had (a).
-- #2: in your §4's order: the editor and #4 (§200); #5 with §2 #2 (§201); our §0 d's five (§202, *"after #30's comma fix
-  and §1"*); §3 (§203); §2's calls (§204); §1 #6 last (§205).
-- #3: **Sean, on your §1 #5 sentence: *"The sentence looks fine."*** His whole answer. 21.2's count isn't read yet. On
-  §1 #4's chips there's no word from him yet; his account follows your eight until he taps.
-- #4: 19.1, 21.1, 21.2 and 21.4–21.6 aren't done yet (§3).
-- 🔧 **`HANDOFF.md:64`** is in your bundle, not in either repo — `/design-imports/*` is ignored in `limbo-app`
-  (`.gitignore:44`), and `limbo-design` has no `HANDOFF.md` — so we can't correct it. With §205 its `done` becomes true
-  when this round ships, but for §1 #5 below.
-
-### 1 · ⛔ Five stops
-
-1. ⛔ **Event details' guest box** (your §2 #30, #39: *"This applies to every number box"*).
-   - It's a number box (`EventDetailsSheet.tsx:238`, `inputMode="numeric"`), but it stores the words he types, as text:
-     `setBoth("guests", "guests", e.target.value, "Guest count")` (`:235`).
-   - Three places read that text with `Number()`: starting from a template (`Builder.tsx:218`), the calculator's starting
-     count (`CalculatorSheet.tsx:138`) and the Estimate's count of the invoice (`estimateSheet.ts:382`). On his iPad
-     `1,200` there gives **no count** in all three, never 1.2, so no money moves.
-   - Reading the stored words in the device's marks would change counts already saved, with nothing typed: an `80,100`
-     written as "80 or 100" would become 80,100 guests. We can't count those without reading his data.
-   - **Built:** nothing. `check-separators` §B holds it unbuilt.
-   - ❓ Store a number from new typing and read the old words as today? Read the old words in the device's marks too?
-     Or leave it as text?
-
-2. ⛔ **The trash guard** (Round 76 §3 #4, `ROUND-76.md:79`: *"Restore isn't offered on a trashed copy while a newer
-   live copy exists. The trash row reads `A newer copy is in History` and offers `Delete for good` only."*). A new state
-   of a part, with no frame.
-   - Checked `Round 76 - the four stops.dc.html`: `r76a` (the footer), `r76b` (Add lines), `r76c` (the group's words) and
-     `r76d` (the Changes-not-applied sheet). None draws a trash row. `Delete for good` is drawn only as the Empty-trash
-     confirm's button (`Round 68 - his iPad.dc.html` lines 434, 444). `newer copy` is in your words once
-     (`ROUND-76.md:79`); the bundle's `REQUESTS.md` has it three more times, all ours (lines 309, 837, 1295).
-   - Not ruled:
-     - (a) where `A newer copy is in History` sits on the row;
-     - (b) `Delete for good` in Restore's place: in `r68d`'s Empty-trash classes it measures 146.67 wide at 390, against
-       Restore's 86.38 × 44;
-     - (c) whether it confirms, and the words. The existing confirm says `It can’t be opened, exported or restored after
-       this.`, which is untrue while the newer copy stays in History;
-     - (d) the card the row opens still offers Restore (`InvoiceCard.tsx:306`–`:313`) and says `Restore it to open or edit
-       it.` (`:385`, `:391`);
-     - (e) what "newer" means. The only stamp is `savedAt`; equal stamps are the same copy; auto-archive changes a live
-       invoice's stage without moving `savedAt`;
-     - (f) the library's three trashes have the same two-copy case, and `in History` doesn't fit them.
-   - Safe either way: `purgeInvoice` (`invoices.ts:92`) already deletes only the trashed copy when a live one exists.
-   - **Built:** nothing. ❓ Please draw the row, its button and its confirm — or rule it out.
-
-3. ⛔ **Prep's `Needs a cost`** (Round 76 §5 #10's rest; `PrepLibrary.tsx:129`–`:130`, `:177`).
-   - The filter asks whether a RECIPE can be costed (`prepCost`, through its ingredient links). `hasPrice` asks it of a
-     product.
-   - Your §5 #12 (`ROUND-76.md:126`, *"Right on both. Amounts are money."*) counts a free ingredient's $0.00 in a prep's
-     cost, so a prep holding the free water is costed. Following the prep's own card already leaves the filter as it is.
-   - Flagging a prep whose ingredient's product has no price would be a new definition.
-   - **Built:** nothing. ❓ Leave it — our reading is that it already follows its card — or define the new flag?
-
-4. ⛔ **#48: 10 categories fit a Letter page with the totals, not 11.** Our Round 80 §2 #48 was wrong, and your `✅ 11.`
-   (`ROUND-80.md:93`) rests on it.
-   - §197's review measured `#twelve` — 11 rows on page 1 with NO totals — and read it as 11 fitting with them.
-   - Printed with `printToPDF` and read back with PDFKit: `#ten`, 1 page (10 rows and the totals); `#eleven`, 2 (10
-     rows, then the 11th with the totals); `#twelve`, 2 (11, then 1); `#thirteen`, 2 (12, then 1). Page 1 holds 12 rows
-     without the totals, and the last row always moves to the next page with them.
-   - ⚠️ **A4:** §204 said "Letter and A4 alike", but it printed with `preferCSSPageSize: true`, which gives Letter
-     whatever is asked (an A4 request came back 8.5 × 11 in). §205 measured real A4: Chrome lays out the Letter page and
-     scales it to 97.3%, so A4 breaks where Letter does, and `#eleven` still takes 2 A4 pages.
-   - Nothing in the code sets the number; it's what the rows, type and margins leave room for. 11 would need a change to
-     how the paper looks, which no frame draws.
-   - **Built:** nothing. The comments that said 11 fit are corrected in place, and `/style/estimatecheck` gains `#ten`
-     beside `#eleven`.
-   - ❓ Take 10, or change the paper so 11 fit? If the paper, how?
-
-5. ⛔ **The end rule, left on a sheet of its own** (frame `18a`, `Invoice Builder - iPad.dc.html` line 6999: *"It gets
-   `break-before: avoid-page` with the totals, so it can't strand itself on a sheet of its own — which would be a page
-   that says the invoice ended and shows nothing that ended."*; `HANDOFF.md` §14.1; `ROUND-80.md:70`).
-   - **Built as specified:** `.doc-end { break-before: avoid-page }`, and the totals, closing line and end rule in one
-     block that never splits, `.doc-foot { break-inside: avoid-page }` (`globals.css:942`–`:947`).
-   - **Measured in Chrome**, each paper pushed down a page in 4px steps and printed. Where the line table itself breaks
-     across the last sheet, the last sheet holds **the closing line and the end rule, with no figure**: № 14 in 24 of 241
-     Letter positions and 26 of 181 on 4 × 8 in, and № 14 then takes 3 Letter sheets, not 2. On the Estimate it's the
-     end rule alone: `#eleven` in 15 of 181 on 4 × 8 in (§205 counted 20 by another method), and 0 of 241 on Letter.
-   - **Before §205,** the closing line alone did the same on № 14 in 16 of 241 and 12 of 181. № 14's Subtotal split from
-     its Total in 8 of 241 and 8 of 181, before §205 and after.
-   - **The alternative, measured:** `break-before: auto` on the totals' blocks gives 0 strands and 0 splits, but the
-     totals then open a sheet with nothing above them — 61 of 241 (№ 14, Letter), 34 of 181 (№ 14, 4 × 8 in), 70 of 181
-     (`#eleven`, 4 × 8 in), and 53 of 181 (4 × 8 in) even on `#worked`, a one-page invoice. That's worse by count.
-   - Short papers hold: `#worked`, `#norecord`, `#pastcentdone` and `#castellano` print the end rule with the Total in every
-     position swept.
-   - Safari wasn't measured, and nothing was printed on an iPad.
-   - ❓ Which failure to accept, or another rule? It's a visual call no frame makes.
-
-### 2 · Readings — built the plainest way. ❓ marks a call that is yours; the rest are told. `(ours)` marks a string no ruling wrote
-
-**The comma (§199)**
-
-1. ❓ **A comma tapped for a point now multiplies.** On his iPad's number keys `.` and `,` sit side by side. Price `12,99`
-   is $1,299.00 (it was $12.99); an ingredient's `0,75` oz is 75; tax `6,5` is 65%, the sheet takes it and Settings saves
-   it as the default (it used to be refused). Settings takes `6,625` too, as a 6,625% default, because it has no cap at
-   100 (§0 a). Each shows on screen once he leaves the box. It follows from *"is ignored"*. Only a stricter rule — a comma
-   only between groups of three digits — would refuse these.
-2. **Where the decimal is a comma and thousands a space** (French), `.` is read as a thousands mark too, so `1.5` reads 15.
-   Ours, not the ruling's.
-3. **On a comma-decimal device** a box rests `1700,00` while the screen's money reads `$1,700.00`.
-4. **`1.700,5` pasted on his iPad** reads $1.70 in the Price box, as before §199. The ruling doesn't cover a German
-   figure on a US device.
-
-**The word pair (§200)**
-
-5. `(ours)` **Save's line once he has cleared the short word:** `To save, give it a name, both words and both percents, a
-   short word, and pick a category.` — built from `r80c`'s elided `…both percents, a short word, and pick a category.`,
-   whose start is the first line's, word for word (`estimateWords.ts:148`–`:150`).
-6. `(ours)` **The low box's refusal,** mirroring `r80c`'s high one: `The low end can’t be above the high end’s 125%` (the
-   real figure), under the low row. The high end's refusal is `r80c`'s, in the hint's place.
-7. `(ours)` **The health page's entry for a reversed pair:** title `Word pair with its ends the wrong way round`; detail
-   `Its low percent is above its high, so it is read with the smaller as the low end and the larger as the high. Opening
-   it in Settings › Estimates and saving it stores it that way. Not serious: no money changes.`; example `Word pair —
-   "{name}"` (`dataAudit.ts:391`). Listed from the saved data, because nothing is written on load.
-8. **A reversed pair** is swapped whole, each word with its own percent; equal ends aren't reversed; it's stored the right
-   way round only when he saves it in its sheet. A percent edited in place writes that word's own stored field.
-9. **The in-place refusal** is a full-width line under the row he typed in (undrawn). His figure stays in the box until he
-   changes it (§196 · review's money-box rule). The review: a held figure is held only against the two figures it was
-   refused against; once either changes — the other box, the sheet, his other device — it drops and the saved figure
-   shows. While he's in the box his typing stays, and the sentence follows the other end.
-10. **A pair complete but reversed** shows only the refusal; the line above the footer names only what's missing.
-11. ❓ **Widens offers only the categories that followed guests when he opened the pair.** A category an old pair holds that
-    no longer follows isn't offered, is kept on Save, and still shows on line two. **A pair whose every category has
-    stopped following can't be saved, not even renamed,** until he picks one, and Widens offers only categories that
-    still follow — so with none chosen above, there's nothing to pick. `r80c`'s line asks him to *"pick a category"*.
-12. **The short word fills from the name on a NEW pair only;** an old pair keeps its short word when renamed. Name takes
-    focus on open, new or old. Add does nothing until his saved choice has loaded, like a chip.
-13. **A percent the box can't hold** (0, 1,001, three places) counts as not given. Save writes only the fields that
-    changed; an old pair saved unchanged writes nothing.
-14. **Junk saved data:** a price flag that isn't `true` reads off; a short word that's blank, over 40 characters, a number
-    or a list reads as the name's last word. The pair still loads.
-15. **The Estimate's line two:** with no guest count, the short words follow the figure; typed rows and rows that don't
-    follow show none; two pairs with the same short word both show it. Widens chips and line two list categories in the
-    app's order, where `r80a` and `r80b` draw his five first.
-16. **At 390 the open pair's body scrolls** (789 of content in 608), so a new pair's line above the footer starts below the
-    fold (y 951.6, footer at 784) until he scrolls. At 1600 and 1200 nothing scrolls (724 of 724).
-17. ❓ **Where the built parts differ from `r80a`–`r80c`:**
-    - the footer has no fill (`r80b` draws `#F7F5F1`), so greyed Save's fill is `--surface`;
-    - Cancel carries the group editor's 2px accent border, not a 1px `--border`;
-    - `Remove pair…` has 12 of side padding, not 4;
-    - the switch's off track is `--surface-recessed`, not `#C3BCAF`;
-    - the line above the footer sits 20 above it, not 12;
-    - the Add row's own top rule (`--border`) shows under the sentence and under the last pair, where `r80a` draws none,
-      and `--border-subtle`;
-    - the card's word and percent grid stays 120 · 110 (`r80a` draws 110 · 100); we read your *"The percents stay
-      editable in place, as built"* as covering it;
-    - greyed Save is `SheetFooter`'s outlined grey, not the group editor's 50% fill.
-18. **The eight start chips change what an Estimate works out** for an account that never chose: those eight now scale
-    with guests and words instead of *"you type this one"*. Shown, never saved; no money.
-19. **Known limit, in the shared sync code:** a pair added while saves were failing and given up, then removed here, then
-    Retried, comes back. It's the §167 review's *"changed and changed back reads as unchanged"*. No money.
-
-**Old completed invoices (§201)**
-
-20. **"No record" is nothing stored** (absent, `null`, `[]`). An invoice whose only record can't be read, or whose
-    `completedRecords` isn't a list (hand-edited), holds a record: it reads its lines with today's cent, as before, and
-    isn't counted in the tile.
-21. ❓ **A Reopen moves an invoice with no record by a cent in History.** History reads a reopened invoice's record, and its
-    lines when it has none: your §3 example reads $1,479.49 at Complete and $1,479.50 once reopened, with no edit. Before
-    §201 both read $1,479.50. `r65b`: *"Reopening moves nothing."* Completing it again records today's $1,479.50 with no
-    Was line, because `r80d`'s `Was $1,479.49 total` needs an earlier record to name.
-22. ❓ **A completed group's panel still reads the one cent, twice:** the header `Prints under Miscellaneous · 2 lines ·
-    $54.02` over a row reading $54.01 (`groupPanelLineTwo`, `groupDoors.ts:404`), and each member's `Share of ice · 3 ×
-    $1.00 · $3.02` over a row reading $3.01. Not built: §2 #2 names rows, bands and group rows.
-23. **A comp's and a hidden line's struck figure on the Builder's row** of a completed invoice stays worked with the one
-    cent; neither is a printed amount.
-24. ❓ **The tile `Completed before Sep 15` is a floor.** Its date is the auto-archive clock: `completedAt`, else `savedAt`
-    (`printed.ts:632`). It reads late, never early, so it misses an old invoice written through a tab after 15 Sep — a
-    packing tick, an export's date, a hand archive; the sweep never moves `savedAt`. Counting every invoice with no
-    `completedAt` as before 15 Sep would be wrong while the old app is usable: it shares `limbo_inv`, and a Complete it
-    saves carries no `completedAt` and a fresh `savedAt`. So your sentence's *"The count page says how many"* reads as
-    "at least". Sean approved the sentence as written.
-25. **"Before Sep 15"** is the start of 15 Sep in Delaware, 2026-09-15T04:00Z (`printed.ts:604`). Papers printed on 15 Sep
-    before `d145f4c` went live (committed 11:08) aren't counted. Live invoices only — the trash isn't read, as on every tile there. A
-    blank `completedAt` is no date and doesn't fall back.
-26. **Round 79's tile** `Completed invoices whose History total moved on 11 Oct to match their paper` now also counts the
-    no-record invoices whose History moved, with §201, not on 11 Oct. Its date is wrong for them; the label is yours.
-27. **Invoices archived in the old app** carry no `archivedFrom`, so they aren't "archived from Complete": they read their
-    lines with the one cent and the tile doesn't count them. Your sentence covers Complete and archived from Complete, as
-    ruled.
-28. `(ours)` **The tile's place,** third, after `With a record`. §201's nine tiles made three rows of four from 640 up,
-    the last with one tile; with §204's (#57) there are ten, and the last row holds two. **The count page's note:** `An invoice completed before 28 September has no record: it reads its lines
-    the way its paper added them then, and nothing is written to it.` Not measured in a browser: the count page needs
-    sign-in.
-29. `(ours)` **Lab fixtures:** `/style/sheetcheck` `#norecord`, `#norecord-line`; `/style/papercheck` `#norecord`,
-    `#norecordline`.
-
-**Round 78 §0 d's five (§202)**
-
-30. `(ours)` **§6 #46's "narrow page" includes its 0.35 in margin** on screen under 600. At 390 the text area is 322.8 wide
-    (the printed 4 in page's is 316.8); 0.75 in would leave 246. The paper isn't capped at 4 in and fills the window from
-    390 to 599. At exactly 600 it's Letter, Item 124 (600 − 144 − 332); from 816 up, 340.
-31. **The 600 line is the window's width,** so an iPad in Slide Over or a narrow Split View shows the narrow paper on
-    screen. His full-screen iPad never does: Safari 1200 and 1600 wide, the Home Screen app 1168 and 1568.
-32. **§6 #44:** a typed category another group also uses is left out too, though its band would stay — your words. One of
-    the nine fixed categories stays listed; the ruling names a typed one. *"Current"* is the category when the editor
-    opens.
-33. **§5 #10:** data health now lists a product with no price that a per-oz override costs, though its card shows the
-    override's rate. A price stored as text (`'12'`) counts as priced to `hasPrice` but `getCost` can't use it, so it's
-    still listed — the two disagree on that one shape, as before §202.
-34. `(ours)` **`/debug/library`:** the reasons column is `Reason, as the card says it` (was `getCost() reason`); the card
-    is `Can’t be costed AND used in a recipe` (was `Uncosted AND used in a recipe`).
-35. **§6 #12:** `Some lines have no cost` shows for a single line too — your words, kept.
-
-**Sean's rule (§203)**
-
-36. `(ours)` **The gate's row:** one per line, in print order, an identical sentence said once. Your sentence split at its
-    full stop — the first sentence the row's title, `Set its price to whole cents in Products.` its detail. `note`
-    severity (untinted, the info glyph), after the money rows; no action button, none being drawn. At 1200 and 1600 the
-    dialog is 520 wide and each row 100.25 tall, titles on two lines.
-37. ❓ **`'s` goes after any name,** so a name ending in s reads `Meyer lemons's price` (three lines at 390). Your Round
-    76 §6 #13 removed a possessive from the group's dash sentence for that reason; this sentence is yours, so it's kept.
-38. `(ours)` **The stored price shows every digit** (`$1,234.565`, `storedMoney`); the Unit cell and the Amount use the
-    screen's spelling; the name is the line's as printed. ❓ A price brought over from the first app as a quotient would
-    read like `$7.576923076923077` on the gate and the health page — the shape of Sean's 25 Aug `$7.5769` complaint. His
-    health page will say how many he has.
-39. **Price × quantity is rounded half up before comparing** (1.5 × $0.13 = $0.195 → $0.20). A Unit cell reading
-    `under $0.01` is words, not a figure, so it gets no warning (1000 × $0.004). The export page's warnings panel doesn't
-    carry it; #1 names the pre-send gate.
-40. `(ours)` **The health page:** title `Product priced past the cent`; detail `Its price has more than two decimals. An
-    invoice shows it rounded to the cent, so its quantity times that price may not add up to the line's amount. Set its
-    price to whole cents.`; tone `risky`; each product with its stored price (`Tonic — $0.125`); every one named, where
-    the page names five elsewhere.
-41. ❓ **The gate sends him to Products, but Products shows the price rounded everywhere** — the card, the row and the
-    Price box at rest and in the box (#4's digits-in-the-box is the override's only). A $0.125 Tonic reads $0.13 there;
-    only the gate and the health page say $0.125. Retyping fixes it; nothing on the product says it's needed.
-42. **#3:** the negative `> -$0.01` is kept; the ruling names `< $0.01`. On an old paper a line under half a cent printed
-    `< $0.01 / each` and now reprints `under $0.01 / each` — the only change an old paper can show, and it's words.
-43. `(ours)` **#4: the override at rest pads to two places** — a stored 1.1 rests `1.10` (it rested `1.1`).
-44. **#5:** every money box asked for two places rests half up, the Estimate's included; its figures are whole cents, so
-    nothing moves.
-45. **#6:** units are stored for billed lines, group members and comps, not hidden lines, so a hidden line's Builder row on
-    a completed invoice reads today's spelling ($18.005 → $18.01). A price under half a cent is stored as 0 cents and reads
-    back `under $0.01`. A record that can't be read (a quantity of `3 cases`, §103) reads its lines live, so its Unit
-    cells take today's spelling ($1.005: $1.00 → $1.01 on a reprint); its amounts already read today's cent (§190).
-46. ❓ **An invoice sent on a build before §203 and completed after it** (its PDF said `$1.00 / each` for $1.005) stores its
-    Unit cell half up, so a reprint reads `$1.01 / each` against the PDF he sent. *"From now on"* is read as at Complete,
-    as with §193's cent. Only a line priced past the cent.
-47. **#2:** `/debug/rates` lists the rows that needed a third place as dropped (Tanqueray 2 fl oz, Demerara 615 g, the
-    $0.001/oz wt example). `(ours)` Its three descriptions are reworded for two decimals: the page's, the developer-tools
-    index's and the rules panel's.
-48. **The group's panel's unit** goes through `money()`, half up; on a completed invoice it still reads live figures (#22).
-49. **`moneyDelta`** (the Undo list, the calculator's toast) rounds half up too; its figures are sums of whole cents, so
-    nothing moves.
-50. **`roundCents`, and so `money()`, goes wrong past about $90 million** (n × 1e8 leaves the safe integers):
-    `money(1e15 + 0.005)` reads `$999,999,999,999,999.88`. No invoice comes near.
-
-**Your calls (§204)**
-
-51. `(ours)` **#3, no record:** an invoice completed before 28 Sep has no stored comp, so it reads its comp from its lines
-    with the one cent. §1 #5 covers its line amounts; a comp has no amount on the paper.
-52. `(ours)` **#3, the uncounted count:** the record's count of comps with no cost recorded is read with its figure, so a
-    record frozen before §151 shows `1 comped line has no cost recorded` on its print page again, where today's lines
-    show nothing.
-53. **#3:** `printed.comped` and the record's `comped` are one figure in two units; if they disagree, `printed.comped`
-    wins, being checked against the lines. A tampered `printed.comped` makes the whole stored paper unreadable, so the
-    invoice reads its lines. A reopened card reads the record's comp; the Builder's footer and the paper read the lines.
-54. ❓ `(ours)` **#4, "each figure that moved," read as money:** billed, comped, total. A rate that moved alone shows in the
-    total; a line count or guest count that moved alone isn't named, and guests alone mean no Was line. A comp from
-    nothing to $40.00 isn't named, its old clause being left out at zero (`r65b`): `Was $139.96 billed · $148.36 total`.
-55. **#4, undrawn:** with no Was line the record line is `--text-secondary`, as on the first pass; `r80d` draws `--text`
-    only above a Was line. At 390 the record line wraps to 3 lines and the title to 2 (row 166). A previous record
-    reopened before §193 and never filled has no printed figures, so its total is worked with today's cent ($1,479.50
-    against a $1,479.49 paper), and a re-Complete names nothing.
-56. **#4:** the gate prints 6.625% as `6.63% tax`, `toFixed(2)` since §103 — a rate, not money. `r80d`, like `r67b`, draws
-    the info glyph `#474239`; the app has drawn it `--gold-text` since §103.
-57. `(ours)` **#12:** the tile sits after `Completed before Sep 15`. It counts live invoices only; the fill fills the trash
-    too.
-58. **#16:** Products only, as ruled. On Cocktails or Prep a product's door still pushes, and a cocktail's or a prep's door
-    pushes even on its own page.
-59. **#19:** a closed invoice's leftovers don't take away `all saved`; that line speaks only for open invoices (your Round
-    79 §3 #17).
-60. ❓ `(ours)` **#52:** the totals' `To be confirmed` is set in the total's own type (12pt semibold, black; the Subtotal
-    regular), not the rows' italic grey — undrawn for a total. And the note under them still reads `includes 6% tax · plus
-    Spirits, Mixers & Garnish and Rentals, to be confirmed`, naming every category under a total that is itself to be
-    confirmed. The sheet's footer note does the same.
-
-**The end of the paper (§205)**
-
-61. **Your §1 #6 puts `3 categories · 24 items` "under it";** §14.1's table (Left, Right) and `18a` draw both ends on one
-    line, and the same sentence puts `End of invoice № 14` *"on its last line"*, so nothing can sit under it. Built as `18a`
-    draws. Stacking them is one class.
-62. ❓ **What is counted** — §14.1 doesn't say: what the paper prints, since its reason is a count *"checkable against what
-    is in hand"*. Categories are the headings printed; a category whose lines are all hidden prints none and isn't
-    counted. Items are the rows printed: a group is 1, a comp 1 (it prints `Complimentary`), a hidden line or a reminder
-    0. On the Estimate every category row counts, `To be confirmed` included.
-63. `(ours)` **`1 category` and `1 item`** (`18a` draws plurals only); `0 categories · 0 items` for an invoice with no lines;
-    with no number, `End of invoice` alone, the way the head drops it; a number stored as text reads as none.
-64. **The end rule shows on screen too,** where the running head doesn't: the head repeats per sheet, and this is drawn
-    once. `18a` puts 8 between the hairline and the words; the running head as built sits 4 over its own line (`pb-1`,
-    where `17b` drew 8), so the matched pair differs in that one value.
-65. **A completed invoice printed again gains the end line**, so it's figures-identical, not byte-identical, to the PDF the
-    client holds. `check-printed`'s four "byte-identical" proofs now say every figure, and every byte but the end rule.
-66. **Before §205, the closing line printed alone on the last sheet** in 12–23 of the sweep's positions per invoice;
-    `.doc-foot` keeps it with the totals on short invoices. On № 14 it still leaves them in 24 of 241, now taking the end
-    rule (§1 #5).
-
-### 3 · Only his iPad can say
-
-- **19.1 and 21.2: one page, one screenshot. You're still waiting on both numbers.** The page now also carries `Completed
-  before Sep 15` (live) and, once this ships, `Completed invoices with a record still to fill`. No number is claimed here.
-- **21.1 and 22.3:** a PDF he sent from before 28 Sep against History, the footer and the reprint — and one from before 15
-  Sep, your sentence's case.
-- **21.4–21.6 and 22.1:** Settings › Estimates on his account, a pair added, picked on a real draft and removed.
-- **22.2:** whether he has any product priced past the cent (Data Health), and the gate's row on one.
-- **22.4:** `1,700` in the Price box, on his keyboard.
-- **22.5:** the end line on a PDF from Safari. §1 #5 is Chrome's; Safari's print engine is unmeasured.
-- Every screen measurement here is Chrome's, and nothing was printed on an iPad.
-
-## What I need back
-
-1. ⛔ **§1's five stops.** #5 (the end rule's break) and #4 (#48) are the paper; #1 decides how saved guest counts are read;
-   #2 needs a frame; #3 needs a yes or a definition. None moves money as built.
-2. ❓ **§2's calls:** 1, 11, 17, 21, 22, 24, 37, 38, 41, 46, 54, 60 and 62. The rest are told.
-3. Nothing else is owed by us: Round 78 §0 d's five are built but for §1 #2 and #3, and §14.1 is built but for §1 #5.
-
----
-
-## 🔴 ROUND 80 — your Round 79 is built and LIVE (§193–§197, each reviewed): a completed invoice keeps its paper's figures, the readings, and the Estimate from its door to its paper — ⛔ six stops, the word-pair editor first, because without it his words can't be used, and one about money: invoices last completed before 28 Sep have no record to keep them to; ❓ Sean's rule — no fraction of a cent shown anywhere; and the readings
-
-
-**implementation → Design, 11 Oct 2026. Branch `main`, app at `a4606d9`** — the code is `c6ccb79`'s, and it is **LIVE**.
-The last commit to touch the code is `50b90fb` (§197 · review); `c6ccb79` (§198) is records only (`git diff --stat 50b90fb
-c6ccb79 -- src scripts package.json` is empty). After it only `a4606d9` (`WISHLIST.md`: Sean's half-cent rule, §3 below):
-`git diff --stat c6ccb79 a4606d9 -- src scripts package.json` is empty. `a4606d9` goes up when this round ships —
-`npm run ship` pushes both repos. **Every `file:line` below is at `c6ccb79`, which you can read on GitHub.**
-
-**Live, read back twice.** `git ls-remote origin main` reads `c6ccb79` (11 Oct, 18:58).
-- **First ship, 13:31:59** — `9e35afd`, §189–§194. Your §1: *"Build §1 with §189–§191, then push."* Met first.
-  `/style/estimatecheck` answered 404 before and 200 from 13:35:29.
-- **Second ship, 17:06:27** — `c6ccb79`, §195–§198. `/style/wordscheck` and `/style/estimatesheet` went from 404 to 200
-  by 17:10:00, and `/style/estimatecheck` serves §197's `Both include 6% tax · plus Rentals, to be confirmed`. At 18:58
-  the first two answered 200 again and `/style/estimatecheck` still served that line (curl).
-
-**How it was measured.** Headless Chrome 154.0.8037.98 on the verify build (`SHIP_VERIFY=1`), the app's built CSS and
-Spectral, light and dark, at 1600 × 1068, 1200 × 1468 and 390 × 844, at 2×. PDFs on Letter, A4 and 4 × 8 in, read back.
-Node ran the real code against stand-ins (a fake server, a fake router), never the database. **No sign-in, Chrome not
-Safari, and no iPad.** Each batch was followed by a review that assumed it wrong, re-took its numbers and ran fault
-injections of its own; four of the five also re-ran the batch's. Four of the five fixed something. Final build at
-`50b90fb`: exit 0, **6,904 ✓,
-0 ✗**; 78 check scripts on disk and 78 in the build, compared name by name (§193 added `check-printed`, §195
-`check-words`, §196 `check-estimate-sheet`).
-
-Your reply is `ROUND-79.md` and frame `Round 79 - the estimate's door.dc.html`, ids `r79a`–`r79e`, in the bundle's
-`ROUND-80/`. Each stop names the frame lines it checked; where a ruling is prose only, it says so. Your two errors,
-first: taken. We built from the frame you named, and §4 #11 is built as you narrowed it.
-
-**Sean, 11 Oct:** *"Build. Yes."* — **Build** for this round, **Yes** to your §4 arithmetic sentence.
-
-### 0 · Your Round 79 — received, and built in five batches. All of it is LIVE.
-
-**a · §193 (`7e0c709`; review `33176d6`): your §1, and §4 #11 narrowed.** Prose only: `r79a`–`r79e` are all the Estimate.
-
-- **Complete stores `printed`:** each billed line's printed amount, the subtotal, the tax and the total, in whole cents.
-  A dash on the paper is null, never 0. Category and group amounts aren't stored, as ruled.
-- **Four places read it:** History's row and card, the footer, and the paper printed again. That holds for a Complete
-  invoice and one archived from Complete, trash included, and reads the last stored record only (`completedFigures`,
-  `printed.ts`). Reopened: History reads `printed`, the Builder the live lines. Everything else uses the one cent.
-- **The fill:** `legacyPaperCent` is the one place the old cent survives. It runs once on load, and on a tab's save so
-  an old tab can't strip the figures. It never touches a record that has `printed`, an earlier record, or an unreadable
-  one. The health page lists each under *Fixed on load* as `Completed invoice — figures filled in from its paper`.
-- **The count page:** your tile in place of `Paper a cent more, printed or sent again`. The others stand.
-- **Proved:**
-  - Six completed fixtures: a half-cent tax, a $1.005 line, 3 × $0.125 both ways, the comp's example and a group. The
-    History row, card, footer and reprinted paper each equal the paper as first completed, and the paper is
-    byte-identical. **Your §3 example, $1,395.75 at 6%, reads $83.74 and $1,479.49 everywhere.**
-  - Against the live build's own code (`git archive ebefce8`): **3,000 seeded completed invoices, the client's paper
-    identical in 3,000.** 709 of them would have moved under §190 alone.
-  - Two devices' fills, on the real sync against the fake server, write identical bytes.
-  - The review: 9,000 adversarial invoices, the paper identical in 9,000, and History and the footer equal to it in
-    27,000 readings.
-- **The review fixed one hole:** a stored NaN tax under a real subtotal made History, the footer and the reprint show
-  `—` for tax and total. It's now ignored like any tampered value. Nothing the app writes has that shape.
-- ⛔ One stop: §1 #5.
-
-**b · §194 (`9e35afd`): your §3 #1–#4, #9, #11, #13, #17, #22, and §2 #6's formatter.** Nothing stopped. The review
-found nothing to fix.
-
-- Every ruled string as written: `4 changes not saved` for 8 saves of 4 records; `Discard 4 changes?` and `Clear 1
-  change?`; `Invoice · 3 saves · last at 3:04 PM`; `A deleted invoice` over `Invoice · deleted · 2 saves · last at 3:12
-  PM`; leftovers alone, `Okafor retirement` over `Leftovers · 3:20 PM`. `A deleted leftovers` is asserted absent in all
-  48 cases. −$0.125 → −$0.13. `estimateMoney` prints `—` for any negative, and `$0` for −0.
-- **Measured:** the corner pill fades in over about 180 ms (182 light, 185 dark) and is gone 193 and 196 ms after it
-  starts to fade out. With reduced motion below 1024
-  the bar fades over about 200 ms in place and takes no taps. From 1024 up nothing moves or fades.
-- **Money:** 2,000,000 values each sign through `roundCents`. No positive moved; every negative that moved was an exact
-  half cent, now a cent further from zero.
-
-**c · §195 (`0c72cf7`; review `ed460ea`): Settings › Estimates, `r79c`.**
-
-- The row `Estimates` under Business. `Categories that follow guests`: a chip for each of his ten categories, and your
-  hint word for word. `Your words` at rest, as `r79c` draws it: the percents change in place, with his events beside
-  each word.
-- Stored under a new account key, `limbo_estimates`: one row for the categories, one per pair. Every field is checked
-  against what the page can show.
-- `/style/wordscheck` gives `r79c`'s three event lines exactly: `Your events poured 64% to 97% of what you bought · 7
-  events`, `Ran out on 2 of 7 events`, `Your events: not enough yet · 1 of 3`.
-- **The review fixed a crash and two holes in the money proof.** A `null` among the lines of any invoice with a
-  finished leftovers count threw while the page drew a pair. And the proof that the page writes nothing to an invoice or
-  its leftovers matched names only; it now runs the reading through the real `sync.ts` against the fake server, with
-  nothing queued or written, and each of the page's three loads may take only `rows` and `loading`.
-- ⛔ Three stops: §1 #1, #3, #4.
-
-**d · §196 (`4191c8a`; review `68630e1`): the door `r79a`, the sheet `r79b`, the arithmetic, §2 #6.**
-
-- ⋮ row 3, `Make an estimate…`, under Export, with `r79a`'s glyph copied path for path. The set is 46 and the menu has 12
-  rows. Greyed with `Locked at Complete` or `Locked while archived`, and with `Add lines or start from a template first`.
-- The 672 sheet, in `r79b`'s order. It's saved on the invoice as `Invoice.estimate`, written only by `setEstimate` (that
-  one field, no Undo step, refused when locked).
-- **Your worked example, end to end:** Spirits **$1,700 to $4,550**, Wine $550 to $1,100, Mixers typed $150 to $300, Ice
-  typed $220–$280 prints **$200 to $300**, Rentals to be confirmed. Subtotal **$2,600 to $6,250**, Estimated total
-  **$2,750 to $6,650**, per guest **$27 to $52**. The review re-did it on an invoice of its own and got the same.
-- ⚠️ **Found while building — money.** Any write to an unlocked invoice re-worked its stored total from today's lines.
-  So on an invoice saved before §184 and §190 and not edited since, the Estimate's own write would have moved a stored
-  total by a cent. A write that carries only the Estimate now keeps the stored figure; every other write still re-works
-  it. Proved with a stored $99.95: the Estimate keeps it, and an edit, a packing tick and a date each re-work it to
-  $99.96. The review added both orders.
-- **The review fixed one fault:** a minus in the LOW box put `Can’t be below $0` under the HIGH box (at 1600 the low box
-  ran 918.6–1004.6 and the words 1014.5–1116). It now sits under the box it's in (918.6–1020.1).
-- ⛔ One stop: §1 #2.
-
-**e · §197 (`2039f8f`; review `50b90fb`): the paper, `r79d` and `r79e`; §2 #1–#5; §3 #27, #29.**
-
-- No `Tax at` line. `Estimated total` folds the tax in, with `Both include 6% tax` under it (`includes` with no
-  per-guest line). `up to $100`. Per guest under the total, at its weight. The invoice's own client block. Page 2 repeats
-  the headings and `Estimate · {client}`. Under 600 on screen, and on paper under 5 in, `r79e`.
-- Your worked example prints line for line on Letter, from the lab and through Preview's own path. 4,000 random
-  estimates: the real total always inside the printed range. 34,993 lows from 1¢ to $49.99: none prints `$0`.
-- **Money:** nothing that calculates or prints an invoice changed; the invoice and money files changed in comments only.
-  The comp's worked example, locked against any write, as Complete, archived from Complete and Draft: its record byte
-  for byte, and its own paper identical (4,142 characters), $99.96 billed, $40.00 comped, $6.00 tax, $105.96.
-- **The review fixed one fault:** at 390 and under 5 in, `Estimate` kept `r79d`'s 0.02em tracking, which `r79e` doesn't
-  draw (100.8 → 97.0 wide). It also closed two holes in the checks.
-- ⛔ One stop: §1 #6.
-
-**f · Your "What I need back."**
-- #1: pushed with §189–§191 at 13:31:59. Your §1 sentence was put to Sean as you wrote it, with what isn't yet true of it
-  (§1 #5). He hasn't answered; it needed no answer.
-- #2: Sean, *"Yes"*.
-- #3: built in your order — Settings › Estimates, the sheet, the paper.
-- #4: **our Round 78 §0 d's five, still not built.** grep `-rni "newer copy"` and grep `-rn "Some lines have no cost"`
-  over `src scripts` at `c6ccb79` find 0 each; the old toast is still `Builder.tsx:620`, and `dataAudit.ts:233` still
-  asks `getCost`. §193–§197 changed `groupDoors.ts` in a comment only.
-
-### 1 · ⛔ Six stops. The word-pair editor first.
-
-1. ⛔ **The word-pair editor: adding, renaming, re-categorising and removing a pair** (§4, *Settings › Estimates*;
-   `r79c` checked, frame lines 130–196). **This is what makes his words usable.**
-   - `r79c` draws pairs at rest only: the name and the words as text, the percents as boxes. Nothing in Round 79 draws a
-     pair open.
-   - You name *"Settings' own Field and managed-list parts"* (frame line 192). The managed list's open row (`47a`, §46.2)
-     holds one borderless field, Remove and Done. A pair is a name, two words, two percents and a set of category chips
-     (`PairFields`, `estimateWords.ts:115`–`:126`). Where each of those sits open, how an empty word reads in a
-     borderless field, and what Done does with half a pair are undrawn.
-   - `r79c` puts `Add a word pair` in the band (frame line 152). §27.3 and §46.2c put Add as the list's last row.
-   - **Built:** the percents change in place, as drawn. `Your words` is absent while he has no pair (§45.A). **So on his
-     account there are no words today, and the Estimate shows no word chips.** It runs on the guest range and his typing.
-     `Add a word pair` is in no shipped file: grep over `src` finds it only in a comment in `estimateWords.ts`, and
-     `check-words` holds it off the page.
-   - ❓ **Please draw the open pair, and where Add goes.**
-
-2. ⛔ **The words on line two** (§4, *The sheet* #3; `r79b` checked, frame lines 103–104: `$2,400.00 on the invoice ·
-   guests · drinkers · premium` and `$780.00 on the invoice · guests · drinkers`).
-   - Line two needs a short word for each pair. A pair stores a name, two words and two percents
-     (`estimateWords.ts:115`–`:126`), and `r79c` gives no place to set a short one. Its names are `Lite to heavy
-     drinkers` and `Mid to super premium` (frame lines 155, 167); its words are `Lite` and `Heavy`, `Mid` and `Super
-     premium`.
-   - Nothing was invented. Not the name's last word: `Beer and wine crowd` would give `crowd`. Not the whole name: it
-     wrapped the Spirits row to 77.3 at 672.
-   - **Built:** the figure and `guests`. Every picked word still counts in the arithmetic, and its chip shows it picked.
-   - ❓ Store a short word with each pair, set in #1's editor? Or another reading?
-
-3. ⛔ **The price word's line** (§4: *"A word about price gets no reference: `A price choice. Your events can't show this
-   one.`"*; `r79c` frame line 171).
-   - Nothing marks a pair as a price word, and its categories can't tell: `Mid to super premium` touches Spirits (frame
-     line 167), and so does `Lite to heavy drinkers` (line 155).
-   - **Built:** every pair shows his events. The line is in no shipped file.
-   - ❓ How is a pair marked as being about price? In #1's editor?
-
-4. ⛔ **Which categories start chosen** (§4: *"They start with his drink categories chosen"*; `r79c` frame line 196, and
-   its chips, lines 140–146).
-   - `r79c`'s seven chips are mostly your example names (`Wine & Champagne`, `Beer`, `Mixers & Garnish`, `Ice`,
-     `Rentals`); two are his (`Spirits`, `Rental Supply`). His ten are `CATEGORIES` (`types.ts:3048`).
-   - Nothing in the app says which categories are drinks. `drinkSplits.ts:37`'s `DrinkCategory` is the scrapped
-     estimator's five slices (`cocktails`, `spirits`, `wine`, `beer`, `na`), not invoice categories. A search for any
-     other drink list found none (grep `drink ?categor`, `DRINK_CATEGOR`, `isDrink`, 11 Oct).
-   - **Built:** nothing chosen. `FOLLOW_DEFAULT` is empty (`estimateWords.ts:99`); it's shown and never saved, so the day
-     it's filled, an account that never chose follows it.
-   - ❓ Ours, proposed: Spirits, Liqueurs & Fortified Wines, Wine, Beer & Seltzers and Mixers / Non-Alcohol. Are Produce,
-     Consumables and Prep Ingredients in? Meanwhile Sean can tap them himself (21.4).
-
-5. ⛔ **Money: invoices last completed before 28 Sep have no record to keep them to** (§1 #4). **§1 is prose only; no
-   frame draws it.**
-   - The completed record began with §103 (`9638e16`, 28 Sep). §1 #1 puts `printed` *"on the completed record"*, and §1 #4
-     fills that in, so for these there's nothing to fill. `completedFigures` returns null, and they read their lines with the one cent in
-     History, the footer and the paper printed again.
-   - **What one reads now.** Run in Node on the real code: your §3 example as a Complete invoice with no record reads
-     **$1,479.50 in History, and $83.75 tax and $1,479.50 on its paper printed again.** The paper the client was sent
-     printed **$83.74 and $1,479.49** (`legacyPaperCent` on the same lines gives 8,374 and 147,949 cents). A line past the
-     cent moves the same way. **Live since 13:35.** So your §1 sentence is true for invoices completed from 28 Sep on,
-     not before, and Sean was told so (his check 21.1).
-   - **How many:** the count page's `Completed read` minus `With a record` (`RoundingView.tsx:186`–`:187`). That's
-     Sean's 21.2, not read yet.
-   - ❓ Which?
-     - (a) **Make them a record**, once, on load, from their locked lines, with `printed` from `legacyPaperCent` (the
-       fill, extended);
-     - (b) **Read them through `legacyPaperCent`** on screen, writing nothing;
-     - (c) **Accept**, and give us the words for Sean.
-   - (a) and (b) both inherit §2 #8: papers printed before 15 Sep (`d145f4c`) added unrounded lines, so one sent then
-     can differ by a cent from `legacyPaperCent`.
-
-6. ⛔ **`page 2 of 2`** (§3 #29: *"Follow the invoice: page 2 repeats the column headings and a running head (`Estimate ·
-   {client} · page 2 of 2`)"*; `r79d` and `r79e` checked, frame lines 201–286. Each draws one page; grep `-i "page 2"`
-   over the frame finds 0).
-   - **The invoice prints no page number.** Its running head is `{client} · № {number}`
-     (`InvoiceDocumentView.tsx:176`–`:179`), and grep `counter(page` over `src` finds 0. Our old §5, *Round 9 built*,
-     gave the reason: page counters are CSS Paged Media, which it said no browser's print engine implemented. Not
-     re-measured in this build, and Safari never ran in it.
-   - **Your answer then** (`HANDOFF.md` §14.1, *"The page counter — agreed, with one change"*): no library, and an end
-     rule carrying a count, `End of invoice № 14` with `3 categories · 24 items`. `HANDOFF.md:64` marks it done. **It is
-     not in this app:** `git log -S'End of invoice' -- src` finds no commit, and grep `-rni "end of invoice"` over `src
-     scripts` finds 0. We haven't checked the first app.
-   - **Built:** `Estimate · {client}`, with a count asserted absent (`check-estimate`).
-   - ❓ Keep the head without a count? Or §14.1's end rule, on the Estimate and on the invoice, which doesn't have it
-     either?
-
-### 2 · Readings — built the plainest way. ❓ marks a call that is yours; the rest are told
-
-**A completed invoice (§193)**
-
-1. **"By line id" is keyed by the row key.** Lines have no id, so `printed.lines` is keyed by `rowKeyOf`: section, name
-   and place, as in `0-Gin-0`. It moved into `types.ts` beside the record, and `check-printed` pins its spelling. It's
-   a stored format now.
-2. ❓ **"Everywhere he or the client reads them" against your four places.** These still read a completed invoice's
-   lines with the one cent, so on a line past the cent or a half-cent tax they sit a cent off its footer. Run in Node on
-   two completed invoices whose papers printed $1,479.49 (your §3 example) and $63.00 / $66.78 (a $1.005 line beside 2
-   × $31):
-   - **the open-invoices list** (`OpenInvoicesSheet.tsx:143`, the lines plus tax): **$1,479.50** and **$66.79**;
-   - **the phone drawer's figure** (`Builder.tsx:1793`, the lines' subtotal): $1,395.75, the same as its paper, and
-     **$63.01**;
-   - **`Start from an invoice`** (`StartFromSheet.tsx:268`, `:310`, the lines' subtotal): the same as the drawer;
-   - **the Builder's own rows, bands and group rows** (`InvoiceSheet.tsx:794`, `:1025`): the $1.005 line reads
-     **$1.01**, where its paper printed $1.00.
-
-   Should these read `printed` too, for a Complete invoice?
-3. ❓ **The comp's figure isn't in `printed`.** History's `Comped` row and the footer's `$X comped` read the one cent, so
-   a half-cent comp moved at the push: **$8.02 → $8.03** (§193's review). The record stores the comped figure, and
-   nothing reads it for a Complete invoice. The print page's notes above the paper (never printed) are the same; they're
-   the only difference in 119 of the 3,000.
-4. ❓ **The gate's `Replaces the numbers recorded on …` row** shows billed, the rate and comped. A re-Complete that
-   changes only the rounding ($83.74 → $83.75 tax) shows the same row, `$1,395.75 billed · 6% tax`, so it does not
-   *"already show the change"* (§1 #3). A moved line does: `$63.01 billed` over `Was $63.00 billed` (`check-printed`
-   section E).
-5. **A tampered `printed`** isn't read and isn't refilled; the invoice reads its lines. 18 shapes were tried, among them
-   missing fields, NaN, strings, wrong sums and a line off by more than half a cent. The health page says nothing about
-   it, because nothing rules it.
-6. **A reopened card** shows `printed`'s subtotal, tax and total beside the record's own category split. Those can sit a
-   cent apart for a record frozen between 28 Sep and 11 Oct with a line past the cent.
-7. **A record reopened before this build has no `printed`.** History works it out from its stored subtotal and rate,
-   with the one cent.
-8. **Papers printed before 15 Sep** (`d145f4c`) added unrounded lines, so one sent then and completed after 28 Sep can
-   differ by a cent from what `legacyPaperCent` filled in.
-9. **One sent under the old cent and completed after this shipped** records that day's cent, as ruled. On a rare one
-   that's a cent off the PDF he sent.
-10. **The health page's words:** `Not serious: no money moves.` is our wording of your sentence. A fill made by a tab's
-    save is listed too, once; the tab uses the load's own label.
-11. **An offline fill that lands after his other device re-completed** replaces the newer record. Last write wins, as
-    for every load repair since §157. Retry is guarded and proved.
-12. ❓ **No tile counts what's left to fill**, and *"delete it once his data shows 0 left to fill"* needs one.
-13. **The health page keeps the newest 40 notes per device** (`MAX_FIXES = 40`, `fixedOnLoad.ts:31`), so past 40 fills
-    not every one is listed. Fills exist only for records made from 28 Sep.
-14. **The new tile also counts an invoice completed after the push with a line past the cent.** It differs from the
-    pre-11-Oct figure, though its History never showed that figure.
-
-**Your readings, built (§194)**
-
-15. **#13's *"always on screen"* isn't, while `No price set` or the Deleted view is on.** Neither was ruled, so both stay
-    as he set them. A product with no name opens Products with no search, and with no reset.
-16. **A tap on a product row while already on Products** leaves two identical `/library` entries (the sheet's push, then
-    the ruled replace), so his first Back seems to do nothing.
-17. ❓ **#4 says the pill *"already"* fades under reduced motion.** `r78b` and #2 say it appears and goes at once. Built
-    as #2.
-18. **#11's unruled edges:** leftovers with no copy of their invoice on the device read `A deleted invoice` (a delete)
-    or `Untitled` (a write). Folding happens within a band. Leftovers alone don't open.
-19. ❓ **#11 against #17:** the sheet folds leftovers into the invoice's row, but the line, the phone's `saved` and the
-    list's `all saved` ignore the leftovers' own stuck change. So the sheet can show a Leftovers row while the phone says
-    `saved`.
-20. **Damaged stored entries no longer count in the pill.** It used to read `2 changes not saved` and open a sheet that
-    closed itself.
-21. **#22 on an invoice completed before 28 Sep** (§1 #5): a negative half-cent line would read a cent further from zero.
-    The app can't make one: the stepper stops at 0, and a negative price counts as none.
-22. **`· all saved` reads up to 8 invoices × 3 device lists per read.** Untimed on the iPad.
-
-**Settings › Estimates (§195, `r79c`)**
-
-23. **"Under Business"** is read as the next row in Settings' list, not a page inside Business. Its second line is
-    undrawn: `Categories that follow guests and your words`, read off its siblings.
-24. **A pair has three names.** `r79c` draws `Lite to heavy drinkers` above `Lite` and `Heavy` (frame lines 155–161);
-    your prose says two (frame line 193: *"two words and two numbers"*). The name is stored.
-25. **`r79c`'s three pairs are practice data** (`/style/wordscheck`), not added for him.
-26. ***Poured* is by money** (price × quantity), not bottles.
-27. **A run-out is a `Ran short` tag:** counted among the events, kept out of the range. A tagged `Too much` or `About
-    right` is an event but not a measurement. From three events, `Ran out on 0 of 7 events` shows. Percents round to the
-    whole.
-28. ❓ **A night where everything was used up isn't an event.** Done with nothing left saves the same record as a skipped
-    tag sheet, so the two can't be told apart.
-29. ❓ **Nothing stops a pair's low percent being above its high**, stored or typed.
-30. **A percent is 1 to 1,000 with at most two decimals;** anything else isn't saved, and the stored one shows again.
-    ⚠️ `1,000` typed saves 1%, because every number box in the app reads a comma as a decimal point.
-31. **Below 480 of card,** a word and its box share a line, and the events go beneath.
-32. ❓ **The card is 680, not `r79c`'s 720** (the managed list's 20 inset), so the events column is 396, not 432, and
-    `Your events poured 64% to 97% of what you bought · 7 events` (402) wraps to two lines.
-33. **Against `r79c`:** line height 1.3, not 1.4; chips 16 in, not 14; no count in the `Your words` band; rows and band
-    14 in, not 16.
-34. **The percent box's edge is `--border`,** as drawn and as on every input: 1.47:1 light, 1.26:1 dark. In the save
-    warning's window, a chip's unsaved change is named `Untitled`, of kind `Setting`, as a theme change is: the
-    estimates key is in no family (`savePill.ts:215`), and its categories row has no name (`:252`).
-
-**The door and the sheet (§196, `r79a`, `r79b`)**
-
-35. **There's no `Ordered` stage,** so the door is live at Draft, Ready to Send and Ready to Order.
-36. **"The invoice's amount"** is what the client's invoice prints for the category: billed lines, a comp at $0, hidden
-    lines out, and a group under the category it prints under.
-37. **A $0 category reads `No price yet`.** If it follows guests, it prints `To be confirmed`.
-38. **With no guest count on the invoice:** empty boxes, no hint, the words act alone, and no `guests` on line two.
-39. **The boxes.** Guest boxes are whole numbers from 1 to 99,999 and swap when he leaves the row. Money boxes run $0 to
-    $9,999,999.99. One box filled reads at both ends. Every minus is refused, `−` and `-0` too. ⚠️ `1,700` typed is
-    $1.70 (#30's comma).
-40. **At the start,** no category is typed and no word is picked. A picked word whose pair is gone drops at the next
-    change.
-41. **Each box writes as he types,** because `r79b` has no Save. Nothing writes before his Settings are read.
-42. **The refusal** is 13px in the danger colour, under the box it's in. When both boxes hold a minus, one sentence sits
-    under the pair (ours).
-43. **Below 672,** a row's controls wrap under its name. At 390 every row does (rows 109.8).
-44. ❓ **No per guest** with nothing priced or no count. With nothing priced the total reads `$0` (see #52).
-45. **Duplicate and Save as template** don't carry the Estimate. Trash and Restore keep it.
-46. ❓ **Against `r79b`:** the title is **18**, not 24 (frame line 79); blocks are 20 apart, where `r79b` draws 8, 16 and
-    18; the footer is untinted, with 12 above and below (frame line 113 tints it `#F7F5F1`); hints at line height 1.3;
-    chips 16 in; `Type` at least 44 wide.
-47. **Two sections of one category** (hand-edited data only) share one typed entry.
-
-**The paper (§197, `r79d`, `r79e`)**
-
-48. ❓ **11 categories fit a Letter page with the totals, not 12.** The running head on page 1, the per-guest line, the
-    note and the four-line client block take the room. A page with no totals holds 16.
-49. **The running head prints on page 1 too,** as the invoice's does. A repeating table head can't skip page 1.
-50. **`r79d`'s `Billed to` and `Event` are gold, `#75521A`.** The paper uses no gold, and the invoice's are grey, so
-    they're grey, 7.81:1.
-51. ❓ **The printed low decides,** so a typed $0 low reads `up to $X`. That way a row reads the same after `Type`, which
-    fills its boxes with what it printed. §2 #3 rules only a low above $0.
-52. ❓ **Every category unpriced:** the rows read `To be confirmed` and the totals `$0`. Your §2 #3's last sentence
-    (*"A real $0 low (every category unpriced) stays `To be confirmed` (§3 #30)"*) and §3 #30's *"right as told"*
-    (totals `$0`) read two ways. Which? If the totals should read `To be confirmed`, it's one line.
-53. **No client and no email:** no `Billed to`, and `Event` comes first. No client: the head reads `Estimate`.
-54. **On 4 × 8 in,** `r79e` prints inside the invoice's 0.35 in margins, not 24 × 20, which is the screen's. The client's
-    second line leaves `guests` alone on a line.
-55. **His details print phone · email,** as the invoice and `r79e` do. `r79d` draws email · phone.
-56. **At 0% on the wide page** there's no Subtotal, so the total's thick rule sits 4 under the last row's thin one.
-    Undrawn.
-57. **1.5px rules compute 1px in headless Chrome,** and so does a bare 1.5px block, so that's the browser. Safari's
-    repeating heads are unmeasured; nothing was printed on an iPad.
-58. **`/style/papercheck` still lays out 405 wide at 390** on every fixture (our Round 79 §3 #25). §193's builder
-    claimed no sideways scroll anywhere; its review corrected that. The sheet and History labs don't scroll sideways.
-
-### 3 · ❓ Sean's rule: no fraction of a cent shown anywhere
-
-> **Sean, 11 Oct, during this build:** *"Let's round up every half cent across the app. I don't want to see them
-> anywhere."*
-
-**The exchange. The explanation and the question are ours.** We told him, in substance:
-- half a cent already rounds up wherever an amount is worked out (§190);
-- fractions of a cent could still show in three places: a rate beside a total, up to three decimals (your Round 71 §5:
-  `2 fl oz × $0.985/fl oz = $1.97`); a cost-per-fl-oz override typed past the cent (your Round 75 §3 #3: *"No snap… snapping
-  $0.035 to $0.04 would be a 14% error"*); and a price typed past the cent (3 × $0.125);
-- we recommended rounding only what he sees to whole cents, half up, with the exact figures kept underneath;
-- the catch: `2 fl oz × $0.99` reads $1.98 against a true $1.97, so how those lines read is yours.
-
-Our question, word for word: *"OK to send this to Design in the next round as your rule? No fractions of a cent shown
-anywhere, half cents up, exact figures kept underneath."* **Sean: *"OK"***
-
-⚠️ **The stored figures stay exact.** His OK covered what he sees. Nothing below asks you to move an Amount, a total or a
-stored figure, except #5, which is a stored figure today and is asked.
-
-⚠️ **Two of our words to him were wrong. Found writing this; the corrections are written down for him in `WISHLIST.md`
-(`a4606d9`):**
-- *"Fractions show in a rate beside a total."* **On no screen of his.** `rateBesideTotal`'s only callers are on
-  `/debug/rates` (`report.ts:269`, `:293`; grep `rateBesideTotal(` over `src`), as your Round 72 §3 #14 left it: *"Nowhere
-  yet."*
-- *"Half cents already round up."* **True of every amount on an invoice, not of every figure shown.** `money()` and
-  `printMoney()` spell cents with `toFixed(2)` (`money.ts:100`), which reads a half cent the machine holds a hair low as
-  the cent below. The build pins it: `check-money.mjs:1122` holds `money(1.005)` at `$1.00`.
-
-**The places we found where a fraction shows, or a half cent shows down, today.** Each is the real code at `c6ccb79`,
-run headless in Node, unless it says otherwise.
-
-*Digits past the cent, on screen:*
-1. **The override box.** `Cost per fl oz override` shows every digit he typed, e.g. `0.035`: `ProductEditor.tsx:103`–`:106`
-   passes no `decimals`, and `useNumericField.ts:177` shows `String(stored)`. Its card reads `about $0.04/fl oz`.
-2. **`/debug/rates`** (Settings › General › Developer tools): for each rate that would drop, what it tried at two and
-   three places, in the shape of your Round 71 water row, `$0.01/fl oz gives $1.28 · $0.009/fl oz gives $1.15`
-   (`RatesView.tsx:86`; read, not run). Nowhere else.
-
-*Words that stand for a fraction:*
-
-3. **`under $0.01/fl oz` and `under $0.01 each`** on a card, for a positive rate under half a cent: Water, 5 gal at $1.20
-   reads `under $0.01/fl oz`. And `money()`'s own `< $0.01` (`money.ts:98`), for any other positive figure under half a
-   cent that reaches it, such as a unit price. His catalogue had no such card on 1 Oct (our Round 72 §1, by
-   `/debug/rates`).
-
-*Whole cents, but a half cent shown DOWN:*
-
-4. **`money()` and `printMoney()` handed a figure past the cent.**
-   - A card's rate: an override of $1.105 reads `about $1.10/fl oz`, and $2.675 reads `about $2.67/fl oz`.
-     `check-rate.mjs:405` holds the first.
-   - A price past the cent: $1.005 reads `$1.00`, $2.675 `$2.67` and $0.985 `$0.98`. That's how the Builder's row shows
-     it under the name (`InvoiceSheet.tsx:528`), the template preview's second line (`templates.ts:709`), and the
-     client's paper: its Unit cell (`InvoiceDocumentView.tsx:360`) and the narrow page's `qty × price` (`:336`). Read,
-     not run: the Library's product card and row (`ProductCard.tsx:161`, `ProductRow.tsx:155`), the ingredient picker
-     (`IngredientPicker.tsx:413`), and the Price box itself at rest (`useNumericField.ts:176`, `toFixed(2)`).
-   - A recipe's costs, read, not run: a prep's `$X total` (`prepCost.ts:350`) and the Prep editor's ingredient costs and
-     `Ingredient cost` (`PrepEditor.tsx:455`, `:475`) hand `money()` the raw figure.
-   - An invoice's amounts aren't shown down: a line, a band, the subtotal, the tax and the total go through `roundCents`,
-     half up since §190 (e.g. `InvoiceSheet.tsx:794`, `templates.ts:722`).
-5. **The product editor's Price box saves a half cent down.** Leaving the box commits `Number(n.toFixed(2))`
-   (`ProductEditor.tsx:89`, `useNumericField.ts:213`, since `16d5d19`, 15 Aug). So $2.675 typed is saved as $2.67, and
-   $1.005 as $1.00; $0.125 is saved as $0.13. **This is a stored figure.** It also means a price past the cent reaches
-   an invoice only from a product saved before 15 Aug or from data brought over from the first app (the Price box is the
-   only place a price is typed: grep `useNumericField(`, and `price` beside `onChange`, over `src`). Nobody has counted how many he
-   has; 19.1's tile `1 · A line past the cent` (`RoundingView.tsx:127`) counts the drafts whose total moves for one.
-
-*A line whose shown price doesn't multiply out to its Amount, today, on his screen and the client's paper:*
-
-| Line | Builder row (`InvoiceSheet.tsx:528`, `:794`) | Template preview (`templates.ts:709`, `:722`) | Paper: Qty · Unit · Amount |
-|---|---|---|---|
-| 1 × $1.005 | `$1.00 · each` … `$1.01` | `1 × $1.00` … `$1.01` | `1` · `$1.00 / each` · `$1.01` |
-| 3 × $0.125 | `$0.13 · each` … `$0.38` | `3 × $0.13` … `$0.38` | `3` · `$0.13 / each` · `$0.38` |
-| 2 × $0.985 | `$0.98 · each` … `$1.97` | `2 × $0.98` … `$1.97` | `2` · `$0.98 / each` · `$1.97` |
-
-Under his rule, half up: the first reads `$1.01` and multiplies out. The second still reads `3 × $0.13` against `$0.38`.
-The third reads `2 × $0.99` against `$1.97`, which is his catch.
-
-Not counted: a tax rate. `6.625%` prints `6.63%` (your Round 79 §3 #31); that's a percent, not a cent.
-
-**❓ For you:**
-1. **A qty × price line whose whole-cent price doesn't rebuild its Amount**, on his screen (the Builder's row, the
-   template preview) and on the client's paper (Qty · Unit · Amount, and the narrow page's `3 × $0.13`): how does it
-   read? The Amount is what the client pays, and it stays.
-2. **The rate beside a total.** Your Round 48 §3, which Round 71 §5 #2 keeps: *"Cap at three. If nothing at three
-   rebuilds it, print the total and drop the rate."* Under his rule, does it cap at two? It's on no screen today; `/debug/rates` would count what drops.
-3. **`under $0.01`** shows no fraction's digits, but it names one. Does it stay, or become something else? And does
-   `money()`'s `< $0.01` join it as one spelling? Your Round 75 §3 #4 ruled *"one spelling"* for cards.
-4. **The override box** shows his digits (`0.035`), and your Round 75 §3 #3 keeps the stored figure. At rest, does the
-   box keep showing his digits, since it's his own typing, or whole cents with the exact figure underneath?
-5. **The Price box's save** rounds a half cent down and stores it. Should it round half up ($2.675 → $2.68), or keep
-   what he types, as the override does? Either one changes only prices saved from then on.
-6. **Confirm that `money()` and `printMoney()` round half up** when handed a figure past the cent: `about $1.11/fl oz`
-   for $1.105, and `$1.01` for $1.005. On the client's paper that changes the Unit cell, only on a line priced past the
-   cent, and never an Amount or a total. Your Round 69 §6 #10 says *"Printed documents keep their formats until they're
-   asked about"*, so this asks.
-
-### 4 · Only his iPad can say
-
-- **19.1 and 21.2: one page, one screenshot. You're waiting on both numbers.** 19.1 is the drafts count you asked for
-  in Round 76: how many live drafts move, and by how much. 21.2 is your new tile, with `Completed read` and `With a
-  record` beside it; their difference is §1 #5's count. Neither is read yet, and no number is claimed here.
-- **21.1:** a completed invoice's PDF against History, its footer and its paper printed again, to the cent. Ideally one
-  completed before 28 Sep and one after.
-- **21.4:** Settings › Estimates on his account, the category chips saved. **21.5:** ⋮ › Make an estimate… on a real
-  draft — guests, typing, Preview, the PDF. **21.6:** the practice pages, the only place the words show for now
-  (§1 #1).
-- Every screen measurement here is from Chrome, not Safari, and nothing was printed on an iPad. Safari's repeating table
-  heads are unmeasured.
-
-## What I need back
-
-1. ⛔ **§1, the word-pair editor first** (#1, with #2 and #3, which live in it). It's what makes his words usable. Then
-   #4–#6. **#5 is money**; 21.2's count will size it.
-2. ❓ **§3, Sean's rule:** #1–#6 — how those lines read, and the confirmations.
-3. ❓ **§2's readings:** 2–4, 12, 17, 19, 28, 29, 32, 44, 46, 48, 51 and 52 are calls; the rest are told.
-4. Still ours, not built: our Round 78 §0 d's five (Round 76 §3 #4, §6 #12, §6 #44, §6 #46, §5 #10's rest).
-
----
-
-## 🔴 ROUND 79 — your Round 78 is built: §188 (`r78a`, `r78b`) is LIVE, and with it the held work §181–§187; §189 (`r78c`), §190 (the half cent) and §191 (the Estimate's paper, `r78d`–`r78e`, no door yet) are built and HELD — ⛔ one stop holds the push: rounding half a cent up moves some completed invoices by a cent, on screen and on their paper, and Sean was told they won't change; six questions on the Estimate at his $50; the readings; and Sean's answers on how the Estimate's figures are made, with his cost per head — please draw the doors
-
-
-**implementation → Design, 11 Oct 2026. Branch `main`, app at `f6871e4`** — the code is `11027e7`'s (§191 · review), the
-last commit to touch it. After it only `dab56e7` (§192, the records) and `f6871e4` (`CLAUDE.md`): `git diff --stat 11027e7
-f6871e4 -- src scripts package.json` is empty.
-
-⚠️ **LIVE is `ebefce8` — §181–§188** (`git ls-remote origin main`, 11 Oct, 03:49 and again at 04:08; both times the live
-site answered `/style/pillcheck` 200 and `/style/estimatecheck` 404). **You can read `ebefce8` on GitHub, so every
-`file:line` below is at `ebefce8` unless another commit is named.** **§189–§192 are on implementation's Mac only** —
-`f620262` §189, `91ec13f` §189 · review, `5f216ae` §190, `05760e0` §190 · review, `2b208b5` §191, `11027e7` §191 ·
-review, `dab56e7` §192 — **held by §1's stop.** `npm run ship` pushes all of `main`, so §189 and §191 wait with §190. You
-can't read them; every claim about them carries its evidence — a `file:line` at a named commit, a grep with its pattern,
-or a measured number from the build's reports.
-
-⚠️ **The hashes our Round 78 gave you were never pushed, and no branch holds them now.** §186 went live on its own first
-(`0cb500a`, pushed 23:38 on 10 Oct), and the held work was rebased onto it with the same changes (`git patch-id --stable`,
-equal for each pair): §181 `cee9d12` → `aa6e740`, §182 · review `a2e7676` → `0f68924`, §183 `6f9a774` → `2c25f89`,
-§183 · review `c652a31` → `b9bf47d`, **§184 `887e6e8` → `ed17565`**, §185 `3aab40d` → `882c28f`, `WISHLIST.md` `909c0b3` →
-`1103643`. All on GitHub now, under the new hashes.
-
-**How it was measured.** Headless Chrome 154.0.8037.98 on the verify build (`SHIP_VERIFY=1`) — §188's and §191's started
-at 2× (the iPad's) — the app's built CSS and Spectral, light and dark (dark through the stored theme), on lab pages that draw
-the real parts on made-up records — `/style/pillcheck`, `/style/papercheck`, `/style/estimatecheck`. Where a screen sits
-behind sign-in, Node ran the real code with stand-ins (a fake server, a fake router). The money proofs ran in Node. **No
-sign-in, no database, Chrome not Safari, and no iPad.** Each batch was followed by a review that assumed it wrong, re-took
-its numbers, re-ran its fault injections and broke things of its own. The first changed nothing; the second closed three
-holes in the checks (the code was right); the third and fourth fixed real faults.
-Final build at `11027e7`: `SHIP_VERIFY=1 npm run build` exit 0, 6,239 ✓, 0 ✗; 75 check scripts on disk and 75 in the build,
-compared name by name (74 through §190; §191 added `check-estimate`).
-
-Your reply is `ROUND-78.md` and frame `Round 78 - the pill on the bar, and the estimate.dc.html`, ids `r78a`–`r78e`, in the
-bundle's `ROUND-79/`. Each stop on the Estimate (§2) names the frame line it checked. §1 rests on prose rulings: no frame
-draws the half cent (§190's review opened `r78a`–`r78e`), and §4 #11 has none. ⚠️ **The bundle also carries `Round 78 -
-the bar and the estimate.dc.html`**, an earlier draft named in neither `ROUND-78.md` nor `MANIFEST.md` (grep `the bar
-and the estimate`: 0 in each). You shipped two; we built from the one you named.
-
-**Sean, on your two questions** — 10 Oct, 22:37 by this Mac's clock, which is 11 Oct in UTC, the date your reply and our
-commits carry:
-
-> *"1. Yes.*
-> *2. Nearest $50*
-> *3. Let’s explore that. Give me a set of multiple choice questions.*
->
-> *Build."*
-
-"1" answers your §3 sentence, "2" your §5 question, and "3" your "What I need back" #3, which is §4 below.
-
-### 0 · Your Round 78 — received, and built in four batches
-
-**a · LIVE — §188 (`ebefce8`): your §1, §2 #2 and §4 #1–#2, `r78a` and `r78b`. Its review changed nothing.**
-
-- **Waiting is made for the bar** (`r78a`). The words are `text-accent-surface-fg`, 15, weight 400. The ring is 8 across
-  with a 1.5 stroke and no fill. The pill has no fill and no border. Padding is 14 left and 2 right, as `r78a` draws it
-  (`padding: 0 2px 0 14px`).
-- **Your 🔧, measured on the bar:**
-  - Light: words `rgb(252,250,246)` on `rgb(44,74,62)`, **9.34:1**.
-  - Dark: `rgb(240,237,229)` on `rgb(36,70,58)`, **8.92:1**.
-  - The ring is the same colour at the same ratios, so both clear 4.5 and 3.
-  - The ring's stroke computes 1.5 at 2× and 1 at 1×, where Chrome snaps borders to whole device pixels.
-  - Waiting is 150.8 wide (it was 162.8), and its right edge is 1520 / 1120 / 262, as before.
-  - Red and gold are unchanged against a baseline taken before the change.
-- **Waiting shows after 10 s, or at once when offline** (your §4 #2). This is `WAITING_AFTER_MS = 10_000` and `waitingShows`
-  (`savePill.ts:42`, `:61`), timed from the oldest queued change's own time. Until then the detail line reads `Saving…` and
-  the brand stays put. The pill and the line read the same rule, so they never speak at once. With a change queued under
-  10 s (`#fresh`), no pill shows at any width.
-- **Below 1024, red and gold move to the corner** (`r78b`). The corner pill is a second copy of the same pill, drawn beside
-  the bar (`SavePillFloat.tsx`). The bar carries the slide's transform, so a child of the bar can't leave it. Only one copy
-  is ever visible. Measured:
-  - At 390 × 844, red sits at 193.9–374 × 8–52: 16 from the right, 8 down. With a 47 inset its top is 55. At 768 × 1024 its
-    top is 8.
-  - Its shadow takes `--shadow-toast`'s two values, and it is hidden in print.
-  - Sampled every frame, the two copies hand over within 0.4 px.
-  - Grey goes with the bar. From 1024 up the corner copy isn't drawn and the bar never moves.
-  - A tap on the corner opened the sheet in all 12 red and gold cases.
-- §4 #1 was already built, and was measured again.
-- Fault injections: 60 in §188, each red where intended, and 5 comment-only controls green. Its review added 65.
-
-**Shipped with it: §181–§187.** `npm run ship` pushed `0cb500a..ebefce8` at 00:41 on 11 Oct. `/style/pillcheck` (new in
-§181, never live before) answered 404 through 122 s after the push, and 200 from 00:44:17. **Told, not from Round 78:**
-- §186 (`0cb500a`) — what Sean saw on 10 Oct: the product editor's boxes were squashed by a `display: contents` wrapper.
-  The wrapper is a real column now, and `check-scroll` rule 3 bans `display: contents` in shipped code. §186 went live alone,
-  first.
-- §187 (`026cd83`) — the template list's wrapper was the held work's one other `contents`. It is a plain block now, and
-  nothing moved.
-
-**b · HELD — §189 (`f620262`; review `91ec13f`): your §2 #3–#4, §4 #3–#10 and #17, `r78c`.**
-
-- **One row per record.** A record is its home collection plus its id. The bands count records: eight saves of four records
-  read `Not saved · 4`. Line two reads `Invoice · 5 saves · last at 3:04 PM`, or `Cocktail · 3:07 PM` for one save. No
-  parts: `r77c`'s three are asserted absent.
-- **Taps:**
-  - An invoice whose copy is here opens in the Builder.
-  - A cocktail or prep recipe opens its card through `?card=`.
-  - **A product opens Products with its name in the search field**, through a new reader of `?q=` (`useSearchFromUrl.ts`).
-    Products now draws under `Suspense`, as the other two routes do.
-  - In the trash: no tap, no ›, and `· in the trash`. Deleted: `A deleted {kind}` and `· deleted`.
-  - ⚠️ **A fault found building it:** every product row read `Untitled`. A product's name is its `description`, which the
-    row never read. It reads it now, so `r78c`'s `Cointreau` shows and the tap's search finds it.
-- **Kinds** are `Template`, `Tag`, `Leftovers` and `Setting`. `Change` is gone, asserted across all 16 collections. The
-  footer buttons are 48. `Retrying…` sits on the button, and the band doesn't change. The sheet closes with no box.
-- **The line speaks for its own invoice** (#9), and **says nothing until the queue has been read** (#10). A `queueRead`
-  flag carries that; until it's set, the list also leaves out `· all saved`. **#17:** a nameless group with no lines is
-  listed on the health page as `Group with no members`, *Removed on load*.
-- Measured at 1600, 1200 and 390, light and dark:
-  - The sheet is 512 wide (full width at 390), and rows are 61.
-  - Line two is 15px and on one line at every width, `Product · in the trash · 2 saves · last at 2:45 PM` at 390 included.
-    It reads 6.77:1 in light and 6.74:1 in dark.
-  - Dismiss unsaved… is 164.1 × 48, and Close is 78.5 × 48.
-  - No sideways scroll.
-- Fault injections: 69 — 65 red, and 4 comment controls green. The review ran 56 and **closed three holes in the checks**.
-  The code was right, but nothing held it:
-  - An invoice and its leftovers share an id, because leftovers are keyed by their invoice's id. Grouping by the id alone
-    merged them into one row, and the sheet's checks (F1–F24) stayed green.
-  - "The same day", compared by weekday instead of date, stayed green.
-  - The line's per-invoice cache was asserted on its text only.
-- ⛔ **#11 stopped: see §1.**
-
-**c · HELD — §190 (`5f216ae`; review `05760e0`): your §3 and §4 #12. Sean: *"1. Yes."***
-
-- **`roundCents` now reads the figure in cents to a millionth of a cent, then rounds half up** (`types.ts:1933`–`:1936` at
-  `f6871e4`). At `ebefce8` it is `Math.round(n * 100) / 100` (`types.ts:1880`–`:1882`). Every money figure goes through it,
-  so the footer and the paper stay one figure, and tax is still worked out once, on the subtotal.
-- **Proved:**
-  - By hand, in whole numbers (§190's review): every typed half cent from $0.005 to $999.995 rounds up, 100,000 of 100,000
-    (the old cent rounded 4,588 of them down, §190's count); tax on every whole-cent subtotal to $10,000, at 29 rates parsed
-    the way the app parses a typed rate, 0 misses; 9,120,000 lines, 0 misses.
-  - Your §3 example, **$1,395.75 at 6%, gives $83.75 and $1,479.50** on the paper and in the footer. The paper measured on
-    `/style/papercheck#half` at 1600, 1200 and 390, in both themes, where $83.74 and $1,479.49 appear nowhere; the footer
-    rendered in `check-rounding`.
-  - **364 whole-cent invoices with no half-cent tax (97 with a group) are byte-identical**, old cent against new: the
-    rendered paper, the footer, the record, every group's amount and every template row.
-- **The count page counts two things apart** (your §4 #12): a line past the cent, and a tax of exactly half a cent. It
-  also counts completed invoices' History totals; the review added their paper. See §1.
-- ⚠️ **A hole closed.** Since 29 Jul, `writeNow` re-worked a locked invoice's stored `grandTotal` from today's lines on
-  every save, a packing tick included (`invoiceTabs.ts:477`). A locked invoice now keeps its figure, and the move that locks
-  it takes the figure once (`check-procurement` section 5, run on the real tabs and sync code against the fake server).
-- Fault injections: 29 runs. Two stayed green at first, and their checks were tightened until they went red. One comment
-  control went red at first, and its check now compares the code, not the comment. The review added 8: 7 red, and its
-  comment control green.
-
-**d · HELD — §191 (`2b208b5`; review `11027e7`): your §5, `r78d` and `r78e`. Sean: *"2. Nearest $50"*.**
-
-- **The paper has no door.** It renders only on `/style/estimatecheck`, on made-up figures; a search with comments stripped
-  finds nothing outside its own files and its lab that names it. It takes a low and a high per category, or none, in the
-  order it is given.
-- **The figures:**
-  - Every end is rounded **outward to $50**: the low down and the high up. Each is read in whole cents first, so a $3,500
-    that the machine holds a hair over stays $3,500.
-  - The Subtotal adds the printed ends, so the column adds up under a calculator.
-  - Tax is `taxOn` on each printed end, then rounded outward. `Estimated total` adds the two.
-  - Ranges print `$2,000 to $3,500`. `To be confirmed` is in italic, counts in no total, and is named under it.
-- **Your `r78d` example at $50:**
-  - Spirits `$2,000 to $3,500`, Wine & Champagne `$600 to $1,150`, Mixers & Garnish `$150 to $350`, Ice `$200 to $250`,
-    Rentals *To be confirmed*.
-  - Subtotal `$2,950 to $5,250`, Tax at 6% `$150 to $350`, **Estimated total `$3,100 to $5,600`**.
-  - §2 #1 and #2 come from this.
-- **His letterhead is the invoice's own part** (`Letterhead`). The invoice's paper was byte-identical after the move, 6 of
-  6. ⚠️ **The review found it printing bigger.** The same markup, inside the Estimate's 10.5pt sheet, set his details at
-  14px, where the invoice's are 13.33px. The check compared markup, so it stayed green. Both now print 13.33px / 19.33,
-  held by an assertion read off the invoice as it renders. The review also set `r78e`'s `Prepared` straight under the title
-  (0), where the build had kept `r78d`'s 2.
-- **Measured at 1600 × 1068 and 1200 × 1468:** the sheet is 816, with 72 inside and 28 between blocks. The range column is
-  **190** and the category column 466. Rows are 40.5, the rules 1.5, the title 30px.
-- **At 390 × 844:**
-  - No sideways scroll. The sheet has 24 × 20 inside, the title is 24, and the logo 36.
-  - The headings, the Subtotal and the tax are gone, and ranges stay on one line.
-  - A 45-character name runs to two lines beside `$12,300 to $18,950`.
-  - The fold reads `includes 6% tax · plus Rentals, to be confirmed`.
-- **Printed on Letter**, read back from the PDF:
-  - Up to 12 categories fit one page. The 13, 14 and flow cases take two, with the total and the closing sentence together
-    on the last.
-  - Printed from a 390 screen, it is `r78d`.
-- Fault injections: 38 — 35 red, and 3 comment controls green. The review re-ran all 38 and added 19 of its own.
-
-**e · What your Round 78 asked back, and where each stands.**
-
-- *"Push once §1 is built and measured. Then check 19.1, with the drafts count."* — Pushed (a). **19.1 is live and not
-  read.** Its number is Sean's to read on his iPad, and none is claimed here. ⚠️ The live page is §184's. It counts drafts,
-  and completed invoices whose live subtotal differs from their record (`RoundingView.tsx:73`–`:79`, `:137`–`:139`). The
-  half-cent tiles, for drafts and for completed invoices, are §190's and held (`RoundingView.tsx:156`–`:158`, `:181`,
-  `:182` and `:184` at `f6871e4`).
-- *"Sean: the half-cent sentence (§3), and the nearest dollar or the nearest $50 (§5)."* — His answers are above. The
-  first is §1.
-- *"Sean: how the low and high are made (your §3), when he's ready."* — §4.
-- **§0 d, owed: still not built, all five.** grep `-rni "newer copy"` and grep `-rn "Some lines have no cost"` over
-  `src scripts` at `f6871e4` each find 0, and the old toast is still there (`Builder.tsx:608`; `:610` at `f6871e4`). They
-  weren't in this run.
-
-### 1 · ⛔ THE STOP THAT HOLDS THE PUSH — half a cent, and a completed invoice
-
-**What you ruled, and what he was told.** Your §3: *"It applies everywhere `roundCents` and `round2` are used. The footer
-and the paper stay one figure."* and *"Completed records stay frozen."* The sentence put to Sean, in your words: *"… Those
-invoices' totals would go up by a cent. Invoices you've already completed won't change."* His answer: *"1. Yes."*
-
-**What is stored at Complete doesn't change.** Nothing rewrites a record: a Complete invoice with a half-cent tax reads back
-byte for byte after the load's repair, and §190 closes the `grandTotal` hole (§0 c) — open on the live site until it ships,
-though no screen reads `grandTotal` (our Round 78 §2 #15; grep `grandTotal` over `src` at `ebefce8`: written in
-`invoiceTabs.ts`, read only by `/debug/invoices`, for its type). **But nothing a completed invoice SHOWS is read from what's
-stored:**
-
-- **History.** The row's total is `record ? invoiceTotal(record.subtotal, record.taxRate) : invoiceTotal(computeTotal(inv),
-  taxRateFor(inv))` (`HistoryRow.tsx:98`–`:100`). The card takes its subtotal, rate and comped the same way
-  (`InvoiceCard.tsx:221`–`:225`). The record handed to both is `reopenedRecord` (`HistoryList.tsx:160`), which returns null
-  when the stage, or the stage it was archived from, is `complete` (`types.ts:2177`–`:2180`). **So at Complete, History
-  reads the live lines.**
-- **The footer.** It is `computeTotal(invoice)`, then `invoiceTotal` (`InvoiceSheet.tsx:416`, `:422`): the live lines, at
-  every stage.
-- **The paper.** It is built from the lines at every stage. grep `-E "reopenedRecord|completedRecords|isLocked|stage"` over
-  `src/lib/invoiceDocument.ts` finds 0 at `ebefce8` and 0 at `f6871e4`. Its tax is `taxOn(subtotal, taxRate)` (`:315`;
-  `:332` at `f6871e4`).
-
-**So under §190, a completed invoice whose tax is exactly half a cent, and which the old cent rounded down, reads a cent
-more**, in History, in its footer, and on its paper printed or sent again. §190's review (`05760e0`) measured it by loading
-the app's real modules from `91ec13f` (before) and `5f216ae` (after) side by side. "Before" is the live site: `git diff
---stat ebefce8 91ec13f` over `types.ts`, `invoiceDocument.ts`, `comp.ts`, `money.ts`, `InvoiceSheet.tsx` and History's
-files is empty. Your §3's own example, $1,395.75 at 6%, as a Complete invoice with its record:
-- the paper's tax goes from $83.74 to **$83.75**, and its total from $1,479.49 to **$1,479.50**;
-- History moves the same;
-- archived from Complete, the same.
-
-A PDF he has already sent is a file and won't change; one printed or sent again would. A line of exactly half a cent moves
-the same way, through the subtotal. **"Completed records stay frozen" holds of what is stored. The sentence he said yes to
-is about what he and the client read.**
-
-⚠️ **And your §4 #11 rests on a premise the code contradicts. The premise was ours.** You ruled: *"A locked invoice's footer
-shows its record, the same as History. … That keeps what Sean was told true on screen."* History doesn't show a Complete
-invoice's record (above). It reads the record only while an invoice is reopened. Our Round 78 §2 #11 (*"which History
-shows"*) and #14 (*"History's total for a Complete invoice is worked out from its frozen subtotal and rate"*) said
-otherwise, and both were wrong. So "shows its record" and "the same as History" disagree for every Complete invoice, which
-is the very case #11 asked about. Stopped in §189 (`f620262`); nothing is built.
-
-**And #11 couldn't have kept the cent anyway:**
-
-- **Nothing stores a completed invoice's tax or total.**
-  - The record holds `at`, `subtotal`, `comped`, `compedUncounted`, `taxRate`, `lines` (a count), `guests`, `eventDate`,
-    and each category's `billed` and `lines` count (`types.ts:2051`–`:2072`).
-  - The invoice's own `grandTotal` is the lines' sum, `computeTotal(draft).toFixed(2)` (`invoiceTabs.ts:477`), with no
-    tax in it either. The `Invoice` type has no other tax or total field (`types.ts:1270`–`:1515`, read field by field).
-  - So a footer that "shows its record" works its tax out again from the stored subtotal and rate, through the same cent,
-    and moves at a half cent too. The held count page counts exactly this for reopened invoices, which History shows from
-    their record: `…recorded total a cent more: tax of exactly half a cent` (`RoundingView.tsx:184` at `f6871e4`).
-- **The paper is itemised, and a record holds counts, not lines**, so it can't rebuild the paper.
-- **Holding completed invoices on the old cent** would mean a second cent, by stage or by date, which nothing rules. Your
-  §3's *"It applies everywhere"* rules against it.
-
-**§184, live since 00:44, already moved History and the footer for some completed invoices, to the figure their paper has
-always printed.** One with a line past the cent (§189's note, `f620262`; §190's, `5f216ae`), and one whose tax is exactly
-half a cent (our Round 78 §2 #14). Your §3 example read $1,479.50 in the footer before 11 October, against $1,479.49 on
-its paper (our Round 78 §0 c), and History the same (§190's review: *"the pre-11-Oct History, which printed $1,479.50"*).
-§184 brought both to $1,479.49; §190 takes all three to $1,479.50. So against what he and the client read before 11
-October, that invoice's History and footer come back to it, and its paper, printed or sent again, is what moves. §184
-moved no paper (Round 78 §0 c: identical in all 3,000).
-
-**How many of his are affected, nobody knows yet.** The held page has the tiles (`RoundingView.tsx:181`, `:182` and `:184`
-at `f6871e4`):
-- `Total in History a cent more: tax of exactly half a cent`
-- `Paper a cent more, printed or sent again: a half cent, now up`
-- `…recorded total a cent more: tax of exactly half a cent`
-
-The live page has none of them (`:137`–`:139`). So that number can't be read until something after §188 ships. He said yes
-at 22:37 on 10 Oct, before the count page was live at all (00:44 on 11 Oct), and 19.1 is still unticked (`IPAD-CHECKS.md:2952`
-at `f6871e4`).
-
-❓ **Should a Complete invoice, and one archived from Complete, show what it was completed with everywhere: History, its
-footer and its paper — so that "completed invoices won't change" is true on screen?** If yes:
-- say what the paper prints, since it needs the lines and no stored figure carries the tax;
-- say whether a reopened invoice's record follows the same rule;
-- say whether Complete should start storing its tax and total, so the next change to the cent can't reach them.
-
-**Or another rule** — for example, one cent everywhere, a cent up on those, and Sean told how many and in what words.
-Either way, if your answer changes what he was told, give us the sentence to put to him. **Until you rule, nothing after
-§188 ships.**
-
-### 2 · ⛔ The Estimate at Sean's $50 — six questions (`r78d` and `r78e` checked)
-
-Your §5 ruled whole dollars and asked Sean, and he said *"Nearest $50"*. Some of your rules were drawn for whole dollars,
-and some cases have nothing drawn. Each is built on the plainest reading.
-
-1. ⛔ **One figure.** Your §5: *"When the low and high round to the same figure, it prints the one figure, e.g. `$246`."*
-   `r78d` draws Ice as `$246` (frame line 170), and so does `r78e` (line 208). `r78d`'s note (line 183) reads *"When the low
-   and high ends meet, it prints the one figure (Ice)."* At $50, rounding outward turns `$246 to $246` into `$200 to $250`.
-   **Built literally:** one figure only when the rounded ends are equal (`$250 to $250` prints `$250`). ❓ For a category
-   whose low and high are the same, which prints: `$200 to $250` (as built), `$250`, or `$246`?
-2. ⛔ **Tax to $50, or to the dollar?** `r78d` draws `Tax at 6% $183 to $311` (line 173), in whole dollars, drawn before his
-   answer. **Built to $50**, the one step every other figure takes.
-   - Your example at $50 prints tax `$150 to $350` and a total of `$3,100 to $5,600`.
-   - To the dollar it would print `$177 to $315` and `$3,127 to $5,565`.
-   - The smallest case: a $50 Subtotal prints `Tax at 6% $0 to $50` on $3 of real tax. The comp's worked example as an
-     Estimate reads `$50 to $100`, tax `$0 to $50`, total `$50 to $150`, with the real $105.96 inside it.
-   - ❓ Which?
-3. **A low under $50 prints `$0`.** Ice at $40 to $80 reads `$0 to $100` (the `#blank` fixture). This is the ruled
-   rounding at his $50, read literally, and it sits with #1. ❓ Is `$0` all right as a low on a client's paper?
-4. **The narrow printed page.** This is the invoice's page for paper under 5 in, measured on a 4 × 8 in sheet. *"Printed,
-   it is always r78d"*, so it keeps the 190 range column, which leaves 110.8 for names. `Estimated total` (111.5 at 12pt)
-   and `Wine & Champagne` wrap to two lines. Before §191's review, `Estimated total` fit only because his email overflowed
-   that page by 1px and Chrome shrank the whole sheet. ❓ Should 190 hold on that page, or narrow there?
-5. **His business details at 390.** `r78e` draws the logo alone, 96 × 36 (line 200), and its note (line 216) says *"the
-   business details go under the logo’s place"*. **Built as the invoice's part**, with the logo at 36 and his details
-   under it: his name, then phone · email over two lines (38.7 tall), in the 212 the title and `Prepared` leave beside
-   them. ❓ At 390, do his details show, and where?
-6. **A negative figure prints `$-50`** (`estimateMoney`, `money.ts:131` at `f6871e4`). No invoice can reach it today,
-   because a negative stored price counts as no price (our Round 78 §2 #19). But his answer in §4, *"type them myself as an
-   edge case"*, would make one typeable once typing is built. ❓ Refuse a negative where he types it, or spell it some
-   other way?
-
-### 3 · Readings — built the plainest way. ❓ marks a call that is yours; the rest are told
-
-**The pill, LIVE (§188; files at `ebefce8`)**
-
-1. ❓ **The slide is 200 ms, not 180.** `r78b` (frame line 106): *"It moves with the bar’s own slide, 180 ms"*. But the bar
-   has slid in 200 ms since 28 Jul, and 180 is the undo box's figure. Built to *"with the bar’s own slide"*: the bar's
-   length is now one value, `--bar-slide: 200ms` (`globals.css:650`), which the bar reads (`TopBar.tsx:123`) and the
-   hand-over reads too (`globals.css:651`). If you want 180, it is that one value, and the bar changes with it.
-2. ❓ **A pill that turns red or gold while the bar is already away** has no slot on screen to travel from, so it just
-   appears at the corner. One that stops being red or gold while it floats just goes.
-3. ❓ **Retry puts a change back with the time he made it**, so straight after Retry the pill reads `N changes waiting` at
-   once, not after 10 s (`check-status-lines` J10).
-4. ❓ **With reduced motion the pill doesn't travel, but the bar itself still slides.** Your ruling speaks only of the pill.
-5. **A queued change whose time can't be read counts as waited** (`savePill.ts:64`).
-6. **On a notched phone**, the Builder's product drawer at full height reaches about 31 from the top, so it would cover the
-   corner pill, as it already covers most of the bar. Read from the code, not measured, and it can't happen on his iPad.
-
-**The window and the line, HELD (§189, `f620262` and `91ec13f`)**
-
-7. **A save from an earlier day keeps its date** (`Oct 10, 3:04 PM`, `r77c`'s form), whether a day, a week, a month or a
-   year earlier. `r78c` draws only that day's times.
-8. **With more than one save, `in the trash` stays after the kind:** `Product · in the trash · 2 saves · last at 2:45 PM`.
-   `r78c` draws it with one save.
-9. ❓ **The bands count records**, but the pill (`8 changes not saved`) and the Clear and Dismiss confirms (`Clear 2
-   changes?`) count saves. Should those count records too?
-10. **Rows are in the order of each record's first save.** `r78c`'s order isn't time order.
-11. ❓ **`A deleted {kind}` is lower case mid-phrase:** `A deleted prep recipe`. With your `Leftovers` it reads `A deleted
-    leftovers`. A permanent invoice delete always queues a delete of its leftovers, whether or not it had any
-    (`invoices.ts`), so a given-up one can list `A deleted leftovers` for leftovers that never existed. What should that row
-    say, and should it show at all?
-12. **A record with no copy here whose last save wrote it** reads its save's name, with no tap and nothing added. It is not
-    called deleted, because a record made on this iPad whose saves never landed is missing after a reload too.
-13. ❓ **`?q=` stays in the address.** A reload searches the name again, and a second tap on the same product after he has
-    typed changes nothing. His category, sort and trash view are kept, so a product hidden by his own filter stays hidden.
-14. **Collections your ruling doesn't name** read `Setting`. These are the first app's trash and analytics, which nothing
-    in this app writes.
-15. **Leftovers, settings and invoice-number rows read `Untitled`**, because they have no name field (your #4: *"Right"*).
-    Templates, tags, leftovers and settings rows don't open.
-16. **`Saved · 2 minutes ago` times its own invoice's last landing, on this page.** After a reload the line reads plain
-    `Saved` until that invoice next lands.
-17. ❓ **The phone's `saved ·` and the list's `· all saved` still speak for the whole iPad.** #10 only holds them until the
-    queue has been read.
-18. **On a cold start the line is blank for a moment**, before the queue is read.
-19. **"This invoice's own changes" means the invoice record only.** Its leftovers and its invoice-number row are other
-    records (`Leftovers`, `Setting`), so a stuck one doesn't hush the invoice's line (`check-status-lines` K7).
-20. **#17's change applies to every repair made on load:** an entry with nothing to quote now lists the record alone, not
-    `— ""`.
-21. **The line reads three device-storage lists on every Builder render**, parsing each only when its text changes. Nobody
-    has timed that on the iPad with a long given-up list.
-
-**The cent, HELD (§190, `5f216ae` and `05760e0`)**
-
-22. ❓ **A negative half cent rounds toward zero** (−$0.125 → −$0.12), the direction `Math.round` takes. Nothing rules it.
-23. **Two hand-written roundings of whole-cent differences were left alone** (`templates.ts`, `invoiceTabs.ts`). A
-    difference of whole cents can't be a half cent, so nothing moves.
-24. **A tax rate typed to 7 or more decimals of a percent** can land within a ten-millionth of a cent under half, which
-    this cent reads as half and rounds up. No rate the app or a US jurisdiction uses comes near it.
-25. **`/style/papercheck` lays out 405 wide at 390** on every fixture, `#ortiz` included. The lab was like that before
-    §190.
-
-**The Estimate, HELD (§191, `2b208b5` and `11027e7`)**
-
-26. **Type sizes are `r78d`'s px, spelt in pt:** 14px is 10.5pt, 12px 9pt, 13px 9.75pt, 16px 12pt, 30px 22.5pt. The
-    invoice is set in its own steps (10 / 8 / 9 / 12 / 20pt), so the two papers differ by a hair, apart from the
-    letterhead (§0 d).
-27. ❓ **`r78d`'s note, *"the same client block as the invoice"* (line 181), isn't true of the app.** The invoice prints
-    `Billed to` (name, email) and `Event` (venue, address), with its dates in the title's table. Built as `r78d` draws it:
-    For / Event / Guests. And the invoice has no event-name field (`eventType` is the nearest), which is a question for the
-    door.
-28. **Dates:** `Oct 11, 2026`, as drawn, against the invoice's `October 11, 2026`. The invoice doesn't move.
-29. ❓ **Pages.** *"about 14 categories fit on one page"* measured 12 (logo on, nothing to be confirmed). The 13th pushes the
-    totals to page 2, and a page without totals holds 16. Page 2 has no column headings and no running head. Neither is
-    drawn; the invoice repeats both.
-30. **The edges:**
-    - Several to-be-confirmed categories read as a list: `plus Glassware, ice tubs and bar tools rental, Rentals and
-      Delivery, to be confirmed`.
-    - With every category unpriced, the totals print `$0`.
-    - A client-block row with nothing to say is left out.
-    - A range given backwards is read low to high.
-    - A figure that isn't a number prints `—`, and so do the totals.
-31. **6.625% prints `6.63%`**, the invoice's own spelling, on its paper too. Found here, not changed.
-32. **`r78d`'s closing sentence carries `text-wrap: pretty`.** It wasn't carried over; it changes no line in any fixture
-    measured.
-
-### 4 · The Estimate's numbers — Sean's answers to your "What I need back" #3
-
-He asked for multiple choice, so we put four questions to him on 10 Oct (22:38 by this Mac's clock). **The questions,
-options and *(Recommended)* marks are ours.** His answers are verbatim, 23:37. Where an answer, or part of one, isn't an
-option's label, he typed it.
-
-**Q1, ours — *"When you make an Estimate, what should it start from?"*** One choice.
-- `An invoice I've built (Recommended)` — *"You build the invoice as usual, then make an Estimate from it. Its lines give
-  the middle figure and the range goes around it. This is the version we'd build first."*
-- `Just the call facts` — *"No invoice yet: guest count, hours, event type, signature cocktails or full bar. The app works
-  out the figures from those alone. Needs the Calculator rework first."*
-- `A template, then adjust` — *"Pick a saved template for that kind of event, change the guest count, and make the
-  Estimate from that."*
-
-> **Sean:** *"Can we do a combination of an invoice I’ve built AND also the option to use a template the adjust?"*
-
-**Q2, ours — *"What should make the low figure different from the high one? Pick all that apply."*** Several choices.
-- `A guest-count range (Recommended)` — *"Example: 100 to 130 guests. The app prices your real buy list at both counts. You
-  liked this idea on 21 Sep."*
-- `Your descriptors` — *"Your 21 Sep idea: words like 'Lite to heavy drinkers', 'Mid to super premium', 'Mid to rich
-  rentals'. Each word pair sets a low and a high."*
-- `A fixed cushion` — *"One setting, e.g. 20% below and 20% above your figure. Simple, but harder to explain to a
-  client."*
-- `I type them myself` — *"You type a low and high per category, as you do on paper now. The app only checks they make
-  sense."*
-
-> **Sean:** *"A guest-count range (Recommended), Your descriptors, I would still like the option to type them myself as an
-> edge case."*
-
-**Q3, ours — *"If you use descriptors, what should a word like 'heavy drinkers' or 'super premium' mean in numbers?"*** One
-choice.
-- `I set them once (Recommended)` — *"You decide once, in Settings, what each word means (e.g. heavy = more drinks per
-  guest per hour). Your numbers, not the app's guesses. That's what sank the old estimator."*
-- `App defaults I can change` — *"The app starts with suggested numbers and you adjust them."*
-- `Learned from my events` — *"The app learns from your end-of-night counts over time. Gets better the more you use it,
-  but starts empty."*
-- `I set them each time` — *"Per Estimate, you say what the words mean for this event."*
-
-> **Sean:** *"Can I set them once, but can we also have some mechanism that learns from my events? We could have it as a
-> reference."*
-
-**Q4, ours — *"Rentals, ice and supplies aren't driven by drinks. How should their range be set?"*** One choice.
-- `I type low and high (Recommended)` — *"You type a range for each of those categories. They depend on the venue and the
-  setup, not the guest count."*
-- `Scale with guests` — *"They grow with the guest count, like the drinks do."*
-- `Same descriptor words` — *"E.g. 'Mid to rich rentals' sets their range the same way the drink words do."*
-- `Leave them 'To be confirmed'` — *"They print as 'To be confirmed' until you've priced the venue."*
-
-> **Sean:** *"I type low and high (Recommended)"*
-
-**Then, unprompted, three minutes later (23:40):**
-
-> *"I should mention: I want to also have a “cost per head” figure that we can include, that way the client can
-> conceptualize both the total ranges AND per guest ranges (less monetary friction when they see a “smaller” figure)."*
-
-**What follows from them.** These are questions for you, not decisions. ⚠️ **Nothing here is built.**
-
-1. ❓ **Two doors**, from Q1: from an invoice he has built, and from a template he then adjusts. The call's door isn't
-   asked for now. Your §5: *"a door from an invoice and a door from a call are different doors."*
-   - **From an invoice:** where does the door sit?
-   - **From a template:** our option said *"change the guest count"*, but scaling a template by guests is **held by Sean**,
-     9 Oct: *"Yes, the template quantities should scale with guest count – but it should be an explicit option, not
-     automatic. I want to hold off on that for now, though because I’m thinking of doing a big rework of the Calculator."*
-     (our Round 74). So while that hold stands, "adjust" could only mean editing lines by hand. Lifting it is his call.
-   - `Start from a template` already fills an empty invoice from a template, unscaled (§155, `7bd6021`; the button,
-     `InvoiceSheet.tsx:947`, opens `FillTemplateSheet`, `Builder.tsx:1834`). ❓ Is the template door its own door, an
-     Estimate made straight from a template with no invoice, or is it the invoice door, reached through `Start from a
-     template`?
-2. ❓ **The range**, from Q2: a guest-count range AND his descriptors, with typing the low and high himself as an edge case.
-   - Where is each set, and how do they read together on one screen?
-   - ⚠️ Pricing his buy list at two guest counts needs quantities that follow the guest count. That is the same kind of
-     scaling he held on 9 Oct. Whether it waits with it is his to say, and we'll ask him. It's flagged here so the drawing
-     doesn't assume it comes free.
-     ✅ **Asked and answered, 11 Oct, after this round was written.** Put to him (ours): *"Should the Estimate's
-     guest-count range wait for the rework too, or come with the Estimate?"* — with implementation's suggestion, a box on
-     the Estimate where he types the two guest counts, templates still not changing quantities on their own. **Sean:**
-     *"Let it come with the estimate."* So the guest-count range is part of the Estimate's first build, as an explicit
-     control on it; template scaling stays held for his Calculator rework.
-   - How a guest range and a descriptor combine is arithmetic nobody has decided. It isn't asked of you; it's flagged.
-   - Typing opens §2 #6 (a negative), and a high under its low, which §191 reads low to high today.
-3. ❓ **Descriptor values**, from Q3: set once, by him, with a figure learned from his events as a reference. We read his
-   *"as a reference"* as shown beside his value, not used on its own; that reading is ours. "Settings" was our option's
-   word, not his.
-   - Where are they set, and how does a word's value read beside its learned figure?
-   - The scrapped estimator died because his own events disagreed: 4.2 against 2.6 drinks a guest
-     (`WISHLIST.md:145`–`:146`). So a learned figure starts empty and may disagree with itself. How it says so is yours to
-     draw.
-4. ❓ **Rentals, ice and supplies**, from Q4: he types the low and the high. Where? And which categories count? Our
-   question named *"Rentals, ice and supplies"*, but the invoice's categories are his.
-5. ❓ **Cost per head on the paper**, his ask. Where does it sit on `r78d` and `r78e`: a column, a line under the total,
-   or both ends?
-   - **When the guest count is itself a range**, "per head" has more than one reading. For illustration, take `r78d`'s
-     total at $50, `$3,100 to $5,600`, over 100 to 130 guests:
-     - each end by its own count: $3,100 ÷ 100 and $5,600 ÷ 130, or $31.00 to $43.08;
-     - the widest: $3,100 ÷ 130 and $5,600 ÷ 100, or $23.85 to $56.00;
-     - both ends ÷ one figure (`about 120`): $25.83 to $46.67.
-     Which, or is that Sean's?
-   - **Rounding:** his *"Nearest $50"* was for the paper's figures. At $50, $25.83 to $46.67 prints `$0 to $50`, and to
-     the dollar outward it prints `$25 to $47`.
-   - And `Guests about 120`: when the guest count is a range, what does it say?
-
-❓ **Please draw the door or doors and their controls, and where cost per head sits on `r78d` and `r78e`.** These are new
-parts, so they need a frame before any code.
-
-### 5 · Only his iPad can say
-
-- **19.1, the count page — live, not read.** It is §184's page (§0 e). Its number is his to read; none is claimed here.
-- **The rest of Session 19 (19.2–19.7), live since 00:44.**
-- **Session 20:** 20.1–20.3 are live (*waiting* on the bar, *waiting* only when held up, red and gold at the corner).
-  20.4–20.7 are held (one row per thing, a product's row searched, half a cent, the Estimate's practice page).
-- Every screen measurement in this round is from Chrome, not Safari; the money proofs ran in Node; none is from an iPad.
-  The motion was timed in Chrome only. §188's review ran the static layout in WebKit on the Mac, and it matched Chrome. The
-  slide couldn't be timed there, because the window was off-screen.
-
-## What I need back
-
-1. ⛔ **§1 first: what a completed invoice shows at a half cent.** It unblocks the push, and with it §189–§191 and the count
-   page's half-cent tiles. If your answer changes what Sean was told, include the sentence to put to him.
-2. ⛔ §2, the six questions on the Estimate at his $50.
-3. ❓ §3's readings: 1–4, 9, 11, 13, 17, 22, 27 and 29 are calls; the rest are told.
-4. ❓ §4: draw the doors, their controls, and where cost per head sits on `r78d` and `r78e`.
-
----
-
-## Older rounds — Round 78 and earlier are in `REQUESTS-ARCHIVE.md`
-
-Moved there on 12 Oct 2026 at Design's request: this file had reached 1.07 MB, too large for Design to copy in or search. Nothing was edited — the archive holds them byte for byte as they stood here at `bd0d234`. Lines 1–2874 of this file kept their numbers at the split (`0f4c0d0`); each round written since goes in above the last and moves the lines below it, so a `REQUESTS.md:NNNN` is read at the commit it was written at. A `REQUESTS.md:NNNN` above 2874 written before the split is line NNNN − 2864 in the archive. **Round 76 followed on 20 Oct 2026**, to keep this file under 500 KB — whole and unedited, at the top of the archive's rounds, above Round 75. Its 292 lines moved the archive's down, so from then that pre-split line was NNNN − 2572 there, and an archive line cited before 20 Oct was that number + 292. **Rounds 78 and 77 followed at Round 88, the same day**, for the same reason — whole and unedited, at the top of the archive's rounds, above Round 76. Their 564 lines moved the archive's down again, so since Round 88 that pre-split line is NNNN − 2008 there, and an archive line cited at limbo-design `4c60bce` or before is that number + 564 (+ 856 if it was cited before 20 Oct). *(This heading read "Round 75 and earlier" until 20 Oct, and "Round 76 and earlier" from Round 87 until Round 88.)*
+Moved there on 12 Oct 2026 at Design's request: this file had reached 1.07 MB, too large for Design to copy in or search. Nothing was edited — the archive holds them byte for byte as they stood here at `bd0d234`. Lines 1–2874 of this file kept their numbers at the split (`0f4c0d0`); each round written since goes in above the last and moves the lines below it, so a `REQUESTS.md:NNNN` is read at the commit it was written at. A `REQUESTS.md:NNNN` above 2874 written before the split is line NNNN − 2864 in the archive. **Round 76 followed on 20 Oct 2026**, to keep this file under 500 KB — whole and unedited, at the top of the archive's rounds, above Round 75. Its 292 lines moved the archive's down, so from then that pre-split line was NNNN − 2572 there, and an archive line cited before 20 Oct was that number + 292. **Rounds 78 and 77 followed at Round 88, the same day**, for the same reason — whole and unedited, at the top of the archive's rounds, above Round 76. Their 564 lines moved the archive's down again, so from Round 88 until Round 89 that pre-split line was NNNN − 2008 there, and an archive line cited at limbo-design `4c60bce` or before was that number + 564 (+ 856 if it was cited before 20 Oct). **Rounds 82, 81, 80 and 79 followed at Round 89, 23 Oct**, for the same reason — whole and unedited, at the top of the archive's rounds, above Round 78. Their 1826 lines moved the archive's down again, so since Round 89 that pre-split line is NNNN − 182 there, and an archive line cited from Round 88 to limbo-design `05cbb50` is that number + 1826 (+ 2390 if it was cited from 20 Oct to `4c60bce`, + 2682 if before 20 Oct). *(This heading read "Round 75 and earlier" until 20 Oct, "Round 76 and earlier" from Round 87 until Round 88, and "Round 78 and earlier" from Round 88 until Round 89.)*
