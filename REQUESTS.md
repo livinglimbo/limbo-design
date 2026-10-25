@@ -135,11 +135,11 @@ is left and whose it is, and the rows are back in date order.
 | BU | 🔴 **Round 90 §2 d — the calculator's Proposed rows: a swap's money, and his number on a swap's split (§385–§386, §389–§390, §406–§407, LIVE).** ⛔ Money first: 268, `0 × $35.00` on the client's copy, three ways (your #96 against #145); 272, his row and the bottle's row don't add up (`2 → 3` beside `says 3`); then 267, 273, 269, 270; 119, his own old-bottle line billed for no drink; 136, #95 against #9; 130. Please draw 265 (his held row, extends `r87q`, `r87g`); accept or draw 121 (`4 → —`), 122, 123. ❓ 129 (`billed as Bacardi Superior`), 131, 134, 137–142 (the frames against the built parts), 144–147, 169 | **25 Oct** | 🔴 **OPEN** |
 | BV | 🔴 **Round 90 §2 b — the pie at Update and on screen (§370–§384, LIVE).** ⛔ 30, every drink in a kind at 0, live on our provisional; 29, grow, to confirm; then money — 85, a converted pin against made room; 87, `Just added` with no Update; 83, made room after Undo; 18, an old 0% invoice; 80, a Duplicate's crowd style; 111, a hidden line; 112, on hand beside bought; 20, a service line as a drink. Please draw 86 (a served kind left at 0%, extends `r89d` 3–4) and 109 (phone width, extends `r87i` 2–5). ❓ 19, 21–24, 26, 27, 81, 88, 91, 93, 95, 96, 98, 99, 101, 105–107 | **25 Oct** | 🔴 **OPEN** |
 | BW | 🔴 **Round 90 §2 e — the Builder's line and the press-and-hold panel (the pie's E, §391–§392, §394, LIVE).** ⛔ 182: packing mode keeps Procurement first (`HANDOFF.md:4643–4644`) — does #18 reach it? Please draw 202 (the switch moving two rows, extends `r89q`) and 199 (a swap row's parts, or say none, extends `r89k`); accept or draw 186 (a swapped bottle's switch). ❓ 180 (#18's other actions), 187, 190, 191 (`calcParts` on templates, against `ROUND-87.md:360`), 198, 200, 201, 203, 228 | **25 Oct** | 🔴 **OPEN** |
-| BX | 🔴 **Round 90 §2 f — Settings › The calculator and a product's pour (the pie's F, §393–§395, LIVE).** Please draw 207 (phone width, extends `r89r`, `r87k` 10). ❓ Money: 219, no bounds on a pour; 223, a can with no size ignores its pour. ❓ 205 (`Built in` and `· built in`), 215 (his Cocktail-forward after he saves), 217 (our #27 premise corrected — the August form stored `tuned: true`), 222 (#29's help, built only where blank really counts), 226 | **25 Oct** | 🔴 **OPEN** |
+| BX | 🔴 **Round 90 §2 f — Settings › The calculator and a product's pour (the pie's F, §393–§395, LIVE).** Please draw 207 (phone width, extends `r89r`, `r87k` 10). ❓ Money: 219, no bounds on a pour; 223, a can with no size ignores its pour. ❓ 205 (`Built in` and `· built in`), 206 (Remove, where #26 says Delete), 215 (his Cocktail-forward after he saves), 217 (our #27 premise corrected — the August form stored `tuned: true`), 222 (#29's help, built only where blank really counts), 226 | **25 Oct** | 🔴 **OPEN** |
 | BY | 🔴 **Round 90 §2 a — Event details, and the calculator's hours and guests (§360–§361, §374–§377, §382, §388, §390, §397, LIVE).** Please draw 159 with 172 (the two-row box with no count, extends `r89o`, `r87o` 2). ❓ 4, 10–12 (the same-time strip), 35, 45–49, 51 (the Guests row's no-break space), 56–59, 62, 68, 69 (two blocks), 102–104 (Crowd style's place), 171, 173, 174, 176, 177, 232, 235, 236 | **25 Oct** | 🔴 **OPEN** |
 | BZ | 🔴 **Round 90 §2 c — the calculator's words, floors and foot (§378–§379, §387, §390, LIVE).** ❓ 73 (U1 at 390 takes 5 lines; `r89a` 2 draws 4), 76, 78, 79 with 96 (`the The …`), 153 (the empty 73 bar), 170 (two refusals' order), 175 (the foot at phone width), 179 (`198 Punchs`) | **25 Oct** | 🔴 **OPEN** |
 | CA | 🔴 **Round 90 §2 g–k — windows, the lists, the estimate, templates and the paper (§396–§405, LIVE).** Please draw 256 (the Separate table's head, extends `r88f` 1); accept or draw 244 (the sent line at 320–430, extends `r89v`). ❓ 229 (W13 at the cap), 240 (#41's box), 241 (#67 at 320), 243, 248 (the pictures: a trade for you and Sean), 251, 254, 255, 257 (11 of 71 still small), 260–264 | **25 Oct** | 🔴 **OPEN** |
-| CB | 🔴 **Round 90 — every told (131), the eleven off the list, and §3's departures from your words.** Told: every item marked so in §2. None was in Round 89, so your part 2's acceptance (`ROUND-89-PART-2.md:11–13`) doesn't reach them — object to any. Off the list: 2, 9, 15, 17, 25, 50, 53, 75, 114, 178, 194 — say if one isn't settled. Departures (§3): 222, 241, 205, 129, 251, 240, 229 — say which way | **25 Oct** | 🔴 **OPEN** |
+| CB | 🔴 **Round 90 — every told (129), the eleven off the list, and §3's departures from your words.** Told: every item marked so in §2. None was in Round 89, so your part 2's acceptance (`ROUND-89-PART-2.md:11–13`) doesn't reach them — object to any. Off the list: 2, 9, 15, 17, 25, 50, 53, 75, 114, 178, 194 — say if one isn't settled. Departures (§3): 222, 241, 205, 206, 129, 251, 240, 229 — say which way | **25 Oct** | 🔴 **OPEN** |
 
 ---
 
@@ -226,7 +226,7 @@ has been bitten by.
 | **Your Round 88 §3 b #15 and #16 built, measured (§350–§351)** — the floor `at least 39 bottles` in gold, its sentence under the working, 2 lines at 1200 and 1600, 3 at 390; with the line on at 1, `stays at 1`, the sentence, `Needs at least 39 bottles`; two drinks it can't count, 6 lines at 390; the note inside the rail (360) and the drawer; Update byte for byte on 4,000 and then 23,000 seeded invoices | **Round 89 §0 U1–U10** | `limbo-app` `d7430b9` | ⚠️ **The two drinks' 6 lines were our stand-in's** — your U1 since §378 takes 5 at 390 (Round 90 item 73), and U7's order since §387. The rest stand |
 | **Your Round 89, both parts, built and live, step by step** — §360–§407, each step gone over by three reviewers before it went up; fifteen sends, from Round 89's own on, read back by curl (Round 90's header lists each build id), the last `UcNXylj9_zu4Xv6NAauqZ`, read again on 25 Oct at 07:53:48 UTC | **Round 90 §0** | `limbo-app` `ad8c680` | ✅ Yes |
 | **What the reviews found by doing, with its money** — the blockers, each fixed before its send: your #9 not built ($32.99 → $428.87 given away); swap marks only ever added ($384.95 and red, where one Update gives $209.95); a floor's figure offered by `Use the calculator’s number` (+$719.64); a Save on a device that hadn't loaded his settings (−$106.10); 45 typed then `ml` stored as 45 oz (+$5,608.13); his number on a swap's split written down a few Updates later (−$70.00) | **Round 90 §0 b–c** | `limbo-app` `ad8c680` | ✅ Yes |
-| **The money sweeps, each against the build live before it** — §384 (#9): 20,544 runs, every differing row a comped product's; §385: 6,000 swap sequences, 5,043 the same / 842 lower / 115 higher; §386: 3,000, 719 / 1,940 / 0; §406–§407 (#147): 6,000, 5,249 / 597 / 154 | **Round 90 §0 b–c, §2 d** | `limbo-app` `d2b10f0` | ✅ Yes |
+| **The money sweeps, each against the build live before it** — §384 (#9): 20,544 runs, every differing row a comped product's; §385: 6,000 swap sequences, 5,043 the same / 842 lower / 115 higher; §386: 3,000, the 2,659 with a swap 719 / 1,940 / 0, the 341 without all the same; §406–§407 (#147): 6,000, 5,249 / 597 / 154 | **Round 90 §0 b–c, §2 d** | `limbo-app` `d2b10f0` | ✅ Yes |
 | **Sean's 23 Oct answers, word for word** — the hours and guests (*"the events details hours are a starting point…"*, five buttons, and *"these should let you know the state…"*) and two blocks of bar time; his words to build on, 20–24 Oct | **Round 90 §1** | `limbo-app` `ad8c680` | ✅ Yes |
 | **The phone paper after #37–#39, printed and read back** — his French 75 at five columns, 1 sheet at 13.61pt → 2 sheets at 15pt; 11 of 71 phone printouts still at 93.77%–98.86% (they were at 66.67%), every one a four-column Separate part; 14 of 71 fixtures differ between a screen and 4 × 8 | **Round 90 §2 k** | `limbo-app` `c744813` | ✅ Yes |
 
@@ -245,7 +245,7 @@ or were superseded; they stay, marked, so a re-ask gets the correction and not t
 
 ---
 
-## 🔴 ROUND 90 — your answer to Round 89 is BUILT and LIVE, both parts. Part 1 (23 Oct) went up in four sends: Sean's 23 Oct answers (a number he types holds; two blocks of bar time), U1's one sentence, and the pie's B, C and D with your #9 (§374–§384). Part 2 (24 Oct) went up in eight: the swap's money, the calculator's words, the guest count with no count, the pie's E and F, the small rulings, the estimate and templates, the paper, and #147 (§385–§407). Before part 1 came, your Round 88 §1 b and §1 d (§360–§361) and the pie's arithmetic (§370–§372) went up too. ⛔ Money first: his number on a swap's split can print `0 × $35.00` on the client's copy (268, your #96 against #145), his row and the bottle's row don't add up (272), and two of the pie's readings are live on our provisional (29, 30). ❓ Please draw: the Separate table's head (256), his held row on a swap's split (265), the switch moving two rows (202), the pie and Settings › The calculator at phone width (109, 207), and a served kind left at 0% (86). ⛔ One build stands on a reading: packing mode's order (182). In all, 275 items by surface: every (ours), FOR DESIGN and what the reviews left
+## 🔴 ROUND 90 — your answer to Round 89 is BUILT and LIVE, both parts. Part 1 (23 Oct) went up in four sends: Sean's 23 Oct answers (a number he types holds; two blocks of bar time), U1's one sentence, and the pie's B, C and D with your #9 (§374–§384). Part 2 (24 Oct) went up in eight: the swap's money, the calculator's words, the guest count with no count, the pie's E and F, the small rulings, the estimate and templates, the paper, and #147 (§385–§407). Before part 1 came, your Round 88 §1 b and §1 d (§360–§361) and the pie's arithmetic (§370–§372) went up too. ⛔ Money first: his number on a swap's split can print `0 × $35.00` on the client's copy (268, your #96 against #145), his row and the bottle's row don't add up (272), and two of the pie's readings are live on our provisional (29, 30). ❓ Please draw: the Separate table's head (256), his held row on a swap's split (265), the switch moving two rows (202), the pie and Settings › The calculator at phone width (109, 207), a served kind left at 0% (86), the two-row box with no count (159), and a swap row's parts, or say none (199). ⛔ And one that isn't money stands on a reading: packing mode's order (182). In all, 275 items by surface: every (ours), FOR DESIGN and what the reviews left
 
 
 **implementation → Design, 25 Oct 2026. Branch `main`, app at `ad8c680`** (`ad8c6802854c75cea5c1ebbf3e0cbc1331e291fa`).
@@ -340,13 +340,13 @@ commit named beside it, and each of those says how it was measured:
 - `check-hand-now` (§389)
 - `check-hold-his` (§406)
 
-**This file with this round:** with Rounds 86, 85, 84 and 83 still here, it would have been about 594,751 bytes — this
+**This file with this round:** with Rounds 86, 85, 84 and 83 still here, it would have been about 595,276 bytes — this
 file plus the 145,293 bytes moved. That is over the 480 KB this file keeps under (your limit is 500 KB). So Rounds 86,
 85, 84 and 83, the oldest rounds here, moved to the top of `REQUESTS-ARCHIVE.md`'s rounds, above Round 82, whole and
 unedited. `cmp` finds no difference between the moved text and `git show f714fde:REQUESTS.md`'s lines 2475–4244, and a
 `diff` of the rest of the archive against `f714fde` finds none either, each line 1770 lower. Round 86 went with the
-other three: had it stayed, this file would be about 495,816 bytes (this file plus Round 86's 46,358), over the 480 KB.
-This file is now 449,458 bytes (`wc -c`), under 480 KB.
+other three: had it stayed, this file would be about 496,341 bytes (this file plus Round 86's 46,358), over the 480 KB.
+This file is now 449,983 bytes (`wc -c`), under 480 KB.
 
 **So an archive line cited from Round 89 to `f714fde` is that number plus 1770.** One cited from Round 88 to `05cbb50`
 is plus 3596, one from 20 Oct to `4c60bce` plus 4160, and one from before 20 Oct plus 4452. Round 86's
@@ -527,8 +527,8 @@ filed in `docs/design/` beside part 1. Sean, relayed by the lead: *"Handoff"*.
   red, where the live build gives $209.95 in one Update. Also found:
   - A swap's row could take off or write over a line he set by hand (data F2). §385's (ours) 5 is withdrawn (item 119).
   - `Use 0` beside free bottles wrote `0 × $35.00` (design F2).
-  - **Money against the live build**, with an Update after every tap: of 3,000 sequences with a swap, 719 the same,
-    1,940 lower and 0 higher.
+  - **Money against the live build**, with an Update after every tap: of 3,000 sequences, the 2,659 with a swap were
+    719 the same, 1,940 lower and 0 higher, and the 341 with none were all the same.
 - **§387, the calculator's words** (`dd8b5d2`): U2–U7, U10, #49, #52, #57, #71, #72, #74, #76 and #31. Update's write is
   byte for byte on 20,000 seeded menus. The rows' words changed in 4,235 and the foot in 7,497.
 - **§388, the guest count, part 2** (`0bc1f52`): G3–G7. A stored shape: `keptGuests` may hold his words.
@@ -650,8 +650,8 @@ name one thing, they share a number. The numbers run in the order the work was d
 records). Below they are grouped by the screen they are on, so a group can skip numbers.
 
 Each item is marked one of these ways:
-- **told** — as built; object if you would. Every **told** is a choice no ruling or frame makes. Your part 2's
-  acceptance reached Round 89's items only.
+- **told** — as built; object if you would. Every **told** is a choice no ruling makes. Where a frame draws it
+  otherwise, the item names that frame. Your part 2's acceptance reached Round 89's items only.
 - **❓** — a question.
 - **please draw** — a new part, a new state of a part, or a new path across parts. Each one names the frame it extends.
 - **⛔** — a build that stands on a reading you are asked to confirm.
@@ -925,7 +925,7 @@ Each was read here against your part 1.
     the each, also served on its own, reads `Two recipes ask for this by volume, and it is sold in each.` Which words?
 28. told (§371's 8, ours) — a bottle a ticked cocktail uses is an ingredient whether its line is bought or on hand
     (Round 87 §2 e's "uses one"). So a leftover line of it in the other state is not served on its own.
-29. told (§372's 1) — he types a share on the last unpinned drink, and the pins come to under 100: the Margarita 50,
+29. ⛔ (§372's 1; money) — he types a share on the last unpinned drink, and the pins come to under 100: the Margarita 50,
     then 40 on the Mule. Built, they grow, 55.6 / 44.4 (on your event, Espolòn 11 → 12, Tito's 17 → 16). We read your
     #6's last line, *"r87l c's growing stays inside a kind's drinks, where a share left over means nothing"* (`:168`),
     as *grow*. Live on that reading since Batch C. Confirm.
@@ -979,7 +979,7 @@ Each was read here against your part 1.
 89. told (§381 ours) — three or more kinds refused: `Only 10% is left. Three kinds are pinned at 90%.`, in the drinks'
     form. You wrote one and two kinds (#8 (e), `:189–191`).
 90. told (§381 ours) — a pinned empty kind with nowhere to give its share: `Pinned · none on the invoice, so its 45%
-    isn’t counted`. That is #8 (d)'s form with #6's ending (`:167`, `:187`).
+    isn’t counted`. That is #8 (d)'s form with #6's ending (`:166`, `:187`).
 91. ❓ (§381 ours; §384 render O) — kind figures are at one decimal (`10.9`, `22.5`), as `r87i` 3–5 spell shares, where
     `r89d` 1 draws whole numbers. Drink counts are each rounded on their own (your Round 87 🔧, `ROUND-87.md:198`), so
     `r89f` 3's four 78.5s read 79 · 79 · 79 · 79, where the frame draws 79 · 79 · 78 · 78. And a kind's band and its
@@ -1143,8 +1143,9 @@ the build that was live before each step.
      (c). Since §391–§392 such a bottle reads `Serve on its own` · `Counts toward Spirits when on.` once its swap is
      applied (186).
 128. told (§385 ours 14) — #85's working line is in hundredths when he doesn't order in whole packages.
-129. ❓ (§385 ours 15) — #91: `billed as Bacardi Superior`, the line's full name. Your prose and the README write
-     `billed as {Bacardi}` (`:66–67`), and the app has no shorter name for a product. The full name, as built?
+129. ❓ (§385 ours 15) — #91: `billed as Bacardi Superior`, the line's full name. Your prose writes `billed as
+     Bacardi` (`:66–67`) and the README `billed as {Bacardi}`, and the app has no shorter name for a product. The full
+     name, as built?
 130. ❓ (§385 FOR DESIGN; money) — #95 beside a moving swap: a gift comp of the new bottle that another drink already
      pours counts nothing for the swap's row, while the lone path (#89) counts it. Which?
 131. ❓ (§385 FOR DESIGN) — at 390 the Builder's line two still wraps to six lines in its narrow column, as it has since
@@ -1277,10 +1278,10 @@ of them is without a §280 row with a line of his (§407).
      - A prep swap's drinks are never named, because nothing records when its Update is done.
      No frame draws a swapped bottle's switch.
 187. ❓ (§391 ours 7; §392 render M1) — the switch's row is §215's: 64, 20 at the sides, 10 above and below, 12 between.
-     The glyph is 22 in `--text-secondary`, line two 13 in `--text-muted`, and the word 17, where `r87j` and `r89q` draw
-     15. `r89q`'s own example, `Counts toward Spirits as well as the Moscow Mule.`, is 292.8 wide in the 288 column. So
-         it wraps (`text-pretty`: `…as well as the` / `Moscow Mule.`), and the row is 77, where `r89q` draws one line in
-         68. Which?
+     The glyph is 22 in `--text-secondary`, line two 13 in `--text-muted`, and the word 17, where `r87j` and `r89q`
+     draw 15. `r89q`'s own example, `Counts toward Spirits as well as the Moscow Mule.`, is 292.8 wide in the 288
+     column. So it wraps (`text-pretty`: `…as well as the` / `Moscow Mule.`), and the row is 77, where `r89q` draws
+     one line in 68. Which?
 188. told (§391 ours 8) — after `Use 27`, the held row (now a change) shows its parts under the name, as every Proposed
      row does (`r87i` 6). `r89q` draws the held state only.
 189. told (§391 ours 9) — a figure §280 splits over a swap's charged lines takes no split. An on-hand line keeps its
@@ -1361,9 +1362,10 @@ product's (`r87k` 13). Cocktails never move.
 205. ❓ (§393 ours 1; §395 design M6, kept) — `Built in` appears twice: the list's line two `… · built in` (`r89r` 2,
      lower case after the dot), and the style's page, in the foot where Remove sits (#26's *"in place of Delete"*,
      `ROUND-89-PART-2.md:197`). The prose spells `Built in`, the frame `· built in`. Which, and where?
-206. told (§393 ours 2) — Remove uses the managed list's confirm (`Remove Corporate happy hour?` · `This can’t be
-     undone.` · `Keep` / `Remove`, Round 86 S5), where #26 says Delete. It is on the style's page, not the list row.
-     Removed, or gone on his other device, the page steps back to The calculator.
+206. ❓ (§393 ours 2) — Remove uses the managed list's confirm (`Remove Corporate happy hour?` · `This can’t be
+     undone.` · `Keep` / `Remove`, Round 86 S5), where #26 says Delete (`ROUND-89-PART-2.md:197`). It is on the
+     style's page, not the list row. Removed, or gone on his other device, the page steps back to The calculator.
+     Remove, or Delete?
 207. ❓ **please draw** (§393 ours 3; §395 render O8 = design M5; §395 fix 7, ours; extends `r89r` and `r87k` 10) — the
      phone width, undrawn. Below 640:
      - the five share columns are 26 wide and 4 apart (`r87k` 10: 28 and 12, from 640), and the name column is 114
@@ -1568,9 +1570,8 @@ and reading the PDF back: 142 fixtures at §405.
      On a 390 screen the French 75's `INGREDIENT` meets `PER DRINK`. The five- and six-column one tables' heads break as
      `500 / ML` and `PER / DRINK`, where the split printed them on one line.
 262. ❓ (§404 d; §405 OPEN) — the export button counts a sheet a recipe. His French 75 at Per drink and four sizes reads
-     `Export 1 page` and now prints 2 (it printed 1, shrunk, before §404). Margarita + French 75 read `Export 2 pages`
-     for
-     3. §404's "older than this" is not true for the French 75.
+     `Export 1 page` and now prints 2 (it printed 1, shrunk, before §404). Margarita + French 75 read `Export 2 pages`,
+     and print 3. §404's "older than this" is not true for the French 75.
 263. ❓ (§405 render F1, open) — a recipe's title alone on a sheet. A 16-row punch at Per drink and eight sizes prints
      sheet 1 with its title and method line only, its first table moved whole to sheet 2, which is #39 as ruled. Count
      the title in the test, or never move the first table? Round 81 #5's strand count is the precedent.
@@ -1605,8 +1606,9 @@ which way, and it changes.
 - **#67, `15, on one line, every red`** (`:263`). At 320 the red wraps to two lines rather than run out of its button.
   Item 241.
 - **#26, `Built in` in place of Delete** (`:197`). It shows in the list's line two (`· built in`, as `r89r` 2 draws it)
-  and in the style page's foot. Item 205.
-- **#91, `billed as {Bacardi}`** (`:66–67`). It shows the line's full name, `billed as Bacardi Superior`, because the
+  and in the style page's foot. Item 205. And the style's own control is the managed list's `Remove`, not Delete.
+  Item 206.
+- **#91, `billed as Bacardi`** (`:66–67`; the README's `billed as {Bacardi}`). It shows the line's full name, `billed as Bacardi Superior`, because the
   app has no shorter name. Item 129.
 - **#126's *"one Undo step"*** (`:293–294`). It is the toast's Undo, and not on the Undo list. Item 251.
 - **#41's frame** (`r89s`). The held row's 2px `--accent` box is not built, because your rename ruling says *"No box
@@ -1637,7 +1639,7 @@ built label is `Include the cocktail menu` (item 252), and `r89w` 1's summary or
   - Part 1's 28.1 (a typed 6 holds, with `Use 5`), 28.6 (two blocks, 8 hours), 29.1 (`Follow the crowd style`) and
     29.2 (Crowd style under the bar times).
   - Part 2 asks for none.
-- **Sessions 27–31** come to 94 checks (27 has 48, 28 has 9, 29 has 10, 30 has 23, 31 has 26). The file holds **267 to
+- **Sessions 27–31** come to 116 checks (27 has 48, 28 has 9, 29 has 10, 30 has 23, 31 has 26). The file holds **267 to
   do, out of 303**: 266 open, 1 partly, 18 done, 18 skipped (`grep -E '^### \['`). The last one ticked is still 23.3.
   His first check after the reload is 31.1, Settings › The calculator. It also shows the two things only his account can
   say (§1 d).
@@ -1672,8 +1674,8 @@ built label is `Include the cocktail menu` (item 252), and `r89w` 1's summary or
    **Accept as built, or draw:** 121 (`4 → —`), 122 (a free line alone), 123 (`Still comped` beside a line coming off),
    186 (a swapped bottle's switch) and 244 (the sent line at 320–430).
 5. ❓ **§3's departures from your words — say which way:** 222 (#29's help), 241 (#67 at 320), 205 (#26's `Built in`),
-   129 (#91's name), 251 (#126's Undo), 240 (#41's box) and 229 (W13's cap). Two printouts are left by #37–#38 as ruled:
-   257 and 264.
+   206 (#26's Delete, built as Remove), 129 (#91's name), 251 (#126's Undo), 240 (#41's box) and 229 (W13's cap). Two
+   printouts are left by #37–#38 as ruled: 257 and 264.
 6. ❓ **The rest, by surface:**
    - Event details and the calculator's hours and guests: 4, 10, 11, 12, 35, 45–49, 51, 56–59, 62, 68, 69, 102–104, 171,
      173, 174, 176, 177, 232, 235 and 236.
@@ -1685,7 +1687,7 @@ built label is `Include the cocktail menu` (item 252), and `r89w` 1's summary or
    - The estimate: 243 and 248 (a trade for you and Sean).
    - Templates: 254.
    - The paper: 255 and 260–263.
-7. **Every told** — 131 of them, each marked in §2. Object to any. Your part 2's blanket acceptance (`:11–13`) reached
+7. **Every told** — 129 of them, each marked in §2. Object to any. Your part 2's blanket acceptance (`:11–13`) reached
    Round 89's items, not these.
 8. **Off the list:** 2, 9, 15, 17, 25, 50, 53, 75, 114, 178 and 194, each with the answer that settled it at the head of
    §2. Say if any isn't settled.
